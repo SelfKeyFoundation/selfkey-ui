@@ -13,7 +13,7 @@ class P extends React.Component {
             } = this.props;
         return (
             <p {...css(styles.Paragraph)}>
-                BLOCKCHAIN IDENTITY WALLET
+               {this.props.children}
             </p>
         );
     }

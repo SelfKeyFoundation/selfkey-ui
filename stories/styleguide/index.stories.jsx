@@ -7,7 +7,7 @@ import JSXAddon from 'storybook-addon-jsx';
 import H1 from '../../src/typography/headings';
 import P from '../../src/typography/paragraph';
 import LOGO from '../../src/images/logo'
-import CREATE_BUTTON from '../../src/buttons/create-button';
+import CreateButton from '../../src/buttons/create-button';
 import EXISTING_BUTTON from '../../src/buttons/existing-button';
 
 import { Welcome } from './welcome';
@@ -26,16 +26,16 @@ storiesOf('Selfkey Wallet Welcome Page', module)
         <LOGO></LOGO>
     ))
     .addWithJSX('Header', () => (
-        <H1 />
+        <H1>SELFKEY</H1>
     ))
     .addWithJSX('Paragraph', () => (
-        <P></P>
+        <P>BLOCKCHAIN IDENTITY WALLET</P>
     ))
     .addWithJSX('Create Button', () => (
-        <CREATE_BUTTON></CREATE_BUTTON>
+        <CreateButton>CREATE NEW WALLET</CreateButton>
     ))
     .addWithJSX('Existing Button', () => (
-        <EXISTING_BUTTON></EXISTING_BUTTON>
+        <EXISTING_BUTTON>USE EXISTING WALLET</EXISTING_BUTTON>
     ))
     .addWithJSX('Welcome', Welcome);
 

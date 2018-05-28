@@ -13,7 +13,7 @@ class H1 extends React.Component {
             } = this.props;
         return (
             <h1 {...css(styles.Header)}>
-                Test
+                {this.props.children}
             </h1>
         );
     }

@@ -4,7 +4,7 @@
   "description": "UI components for the SelfKey project",
   "main": "index.js",
   "scripts": {
-    "start": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006 -s ./",
     "build": "npm run lint && npm run build-lib && build-storybook",
     "test": "jest",
     "test:coverage": "npm test -- --coverage",
