@@ -9,6 +9,8 @@ import JSXAddon from "storybook-addon-jsx";
 import { H1 } from "../../src/typography/headings";
 import { P } from "../../src/typography/paragraph";
 import { Logo } from "../../src/images/logo";
+import { CryptoPriceList } from "./crypto-price-list";
+
 
 setAddon(JSXAddon);
 
@@ -38,3 +40,10 @@ const iStory = storiesOf("Images", module).addDecorator(
 ) as Story & { addWithJSX: Function };
 
 iStory.addWithJSX("SelfKey Logo", () => <Logo />);
+
+
+const priceStory = storiesOf("Prices", module).addDecorator(
+  lightOnDark
+) as Story & { addWithJSX: Function };
+
+priceStory.addWithJSX("PriceList", () => <CryptoPriceList />);
