@@ -4,7 +4,7 @@ import injectSheet from 'react-jss';
 
 import { StyleSheet, StyledComponentProps } from '../react-jss.types';
 
-import NumberFormat from 'react-number-format';
+import CurrencyFormatComponent from './currency-format';
 
 const styles: StyleSheet = {
     row: {
@@ -30,16 +30,19 @@ const styles: StyleSheet = {
 };
 
 type PriceSummaryProps = {
+    locale: string,
     currencyShort: string,
-    currencySymbol: string,
     value: string
 };
 
-const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, currencyShort, currencySymbol, value }) => (
+
+
+const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, locale, currencyShort, value }) => (
     <div className={`${classes.row}`}>
         <div className={`${classes.currencyShort}`}>{currencyShort}</div>
         <div className={`${classes.value}`}>
-            <NumberFormat value={value} displayType={'text'} thousandSeparator={true} prefix={currencySymbol}></NumberFormat>
+            {/*<NumberFormat value={value} displayType={'text'} thousandSeparator={true} prefix={currencySymbol}></NumberFormat>*/}
+            <CurrencyFormatComponent locale={locale} currency={currencyShort} value={value}></CurrencyFormatComponent>
         </div>
     </div>
 )
