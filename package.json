@@ -24,7 +24,8 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-jss": "^8.4.0"
+    "react-jss": "^8.4.0",
+    "react-number-format": "^3.4.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.2",
@@ -56,7 +57,14 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "config": {
     "commitizen": {
