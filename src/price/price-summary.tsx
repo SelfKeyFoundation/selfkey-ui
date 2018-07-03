@@ -14,7 +14,7 @@ const styles: StyleSheet = {
         alignItems: 'flex-end',
         marginTop: '4px',
     },
-    currencyShort: {
+    currency: {
         opacity: '0.7',
         fontFamily: CommonStyle.fontFamily,
         fontSize: '14px',
@@ -32,15 +32,15 @@ const styles: StyleSheet = {
 
 export type PriceSummaryProps = {
     locale: string,
-    currencyShort: string,
+    currency: string,
     value: string
 };
 
-const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, locale, currencyShort, value }) => (
+const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, locale, currency, value }) => (
     <div className={`${classes.row}`}>
-        <div className={`${classes.currencyShort}`}>{currencyShort}</div>
+        <div className={`${classes.currency}`}>{currency}</div>
         <div className={`${classes.value}`}>
-            <CurrencyFormat locale={locale} currency={currencyShort} value={value}></CurrencyFormat>
+            <CurrencyFormat locale={locale} currency={currency} value={value}></CurrencyFormat>
         </div>
     </div>
 )

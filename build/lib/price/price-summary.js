@@ -11,7 +11,7 @@ var styles = {
         alignItems: 'flex-end',
         marginTop: '4px',
     },
-    currencyShort: {
+    currency: {
         opacity: '0.7',
         fontFamily: common_style_1.default.fontFamily,
         fontSize: '14px',
@@ -27,11 +27,11 @@ var styles = {
     }
 };
 var PriceSummaryComponent = function (_a) {
-    var classes = _a.classes, children = _a.children, locale = _a.locale, currencyShort = _a.currencyShort, value = _a.value;
+    var classes = _a.classes, children = _a.children, locale = _a.locale, currency = _a.currency, value = _a.value;
     return (React.createElement("div", { className: "" + classes.row },
-        React.createElement("div", { className: "" + classes.currencyShort }, currencyShort),
+        React.createElement("div", { className: "" + classes.currency }, currency),
         React.createElement("div", { className: "" + classes.value },
-            React.createElement(currency_format_1.default, { locale: locale, currency: currencyShort, value: value }))));
+            React.createElement(currency_format_1.default, { locale: locale, currency: currency, value: value }))));
 };
 /** Test description */
 exports.PriceSummary = react_jss_1.default(styles)(PriceSummaryComponent);
