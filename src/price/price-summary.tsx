@@ -3,8 +3,9 @@ import { SFC } from 'react';
 import injectSheet from 'react-jss';
 
 import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+import CommonStyle from '../common/common-style';
 
-import CurrencyFormatComponent from './currency-format';
+import CurrencyFormat from './currency-format';
 
 const styles: StyleSheet = {
     row: {
@@ -15,7 +16,7 @@ const styles: StyleSheet = {
     },
     currencyShort: {
         opacity: '0.7',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: CommonStyle.fontFamily,
         fontSize: '14px',
         fontWeight: '500',
         letterSpacing: '1px',
@@ -23,26 +24,23 @@ const styles: StyleSheet = {
         marginRight: '6px',
     },
     value: {
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: CommonStyle.fontFamily,
         fontSize: '17px',
         color: '#ffffff'
     }
 };
 
-type PriceSummaryProps = {
+export type PriceSummaryProps = {
     locale: string,
     currencyShort: string,
     value: string
 };
 
-
-
 const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, locale, currencyShort, value }) => (
     <div className={`${classes.row}`}>
         <div className={`${classes.currencyShort}`}>{currencyShort}</div>
         <div className={`${classes.value}`}>
-            {/*<NumberFormat value={value} displayType={'text'} thousandSeparator={true} prefix={currencySymbol}></NumberFormat>*/}
-            <CurrencyFormatComponent locale={locale} currency={currencyShort} value={value}></CurrencyFormatComponent>
+            <CurrencyFormat locale={locale} currency={currencyShort} value={value}></CurrencyFormat>
         </div>
     </div>
 )

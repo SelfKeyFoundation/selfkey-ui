@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_jss_1 = require("react-jss");
+var price_summary_1 = require("./price-summary");
+var styles = {
+    cryptoPriceBox: {
+        height: 'calc(100% - 36px)',
+        padding: '18px 0 18px 0',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        marginRight: '40px',
+        marginLeft: '40px',
+    }
+};
+var CryptoPriceBoxComponent = function (_a) {
+    var classes = _a.classes, children = _a.children, fromLocale = _a.fromLocale, fromCurrencyShort = _a.fromCurrencyShort, fromValue = _a.fromValue, toLocale = _a.toLocale, toCurrencyShort = _a.toCurrencyShort, toValue = _a.toValue;
+    return (React.createElement("div", { className: "" + classes.cryptoPriceBox },
+        React.createElement(price_summary_1.PriceSummary, { locale: fromLocale, currencyShort: fromCurrencyShort, value: fromValue }),
+        React.createElement(price_summary_1.PriceSummary, { locale: toLocale, currencyShort: toCurrencyShort, value: toValue })));
+};
+/** Test description */
+exports.CryptoPriceBox = react_jss_1.default(styles)(CryptoPriceBoxComponent);
+exports.default = exports.CryptoPriceBox;
+//# sourceMappingURL=crypto-price-box.js.map

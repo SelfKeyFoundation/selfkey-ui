@@ -19,7 +19,7 @@ const styles: StyleSheet = {
     }
 };
 
-type CryptoPriceBoxProps = {
+export type CryptoPriceBoxProps = {
     fromLocale: string,
     fromCurrencyShort: string,
     fromValue: string,
