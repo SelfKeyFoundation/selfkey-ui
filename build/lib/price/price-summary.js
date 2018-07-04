@@ -31,7 +31,7 @@ var PriceSummaryComponent = function (_a) {
     return (React.createElement("div", { className: "" + classes.row },
         React.createElement("div", { className: "" + classes.currency }, currency),
         React.createElement("div", { className: "" + classes.value },
-            React.createElement(currency_format_1.default, { locale: locale, currency: currency, value: value }))));
+            React.createElement(currency_format_1.CurrencyFormat, { locale: locale, currency: currency, value: value }))));
 };
 /** Test description */
 exports.PriceSummary = react_jss_1.default(styles)(PriceSummaryComponent);

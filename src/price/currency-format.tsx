@@ -7,11 +7,9 @@ export type CurrencyFormatProps = {
   value: string
 }
 
-const CurrencyFormat: SFC<CurrencyFormatProps> = ({locale, currency, value }) => (
+export const CurrencyFormat: SFC<CurrencyFormatProps> = ({locale, currency, value }) => (
   <div>
       {(locale) ? new Intl.NumberFormat(locale, { style: 'currency', currency: currency, maximumFractionDigits: 10
  }).format(Number(value)): value}
   </div>    
 )
-
-export default CurrencyFormat;

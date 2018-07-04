@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 import { StyleSheet, StyledComponentProps } from '../react-jss.types';
 import CommonStyle from '../common/common-style';
 
-import CurrencyFormat from './currency-format';
+import { CurrencyFormat } from './currency-format';
 
 const styles: StyleSheet = {
     row: {

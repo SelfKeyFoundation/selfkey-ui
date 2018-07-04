@@ -4,7 +4,7 @@ import { CryptoPriceBox } from '../../src/price/crypto-price-box';
 
 export const CryptoPriceList = () => (
     <div>
-        <CryptoPriceBox fromLocale="" fromCurrency='KEY' fromValue='4' toLocale= "en" toCurrency='USD' toValue='0.0174857'></CryptoPriceBox>
-        <CryptoPriceBox fromLocale="" fromCurrency='ETH' fromValue='0.08212867' toLocale="en" toCurrency='USD' toValue='39.03'></CryptoPriceBox>
+        <CryptoPriceBox locale="en" cryptoCurrency='KEY' cryptoValue='4' toCurrency='USD' toValue='0.0174857'></CryptoPriceBox>
+        <CryptoPriceBox locale="en" cryptoCurrency='ETH' cryptoValue='0.08212867' toCurrency='USD' toValue='39.03'></CryptoPriceBox>
     </div>
 );

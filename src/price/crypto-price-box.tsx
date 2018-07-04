@@ -20,18 +20,17 @@ const styles: StyleSheet = {
 };
 
 export type CryptoPriceBoxProps = {
-    fromLocale: string,
-    fromCurrency: string,
-    fromValue: string,
-    toLocale: string,
+    locale: string,
+    cryptoCurrency: string,
+    cryptoValue: string,
     toCurrency: string
     toValue: string
 }
 
-const CryptoPriceBoxComponent : SFC<StyledComponentProps & CryptoPriceBoxProps> = ({classes, children, fromLocale, fromCurrency, fromValue, toLocale, toCurrency, toValue }) => (
+const CryptoPriceBoxComponent : SFC<StyledComponentProps & CryptoPriceBoxProps> = ({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
     <div className={`${classes.cryptoPriceBox}`}>
-        <PriceSummary locale={fromLocale} currency={fromCurrency} value={fromValue}></PriceSummary>
-        <PriceSummary locale={toLocale} currency={toCurrency} value={toValue} ></PriceSummary>
+        <PriceSummary locale='' currency={cryptoCurrency} value={cryptoValue}></PriceSummary>
+        <PriceSummary locale={locale} currency={toCurrency} value={toValue} ></PriceSummary>
     </div>
 )
 

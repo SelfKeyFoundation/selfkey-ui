@@ -5,5 +5,4 @@ export declare type CurrencyFormatProps = {
     currency: string;
     value: string;
 };
-declare const CurrencyFormat: SFC<CurrencyFormatProps>;
-export default CurrencyFormat;
+export declare const CurrencyFormat: SFC<CurrencyFormatProps>;

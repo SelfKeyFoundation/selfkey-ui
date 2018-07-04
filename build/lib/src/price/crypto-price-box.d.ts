@@ -1,10 +1,9 @@
 /// <reference types="react" />
 import { SFC } from 'react';
 export declare type CryptoPriceBoxProps = {
-    fromLocale: string;
-    fromCurrency: string;
-    fromValue: string;
-    toLocale: string;
+    locale: string;
+    cryptoCurrency: string;
+    cryptoValue: string;
     toCurrency: string;
     toValue: string;
 };
