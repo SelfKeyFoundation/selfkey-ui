@@ -28,9 +28,9 @@ var styles = {
 };
 var PriceSummaryComponent = function (_a) {
     var classes = _a.classes, children = _a.children, locale = _a.locale, currency = _a.currency, value = _a.value;
-    return (React.createElement("div", { className: "" + classes.row },
-        React.createElement("div", { className: "" + classes.currency }, currency),
-        React.createElement("div", { className: "" + classes.value },
+    return (React.createElement("div", { className: classes.row },
+        React.createElement("div", { className: classes.currency }, currency),
+        React.createElement("div", { className: classes.value },
             React.createElement(currency_format_1.CurrencyFormat, { locale: locale, currency: currency, value: value }))));
 };
 /** Test description */

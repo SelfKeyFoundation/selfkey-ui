@@ -28,9 +28,9 @@ export type CryptoPriceBoxProps = {
 }
 
 const CryptoPriceBoxComponent : SFC<StyledComponentProps & CryptoPriceBoxProps> = ({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
-    <div className={`${classes.cryptoPriceBox}`}>
-        <PriceSummary locale='' currency={cryptoCurrency} value={cryptoValue}></PriceSummary>
-        <PriceSummary locale={locale} currency={toCurrency} value={toValue} ></PriceSummary>
+    <div className={classes.cryptoPriceBox}>
+        <PriceSummary locale='' currency={cryptoCurrency} value={cryptoValue}/>
+        <PriceSummary locale={locale} currency={toCurrency} value={toValue} />
     </div>
 )
 

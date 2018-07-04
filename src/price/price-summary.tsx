@@ -37,10 +37,10 @@ export type PriceSummaryProps = {
 };
 
 const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, locale, currency, value }) => (
-    <div className={`${classes.row}`}>
-        <div className={`${classes.currency}`}>{currency}</div>
-        <div className={`${classes.value}`}>
-            <CurrencyFormat locale={locale} currency={currency} value={value}></CurrencyFormat>
+    <div className={classes.row}>
+        <div className={classes.currency}>{currency}</div>
+        <div className={classes.value}>
+            <CurrencyFormat locale={locale} currency={currency} value={value}/>
         </div>
     </div>
 )

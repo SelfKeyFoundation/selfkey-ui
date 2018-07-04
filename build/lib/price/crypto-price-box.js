@@ -17,7 +17,7 @@ var styles = {
 };
 var CryptoPriceBoxComponent = function (_a) {
     var classes = _a.classes, children = _a.children, locale = _a.locale, cryptoCurrency = _a.cryptoCurrency, cryptoValue = _a.cryptoValue, toCurrency = _a.toCurrency, toValue = _a.toValue;
-    return (React.createElement("div", { className: "" + classes.cryptoPriceBox },
+    return (React.createElement("div", { className: classes.cryptoPriceBox },
         React.createElement(price_summary_1.PriceSummary, { locale: '', currency: cryptoCurrency, value: cryptoValue }),
         React.createElement(price_summary_1.PriceSummary, { locale: locale, currency: toCurrency, value: toValue })));
 };
