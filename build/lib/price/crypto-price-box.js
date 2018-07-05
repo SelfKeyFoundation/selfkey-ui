@@ -11,7 +11,7 @@ var styles = {
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        marginRight: '40px',
+        marginRight: '10px',
         marginLeft: '40px',
     }
 };
