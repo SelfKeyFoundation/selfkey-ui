@@ -20,7 +20,7 @@ export const CurrencyFormat: SFC<CurrencyFormatProps> = ({
 }) => {
   const formatString = `${locale}:${currency}:${fractionDigits || "default"}`;
 
-  if (!formatters[formatString]) {
+  if (locale && !formatters[formatString]) {
     formatters[formatString] = new Intl.NumberFormat(locale, {
       style: "currency",
       currency: currency,
