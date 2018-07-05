@@ -9,7 +9,7 @@ exports.CurrencyFormat = function (_a) {
         formatters[formatString] = new Intl.NumberFormat(locale, {
             style: "currency",
             currency: currency,
-            maximumFractionDigits: fractionDigits
+            maximumFractionDigits: fractionDigits || 10
         });
     }
     return (React.createElement("div", null, locale ? formatters[formatString].format(Number(value)) : value));

@@ -24,7 +24,7 @@ export const CurrencyFormat: SFC<CurrencyFormatProps> = ({
     formatters[formatString] = new Intl.NumberFormat(locale, {
       style: "currency",
       currency: currency,
-      maximumFractionDigits: fractionDigits
+      maximumFractionDigits: fractionDigits || 10
     });
   }
 
