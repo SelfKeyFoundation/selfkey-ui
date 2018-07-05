@@ -1,34 +1,36 @@
 import * as React from "react";
 import { SFC } from "react";
 
-export type CurrencyFormatProps = {
-  locale: string;
-  currency: string;
-  value: string;
-  fractionDigits?: number;
+export type NumberFormatProps = {
+  locale: string,
+  style: string,
+  currency: string,
+  value: string,
+  fractionDigits?: number
 };
 
 const formatters: {
   [key: string]: Intl.NumberFormat;
 } = {};
 
-export const CurrencyFormat: SFC<CurrencyFormatProps> = ({
+export const NumberFormat: SFC<NumberFormatProps> = ({
   locale,
+  style,
   currency,
   value,
   fractionDigits
 }) => {
-  const formatString = `${locale}:${currency}:${fractionDigits || "default"}`;
+  const formatString = `${locale}:${style}:${currency}:${fractionDigits || "default"}`;
 
   if (locale && !formatters[formatString]) {
     formatters[formatString] = new Intl.NumberFormat(locale, {
-      style: "currency",
+      style: style || "decimal",
       currency: currency,
       maximumFractionDigits: fractionDigits || (Number(value) >= 1) ? 2 : 10
     });
   }
 
   return (
-    <div>{locale ? formatters[formatString].format(Number(value)) : value}</div>
+    <div>{formatters[formatString].format(Number(value))}</div>
   );
 };

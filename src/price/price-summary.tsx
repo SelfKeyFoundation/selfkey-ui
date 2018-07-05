@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 import { StyleSheet, StyledComponentProps } from '../react-jss.types';
 import CommonStyle from '../common/common-style';
 
-import { CurrencyFormat } from './currency-format';
+import { NumberFormat } from './number-format';
 
 const styles: StyleSheet = {
     row: {
@@ -32,15 +32,16 @@ const styles: StyleSheet = {
 
 export type PriceSummaryProps = {
     locale: string,
+    style: string,
     currency: string,
     value: string
 };
 
-const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, locale, currency, value }) => (
+const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ classes, children, locale, style, currency, value }) => (
     <div className={classes.row}>
         <div className={classes.currency}>{currency}</div>
         <div className={classes.value}>
-            <CurrencyFormat locale={locale} currency={currency} value={value}/>
+            <NumberFormat locale={locale} style={style} currency={currency} value={value}/>
         </div>
     </div>
 )

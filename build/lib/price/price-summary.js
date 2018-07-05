@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var common_style_1 = require("../common/common-style");
-var currency_format_1 = require("./currency-format");
+var number_format_1 = require("./number-format");
 var styles = {
     row: {
         display: 'flex',
@@ -27,11 +27,11 @@ var styles = {
     }
 };
 var PriceSummaryComponent = function (_a) {
-    var classes = _a.classes, children = _a.children, locale = _a.locale, currency = _a.currency, value = _a.value;
+    var classes = _a.classes, children = _a.children, locale = _a.locale, style = _a.style, currency = _a.currency, value = _a.value;
     return (React.createElement("div", { className: classes.row },
         React.createElement("div", { className: classes.currency }, currency),
         React.createElement("div", { className: classes.value },
-            React.createElement(currency_format_1.CurrencyFormat, { locale: locale, currency: currency, value: value }))));
+            React.createElement(number_format_1.NumberFormat, { locale: locale, style: style, currency: currency, value: value }))));
 };
 /** Test description */
 exports.PriceSummary = react_jss_1.default(styles)(PriceSummaryComponent);

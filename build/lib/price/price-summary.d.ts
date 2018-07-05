@@ -2,6 +2,7 @@
 import { SFC } from 'react';
 export declare type PriceSummaryProps = {
     locale: string;
+    style: string;
     currency: string;
     value: string;
 };
