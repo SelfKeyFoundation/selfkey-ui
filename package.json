@@ -2,14 +2,20 @@
   "name": "selfkey-ui",
   "version": "1.0.0",
   "description": "UI components for the SelfKey project",
-  "main": "index.js",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
+  "files": [
+    "build/lib"
+  ],
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "npm run lint && npm run build-lib && build-storybook",
+    "build": "yarn lint && yarn build-lib",
+    "build-lib": "tsc && yarn copy-assets-to-lib",
     "test": "jest",
     "test:coverage": "npm test -- --coverage",
     "build-storybook": "build-storybook",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "copy-assets-to-lib": "cpx \"./src/assets/**/*.*\" ./build/lib/assets/"
   },
   "repository": {
     "type": "git",
@@ -41,6 +47,7 @@
     "awesome-typescript-loader": "4.0.0",
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
+    "cpx": "^1.5.0",
     "cz-conventional-changelog": "^2.1.0",
     "cz-jira-smart-commit": "^3.0.0",
     "jest": "^22.4.3",
@@ -56,7 +63,14 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "config": {
     "commitizen": {
