@@ -20,13 +20,14 @@ export const NumberFormat: SFC<NumberFormatProps> = ({
   value,
   fractionDigits
 }) => {
+  fractionDigits = fractionDigits || (Number(value) >= 1) ? 2 : 10;
   const formatString = `${locale}:${style}:${currency}:${fractionDigits || "default"}`;
 
   if (locale && !formatters[formatString]) {
     formatters[formatString] = new Intl.NumberFormat(locale, {
       style: style || "decimal",
       currency: currency,
-      maximumFractionDigits: fractionDigits || (Number(value) >= 1) ? 2 : 10
+      maximumFractionDigits: fractionDigits
     });
   }
 
