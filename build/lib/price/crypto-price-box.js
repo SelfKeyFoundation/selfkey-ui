@@ -13,13 +13,16 @@ var styles = {
         justifyContent: 'flex-start',
         marginRight: '10px',
         marginLeft: '40px',
+    },
+    test: {
+        color: 'red'
     }
 };
 var CryptoPriceBoxComponent = function (_a) {
     var classes = _a.classes, children = _a.children, locale = _a.locale, cryptoCurrency = _a.cryptoCurrency, cryptoValue = _a.cryptoValue, toCurrency = _a.toCurrency, toValue = _a.toValue;
     return (React.createElement("div", { className: classes.cryptoPriceBox },
-        React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "decimal", currency: cryptoCurrency, value: cryptoValue }),
-        React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: toCurrency, value: toValue })));
+        React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, style: "decimal", currency: cryptoCurrency, value: cryptoValue, appendCurrency: true }),
+        React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: toCurrency, value: toValue, appendCurrency: true })));
 };
 /** Test description */
 exports.CryptoPriceBox = react_jss_1.default(styles)(CryptoPriceBoxComponent);

@@ -4,11 +4,9 @@ var React = require("react");
 var react_jss_1 = require("react-jss");
 var common_style_1 = require("../common/common-style");
 var number_format_1 = require("./number-format");
+var core_1 = require("@material-ui/core");
 var styles = {
     row: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'flex-end',
         marginTop: '4px',
     },
     currency: {
@@ -18,7 +16,6 @@ var styles = {
         fontWeight: '500',
         letterSpacing: '1px',
         color: '#ffffff',
-        marginRight: '6px',
     },
     value: {
         fontFamily: common_style_1.default.fontFamily,
@@ -27,11 +24,14 @@ var styles = {
     }
 };
 var PriceSummaryComponent = function (_a) {
-    var classes = _a.classes, children = _a.children, locale = _a.locale, style = _a.style, currency = _a.currency, value = _a.value;
-    return (React.createElement("div", { className: classes.row },
-        React.createElement("div", { className: classes.currency }, currency),
-        React.createElement("div", { className: classes.value },
-            React.createElement(number_format_1.NumberFormat, { locale: locale, style: style, currency: currency, value: value }))));
+    var classes = _a.classes, children = _a.children, className = _a.className, currencyClass = _a.currencyClass, valueClass = _a.valueClass, locale = _a.locale, style = _a.style, currency = _a.currency, value = _a.value, appendCurrency = _a.appendCurrency, prependCurrency = _a.prependCurrency;
+    return (React.createElement(core_1.Grid, { container: true, className: className ? className : classes.row, alignItems: 'center', spacing: 8 },
+        appendCurrency &&
+            React.createElement(core_1.Grid, { item: true, className: currencyClass ? currencyClass : classes.currency }, currency),
+        React.createElement(core_1.Grid, { item: true, className: valueClass ? valueClass : classes.value },
+            React.createElement(number_format_1.NumberFormat, { locale: locale, style: style, currency: currency, value: value })),
+        prependCurrency &&
+            React.createElement(core_1.Grid, { item: true, className: classes.currency }, currency)));
 };
 /** Test description */
 exports.PriceSummary = react_jss_1.default(styles)(PriceSummaryComponent);
