@@ -17,7 +17,8 @@ const styles: StyleSheet = {
       padding: '20px 20px 8px 20px',
       borderRadius: '4px',
       backgroundColor: '#262f39',
-      border: 'solid 1px #303c49',  
+      border: 'solid 1px #303c49',
+      height: '186px'
     },
 
     tokenBoxBody: {
@@ -26,7 +27,7 @@ const styles: StyleSheet = {
 
     tokenBoxFooter: {
       bottom: '7px',
-      marginTop: '20px',
+      marginTop: '10px',
     },
 
     horizontalDivider: {
@@ -35,7 +36,7 @@ const styles: StyleSheet = {
     },
 
     addressBox: {
-      marginTop: '16px',
+      marginTop: '10px',
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',

@@ -12,20 +12,21 @@ var styles = {
         borderRadius: '4px',
         backgroundColor: '#262f39',
         border: 'solid 1px #303c49',
+        height: '186px'
     },
     tokenBoxBody: {
         marginTop: '30px',
     },
     tokenBoxFooter: {
         bottom: '7px',
-        marginTop: '20px',
+        marginTop: '10px',
     },
     horizontalDivider: {
         height: '1px',
         backgroundColor: '#303c49'
     },
     addressBox: {
-        marginTop: '16px',
+        marginTop: '10px',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
