@@ -6,7 +6,7 @@ var core_1 = require("@material-ui/core");
 var transfer_1 = require("../icons/transfer");
 var styles = {
     tokenBox: {
-        minWidth: '360px',
+        minWidth: '320px',
         position: 'relative',
         padding: '20px 20px 8px 20px',
         borderRadius: '4px',
