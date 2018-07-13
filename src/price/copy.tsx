@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import injectSheet from 'react-jss';
-import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+import { StyleSheet} from '../react-jss.types';
 
 const styles: StyleSheet = {
   copyButton: {
@@ -26,11 +26,12 @@ const styles: StyleSheet = {
   },
 };
 
-interface Props {
+export interface Props {
   text: string;
 }
 
-export class CopyComponent extends React.Component<StyledComponentProps & Props, {}> {
+@injectSheet(styles)
+export class Copy extends React.Component<Props, {}> {
   
   copyText = 'COPY';
   copiedText = 'COPIED';
@@ -51,14 +52,10 @@ export class CopyComponent extends React.Component<StyledComponentProps & Props,
     return (
       <CopyToClipboard text={this.props.text}
           onCopy={this.handleOnCopy}>
-        <button className={this.props.classes.copyButton}>
-          <span className={this.props.classes.copyButtonSpan}>{this.state.copyTextPlaceholder}</span>
+        <button>
+          <span>{this.state.copyTextPlaceholder}</span>
         </button>
       </CopyToClipboard>
     );
   }
 }
-
-export const Copy: React.Component<Props> = injectSheet(styles)(CopyComponent);
-
-export default Copy;

@@ -4,6 +4,7 @@ var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var transfer_1 = require("../icons/transfer");
+var copy_1 = require("./copy");
 var styles = {
     tokenBox: {
         minWidth: '320px',
@@ -97,8 +98,7 @@ var TokenBoxComponent = function (_a) {
             React.createElement(core_1.Grid, { item: true, xs: 12, sm: 10 },
                 React.createElement("span", { className: classes.publicKey }, publicKey)),
             React.createElement(core_1.Grid, { item: true, xs: 12, sm: 2 },
-                React.createElement("button", { className: classes.copyButton, onClick: copyAction },
-                    React.createElement("span", { className: classes.copyButtonSpan }, "COPY"))))));
+                React.createElement(copy_1.Copy, { text: publicKey })))));
 };
 /** Test description */
 exports.TokenBox = react_jss_1.default(styles)(TokenBoxComponent);

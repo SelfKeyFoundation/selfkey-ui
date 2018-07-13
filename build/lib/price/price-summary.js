@@ -31,7 +31,7 @@ var PriceSummaryComponent = function (_a) {
         React.createElement(core_1.Grid, { item: true, className: valueClass ? valueClass : classes.value },
             React.createElement(number_format_1.NumberFormat, { locale: locale, style: style, currency: currency, value: value })),
         prependCurrency &&
-            React.createElement(core_1.Grid, { item: true, className: classes.currency }, currency)));
+            React.createElement(core_1.Grid, { item: true, className: currencyClass ? currencyClass : classes.currency }, currency)));
 };
 /** Test description */
 exports.PriceSummary = react_jss_1.default(styles)(PriceSummaryComponent);
