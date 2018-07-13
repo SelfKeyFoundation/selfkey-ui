@@ -7,6 +7,7 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import { Grid } from '@material-ui/core'
 
 import { TransferIcon } from '../icons/transfer';
+import Copy from './copy';
 
 
 const styles: StyleSheet = {
@@ -104,7 +105,9 @@ export type TokenBoxProps = {
     copyAction?: ((event: React.MouseEvent<HTMLElement>) => void)
 }
 
-const TokenBoxComponent : SFC<StyledComponentProps & TokenBoxProps> = ({classes, children, cryptoCurrencyShort, cryptoCurrencyName, CryptoCurrencyIconComponent, publicKey, transferAction, copyAction }) => (
+const TokenBoxComponent : SFC<StyledComponentProps & TokenBoxProps> = ({classes, children, cryptoCurrencyShort, cryptoCurrencyName, CryptoCurrencyIconComponent, publicKey, transferAction, copyAction }) => { 
+    
+  return (
     <div className={classes.tokenBox}>
       <Grid container>
         <Grid item xs={6} sm={2}>
@@ -133,13 +136,15 @@ const TokenBoxComponent : SFC<StyledComponentProps & TokenBoxProps> = ({classes,
           </span>
         </Grid>
         <Grid item xs={12} sm={2}>
-          <button className={classes.copyButton} onClick={copyAction}>
-            <span className={classes.copyButtonSpan}>COPY</span>
-          </button>
+
+          <Copy text={publicKey}>
+          </Copy>
+          
         </Grid>
       </Grid>
     </div>
-)
+  )
+}
 
 /** Test description */
 export const TokenBox: SFC<TokenBoxProps> = injectSheet(styles)(TokenBoxComponent);

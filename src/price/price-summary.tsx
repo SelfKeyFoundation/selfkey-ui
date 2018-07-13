@@ -49,7 +49,7 @@ const PriceSummaryComponent: SFC<StyledComponentProps & PriceSummaryProps> = ({ 
             <NumberFormat locale={locale} style={style} currency={currency} value={value}/>
         </Grid>
         {prependCurrency &&
-            <Grid item className={classes.currency}>{currency}</Grid>
+            <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>
         }
     </Grid>
 )
