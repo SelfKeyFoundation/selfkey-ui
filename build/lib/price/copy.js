@@ -42,28 +42,30 @@ var styles = {
 };
 var Copy = /** @class */ (function (_super) {
     __extends(Copy, _super);
-    function Copy() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function Copy(props) {
+        var _this = _super.call(this, props) || this;
         _this.copyText = 'COPY';
         _this.copiedText = 'COPIED';
         _this.state = {
             copyTextPlaceholder: _this.copyText
         };
+        _this.handleOnCopy = _this.handleOnCopy.bind(_this);
         return _this;
     }
     Copy.prototype.handleOnCopy = function () {
         var _this = this;
-        this.state.copyTextPlaceholder = this.copiedText;
+        this.setState({ copyTextPlaceholder: this.copiedText });
         var bounceTime = setTimeout(function () {
-            _this.state.copyTextPlaceholder = _this.copyText;
+            _this.setState({ copyTextPlaceholder: _this.copyText });
             clearTimeout(bounceTime);
-        }, 5000);
+        }, 1000);
     };
     ;
     Copy.prototype.render = function () {
-        return (React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: this.props.text, onCopy: this.handleOnCopy },
-            React.createElement("button", null,
-                React.createElement("span", null, this.state.copyTextPlaceholder))));
+        var _a = this.props, text = _a.text, classes = _a.classes;
+        return (React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: text, onCopy: this.handleOnCopy },
+            React.createElement("button", { className: classes.copyButton },
+                React.createElement("span", { className: classes.copyButtonSpan }, this.state.copyTextPlaceholder))));
     };
     Copy = __decorate([
         react_jss_1.default(styles)

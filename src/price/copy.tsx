@@ -31,7 +31,7 @@ export interface Props {
 }
 
 @injectSheet(styles)
-export class Copy extends React.Component<Props, {}> {
+export class Copy extends React.Component<any, any> {
   
   copyText = 'COPY';
   copiedText = 'COPIED';
@@ -40,20 +40,27 @@ export class Copy extends React.Component<Props, {}> {
     copyTextPlaceholder: this.copyText
   };
 
+  constructor(props: any) {
+    super(props);
+
+    this.handleOnCopy = this.handleOnCopy.bind(this);
+  }
+
   handleOnCopy() {
-    this.state.copyTextPlaceholder = this.copiedText;
+    this.setState({copyTextPlaceholder: this.copiedText});
     const bounceTime = setTimeout( () => {
-      this.state.copyTextPlaceholder = this.copyText;
+      this.setState({copyTextPlaceholder: this.copyText});
       clearTimeout(bounceTime);
-    }, 5000)
+    }, 1000)
   };
 
   render() {
+    const {text, classes} = this.props
     return (
-      <CopyToClipboard text={this.props.text}
+      <CopyToClipboard text={text}
           onCopy={this.handleOnCopy}>
-        <button>
-          <span>{this.state.copyTextPlaceholder}</span>
+        <button className={classes.copyButton}>
+          <span className={classes.copyButtonSpan}>{this.state.copyTextPlaceholder}</span>
         </button>
       </CopyToClipboard>
     );
