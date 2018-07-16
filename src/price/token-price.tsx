@@ -32,7 +32,7 @@ export type TokenPriceProps = {
 const TokenPriceComponent : SFC<StyledComponentProps & TokenPriceProps> = ({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
     <div>
         <PriceSummary locale={locale} style="decimal" currency={cryptoCurrency} value={cryptoValue} valueClass={classes.cryptoCurrencyValue}/>
-        <PriceSummary locale={locale} style="currency" currency={toCurrency} value={toValue} valueClass={classes.currency} prependCurrency/>
+        <PriceSummary locale={locale} style="currency" currency={toCurrency} currencyClass={classes.currency} value={toValue} valueClass={classes.currency} prependCurrency/>
     </div>
 )
 

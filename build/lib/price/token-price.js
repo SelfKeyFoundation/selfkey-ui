@@ -20,7 +20,7 @@ var TokenPriceComponent = function (_a) {
     var classes = _a.classes, children = _a.children, locale = _a.locale, cryptoCurrency = _a.cryptoCurrency, cryptoValue = _a.cryptoValue, toCurrency = _a.toCurrency, toValue = _a.toValue;
     return (React.createElement("div", null,
         React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "decimal", currency: cryptoCurrency, value: cryptoValue, valueClass: classes.cryptoCurrencyValue }),
-        React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: toCurrency, value: toValue, valueClass: classes.currency, prependCurrency: true })));
+        React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: toCurrency, currencyClass: classes.currency, value: toValue, valueClass: classes.currency, prependCurrency: true })));
 };
 /** Test description */
 exports.TokenPrice = react_jss_1.default(styles)(TokenPriceComponent);
