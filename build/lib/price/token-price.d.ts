@@ -1,5 +1,6 @@
 /// <reference types="react" />
-import { SFC } from 'react';
+import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
 export declare type TokenPriceProps = {
     locale: string;
     cryptoCurrency: string;
@@ -7,6 +8,5 @@ export declare type TokenPriceProps = {
     toCurrency: string;
     toValue: string;
 };
-/** Test description */
-export declare const TokenPrice: SFC<TokenPriceProps>;
+export declare const TokenPrice: React.ComponentType<TokenPriceProps & StyledComponentProps<string>>;
 export default TokenPrice;

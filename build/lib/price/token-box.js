@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+// @ts-ignore
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var transfer_1 = require("../icons/transfer");
@@ -16,11 +17,11 @@ var styles = {
         height: '186px'
     },
     tokenBoxBody: {
-        marginTop: '30px',
+        marginTop: '30px'
     },
     tokenBoxFooter: {
         bottom: '7px',
-        marginTop: '10px',
+        marginTop: '10px'
     },
     horizontalDivider: {
         height: '1px',
@@ -40,25 +41,6 @@ var styles = {
         fontSize: '12px',
         color: '#93b0c1'
     },
-    copyButton: {
-        cursor: 'pointer',
-        width: '46px',
-        height: '20px',
-        marginLeft: '7px',
-        padding: 0,
-        backgroundColor: '#435160',
-        border: 'none',
-        borderRadius: '4px',
-        margin: 0,
-        color: '#ffffff !important'
-    },
-    copyButtonSpan: {
-        fontSize: '11px',
-        lineHeight: '12px',
-        fontFamily: 'ProximaNovaRegular',
-        letterSpacing: 'normal',
-        color: '#93b0c1'
-    },
     transferButton: {
         cursor: 'pointer',
         background: 'none',
@@ -72,15 +54,15 @@ var styles = {
     },
     cryptoCurrencyShort: {
         marginTop: '4px',
-        opacity: '0.7',
+        opacity: 0.7,
         fontFamily: 'ProximaNovaRegular',
         fontSize: '14px',
         letterSpacing: '1px',
         color: '#ffffff'
     }
 };
-var TokenBoxComponent = function (_a) {
-    var classes = _a.classes, children = _a.children, cryptoCurrencyShort = _a.cryptoCurrencyShort, cryptoCurrencyName = _a.cryptoCurrencyName, CryptoCurrencyIconComponent = _a.CryptoCurrencyIconComponent, publicKey = _a.publicKey, transferAction = _a.transferAction, copyAction = _a.copyAction;
+exports.TokenBox = react_jss_1.default(styles)(function (_a) {
+    var classes = _a.classes, children = _a.children, cryptoCurrencyShort = _a.cryptoCurrencyShort, cryptoCurrencyName = _a.cryptoCurrencyName, CryptoCurrencyIconComponent = _a.CryptoCurrencyIconComponent, publicKey = _a.publicKey, transferAction = _a.transferAction;
     return (React.createElement("div", { className: classes.tokenBox },
         React.createElement(core_1.Grid, { container: true },
             React.createElement(core_1.Grid, { item: true, xs: 6, sm: 2 },
@@ -99,8 +81,6 @@ var TokenBoxComponent = function (_a) {
                 React.createElement("span", { className: classes.publicKey }, publicKey)),
             React.createElement(core_1.Grid, { item: true, xs: 12, sm: 2 },
                 React.createElement(copy_1.Copy, { text: publicKey })))));
-};
-/** Test description */
-exports.TokenBox = react_jss_1.default(styles)(TokenBoxComponent);
+});
 exports.default = exports.TokenBox;
 //# sourceMappingURL=token-box.js.map

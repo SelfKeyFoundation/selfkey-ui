@@ -1,9 +1,9 @@
 import * as React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import injectSheet from "react-jss";
-import { StyleSheet, StyledComponentProps } from "../react-jss.types";
+// @ts-ignore
+import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
 
-const styles: StyleSheet = {
+export const styles: StyleSheet = {
   copyButton: {
     cursor: "pointer",
     width: "46px",
@@ -26,7 +26,7 @@ const styles: StyleSheet = {
   }
 };
 
-export type CopyProps = StyledComponentProps & {
+export type CopyProps = {
   text: string;
 };
 
@@ -34,8 +34,10 @@ export type CopyState = {
   copyTextPlaceholder: string;
 };
 
-@injectSheet(styles)
-export class Copy extends React.Component<CopyProps, CopyState> {
+export type StyledProps = WithStyles<keyof typeof styles> & CopyProps;
+
+
+export class CopyComponent extends React.Component<StyledProps, CopyState> {
   copyText = "COPY";
   copiedText = "COPIED";
 
@@ -43,24 +45,24 @@ export class Copy extends React.Component<CopyProps, CopyState> {
     copyTextPlaceholder: this.copyText
   };
 
-  constructor(props: CopyProps) {
+  constructor(props: StyledProps) {
     super(props);
-
-    this.handleOnCopy = this.handleOnCopy.bind(this);
   }
 
   handleOnCopy() {
-    this.setState({ copyTextPlaceholder: this.copiedText });
-    const bounceTime = setTimeout(() => {
-      this.setState({ copyTextPlaceholder: this.copyText });
-      clearTimeout(bounceTime);
-    }, 1000);
+    return () => {
+      this.setState({ copyTextPlaceholder: this.copiedText });
+      const bounceTime = setTimeout(() => {
+        this.setState({ copyTextPlaceholder: this.copyText });
+        clearTimeout(bounceTime);
+      }, 1000);
+    }
   }
 
   render() {
     const { text, classes } = this.props;
     return (
-      <CopyToClipboard text={text} onCopy={this.handleOnCopy}>
+      <CopyToClipboard text={text} onCopy={this.handleOnCopy()}>
         <button className={classes.copyButton}>
           <span className={classes.copyButtonSpan}>
             {this.state.copyTextPlaceholder}
@@ -70,3 +72,7 @@ export class Copy extends React.Component<CopyProps, CopyState> {
     );
   }
 }
+
+export const Copy = injectSheet(styles)(CopyComponent);
+
+export default Copy;

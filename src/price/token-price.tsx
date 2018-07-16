@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { SFC } from 'react';
-import injectSheet from 'react-jss';
-
-import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+// @ts-ignore
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { PriceSummary } from './price-summary';
 
@@ -10,7 +8,7 @@ const styles: StyleSheet = {
     cryptoCurrencyValue: {
         fontFamily: 'ProximaNovaRegular',
         fontSize: '40px',
-        fontWeight: '300',
+        fontWeight: 300,
         color: '#ffffff'
     },
 
@@ -29,14 +27,11 @@ export type TokenPriceProps = {
     toValue: string
 };
 
-const TokenPriceComponent : SFC<StyledComponentProps & TokenPriceProps> = ({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
+export const TokenPrice = injectSheet(styles)<TokenPriceProps>(({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
     <div>
-        <PriceSummary locale={locale} style="decimal" currency={cryptoCurrency} value={cryptoValue} valueClass={classes.cryptoCurrencyValue}/>
-        <PriceSummary locale={locale} style="currency" currency={toCurrency} currencyClass={classes.currency} value={toValue} valueClass={classes.currency} prependCurrency/>
+        <PriceSummary locale={locale} style='decimal' currency={cryptoCurrency} value={cryptoValue} valueClass={classes.cryptoCurrencyValue}/>
+        <PriceSummary locale={locale} style='currency' currency={toCurrency} currencyClass={classes.currency} value={toValue} valueClass={classes.currency} prependCurrency/>
     </div>
-)
-
-/** Test description */
-export const TokenPrice: SFC<TokenPriceProps> = injectSheet(styles)(TokenPriceComponent);
+));
 
 export default TokenPrice;

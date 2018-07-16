@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { SFC } from 'react';
-import injectSheet from 'react-jss';
-
-import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+// @ts-ignore
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
@@ -14,7 +12,7 @@ const styles: StyleSheet = {
   }
 };
 
-const TransferIconComponent : SFC<StyledComponentProps & SvgIconProps> = (props: any)=> (
+export const TransferIcon= injectSheet(styles)<SvgIconProps>((props: any)=> (
   <SvgIcon {...props} viewBox="0 0 489.2 489.2">
     <g>
 	<g>
@@ -53,9 +51,6 @@ const TransferIconComponent : SFC<StyledComponentProps & SvgIconProps> = (props:
 <g>
 </g>
   </SvgIcon>
-);
-
-/** Test description */
-export const TransferIcon: SFC<SvgIconProps> = injectSheet(styles)(TransferIconComponent);
+));
 
 export default TransferIcon;

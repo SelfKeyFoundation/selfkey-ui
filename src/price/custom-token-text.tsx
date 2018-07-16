@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { SFC } from 'react';
-import injectSheet from 'react-jss';
-
-import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+// @ts-ignore
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 const styles: StyleSheet = {
     customTokenText: {
@@ -15,13 +13,10 @@ const styles: StyleSheet = {
     }
 };
 
-const CustomTokenTextComponent : SFC<StyledComponentProps> = ({classes, children}) => (
+export const CustomTokenText = injectSheet(styles)<{}>(({classes, children}) => (
     <div className={classes.customTokenText}>
         {children}
     </div>
-)
-
-/** Test description */
-export const CustomTokenText: SFC<{}> = injectSheet(styles)(CustomTokenTextComponent);
+));
 
 export default CustomTokenText;

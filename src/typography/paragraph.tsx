@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { SFC } from 'react';
-import injectSheet from 'react-jss';
-
-import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+// @ts-ignore
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 const styles: StyleSheet = {
     p: {
@@ -14,8 +12,6 @@ const styles: StyleSheet = {
     }
 };
 
-const Paragraph: SFC<StyledComponentProps> = ({ classes, children }) => (
+export const P = injectSheet(styles)<{}>(({ classes, children }) => (
     <p className={`${classes.base} ${classes.p}`}>{children}</p>
-)
-
-export const P: SFC<{}> = injectSheet(styles)(Paragraph);
+));

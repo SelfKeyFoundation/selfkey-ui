@@ -1,3 +1,4 @@
 /// <reference types="react" />
-import { SFC } from 'react';
-export declare const P: SFC<{}>;
+import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
+export declare const P: React.ComponentType<StyledComponentProps<string>>;

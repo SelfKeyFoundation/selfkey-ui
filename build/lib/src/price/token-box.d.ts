@@ -8,7 +8,6 @@ export declare type TokenBoxProps = {
     CryptoCurrencyIconComponent: SFC<SvgIconProps>;
     publicKey: string;
     transferAction?: ((event: React.MouseEvent<HTMLElement>) => void);
-    copyAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 };
 /** Test description */
 export declare const TokenBox: SFC<TokenBoxProps>;

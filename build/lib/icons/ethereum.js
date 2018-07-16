@@ -9,6 +9,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+// @ts-ignore
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
@@ -17,11 +18,9 @@ var styles = {
         height: '44px !important'
     }
 };
-var EthereumIconComponent = function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 44 44' }),
+exports.EthereumIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 44 44' }),
     React.createElement("g", { fill: "none", fillRule: "evenodd" },
         React.createElement("rect", { width: "44", height: "44", fill: "#9418DC", rx: "9" }),
-        React.createElement("path", { fill: "#FFF", fillRule: "nonzero", d: "M11.37 20.286l10.027-4.1 9.719 4.205L21.382 5.5 11.37 20.286zm.031 4.55l10.012 5.627 10.212-5.627L21.505 38.5 11.401 24.836zm10.043-6.645l10.15 4.385-10.15 5.508L11 22.456l10.444-4.265z" })))); };
-/** Test description */
-exports.EthereumIcon = react_jss_1.default(styles)(EthereumIconComponent);
+        React.createElement("path", { fill: "#FFF", fillRule: "nonzero", d: "M11.37 20.286l10.027-4.1 9.719 4.205L21.382 5.5 11.37 20.286zm.031 4.55l10.012 5.627 10.212-5.627L21.505 38.5 11.401 24.836zm10.043-6.645l10.15 4.385-10.15 5.508L11 22.456l10.444-4.265z" })))); });
 exports.default = exports.EthereumIcon;
 //# sourceMappingURL=ethereum.js.map

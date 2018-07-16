@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+// @ts-ignore
 var react_jss_1 = require("react-jss");
 var price_summary_1 = require("./price-summary");
 var styles = {
@@ -18,13 +19,11 @@ var styles = {
         color: 'red'
     }
 };
-var CryptoPriceBoxComponent = function (_a) {
+exports.CryptoPriceBox = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, locale = _a.locale, cryptoCurrency = _a.cryptoCurrency, cryptoValue = _a.cryptoValue, toCurrency = _a.toCurrency, toValue = _a.toValue;
     return (React.createElement("div", { className: classes.cryptoPriceBox },
         React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, style: "decimal", currency: cryptoCurrency, value: cryptoValue, appendCurrency: true }),
         React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: toCurrency, value: toValue, appendCurrency: true })));
-};
-/** Test description */
-exports.CryptoPriceBox = react_jss_1.default(styles)(CryptoPriceBoxComponent);
+});
 exports.default = exports.CryptoPriceBox;
 //# sourceMappingURL=crypto-price-box.js.map

@@ -1,5 +1,4 @@
 /// <reference types="react" />
-import { SFC } from 'react';
-/** Test description */
-export declare const CustomTokenText: SFC<{}>;
+import * as React from 'react';
+export declare const CustomTokenText: React.ComponentType<any>;
 export default CustomTokenText;
