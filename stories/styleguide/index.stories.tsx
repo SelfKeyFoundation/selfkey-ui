@@ -11,6 +11,8 @@ import { P } from "../../src/typography/paragraph";
 import { Logo } from "../../src/images/logo";
 import { CryptoPriceList } from "./crypto-price-list";
 import { TokenList } from "./token-list";
+import { CryptoChartBox } from "../../src/price/crypto-chart-box";
+
 
 
 setAddon(JSXAddon);
@@ -49,3 +51,4 @@ const priceStory = storiesOf("Prices", module).addDecorator(
 
 priceStory.addWithJSX("PriceList", () => <CryptoPriceList />);
 priceStory.addWithJSX("TokenList", () => <TokenList/>);
+priceStory.addWithJSX("CryptoChartBox", () => <CryptoChartBox locale='en' fiatCurrency='USD' wallet={{tokens:[{name: 'Selfkey', symbol: 'KEY', balance: 30, balanceInFiat: 0.42432}, {name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52}, {name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52}]}}/>);

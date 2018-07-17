@@ -24,9 +24,9 @@ const styles: StyleSheet = {
 export type CryptoPriceBoxProps = {
     locale: string,
     cryptoCurrency: string,
-    cryptoValue: string,
+    cryptoValue: number,
     toCurrency: string
-    toValue: string
+    toValue: number
 }
 
 export const CryptoPriceBox = injectSheet(styles)<CryptoPriceBoxProps>(({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (

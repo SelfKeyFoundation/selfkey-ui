@@ -5,7 +5,7 @@ export type NumberFormatProps = {
   locale: string,
   style: string,
   currency?: string,
-  value: string,
+  value: number,
   fractionDigits?: number
 };
 

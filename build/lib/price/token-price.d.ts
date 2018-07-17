@@ -3,9 +3,9 @@ import { StyledComponentProps } from 'react-jss';
 export declare type TokenPriceProps = {
     locale: string;
     cryptoCurrency: string;
-    cryptoValue: string;
+    cryptoValue: number;
     toCurrency: string;
-    toValue: string;
+    toValue: number;
 };
 export declare const TokenPrice: React.ComponentType<TokenPriceProps & StyledComponentProps<string>>;
 export default TokenPrice;
