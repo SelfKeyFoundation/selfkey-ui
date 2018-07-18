@@ -1,5 +1,4 @@
 import * as React from 'react';
-// @ts-ignore
 import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
@@ -12,7 +11,7 @@ const styles: StyleSheet = {
   }
 };
 
-export const TransferIcon= injectSheet(styles)<SvgIconProps>((props: any)=> (
+export const TransferIcon= injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox="0 0 489.2 489.2">
     <g>
 	<g>

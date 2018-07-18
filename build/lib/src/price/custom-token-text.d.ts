@@ -1,4 +1,4 @@
-/// <reference types="react" />
 import * as React from 'react';
-export declare const CustomTokenText: React.ComponentType<any>;
+import { StyledComponentProps } from 'react-jss';
+export declare const CustomTokenText: React.ComponentType<StyledComponentProps<string>>;
 export default CustomTokenText;

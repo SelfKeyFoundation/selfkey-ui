@@ -1,6 +1,5 @@
-/// <reference types="react" />
-import { SFC } from 'react';
+import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-/** Test description */
-export declare const EthereumIcon: SFC<SvgIconProps>;
+export declare const EthereumIcon: React.ComponentType<SvgIconProps & StyledComponentProps<string>>;
 export default EthereumIcon;

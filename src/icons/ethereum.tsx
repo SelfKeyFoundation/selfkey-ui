@@ -1,5 +1,4 @@
 import * as React from 'react';
-// @ts-ignore
 import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
@@ -12,7 +11,7 @@ const styles: StyleSheet = {
   }
 };
 
-export const EthereumIcon = injectSheet(styles)<SvgIconProps>((props: any)=> (
+export const EthereumIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 44 44'>
     <g fill="none" fillRule="evenodd">
       <rect width="44" height="44" fill="#9418DC" rx="9"/>

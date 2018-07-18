@@ -9,7 +9,6 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-// @ts-ignore
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
