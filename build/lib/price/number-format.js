@@ -7,11 +7,14 @@ exports.NumberFormat = function (_a) {
     fractionDigits = fractionDigits || (Number(value) >= 1) ? 2 : 10;
     var formatString = locale + ":" + style + ":" + currency + ":" + (fractionDigits || "default");
     if (locale && !formatters[formatString]) {
-        formatters[formatString] = new Intl.NumberFormat(locale, {
-            style: style || "decimal",
-            currency: currency,
+        var options = {
+            style: style,
             maximumFractionDigits: fractionDigits
-        });
+        };
+        if (style === 'currency') {
+            options.currency = currency;
+        }
+        formatters[formatString] = new Intl.NumberFormat(locale, options);
     }
     return (React.createElement("div", null, formatters[formatString].format(Number(value))));
 };
