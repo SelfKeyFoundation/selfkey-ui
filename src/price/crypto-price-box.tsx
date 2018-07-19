@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { SFC } from 'react';
-import injectSheet from 'react-jss';
-
-import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+// @ts-ignore
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { PriceSummary } from './price-summary';
 
@@ -16,6 +14,10 @@ const styles: StyleSheet = {
         justifyContent: 'flex-start',
         marginRight: '10px',
         marginLeft: '40px',
+    },
+
+    test: {
+        color: 'red'
     }
 };
 
@@ -27,14 +29,11 @@ export type CryptoPriceBoxProps = {
     toValue: string
 }
 
-const CryptoPriceBoxComponent : SFC<StyledComponentProps & CryptoPriceBoxProps> = ({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
+export const CryptoPriceBox = injectSheet(styles)<CryptoPriceBoxProps>(({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
     <div className={classes.cryptoPriceBox}>
-        <PriceSummary locale={locale} style="decimal" currency={cryptoCurrency} value={cryptoValue}/>
-        <PriceSummary locale={locale} style="currency" currency={toCurrency} value={toValue} />
+        <PriceSummary className={classes.test} locale={locale} style="decimal" currency={cryptoCurrency} value={cryptoValue} appendCurrency/>
+        <PriceSummary locale={locale} style="currency" currency={toCurrency} value={toValue} appendCurrency />
     </div>
-)
-
-/** Test description */
-export const CryptoPriceBox: SFC<CryptoPriceBoxProps> = injectSheet(styles)(CryptoPriceBoxComponent);
+));
 
 export default CryptoPriceBox;

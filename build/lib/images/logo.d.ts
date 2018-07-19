@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { SFC } from "react";
 export declare type LogoProps = {
     width?: number;

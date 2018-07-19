@@ -1,5 +1,5 @@
-/// <reference types="react" />
-import { SFC } from 'react';
+import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
 export declare type CryptoPriceBoxProps = {
     locale: string;
     cryptoCurrency: string;
@@ -7,6 +7,5 @@ export declare type CryptoPriceBoxProps = {
     toCurrency: string;
     toValue: string;
 };
-/** Test description */
-export declare const CryptoPriceBox: SFC<CryptoPriceBoxProps>;
+export declare const CryptoPriceBox: React.ComponentType<CryptoPriceBoxProps & StyledComponentProps<string>>;
 export default CryptoPriceBox;

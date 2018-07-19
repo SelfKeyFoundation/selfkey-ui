@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+// @ts-ignore
 var react_jss_1 = require("react-jss");
 var styles = {
     p: {
@@ -11,9 +12,8 @@ var styles = {
         lineHeight: 1.67
     }
 };
-var Paragraph = function (_a) {
+exports.P = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children;
     return (React.createElement("p", { className: classes.base + " " + classes.p }, children));
-};
-exports.P = react_jss_1.default(styles)(Paragraph);
+});
 //# sourceMappingURL=paragraph.js.map

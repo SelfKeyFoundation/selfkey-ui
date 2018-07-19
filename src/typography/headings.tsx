@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { SFC } from 'react';
-import injectSheet from 'react-jss';
-
-import { StyleSheet, StyledComponentProps } from '../react-jss.types';
+// @ts-ignore
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 const styles: StyleSheet = {
     base: {
@@ -15,11 +13,8 @@ const styles: StyleSheet = {
     }
 };
 
-const Heading1: SFC<StyledComponentProps> = ({ classes, children }) => (
+export const H1 = injectSheet(styles)<{}>(({ classes, children }) => (
     <h1 className={`${classes.base} ${classes.h1}`}>{children}</h1>
-)
-
-/** Test description */
-export const H1: SFC<{}> = injectSheet(styles)(Heading1);
+));
 
 export default H1;

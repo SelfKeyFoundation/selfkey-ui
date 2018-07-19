@@ -1,11 +1,15 @@
-/// <reference types="react" />
-import { SFC } from 'react';
+import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
 export declare type PriceSummaryProps = {
+    className?: string;
+    currencyClass?: string;
+    valueClass?: string;
     locale: string;
     style: string;
     currency: string;
     value: string;
+    appendCurrency?: boolean;
+    prependCurrency?: boolean;
 };
-/** Test description */
-export declare const PriceSummary: SFC<PriceSummaryProps>;
+export declare const PriceSummary: React.ComponentType<PriceSummaryProps & StyledComponentProps<string>>;
 export default PriceSummary;
