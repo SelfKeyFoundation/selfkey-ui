@@ -21,17 +21,22 @@ export declare type Active = {
 export declare type CryptoChartBoxState = {
     activations: Array<Active>;
     displayedTokens: Array<Token>;
+    viewAll: boolean;
 };
 export declare type chartType = {
     setSelection: Function;
 };
 export declare class CryptoChartBoxComponent extends React.Component<StyledProps, CryptoChartBoxState> {
     TOP_TOKEN_LIST_SIZE: number;
+    OTHERS_COLOR: string;
+    otherTokens: Array<Token>;
     activations: Array<Active>;
     topTokens: Array<Token>;
+    othersToken: Token;
     state: {
         activations: Active[];
         displayedTokens: Token[];
+        viewAll: boolean;
     };
     selection: never[];
     chart: chartType;
@@ -51,7 +56,7 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     onMouseOutEvent: ChartEvent;
     chartEvents: ChartEvent[];
     getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string): JSX.Element[];
-    viewAllTokens(tokens: Array<Token>): void;
+    toogleViewAllTokens(viewAll: boolean): void;
     getChartData(tokens: Array<Token>): (string | number)[][];
     getColors(): string[];
     getTotalBalanceInFiat(tokens: Array<Token>): number;

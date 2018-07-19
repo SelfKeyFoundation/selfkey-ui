@@ -108,6 +108,9 @@ var styles = {
     },
     expandMore: {
         verticalAlign: 'middle !important'
+    },
+    header: {
+        margin: '10px'
     }
 };
 var CryptoChartBoxComponent = /** @class */ (function (_super) {
@@ -115,11 +118,20 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     function CryptoChartBoxComponent(props) {
         var _this = _super.call(this, props) || this;
         _this.TOP_TOKEN_LIST_SIZE = 5;
+        _this.OTHERS_COLOR = '#71a6b8';
+        _this.otherTokens = [];
         _this.activations = [];
         _this.topTokens = [];
+        _this.othersToken = {
+            name: 'Others',
+            symbol: 'OTHERS',
+            balance: 0,
+            balanceInFiat: 0
+        };
         _this.state = {
             activations: _this.activations,
             displayedTokens: _this.topTokens,
+            viewAll: true
         };
         _this.selection = [];
         _this.selectEvent = {
@@ -191,9 +203,10 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         props.tokens.forEach(function (token, index) {
             _this.state.activations[index] = { active: false };
         });
-        this.state.displayedTokens = props.tokens.slice(0, this.TOP_TOKEN_LIST_SIZE);
-        var otherTokens = props.tokens.slice(this.TOP_TOKEN_LIST_SIZE, props.tokens.length);
-        this.state.displayedTokens.push(this.getOthersToken(otherTokens));
+        this.topTokens = props.tokens.slice(0, this.TOP_TOKEN_LIST_SIZE);
+        this.otherTokens = props.tokens.slice(this.TOP_TOKEN_LIST_SIZE, props.tokens.length);
+        this.othersToken = this.getOthersToken(this.otherTokens);
+        this.state.displayedTokens = this.topTokens.concat([this.othersToken]);
     };
     CryptoChartBoxComponent.prototype.getOthersToken = function (otherTokens) {
         return {
@@ -221,7 +234,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
             return (React.createElement(core_1.Grid, { item: true, xs: 6, key: index, className: _this.state.activations[index] && _this.state.activations[index].active ? classes.active : '' },
                 React.createElement(core_1.Grid, { container: true, alignItems: 'flex-start' },
                     React.createElement(core_1.Grid, { item: true, xs: 2 },
-                        React.createElement("div", { className: classes.coloredBox, style: { backgroundColor: _this.getColors()[index] } },
+                        React.createElement("div", { className: classes.coloredBox, style: { backgroundColor: (index <= 4) ? _this.getColors()[index] : _this.OTHERS_COLOR } },
                             React.createElement("div", { className: classes.coloredBoxText }, token.name.charAt(0)))),
                     React.createElement(core_1.Grid, { item: true, xs: 4 },
                         React.createElement(core_1.Grid, { container: true, alignItems: 'flex-start', className: classes.texts },
@@ -236,8 +249,13 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         });
     };
     ;
-    CryptoChartBoxComponent.prototype.viewAllTokens = function (tokens) {
-        this.setState(__assign({}, this.state, { displayedTokens: tokens }));
+    CryptoChartBoxComponent.prototype.toogleViewAllTokens = function (viewAll) {
+        if (viewAll) {
+            this.setState(__assign({}, this.state, { displayedTokens: this.topTokens.concat(this.otherTokens), viewAll: false }));
+        }
+        else {
+            this.setState(__assign({}, this.state, { displayedTokens: this.topTokens.concat([this.othersToken]), viewAll: true }));
+        }
     };
     CryptoChartBoxComponent.prototype.getChartData = function (tokens) {
         var data = [['Content', 'percents']];
@@ -260,7 +278,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         return (React.createElement("div", { className: classes.cryptoBox },
             React.createElement(core_1.Grid, { container: true, alignItems: 'center', spacing: 16 },
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
-                    React.createElement(core_1.Grid, { container: true, justify: 'space-between', alignItems: 'center' },
+                    React.createElement(core_1.Grid, { container: true, justify: 'space-between', alignItems: 'center', spacing: 32, className: classes.header },
                         React.createElement(core_1.Grid, { item: true, xs: 11 }, "My Crypto"),
                         React.createElement(core_1.Grid, { item: true, xs: 1, justify: 'flex-end' },
                             React.createElement("button", { className: classes.gearButton, onClick: manageCryptoAction },
@@ -299,9 +317,9 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                             React.createElement(core_1.Grid, { container: true, spacing: 16 }, this.getTokensLegend(classes, this.state.displayedTokens, locale, fiatCurrency))))),
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
                     React.createElement(core_1.Grid, { container: true, justify: 'center' },
-                        React.createElement(core_1.Grid, { item: true, className: classes.buttonViewMore, onClick: function () { return _this.viewAllTokens(tokens); } },
-                            React.createElement(icons_1.ExpandMore, { className: classes.expandMore }),
-                            React.createElement("span", { className: classes.buttonViewMoreText }, "VIEW ALL TOKENS")))))));
+                        React.createElement(core_1.Grid, { item: true, className: classes.buttonViewMore, onClick: function () { return _this.toogleViewAllTokens(_this.state.viewAll); } },
+                            this.state.viewAll ? (React.createElement(icons_1.ExpandMore, { className: classes.expandMore })) : (React.createElement(icons_1.ExpandLess, { className: classes.expandMore })),
+                            React.createElement("span", { className: classes.buttonViewMoreText }, this.state.viewAll ? 'View All' : 'Collapse')))))));
     };
     return CryptoChartBoxComponent;
 }(React.Component));

@@ -3,7 +3,7 @@ import * as React from 'react';
 import injectSheet, { StyleSheet, StyledComponentProps, ClassNameMap, WithStyles } from 'react-jss';
 
 import { Grid } from '@material-ui/core'
-import { ExpandMore } from '@material-ui/icons';
+import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Chart, ChartEvent } from 'react-google-charts';
 import { PriceSummary } from './price-summary';
 import { NumberFormat } from './number-format';
@@ -106,6 +106,10 @@ const styles: StyleSheet = {
 
   expandMore: {
     verticalAlign: 'middle !important'
+  },
+
+  header: {
+    margin: '10px'
   }
 };
 
@@ -131,7 +135,8 @@ export type Active = {
 
 export type CryptoChartBoxState = {
   activations: Array<Active>,
-  displayedTokens: Array<Token>
+  displayedTokens: Array<Token>,
+  viewAll: boolean
 };
 
 export type chartType = {
@@ -141,14 +146,22 @@ export type chartType = {
 export class CryptoChartBoxComponent extends React.Component<StyledProps, CryptoChartBoxState> {
   
   TOP_TOKEN_LIST_SIZE = 5;
+  OTHERS_COLOR = '#71a6b8';
+  otherTokens: Array<Token> = [];
 
   activations: Array<Active> = [];
   topTokens: Array<Token> = [];
-  
+  othersToken: Token = {
+    name: 'Others',
+    symbol: 'OTHERS',
+    balance: 0,
+    balanceInFiat: 0
+  };
 
   state = {
     activations: this.activations,
     displayedTokens: this.topTokens,
+    viewAll: true
   }
 
   selection = [];
@@ -166,9 +179,10 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
       this.state.activations[index] = {active: false};
     });
 
-    this.state.displayedTokens = props.tokens.slice(0, this.TOP_TOKEN_LIST_SIZE);
-    const otherTokens = props.tokens.slice(this.TOP_TOKEN_LIST_SIZE, props.tokens.length);
-    this.state.displayedTokens.push(this.getOthersToken(otherTokens));
+    this.topTokens = props.tokens.slice(0, this.TOP_TOKEN_LIST_SIZE);
+    this.otherTokens = props.tokens.slice(this.TOP_TOKEN_LIST_SIZE, props.tokens.length);
+    this.othersToken = this.getOthersToken(this.otherTokens);
+    this.state.displayedTokens = [...this.topTokens, this.othersToken]; 
   }
 
   getOthersToken(otherTokens: Array<Token>){
@@ -264,7 +278,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
         <Grid item xs={6} key={index} className={this.state.activations[index] && this.state.activations[index].active? classes.active: ''}>
           <Grid container alignItems='flex-start'>  
             <Grid item xs={2}>
-              <div className={classes.coloredBox} style={{backgroundColor: this.getColors()[index]}}>
+              <div className={classes.coloredBox} style={{backgroundColor: (index <= 4)? this.getColors()[index]: this.OTHERS_COLOR}}>
                 <div className={classes.coloredBoxText} >
                   {token.name.charAt(0)}
                 </div>
@@ -296,8 +310,12 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     });
   };
 
-  viewAllTokens(tokens: Array<Token>) {
-    this.setState({...this.state, displayedTokens: tokens});
+  toogleViewAllTokens(viewAll: boolean) {
+    if (viewAll) {
+      this.setState({...this.state, displayedTokens: [...this.topTokens, ...this.otherTokens], viewAll: false});
+    } else {
+      this.setState({...this.state, displayedTokens: [...this.topTokens, this.othersToken], viewAll: true});
+    }
   }
 
   getChartData(tokens: Array<Token>) {
@@ -325,7 +343,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
       <div className={classes.cryptoBox}>
         <Grid container alignItems='center' spacing={16}>
           <Grid item xs={12}>
-            <Grid container justify='space-between' alignItems='center'>
+            <Grid container justify='space-between' alignItems='center' spacing={32} className={classes.header}>
               <Grid item xs={11}>
                 My Crypto
               </Grid>
@@ -388,9 +406,13 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
           </Grid> 
           <Grid item xs={12}>
             <Grid container justify='center'>
-              <Grid item className={classes.buttonViewMore} onClick={() => this.viewAllTokens(tokens)}>
-                <ExpandMore className={classes.expandMore}/>
-                <span className={classes.buttonViewMoreText}>VIEW ALL TOKENS</span>
+              <Grid item className={classes.buttonViewMore} onClick={() => this.toogleViewAllTokens(this.state.viewAll)}>
+                {this.state.viewAll ? (
+                  <ExpandMore className={classes.expandMore}/>
+                ) : (
+                  <ExpandLess className={classes.expandMore} />
+                )}
+                <span className={classes.buttonViewMoreText}>{this.state.viewAll ? 'View All' : 'Collapse'}</span>
               </Grid>
             </Grid>
           </Grid>
