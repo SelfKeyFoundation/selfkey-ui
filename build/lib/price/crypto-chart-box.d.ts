@@ -60,6 +60,7 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     getChartData(tokens: Array<Token>): (string | number)[][];
     getColors(): string[];
     getTotalBalanceInFiat(tokens: Array<Token>): number;
+    getViewAllSection(classes: Partial<ClassNameMap<string>>): "" | JSX.Element;
     render(): JSX.Element;
 }
 export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & StyledComponentProps<string>>;

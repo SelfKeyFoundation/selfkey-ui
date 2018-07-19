@@ -181,8 +181,12 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
 
     this.topTokens = props.tokens.slice(0, this.TOP_TOKEN_LIST_SIZE);
     this.otherTokens = props.tokens.slice(this.TOP_TOKEN_LIST_SIZE, props.tokens.length);
-    this.othersToken = this.getOthersToken(this.otherTokens);
-    this.state.displayedTokens = [...this.topTokens, this.othersToken]; 
+    if (this.otherTokens.length) {
+      this.othersToken = this.getOthersToken(this.otherTokens);
+      this.state.displayedTokens = [...this.topTokens, this.othersToken]; 
+    } else {
+      this.state.displayedTokens = this.topTokens;
+    }
   }
 
   getOthersToken(otherTokens: Array<Token>){
@@ -337,13 +341,30 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     }, 0);
   }
 
+  getViewAllSection(classes: Partial<ClassNameMap<string>>) {
+    return (this.otherTokens.length) ? (
+      <Grid item xs={12}>
+        <Grid container justify='center'>
+          <Grid item className={classes.buttonViewMore} onClick={() => this.toogleViewAllTokens(this.state.viewAll)}>
+            {this.state.viewAll ? (
+              <ExpandMore className={classes.expandMore}/>
+            ) : (
+              <ExpandLess className={classes.expandMore} />
+            )}
+            <span className={classes.buttonViewMoreText}>{this.state.viewAll ? 'View All' : 'Collapse'}</span>
+          </Grid>
+        </Grid>
+      </Grid>
+    ) : '';
+  }
+
   render() {
     const {classes, locale, fiatCurrency, tokens, manageCryptoAction} = this.props;
     return (
       <div className={classes.cryptoBox}>
         <Grid container alignItems='center' spacing={16}>
           <Grid item xs={12}>
-            <Grid container justify='space-between' alignItems='center' spacing={32} className={classes.header}>
+            <Grid container justify='space-between' alignItems='center' className={classes.header}>
               <Grid item xs={11}>
                 My Crypto
               </Grid>
@@ -404,18 +425,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
               </Grid>
             </Grid>   
           </Grid> 
-          <Grid item xs={12}>
-            <Grid container justify='center'>
-              <Grid item className={classes.buttonViewMore} onClick={() => this.toogleViewAllTokens(this.state.viewAll)}>
-                {this.state.viewAll ? (
-                  <ExpandMore className={classes.expandMore}/>
-                ) : (
-                  <ExpandLess className={classes.expandMore} />
-                )}
-                <span className={classes.buttonViewMoreText}>{this.state.viewAll ? 'View All' : 'Collapse'}</span>
-              </Grid>
-            </Grid>
-          </Grid>
+          {this.getViewAllSection(classes)}
         </Grid>
       </div>
     );
