@@ -236,7 +236,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     CryptoChartBoxComponent.prototype.getTokensLegend = function (classes, tokens, locale, fiatCurrency) {
         var _this = this;
         return tokens.map(function (token, index) {
-            return (React.createElement(core_1.Grid, { item: true, xs: 6, key: index, className: _this.state.activations[index] && _this.state.activations[index].active ? classes.active : '' },
+            return (React.createElement(core_1.Grid, { item: true, xs: 6, key: index, className: _this.state.activations[index] && _this.state.activations[index].active ? classes.active : '', onMouseEnter: function () { return _this.onItemHoverEnter(index); }, onMouseLeave: function () { return _this.onItemHoverLeave(index); } },
                 React.createElement(core_1.Grid, { container: true, alignItems: 'flex-start' },
                     React.createElement(core_1.Grid, { item: true, xs: 2 },
                         React.createElement("div", { className: classes.coloredBox, style: { backgroundColor: (index <= 4) ? _this.getColors()[index] : _this.OTHERS_COLOR } },
@@ -276,6 +276,14 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         return tokens.reduce(function (a, b) {
             return a + b['balanceInFiat'];
         }, 0);
+    };
+    CryptoChartBoxComponent.prototype.onItemHoverEnter = function (index) {
+        var chart = this.refs.pieChart.wrapper.getChart();
+        chart.setSelection([{ row: index }]);
+    };
+    CryptoChartBoxComponent.prototype.onItemHoverLeave = function (index) {
+        var chart = this.refs.pieChart.wrapper.getChart();
+        chart.setSelection([]);
     };
     CryptoChartBoxComponent.prototype.getViewAllSection = function (classes) {
         var _this = this;
@@ -318,7 +326,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                                     animation: {
                                         startup: true
                                     }
-                                }, graph_id: "PieChart", width: "100%", height: "300px", legend_toggle: true, chartEvents: this.chartEvents }),
+                                }, graph_id: "PieChart", width: "100%", height: "300px", legend_toggle: true, chartEvents: this.chartEvents, ref: 'pieChart' }),
                             React.createElement("div", { className: classes.chartCenterContainer },
                                 React.createElement("div", { className: classes.totalPrice },
                                     React.createElement(number_format_1.NumberFormat, { locale: locale, currency: fiatCurrency, style: 'currency', value: this.getTotalBalanceInFiat(tokens) })),

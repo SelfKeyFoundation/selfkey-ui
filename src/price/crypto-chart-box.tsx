@@ -139,8 +139,16 @@ export type CryptoChartBoxState = {
   viewAll: boolean
 };
 
-export type chartType = {
+export type ChartType = {
   setSelection: Function
+}
+
+export type ChartElementType = {
+  wrapper: ChartWrapperType
+}
+
+export type ChartWrapperType = {
+  getChart: Function
 }
 
 export class CryptoChartBoxComponent extends React.Component<StyledProps, CryptoChartBoxState> {
@@ -165,7 +173,11 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   selection = [];
-  chart: chartType;
+  chart: ChartType;
+
+  public refs: {
+    pieChart: HTMLElement & ChartElementType;
+  };
   
   constructor(props: StyledProps) {
     super(props);
@@ -279,7 +291,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string) {
     return tokens.map((token, index) => {
       return (
-        <Grid item xs={6} key={index} className={this.state.activations[index] && this.state.activations[index].active? classes.active: ''}>
+        <Grid item xs={6} key={index} className={this.state.activations[index] && this.state.activations[index].active? classes.active: ''} onMouseEnter={() => this.onItemHoverEnter(index)} onMouseLeave={() => this.onItemHoverLeave(index)}>
           <Grid container alignItems='flex-start'>  
             <Grid item xs={2}>
               <div className={classes.coloredBox} style={{backgroundColor: (index <= 4)? this.getColors()[index]: this.OTHERS_COLOR}}>
@@ -339,6 +351,16 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     return tokens.reduce((a, b) => {
       return a + b['balanceInFiat'];
     }, 0);
+  }
+
+  onItemHoverEnter(index: number) {
+    const chart = this.refs.pieChart.wrapper.getChart();
+    chart.setSelection([{row: index}]);
+  }
+
+  onItemHoverLeave(index: number) {
+    const chart = this.refs.pieChart.wrapper.getChart();
+    chart.setSelection([]);
   }
 
   getViewAllSection(classes: Partial<ClassNameMap<string>>) {
@@ -408,6 +430,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
                   height="300px"
                   legend_toggle
                   chartEvents={this.chartEvents}
+                  ref='pieChart'
                 />
                 <div className={classes.chartCenterContainer}>
                   <div className={classes.totalPrice}>

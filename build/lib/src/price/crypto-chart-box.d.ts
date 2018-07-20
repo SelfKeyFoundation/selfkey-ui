@@ -71,7 +71,7 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     getTotalBalanceInFiat(tokens: Array<Token>): number;
     onItemHoverEnter(index: number): void;
     onItemHoverLeave(index: number): void;
-    getViewAllSection(classes: Partial<ClassNameMap<string>>): "" | JSX.Element;
+    getViewAllSection(classes: Partial<ClassNameMap<string>>): JSX.Element | "";
     render(): JSX.Element;
 }
 export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & StyledComponentProps<string>>;
