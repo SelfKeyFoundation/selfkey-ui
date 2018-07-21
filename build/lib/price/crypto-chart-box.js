@@ -34,7 +34,8 @@ var styles = {
         backgroundColor: '#262f39',
         border: 'solid 1px #303c49',
         color: '#ffffff',
-        fontFamily: 'ProximaNovaRegular'
+        fontFamily: 'ProximaNovaRegular',
+        padding: '20px',
     },
     horizontalDivider: {
         height: '1px',
@@ -94,7 +95,8 @@ var styles = {
         display: 'flex',
         background: 'none',
         border: 'none',
-        outline: 'none'
+        outline: 'none',
+        marginLeft: '70px'
     },
     buttonViewMore: {
         outline: 'none',
@@ -111,6 +113,11 @@ var styles = {
     },
     header: {
         margin: '10px'
+    },
+    headerText: {
+        fontSize: '20px',
+        lineHeight: 1.8,
+        opacity: 0.83
     }
 };
 var CryptoChartBoxComponent = /** @class */ (function (_super) {
@@ -298,9 +305,9 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         return (React.createElement("div", { className: classes.cryptoBox },
             React.createElement(core_1.Grid, { container: true, alignItems: 'center', spacing: 16 },
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
-                    React.createElement(core_1.Grid, { container: true, justify: 'space-between', alignItems: 'center', className: classes.header },
-                        React.createElement(core_1.Grid, { item: true, xs: 11 }, "My Crypto"),
-                        React.createElement(core_1.Grid, { item: true, xs: 1, justify: 'flex-end' },
+                    React.createElement(core_1.Grid, { container: true, justify: 'space-between', alignItems: 'flex-end', className: classes.header },
+                        React.createElement(core_1.Grid, { item: true, xs: 11, className: classes.headerText }, "My Crypto"),
+                        React.createElement(core_1.Grid, { item: true, xs: 1 },
                             React.createElement("button", { className: classes.gearButton, onClick: manageCryptoAction },
                                 React.createElement(gear_1.GearIcon, null))))),
                 React.createElement(core_1.Grid, { item: true, xs: 12 },

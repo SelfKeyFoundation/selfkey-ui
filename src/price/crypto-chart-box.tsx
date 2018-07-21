@@ -18,7 +18,8 @@ const styles: StyleSheet = {
     backgroundColor: '#262f39',
     border: 'solid 1px #303c49',
     color: '#ffffff',
-    fontFamily: 'ProximaNovaRegular'
+    fontFamily: 'ProximaNovaRegular',
+    padding: '20px',
   },   
 
   horizontalDivider: {
@@ -89,7 +90,8 @@ const styles: StyleSheet = {
     display: 'flex',
     background: 'none',
     border: 'none',
-    outline: 'none'
+    outline: 'none',
+    marginLeft: '70px'
   },
 
   buttonViewMore: {
@@ -110,6 +112,12 @@ const styles: StyleSheet = {
 
   header: {
     margin: '10px'
+  },
+
+  headerText: {
+    fontSize: '20px',
+    lineHeight: 1.8,
+    opacity: 0.83
   }
 };
 
@@ -386,11 +394,11 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
       <div className={classes.cryptoBox}>
         <Grid container alignItems='center' spacing={16}>
           <Grid item xs={12}>
-            <Grid container justify='space-between' alignItems='center' className={classes.header}>
-              <Grid item xs={11}>
+            <Grid container justify='space-between' alignItems='flex-end' className={classes.header}>
+              <Grid item xs={11} className={classes.headerText}>
                 My Crypto
               </Grid>
-              <Grid item xs={1} justify='flex-end'>
+              <Grid item xs={1}>
                 <button className={classes.gearButton} onClick={manageCryptoAction}>
                   <GearIcon/>  
                 </button>
