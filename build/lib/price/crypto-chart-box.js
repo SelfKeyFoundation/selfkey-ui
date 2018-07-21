@@ -96,7 +96,7 @@ var styles = {
         background: 'none',
         border: 'none',
         outline: 'none',
-        marginLeft: '70px'
+        float: 'right'
     },
     buttonViewMore: {
         outline: 'none',
@@ -207,6 +207,9 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     }
     CryptoChartBoxComponent.prototype.initState = function (props) {
         var _this = this;
+        if (!props.tokens) {
+            return;
+        }
         props.tokens.forEach(function (token, index) {
             _this.state.activations[index] = { active: false };
         });

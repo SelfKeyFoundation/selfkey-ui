@@ -91,7 +91,7 @@ const styles: StyleSheet = {
     background: 'none',
     border: 'none',
     outline: 'none',
-    marginLeft: '70px'
+    float: 'right'
   },
 
   buttonViewMore: {
@@ -195,6 +195,9 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   initState(props: StyledProps) {
+    if (!props.tokens) {
+      return;
+    }
     props.tokens.forEach((token, index) => {
       this.state.activations[index] = {active: false};
     });
