@@ -9,14 +9,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 // @ts-ignore
@@ -124,21 +116,10 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     __extends(CryptoChartBoxComponent, _super);
     function CryptoChartBoxComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.TOP_TOKEN_LIST_SIZE = 5;
         _this.OTHERS_COLOR = '#71a6b8';
-        _this.otherTokens = [];
         _this.activations = [];
-        _this.topTokens = [];
-        _this.othersToken = {
-            name: 'Others',
-            symbol: 'OTHERS',
-            balance: 0,
-            balanceInFiat: 0
-        };
         _this.state = {
-            activations: _this.activations,
-            displayedTokens: _this.topTokens,
-            viewAll: true
+            activations: _this.activations
         };
         _this.selection = [];
         _this.selectEvent = {
@@ -201,40 +182,18 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
             _this.onMouseOutEvent,
             _this.onMouseOverEvent
         ];
-        _this.initState(props);
+        _this.initActivations(props.tokens);
         _this.initSelection();
         return _this;
     }
-    CryptoChartBoxComponent.prototype.initState = function (props) {
+    CryptoChartBoxComponent.prototype.initActivations = function (tokens) {
         var _this = this;
-        if (!props.tokens) {
+        if (!tokens) {
             return;
         }
-        props.tokens.forEach(function (token, index) {
+        tokens.forEach(function (token, index) {
             _this.state.activations[index] = { active: false };
         });
-        this.topTokens = props.tokens.slice(0, this.TOP_TOKEN_LIST_SIZE);
-        this.otherTokens = props.tokens.slice(this.TOP_TOKEN_LIST_SIZE, props.tokens.length);
-        if (this.otherTokens.length) {
-            this.othersToken = this.getOthersToken(this.otherTokens);
-            this.state.displayedTokens = this.topTokens.concat([this.othersToken]);
-        }
-        else {
-            this.state.displayedTokens = this.topTokens;
-        }
-    };
-    CryptoChartBoxComponent.prototype.getOthersToken = function (otherTokens) {
-        return {
-            name: 'Others',
-            symbol: 'OTHERS',
-            balance: this.getOthersTokenBalance(otherTokens, 'balance'),
-            balanceInFiat: this.getOthersTokenBalance(otherTokens, 'balanceInFiat')
-        };
-    };
-    CryptoChartBoxComponent.prototype.getOthersTokenBalance = function (otherTokens, balanceType) {
-        return otherTokens.reduce(function (a, b) {
-            return a + b[balanceType];
-        }, 0);
     };
     CryptoChartBoxComponent.prototype.initSelection = function () {
         this.selection = [];
@@ -242,6 +201,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     };
     CryptoChartBoxComponent.prototype.componentDidUpdate = function () {
         this.chart.setSelection(this.selection);
+        this.initActivations(this.props.tokens);
     };
     CryptoChartBoxComponent.prototype.getTokensLegend = function (classes, tokens, locale, fiatCurrency) {
         var _this = this;
@@ -264,14 +224,6 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         });
     };
     ;
-    CryptoChartBoxComponent.prototype.toogleViewAllTokens = function (viewAll) {
-        if (viewAll) {
-            this.setState(__assign({}, this.state, { displayedTokens: this.topTokens.concat(this.otherTokens), viewAll: false }));
-        }
-        else {
-            this.setState(__assign({}, this.state, { displayedTokens: this.topTokens.concat([this.othersToken]), viewAll: true }));
-        }
-    };
     CryptoChartBoxComponent.prototype.getChartData = function (tokens) {
         var data = [['Content', 'percents']];
         var dataPoints = tokens.map(function (token) {
@@ -295,16 +247,16 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         var chart = this.refs.pieChart.wrapper.getChart();
         chart.setSelection([]);
     };
-    CryptoChartBoxComponent.prototype.getViewAllSection = function (classes) {
-        var _this = this;
-        return (this.otherTokens.length) ? (React.createElement(core_1.Grid, { item: true, xs: 12 },
+    CryptoChartBoxComponent.prototype.getViewAllSection = function (classes, tokens, topTokenListSize, visibilityFilter, dispatch, toggleVisibilityFilterAction) {
+        var viewAll = visibilityFilter === 'SHOW_TOP_ONES';
+        return (tokens.length > topTokenListSize) ? (React.createElement(core_1.Grid, { item: true, xs: 12 },
             React.createElement(core_1.Grid, { container: true, justify: 'center' },
-                React.createElement(core_1.Grid, { item: true, className: classes.buttonViewMore, onClick: function () { return _this.toogleViewAllTokens(_this.state.viewAll); } },
-                    this.state.viewAll ? (React.createElement(icons_1.ExpandMore, { className: classes.expandMore })) : (React.createElement(icons_1.ExpandLess, { className: classes.expandMore })),
-                    React.createElement("span", { className: classes.buttonViewMoreText }, this.state.viewAll ? 'View All' : 'Collapse'))))) : '';
+                React.createElement(core_1.Grid, { item: true, className: classes.buttonViewMore, onClick: function () { return dispatch(toggleVisibilityFilterAction(viewAll)); } },
+                    viewAll ? (React.createElement(icons_1.ExpandMore, { className: classes.expandMore })) : (React.createElement(icons_1.ExpandLess, { className: classes.expandMore })),
+                    React.createElement("span", { className: classes.buttonViewMoreText }, viewAll ? 'View All' : 'Collapse'))))) : '';
     };
     CryptoChartBoxComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, locale = _a.locale, fiatCurrency = _a.fiatCurrency, tokens = _a.tokens, manageCryptoAction = _a.manageCryptoAction;
+        var _a = this.props, classes = _a.classes, locale = _a.locale, fiatCurrency = _a.fiatCurrency, tokens = _a.tokens, manageCryptoAction = _a.manageCryptoAction, topTokenListSize = _a.topTokenListSize, visibilityFilter = _a.visibilityFilter, dispatch = _a.dispatch, toggleVisibilityFilterAction = _a.toggleVisibilityFilterAction;
         return (React.createElement("div", { className: classes.cryptoBox },
             React.createElement(core_1.Grid, { container: true, alignItems: 'center', spacing: 16 },
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
@@ -318,7 +270,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
                     React.createElement(core_1.Grid, { container: true, alignItems: 'flex-start', spacing: 0 },
                         React.createElement(core_1.Grid, { item: true, xs: 4, className: classes.chart },
-                            React.createElement(react_google_charts_1.Chart, { chartType: "PieChart", data: this.getChartData(this.state.displayedTokens), options: {
+                            React.createElement(react_google_charts_1.Chart, { chartType: "PieChart", data: this.getChartData(tokens), options: {
                                     backgroundColor: 'transparent',
                                     title: '',
                                     chartArea: { left: 15, top: 15, bottom: 15, right: 15 },
@@ -344,8 +296,8 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                                     "Total Value ",
                                     fiatCurrency))),
                         React.createElement(core_1.Grid, { item: true, xs: 8 },
-                            React.createElement(core_1.Grid, { container: true, spacing: 16 }, this.getTokensLegend(classes, this.state.displayedTokens, locale, fiatCurrency))))),
-                this.getViewAllSection(classes))));
+                            React.createElement(core_1.Grid, { container: true, spacing: 16 }, this.getTokensLegend(classes, tokens, locale, fiatCurrency))))),
+                this.getViewAllSection(classes, tokens, topTokenListSize, visibilityFilter, dispatch, toggleVisibilityFilterAction))));
     };
     return CryptoChartBoxComponent;
 }(React.Component));

@@ -132,7 +132,11 @@ export type CryptoChartBoxProps = {
   locale: string,
   fiatCurrency: string,
   tokens: Array<Token>,
-  manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void) 
+  manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void),
+  topTokenListSize: number,
+  visibilityFilter: string,
+  dispatch: Function,
+  toggleVisibilityFilterAction: Function
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
@@ -142,9 +146,7 @@ export type Active = {
 };
 
 export type CryptoChartBoxState = {
-  activations: Array<Active>,
-  displayedTokens: Array<Token>,
-  viewAll: boolean
+  activations: Array<Active>
 };
 
 export type ChartType = {
@@ -161,23 +163,12 @@ export type ChartWrapperType = {
 
 export class CryptoChartBoxComponent extends React.Component<StyledProps, CryptoChartBoxState> {
   
-  TOP_TOKEN_LIST_SIZE = 5;
   OTHERS_COLOR = '#71a6b8';
-  otherTokens: Array<Token> = [];
 
   activations: Array<Active> = [];
-  topTokens: Array<Token> = [];
-  othersToken: Token = {
-    name: 'Others',
-    symbol: 'OTHERS',
-    balance: 0,
-    balanceInFiat: 0
-  };
 
   state = {
-    activations: this.activations,
-    displayedTokens: this.topTokens,
-    viewAll: true
+    activations: this.activations
   }
 
   selection = [];
@@ -189,43 +180,18 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   
   constructor(props: StyledProps) {
     super(props);
-
-    this.initState(props);
+    this.initActivations(props.tokens);
     this.initSelection();
   }
 
-  initState(props: StyledProps) {
-    if (!props.tokens) {
+  initActivations(tokens: Array<Token>) {
+    if (!tokens) {
       return;
     }
-    props.tokens.forEach((token, index) => {
+    tokens.forEach((token, index) => {
       this.state.activations[index] = {active: false};
     });
-
-    this.topTokens = props.tokens.slice(0, this.TOP_TOKEN_LIST_SIZE);
-    this.otherTokens = props.tokens.slice(this.TOP_TOKEN_LIST_SIZE, props.tokens.length);
-    if (this.otherTokens.length) {
-      this.othersToken = this.getOthersToken(this.otherTokens);
-      this.state.displayedTokens = [...this.topTokens, this.othersToken]; 
-    } else {
-      this.state.displayedTokens = this.topTokens;
-    }
-  }
-
-  getOthersToken(otherTokens: Array<Token>){
-    return {
-      name: 'Others',
-      symbol: 'OTHERS',
-      balance: this.getOthersTokenBalance(otherTokens, 'balance'),
-      balanceInFiat: this.getOthersTokenBalance(otherTokens, 'balanceInFiat')
-    };
-  }
-
-  getOthersTokenBalance(otherTokens: Array<Token>, balanceType: string) {
-    return otherTokens.reduce((a, b) => {
-      return a + b[balanceType];
-    }, 0);
-  }
+  } 
 
   initSelection() {
     this.selection = [];
@@ -234,6 +200,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
 
   componentDidUpdate() {
     this.chart.setSelection(this.selection);  
+    this.initActivations(this.props.tokens);
   }
 
   selectEvent: ChartEvent = {
@@ -337,14 +304,6 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     });
   };
 
-  toogleViewAllTokens(viewAll: boolean) {
-    if (viewAll) {
-      this.setState({...this.state, displayedTokens: [...this.topTokens, ...this.otherTokens], viewAll: false});
-    } else {
-      this.setState({...this.state, displayedTokens: [...this.topTokens, this.othersToken], viewAll: true});
-    }
-  }
-
   getChartData(tokens: Array<Token>) {
     const data: Array<Array<string | number>>  = [['Content', 'percents']];
     const dataPoints = tokens.map(token => {
@@ -374,17 +333,18 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     chart.setSelection([]);
   }
 
-  getViewAllSection(classes: Partial<ClassNameMap<string>>) {
-    return (this.otherTokens.length) ? (
+  getViewAllSection(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, topTokenListSize: number, visibilityFilter: string, dispatch: Function, toggleVisibilityFilterAction: Function) {
+    const viewAll = visibilityFilter === 'SHOW_TOP_ONES';
+    return (tokens.length > topTokenListSize) ? (
       <Grid item xs={12}>
         <Grid container justify='center'>
-          <Grid item className={classes.buttonViewMore} onClick={() => this.toogleViewAllTokens(this.state.viewAll)}>
-            {this.state.viewAll ? (
+          <Grid item className={classes.buttonViewMore} onClick={() => dispatch(toggleVisibilityFilterAction(viewAll))}>
+            {viewAll? (
               <ExpandMore className={classes.expandMore}/>
             ) : (
               <ExpandLess className={classes.expandMore} />
             )}
-            <span className={classes.buttonViewMoreText}>{this.state.viewAll ? 'View All' : 'Collapse'}</span>
+            <span className={classes.buttonViewMoreText}>{viewAll ? 'View All' : 'Collapse'}</span>
           </Grid>
         </Grid>
       </Grid>
@@ -392,7 +352,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   render() {
-    const {classes, locale, fiatCurrency, tokens, manageCryptoAction} = this.props;
+    const {classes, locale, fiatCurrency, tokens, manageCryptoAction, topTokenListSize, visibilityFilter, dispatch, toggleVisibilityFilterAction} = this.props;
     return (
       <div className={classes.cryptoBox}>
         <Grid container alignItems='center' spacing={16}>
@@ -416,7 +376,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
               <Grid item xs={4} className={classes.chart}>
                 <Chart
                   chartType="PieChart"
-                  data={this.getChartData(this.state.displayedTokens)}
+                  data={this.getChartData(tokens)}
                   options={{
                     backgroundColor: 'transparent',
                     title: '',
@@ -454,12 +414,12 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
               </Grid>
               <Grid item xs={8}>
                   <Grid container spacing={16}>
-                    {this.getTokensLegend(classes, this.state.displayedTokens, locale, fiatCurrency)}
+                    {this.getTokensLegend(classes, tokens, locale, fiatCurrency)}
                   </Grid>
               </Grid>
             </Grid>   
           </Grid> 
-          {this.getViewAllSection(classes)}
+          {this.getViewAllSection(classes, tokens, topTokenListSize, visibilityFilter, dispatch, toggleVisibilityFilterAction)}
         </Grid>
       </div>
     );
