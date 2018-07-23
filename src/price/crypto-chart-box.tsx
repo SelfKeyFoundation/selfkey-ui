@@ -134,9 +134,9 @@ export type CryptoChartBoxProps = {
   tokens: Array<Token>,
   manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void),
   topTokenListSize: number,
-  visibilityFilter: string,
+  viewAll: boolean,
   dispatch: Function,
-  toggleVisibilityFilterAction: Function
+  toggleViewAllAction: Function
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
@@ -333,12 +333,11 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     chart.setSelection([]);
   }
 
-  getViewAllSection(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, topTokenListSize: number, visibilityFilter: string, dispatch: Function, toggleVisibilityFilterAction: Function) {
-    const viewAll = visibilityFilter === 'SHOW_TOP_ONES';
+  getViewAllSection(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, topTokenListSize: number, viewAll: boolean, dispatch: Function, toggleViewAllAction: Function) {
     return (tokens.length > topTokenListSize) ? (
       <Grid item xs={12}>
         <Grid container justify='center'>
-          <Grid item className={classes.buttonViewMore} onClick={() => dispatch(toggleVisibilityFilterAction(viewAll))}>
+          <Grid item className={classes.buttonViewMore} onClick={() => dispatch(toggleViewAllAction(viewAll))}>
             {viewAll? (
               <ExpandMore className={classes.expandMore}/>
             ) : (
@@ -352,7 +351,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   render() {
-    const {classes, locale, fiatCurrency, tokens, manageCryptoAction, topTokenListSize, visibilityFilter, dispatch, toggleVisibilityFilterAction} = this.props;
+    const {classes, locale, fiatCurrency, tokens, manageCryptoAction, topTokenListSize, viewAll, dispatch, toggleViewAllAction} = this.props;
     return (
       <div className={classes.cryptoBox}>
         <Grid container alignItems='center' spacing={16}>
@@ -419,7 +418,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
               </Grid>
             </Grid>   
           </Grid> 
-          {this.getViewAllSection(classes, tokens, topTokenListSize, visibilityFilter, dispatch, toggleVisibilityFilterAction)}
+          {this.getViewAllSection(classes, tokens, topTokenListSize, viewAll, dispatch, toggleViewAllAction)}
         </Grid>
       </div>
     );
