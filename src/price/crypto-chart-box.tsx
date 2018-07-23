@@ -135,8 +135,8 @@ export type CryptoChartBoxProps = {
   manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void),
   topTokenListSize: number,
   viewAll: boolean,
-  dispatch: Function,
-  toggleViewAllAction: Function
+  dispatch?: Function,
+  toggleViewAllAction?: Function
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
@@ -198,16 +198,17 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     this.chart = { setSelection: () =>{ return; } };
   }
 
-  componentDidUpdate() {
-    this.chart.setSelection(this.selection);  
-    this.initActivations(this.props.tokens);
+  componentDidUpdate(prevProps: StyledProps) {
+    this.chart.setSelection(this.selection); 
   }
 
   selectEvent: ChartEvent = {
     eventName: 'select',
     callback: (Chart: any, chartItem: any) => {
+
       this.initSelection();
       const selection = Chart.chart.getSelection();
+
       if (!selection || !selection[0]) {
         return;
       } 
@@ -229,7 +230,9 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     eventName: 'onmouseover',
     callback: (Chart: any, chartItem: any) => {
       const selection = Chart.chart.getSelection();
-      const newTokens = this.state.activations.slice(0);
+
+      let newTokens = this.state.activations.slice(0);
+
       if (newTokens[chartItem.row] && newTokens[chartItem.row].active) {
         return;
       }
@@ -333,11 +336,21 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     chart.setSelection([]);
   }
 
-  getViewAllSection(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, topTokenListSize: number, viewAll: boolean, dispatch: Function, toggleViewAllAction: Function) {
+  toggleViewAll() {
+    const {dispatch, toggleViewAllAction, viewAll} = this.props
+    if(!dispatch || !toggleViewAllAction) {
+      return;
+    }
+    dispatch(toggleViewAllAction(viewAll));
+  }
+
+  getViewAllSection() {
+    const {classes, tokens, topTokenListSize, viewAll} = this.props;
+    console.log('HEY', tokens.length, topTokenListSize)
     return (tokens.length > topTokenListSize) ? (
       <Grid item xs={12}>
         <Grid container justify='center'>
-          <Grid item className={classes.buttonViewMore} onClick={() => dispatch(toggleViewAllAction(viewAll))}>
+          <Grid item className={classes.buttonViewMore} onClick={() => this.toggleViewAll()}>
             {viewAll? (
               <ExpandMore className={classes.expandMore}/>
             ) : (
@@ -351,7 +364,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   render() {
-    const {classes, locale, fiatCurrency, tokens, manageCryptoAction, topTokenListSize, viewAll, dispatch, toggleViewAllAction} = this.props;
+    const {classes, locale, fiatCurrency, tokens, manageCryptoAction} = this.props;
     return (
       <div className={classes.cryptoBox}>
         <Grid container alignItems='center' spacing={16}>
@@ -418,7 +431,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
               </Grid>
             </Grid>   
           </Grid> 
-          {this.getViewAllSection(classes, tokens, topTokenListSize, viewAll, dispatch, toggleViewAllAction)}
+          {this.getViewAllSection()}
         </Grid>
       </div>
     );

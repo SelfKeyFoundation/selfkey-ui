@@ -15,8 +15,8 @@ export declare type CryptoChartBoxProps = {
     manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     topTokenListSize: number;
     viewAll: boolean;
-    dispatch: Function;
-    toggleViewAllAction: Function;
+    dispatch?: Function;
+    toggleViewAllAction?: Function;
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
 export declare type Active = {
@@ -48,7 +48,7 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     constructor(props: StyledProps);
     initActivations(tokens: Array<Token>): void;
     initSelection(): void;
-    componentDidUpdate(): void;
+    componentDidUpdate(prevProps: StyledProps): void;
     selectEvent: ChartEvent;
     onMouseOverEvent: ChartEvent;
     onMouseOutEvent: ChartEvent;
@@ -59,7 +59,8 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     getTotalBalanceInFiat(tokens: Array<Token>): number;
     onItemHoverEnter(index: number): void;
     onItemHoverLeave(index: number): void;
-    getViewAllSection(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, topTokenListSize: number, viewAll: boolean, dispatch: Function, toggleViewAllAction: Function): "" | JSX.Element;
+    toggleViewAll(): void;
+    getViewAllSection(): "" | JSX.Element;
     render(): JSX.Element;
 }
 export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & StyledComponentProps<string>>;

@@ -13,6 +13,10 @@ export declare type CryptoChartBoxProps = {
     fiatCurrency: string;
     tokens: Array<Token>;
     manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    topTokenListSize: number;
+    viewAll: boolean;
+    dispatch?: Function;
+    toggleViewAllAction?: Function;
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
 export declare type Active = {
@@ -20,8 +24,6 @@ export declare type Active = {
 };
 export declare type CryptoChartBoxState = {
     activations: Array<Active>;
-    displayedTokens: Array<Token>;
-    viewAll: boolean;
 };
 export declare type ChartType = {
     setSelection: Function;
@@ -33,16 +35,10 @@ export declare type ChartWrapperType = {
     getChart: Function;
 };
 export declare class CryptoChartBoxComponent extends React.Component<StyledProps, CryptoChartBoxState> {
-    TOP_TOKEN_LIST_SIZE: number;
     OTHERS_COLOR: string;
-    otherTokens: Array<Token>;
     activations: Array<Active>;
-    topTokens: Array<Token>;
-    othersToken: Token;
     state: {
         activations: Active[];
-        displayedTokens: Token[];
-        viewAll: boolean;
     };
     selection: never[];
     chart: ChartType;
@@ -50,28 +46,21 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
         pieChart: HTMLElement & ChartElementType;
     };
     constructor(props: StyledProps);
-    initState(props: StyledProps): void;
-    getOthersToken(otherTokens: Array<Token>): {
-        name: string;
-        symbol: string;
-        balance: any;
-        balanceInFiat: any;
-    };
-    getOthersTokenBalance(otherTokens: Array<Token>, balanceType: string): any;
+    initActivations(tokens: Array<Token>): void;
     initSelection(): void;
-    componentDidUpdate(): void;
+    componentDidUpdate(prevProps: StyledProps): void;
     selectEvent: ChartEvent;
     onMouseOverEvent: ChartEvent;
     onMouseOutEvent: ChartEvent;
     chartEvents: ChartEvent[];
     getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string): JSX.Element[];
-    toogleViewAllTokens(viewAll: boolean): void;
     getChartData(tokens: Array<Token>): (string | number)[][];
     getColors(): string[];
     getTotalBalanceInFiat(tokens: Array<Token>): number;
     onItemHoverEnter(index: number): void;
     onItemHoverLeave(index: number): void;
-    getViewAllSection(classes: Partial<ClassNameMap<string>>): JSX.Element | "";
+    toggleViewAll(): void;
+    getViewAllSection(): JSX.Element | "";
     render(): JSX.Element;
 }
 export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & StyledComponentProps<string>>;

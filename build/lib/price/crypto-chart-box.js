@@ -199,9 +199,8 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         this.selection = [];
         this.chart = { setSelection: function () { return; } };
     };
-    CryptoChartBoxComponent.prototype.componentDidUpdate = function () {
+    CryptoChartBoxComponent.prototype.componentDidUpdate = function (prevProps) {
         this.chart.setSelection(this.selection);
-        this.initActivations(this.props.tokens);
     };
     CryptoChartBoxComponent.prototype.getTokensLegend = function (classes, tokens, locale, fiatCurrency) {
         var _this = this;
@@ -247,15 +246,25 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         var chart = this.refs.pieChart.wrapper.getChart();
         chart.setSelection([]);
     };
-    CryptoChartBoxComponent.prototype.getViewAllSection = function (classes, tokens, topTokenListSize, viewAll, dispatch, toggleViewAllAction) {
+    CryptoChartBoxComponent.prototype.toggleViewAll = function () {
+        var _a = this.props, dispatch = _a.dispatch, toggleViewAllAction = _a.toggleViewAllAction, viewAll = _a.viewAll;
+        if (!dispatch || !toggleViewAllAction) {
+            return;
+        }
+        dispatch(toggleViewAllAction(viewAll));
+    };
+    CryptoChartBoxComponent.prototype.getViewAllSection = function () {
+        var _this = this;
+        var _a = this.props, classes = _a.classes, tokens = _a.tokens, topTokenListSize = _a.topTokenListSize, viewAll = _a.viewAll;
+        console.log('HEY', tokens.length, topTokenListSize);
         return (tokens.length > topTokenListSize) ? (React.createElement(core_1.Grid, { item: true, xs: 12 },
             React.createElement(core_1.Grid, { container: true, justify: 'center' },
-                React.createElement(core_1.Grid, { item: true, className: classes.buttonViewMore, onClick: function () { return dispatch(toggleViewAllAction(viewAll)); } },
+                React.createElement(core_1.Grid, { item: true, className: classes.buttonViewMore, onClick: function () { return _this.toggleViewAll(); } },
                     viewAll ? (React.createElement(icons_1.ExpandMore, { className: classes.expandMore })) : (React.createElement(icons_1.ExpandLess, { className: classes.expandMore })),
                     React.createElement("span", { className: classes.buttonViewMoreText }, viewAll ? 'View All' : 'Collapse'))))) : '';
     };
     CryptoChartBoxComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, locale = _a.locale, fiatCurrency = _a.fiatCurrency, tokens = _a.tokens, manageCryptoAction = _a.manageCryptoAction, topTokenListSize = _a.topTokenListSize, viewAll = _a.viewAll, dispatch = _a.dispatch, toggleViewAllAction = _a.toggleViewAllAction;
+        var _a = this.props, classes = _a.classes, locale = _a.locale, fiatCurrency = _a.fiatCurrency, tokens = _a.tokens, manageCryptoAction = _a.manageCryptoAction;
         return (React.createElement("div", { className: classes.cryptoBox },
             React.createElement(core_1.Grid, { container: true, alignItems: 'center', spacing: 16 },
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
@@ -296,7 +305,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                                     fiatCurrency))),
                         React.createElement(core_1.Grid, { item: true, xs: 8 },
                             React.createElement(core_1.Grid, { container: true, spacing: 16 }, this.getTokensLegend(classes, tokens, locale, fiatCurrency))))),
-                this.getViewAllSection(classes, tokens, topTokenListSize, viewAll, dispatch, toggleViewAllAction))));
+                this.getViewAllSection())));
     };
     return CryptoChartBoxComponent;
 }(React.Component));
