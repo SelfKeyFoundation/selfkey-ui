@@ -15,7 +15,6 @@ export declare type CryptoChartBoxProps = {
     manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     topTokenListSize: number;
     viewAll: boolean;
-    dispatch?: Function;
     toggleViewAll?: Function;
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;

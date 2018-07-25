@@ -247,11 +247,11 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         chart.setSelection([]);
     };
     CryptoChartBoxComponent.prototype.toggleViewAll = function () {
-        var _a = this.props, dispatch = _a.dispatch, toggleViewAll = _a.toggleViewAll, viewAll = _a.viewAll;
-        if (!dispatch || !toggleViewAll) {
+        var _a = this.props, toggleViewAll = _a.toggleViewAll, viewAll = _a.viewAll;
+        if (!toggleViewAll) {
             return;
         }
-        dispatch(toggleViewAll(viewAll));
+        toggleViewAll(viewAll);
     };
     CryptoChartBoxComponent.prototype.getViewAllSection = function () {
         var _this = this;

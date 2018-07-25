@@ -135,7 +135,6 @@ export type CryptoChartBoxProps = {
   manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void),
   topTokenListSize: number,
   viewAll: boolean,
-  dispatch?: Function,
   toggleViewAll?: Function
 }
 
@@ -337,11 +336,11 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   toggleViewAll() {
-    const {dispatch, toggleViewAll, viewAll} = this.props
-    if(!dispatch || !toggleViewAll) {
+    const {toggleViewAll, viewAll} = this.props
+    if(!toggleViewAll) {
       return;
     }
-    dispatch(toggleViewAll(viewAll));
+    toggleViewAll(viewAll);
   }
 
   getViewAllSection() {
