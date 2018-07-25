@@ -16,7 +16,7 @@ export declare type CryptoChartBoxProps = {
     topTokenListSize: number;
     viewAll: boolean;
     dispatch?: Function;
-    toggleViewAllAction?: Function;
+    toggleViewAll?: Function;
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
 export declare type Active = {

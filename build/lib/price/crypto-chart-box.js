@@ -247,21 +247,20 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         chart.setSelection([]);
     };
     CryptoChartBoxComponent.prototype.toggleViewAll = function () {
-        var _a = this.props, dispatch = _a.dispatch, toggleViewAllAction = _a.toggleViewAllAction, viewAll = _a.viewAll;
-        if (!dispatch || !toggleViewAllAction) {
+        var _a = this.props, dispatch = _a.dispatch, toggleViewAll = _a.toggleViewAll, viewAll = _a.viewAll;
+        if (!dispatch || !toggleViewAll) {
             return;
         }
-        dispatch(toggleViewAllAction(viewAll));
+        dispatch(toggleViewAll(viewAll));
     };
     CryptoChartBoxComponent.prototype.getViewAllSection = function () {
         var _this = this;
         var _a = this.props, classes = _a.classes, tokens = _a.tokens, topTokenListSize = _a.topTokenListSize, viewAll = _a.viewAll;
-        console.log('HEY', tokens.length, topTokenListSize);
         return (tokens.length > topTokenListSize) ? (React.createElement(core_1.Grid, { item: true, xs: 12 },
             React.createElement(core_1.Grid, { container: true, justify: 'center' },
                 React.createElement(core_1.Grid, { item: true, className: classes.buttonViewMore, onClick: function () { return _this.toggleViewAll(); } },
-                    viewAll ? (React.createElement(icons_1.ExpandMore, { className: classes.expandMore })) : (React.createElement(icons_1.ExpandLess, { className: classes.expandMore })),
-                    React.createElement("span", { className: classes.buttonViewMoreText }, viewAll ? 'View All' : 'Collapse'))))) : '';
+                    !viewAll ? (React.createElement(icons_1.ExpandMore, { className: classes.expandMore })) : (React.createElement(icons_1.ExpandLess, { className: classes.expandMore })),
+                    React.createElement("span", { className: classes.buttonViewMoreText }, !viewAll ? 'View All' : 'Collapse'))))) : '';
     };
     CryptoChartBoxComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, locale = _a.locale, fiatCurrency = _a.fiatCurrency, tokens = _a.tokens, manageCryptoAction = _a.manageCryptoAction;

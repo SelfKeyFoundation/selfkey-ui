@@ -136,7 +136,7 @@ export type CryptoChartBoxProps = {
   topTokenListSize: number,
   viewAll: boolean,
   dispatch?: Function,
-  toggleViewAllAction?: Function
+  toggleViewAll?: Function
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
@@ -337,26 +337,25 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   toggleViewAll() {
-    const {dispatch, toggleViewAllAction, viewAll} = this.props
-    if(!dispatch || !toggleViewAllAction) {
+    const {dispatch, toggleViewAll, viewAll} = this.props
+    if(!dispatch || !toggleViewAll) {
       return;
     }
-    dispatch(toggleViewAllAction(viewAll));
+    dispatch(toggleViewAll(viewAll));
   }
 
   getViewAllSection() {
     const {classes, tokens, topTokenListSize, viewAll} = this.props;
-    console.log('HEY', tokens.length, topTokenListSize)
     return (tokens.length > topTokenListSize) ? (
       <Grid item xs={12}>
         <Grid container justify='center'>
           <Grid item className={classes.buttonViewMore} onClick={() => this.toggleViewAll()}>
-            {viewAll? (
+            {!viewAll? (
               <ExpandMore className={classes.expandMore}/>
             ) : (
               <ExpandLess className={classes.expandMore} />
             )}
-            <span className={classes.buttonViewMoreText}>{viewAll ? 'View All' : 'Collapse'}</span>
+            <span className={classes.buttonViewMoreText}>{!viewAll ? 'View All' : 'Collapse'}</span>
           </Grid>
         </Grid>
       </Grid>
