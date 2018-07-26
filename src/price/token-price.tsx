@@ -22,9 +22,9 @@ const styles: StyleSheet = {
 export type TokenPriceProps = {
     locale: string,
     cryptoCurrency: string,
-    cryptoValue: string,
+    cryptoValue: number,
     toCurrency: string,
-    toValue: string
+    toValue: number
 };
 
 export const TokenPrice = injectSheet(styles)<TokenPriceProps>(({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (

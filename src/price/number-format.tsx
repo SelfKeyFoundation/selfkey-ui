@@ -5,13 +5,19 @@ export type NumberFormatProps = {
   locale: string,
   style: string,
   currency?: string,
-  value: string,
+  value: number,
   fractionDigits?: number
 };
 
 const formatters: {
   [key: string]: Intl.NumberFormat;
 } = {};
+
+export type OptionsType = {
+  style: string,
+  maximumFractionDigits: number,
+  [key: string]: any
+}
 
 export const NumberFormat: SFC<NumberFormatProps> = ({
   locale,
@@ -24,11 +30,16 @@ export const NumberFormat: SFC<NumberFormatProps> = ({
   const formatString = `${locale}:${style}:${currency}:${fractionDigits || "default"}`;
 
   if (locale && !formatters[formatString]) {
-    formatters[formatString] = new Intl.NumberFormat(locale, {
-      style: style || "decimal",
-      currency: currency,
+    const options: OptionsType = {
+      style: style,
       maximumFractionDigits: fractionDigits
-    });
+    };
+
+    if (style === 'currency') {
+      options.currency = currency;
+    }
+
+    formatters[formatString] = new Intl.NumberFormat(locale, options);
   }
 
   return (

@@ -29,18 +29,19 @@ const styles: StyleSheet = {
 
 export type PriceSummaryProps = {
     className?: string,
+    justify?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | undefined, 
     currencyClass?: string,
     valueClass?: string,
     locale: string,
     style: string,
     currency: string,
-    value: string,
+    value: number,
     appendCurrency?: boolean,
     prependCurrency?: boolean,
 };
 
-export const PriceSummary = injectSheet(styles)<PriceSummaryProps>(({ classes, children, className, currencyClass, valueClass, locale, style, currency, value, appendCurrency, prependCurrency }) => (
-    <Grid container className={className? className : classes.row} alignItems='center' spacing={8}>
+export const PriceSummary = injectSheet(styles)<PriceSummaryProps>(({ classes, children, className, justify, currencyClass, valueClass, locale, style, currency, value, appendCurrency, prependCurrency }) => (
+    <Grid container className={className? className : classes.row} justify={justify} alignItems='center' spacing={8}>
         {appendCurrency &&
             <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>
         }
