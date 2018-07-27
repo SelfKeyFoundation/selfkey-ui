@@ -10,4 +10,3 @@ export { EthereumIcon } from './icons/ethereum';
 export { SelfkeyIcon } from './icons/selfkey';
 export { CustomIcon } from './icons/custom';
 export { CryptoChartBox } from './price/crypto-chart-box';
-export { CryptoPriceTable } from './price/crypto-price-table';
