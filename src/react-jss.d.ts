@@ -5,10 +5,17 @@ declare module 'react-jss' {
     composes?: string | string[]
   }
 
+  type ExtendedCSSProperties = React.CSSProperties & {
+    [k: string]: Record<
+        string,
+        | CSSProperties>
+  }
+
   export type StyleSheet<Props = {}>
     = Record<
-        string, 
-        CSSProperties 
+        string,
+        ExtendedCSSProperties
+        | CSSProperties 
         | ((props: Props) => React.CSSProperties)
       >;
 
