@@ -24,4 +24,6 @@ var custom_1 = require("./icons/custom");
 exports.CustomIcon = custom_1.CustomIcon;
 var crypto_chart_box_1 = require("./price/crypto-chart-box");
 exports.CryptoChartBox = crypto_chart_box_1.CryptoChartBox;
+var crypto_price_table_1 = require("./price/crypto-price-table");
+exports.CryptoPriceTable = crypto_price_table_1.CryptoPriceTable;
 //# sourceMappingURL=index.js.map
