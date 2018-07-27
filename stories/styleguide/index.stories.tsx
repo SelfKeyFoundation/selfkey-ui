@@ -12,6 +12,7 @@ import { Logo } from "../../src/images/logo";
 import { CryptoPriceList } from "./crypto-price-list";
 import { TokenList } from "./token-list";
 import { CryptoChartBox } from "../../src/price/crypto-chart-box";
+import { CryptoPriceTable } from "../../src/price/crypto-price-table";
 
 
 
@@ -20,7 +21,7 @@ setAddon(JSXAddon);
 const lightOnDark = host({
   title: "Light on Dark",
   align: "center",
-  background: "#262f39"
+  background: "#222b34"
 });
 
 const tStory = storiesOf("Typography", module).addDecorator(
@@ -59,3 +60,12 @@ priceStory.addWithJSX("CryptoChartBox", () => <CryptoChartBox locale='en' fiatCu
   {name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52},
 
 ]} topTokenListSize={5} viewAll={false}/>);
+
+priceStory.addWithJSX("CryptoPriceTable", () => <CryptoPriceTable locale='en' fiatCurrency='USD' tokens={[
+  {name: 'Selfkey', symbol: 'KEY', price: 0.01, balance: 30, balanceInFiat: 0.42432, address: 'dsadsadsa', hidden: false, isCustom: false}, 
+  {name: 'Ethereum', symbol: 'ETH', price: 400, balance: 0.00548, balanceInFiat: 20.52, address: 'dsadsadsa', hidden: false, isCustom: false}, 
+  {name: 'Ethereum', symbol: 'ETH', price: 500, balance: 0.00548, balanceInFiat: 20.52, address: 'dsadsadsa', hidden: false, isCustom: true},
+  {name: 'Ethereum', symbol: 'ETH', price: 400, balance: 0.00548, balanceInFiat: 20.52, address: 'dsadsadsa', hidden: true, isCustom: true},
+  {name: 'Ethereum', symbol: 'ETH', price: 400, balance: 0.00548, balanceInFiat: 20.52, address: 'dsadsadsa', hidden: false, isCustom: false},
+
+]}/>);
