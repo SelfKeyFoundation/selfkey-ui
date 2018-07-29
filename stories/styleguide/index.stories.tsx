@@ -25,6 +25,13 @@ const lightOnDark = host({
   background: "#222b34"
 });
 
+const transferModal = host({
+  title: "Light on Dark",
+  align: "center",
+  background: "#222b34",
+  width: "700px"
+});
+
 const tStory = storiesOf("Typography", module).addDecorator(
   lightOnDark
 ) as Story & { addWithJSX: Function };
@@ -71,4 +78,9 @@ priceStory.addWithJSX("CryptoPriceTable", () => <CryptoPriceTable locale='en' fi
 
 ]}/>);
 
-priceStory.addWithJSX("TransferPrice", () => <TransferPriceWrapper />);
+
+const transferStory = storiesOf("Transfer", module).addDecorator(
+  transferModal
+) as Story & { addWithJSX: Function };
+
+transferStory.addWithJSX("TransferPrice", () => <TransferPriceWrapper />);
