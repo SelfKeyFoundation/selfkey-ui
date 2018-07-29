@@ -13,6 +13,7 @@ import { CryptoPriceList } from "./crypto-price-list";
 import { TokenList } from "./token-list";
 import { CryptoChartBox } from "../../src/price/crypto-chart-box";
 import { CryptoPriceTable } from "../../src/price/crypto-price-table";
+import { TransferPriceWrapper } from "./transfer-price";
 
 
 
@@ -69,3 +70,5 @@ priceStory.addWithJSX("CryptoPriceTable", () => <CryptoPriceTable locale='en' fi
   {name: 'Ethereum', symbol: 'ETH', price: 400, balance: 0.00548, balanceInFiat: 20.52, address: 'dsadsadsa', hidden: false, isCustom: false},
 
 ]}/>);
+
+priceStory.addWithJSX("TransferPrice", () => <TransferPriceWrapper />);
