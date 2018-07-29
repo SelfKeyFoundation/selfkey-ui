@@ -72,7 +72,7 @@ export type CryptoPriceTableProps = {
   locale: string,
   fiatCurrency: string,
   tokens: Array<Token>,
-  toggleAction?: ((event: React.MouseEvent<HTMLElement>) => void) 
+  toggleAction?: ((event: React.MouseEvent<HTMLElement>, token: Token) => void) 
 }
 
 export type CryptoPriceTableState = {
@@ -87,18 +87,20 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
         super(props);
     }
 
-  showCustomTokenHideToggle(isCustomToken: boolean, isHidden: boolean, toggleAction: ((event: React.MouseEvent<HTMLElement>) => void) | undefined, classes: Partial<ClassNameMap<string>>) {
-    if (!isCustomToken) {
+  showCustomTokenHideToggle(token: Token, toggleAction: ((event: React.MouseEvent<HTMLElement>, token: Token) => void) | undefined, classes: Partial<ClassNameMap<string>>) {
+    if (!token.isCustom) {
       return;
     }
     let icon;
-    if (isHidden) {
+    if (token.hidden) {
         icon = <VisibilityOffIcon className={classes.iconSize}/>;
     } else {
         icon = <VisibilityOnIcon className={classes.iconSize}/>;
     }
     return (
-        <div onClick={toggleAction}>
+        <div onClick={(event: React.MouseEvent<HTMLElement>) => {
+            toggleAction ? toggleAction(event,token) : () => { return;}}
+        }>
             {icon}
         </div>
     );
@@ -136,7 +138,7 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
                     </TableCell>
                     <TableCell>{token.address}</TableCell>
                     <TableCell>
-                        {this.showCustomTokenHideToggle(token.isCustom, token.hidden, toggleAction, classes)}
+                        {this.showCustomTokenHideToggle(token, toggleAction, classes)}
                     </TableCell>
                 </TableRow>
                 );
