@@ -13,6 +13,7 @@ import { CryptoPriceList } from "./crypto-price-list";
 import { TokenList } from "./token-list";
 import { CryptoChartBox } from "../../src/price/crypto-chart-box";
 import { CryptoPriceTable } from "../../src/price/crypto-price-table";
+import { TransferPriceWrapper } from "./transfer-price";
 
 
 
@@ -22,6 +23,13 @@ const lightOnDark = host({
   title: "Light on Dark",
   align: "center",
   background: "#222b34"
+});
+
+const transferModal = host({
+  title: "Light on Dark",
+  align: "center",
+  background: "#222b34",
+  width: "700px"
 });
 
 const tStory = storiesOf("Typography", module).addDecorator(
@@ -69,3 +77,10 @@ priceStory.addWithJSX("CryptoPriceTable", () => <CryptoPriceTable locale='en' fi
   {name: 'Ethereum', symbol: 'ETH', price: 400, balance: 0.00548, balanceInFiat: 20.52, address: 'dsadsadsa', hidden: false, isCustom: false},
 
 ]}/>);
+
+
+const transferStory = storiesOf("Transfer", module).addDecorator(
+  transferModal
+) as Story & { addWithJSX: Function };
+
+transferStory.addWithJSX("TransferPrice", () => <TransferPriceWrapper />);
