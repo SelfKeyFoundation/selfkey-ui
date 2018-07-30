@@ -68,18 +68,20 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
     function CryptoPriceTableComponent(props) {
         return _super.call(this, props) || this;
     }
-    CryptoPriceTableComponent.prototype.showCustomTokenHideToggle = function (isCustomToken, isHidden, toggleAction, classes) {
-        if (!isCustomToken) {
+    CryptoPriceTableComponent.prototype.showCustomTokenHideToggle = function (token, toggleAction, classes) {
+        if (!token.isCustom) {
             return;
         }
         var icon;
-        if (isHidden) {
+        if (token.hidden) {
             icon = React.createElement(visibility_off_1.VisibilityOffIcon, { className: classes.iconSize });
         }
         else {
             icon = React.createElement(visibility_on_1.VisibilityOnIcon, { className: classes.iconSize });
         }
-        return (React.createElement("div", { onClick: toggleAction }, icon));
+        return (React.createElement("div", { onClick: function (event) {
+                toggleAction ? toggleAction(event, token) : function () { return; };
+            } }, icon));
     };
     CryptoPriceTableComponent.prototype.render = function () {
         var _this = this;
@@ -105,7 +107,7 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
                         React.createElement(core_1.TableCell, { numeric: true },
                             React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.balanceInFiat })),
                         React.createElement(core_1.TableCell, null, token.address),
-                        React.createElement(core_1.TableCell, null, _this.showCustomTokenHideToggle(token.isCustom, token.hidden, toggleAction, classes))));
+                        React.createElement(core_1.TableCell, null, _this.showCustomTokenHideToggle(token, toggleAction, classes))));
                 })))));
     };
     return CryptoPriceTableComponent;
