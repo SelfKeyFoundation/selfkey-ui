@@ -20,14 +20,14 @@ var visibility_off_1 = require("../icons/visibility-off");
 exports.styles = {
     cryptoPriceTable: {
         fontFamily: 'ProximaNovaRegular',
-        width: '1140px'
+        width: '1140px',
     },
     table: {
         borderSpacing: '0px',
         width: '100%',
         '& tbody tr:nth-child(odd)': {
-            background: '#262f39'
-        }
+            background: '#262f39',
+        },
     },
     headerTableRow: {
         height: '38px',
@@ -38,11 +38,11 @@ exports.styles = {
             color: '#7f8fa4',
             textTransform: 'uppercase',
             borderBottom: '0px',
-            paddingLeft: '0px'
+            paddingLeft: '0px',
         },
         '& th:first-child': {
-            paddingLeft: '24px !important'
-        }
+            paddingLeft: '24px !important',
+        },
     },
     bodyTableRow: {
         height: '74px',
@@ -52,26 +52,26 @@ exports.styles = {
             fontSize: '15px',
             textAlign: 'left',
             color: '#ffffff',
-            borderBottom: '0px'
+            borderBottom: '0px',
         },
         '& td:first-child': {
-            paddingLeft: '24px !important'
-        }
+            paddingLeft: '24px !important',
+        },
     },
     iconSize: {
         width: '19.6px !important',
-        height: '23.1px !important'
-    }
+        height: '23.1px !important',
+    },
 };
 var CryptoPriceTableComponent = /** @class */ (function (_super) {
     __extends(CryptoPriceTableComponent, _super);
     function CryptoPriceTableComponent(props) {
         return _super.call(this, props) || this;
     }
-    CryptoPriceTableComponent.prototype.showCustomTokenHideToggle = function (token, toggleAction, classes) {
-        if (!token.isCustom) {
+    CryptoPriceTableComponent.prototype.renderVisibilityButton = function (token) {
+        var _a = this.props, classes = _a.classes, toggleAction = _a.toggleAction, _b = _a.alwaysVisible, alwaysVisible = _b === void 0 ? [] : _b;
+        if (alwaysVisible.includes(token.address || ''))
             return;
-        }
         var icon;
         if (token.hidden) {
             icon = React.createElement(visibility_off_1.VisibilityOffIcon, { className: classes.iconSize });
@@ -80,12 +80,31 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             icon = React.createElement(visibility_on_1.VisibilityOnIcon, { className: classes.iconSize });
         }
         return (React.createElement("div", { onClick: function (event) {
-                toggleAction ? toggleAction(event, token) : function () { return; };
+                toggleAction
+                    ? toggleAction(event, token)
+                    : function () {
+                        return;
+                    };
             } }, icon));
     };
+    CryptoPriceTableComponent.prototype.renderRow = function (token, index) {
+        var _a = this.props, locale = _a.locale, fiatCurrency = _a.fiatCurrency, classes = _a.classes;
+        var visibilityButton = this.renderVisibilityButton(token);
+        return (React.createElement(core_1.TableRow, { key: index, className: classes.bodyTableRow },
+            React.createElement(core_1.TableCell, null, token.name),
+            React.createElement(core_1.TableCell, null, token.symbol),
+            React.createElement(core_1.TableCell, { numeric: true },
+                React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, style: "decimal", currency: token.symbol, value: token.balance })),
+            React.createElement(core_1.TableCell, { numeric: true },
+                React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.price })),
+            React.createElement(core_1.TableCell, { numeric: true },
+                React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.balanceInFiat })),
+            React.createElement(core_1.TableCell, null, token.address),
+            React.createElement(core_1.TableCell, null, visibilityButton)));
+    };
     CryptoPriceTableComponent.prototype.render = function () {
-        var _this = this;
-        var _a = this.props, classes = _a.classes, locale = _a.locale, fiatCurrency = _a.fiatCurrency, tokens = _a.tokens, toggleAction = _a.toggleAction;
+        var _a = this.props, classes = _a.classes, tokens = _a.tokens;
+        var tokenRows = tokens.map(this.renderRow.bind(this));
         return (React.createElement("div", { className: classes.cryptoPriceTable },
             React.createElement(core_1.Table, { className: classes.table },
                 React.createElement(core_1.TableHead, null,
@@ -96,19 +115,7 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
                         React.createElement(core_1.TableCell, { numeric: true }, "LAST PRICE"),
                         React.createElement(core_1.TableCell, { numeric: true }, "TOTAL VALUE"),
                         React.createElement(core_1.TableCell, { numeric: true }, "TOKEN CONTRACT ADDRESS"))),
-                React.createElement(core_1.TableBody, null, tokens.map(function (token, index) {
-                    return (React.createElement(core_1.TableRow, { key: index, className: classes.bodyTableRow },
-                        React.createElement(core_1.TableCell, null, token.name),
-                        React.createElement(core_1.TableCell, null, token.symbol),
-                        React.createElement(core_1.TableCell, { numeric: true },
-                            React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, style: "decimal", currency: token.symbol, value: token.balance })),
-                        React.createElement(core_1.TableCell, { numeric: true },
-                            React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.price })),
-                        React.createElement(core_1.TableCell, { numeric: true },
-                            React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.balanceInFiat })),
-                        React.createElement(core_1.TableCell, null, token.address),
-                        React.createElement(core_1.TableCell, null, _this.showCustomTokenHideToggle(token, toggleAction, classes))));
-                })))));
+                React.createElement(core_1.TableBody, null, tokenRows))));
     };
     return CryptoPriceTableComponent;
 }(React.Component));
