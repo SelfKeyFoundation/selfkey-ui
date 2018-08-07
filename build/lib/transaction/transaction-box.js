@@ -4,18 +4,15 @@ var React = require("react");
 var react_jss_1 = require("react-jss");
 var ethereum_1 = require("../icons/ethereum");
 var selfkey_1 = require("../icons/selfkey");
+var core_1 = require("@material-ui/core");
 var close_dialog_1 = require("../icons/close-dialog");
 var styles = {
     transactionBox: {
         padding: '90px 30px 40px 30px',
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
         borderRadius: '4px',
         backgroundColor: '#262f39',
         border: 'solid 1px #303c49',
         boxShadow: '0 0 16px 1px #15222e',
-        alignItems: 'center',
     },
     iconWrapper: {
         position: 'absolute',
@@ -45,11 +42,16 @@ var renderIcon = function (shortName, classes) {
 };
 exports.TransactionBox = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction;
-    return (React.createElement("div", { className: classes.transactionBox, onClick: closeAction },
-        React.createElement("div", { className: classes.closeDialogIconWrapper },
-            React.createElement(close_dialog_1.default, null)),
-        React.createElement("div", { className: classes.iconWrapper }, renderIcon(cryptoCurrency, classes)),
-        React.createElement("div", null, children)));
+    return (React.createElement(core_1.Grid, { container: true, className: classes.transactionBox },
+        React.createElement(core_1.Grid, { item: true, xs: 12 },
+            React.createElement(core_1.Grid, { container: true, alignItems: 'center', direction: 'row', justify: 'center' },
+                React.createElement(core_1.Grid, { item: true, xs: 12 },
+                    React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },
+                        React.createElement(close_dialog_1.default, null))),
+                React.createElement(core_1.Grid, { item: true, xs: 12 },
+                    React.createElement("div", { className: classes.iconWrapper }, renderIcon(cryptoCurrency, classes))),
+                React.createElement(core_1.Grid, { item: true, xs: 12, sm: 10 },
+                    React.createElement("div", null, children))))));
 });
 exports.default = exports.TransactionBox;
 //# sourceMappingURL=transaction-box.js.map
