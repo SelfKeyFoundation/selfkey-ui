@@ -52,8 +52,8 @@ const renderIcon = (shortName: string, classes: Partial<ClassNameMap<string>>) =
 };
 
 export const TransactionBox = injectSheet(styles)<TransactionBoxProps>(({classes, children, cryptoCurrency, closeAction}) => (
-  <div className={classes.transactionBox} onClick={closeAction}>
-    <div className={classes.closeDialogIconWrapper}>
+  <div className={classes.transactionBox}>
+    <div className={classes.closeDialogIconWrapper} onClick={closeAction}>
       <CloseDialogIcon />
     </div>
     <div className={classes.iconWrapper}>

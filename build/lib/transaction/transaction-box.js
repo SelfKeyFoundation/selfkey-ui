@@ -42,8 +42,8 @@ var renderIcon = function (shortName, classes) {
 };
 exports.TransactionBox = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction;
-    return (React.createElement("div", { className: classes.transactionBox, onClick: closeAction },
-        React.createElement("div", { className: classes.closeDialogIconWrapper },
+    return (React.createElement("div", { className: classes.transactionBox },
+        React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },
             React.createElement(close_dialog_1.default, null)),
         React.createElement("div", { className: classes.iconWrapper }, renderIcon(cryptoCurrency, classes)),
         React.createElement("div", null, children)));
