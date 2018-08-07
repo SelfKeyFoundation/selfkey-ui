@@ -4,14 +4,18 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 const styles: StyleSheet = {
     p: {
-        color: '#93b0c1',
-        fontFamily: '"Proxima Nova"',
-        fontSize: '18px',
+        color: '#fff',
+        fontFamily: 'ProximaNovaRegular',
+        fontSize: '16px',
         fontWeight: 400,
         lineHeight: 1.67
     }
 };
 
-export const P = injectSheet(styles)<{}>(({ classes, children }) => (
-    <p className={`${classes.base} ${classes.p}`}>{children}</p>
+export type ParagraphProps = {
+    className?: string,
+}
+
+export const P = injectSheet(styles)<ParagraphProps>(({ classes, children, className }) => (
+    <p className={`${classes.base} ${classes.p} ${className}`}>{children}</p>
 ));

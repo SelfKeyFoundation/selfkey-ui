@@ -14,6 +14,7 @@ import { TokenList } from './token-list';
 import { CryptoChartBox } from '../../src/price/crypto-chart-box';
 import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
+import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
 
 setAddon(JSXAddon);
 
@@ -125,6 +126,9 @@ priceStory.addWithJSX('CryptoPriceTable', () => (
 	/>
 ));
 
-const transferStory = storiesOf('Transfer', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
+const transactionrStory = storiesOf('Transaction', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
-transferStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
+transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
+
+
+transactionrStory.addWithJSX('TransactionWithoutGasError', () => <TransactionNoGasError cryptoCurrency='KEY' publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'/>);

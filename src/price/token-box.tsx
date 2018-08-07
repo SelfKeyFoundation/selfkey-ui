@@ -6,7 +6,7 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import { Grid } from '@material-ui/core'
 
 import { TransferIcon } from '../icons/transfer';
-import { Copy } from './copy';
+import { Copy } from '../common/copy';
 
 const styles: StyleSheet = {
 
