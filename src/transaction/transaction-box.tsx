@@ -31,7 +31,7 @@ const styles: StyleSheet = {
       position: 'absolute',
       right: '-18px',
       top: '-18px',
-      cursor: 'pointer',
+      cursor: 'pointer'
     }
 };
 

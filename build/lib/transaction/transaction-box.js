@@ -27,7 +27,7 @@ var styles = {
         position: 'absolute',
         right: '-18px',
         top: '-18px',
-        cursor: 'pointer',
+        cursor: 'pointer'
     }
 };
 var renderIcon = function (shortName, classes) {

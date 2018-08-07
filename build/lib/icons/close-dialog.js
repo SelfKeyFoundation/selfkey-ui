@@ -21,8 +21,8 @@ var styles = {
     }
 };
 exports.CloseDialogIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '"0 0 38 38' }),
-    React.createElement("g", { fill: "none", fillRule: "evenodd", transform: "translate(1 1)" },
+    React.createElement("g", { fill: "none", fillRule: "evenodd" },
         React.createElement("circle", { cx: "18", cy: "18", r: "18", fill: "#262F39", stroke: "#303C49" }),
-        React.createElement("path", { fill: "#3B4A5A", "fill-rule": "nonzero", d: "M10.815 9.64L9.64 10.814 16.824 18l-7.185 7.185 1.176 1.176L18 19.176l7.185 7.185 1.176-1.176L19.176 18l7.185-7.185-1.176-1.176L18 16.824z" })))); });
+        React.createElement("path", { fill: "#3B4A5A", fillRule: "nonzero", d: "M10.815 9.64L9.64 10.814 16.824 18l-7.185 7.185 1.176 1.176L18 19.176l7.185 7.185 1.176-1.176L19.176 18l7.185-7.185-1.176-1.176L18 16.824z" })))); });
 exports.default = exports.CloseDialogIcon;
 //# sourceMappingURL=close-dialog.js.map
