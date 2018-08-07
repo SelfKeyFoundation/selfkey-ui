@@ -6,6 +6,8 @@ import { H2 } from '../typography/headings';
 import { P } from '../typography/paragraph';
 import { Copy } from '../common/copy'
 
+import { Grid } from '@material-ui/core'
+
 const styles: StyleSheet = {
   header: {
     textAlign: 'center'
@@ -32,6 +34,7 @@ export type TransactionNoGasErrorProps = {
 }
 
 export const TransactionNoGasError = injectSheet(styles)<TransactionNoGasErrorProps>(({classes, children, cryptoCurrency, publicKey, closeAction}) => (
+  <Grid container>
   <TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
     <H2 className={classes.header}>Transaction Failed</H2>
     <div className={classes.body}>
@@ -47,6 +50,7 @@ export const TransactionNoGasError = injectSheet(styles)<TransactionNoGasErrorPr
       </div>
     </div>
   </TransactionBox>
+  </Grid>
 ));
 
 export default TransactionNoGasError;
