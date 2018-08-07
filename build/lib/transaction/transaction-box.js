@@ -28,6 +28,15 @@ var styles = {
         right: '-18px',
         top: '-18px',
         cursor: 'pointer'
+    },
+    custom: {
+        padding: '10px',
+        display: 'block',
+        backgroundColor: '#1e262d',
+        border: 'solid 1px #303c49',
+        color: '#fff',
+        fontSize: '25px',
+        fontWeight: 600
     }
 };
 var renderIcon = function (shortName, classes) {
@@ -37,7 +46,7 @@ var renderIcon = function (shortName, classes) {
         case 'ETH':
             return (React.createElement(ethereum_1.default, { className: classes.icon }));
         default:
-            return;
+            return (React.createElement("div", { className: classes.custom }, shortName));
     }
 };
 exports.TransactionBox = react_jss_1.default(styles)(function (_a) {

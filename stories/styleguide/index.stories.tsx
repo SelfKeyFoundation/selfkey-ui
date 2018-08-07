@@ -131,4 +131,4 @@ const transactionrStory = storiesOf('Transaction', module).addDecorator(transfer
 transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
 
 
-transactionrStory.addWithJSX('TransactionWithoutGasError', () => <TransactionNoGasError cryptoCurrency='KEY' publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'/>);
+transactionrStory.addWithJSX('TransactionWithoutGasError', () => <TransactionNoGasError cryptoCurrency='ITH' publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'/>);

@@ -32,6 +32,16 @@ const styles: StyleSheet = {
       right: '-18px',
       top: '-18px',
       cursor: 'pointer'
+    },
+
+    custom: {
+      padding: '10px',
+      display: 'block',
+      backgroundColor: '#1e262d',
+      border: 'solid 1px #303c49',
+      color: '#fff',
+      fontSize: '25px',
+      fontWeight: 600
     }
 };
 
@@ -47,7 +57,7 @@ const renderIcon = (shortName: string, classes: Partial<ClassNameMap<string>>) =
 		case 'ETH':
       return (<EthereumIcon className={classes.icon}/>);
     default:
-      return;
+      return (<div className={classes.custom}>{shortName}</div>)
 	}
 };
 
