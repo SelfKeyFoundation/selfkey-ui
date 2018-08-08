@@ -46,6 +46,7 @@
     "@storybook/addons": "^3.4.2",
     "@storybook/react": "^3.4.2",
     "@types/jest": "^22.2.3",
+    "@types/react-test-renderer": "^16.0.2",
     "@types/storybook__addon-backgrounds": "^3.2.0",
     "@types/storybook__addon-info": "^3.2.3",
     "@types/storybook__addon-links": "^3.3.0",
@@ -58,6 +59,7 @@
     "cz-jira-smart-commit": "^3.0.0",
     "jest": "^22.4.3",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-test-renderer": "^16.4.2",
     "storybook-addon-jsx": "^5.3.0",
     "storybook-host": "^5.0.0",
     "ts-jest": "^22.4.4",
@@ -66,7 +68,7 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
@@ -76,7 +78,8 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "testURL": "http://localhost"
   },
   "config": {
     "commitizen": {
