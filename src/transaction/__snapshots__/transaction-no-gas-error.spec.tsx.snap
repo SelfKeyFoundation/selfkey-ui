@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should show Transaction not enough gas error screen 1`] = `
+exports[`Transaction no Gas Error should show Transaction not enough gas error screen 1`] = `
 <div
   className="Component-transactionBox-0-1-5"
 >
