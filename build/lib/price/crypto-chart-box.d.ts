@@ -56,6 +56,7 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     getChartData(tokens: Array<Token>): (string | number)[][];
     getColors(): string[];
     getTotalBalanceInFiat(tokens: Array<Token>): number;
+    getChart(): any;
     onItemHoverEnter(index: number): void;
     onItemHoverLeave(index: number): void;
     toggleViewAll(): void;

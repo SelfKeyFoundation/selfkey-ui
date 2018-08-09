@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Token Price should show Token Price for key 1`] = `
+<div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-row-0-1-3"
+  >
+    <div
+      className="MuiGrid-item-2 Component-cryptoCurrencyValue-0-1-1"
+    >
+      <div>
+        4
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-row-0-1-3"
+  >
+    <div
+      className="MuiGrid-item-2 Component-currency-0-1-2"
+    >
+      <div>
+        $0.0174857
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-2 Component-currency-0-1-2"
+    >
+      USD
+    </div>
+  </div>
+</div>
+`;

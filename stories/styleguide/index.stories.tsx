@@ -61,9 +61,11 @@ priceStory.addWithJSX('CryptoChartBox', () => (
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
+			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
+			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 }
 		]}
 		topTokenListSize={5}
-		viewAll={false}
+		viewAll={true}
 	/>
 ));
 

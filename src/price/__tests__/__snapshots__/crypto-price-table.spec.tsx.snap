@@ -1,0 +1,541 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crypto Price Table should show Crypto Price Table 1`] = `
+<div
+  className="CryptoPriceTableComponent-cryptoPriceTable-0-2-1"
+>
+  <table
+    className="MuiTable-root-1 CryptoPriceTableComponent-table-0-2-2"
+  >
+    <thead
+      className="MuiTableHead-root-2"
+    >
+      <tr
+        className="MuiTableRow-root-3 MuiTableRow-head-6 CryptoPriceTableComponent-headerTableRow-0-2-3"
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-head-9"
+          scope="col"
+        >
+          NAME
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-head-9 MuiTableCell-numeric-12"
+          scope="col"
+        >
+          TOKEN SYMBOL
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-head-9 MuiTableCell-numeric-12"
+          scope="col"
+        >
+          BALANCE
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-head-9 MuiTableCell-numeric-12"
+          scope="col"
+        >
+          LAST PRICE
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-head-9 MuiTableCell-numeric-12"
+          scope="col"
+        >
+          TOTAL VALUE
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-head-9 MuiTableCell-numeric-12"
+          scope="col"
+        >
+          TOKEN CONTRACT ADDRESS
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-16"
+    >
+      <tr
+        className="MuiTableRow-root-3 CryptoPriceTableComponent-bodyTableRow-0-2-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          Selfkey
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          KEY
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                30
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $0.01
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $0.42432
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          test
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        />
+      </tr>
+      <tr
+        className="MuiTableRow-root-3 CryptoPriceTableComponent-bodyTableRow-0-2-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          Ethereum
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          ETH
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                0.00548
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $400.00
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $20.52
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        />
+      </tr>
+      <tr
+        className="MuiTableRow-root-3 CryptoPriceTableComponent-bodyTableRow-0-2-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          Other token
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          OTHR
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                0.00548
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $500.00
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $20.52
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          dsadsadsa
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          <div
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-114 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="#000000"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </g>
+            </svg>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-3 CryptoPriceTableComponent-bodyTableRow-0-2-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          Ethereum
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          OTHR
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                0.00548
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $400.00
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $20.52
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          dsadsadsa
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          <div
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-114 Component-root-0-2-10 CryptoPriceTableComponent-iconSize-0-2-5"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="#000000"
+              >
+                <path
+                  d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"
+                />
+              </g>
+            </svg>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-3 CryptoPriceTableComponent-bodyTableRow-0-2-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          Ethereum
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          OTHR
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                0.00548
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $400.00
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
+          scope={undefined}
+        >
+          <div
+            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+          >
+            <div
+              className="MuiGrid-item-18 Component-value-0-2-8"
+            >
+              <div>
+                $20.52
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          dsadsadsa
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-8 MuiTableCell-body-10"
+          scope={undefined}
+        >
+          <div
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-114 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="#000000"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </g>
+            </svg>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
