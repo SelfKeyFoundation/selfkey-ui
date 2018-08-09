@@ -241,12 +241,25 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
             return a + b['balanceInFiat'];
         }, 0);
     };
+    CryptoChartBoxComponent.prototype.getChart = function () {
+        var wrapper = this.refs.pieChart.wrapper;
+        if (!wrapper) {
+            return;
+        }
+        return wrapper.getChart();
+    };
     CryptoChartBoxComponent.prototype.onItemHoverEnter = function (index) {
-        var chart = this.refs.pieChart.wrapper.getChart();
+        var chart = this.getChart();
+        if (!chart) {
+            return;
+        }
         chart.setSelection([{ row: index }]);
     };
     CryptoChartBoxComponent.prototype.onItemHoverLeave = function (index) {
-        var chart = this.refs.pieChart.wrapper.getChart();
+        var chart = this.getChart();
+        if (!chart) {
+            return;
+        }
         chart.setSelection([]);
     };
     CryptoChartBoxComponent.prototype.toggleViewAll = function () {

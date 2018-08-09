@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Number Format should show Number Format 1`] = `
+<div>
+  $0.00
+</div>
+`;

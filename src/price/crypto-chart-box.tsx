@@ -325,13 +325,27 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     }, 0);
   }
 
+  getChart() {
+    const wrapper = this.refs.pieChart.wrapper;
+    if (!wrapper) {
+      return;
+    }
+    return wrapper.getChart();
+  }
+
   onItemHoverEnter(index: number) {
-    const chart = this.refs.pieChart.wrapper.getChart();
+    const chart = this.getChart();
+    if (!chart) {
+      return;
+    }
     chart.setSelection([{row: index}]);
   }
 
   onItemHoverLeave(index: number) {
-    const chart = this.refs.pieChart.wrapper.getChart();
+    const chart = this.getChart();
+    if (!chart) {
+      return;
+    }
     chart.setSelection([]);
   }
 

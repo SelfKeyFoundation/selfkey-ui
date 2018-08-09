@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Price Summary should show Price Summary 1`] = `
+<div
+  className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-row-0-1-1"
+>
+  <div
+    className="MuiGrid-item-2 Component-value-0-1-3"
+  >
+    <div>
+      $0.0001
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Price Summary should show Price Summary with appendCurrency 1`] = `
+<div
+  className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-row-0-1-1"
+>
+  <div
+    className="MuiGrid-item-2 Component-currency-0-1-2"
+  >
+    USD
+  </div>
+  <div
+    className="MuiGrid-item-2 Component-value-0-1-3"
+  >
+    <div>
+      $0.0001
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Price Summary should show Price Summary with currencyClass 1`] = `
+<div
+  className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-row-0-1-1"
+>
+  <div
+    className="MuiGrid-item-2 Component-value-0-1-3"
+  >
+    <div>
+      $0.0001
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Price Summary should show Price Summary with prependCurrency 1`] = `
+<div
+  className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-row-0-1-1"
+>
+  <div
+    className="MuiGrid-item-2 Component-value-0-1-3"
+  >
+    <div>
+      $0.0001
+    </div>
+  </div>
+  <div
+    className="MuiGrid-item-2 Component-currency-0-1-2"
+  >
+    USD
+  </div>
+</div>
+`;

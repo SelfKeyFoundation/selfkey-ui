@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copy should Copy 1`] = `
+<button
+  className="CopyComponent-copyButton-0-1-1"
+  onClick={[Function]}
+>
+  <span
+    className="CopyComponent-copyButtonSpan-0-1-2"
+  >
+    COPY
+  </span>
+</button>
+`;

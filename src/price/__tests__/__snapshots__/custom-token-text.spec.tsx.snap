@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom Token Text should show Custom Token Text 1`] = `
+<div
+  className="Component-customTokenText-0-1-1"
+>
+  Send or receive any custom ERC-20 token.
+</div>
+`;
