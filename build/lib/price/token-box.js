@@ -5,7 +5,7 @@ var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var transfer_1 = require("../icons/transfer");
-var copy_1 = require("./copy");
+var copy_1 = require("../common/copy");
 var styles = {
     tokenBox: {
         minWidth: '320px',

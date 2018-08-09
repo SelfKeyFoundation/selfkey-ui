@@ -12,4 +12,6 @@ export { CustomIcon } from './icons/custom';
 export { CryptoChartBox }  from './price/crypto-chart-box';
 export { CryptoPriceTable } from './price/crypto-price-table';
 export { TransferPrice }  from './price/transfer-price';
+export { TransactionBox }  from './transaction/transaction-box';
+export { TransactionNoGasError }  from './transaction/transaction-no-gas-error';
 

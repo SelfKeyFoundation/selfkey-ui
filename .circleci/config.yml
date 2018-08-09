@@ -1,0 +1,33 @@
+version: 2
+
+jobs:
+    'test':
+        docker: &DOCKERIMAGE
+            - image: circleci/node:8.11.3-stretch-browsers
+        steps:
+            - checkout
+            - attach_workspace:
+                  at: .
+            - restore_cache:
+                  name: Restore Yarn Package Cache
+                  keys:
+                      - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                      - yarn-packages-{{ .Branch }}
+                      - yarn-packages-master
+                      - yarn-packages-
+            - run:
+                  name: Install Node Packages
+                  command: yarn
+            - save_cache:
+                  name: Save Yarn Package Cache
+                  key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                  paths:
+                      - node_modules/
+            - run:
+                  name: Tests
+                  command: yarn test
+workflows:
+    version: 2
+    workflow1:
+        jobs:
+            - 'test'
