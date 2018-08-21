@@ -19,6 +19,10 @@ import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSSelectWallet } from '../../src/lws/lws-select-wallet';
 import { LWSSelectWalletModal, LWSRequiredInfoModal, LWSWalletConnectionErrorModal, LWSSelfkeyIdErrorModal, LWSExtensionErrorModal, LWSSuccessrModal } from './lws';
 
+import { ItemDetails } from '../../src/marketplace/items/item-details'
+
+import { MarketplaceWrapper } from './marketplace'
+import { ExchangesWrapper } from './exchanges'
 
 
 setAddon(JSXAddon);
@@ -27,6 +31,8 @@ const lightOnDark = host({
 	title: 'Light on Dark',
 	align: 'center',
 	background: '#222b34',
+	width: '1400px',
+
 });
 
 const transferModal = host({
@@ -157,3 +163,33 @@ lws.addWithJSX('LWSSelfkeyIdErrorModal', () => <LWSSelfkeyIdErrorModal />);
 lws.addWithJSX('LWSExtensionErrorModal', () => <LWSExtensionErrorModal />);
 
 lws.addWithJSX('LWSSuccessrModal', () => <LWSSuccessrModal />);
+
+const marketplaceStory = storiesOf('Marketplace', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+marketplaceStory.addWithJSX('Marketplace', () => <MarketplaceWrapper />);
+
+marketplaceStory.addWithJSX('Exchanges', () => <ExchangesWrapper />); 
+
+marketplaceStory.addWithJSX('ItemDetails', () => <ItemDetails item={
+	{
+		name: 'Gatecoin',
+		logo: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+		status: 'Active',
+		integration: 'Unlock Marketplace',
+		description: 'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets.',
+		location: 'Hong Kong',
+		year_launched: 2013,
+		coin_pairs: '72',
+		maker_fee: '0.25%',
+		taker_fee: '0.35%',
+		fiat_payments: 'Bank trasnfer',
+		fiat_supported:['EUR', 'USD', 'HKD'],
+		margin_trading: 'no',
+		kyc_aml: 'yes',
+		excluded_residents: 'United States',
+		url: 'http://www.gatecoin.com',
+		email: 'support@gatecoin.com',
+		kyc_template: ['First Name', 'Last Name', 'Country Of Residence', 'National ID', 'National ID Self'], 
+	}
+}
+/>); 

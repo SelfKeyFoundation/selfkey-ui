@@ -5,4 +5,5 @@ export declare type HeadingsProps = {
 };
 export declare const H1: React.ComponentType<HeadingsProps & StyledComponentProps<string>>;
 export declare const H2: React.ComponentType<HeadingsProps & StyledComponentProps<string>>;
+export declare const H3: React.ComponentType<HeadingsProps & StyledComponentProps<string>>;
 export default H1;
