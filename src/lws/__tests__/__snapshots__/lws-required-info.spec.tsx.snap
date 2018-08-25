@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LWS Required Info should show LWS Required Info 1`] = `
+<div>
+  <div
+    className="Component-areaTitle-0-1-4"
+  >
+    <h4>
+      <a
+        href="http://www.pavezicoin.org"
+        target="_blank"
+      >
+        <strong>
+          PaveziCoin
+        </strong>
+      </a>
+       would like to access this information:
+    </h4>
+  </div>
+  <div
+    className="Component-form-0-1-1"
+  >
+    <div>
+      <div
+        className="Component-attribute-0-1-5"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1 Component-root-0-1-10"
+          color={undefined}
+          focusable="false"
+          viewBox="0 0 18 18"
+        >
+          <title>
+            icon-check
+          </title>
+          <desc>
+            Created with Sketch.
+          </desc>
+          <defs />
+          <g
+            fill="none"
+            fillRule="evenodd"
+            id="Modal---Dark"
+            stroke="none"
+            strokeWidth="1"
+          >
+            <g
+              fill="#1CBA7D"
+              id="1.3.-Required-Information---missing-info"
+              transform="translate(-490.000000, -340.000000)"
+            >
+              <g
+                id="Modal-content"
+                transform="translate(420.000000, 100.000000)"
+              >
+                <g
+                  id="Form"
+                  transform="translate(70.000000, 177.000000)"
+                >
+                  <g
+                    id="line-1"
+                    transform="translate(0.000000, 62.000000)"
+                  >
+                    <path
+                      d="M15.984375,1 C16.5468778,1 17.0234355,1.19531055 17.4140625,1.5859375 C17.8046895,1.97656445 18,2.45312219 18,3.015625 L18,16.984375 C18,17.5468778 17.8046895,18.0234355 17.4140625,18.4140625 C17.0234355,18.8046895 16.5468778,19 15.984375,19 L2.015625,19 C1.45312219,19 0.976564453,18.8046895 0.5859375,18.4140625 C0.195310547,18.0234355 0,17.5468778 0,16.984375 L0,3.015625 C0,2.45312219 0.195310547,1.97656445 0.5859375,1.5859375 C0.976564453,1.19531055 1.45312219,1 2.015625,1 L15.984375,1 Z M6.984375,15.015625 L15.984375,6.015625 L14.578125,4.5625 L6.984375,12.15625 L3.421875,8.59375 L2.015625,10 L6.984375,15.015625 Z"
+                      id="icon-check"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <dl>
+          <dt>
+            Name
+          </dt>
+          <dd>
+            Rodrigo Pavezi
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div>
+      <div
+        className="Component-attribute-0-1-5"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1 Component-root-0-1-11"
+          color={undefined}
+          focusable="false"
+          viewBox="0 0 20 18"
+        >
+          <title>
+            icon-warning
+          </title>
+          <desc>
+            Created with Sketch.
+          </desc>
+          <defs />
+          <g
+            fill="none"
+            fillRule="evenodd"
+            id="Modal---Dark"
+            stroke="none"
+            strokeWidth="1"
+          >
+            <g
+              fill="#FFA700"
+              id="1.3.-Required-Information---missing-info"
+              transform="translate(-490.000000, -502.000000)"
+            >
+              <g
+                id="Modal-content"
+                transform="translate(420.000000, 100.000000)"
+              >
+                <g
+                  id="Form"
+                  transform="translate(70.000000, 177.000000)"
+                >
+                  <g
+                    id="line-4"
+                    transform="translate(0.000000, 224.000000)"
+                  >
+                    <path
+                      d="M0,18.2707889 L10.021322,1 L20,18.2707889 L0,18.2707889 Z M10.9168443,15.5415778 L10.9168443,13.7078891 L9.08315565,13.7078891 L9.08315565,15.5415778 L10.9168443,15.5415778 Z M10.9168443,11.9168443 L10.9168443,8.24946695 L9.08315565,8.24946695 L9.08315565,11.9168443 L10.9168443,11.9168443 Z"
+                      id="icon-warning"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <dl>
+          <dt>
+            Country
+          </dt>
+          <dd>
+            <a
+              className="Component-edit-0-1-9"
+              onClick={undefined}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-1 Component-root-0-1-12"
+                color={undefined}
+                focusable="false"
+                viewBox="0 0 20 20"
+              >
+                <title>
+                  icon-edit
+                </title>
+                <desc>
+                  Created with Sketch.
+                </desc>
+                <defs />
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  id="Modal---Dark"
+                  stroke="none"
+                  strokeWidth="1"
+                >
+                  <g
+                    fill="#93B0C1"
+                    id="1.3.-Required-Information---missing-info"
+                    transform="translate(-930.000000, -501.000000)"
+                  >
+                    <g
+                      id="Modal-content"
+                      transform="translate(420.000000, 100.000000)"
+                    >
+                      <g
+                        id="Form"
+                        transform="translate(70.000000, 177.000000)"
+                      >
+                        <g
+                          id="line-4"
+                          transform="translate(0.000000, 224.000000)"
+                        >
+                          <path
+                            d="M440,15.8333333 L452.291667,3.54166667 L456.458333,7.70833333 L444.166667,20 L440,20 L440,15.8333333 Z M459.6875,4.47916667 L457.65625,6.51041667 L453.489583,2.34375 L455.520833,0.3125 C455.729168,0.104165625 455.989582,0 456.302083,0 C456.614585,0 456.874999,0.104165625 457.083333,0.3125 L459.6875,2.91666667 C459.895834,3.12500104 460,3.3854151 460,3.69791667 C460,4.01041823 459.895834,4.27083229 459.6875,4.47916667 Z"
+                            id="icon-edit"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </dd>
+        </dl>
+      </div>
+      <div
+        className="Component-waringMessage-0-1-6"
+      >
+        Please update your missing details.
+      </div>
+    </div>
+    <div
+      className="Component-tocMessage-0-1-8"
+    >
+      By clicking "Allow", your information listed above will be used by 
+      <a
+        href="http://www.pavezicoin.org"
+        target="_blank"
+      >
+        PaveziCoin
+      </a>
+       with respect to their 
+      <a
+        href="http://www.pavezicoin.org/terms"
+        target="_blank"
+      >
+        [Terms of Service]
+      </a>
+       and 
+      <a
+        href="http://www.pavezicoin.org/privacy"
+        target="_blank"
+      >
+        [Privacy Policy]
+      </a>
+      .
+    </div>
+    <div
+      className="Component-formSubmitColumn-0-1-7"
+    >
+      <button
+        className="Component-root-0-1-13 Component-buttonSecondary-0-1-3"
+        onClick={undefined}
+      >
+        Cancel
+      </button>
+      <button
+        className="Component-root-0-1-13 Component-buttonPrimary-0-1-2"
+        onClick={undefined}
+      >
+        Allow
+      </button>
+    </div>
+  </div>
+</div>
+`;
