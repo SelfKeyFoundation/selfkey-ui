@@ -23,3 +23,4 @@ export { LWSSelfkeyIdError } from './lws/lws-selfkey-id-error';
 export { LWSExtensionError } from './lws/lws-extension-error';
 export { LWSSuccess } from './lws/lws-success';
 export { LWSButton } from './lws/lws-button';
+export { Marketplace }  from './marketplace/marketplace';

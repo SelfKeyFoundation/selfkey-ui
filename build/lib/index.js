@@ -50,4 +50,6 @@ var lws_success_1 = require("./lws/lws-success");
 exports.LWSSuccess = lws_success_1.LWSSuccess;
 var lws_button_1 = require("./lws/lws-button");
 exports.LWSButton = lws_button_1.LWSButton;
+var marketplace_1 = require("./marketplace/marketplace");
+exports.Marketplace = marketplace_1.Marketplace;
 //# sourceMappingURL=index.js.map
