@@ -32,7 +32,7 @@ export const Marketplace = injectSheet(styles)<MarketplaceProps>(({classes, chil
       <H1>SelfKey Marketplace</H1> 
     </Grid>
     <Grid item id='body' xs={12}>
-      <Grid container direction='row' justify='center' alignItems='center'>
+      <Grid container direction='row' justify='space-evenly' alignItems='center'>
         {getItems(items)}
       </Grid>
     </Grid>

@@ -5,6 +5,7 @@ export declare type MarketplaceItemProps = {
     description: string;
     active: boolean;
     svgIcon?: string;
+    learnMoreAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 };
 export declare const MarketplaceItem: React.ComponentType<MarketplaceItemProps & import("react-jss").StyledComponentProps<string>>;
 export default MarketplaceItem;

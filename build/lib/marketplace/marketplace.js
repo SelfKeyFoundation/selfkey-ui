@@ -24,7 +24,7 @@ exports.Marketplace = react_jss_1.default(styles)(function (_a) {
         React.createElement(core_1.Grid, { item: true, id: 'header', className: classes.header, xs: 12 },
             React.createElement(headings_1.H1, null, "SelfKey Marketplace")),
         React.createElement(core_1.Grid, { item: true, id: 'body', xs: 12 },
-            React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'center', alignItems: 'center' }, getItems(items)))));
+            React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-evenly', alignItems: 'center' }, getItems(items)))));
 });
 exports.default = exports.Marketplace;
 //# sourceMappingURL=marketplace.js.map

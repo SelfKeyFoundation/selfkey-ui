@@ -9,16 +9,28 @@ const styles: StyleSheet = {
   root: {
     width: '360px',
     height: '312px',
-    padding: '50px'
-  },
-
-  svgIcon: {
-    fontSize: '50px',
-    color: '#FFF'
+    marginTop: '30px',
+    marginBottom: '30px',
+    border: 'solid 1px #303c49',
+    borderRadius: '4px'
   },
 
   title: {
-    marginLeft: '30px'
+    margin: '20px'
+  },
+
+  icon: {
+    marginLeft: '20px'
+  },
+
+  header: {
+    backgroundColor: '#2a3540'
+  },
+
+  svgIcon: {
+    width: '66px',
+    height: '66px',
+    color: '#23E6FE'
   },
 
   button: {
@@ -30,7 +42,18 @@ const styles: StyleSheet = {
   },
 
   body: {
-    textAlign: 'justify'
+    width: '320px',
+    textAlign: 'justify',
+    margin: '20px',
+    color: '#fff',
+    fontFamily: 'ProximaNovaRegular',
+    fontSize: '16px',
+    fontWeight: 400,
+    lineHeight: 1.67
+  },
+
+  footer: {
+    margin: '20px',
   }
 };
 
@@ -38,14 +61,15 @@ export type MarketplaceItemProps = {
   title: string,
   description: string,
   active: boolean,
-  svgIcon?: string
+  svgIcon?: string,
+  learnMoreAction?: ((event: React.MouseEvent<HTMLElement>) => void)
 }
 
-export const MarketplaceItem = injectSheet(styles)<MarketplaceItemProps>(({classes, children, title, description, active, svgIcon}) => (
+export const MarketplaceItem = injectSheet(styles)<MarketplaceItemProps>(({classes, children, title, description, active, svgIcon, learnMoreAction}) => (
   <Grid container className={classes.root}>
     <Grid item>
-      <Grid container id='header' direction='row' justify='flex-start' alignItems='center'>
-        <Grid item id='icon'>
+      <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
+        <Grid item id='icon' className={classes.icon}>
           {svgIcon &&
             <SvgIcon className={classes.svgIcon}>
               <path d={svgIcon}/>
@@ -59,8 +83,8 @@ export const MarketplaceItem = injectSheet(styles)<MarketplaceItemProps>(({class
       <Grid item id='body' className={classes.body}>
         <P>{description}</P>
       </Grid>
-      <Grid item id='footer'>
-        <Button variant="outlined" disabled={!active} className={classes.button}>{active? 'Learn More' : 'Comming Soon'}</Button>
+      <Grid item id='footer' className={classes.footer}>
+        <Button variant="outlined" disabled={!active} className={classes.button} onClick={learnMoreAction}>{active? 'Learn More' : 'Coming Soon'}</Button>
       </Grid>
     </Grid>
   </Grid>
