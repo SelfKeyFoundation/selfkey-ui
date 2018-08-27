@@ -15,6 +15,11 @@ import { CryptoChartBox } from '../../src/price/crypto-chart-box';
 import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
+import { LWSModalHeader } from '../../src/lws/lws-modal-header';
+import { LWSSelectWallet } from '../../src/lws/lws-select-wallet';
+import { LWSSelectWalletModal, LWSRequiredInfoModal, LWSWalletConnectionErrorModal, LWSSelfkeyIdErrorModal, LWSExtensionErrorModal, LWSSuccessrModal } from './lws';
+
+
 
 setAddon(JSXAddon);
 
@@ -134,3 +139,21 @@ transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
 
 
 transactionrStory.addWithJSX('TransactionWithoutGasError', () => <TransactionNoGasError cryptoCurrency='ITH' publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'/>);
+
+const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
+
+lws.addWithJSX('LWSHeader', () => <LWSModalHeader />);
+
+lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWallet wallets={[{publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe'}]}/>);
+
+lws.addWithJSX('LWSSelectWalletModal', () => <LWSSelectWalletModal />); 
+
+lws.addWithJSX('LWSRequiredInfoModal', () => <LWSRequiredInfoModal />);
+
+lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorModal />); 
+
+lws.addWithJSX('LWSSelfkeyIdErrorModal', () => <LWSSelfkeyIdErrorModal />); 
+
+lws.addWithJSX('LWSExtensionErrorModal', () => <LWSExtensionErrorModal />);
+
+lws.addWithJSX('LWSSuccessrModal', () => <LWSSuccessrModal />);

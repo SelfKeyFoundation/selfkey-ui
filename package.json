@@ -11,7 +11,7 @@
     "start": "start-storybook -p 6006",
     "build": "yarn lint && yarn build-lib",
     "build-lib": "tsc && yarn copy-assets-to-lib",
-    "test": "jest",
+    "test": "jest --maxWorkers 2",
     "test:coverage": "npm test -- --coverage",
     "build-storybook": "build-storybook",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
