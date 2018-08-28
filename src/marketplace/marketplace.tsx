@@ -21,7 +21,7 @@ export type MarketplaceProps = {
 const getItems = (items: Array<MarketplaceItemProps>) =>{
   return items.map(item => {
     return (
-      <MarketplaceItem title={item.title} description={item.description} active={item.active} svgIcon={item.svgIcon}/>
+      <MarketplaceItem title={item.title} description={item.description} active={item.active} svgIcon={item.svgIcon} learnMoreAction={item.learnMoreAction}/>
     );
   })
 }

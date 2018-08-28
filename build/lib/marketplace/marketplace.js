@@ -15,7 +15,7 @@ var styles = {
 };
 var getItems = function (items) {
     return items.map(function (item) {
-        return (React.createElement(marketplace_item_1.MarketplaceItem, { title: item.title, description: item.description, active: item.active, svgIcon: item.svgIcon }));
+        return (React.createElement(marketplace_item_1.MarketplaceItem, { title: item.title, description: item.description, active: item.active, svgIcon: item.svgIcon, learnMoreAction: item.learnMoreAction }));
     });
 };
 exports.Marketplace = react_jss_1.default(styles)(function (_a) {
