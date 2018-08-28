@@ -14,4 +14,12 @@ export { CryptoPriceTable } from './price/crypto-price-table';
 export { TransferPrice }  from './price/transfer-price';
 export { TransactionBox }  from './transaction/transaction-box';
 export { TransactionNoGasError }  from './transaction/transaction-no-gas-error';
-
+export { LWSModalBody } from './lws/lws-modal-body';
+export { LWSModalHeader } from './lws/lws-modal-header';
+export { LWSSelectWallet } from './lws/lws-select-wallet';
+export { LWSRequiredInfo } from './lws/lws-required-info';
+export { LWSWalletConnectionError } from './lws/lws-wallet-connection-error';
+export { LWSSelfkeyIdError } from './lws/lws-selfkey-id-error';
+export { LWSExtensionError } from './lws/lws-extension-error';
+export { LWSSuccess } from './lws/lws-success';
+export { LWSButton } from './lws/lws-button';
