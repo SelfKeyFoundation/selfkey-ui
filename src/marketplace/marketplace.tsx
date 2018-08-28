@@ -10,7 +10,11 @@ const styles: StyleSheet = {
     borderBottom: 'solid 1px #475768',
     '& h1': {
       marginLeft: '50px'
-    }
+    },
+    minHeight: '147px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   }
 };
 
@@ -19,9 +23,9 @@ export type MarketplaceProps = {
 }
 
 const getItems = (items: Array<MarketplaceItemProps>) =>{
-  return items.map(item => {
+  return items.map((item, index) => {
     return (
-      <MarketplaceItem title={item.title} description={item.description} active={item.active} svgIcon={item.svgIcon} learnMoreAction={item.learnMoreAction}/>
+      <MarketplaceItem key={index} title={item.title} description={item.description} active={item.active} svgIcon={item.svgIcon} learnMoreAction={item.learnMoreAction}/>
     );
   })
 }

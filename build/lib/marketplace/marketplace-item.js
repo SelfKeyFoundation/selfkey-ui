@@ -55,8 +55,7 @@ exports.MarketplaceItem = react_jss_1.default(styles)(function (_a) {
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { container: true, id: 'header', direction: 'row', justify: 'flex-start', alignItems: 'center', className: classes.header },
                 React.createElement(core_1.Grid, { item: true, id: 'icon', className: classes.icon }, svgIcon &&
-                    React.createElement(core_1.SvgIcon, { className: classes.svgIcon },
-                        React.createElement("path", { d: svgIcon }))),
+                    React.createElement("img", { src: svgIcon, className: classes.svgIcon })),
                 React.createElement(core_1.Grid, { item: true, id: 'title', className: classes.title },
                     React.createElement(headings_1.H2, null, title))),
             React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body },

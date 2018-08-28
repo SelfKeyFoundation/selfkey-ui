@@ -1,7 +1,7 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
 
-import { Grid, Button, SvgIcon } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 import { P } from '../typography/paragraph';
 import { H2 } from '../typography/headings';
 
@@ -71,9 +71,7 @@ export const MarketplaceItem = injectSheet(styles)<MarketplaceItemProps>(({class
       <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
         <Grid item id='icon' className={classes.icon}>
           {svgIcon &&
-            <SvgIcon className={classes.svgIcon}>
-              <path d={svgIcon}/>
-            </SvgIcon>
+            <img src={svgIcon} className={classes.svgIcon}/>
           }
         </Grid>
         <Grid item id='title' className={classes.title}>

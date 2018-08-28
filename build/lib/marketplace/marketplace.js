@@ -10,12 +10,16 @@ var styles = {
         borderBottom: 'solid 1px #475768',
         '& h1': {
             marginLeft: '50px'
-        }
+        },
+        minHeight: '147px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start'
     }
 };
 var getItems = function (items) {
-    return items.map(function (item) {
-        return (React.createElement(marketplace_item_1.MarketplaceItem, { title: item.title, description: item.description, active: item.active, svgIcon: item.svgIcon, learnMoreAction: item.learnMoreAction }));
+    return items.map(function (item, index) {
+        return (React.createElement(marketplace_item_1.MarketplaceItem, { key: index, title: item.title, description: item.description, active: item.active, svgIcon: item.svgIcon, learnMoreAction: item.learnMoreAction }));
     });
 };
 exports.Marketplace = react_jss_1.default(styles)(function (_a) {
