@@ -24,8 +24,8 @@ var styles = {
         backgroundColor: '#2a3540'
     },
     svgIcon: {
-        width: '66px',
-        height: '66px',
+        width: '44px',
+        height: '44px',
         color: '#23E6FE'
     },
     button: {

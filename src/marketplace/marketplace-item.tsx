@@ -28,8 +28,8 @@ const styles: StyleSheet = {
   },
 
   svgIcon: {
-    width: '66px',
-    height: '66px',
+    width: '44px',
+    height: '44px',
     color: '#23E6FE'
   },
 
