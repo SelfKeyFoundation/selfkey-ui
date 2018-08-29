@@ -127,7 +127,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-8"
+      className="MuiSvgIcon-root-1 Component-root-0-1-9"
       color={undefined}
       focusable="false"
       viewBox="0 0 38 38"
