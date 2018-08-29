@@ -72,12 +72,12 @@ exports[`Transaction no Gas Error should show Transaction not enough gas error s
       className="Component-body-0-1-2"
     >
       <p
-        className="undefined Component-p-0-1-15 undefined"
+        className="undefined Component-p-0-1-16 undefined"
       >
         You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below. To learn more about transaction fees, click
          
         <a
-          className="undefined Component-a-0-1-16 undefined"
+          className="undefined Component-a-0-1-17 undefined"
           href="https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed"
           onClick={[Function]}
         >
@@ -94,11 +94,11 @@ exports[`Transaction no Gas Error should show Transaction not enough gas error s
           0x4184288c556524df9cb9e58b73265ee66dca4efe
         </span>
         <button
-          className="CopyComponent-copyButton-0-1-17"
+          className="CopyComponent-copyButton-0-1-18"
           onClick={[Function]}
         >
           <span
-            className="CopyComponent-copyButtonSpan-0-1-18"
+            className="CopyComponent-copyButtonSpan-0-1-19"
           >
             COPY
           </span>
