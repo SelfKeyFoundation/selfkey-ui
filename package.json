@@ -15,7 +15,8 @@
     "test:coverage": "npm test -- --coverage",
     "build-storybook": "build-storybook",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "copy-assets-to-lib": "cpx \"./src/assets/**/*.*\" ./build/lib/assets/"
+    "copy-assets-to-lib": "cpx \"./src/assets/**/*.*\" ./build/lib/assets/",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "@storybook/addon-links": "^3.4.2",
     "@storybook/addons": "^3.4.2",
     "@storybook/react": "^3.4.2",
+    "@storybook/storybook-deployer": "^2.3.0",
     "@types/jest": "^22.2.3",
     "@types/react-test-renderer": "^16.0.2",
     "@types/storybook__addon-backgrounds": "^3.2.0",
