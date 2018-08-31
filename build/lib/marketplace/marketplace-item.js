@@ -37,7 +37,7 @@ var styles = {
     },
     body: {
         width: '320px',
-        textAlign: 'justify',
+        textAlign: 'left',
         margin: '20px',
         color: '#fff',
         fontFamily: 'ProximaNovaRegular',
