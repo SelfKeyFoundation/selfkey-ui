@@ -48,7 +48,7 @@ workflows:
     workflow1:
         jobs:
             - 'test'
-            - 'deploy'
+            - 'deploy':
                 requires:
                       - test
                 filters:
