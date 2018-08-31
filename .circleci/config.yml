@@ -26,8 +26,28 @@ jobs:
             - run:
                   name: Tests
                   command: yarn test
+    'deploy':
+        docker: *DOCKERIMAGE
+        steps:
+            - checkout
+            - attach_workspace:
+                at: .
+            - restore_cache:
+                name: Restore Yarn Package Cache
+                keys:
+                    - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                    - yarn-packages-{{ .Branch }}
+                    - yarn-packages-master
+                    - yarn-packages-
+            - run:
+                name: Deploy to gh-pages
+                command: yarn deploy-storybook -- --ci
+
 workflows:
     version: 2
     workflow1:
         jobs:
             - 'test'
+            - 'deploy'
+                requires:
+                      - test
