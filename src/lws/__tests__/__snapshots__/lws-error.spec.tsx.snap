@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LWS Error Screen should show LWS Error Screen 1`] = `
+<div>
+  <div
+    className="Component-areaTitle-0-1-4"
+  >
+    <span>
+      icon
+    </span>
+    <h2>
+      test
+    </h2>
+    <h3>
+      test
+    </h3>
+  </div>
+  <div
+    className="Component-form-0-1-1"
+  >
+    <p
+      className="Component-supportText-0-1-3"
+    >
+      test
+    </p>
+    <div
+      className="Component-formSubmitRow-0-1-2"
+    >
+      <button>
+        retry
+      </button>
+    </div>
+  </div>
+</div>
+`;

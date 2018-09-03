@@ -14,7 +14,8 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
           PaveziCoin
         </strong>
       </a>
-       would like to access this information:
+       
+      would like to access this information:
     </h4>
   </div>
   <div
@@ -204,21 +205,26 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
     <div
       className="Component-tocMessage-0-1-8"
     >
-      By clicking "Allow", your information listed above will be used by 
+      By clicking "Allow", your information listed above will be used by
+       
       <a
         href="http://www.pavezicoin.org"
         target="_blank"
       >
         PaveziCoin
       </a>
-       with respect to their 
+       
+      with respect to their
+       
       <a
         href="http://www.pavezicoin.org/terms"
         target="_blank"
       >
         [Terms of Service]
       </a>
-       and 
+       
+      and
+       
       <a
         href="http://www.pavezicoin.org/privacy"
         target="_blank"
