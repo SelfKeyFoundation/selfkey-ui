@@ -206,7 +206,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
               }
           </div>
           <div className={classes.formSubmitRow}>
-              <LWSButton className={classes.buttonPrimary} onClick={this.login}>Log in</LWSButton>
+              <LWSButton className={classes.buttonPrimary} onClick={()=>this.login()}>Log in</LWSButton>
           </div>
         </div>
       )
