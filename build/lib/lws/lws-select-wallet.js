@@ -156,6 +156,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         return loginAction(this.state.publicKey, this.state.password);
     };
     LWSSelectWalletComponent.prototype.renderSelection = function () {
+        var _this = this;
         var _a = this.props, classes = _a.classes, connectToHardwareWalletAction = _a.connectToHardwareWalletAction, passwordError = _a.passwordError, wallets = _a.wallets;
         if (this.state.isHardwareWallet) {
             return (React.createElement("div", null,
@@ -177,7 +178,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
                     passwordError &&
                         React.createElement("div", { className: classes.validationMsg }, "Incorrect Password. Please try again.")),
                 React.createElement("div", { className: classes.formSubmitRow },
-                    React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: this.login }, "Log in"))));
+                    React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: function () { return _this.login(); } }, "Log in"))));
         }
     };
     LWSSelectWalletComponent.prototype.render = function () {
