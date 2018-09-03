@@ -20,8 +20,8 @@ var styles = {
             margin: '0',
             lineHeight: '22px',
             textAlign: 'left',
-            color: '#FFF'
-        }
+            color: '#FFF',
+        },
     },
     attribute: {
         display: 'flex',
@@ -36,14 +36,14 @@ var styles = {
             '& dd': {
                 color: '#93B0C1',
                 wordBreak: 'break-word',
-                textAlign: 'right'
-            }
+                textAlign: 'right',
+            },
         },
     },
     waringMessage: {
         color: '#FFA700',
         fontSize: '13px',
-        marginTop: '-15px'
+        marginTop: '-15px',
     },
     formSubmitColumn: {
         flexDirection: 'row',
@@ -51,8 +51,8 @@ var styles = {
         justifyContent: 'space-between',
         '& button': {
             maxWidth: '215px',
-            marginTop: '0px'
-        }
+            marginTop: '0px',
+        },
     },
     tocMessage: {
         background: '#293743',
@@ -61,11 +61,11 @@ var styles = {
         lineHeight: '15px',
         fontFamily: 'ProximaNovaRegIt',
         margin: '30px 0 45px',
-        color: '#FFF'
+        color: '#FFF',
     },
     edit: {
-        cursor: 'pointer'
-    }
+        cursor: 'pointer',
+    },
 };
 var renderAttributes = function (attributes, classes, editAction) {
     return attributes.map(function (attribute, index) {
@@ -95,18 +95,24 @@ exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
     return (React.createElement("div", null,
         React.createElement("div", { className: classes.areaTitle },
             React.createElement("h4", null,
-                React.createElement("a", { href: website.url, target: '_blank' },
+                React.createElement("a", { href: website.url, target: "_blank" },
                     React.createElement("strong", null, website.name)),
-                " would like to access this information:")),
+                ' ',
+                "would like to access this information:")),
         React.createElement("div", { className: classes.form },
             renderAttributes(attributes, classes, editAction),
             React.createElement("div", { className: classes.tocMessage },
-                "By clicking \"Allow\", your information listed above will be used by ",
-                React.createElement("a", { href: website.url, target: '_blank' }, website.name),
-                " with respect to their ",
-                React.createElement("a", { href: website.termsUrl, target: '_blank' }, "[Terms of Service]"),
-                " and ",
-                React.createElement("a", { href: website.policyUrl, target: '_blank' }, "[Privacy Policy]"),
+                "By clicking \"Allow\", your information listed above will be used by",
+                ' ',
+                React.createElement("a", { href: website.url, target: "_blank" }, website.name),
+                ' ',
+                "with respect to their",
+                ' ',
+                React.createElement("a", { href: website.termsUrl, target: "_blank" }, "[Terms of Service]"),
+                ' ',
+                "and",
+                ' ',
+                React.createElement("a", { href: website.policyUrl, target: "_blank" }, "[Privacy Policy]"),
                 "."),
             React.createElement("div", { className: classes.formSubmitColumn },
                 React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary }, "Cancel"),

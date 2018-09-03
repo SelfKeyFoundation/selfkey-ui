@@ -1,7 +1,8 @@
 /// <reference types="react" />
-export declare const LWSSelectWalletModal: () => JSX.Element;
-export declare const LWSRequiredInfoModal: () => JSX.Element;
-export declare const LWSWalletConnectionErrorModal: () => JSX.Element;
-export declare const LWSSelfkeyIdErrorModal: () => JSX.Element;
-export declare const LWSExtensionErrorModal: () => JSX.Element;
-export declare const LWSSuccessrModal: () => JSX.Element;
+export declare const LWSSelectWalletWrapper: () => JSX.Element;
+export declare const LWSRequiredInfoWrapper: () => JSX.Element;
+export declare const LWSWalletConnectionErrorWrapper: () => JSX.Element;
+export declare const LWSSelfkeyIdErrorWrapper: () => JSX.Element;
+export declare const LWSExtensionErrorWrapper: () => JSX.Element;
+export declare const LWSSuccessWrapper: () => JSX.Element;
+export declare const LWSAuthErrorWrapper: () => JSX.Element;

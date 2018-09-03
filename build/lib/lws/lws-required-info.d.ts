@@ -1,14 +1,9 @@
 /// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
+import { Website } from './lws-common';
 export declare type Attribute = {
     name: string;
     value: string;
-};
-export declare type Website = {
-    name: string;
-    url: string;
-    termsUrl: string;
-    policyUrl: string;
 };
 export declare type LWSRequiredInfoProps = {
     allowAction?: ((event: React.MouseEvent<HTMLElement>) => void);

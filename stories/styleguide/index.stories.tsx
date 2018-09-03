@@ -16,14 +16,21 @@ import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
-import { LWSSelectWallet } from '../../src/lws/lws-select-wallet';
-import { LWSSelectWalletModal, LWSRequiredInfoModal, LWSWalletConnectionErrorModal, LWSSelfkeyIdErrorModal, LWSExtensionErrorModal, LWSSuccessrModal } from './lws';
+import { LWSLoading } from '../../src/lws/lws-loading';
+import {
+	LWSSelectWalletWrapper,
+	LWSRequiredInfoWrapper,
+	LWSWalletConnectionErrorWrapper,
+	LWSSelfkeyIdErrorWrapper,
+	LWSExtensionErrorWrapper,
+	LWSSuccessWrapper,
+	LWSAuthErrorWrapper,
+} from './lws';
 
-import { ItemDetails } from '../../src/marketplace/items/item-details'
+import { ItemDetails } from '../../src/marketplace/items/item-details';
 
-import { MarketplaceWrapper } from './marketplace'
-import { ExchangesWrapper } from './exchanges'
-
+import { MarketplaceWrapper } from './marketplace';
+import { ExchangesWrapper } from './exchanges';
 
 setAddon(JSXAddon);
 
@@ -32,7 +39,6 @@ const lightOnDark = host({
 	align: 'center',
 	background: '#222b34',
 	width: '1400px',
-
 });
 
 const transferModal = host({
@@ -73,7 +79,7 @@ priceStory.addWithJSX('CryptoChartBox', () => (
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
-			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 }
+			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 		]}
 		topTokenListSize={5}
 		viewAll={true}
@@ -139,57 +145,64 @@ priceStory.addWithJSX('CryptoPriceTable', () => (
 	/>
 ));
 
-const transactionrStory = storiesOf('Transaction', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
+const transactionrStory = storiesOf('Transaction', module).addDecorator(transferModal) as Story & {
+	addWithJSX: Function;
+};
 
 transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
 
-
-transactionrStory.addWithJSX('TransactionWithoutGasError', () => <TransactionNoGasError cryptoCurrency='ITH' publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'/>);
+transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
+	<TransactionNoGasError cryptoCurrency="ITH" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+));
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
 lws.addWithJSX('LWSHeader', () => <LWSModalHeader />);
 
-lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWallet wallets={[{publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe'}]}/>);
+lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWalletWrapper />);
 
-lws.addWithJSX('LWSSelectWalletModal', () => <LWSSelectWalletModal />); 
+lws.addWithJSX('LWSRequiredInfo', () => <LWSRequiredInfoWrapper />);
 
-lws.addWithJSX('LWSRequiredInfoModal', () => <LWSRequiredInfoModal />);
+lws.addWithJSX('LWSWalletConnectionError', () => <LWSWalletConnectionErrorWrapper />);
 
-lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorModal />); 
+lws.addWithJSX('LWSSelfkeyIdError', () => <LWSSelfkeyIdErrorWrapper />);
 
-lws.addWithJSX('LWSSelfkeyIdErrorModal', () => <LWSSelfkeyIdErrorModal />); 
+lws.addWithJSX('LWSExtensionError', () => <LWSExtensionErrorWrapper />);
 
-lws.addWithJSX('LWSExtensionErrorModal', () => <LWSExtensionErrorModal />);
+lws.addWithJSX('LWSSuccess', () => <LWSSuccessWrapper />);
 
-lws.addWithJSX('LWSSuccessrModal', () => <LWSSuccessrModal />);
+lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
+
+lws.addWithJSX('LWSLoading', () => <LWSLoading />);
 
 const marketplaceStory = storiesOf('Marketplace', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
 marketplaceStory.addWithJSX('Marketplace', () => <MarketplaceWrapper />);
 
-marketplaceStory.addWithJSX('Exchanges', () => <ExchangesWrapper />); 
+marketplaceStory.addWithJSX('Exchanges', () => <ExchangesWrapper />);
 
-marketplaceStory.addWithJSX('ItemDetails', () => <ItemDetails item={
-	{
-		name: 'Gatecoin',
-		logo: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
-		status: 'Active',
-		integration: 'Unlock Marketplace',
-		description: 'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets.',
-		location: 'Hong Kong',
-		year_launched: 2013,
-		coin_pairs: '72',
-		maker_fee: '0.25%',
-		taker_fee: '0.35%',
-		fiat_payments: 'Bank trasnfer',
-		fiat_supported:['EUR', 'USD', 'HKD'],
-		margin_trading: 'no',
-		kyc_aml: 'yes',
-		excluded_residents: 'United States',
-		url: 'http://www.gatecoin.com',
-		email: 'support@gatecoin.com',
-		kyc_template: ['First Name', 'Last Name', 'Country Of Residence', 'National ID', 'National ID Self'], 
-	}
-}
-/>); 
+marketplaceStory.addWithJSX('ItemDetails', () => (
+	<ItemDetails
+		item={{
+			name: 'Gatecoin',
+			logo: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+			status: 'Active',
+			integration: 'Unlock Marketplace',
+			description:
+				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets.',
+			location: 'Hong Kong',
+			year_launched: 2013,
+			coin_pairs: '72',
+			maker_fee: '0.25%',
+			taker_fee: '0.35%',
+			fiat_payments: 'Bank trasnfer',
+			fiat_supported: ['EUR', 'USD', 'HKD'],
+			margin_trading: 'no',
+			kyc_aml: 'yes',
+			excluded_residents: 'United States',
+			url: 'http://www.gatecoin.com',
+			email: 'support@gatecoin.com',
+			kyc_template: ['First Name', 'Last Name', 'Country Of Residence', 'National ID', 'National ID Self'],
+		}}
+	/>
+));
