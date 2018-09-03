@@ -191,7 +191,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
         <div>
           <div className={classes.formGroup}>
             <label>Choose an existing ETH Address</label>
-            <select id="eth-address" className={classes.formControl} onChange={this.setWallet}>
+            <select id="eth-address" className={classes.formControl} onChange={(evt)=>this.setWallet(evt)}>
               { wallets.map((wallet, index) => {
                   return <option key={index} value={wallet.publicKey}>{wallet.publicKey}</option>
                 })
