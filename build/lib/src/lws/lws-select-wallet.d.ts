@@ -26,7 +26,7 @@ export declare class LWSSelectWalletComponent extends React.Component<StyledProp
     constructor(props: StyledProps);
     toggleIsHardwallet(isHardwareWallet: boolean): void;
     setWallet(event: React.ChangeEvent<HTMLSelectElement>): void;
-    setPassword(event: React.ChangeEvent<HTMLSelectElement>): void;
+    setPassword(event: React.ChangeEvent<HTMLInputElement>): void;
     login(): void;
     renderSelection(): JSX.Element;
     render(): JSX.Element;

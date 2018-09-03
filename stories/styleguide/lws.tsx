@@ -10,7 +10,12 @@ import { LWSAuthError } from '../../src/lws/lws-auth-error';
 
 export const LWSSelectWalletWrapper = () => (
 	<div>
-		<LWSSelectWallet wallets={[{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe' }]} />
+		<LWSSelectWallet
+			wallets={[{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe' }]}
+			loginAction={(publicKey, password) => {
+				alert(`${publicKey}:${password}`);
+			}}
+		/>
 	</div>
 );
 

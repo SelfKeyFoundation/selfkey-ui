@@ -34,7 +34,7 @@ var lws_button_1 = require("./lws-button");
 var common_style_1 = require("../common/common-style");
 exports.styles = {
     areaTitle: {
-        textAlign: 'center'
+        textAlign: 'center',
     },
     title: {
         textTransform: 'uppercase',
@@ -42,7 +42,7 @@ exports.styles = {
         fontSize: '16px',
         padding: '25px 0px',
         margin: '0px',
-        color: '#23E6FE'
+        color: '#23E6FE',
     },
     form: common_style_1.default.form,
     formGroup: {
@@ -52,13 +52,13 @@ exports.styles = {
         '&& label': {
             fontSize: '12px',
             color: '#93B0C1',
-            textTransform: 'uppercase'
-        }
+            textTransform: 'uppercase',
+        },
     },
     radioReplace: {
         padding: '20px 0px 45px',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     buttonTertiary: {
         height: '80px',
@@ -76,7 +76,7 @@ exports.styles = {
             background: '#374a5a',
         },
         maxWidth: 'calc(50% - 15px)',
-        width: '100%'
+        width: '100%',
     },
     formControl: {
         width: '100%',
@@ -90,43 +90,43 @@ exports.styles = {
         borderRadius: '3px',
         '&:focus': {
             outline: 'none',
-            boxShadow: '0 0 5px rgba(81, 203, 238, 1)'
-        }
+            boxShadow: '0 0 5px rgba(81, 203, 238, 1)',
+        },
     },
     formSubmitRow: {
-        marginTop: '15px'
+        marginTop: '15px',
     },
     button: {
         fontSize: '14px',
         lineHeight: '20px',
         padding: '10px',
-        height: '50px'
+        height: '50px',
     },
     buttonPrimary: common_style_1.default.buttonPrimary,
     buttonSecondary: common_style_1.default.buttonSecondary,
     selected: {
-        border: "2px solid #1CA9BA"
+        border: "2px solid #1CA9BA",
     },
     supportText: {
         textAlign: 'center',
         lineHeight: '22px',
-        fontFamily: "ProximaNovaSemibold",
+        fontFamily: 'ProximaNovaSemibold',
         color: '#C5DCE9',
-        padding: '0 0 30px'
+        padding: '0 0 30px',
     },
     validationMsg: {
         display: 'block',
         fontSize: '13px',
         color: '#FE4B61',
-        padding: '5px 0 0'
+        padding: '5px 0 0',
     },
     validationError: {
         border: '1px solid #D0021B',
         color: '#FE4B61',
         '&:focus': {
-            boxShadow: '0 0 5px rgba(254, 75, 97, 1)'
-        }
-    }
+            boxShadow: '0 0 5px rgba(254, 75, 97, 1)',
+        },
+    },
 };
 var LWSSelectWalletComponent = /** @class */ (function (_super) {
     __extends(LWSSelectWalletComponent, _super);
@@ -135,7 +135,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         _this.state = {
             isHardwareWallet: false,
             publicKey: '',
-            password: ''
+            password: '',
         };
         return _this;
     }
@@ -150,10 +150,11 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
     };
     LWSSelectWalletComponent.prototype.login = function () {
         var loginAction = this.props.loginAction;
-        if (!loginAction) {
+        if (!loginAction || !this.state.password) {
             return;
         }
-        return loginAction(this.state.publicKey, this.state.password);
+        var publicKey = this.state.publicKey || this.props.wallets[0].publicKey;
+        return loginAction(publicKey, this.state.password);
     };
     LWSSelectWalletComponent.prototype.renderSelection = function () {
         var _this = this;
@@ -169,14 +170,13 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
             return (React.createElement("div", null,
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Choose an existing ETH Address"),
-                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: function (evt) { return _this.setWallet(evt); } }, wallets.map(function (wallet, index) {
-                        return React.createElement("option", { key: index, value: wallet.publicKey }, wallet.publicKey);
+                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: function (evt) { return _this.setWallet(evt); }, value: this.state.publicKey }, wallets.map(function (wallet, index) {
+                        return (React.createElement("option", { key: index, value: wallet.publicKey }, wallet.publicKey));
                     }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Password"),
-                    React.createElement("input", { type: "password", ref: 'password', id: "password", className: classes.formControl + " " + (passwordError ? classes.validationError : ''), placeholder: "Enter your password" }),
-                    passwordError &&
-                        React.createElement("div", { className: classes.validationMsg }, "Incorrect Password. Please try again.")),
+                    React.createElement("input", { type: "password", ref: "password", id: "password", className: classes.formControl + " " + (passwordError ? classes.validationError : ''), onChange: function (evt) { return _this.setPassword(evt); }, placeholder: "Enter your password", value: this.state.password }),
+                    passwordError && (React.createElement("div", { className: classes.validationMsg }, "Incorrect Password. Please try again."))),
                 React.createElement("div", { className: classes.formSubmitRow },
                     React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: function () { return _this.login(); } }, "Log in"))));
         }
