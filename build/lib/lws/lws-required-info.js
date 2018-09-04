@@ -12,6 +12,15 @@ var styles = {
     form: common_style_1.default.form,
     buttonPrimary: common_style_1.default.buttonPrimary,
     buttonSecondary: common_style_1.default.buttonSecondary,
+    requiredInfo: {
+        '& a': {
+            color: '#23E6FE',
+            textDecoration: 'none',
+            '&:hover': {
+                textDecoration: 'underline',
+            },
+        },
+    },
     areaTitle: {
         textAlign: 'center',
         '& h4': {
@@ -95,8 +104,8 @@ var renderAttributes = function (required, attributes, classes, editAction) {
     });
 };
 exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, allowAction = _a.allowAction, required = _a.required, editAction = _a.editAction, attributes = _a.attributes, website = _a.website;
-    return (React.createElement("div", null,
+    var classes = _a.classes, allowAction = _a.allowAction, required = _a.required, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, website = _a.website;
+    return (React.createElement("div", { className: classes.requiredInfo },
         React.createElement("div", { className: classes.areaTitle },
             React.createElement("h4", null,
                 React.createElement("a", { href: website.url, target: "_blank" },
@@ -112,14 +121,14 @@ exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
                 ' ',
                 "with respect to their",
                 ' ',
-                React.createElement("a", { href: website.termsUrl, target: "_blank" }, "[Terms of Service]"),
+                React.createElement("a", { href: website.termsUrl, target: "_blank" }, "Terms of Service"),
                 ' ',
                 "and",
                 ' ',
-                React.createElement("a", { href: website.policyUrl, target: "_blank" }, "[Privacy Policy]"),
+                React.createElement("a", { href: website.policyUrl, target: "_blank" }, "Privacy Policy"),
                 "."),
             React.createElement("div", { className: classes.formSubmitColumn },
-                React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary }, "Cancel"),
+                React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary, onClick: cancelAction }, "Cancel"),
                 React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: allowAction }, "Allow")))));
 });
 exports.default = exports.LWSRequiredInfo;

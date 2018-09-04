@@ -15,6 +15,16 @@ const styles: StyleSheet = {
 
 	buttonSecondary: CommonStyle.buttonSecondary,
 
+	requiredInfo: {
+		'& a': {
+			color: '#23E6FE',
+			textDecoration: 'none',
+			'&:hover': {
+				textDecoration: 'underline',
+			},
+		},
+	},
+
 	areaTitle: {
 		textAlign: 'center',
 		'& h4': {
@@ -80,8 +90,8 @@ const styles: StyleSheet = {
 export type Attribute = {
 	label: string;
 	key: string;
-  attribute?: string;
-  data?: any;
+	attribute?: string;
+	data?: any;
 };
 
 export type LWSRequiredInfoProps = {
@@ -139,8 +149,8 @@ const renderAttributes = (
 };
 
 export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
-	({ classes, allowAction, required, editAction, attributes, website }) => (
-		<div>
+	({ classes, allowAction, required, cancelAction, editAction, attributes, website }) => (
+		<div className={classes.requiredInfo}>
 			<div className={classes.areaTitle}>
 				<h4>
 					<a href={website.url} target="_blank">
@@ -159,16 +169,18 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 					</a>{' '}
 					with respect to their{' '}
 					<a href={website.termsUrl} target="_blank">
-						[Terms of Service]
+						Terms of Service
 					</a>{' '}
 					and{' '}
 					<a href={website.policyUrl} target="_blank">
-						[Privacy Policy]
+						Privacy Policy
 					</a>
 					.
 				</div>
 				<div className={classes.formSubmitColumn}>
-					<LWSButton className={classes.buttonSecondary}>Cancel</LWSButton>
+					<LWSButton className={classes.buttonSecondary} onClick={cancelAction}>
+						Cancel
+					</LWSButton>
 					<LWSButton className={classes.buttonPrimary} onClick={allowAction}>
 						Allow
 					</LWSButton>
