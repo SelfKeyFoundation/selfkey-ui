@@ -80,7 +80,8 @@ const styles: StyleSheet = {
 export type Attribute = {
 	label: string;
 	key: string;
-	attribute?: object | string;
+  attribute?: string;
+  data?: any;
 };
 
 export type LWSRequiredInfoProps = {
@@ -102,14 +103,14 @@ const renderAttributes = (
 		return _.find(attributes, { key: attr.key }) || attr;
 	});
 	return attrs.map((attribute, index) => {
-		if (attribute.attribute) {
+		if (attribute.data && attribute.data.value) {
 			return (
 				<div key={index}>
 					<div className={classes.attribute}>
 						<CheckIcon />
 						<dl>
 							<dt>{attribute.label}</dt>
-							<dd>{attribute.attribute}</dd>
+							<dd>{attribute.data.value}</dd>
 						</dl>
 					</div>
 				</div>

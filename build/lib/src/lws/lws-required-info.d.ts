@@ -4,7 +4,8 @@ import { Website } from './lws-common';
 export declare type Attribute = {
     label: string;
     key: string;
-    attribute?: object | string;
+    attribute?: string;
+    data?: any;
 };
 export declare type LWSRequiredInfoProps = {
     allowAction?: ((event: React.MouseEvent<HTMLElement>) => void);
