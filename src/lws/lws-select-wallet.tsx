@@ -146,7 +146,11 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 		};
 	}
 
-	componentDidMount() {}
+	componentDiUpdate(prevProps: LWSSelectWalletProps, props: LWSSelectWalletProps) {
+		if (props.wallets && props.wallets.length && !this.state.wallet) {
+			this.selectWallet();
+		}
+	}
 
 	toggleIsHardwallet(isHardwareWallet: boolean) {
 		return this.setState({ isHardwareWallet });

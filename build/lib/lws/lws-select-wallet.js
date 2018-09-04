@@ -140,7 +140,11 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         };
         return _this;
     }
-    LWSSelectWalletComponent.prototype.componentDidMount = function () { };
+    LWSSelectWalletComponent.prototype.componentDiUpdate = function (prevProps, props) {
+        if (props.wallets && props.wallets.length && !this.state.wallet) {
+            this.selectWallet();
+        }
+    };
     LWSSelectWalletComponent.prototype.toggleIsHardwallet = function (isHardwareWallet) {
         return this.setState({ isHardwareWallet: isHardwareWallet });
     };
