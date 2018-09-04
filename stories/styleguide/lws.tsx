@@ -25,7 +25,27 @@ export const LWSSelectWalletWrapper = () => (
 export const LWSRequiredInfoWrapper = () => (
 	<div>
 		<LWSRequiredInfo
-			attributes={[{ name: 'Name', value: 'Rodrigo Pavezi' }, { name: 'Country', value: '' }]}
+      required={[
+        { label: 'Name', key: 'first_name'},
+				{ label: 'Country', key: 'country' },
+				{
+					label: 'Address',
+					key: 'address',
+        },
+        {
+					label: 'Birth Day',
+					key: 'birth_day',
+				},
+      ]}
+			attributes={[
+				{ label: 'Name', key: 'first_name', attribute: 'Rodrigo Pavezi' },
+				{ label: 'Country', key: 'country', attribute: '' },
+				{
+					label: 'Address',
+					key: 'address',
+					attribute: 'Jeson Street',
+				},
+			]}
 			website={{
 				name: 'PaveziCoin',
 				url: 'http://www.pavezicoin.org',

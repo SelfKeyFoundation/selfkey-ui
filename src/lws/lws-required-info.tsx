@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as _ from 'lodash';
 import injectSheet, { StyleSheet, ClassNameMap } from 'react-jss';
 import CommonStyle from '../common/common-style';
 import { CheckIcon } from '../icons/check';
@@ -77,8 +78,9 @@ const styles: StyleSheet = {
 };
 
 export type Attribute = {
-	name: string;
-	value: string;
+	label: string;
+	key: string;
+	attribute?: object | string;
 };
 
 export type LWSRequiredInfoProps = {
@@ -86,23 +88,28 @@ export type LWSRequiredInfoProps = {
 	cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 	editAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 	attributes: Array<Attribute>;
+	required: Array<Attribute>;
 	website: Website;
 };
 
 const renderAttributes = (
+	required: Array<Attribute>,
 	attributes: Array<Attribute>,
 	classes: Partial<ClassNameMap<string>>,
 	editAction: ((event: React.MouseEvent<HTMLElement>) => void) | undefined
 ) => {
-	return attributes.map((attribute, index) => {
-		if (attribute.value) {
+	let attrs = required.map(attr => {
+		return _.find(attributes, { key: attr.key }) || attr;
+	});
+	return attrs.map((attribute, index) => {
+		if (attribute.attribute) {
 			return (
 				<div key={index}>
 					<div className={classes.attribute}>
 						<CheckIcon />
 						<dl>
-							<dt>{attribute.name}</dt>
-							<dd>{attribute.value}</dd>
+							<dt>{attribute.label}</dt>
+							<dd>{attribute.attribute}</dd>
 						</dl>
 					</div>
 				</div>
@@ -113,12 +120,14 @@ const renderAttributes = (
 					<div className={classes.attribute}>
 						<WarningIcon />
 						<dl>
-							<dt>{attribute.name}</dt>
-							<dd>
-								<a onClick={editAction} className={classes.edit}>
-									<EditIcon />
-								</a>
-							</dd>
+							<dt>{attribute.label}</dt>
+							{editAction ? (
+								<dd>
+									<a onClick={editAction} className={classes.edit}>
+										<EditIcon />
+									</a>
+								</dd>
+							) : null}
 						</dl>
 					</div>
 					<div className={classes.waringMessage}>Please update your missing details.</div>
@@ -129,7 +138,7 @@ const renderAttributes = (
 };
 
 export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
-	({ classes, children, allowAction, cancelAction, editAction, attributes, website }) => (
+	({ classes, allowAction, required, editAction, attributes, website }) => (
 		<div>
 			<div className={classes.areaTitle}>
 				<h4>
@@ -140,7 +149,7 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 				</h4>
 			</div>
 			<div className={classes.form}>
-				{renderAttributes(attributes, classes, editAction)}
+				{renderAttributes(required, attributes, classes, editAction)}
 
 				<div className={classes.tocMessage}>
 					By clicking "Allow", your information listed above will be used by{' '}
@@ -159,7 +168,9 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 				</div>
 				<div className={classes.formSubmitColumn}>
 					<LWSButton className={classes.buttonSecondary}>Cancel</LWSButton>
-					<LWSButton className={classes.buttonPrimary}>Allow</LWSButton>
+					<LWSButton className={classes.buttonPrimary} onClick={allowAction}>
+						Allow
+					</LWSButton>
 				</div>
 			</div>
 		</div>
