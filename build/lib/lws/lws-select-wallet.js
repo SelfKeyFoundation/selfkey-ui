@@ -145,8 +145,8 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
             this.selectWallet();
         }
     };
-    LWSSelectWalletComponent.prototype.componentDiUpdate = function (prevProps, props) {
-        if (props.wallets && props.wallets.length && !this.state.wallet) {
+    LWSSelectWalletComponent.prototype.componentDidUpdate = function () {
+        if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
             this.selectWallet();
         }
     };

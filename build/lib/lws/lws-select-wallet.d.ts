@@ -18,7 +18,7 @@ export declare type StyledProps = WithStyles<keyof typeof styles> & LWSSelectWal
 export declare class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSelectWalletState> {
     constructor(props: StyledProps);
     componentDidMount(): void;
-    componentDiUpdate(prevProps: LWSSelectWalletProps, props: LWSSelectWalletProps): void;
+    componentDidUpdate(): void;
     toggleIsHardwallet(isHardwareWallet: boolean): void;
     selectWallet(publicKey?: string): Wallet | null;
     setWallet(event: React.ChangeEvent<HTMLSelectElement>): void;
