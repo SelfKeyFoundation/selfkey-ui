@@ -144,7 +144,13 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 			wallet: null,
 			password: '',
 		};
-	}
+  }
+  
+  componentDidMount(){
+    if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
+			this.selectWallet();
+		}
+  }
 
 	componentDiUpdate(prevProps: LWSSelectWalletProps, props: LWSSelectWalletProps) {
 		if (props.wallets && props.wallets.length && !this.state.wallet) {
