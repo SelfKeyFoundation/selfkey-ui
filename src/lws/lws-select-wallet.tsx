@@ -1,10 +1,13 @@
 import * as React from 'react';
+import * as _ from 'lodash';
 import injectSheet, { StyleSheet, WithStyles } from 'react-jss';
 import { H2 } from '../typography/headings';
 import { IDIcon } from '../icons/id';
 import { ProfileIcon } from '../icons/profile';
 import { StickIcon } from '../icons/stick';
 import { LWSButton } from './lws-button';
+import { Wallet } from './lws-common';
+
 import CommonStyle from '../common/common-style';
 
 export const styles: StyleSheet = {
@@ -118,12 +121,8 @@ export const styles: StyleSheet = {
 	},
 };
 
-export type Wallet = {
-	publicKey: string;
-};
-
 export type LWSSelectWalletProps = {
-	loginAction?: (publicKey: string, password: string) => void;
+	loginAction?: (wallet: Wallet, password: string) => void;
 	connectToHardwareWalletAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 	passwordError?: boolean;
 	wallets: Array<Wallet>;
@@ -131,7 +130,7 @@ export type LWSSelectWalletProps = {
 
 export type LWSSelectWalletState = {
 	isHardwareWallet: boolean;
-	publicKey: string;
+	wallet: Wallet | null;
 	password: string;
 };
 
@@ -140,7 +139,7 @@ export type StyledProps = WithStyles<keyof typeof styles> & LWSSelectWalletProps
 export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSelectWalletState> {
 	state = {
 		isHardwareWallet: false,
-		publicKey: '',
+		wallet: { publicKey: '', unlocked: false },
 		password: '',
 	};
 
@@ -148,12 +147,24 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 		super(props);
 	}
 
+	componentDidMount() {}
+
 	toggleIsHardwallet(isHardwareWallet: boolean) {
 		return this.setState({ isHardwareWallet });
 	}
 
+	selectWallet(publicKey: string) {
+		const { wallets } = this.props;
+
+		if (!publicKey) {
+			publicKey = wallets[0].publicKey;
+		}
+		let wallet = _.find(wallets, { publicKey }) || null;
+		this.setState({ wallet });
+	}
+
 	setWallet(event: React.ChangeEvent<HTMLSelectElement>) {
-		this.setState({ ...this.state, publicKey: event.target.value });
+		this.selectWallet(event.target.value);
 	}
 
 	setPassword(event: React.ChangeEvent<HTMLInputElement>) {
@@ -162,31 +173,42 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 
 	login() {
 		const { loginAction } = this.props;
-		if (!loginAction || !this.state.password) {
+		const { wallet, password } = this.state;
+		if (!loginAction || !this.state.password || !wallet) {
 			return;
 		}
-		const publicKey = this.state.publicKey || this.props.wallets[0].publicKey;
-		return loginAction(publicKey, this.state.password);
+		return loginAction(wallet, password);
+	}
+
+	renderHardwareWallet() {
+		const { classes } = this.props;
+		return (
+			<div>
+				<p className={classes.supportText}>Ledger and Trezor support is coming soon</p>
+			</div>
+		);
+		// return (
+		// 	<div>
+		// 		<p className={classes.supportText}>
+		// 			Make sure your Ledger or Trezor device is plugged in via USB. Press the Connect to hardware
+		// 			wallet button below.
+		// 		</p>
+		// 		<div>
+		// 			<LWSButton className={classes.buttonPrimary} onClick={connectToHardwareWalletAction}>
+		// 				Connect to hardware wallet
+		// 			</LWSButton>
+		// 			<LWSButton className={classes.buttonSecondary}>Retry</LWSButton>
+		// 		</div>
+		// 	</div>
+		// );
 	}
 
 	renderSelection() {
-		const { classes, connectToHardwareWalletAction, passwordError, wallets } = this.props;
-
-		if (this.state.isHardwareWallet) {
-			return (
-				<div>
-					<p className={classes.supportText}>
-						Make sure your Ledger or Trezor device is plugged in via USB. Press the Connect to hardware
-						wallet button below.
-					</p>
-					<div>
-						<LWSButton className={classes.buttonPrimary} onClick={connectToHardwareWalletAction}>
-							Connect to hardware wallet
-						</LWSButton>
-						<LWSButton className={classes.buttonSecondary}>Retry</LWSButton>
-					</div>
-				</div>
-			);
+		const { classes, passwordError, wallets } = this.props;
+		const { wallet, password, isHardwareWallet } = this.state;
+		const publicKey = wallet ? wallet.publicKey : '';
+		if (isHardwareWallet) {
+			return this.renderHardwareWallet();
 		} else {
 			return (
 				<div>
@@ -196,7 +218,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 							id="eth-address"
 							className={classes.formControl}
 							onChange={evt => this.setWallet(evt)}
-							value={this.state.publicKey}
+							value={publicKey}
 						>
 							{wallets.map((wallet, index) => {
 								return (
@@ -207,21 +229,23 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 							})}
 						</select>
 					</div>
-					<div className={classes.formGroup}>
-						<label>Password</label>
-						<input
-							type="password"
-							ref="password"
-							id="password"
-							className={`${classes.formControl} ${passwordError ? classes.validationError : ''}`}
-							onChange={evt => this.setPassword(evt)}
-							placeholder="Enter your password"
-							value={this.state.password}
-						/>
-						{passwordError && (
-							<div className={classes.validationMsg}>Incorrect Password. Please try again.</div>
-						)}
-					</div>
+					{wallet.unlocked ? null : (
+						<div className={classes.formGroup}>
+							<label>Password</label>
+							<input
+								type="password"
+								ref="password"
+								id="password"
+								className={`${classes.formControl} ${passwordError ? classes.validationError : ''}`}
+								onChange={evt => this.setPassword(evt)}
+								placeholder="Enter your password"
+								value={password}
+							/>
+							{passwordError && (
+								<div className={classes.validationMsg}>Incorrect Password. Please try again.</div>
+							)}
+						</div>
+					)}
 					<div className={classes.formSubmitRow}>
 						<LWSButton className={classes.buttonPrimary} onClick={() => this.login()}>
 							Log in
@@ -234,6 +258,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 
 	render() {
 		const { classes } = this.props;
+		const { isHardwareWallet } = this.state;
 		return (
 			<div>
 				<div className={classes.areaTitle}>
@@ -243,17 +268,13 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 				<div className={classes.form}>
 					<div className={`${classes.formGroup} ${classes.radioReplace}`}>
 						<button
-							className={`${classes.buttonTertiary} ${
-								!this.state.isHardwareWallet ? classes.selected : ''
-							}`}
+							className={`${classes.buttonTertiary} ${!isHardwareWallet ? classes.selected : ''}`}
 							onClick={() => this.toggleIsHardwallet(false)}
 						>
 							<ProfileIcon /> <span>ETH Address</span>
 						</button>
 						<button
-							className={`${classes.buttonTertiary} ${
-								this.state.isHardwareWallet ? classes.selected : ''
-							}`}
+							className={`${classes.buttonTertiary} ${isHardwareWallet ? classes.selected : ''}`}
 							onClick={() => this.toggleIsHardwallet(true)}
 						>
 							<StickIcon /> <span>Trezor/Ledger</span>
