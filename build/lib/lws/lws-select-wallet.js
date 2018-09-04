@@ -25,7 +25,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var lodash_1 = require("lodash");
+var _ = require("lodash");
 var react_jss_1 = require("react-jss");
 var headings_1 = require("../typography/headings");
 var id_1 = require("../icons/id");
@@ -135,7 +135,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.state = {
             isHardwareWallet: false,
-            wallet: { publicKey: '', unlocked: false },
+            wallet: null,
             password: '',
         };
         return _this;
@@ -149,8 +149,9 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         if (!publicKey) {
             publicKey = wallets[0].publicKey;
         }
-        var wallet = lodash_1.default.find(wallets, { publicKey: publicKey }) || null;
-        this.setState({ wallet: wallet });
+        var wallet = _.find(wallets, { publicKey: publicKey }) || null;
+        this.setState({ wallet: wallet, password: '' });
+        return wallet;
     };
     LWSSelectWalletComponent.prototype.setWallet = function (event) {
         this.selectWallet(event.target.value);
@@ -161,7 +162,13 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
     LWSSelectWalletComponent.prototype.login = function () {
         var loginAction = this.props.loginAction;
         var _a = this.state, wallet = _a.wallet, password = _a.password;
-        if (!loginAction || !this.state.password || !wallet) {
+        if (!wallet || !wallet.publicKey) {
+            wallet = this.selectWallet();
+        }
+        if (!loginAction || !wallet) {
+            return;
+        }
+        if (!wallet.unlocked && !password) {
             return;
         }
         return loginAction(wallet, password);
@@ -200,7 +207,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
                     React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: function (evt) { return _this.setWallet(evt); }, value: publicKey }, wallets.map(function (wallet, index) {
                         return (React.createElement("option", { key: index, value: wallet.publicKey }, wallet.publicKey));
                     }))),
-                wallet.unlocked ? null : (React.createElement("div", { className: classes.formGroup },
+                wallet && wallet.unlocked ? null : (React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Password"),
                     React.createElement("input", { type: "password", ref: "password", id: "password", className: classes.formControl + " " + (passwordError ? classes.validationError : ''), onChange: function (evt) { return _this.setPassword(evt); }, placeholder: "Enter your password", value: password }),
                     passwordError && (React.createElement("div", { className: classes.validationMsg }, "Incorrect Password. Please try again.")))),

@@ -16,18 +16,10 @@ export declare type LWSSelectWalletState = {
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & LWSSelectWalletProps;
 export declare class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSelectWalletState> {
-    state: {
-        isHardwareWallet: boolean;
-        wallet: {
-            publicKey: string;
-            unlocked: boolean;
-        };
-        password: string;
-    };
     constructor(props: StyledProps);
     componentDidMount(): void;
     toggleIsHardwallet(isHardwareWallet: boolean): void;
-    selectWallet(publicKey: string): void;
+    selectWallet(publicKey?: string): Wallet | null;
     setWallet(event: React.ChangeEvent<HTMLSelectElement>): void;
     setPassword(event: React.ChangeEvent<HTMLInputElement>): void;
     login(): void;

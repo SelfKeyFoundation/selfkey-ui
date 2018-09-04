@@ -137,14 +137,13 @@ export type LWSSelectWalletState = {
 export type StyledProps = WithStyles<keyof typeof styles> & LWSSelectWalletProps;
 
 export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSelectWalletState> {
-	state = {
-		isHardwareWallet: false,
-		wallet: { publicKey: '', unlocked: false },
-		password: '',
-	};
-
 	constructor(props: StyledProps) {
 		super(props);
+		this.state = {
+			isHardwareWallet: false,
+			wallet: null,
+			password: '',
+		};
 	}
 
 	componentDidMount() {}
@@ -153,14 +152,15 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 		return this.setState({ isHardwareWallet });
 	}
 
-	selectWallet(publicKey: string) {
+	selectWallet(publicKey?: string) {
 		const { wallets } = this.props;
 
 		if (!publicKey) {
 			publicKey = wallets[0].publicKey;
 		}
 		let wallet = _.find(wallets, { publicKey }) || null;
-		this.setState({ wallet });
+		this.setState({ wallet, password: '' });
+		return wallet;
 	}
 
 	setWallet(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -173,8 +173,14 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 
 	login() {
 		const { loginAction } = this.props;
-		const { wallet, password } = this.state;
-		if (!loginAction || !this.state.password || !wallet) {
+		let { wallet, password } = this.state;
+		if (!wallet || !wallet.publicKey) {
+			wallet = this.selectWallet();
+		}
+		if (!loginAction || !wallet) {
+			return;
+		}
+		if (!wallet.unlocked && !password) {
 			return;
 		}
 		return loginAction(wallet, password);
@@ -229,7 +235,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 							})}
 						</select>
 					</div>
-					{wallet.unlocked ? null : (
+					{wallet && wallet.unlocked ? null : (
 						<div className={classes.formGroup}>
 							<label>Password</label>
 							<input

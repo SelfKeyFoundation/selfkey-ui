@@ -15,8 +15,8 @@ export const LWSSelectWalletWrapper = () => (
 				{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe', unlocked: false },
 				{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4ef2', unlocked: true },
 			]}
-			loginAction={(publicKey, password) => {
-				alert(`${publicKey}:${password}`);
+			loginAction={(wallet, password) => {
+				alert(`${wallet.publicKey}:${password}`);
 			}}
 		/>
 	</div>
