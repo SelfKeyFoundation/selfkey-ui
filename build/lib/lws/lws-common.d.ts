@@ -7,4 +7,5 @@ export declare type Website = {
 export declare type Wallet = {
     publicKey: string;
     unlocked?: boolean;
+    profile: string;
 };

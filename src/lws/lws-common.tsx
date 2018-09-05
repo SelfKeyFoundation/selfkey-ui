@@ -5,8 +5,8 @@ export type Website = {
 	policyUrl: string;
 };
 
-
 export type Wallet = {
 	publicKey: string;
 	unlocked?: boolean;
+	profile: string;
 };

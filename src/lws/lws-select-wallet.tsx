@@ -144,19 +144,19 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 			wallet: null,
 			password: '',
 		};
-  }
-  
-  componentDidMount(){
-    if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
-			this.selectWallet();
-		}
-  }
+	}
 
-	componentDidUpdate(){
-    if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
+	componentDidMount() {
+		if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
 			this.selectWallet();
 		}
-  }
+	}
+
+	componentDidUpdate() {
+		if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
+			this.selectWallet();
+		}
+	}
 
 	toggleIsHardwallet(isHardwareWallet: boolean) {
 		return this.setState({ isHardwareWallet });
@@ -236,7 +236,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 							onChange={evt => this.setWallet(evt)}
 							value={publicKey}
 						>
-							{wallets.map((wallet, index) => {
+							{wallets.filter(w => w.profile === 'local').map((wallet, index) => {
 								return (
 									<option key={index} value={wallet.publicKey}>
 										{wallet.publicKey}
