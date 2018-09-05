@@ -92,6 +92,7 @@ export type Attribute = {
 	key: string;
 	attribute?: string;
 	data?: any;
+	document?: boolean;
 };
 
 export type LWSRequiredInfoProps = {
@@ -105,6 +106,9 @@ export type LWSRequiredInfoProps = {
 
 const getAttributeValue = (attribute: Attribute) => {
 	if (!attribute.data) return null;
+	if (attribute.document && attribute.data && attribute.data.value) {
+		return 'document';
+	}
 	switch (attribute.key) {
 		case 'birthdate':
 			return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');

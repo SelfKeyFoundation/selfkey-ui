@@ -6,6 +6,7 @@ export declare type Attribute = {
     key: string;
     attribute?: string;
     data?: any;
+    document?: boolean;
 };
 export declare type LWSRequiredInfoProps = {
     allowAction?: ((event: React.MouseEvent<HTMLElement>) => void);

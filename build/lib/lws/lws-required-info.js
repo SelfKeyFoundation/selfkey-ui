@@ -80,6 +80,9 @@ var styles = {
 var getAttributeValue = function (attribute) {
     if (!attribute.data)
         return null;
+    if (attribute.document && attribute.data && attribute.data.value) {
+        return 'document';
+    }
     switch (attribute.key) {
         case 'birthdate':
             return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
