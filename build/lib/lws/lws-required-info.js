@@ -77,18 +77,42 @@ var styles = {
         cursor: 'pointer',
     },
 };
+var getAttributeValue = function (attribute) {
+    if (!attribute.data)
+        return null;
+    switch (attribute.key) {
+        case 'birthdate':
+            return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
+        case 'work_place':
+        case 'physical_address':
+            var value = attribute.data.address1 + ', ';
+            if (attribute.data.address2) {
+                value += attribute.data.address2 + ', ';
+            }
+            value += attribute.data.city + ', ';
+            value += attribute.data.region + ', ';
+            value += attribute.data.zip + ', ';
+            value += attribute.data.country;
+            return value;
+        case 'phonenumber_countrycode':
+            return attribute.data.countryCode + ' ' + attribute.data.telephoneNumber;
+        default:
+            return attribute.data.value || null;
+    }
+};
 var renderAttributes = function (required, attributes, classes, editAction) {
     var attrs = required.map(function (attr) {
         return _.find(attributes, { key: attr.key }) || attr;
     });
     return attrs.map(function (attribute, index) {
-        if (attribute.data && attribute.data.value) {
+        var attributeValue = getAttributeValue(attribute);
+        if (attributeValue) {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
                     React.createElement(check_1.CheckIcon, null),
                     React.createElement("dl", null,
                         React.createElement("dt", null, attribute.label),
-                        React.createElement("dd", null, attribute.data.value)))));
+                        React.createElement("dd", null, attributeValue)))));
         }
         else {
             return (React.createElement("div", { key: index },

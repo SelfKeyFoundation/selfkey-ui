@@ -103,6 +103,32 @@ export type LWSRequiredInfoProps = {
 	website: Website;
 };
 
+const getAttributeValue = (attribute: Attribute) => {
+	if (!attribute.data) return null;
+	switch (attribute.key) {
+		case 'birthdate':
+			return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
+		case 'work_place':
+		case 'physical_address':
+			let value = attribute.data.address1 + ', ';
+
+			if (attribute.data.address2) {
+				value += attribute.data.address2 + ', ';
+			}
+
+			value += attribute.data.city + ', ';
+			value += attribute.data.region + ', ';
+			value += attribute.data.zip + ', ';
+			value += attribute.data.country;
+
+			return value;
+		case 'phonenumber_countrycode':
+			return attribute.data.countryCode + ' ' + attribute.data.telephoneNumber;
+		default:
+			return attribute.data.value || null;
+	}
+};
+
 const renderAttributes = (
 	required: Array<Attribute>,
 	attributes: Array<Attribute>,
@@ -113,14 +139,15 @@ const renderAttributes = (
 		return _.find(attributes, { key: attr.key }) || attr;
 	});
 	return attrs.map((attribute, index) => {
-		if (attribute.data && attribute.data.value) {
+		const attributeValue = getAttributeValue(attribute);
+		if (attributeValue) {
 			return (
 				<div key={index}>
 					<div className={classes.attribute}>
 						<CheckIcon />
 						<dl>
 							<dt>{attribute.label}</dt>
-							<dd>{attribute.data.value}</dd>
+							<dd>{attributeValue}</dd>
 						</dl>
 					</div>
 				</div>

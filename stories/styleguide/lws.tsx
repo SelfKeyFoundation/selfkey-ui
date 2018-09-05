@@ -30,20 +30,27 @@ export const LWSRequiredInfoWrapper = () => (
 				{ label: 'Country', key: 'country' },
 				{
 					label: 'Address',
-					key: 'address',
+					key: 'physical_address',
 				},
 				{
 					label: 'Birth Day',
-					key: 'birth_day',
+					key: 'birthdate',
 				},
 			]}
 			attributes={[
 				{ label: 'Name', key: 'first_name', data: { value: 'Rodrigo Pavezi' } },
-				{ label: 'Country', key: 'country', data: { value: '' } },
+				{ label: 'Birth Day', key: 'birthdate', data: { value: Date.now() } },
 				{
 					label: 'Address',
-					key: 'address',
-					data: { value: 'Jeson Street' },
+					key: 'physical_address',
+					data: {
+						address1: 'address1',
+						address2: 'address2',
+						city: 'city1',
+						region: 'region1',
+						zip: 'zip',
+						country: 'country1',
+					},
 				},
 			]}
 			website={{
