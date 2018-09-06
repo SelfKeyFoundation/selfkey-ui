@@ -50,7 +50,7 @@ var styles = {
         margin: '20px',
     }
 };
-exports.Item = react_jss_1.default(styles)(function (_a) {
+exports.Item = react_jss_1.default(styles)(function (_a, viewAction) {
     var classes = _a.classes, children = _a.children, name = _a.name, description = _a.description, status = _a.status, logoUrl = _a.logoUrl;
     return (React.createElement(core_1.Grid, { container: true, className: classes.root },
         React.createElement(core_1.Grid, { item: true },
@@ -63,7 +63,7 @@ exports.Item = react_jss_1.default(styles)(function (_a) {
                 React.createElement(paragraph_1.P, null,
                     React.createElement(react_truncate_1.default, { lines: 5 }, description))),
             React.createElement(core_1.Grid, { item: true, id: 'footer', className: classes.footer },
-                React.createElement(core_1.Button, { variant: "outlined", className: classes.button }, "View")))));
+                React.createElement(core_1.Button, { variant: "outlined", className: classes.button, onClick: viewAction }, "View")))));
 });
 exports.default = exports.Item;
 //# sourceMappingURL=item.js.map
