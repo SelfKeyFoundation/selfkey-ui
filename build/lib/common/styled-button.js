@@ -5,11 +5,8 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     button: {
-        backgroundColor: '#435160',
-        color: '#FFFFFF',
-        '&:hover': {
-            backgroundColor: '#3c4956'
-        }
+        background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
+        color: '#FFFFFF'
     },
 };
 exports.StyledButton = react_jss_1.default(styles)(function (_a) {

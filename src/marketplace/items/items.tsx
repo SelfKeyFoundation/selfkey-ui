@@ -1,31 +1,50 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
 
-import { Grid, SvgIcon } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 import { H1 } from '../../typography/headings';
 import { Item, ItemProps } from './item';
+import { ExchangeIcon } from '../../icons/exchange';
 
 const styles: StyleSheet = {
+  wrapper: {
+    width: '1140px',
+  },
+
   header: {
     borderBottom: 'solid 1px #475768',
     '& h1': {
-      marginLeft: '20px'
+      marginLeft: '20px',
     },
     '& svg': {
-      marginLeft: '20px'
+      marginLeft: '20px',
+    },
+    width: '100%',
+    height: '120px'
+  },
+
+  body: {
+    marginTop: '20px'
+  },
+
+  headerContent: {
+    marginTop: '30px'
+  },
+
+  button: {
+    color: '#93b0c1',
+    borderColor: '#3b4a5a',
+    '&:disabled': {
+      color: '#48565f'
     }
   },
 
-  svgIcon: {
-    fontSize: '50px',
-    color: '#FFF'
-  },
 };
 
 export type ItemsProps = {
   category: string,
   items: Array<ItemProps>,
-  svgIcon: string,
+  backAction?: ((event: React.MouseEvent<HTMLElement>) => void)
 }
 
 const getItems = (items: Array<ItemProps>) =>{
@@ -36,28 +55,32 @@ const getItems = (items: Array<ItemProps>) =>{
   })
 }
 
-export const Items = injectSheet(styles)<ItemsProps>(({classes, children, category, items, svgIcon}) => (
-  <Grid container justify='center' alignItems='center'>
-    <Grid item id='header' className={classes.header} xs={12}>
-      <Grid container direction='row' justify='flex-start' alignItems='center'>
-        <Grid item>
-          {svgIcon &&
-            <SvgIcon className={classes.svgIcon}>
-              <path d={svgIcon}/>
-            </SvgIcon>
-          }
-        </Grid>
-        <Grid item>
-        <H1>{category}</H1> 
-        </Grid>
-      </Grid>      
+export const Items = injectSheet(styles)<ItemsProps>(({classes, children, category, items, backAction}) => (
+  <Grid container>
+    <Grid item>
+      <Button variant="outlined" className={classes.button} onClick={backAction}>&#60; Back</Button>
     </Grid>
-    <Grid item id='body' xs={12}>
-      <Grid container direction='row' justify='space-evenly' alignItems='center'>
-        {getItems(items)}
+    <Grid item>
+      <Grid container direction='column' justify='center' alignItems='center' className={classes.wrapper}>
+        <Grid item id='header' className={classes.header} xs={12}>
+          <Grid container direction='row' justify='flex-start' alignItems='center' className={classes.headerContent}>
+            <Grid item>
+              <ExchangeIcon/>
+            </Grid>
+            <Grid item>
+            <H1>{category}</H1> 
+            </Grid>
+          </Grid>      
+        </Grid>
+        <Grid item id='body' xs={12} className={classes.body}>
+          <Grid container direction='row' justify='space-between' alignItems='center'>
+            {getItems(items)}
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   </Grid>
+  
 ));
 
 export default Items;

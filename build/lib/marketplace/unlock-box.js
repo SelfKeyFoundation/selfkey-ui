@@ -4,16 +4,48 @@ var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var headings_1 = require("../typography/headings");
-var unlock_1 = require("../icons/unlock");
-var styles = {};
+var close_button_1 = require("../icons/close-button");
+var styles = {
+    root: {
+        height: '446px',
+        width: '780px'
+    },
+    header: {
+        height: '65px',
+        width: '780px',
+        borderRadius: '4px 4px 0 0',
+        backgroundColor: '#2A3540',
+        boxShadow: 'inset 0 -1px 0 0 #374758, 1px 0 0 0 rgba(118,128,147,0.2), 0 4px 2px 0 rgba(76,76,76,0.2)',
+        '& h2': {
+            height: '22px',
+            width: '346px',
+            color: '#FFFFFF',
+            fontFamily: 'Proxima Nova',
+            fontSize: '18px',
+            lineHeight: '22px',
+            marginLeft: '30px'
+        },
+        overflow: 'visible',
+        position: 'relative'
+    },
+    body: {
+        marginTop: '30px',
+        marginLeft: '30px'
+    },
+    closeButton: {
+        position: 'absolute',
+        top: '-18px',
+        right: '-18px',
+    },
+};
 exports.UnlockBox = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children;
-    return (React.createElement(core_1.Grid, { container: true },
-        React.createElement(core_1.Grid, { item: true, id: 'header' },
-            React.createElement(headings_1.H2, null,
-                React.createElement(unlock_1.UnlockIcon, null),
-                " Unlock This Marketplace: Crypto Exchanges")),
-        React.createElement(core_1.Grid, { item: true, id: 'body' }, children)));
+    var classes = _a.classes, children = _a.children, closeAction = _a.closeAction;
+    return (React.createElement(core_1.Grid, { container: true, className: classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
+        React.createElement(core_1.Grid, { item: true, id: 'header', className: classes.header },
+            React.createElement(headings_1.H2, null, "Unlock This Marketplace: Crypto Exchanges"),
+            React.createElement("a", { className: classes.closeButton, onClick: closeAction },
+                React.createElement(close_button_1.CloseButtonIcon, null))),
+        React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body }, children)));
 });
 exports.default = exports.UnlockBox;
 //# sourceMappingURL=unlock-box.js.map

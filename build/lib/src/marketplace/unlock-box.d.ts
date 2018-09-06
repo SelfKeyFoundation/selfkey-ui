@@ -1,4 +1,4 @@
-/// <reference path="../../../src/react-jss.d.ts" />
+/// <reference path="../../../../src/react-jss.d.ts" />
 import * as React from 'react';
 export declare type UnlockBoxProps = {
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
