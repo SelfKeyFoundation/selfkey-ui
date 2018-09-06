@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+var _ = require("lodash");
 var react_jss_1 = require("react-jss");
 var common_style_1 = require("../common/common-style");
 var check_1 = require("../icons/check");
@@ -11,6 +12,15 @@ var styles = {
     form: common_style_1.default.form,
     buttonPrimary: common_style_1.default.buttonPrimary,
     buttonSecondary: common_style_1.default.buttonSecondary,
+    requiredInfo: {
+        '& a': {
+            color: '#23E6FE',
+            textDecoration: 'none',
+            '&:hover': {
+                textDecoration: 'underline',
+            },
+        },
+    },
     areaTitle: {
         textAlign: 'center',
         '& h4': {
@@ -67,32 +77,62 @@ var styles = {
         cursor: 'pointer',
     },
 };
-var renderAttributes = function (attributes, classes, editAction) {
-    return attributes.map(function (attribute, index) {
-        if (attribute.value) {
+var getAttributeValue = function (attribute) {
+    if (!attribute.data)
+        return null;
+    if (attribute.document && attribute.data && attribute.data.value) {
+        return 'document';
+    }
+    switch (attribute.key) {
+        case 'birthdate':
+            return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
+        case 'work_place':
+        case 'physical_address':
+            var value = attribute.data.address1 + ', ';
+            if (attribute.data.address2) {
+                value += attribute.data.address2 + ', ';
+            }
+            value += attribute.data.city + ', ';
+            value += attribute.data.region + ', ';
+            value += attribute.data.zip + ', ';
+            value += attribute.data.country;
+            return value;
+        case 'phonenumber_countrycode':
+            return attribute.data.countryCode + ' ' + attribute.data.telephoneNumber;
+        default:
+            return attribute.data.value || null;
+    }
+};
+var renderAttributes = function (required, attributes, classes, editAction) {
+    var attrs = required.map(function (attr) {
+        return _.find(attributes, { key: attr.key }) || attr;
+    });
+    return attrs.map(function (attribute, index) {
+        var attributeValue = getAttributeValue(attribute);
+        if (attributeValue) {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
                     React.createElement(check_1.CheckIcon, null),
                     React.createElement("dl", null,
-                        React.createElement("dt", null, attribute.name),
-                        React.createElement("dd", null, attribute.value)))));
+                        React.createElement("dt", null, attribute.label),
+                        React.createElement("dd", null, attributeValue)))));
         }
         else {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
                     React.createElement(warning_1.WarningIcon, null),
                     React.createElement("dl", null,
-                        React.createElement("dt", null, attribute.name),
-                        React.createElement("dd", null,
+                        React.createElement("dt", null, attribute.label),
+                        editAction ? (React.createElement("dd", null,
                             React.createElement("a", { onClick: editAction, className: classes.edit },
-                                React.createElement(edit_1.EditIcon, null))))),
+                                React.createElement(edit_1.EditIcon, null)))) : null)),
                 React.createElement("div", { className: classes.waringMessage }, "Please update your missing details.")));
         }
     });
 };
 exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, allowAction = _a.allowAction, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, website = _a.website;
-    return (React.createElement("div", null,
+    var classes = _a.classes, allowAction = _a.allowAction, required = _a.required, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, website = _a.website;
+    return (React.createElement("div", { className: classes.requiredInfo },
         React.createElement("div", { className: classes.areaTitle },
             React.createElement("h4", null,
                 React.createElement("a", { href: website.url, target: "_blank" },
@@ -100,7 +140,7 @@ exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
                 ' ',
                 "would like to access this information:")),
         React.createElement("div", { className: classes.form },
-            renderAttributes(attributes, classes, editAction),
+            renderAttributes(required, attributes, classes, editAction),
             React.createElement("div", { className: classes.tocMessage },
                 "By clicking \"Allow\", your information listed above will be used by",
                 ' ',
@@ -108,15 +148,15 @@ exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
                 ' ',
                 "with respect to their",
                 ' ',
-                React.createElement("a", { href: website.termsUrl, target: "_blank" }, "[Terms of Service]"),
+                React.createElement("a", { href: website.termsUrl, target: "_blank" }, "Terms of Service"),
                 ' ',
                 "and",
                 ' ',
-                React.createElement("a", { href: website.policyUrl, target: "_blank" }, "[Privacy Policy]"),
+                React.createElement("a", { href: website.policyUrl, target: "_blank" }, "Privacy Policy"),
                 "."),
             React.createElement("div", { className: classes.formSubmitColumn },
-                React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary }, "Cancel"),
-                React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary }, "Allow")))));
+                React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary, onClick: cancelAction }, "Cancel"),
+                React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: allowAction }, "Allow")))));
 });
 exports.default = exports.LWSRequiredInfo;
 //# sourceMappingURL=lws-required-info.js.map

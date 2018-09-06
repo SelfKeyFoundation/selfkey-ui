@@ -10,14 +10,49 @@ import { LWSAuthError } from '../../src/lws/lws-auth-error';
 
 export const LWSSelectWalletWrapper = () => (
 	<div>
-		<LWSSelectWallet wallets={[{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe' }]} />
+		<LWSSelectWallet
+			wallets={[
+				{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe', unlocked: true, profile: 'local' },
+				{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4ef2', unlocked: false, profile: 'local' },
+			]}
+			loginAction={(wallet, password) => {
+				alert(`${wallet.publicKey}:${password}`);
+			}}
+		/>
 	</div>
 );
 
 export const LWSRequiredInfoWrapper = () => (
 	<div>
 		<LWSRequiredInfo
-			attributes={[{ name: 'Name', value: 'Rodrigo Pavezi' }, { name: 'Country', value: '' }]}
+			required={[
+				{ label: 'Name', key: 'first_name' },
+				{ label: 'Country', key: 'country' },
+				{
+					label: 'Address',
+					key: 'physical_address',
+				},
+				{
+					label: 'Birth Day',
+					key: 'birthdate',
+				},
+			]}
+			attributes={[
+				{ label: 'Name', key: 'first_name', data: { value: 'Rodrigo Pavezi' } },
+				{ label: 'Birth Day', key: 'birthdate', data: { value: Date.now() } },
+				{
+					label: 'Address',
+					key: 'physical_address',
+					data: {
+						address1: 'address1',
+						address2: 'address2',
+						city: 'city1',
+						region: 'region1',
+						zip: 'zip',
+						country: 'country1',
+					},
+				},
+			]}
 			website={{
 				name: 'PaveziCoin',
 				url: 'http://www.pavezicoin.org',

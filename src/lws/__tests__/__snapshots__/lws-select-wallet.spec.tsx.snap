@@ -289,6 +289,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
           className="LWSSelectWalletComponent-formControl-0-1-7"
           id="eth-address"
           onChange={[Function]}
+          value="0x4184288c556524df9cb9e58b73265ee66dca4efe"
         >
           <option
             value="0x4184288c556524df9cb9e58b73265ee66dca4efe"
@@ -306,8 +307,10 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         <input
           className="LWSSelectWalletComponent-formControl-0-1-7 "
           id="password"
+          onChange={[Function]}
           placeholder="Enter your password"
           type="password"
+          value=""
         />
       </div>
       <div

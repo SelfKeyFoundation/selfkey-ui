@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as _ from 'lodash';
 import injectSheet, { StyleSheet, ClassNameMap } from 'react-jss';
 import CommonStyle from '../common/common-style';
 import { CheckIcon } from '../icons/check';
@@ -13,6 +14,16 @@ const styles: StyleSheet = {
 	buttonPrimary: CommonStyle.buttonPrimary,
 
 	buttonSecondary: CommonStyle.buttonSecondary,
+
+	requiredInfo: {
+		'& a': {
+			color: '#23E6FE',
+			textDecoration: 'none',
+			'&:hover': {
+				textDecoration: 'underline',
+			},
+		},
+	},
 
 	areaTitle: {
 		textAlign: 'center',
@@ -77,8 +88,11 @@ const styles: StyleSheet = {
 };
 
 export type Attribute = {
-	name: string;
-	value: string;
+	label: string;
+	key: string;
+	attribute?: string;
+	data?: any;
+	document?: boolean;
 };
 
 export type LWSRequiredInfoProps = {
@@ -86,23 +100,58 @@ export type LWSRequiredInfoProps = {
 	cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 	editAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 	attributes: Array<Attribute>;
+	required: Array<Attribute>;
 	website: Website;
 };
 
+const getAttributeValue = (attribute: Attribute) => {
+	if (!attribute.data) return null;
+	if (attribute.document && attribute.data && attribute.data.value) {
+		return 'document';
+	}
+	switch (attribute.key) {
+		case 'birthdate':
+			return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
+		case 'work_place':
+		case 'physical_address':
+			let value = attribute.data.address1 + ', ';
+
+			if (attribute.data.address2) {
+				value += attribute.data.address2 + ', ';
+			}
+
+			value += attribute.data.city + ', ';
+			value += attribute.data.region + ', ';
+			value += attribute.data.zip + ', ';
+			value += attribute.data.country;
+
+			return value;
+		case 'phonenumber_countrycode':
+			return attribute.data.countryCode + ' ' + attribute.data.telephoneNumber;
+		default:
+			return attribute.data.value || null;
+	}
+};
+
 const renderAttributes = (
+	required: Array<Attribute>,
 	attributes: Array<Attribute>,
 	classes: Partial<ClassNameMap<string>>,
 	editAction: ((event: React.MouseEvent<HTMLElement>) => void) | undefined
 ) => {
-	return attributes.map((attribute, index) => {
-		if (attribute.value) {
+	let attrs = required.map(attr => {
+		return _.find(attributes, { key: attr.key }) || attr;
+	});
+	return attrs.map((attribute, index) => {
+		const attributeValue = getAttributeValue(attribute);
+		if (attributeValue) {
 			return (
 				<div key={index}>
 					<div className={classes.attribute}>
 						<CheckIcon />
 						<dl>
-							<dt>{attribute.name}</dt>
-							<dd>{attribute.value}</dd>
+							<dt>{attribute.label}</dt>
+							<dd>{attributeValue}</dd>
 						</dl>
 					</div>
 				</div>
@@ -113,12 +162,14 @@ const renderAttributes = (
 					<div className={classes.attribute}>
 						<WarningIcon />
 						<dl>
-							<dt>{attribute.name}</dt>
-							<dd>
-								<a onClick={editAction} className={classes.edit}>
-									<EditIcon />
-								</a>
-							</dd>
+							<dt>{attribute.label}</dt>
+							{editAction ? (
+								<dd>
+									<a onClick={editAction} className={classes.edit}>
+										<EditIcon />
+									</a>
+								</dd>
+							) : null}
 						</dl>
 					</div>
 					<div className={classes.waringMessage}>Please update your missing details.</div>
@@ -129,8 +180,8 @@ const renderAttributes = (
 };
 
 export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
-	({ classes, children, allowAction, cancelAction, editAction, attributes, website }) => (
-		<div>
+	({ classes, allowAction, required, cancelAction, editAction, attributes, website }) => (
+		<div className={classes.requiredInfo}>
 			<div className={classes.areaTitle}>
 				<h4>
 					<a href={website.url} target="_blank">
@@ -140,7 +191,7 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 				</h4>
 			</div>
 			<div className={classes.form}>
-				{renderAttributes(attributes, classes, editAction)}
+				{renderAttributes(required, attributes, classes, editAction)}
 
 				<div className={classes.tocMessage}>
 					By clicking "Allow", your information listed above will be used by{' '}
@@ -149,17 +200,21 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 					</a>{' '}
 					with respect to their{' '}
 					<a href={website.termsUrl} target="_blank">
-						[Terms of Service]
+						Terms of Service
 					</a>{' '}
 					and{' '}
 					<a href={website.policyUrl} target="_blank">
-						[Privacy Policy]
+						Privacy Policy
 					</a>
 					.
 				</div>
 				<div className={classes.formSubmitColumn}>
-					<LWSButton className={classes.buttonSecondary}>Cancel</LWSButton>
-					<LWSButton className={classes.buttonPrimary}>Allow</LWSButton>
+					<LWSButton className={classes.buttonSecondary} onClick={cancelAction}>
+						Cancel
+					</LWSButton>
+					<LWSButton className={classes.buttonPrimary} onClick={allowAction}>
+						Allow
+					</LWSButton>
 				</div>
 			</div>
 		</div>

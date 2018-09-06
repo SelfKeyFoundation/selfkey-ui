@@ -4,3 +4,8 @@ export declare type Website = {
     termsUrl: string;
     policyUrl: string;
 };
+export declare type Wallet = {
+    publicKey: string;
+    unlocked?: boolean;
+    profile: string;
+};

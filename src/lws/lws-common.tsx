@@ -4,3 +4,9 @@ export type Website = {
 	termsUrl: string;
 	policyUrl: string;
 };
+
+export type Wallet = {
+	publicKey: string;
+	unlocked?: boolean;
+	profile: string;
+};
