@@ -66,6 +66,7 @@ export type ItemProps = {
   viewAction?: ((event: React.MouseEvent<HTMLElement>) => void)
 }
 
+
 export const Item = injectSheet(styles)<ItemProps>(({classes, children, name, description, status, logoUrl}, viewAction) => (
   <Grid container className={classes.root}>
     <Grid item>
@@ -85,7 +86,7 @@ export const Item = injectSheet(styles)<ItemProps>(({classes, children, name, de
         </P>
       </Grid>
       <Grid item id='footer' className={classes.footer}>
-        <Button variant="outlined" className={classes.button} onClick={viewAction}>View</Button>
+        <Button variant="outlined" className={classes.button} onClick={() => {viewAction(name)}}>View</Button>
       </Grid>
     </Grid>
   </Grid>
