@@ -37,7 +37,7 @@ var styles = {
 };
 var getItems = function (items) {
     return items.map(function (item) {
-        return (React.createElement(item_1.Item, { name: item.name, description: item.description, status: item.status, logoUrl: item.logoUrl }));
+        return (React.createElement(item_1.Item, { name: item.name, description: item.description, status: item.status, logoUrl: item.logoUrl, viewAction: item.viewAction }));
     });
 };
 exports.Items = react_jss_1.default(styles)(function (_a) {

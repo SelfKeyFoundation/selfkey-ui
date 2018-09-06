@@ -50,7 +50,7 @@ export type ItemsProps = {
 const getItems = (items: Array<ItemProps>) =>{
   return items.map(item => {
     return (
-      <Item name={item.name} description={item.description} status={item.status} logoUrl={item.logoUrl}/>
+      <Item name={item.name} description={item.description} status={item.status} logoUrl={item.logoUrl} viewAction={item.viewAction}/>
     );
   })
 }

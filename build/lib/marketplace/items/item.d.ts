@@ -5,6 +5,7 @@ export declare type ItemProps = {
     status: string;
     description: string;
     logoUrl?: string;
+    viewAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 };
 export declare const Item: React.ComponentType<ItemProps & import("react-jss").StyledComponentProps<string>>;
 export default Item;
