@@ -28,3 +28,10 @@ export { LWSLoading } from './lws/lws-loading';
 export { LWSButton } from './lws/lws-button';
 export { Marketplace } from './marketplace/marketplace';
 export { TransactionHistory } from './transaction/transaction-history';
+export { Items } from './marketplace/items/items';
+export { ItemDetails } from './marketplace/items/item-details';
+export { UnlockBox } from './marketplace/unlock-box';
+export { WithoutBalance } from './marketplace/without-balance';
+
+
+
