@@ -50,5 +50,10 @@ export { GreenTickIcon } from './icons/green-tick'
 export { EditTransparentIcon } from './icons/edit-transparent'
 export { DeleteIcon } from './icons/delete'
 export { ViewIcon } from './icons/view'
+export { Items } from './marketplace/items/items';
+export { ItemDetails } from './marketplace/items/item-details';
+export { UnlockBox } from './marketplace/unlock-box';
+export { WithoutBalance } from './marketplace/without-balance';
+
 
 
