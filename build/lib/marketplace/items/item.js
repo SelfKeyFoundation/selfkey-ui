@@ -65,7 +65,7 @@ exports.Item = react_jss_1.default(styles)(function (_a, viewAction) {
                 React.createElement(paragraph_1.P, null,
                     React.createElement(react_truncate_1.default, { lines: 5 }, description))),
             React.createElement(core_1.Grid, { item: true, id: 'footer', className: classes.footer },
-                React.createElement(core_1.Button, { variant: "outlined", className: classes.button, onClick: function () { viewAction(name); } }, "View")))));
+                React.createElement(core_1.Button, { variant: "outlined", className: classes.button, onClick: function () { return viewAction(name); } }, "View")))));
 });
 exports.default = exports.Item;
 //# sourceMappingURL=item.js.map
