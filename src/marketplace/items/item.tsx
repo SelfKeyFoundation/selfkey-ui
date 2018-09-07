@@ -65,7 +65,7 @@ export type ItemProps = {
   status: string,
   description: string,
   logoUrl?: string,
-  viewAction?: ((event: React.MouseEvent<HTMLElement>) => void)
+  viewAction?: Function
 }
 
 

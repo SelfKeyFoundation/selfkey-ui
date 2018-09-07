@@ -44,18 +44,19 @@ const styles: StyleSheet = {
 export type ItemsProps = {
   category: string,
   items: Array<ItemProps>,
-  backAction?: ((event: React.MouseEvent<HTMLElement>) => void)
+  backAction?: ((event: React.MouseEvent<HTMLElement>) => void),
+  viewAction?: Function
 }
 
-const getItems = (items: Array<ItemProps>) =>{
+const getItems = (items: Array<ItemProps>, viewAction: Function | undefined) =>{
   return items.map(item => {
     return (
-      <Item name={item.name} description={item.description} status={item.status} logoUrl={item.logoUrl} viewAction={item.viewAction}/>
+      <Item name={item.name} description={item.description} status={item.status} logoUrl={item.logoUrl} viewAction={viewAction}/>
     );
   })
 }
 
-export const Items = injectSheet(styles)<ItemsProps>(({classes, children, category, items, backAction}) => (
+export const Items = injectSheet(styles)<ItemsProps>(({classes, children, category, items, backAction, viewAction}) => (
   <Grid container>
     <Grid item>
       <Button variant="outlined" className={classes.button} onClick={backAction}>&#60; Back</Button>
@@ -74,7 +75,7 @@ export const Items = injectSheet(styles)<ItemsProps>(({classes, children, catego
         </Grid>
         <Grid item id='body' xs={12} className={classes.body}>
           <Grid container direction='row' justify='space-between' alignItems='center'>
-            {getItems(items)}
+            {getItems(items, viewAction)}
           </Grid>
         </Grid>
       </Grid>

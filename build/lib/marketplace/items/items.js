@@ -35,13 +35,13 @@ var styles = {
         }
     },
 };
-var getItems = function (items) {
+var getItems = function (items, viewAction) {
     return items.map(function (item) {
-        return (React.createElement(item_1.Item, { name: item.name, description: item.description, status: item.status, logoUrl: item.logoUrl, viewAction: item.viewAction }));
+        return (React.createElement(item_1.Item, { name: item.name, description: item.description, status: item.status, logoUrl: item.logoUrl, viewAction: viewAction }));
     });
 };
 exports.Items = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, category = _a.category, items = _a.items, backAction = _a.backAction;
+    var classes = _a.classes, children = _a.children, category = _a.category, items = _a.items, backAction = _a.backAction, viewAction = _a.viewAction;
     return (React.createElement(core_1.Grid, { container: true },
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Button, { variant: "outlined", className: classes.button, onClick: backAction }, "< Back")),
@@ -54,7 +54,7 @@ exports.Items = react_jss_1.default(styles)(function (_a) {
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement(headings_1.H1, null, category)))),
                 React.createElement(core_1.Grid, { item: true, id: 'body', xs: 12, className: classes.body },
-                    React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-between', alignItems: 'center' }, getItems(items)))))));
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-between', alignItems: 'center' }, getItems(items, viewAction)))))));
 });
 exports.default = exports.Items;
 //# sourceMappingURL=items.js.map
