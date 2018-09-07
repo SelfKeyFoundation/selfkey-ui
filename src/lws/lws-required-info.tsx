@@ -57,6 +57,10 @@ const styles: StyleSheet = {
 		},
 	},
 
+	clickable: {
+		cursor: 'pointer',
+	},
+
 	waringMessage: {
 		color: '#FFA700',
 		fontSize: '13px',
@@ -157,7 +161,10 @@ const renderAttributes = (
 			return (
 				<div key={index}>
 					<div className={classes.attribute}>
-						<span onClick={() => disallowAttributeAction(attribute, !notAllowed)}>
+						<span
+							className={classes.clickable}
+							onClick={() => disallowAttributeAction(attribute, !notAllowed)}
+						>
 							{notAllowed ? <CheckEmptyIcon /> : <CheckIcon />}
 						</span>
 						<dl>

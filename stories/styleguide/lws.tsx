@@ -54,6 +54,9 @@ export const LWSRequiredInfoWrapper = () => (
 				},
 			]}
 			notAllowedAttributes={[{ label: 'Birth Day', key: 'birthdate' }]}
+			disallowAttributeAction={(attribute, disallow) => {
+				alert(attribute.key + ' ' + disallow);
+			}}
 			website={{
 				name: 'PaveziCoin',
 				url: 'http://www.pavezicoin.org',

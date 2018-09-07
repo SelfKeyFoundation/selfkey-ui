@@ -51,6 +51,9 @@ var styles = {
             },
         },
     },
+    clickable: {
+        cursor: 'pointer',
+    },
     waringMessage: {
         color: '#FFA700',
         fontSize: '13px',
@@ -117,7 +120,7 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
         if (attributeValue) {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
-                    React.createElement("span", { onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(check_empty_1.CheckEmptyIcon, null) : React.createElement(check_1.CheckIcon, null)),
+                    React.createElement("span", { className: classes.clickable, onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(check_empty_1.CheckEmptyIcon, null) : React.createElement(check_1.CheckIcon, null)),
                     React.createElement("dl", null,
                         React.createElement("dt", null, attribute.label),
                         React.createElement("dd", null, attributeValue)))));
