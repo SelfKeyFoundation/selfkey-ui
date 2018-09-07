@@ -14,3 +14,6 @@ export { CryptoPriceTable } from './price/crypto-price-table';
 export { TransferPrice } from './price/transfer-price';
 export { TransactionBox } from './transaction/transaction-box';
 export { TransactionNoGasError } from './transaction/transaction-no-gas-error';
+export { ActualTransactionFeeBox } from './transaction/send/fee/actual-transaction-fee-box';
+export { TransactionFeeBox } from './transaction/send/fee/transaction-fee-box';
+export { TransactionSendBox } from './transaction/send//transaction-send-box';
