@@ -17,6 +17,9 @@ import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSLoading } from '../../src/lws/lws-loading';
 import { TransactionHistory, StatusIconName } from '../../src/transaction/transaction-history';
+import { LWSSelectWallet } from '../../src/lws/lws-select-wallet';
+import { LWSSelectWalletModal, LWSRequiredInfoModal, LWSWalletConnectionErrorModal, LWSSelfkeyIdErrorModal, LWSExtensionErrorModal, LWSSuccessrModal } from './lws';
+import { SendTransaction } from './send-transaction';
 
 import {
 	LWSSelectWalletWrapper,
@@ -176,6 +179,9 @@ let txList = [{
 transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{}}list={txList}/>);
 
 
+transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
+
+
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
 lws.addWithJSX('LWSHeader', () => <LWSModalHeader />);
@@ -185,12 +191,16 @@ lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWalletWrapper />);
 lws.addWithJSX('LWSRequiredInfo', () => <LWSRequiredInfoWrapper />);
 
 lws.addWithJSX('LWSWalletConnectionError', () => <LWSWalletConnectionErrorWrapper />);
+lws.addWithJSX('LWSSelectWalletModal', () => <LWSSelectWalletModal />);
 
 lws.addWithJSX('LWSSelfkeyIdError', () => <LWSSelfkeyIdErrorWrapper />);
 
 lws.addWithJSX('LWSExtensionError', () => <LWSExtensionErrorWrapper />);
 
 lws.addWithJSX('LWSSuccess', () => <LWSSuccessWrapper />);
+lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorModal />);
+
+lws.addWithJSX('LWSSelfkeyIdErrorModal', () => <LWSSelfkeyIdErrorModal />);
 
 lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
 
@@ -227,3 +237,4 @@ marketplaceStory.addWithJSX('ItemDetails', () => (
 		}}
 	/>
 ));
+lws.addWithJSX('LWSSuccessrModal', () => <LWSSuccessrModal />);

@@ -19,7 +19,8 @@ const styles: StyleSheet = {
     iconWrapper: {
       position: 'absolute',
       top: '-32px',
-      left: 'calc(50% - 32px)'
+      left: '50%',
+      transform: 'translate(-50%)'
     },
 
     icon: {
@@ -71,7 +72,7 @@ export const TransactionBox = injectSheet(styles)<TransactionBoxProps>(({classes
       {renderIcon(cryptoCurrency, classes)}
     </div>
     <div>
-      {children}  
+      {children}
     </div>
   </div>
 ));
