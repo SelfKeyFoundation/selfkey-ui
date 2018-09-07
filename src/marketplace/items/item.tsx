@@ -67,7 +67,7 @@ export type ItemProps = {
 }
 
 
-export const Item = injectSheet(styles)<ItemProps>(({classes, children, name, description, status, logoUrl}, viewAction) => (
+export const Item = injectSheet(styles)<ItemProps>(({classes, children, name, description, status, logoUrl, viewAction}) => (
   <Grid container className={classes.root}>
     <Grid item>
       <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
@@ -86,7 +86,7 @@ export const Item = injectSheet(styles)<ItemProps>(({classes, children, name, de
         </P>
       </Grid>
       <Grid item id='footer' className={classes.footer}>
-        <Button variant="outlined" className={classes.button} onClick={() => viewAction(name)}>View</Button>
+        <Button variant="outlined" className={classes.button} onClick={() => (viewAction)? viewAction(name): ''}>View</Button>
       </Grid>
     </Grid>
   </Grid>
