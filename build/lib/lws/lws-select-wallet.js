@@ -76,6 +76,9 @@ exports.styles = {
             cursor: 'pointer',
             background: '#374a5a',
         },
+        '&>svg': {
+            marginRight: '10px',
+        },
         maxWidth: 'calc(50% - 15px)',
         width: '100%',
     },

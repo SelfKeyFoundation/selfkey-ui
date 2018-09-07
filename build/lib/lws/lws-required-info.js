@@ -54,6 +54,8 @@ var styles = {
         color: '#FFA700',
         fontSize: '13px',
         marginTop: '-15px',
+        marginLeft: '35px',
+        marginBottom: '15px',
     },
     formSubmitColumn: {
         flexDirection: 'row',
@@ -72,6 +74,7 @@ var styles = {
         fontFamily: 'ProximaNovaRegIt',
         margin: '30px 0 45px',
         color: '#FFF',
+        fontStyle: 'italic',
     },
     edit: {
         cursor: 'pointer',

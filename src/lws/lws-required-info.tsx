@@ -60,6 +60,8 @@ const styles: StyleSheet = {
 		color: '#FFA700',
 		fontSize: '13px',
 		marginTop: '-15px',
+		marginLeft: '35px',
+		marginBottom: '15px',
 	},
 
 	formSubmitColumn: {
@@ -80,6 +82,7 @@ const styles: StyleSheet = {
 		fontFamily: 'ProximaNovaRegIt',
 		margin: '30px 0 45px',
 		color: '#FFF',
+		fontStyle: 'italic',
 	},
 
 	edit: {
