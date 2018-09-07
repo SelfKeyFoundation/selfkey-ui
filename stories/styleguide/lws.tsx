@@ -25,7 +25,7 @@ export const LWSSelectWalletWrapper = () => (
 export const LWSRequiredInfoWrapper = () => (
 	<div>
 		<LWSRequiredInfo
-			required={[
+			requested={[
 				{ label: 'Name', key: 'first_name' },
 				{ label: 'Country', key: 'country' },
 				{
@@ -53,6 +53,7 @@ export const LWSRequiredInfoWrapper = () => (
 					},
 				},
 			]}
+			notAllowedAttributes={[{ label: 'Birth Day', key: 'birthdate' }]}
 			website={{
 				name: 'PaveziCoin',
 				url: 'http://www.pavezicoin.org',

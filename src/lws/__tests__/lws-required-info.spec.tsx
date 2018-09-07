@@ -13,10 +13,11 @@ describe('LWS Required Info', () => {
 					termsUrl: 'http://www.pavezicoin.org/terms',
 					policyUrl: 'http://www.pavezicoin.org/privacy',
 				}}
-				required={[
+				requested={[
 					{ key: 'name', label: 'Name', data: { value: 'Rodrigo Pavezi' } },
 					{ key: 'country', label: 'Country' },
 				]}
+				notAllowedAttributes={[{ key: 'country', label: 'Country' }]}
 			/>
 		);
 		let tree = component.toJSON();
