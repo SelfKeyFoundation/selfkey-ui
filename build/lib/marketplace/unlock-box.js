@@ -7,8 +7,13 @@ var headings_1 = require("../typography/headings");
 var close_button_1 = require("../icons/close-button");
 var styles = {
     root: {
-        height: '446px',
-        width: '780px'
+        boxSizing: 'border-box',
+        height: '423px',
+        width: '781px',
+        border: '1px solid #303C49',
+        borderRadius: '4px',
+        backgroundColor: '#262F39',
+        boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)'
     },
     header: {
         height: '65px',
@@ -30,7 +35,7 @@ var styles = {
     },
     body: {
         marginTop: '30px',
-        marginLeft: '30px'
+        marginLeft: '30px',
     },
     closeButton: {
         position: 'absolute',
