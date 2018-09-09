@@ -85,19 +85,19 @@ var getKYCRequirements = function (requirements, classes) {
                 React.createElement(core_1.Grid, { item: true, className: classes.requirement }, requirement))));
     });
 };
-var unlockActionCall = function (event, unlockAction, item) {
+var unlockActionCall = function (unlockAction, item, hasBalance) {
     if (item.status !== 'Active' || !unlockAction) {
         return;
     }
-    unlockAction(event);
+    unlockAction(hasBalance);
 };
 exports.ItemDetails = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, item = _a.item, unlockAction = _a.unlockAction;
+    var classes = _a.classes, children = _a.children, item = _a.item, unlockAction = _a.unlockAction, hasBalance = _a.hasBalance;
     return (React.createElement(core_1.Grid, { container: true, className: classes.root },
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { container: true, id: 'header', direction: 'row', justify: 'flex-start', alignItems: 'center', className: classes.header },
                 React.createElement(core_1.Grid, { item: true, id: 'icon', className: classes.icon },
-                    React.createElement("img", { src: item.logo })),
+                    React.createElement("img", { src: item.logo[0].url })),
                 React.createElement(core_1.Grid, { item: true, id: 'title', className: classes.title },
                     React.createElement(headings_1.H2, null, item.name))),
             React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body },
@@ -107,9 +107,7 @@ exports.ItemDetails = react_jss_1.default(styles)(function (_a) {
                             React.createElement(core_1.Grid, { item: true, xs: 8 },
                                 React.createElement(paragraph_1.P, { className: classes.description }, item.description)),
                             React.createElement(core_1.Grid, { item: true, xs: 4 },
-                                React.createElement(styled_button_1.StyledButton, { onClick: function (event) {
-                                        unlockActionCall(event, unlockAction, item);
-                                    } },
+                                React.createElement(styled_button_1.StyledButton, { onClick: function () { return unlockActionCall(unlockAction, item, hasBalance); } },
                                     item.status === 'Active' &&
                                         React.createElement(unlock_1.UnlockIcon, null),
                                     item.integration)))),
