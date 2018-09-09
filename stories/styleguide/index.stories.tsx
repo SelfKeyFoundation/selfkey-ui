@@ -228,7 +228,7 @@ marketplaceStory.addWithJSX('Exchanges', () => <ExchangesWrapper />);
 marketplaceStory.addWithJSX('ItemDetails', () => <ItemDetails item={
 	{
 		name: 'Gatecoin',
-		logo: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+		logo: [{filename: 'full_GatecoinLogo.png', url:'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png'}],
 		status: 'Active',
 		integration: 'Unlock Marketplace',
 		description: 'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets.',
@@ -241,12 +241,12 @@ marketplaceStory.addWithJSX('ItemDetails', () => <ItemDetails item={
 		fiat_supported:['EUR', 'USD', 'HKD'],
 		margin_trading: 'no',
 		kyc_aml: 'yes',
-		excluded_residents: 'United States',
+		excluded_residents: ['United States'],
 		url: 'http://www.gatecoin.com',
 		email: 'support@gatecoin.com',
 		kyc_template: ['First Name', 'Last Name', 'Country Of Residence', 'National ID', 'National ID Self'], 
 	}
-}
+} hasBalance={false}
 />); 
 
 marketplaceStory.addWithJSX('WithoutBalanceModal', () => (<UnlockBox><WithoutBalance exchanges={[

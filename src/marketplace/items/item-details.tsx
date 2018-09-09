@@ -1,7 +1,7 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet, ClassNameMap } from 'react-jss';
 
-import { Grid, Divider, FormGroup, FormControl } from '@material-ui/core'
+import { Grid, Divider, FormGroup, FormControl, Button } from '@material-ui/core'
 import { H2, H3 } from '../../typography/headings';
 import { P } from '../../typography/paragraph';
 import { TickIcon } from '../../icons/tick';
@@ -12,7 +12,7 @@ const styles: StyleSheet = {
   root: {
     width: '946px',
     height: '100%',
-    marginTop: '30px',
+    marginTop: '50px',
     marginBottom: '30px',
     border: 'solid 1px #303c49',
     borderRadius: '4px'
@@ -87,7 +87,19 @@ const styles: StyleSheet = {
 
   description: {
     marginTop: '0px'
-  }
+  },
+
+  buttonWrapper: {
+    marginRight: '30px',
+  },
+
+  button: {
+    color: '#93b0c1',
+    borderColor: '#3b4a5a',
+    '&:disabled': {
+      color: '#48565f'
+    }
+  },
 };
 
 export type Logo = {
@@ -118,7 +130,8 @@ export type ItemProps = {
 export type ItemDetailsProps = {
   item: ItemProps,
   unlockAction?: Function
-  hasBalance: boolean
+  hasBalance: boolean,
+  backAction?: ((event: React.MouseEvent<HTMLElement>) => void)
 }
 
 const getKYCRequirements = (requirements: Array<string>, classes: Partial<ClassNameMap<string>>) =>{
@@ -146,78 +159,83 @@ const unlockActionCall = (unlockAction: Function | undefined, item: ItemProps, h
   unlockAction(hasBalance);
 }
 
-export const ItemDetails = injectSheet(styles)<ItemDetailsProps>(({classes, children, item, unlockAction, hasBalance}) => (
-  <Grid container className={classes.root}>
-    <Grid item>
-      <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
-        <Grid item id='icon' className={classes.icon}>
-          <img src={item.logo[0].url}/>
+export const ItemDetails = injectSheet(styles)<ItemDetailsProps>(({classes, children, item, unlockAction, hasBalance, backAction}) => (
+  <Grid container>
+    <Grid item className={classes.buttonWrapper}>
+      <Button variant="outlined" className={classes.button} onClick={backAction}>&#60; Back</Button>
+    </Grid> 
+    <Grid container className={classes.root}>
+      <Grid item>
+        <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
+          <Grid item id='icon' className={classes.icon}>
+            <img src={item.logo[0].url}/>
+          </Grid>
+          <Grid item id='title' className={classes.title}>
+            <H2>{item.name}</H2>
+          </Grid>
         </Grid>
-        <Grid item id='title' className={classes.title}>
-          <H2>{item.name}</H2>
-        </Grid>
-      </Grid>
-      <Grid item id='body' className={classes.body}>
-        <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={32}>
-          <Grid item id='description'>
-            <Grid container direction='row' justify='center' alignItems='flex-start' spacing={40}>
-              <Grid item xs={8}>
-                <P className={classes.description}>{item.description}</P>
-              </Grid>
-              <Grid item xs={4}>
-                <StyledButton  onClick={() => unlockActionCall(unlockAction, item, hasBalance)}>
-                  {item.status === 'Active' &&
-                    <UnlockIcon/>
-                  } 
-                  {item.integration}
-                </StyledButton>
+        <Grid item id='body' className={classes.body}>
+          <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={32}>
+            <Grid item id='description'>
+              <Grid container direction='row' justify='center' alignItems='flex-start' spacing={40}>
+                <Grid item xs={8}>
+                  <P className={classes.description}>{item.description}</P>
+                </Grid>
+                <Grid item xs={4}>
+                  <StyledButton  onClick={() => unlockActionCall(unlockAction, item, hasBalance)}>
+                    {item.status === 'Active' &&
+                      <UnlockIcon/>
+                    } 
+                    {item.integration}
+                  </StyledButton>
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item className={classes.dividerWrapper}>
-            <Divider className={classes.divider}/>
-          </Grid>
-          <Grid item id='highlights'>
-            <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
-              <Grid item>
-                <H3>Highlights</H3>
-              </Grid>
-              <Grid item>
-                <FormControl component="fieldset" className={classes.formControl}>
-                  <FormGroup className={classes.formGroup}>
-                    <span><strong>Location:</strong> {item.location} </span>
-                    <span><strong>Year Launched:</strong> {item.year_launched} </span>
-                    <span><strong>Coin Pairs:</strong> {item.coin_pairs} </span>
-                    <span><strong>Maker Fee:</strong> {item.maker_fee} </span>
-                    <span><strong>Taker Fee:</strong> {item.taker_fee} </span>
-                    <span><strong>URL:</strong> {item.url} </span>
-                  </FormGroup>
-                </FormControl> 
-                <FormControl component="fieldset" className={classes.formControl}>
-                  <FormGroup className={classes.formGroup}>
-                    <span><strong>FIAT Payment:</strong> {item.fiat_payments} </span>
-                    <span><strong>FIAT Supported:</strong> {item.fiat_supported.toString().replace(/,/g, ' ')} </span>
-                    <span><strong>Margin Trading:</strong> {item.margin_trading} </span>
-                    <span><strong>KYC/AML:</strong> {item.kyc_aml} </span>
-                    <span><strong>Excluded Resident:</strong> {item.excluded_residents} </span>
-                    <span><strong>Contact:</strong> {item.email} </span>
-                  </FormGroup>
-                </FormControl>  
+            <Grid item className={classes.dividerWrapper}>
+              <Divider className={classes.divider}/>
+            </Grid>
+            <Grid item id='highlights'>
+              <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
+                <Grid item>
+                  <H3>Highlights</H3>
+                </Grid>
+                <Grid item>
+                  <FormControl component="fieldset" className={classes.formControl}>
+                    <FormGroup className={classes.formGroup}>
+                      <span><strong>Location:</strong> {item.location} </span>
+                      <span><strong>Year Launched:</strong> {item.year_launched} </span>
+                      <span><strong>Coin Pairs:</strong> {item.coin_pairs} </span>
+                      <span><strong>Maker Fee:</strong> {item.maker_fee} </span>
+                      <span><strong>Taker Fee:</strong> {item.taker_fee} </span>
+                      <span><strong>URL:</strong> {item.url} </span>
+                    </FormGroup>
+                  </FormControl> 
+                  <FormControl component="fieldset" className={classes.formControl}>
+                    <FormGroup className={classes.formGroup}>
+                      <span><strong>FIAT Payment:</strong> {item.fiat_payments} </span>
+                      <span><strong>FIAT Supported:</strong> {item.fiat_supported.toString().replace(/,/g, ' ')} </span>
+                      <span><strong>Margin Trading:</strong> {item.margin_trading} </span>
+                      <span><strong>KYC/AML:</strong> {item.kyc_aml} </span>
+                      <span><strong>Excluded Resident:</strong> {item.excluded_residents} </span>
+                      <span><strong>Contact:</strong> {item.email} </span>
+                    </FormGroup>
+                  </FormControl>  
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item className={classes.dividerWrapper}>
-            <Divider className={classes.divider}/>
-          </Grid>
-          <Grid item id='requirements'>
-            <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
-              <Grid item>
-                <H3>KYC Requirements</H3>
-              </Grid>
-              <Grid item className={classes.requirements}>
-                <Grid container direction='row' justify='flex-start' alignItems='center' spacing={32}>
-                  {getKYCRequirements(item.kyc_template, classes)}
-                </Grid> 
+            <Grid item className={classes.dividerWrapper}>
+              <Divider className={classes.divider}/>
+            </Grid>
+            <Grid item id='requirements'>
+              <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
+                <Grid item>
+                  <H3>KYC Requirements</H3>
+                </Grid>
+                <Grid item className={classes.requirements}>
+                  <Grid container direction='row' justify='flex-start' alignItems='center' spacing={32}>
+                    {getKYCRequirements(item.kyc_template, classes)}
+                  </Grid> 
+                </Grid>
               </Grid>
             </Grid>
           </Grid>

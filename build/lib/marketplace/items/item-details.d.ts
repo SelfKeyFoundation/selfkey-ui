@@ -28,6 +28,7 @@ export declare type ItemDetailsProps = {
     item: ItemProps;
     unlockAction?: Function;
     hasBalance: boolean;
+    backAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 };
 export declare const ItemDetails: React.ComponentType<ItemDetailsProps & import("react-jss").StyledComponentProps<string>>;
 export default ItemDetails;
