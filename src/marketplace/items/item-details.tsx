@@ -90,9 +90,13 @@ const styles: StyleSheet = {
   }
 };
 
+export type Logo = {
+  filename: string,
+  url: string 
+}
 export type ItemProps = {
   name: string,
-  logo: string,
+  logo: Array<Logo>,
   status: string,
   integration: string,
   description: string,
@@ -105,7 +109,7 @@ export type ItemProps = {
   fiat_supported: Array<string>,
   margin_trading: string,
   kyc_aml: string,
-  excluded_residents: string,
+  excluded_residents: Array<string>,
   url: string,
   email: string,
   kyc_template: Array<string>,
@@ -113,7 +117,8 @@ export type ItemProps = {
 
 export type ItemDetailsProps = {
   item: ItemProps,
-  unlockAction?: ((event: React.MouseEvent<HTMLElement>) => void) 
+  unlockAction?: Function
+  hasBalance: boolean
 }
 
 const getKYCRequirements = (requirements: Array<string>, classes: Partial<ClassNameMap<string>>) =>{
@@ -133,20 +138,20 @@ const getKYCRequirements = (requirements: Array<string>, classes: Partial<ClassN
   });
 }
 
-const unlockActionCall = (event: React.MouseEvent<HTMLElement>, unlockAction: ((event: React.MouseEvent<HTMLElement>) => void) | undefined, item: ItemProps) => {
+const unlockActionCall = (unlockAction: Function | undefined, item: ItemProps, hasBalance: boolean) => {
   if(item.status !== 'Active' || !unlockAction) {
     return;
   }
 
-  unlockAction(event);
+  unlockAction(hasBalance);
 }
 
-export const ItemDetails = injectSheet(styles)<ItemDetailsProps>(({classes, children, item, unlockAction}) => (
+export const ItemDetails = injectSheet(styles)<ItemDetailsProps>(({classes, children, item, unlockAction, hasBalance}) => (
   <Grid container className={classes.root}>
     <Grid item>
       <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
         <Grid item id='icon' className={classes.icon}>
-          <img src={item.logo}/>
+          <img src={item.logo[0].url}/>
         </Grid>
         <Grid item id='title' className={classes.title}>
           <H2>{item.name}</H2>
@@ -160,10 +165,7 @@ export const ItemDetails = injectSheet(styles)<ItemDetailsProps>(({classes, chil
                 <P className={classes.description}>{item.description}</P>
               </Grid>
               <Grid item xs={4}>
-                <StyledButton  onClick={(event: React.MouseEvent<HTMLElement>) => {
-                    unlockActionCall(event, unlockAction, item);
-                  }
-                }>
+                <StyledButton  onClick={() => unlockActionCall(unlockAction, item, hasBalance)}>
                   {item.status === 'Active' &&
                     <UnlockIcon/>
                   } 
