@@ -28,7 +28,8 @@ const styles: StyleSheet = {
       fontFamily: 'Proxima Nova',	
       fontSize: '18px',
       lineHeight: '22px',
-      marginLeft: '30px'
+      marginLeft: '30px',
+      marginTop: '20px'
     },
     overflow: 'visible',
     position: 'relative'
