@@ -17,6 +17,8 @@ import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSLoading } from '../../src/lws/lws-loading';
+import { TransactionHistory, StatusIconName } from '../../src/transaction/transaction-history';
+
 import {
 	LWSSelectWalletWrapper,
 	LWSRequiredInfoWrapper,
@@ -154,6 +156,25 @@ transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
 transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
 	<TransactionNoGasError cryptoCurrency="ITH" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
 ));
+
+let txList = [{
+	statusText: 'sented',
+	date: '1995/45/45',
+	cryptoCurrency: 'eth',
+	value: '+1578',
+	statusIconName: 'failed' as StatusIconName,
+	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
+},{
+	statusText: 'received',
+	date: '1995/45/41',
+	cryptoCurrency: 'key',
+	value: '+15',
+	statusIconName: 'receive' as StatusIconName,
+	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
+}];
+
+transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{console.log(1)}}list={txList}/>);
+
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 

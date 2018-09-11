@@ -58,4 +58,6 @@ var lws_button_1 = require("./lws/lws-button");
 exports.LWSButton = lws_button_1.LWSButton;
 var marketplace_1 = require("./marketplace/marketplace");
 exports.Marketplace = marketplace_1.Marketplace;
+var transaction_history_1 = require("./transaction/transaction-history");
+exports.TransactionHistory = transaction_history_1.TransactionHistory;
 //# sourceMappingURL=index.js.map
