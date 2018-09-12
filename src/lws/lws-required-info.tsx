@@ -3,6 +3,7 @@ import * as _ from 'lodash';
 import injectSheet, { StyleSheet, ClassNameMap } from 'react-jss';
 import CommonStyle from '../common/common-style';
 import { CheckIcon } from '../icons/check';
+import { CheckEmptyIcon } from '../icons/check-empty';
 import { WarningIcon } from '../icons/warning';
 import { EditIcon } from '../icons/edit';
 import { LWSButton } from './lws-button';
@@ -56,10 +57,16 @@ const styles: StyleSheet = {
 		},
 	},
 
+	clickable: {
+		cursor: 'pointer',
+	},
+
 	waringMessage: {
 		color: '#FFA700',
 		fontSize: '13px',
 		marginTop: '-15px',
+		marginLeft: '35px',
+		marginBottom: '15px',
 	},
 
 	formSubmitColumn: {
@@ -80,6 +87,7 @@ const styles: StyleSheet = {
 		fontFamily: 'ProximaNovaRegIt',
 		margin: '30px 0 45px',
 		color: '#FFF',
+		fontStyle: 'italic',
 	},
 
 	edit: {
@@ -99,8 +107,10 @@ export type LWSRequiredInfoProps = {
 	allowAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 	cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 	editAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+	disallowAttributeAction?: ((attribute: Attribute, disallow: boolean) => void);
 	attributes: Array<Attribute>;
-	required: Array<Attribute>;
+	notAllowedAttributes?: Array<Attribute>;
+	requested: Array<Attribute>;
 	website: Website;
 };
 
@@ -134,21 +144,29 @@ const getAttributeValue = (attribute: Attribute) => {
 };
 
 const renderAttributes = (
-	required: Array<Attribute>,
+	requested: Array<Attribute>,
 	attributes: Array<Attribute>,
+	notAllowedAttributes: Array<Attribute>,
 	classes: Partial<ClassNameMap<string>>,
+	disallowAttributeAction: ((attribute: Attribute, disallow: boolean) => void),
 	editAction: ((event: React.MouseEvent<HTMLElement>) => void) | undefined
 ) => {
-	let attrs = required.map(attr => {
+	let attrs = requested.map(attr => {
 		return _.find(attributes, { key: attr.key }) || attr;
 	});
 	return attrs.map((attribute, index) => {
 		const attributeValue = getAttributeValue(attribute);
+		const notAllowed = !!_.find(notAllowedAttributes, { key: attribute.key });
 		if (attributeValue) {
 			return (
 				<div key={index}>
 					<div className={classes.attribute}>
-						<CheckIcon />
+						<span
+							className={classes.clickable}
+							onClick={() => disallowAttributeAction(attribute, !notAllowed)}
+						>
+							{notAllowed ? <CheckEmptyIcon /> : <CheckIcon />}
+						</span>
 						<dl>
 							<dt>{attribute.label}</dt>
 							<dd>{attributeValue}</dd>
@@ -180,7 +198,17 @@ const renderAttributes = (
 };
 
 export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
-	({ classes, allowAction, required, cancelAction, editAction, attributes, website }) => (
+	({
+		classes,
+		allowAction,
+		requested,
+		cancelAction,
+		editAction,
+		attributes,
+		notAllowedAttributes = [],
+		website,
+		disallowAttributeAction = (attribute: Attribute, disallow: boolean) => {},
+	}) => (
 		<div className={classes.requiredInfo}>
 			<div className={classes.areaTitle}>
 				<h4>
@@ -191,7 +219,14 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 				</h4>
 			</div>
 			<div className={classes.form}>
-				{renderAttributes(required, attributes, classes, editAction)}
+				{renderAttributes(
+					requested,
+					attributes,
+					notAllowedAttributes,
+					classes,
+					disallowAttributeAction,
+					editAction
+				)}
 
 				<div className={classes.tocMessage}>
 					By clicking "Allow", your information listed above will be used by{' '}

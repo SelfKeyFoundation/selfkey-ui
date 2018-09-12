@@ -5,6 +5,7 @@ var _ = require("lodash");
 var react_jss_1 = require("react-jss");
 var common_style_1 = require("../common/common-style");
 var check_1 = require("../icons/check");
+var check_empty_1 = require("../icons/check-empty");
 var warning_1 = require("../icons/warning");
 var edit_1 = require("../icons/edit");
 var lws_button_1 = require("./lws-button");
@@ -50,10 +51,15 @@ var styles = {
             },
         },
     },
+    clickable: {
+        cursor: 'pointer',
+    },
     waringMessage: {
         color: '#FFA700',
         fontSize: '13px',
         marginTop: '-15px',
+        marginLeft: '35px',
+        marginBottom: '15px',
     },
     formSubmitColumn: {
         flexDirection: 'row',
@@ -72,6 +78,7 @@ var styles = {
         fontFamily: 'ProximaNovaRegIt',
         margin: '30px 0 45px',
         color: '#FFF',
+        fontStyle: 'italic',
     },
     edit: {
         cursor: 'pointer',
@@ -103,16 +110,17 @@ var getAttributeValue = function (attribute) {
             return attribute.data.value || null;
     }
 };
-var renderAttributes = function (required, attributes, classes, editAction) {
-    var attrs = required.map(function (attr) {
+var renderAttributes = function (requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction) {
+    var attrs = requested.map(function (attr) {
         return _.find(attributes, { key: attr.key }) || attr;
     });
     return attrs.map(function (attribute, index) {
         var attributeValue = getAttributeValue(attribute);
+        var notAllowed = !!_.find(notAllowedAttributes, { key: attribute.key });
         if (attributeValue) {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
-                    React.createElement(check_1.CheckIcon, null),
+                    React.createElement("span", { className: classes.clickable, onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(check_empty_1.CheckEmptyIcon, null) : React.createElement(check_1.CheckIcon, null)),
                     React.createElement("dl", null,
                         React.createElement("dt", null, attribute.label),
                         React.createElement("dd", null, attributeValue)))));
@@ -131,7 +139,7 @@ var renderAttributes = function (required, attributes, classes, editAction) {
     });
 };
 exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, allowAction = _a.allowAction, required = _a.required, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, website = _a.website;
+    var classes = _a.classes, allowAction = _a.allowAction, requested = _a.requested, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, _b = _a.notAllowedAttributes, notAllowedAttributes = _b === void 0 ? [] : _b, website = _a.website, _c = _a.disallowAttributeAction, disallowAttributeAction = _c === void 0 ? function (attribute, disallow) { } : _c;
     return (React.createElement("div", { className: classes.requiredInfo },
         React.createElement("div", { className: classes.areaTitle },
             React.createElement("h4", null,
@@ -140,7 +148,7 @@ exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
                 ' ',
                 "would like to access this information:")),
         React.createElement("div", { className: classes.form },
-            renderAttributes(required, attributes, classes, editAction),
+            renderAttributes(requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction),
             React.createElement("div", { className: classes.tocMessage },
                 "By clicking \"Allow\", your information listed above will be used by",
                 ' ',
