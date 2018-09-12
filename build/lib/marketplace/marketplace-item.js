@@ -8,7 +8,7 @@ var headings_1 = require("../typography/headings");
 var styles = {
     root: {
         width: '360px',
-        height: '312px',
+        height: '326px',
         marginTop: '30px',
         marginBottom: '30px',
         border: 'solid 1px #303c49',
@@ -24,7 +24,6 @@ var styles = {
         backgroundColor: '#2a3540'
     },
     svgIcon: {
-        width: '44px',
         height: '44px',
         color: '#23E6FE'
     },
@@ -43,7 +42,8 @@ var styles = {
         fontFamily: 'ProximaNovaRegular',
         fontSize: '16px',
         fontWeight: 400,
-        lineHeight: 1.67
+        lineHeight: 1.5,
+        height: '130px',
     },
     footer: {
         margin: '20px',

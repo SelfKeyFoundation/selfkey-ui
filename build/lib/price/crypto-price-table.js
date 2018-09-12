@@ -56,6 +56,9 @@ exports.styles = {
             textAlign: 'left',
             color: '#ffffff',
             borderBottom: '0px',
+            '& svg g': {
+                fill: '#7f8fa4',
+            },
         },
         '& td:first-child': {
             paddingLeft: '24px !important',

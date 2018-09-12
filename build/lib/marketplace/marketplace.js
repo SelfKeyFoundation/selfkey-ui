@@ -8,10 +8,6 @@ var marketplace_item_1 = require("./marketplace-item");
 var styles = {
     header: {
         borderBottom: 'solid 1px #475768',
-        '& h1': {
-            marginLeft: '50px'
-        },
-        minHeight: '147px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start'

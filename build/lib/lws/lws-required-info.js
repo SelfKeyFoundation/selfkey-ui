@@ -38,6 +38,9 @@ var styles = {
         flexDirection: 'row',
         padding: '0 0 30px',
         color: '#FFF',
+        '& svg': {
+            flex: '20px',
+        },
         '& dl': {
             display: 'flex',
             justifyContent: 'space-between',
@@ -53,7 +56,8 @@ var styles = {
     waringMessage: {
         color: '#FFA700',
         fontSize: '13px',
-        marginTop: '-15px',
+        marginTop: '-20px',
+        padding: '0 0 20px 35px',
     },
     formSubmitColumn: {
         flexDirection: 'row',
@@ -69,7 +73,8 @@ var styles = {
         padding: '20px',
         fontSize: '12px',
         lineHeight: '15px',
-        fontFamily: 'ProximaNovaRegIt',
+        fontFamily: 'ProximaNovaRegIt, arial, sans-serif',
+        fontStyle: 'italic',
         margin: '30px 0 45px',
         color: '#FFF',
     },
