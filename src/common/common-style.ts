@@ -1,5 +1,5 @@
 const CommonStyle = {
-  fontFamily: 'ProximaNovaRegular',
+  fontFamily: '"Proxima Nova", arial, sans-serif',
 
   form: {
     minHeight: '300px'

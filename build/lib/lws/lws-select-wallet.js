@@ -115,7 +115,7 @@ exports.styles = {
     supportText: {
         textAlign: 'center',
         lineHeight: '22px',
-        fontFamily: 'ProximaNovaSemibold, arial, sans-serif',
+        fontFamily: '"Proxima Nova", arial, sans-serif',
         color: '#C5DCE9',
         padding: '0 0 30px',
     },

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var CommonStyle = {
-    fontFamily: 'ProximaNovaRegular',
+    fontFamily: '"Proxima Nova", arial, sans-serif',
     form: {
         minHeight: '300px'
     },

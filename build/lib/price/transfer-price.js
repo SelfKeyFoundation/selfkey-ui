@@ -6,14 +6,14 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     cryptoCurrencyName: {
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: '"Proxima Nova", arial, sans-serif',
         fontSize: '18px',
         color: '#ffffff'
     },
     cryptoCurrencyShort: {
         marginTop: '4px',
         opacity: 0.7,
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: '"Proxima Nova", arial, sans-serif',
         fontSize: '14px',
         letterSpacing: '1px',
         color: '#ffffff'

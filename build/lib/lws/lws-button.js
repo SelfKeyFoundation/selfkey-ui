@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
+var reset_jss_1 = require("reset-jss");
+console.log(reset_jss_1.default);
 var styles = {
     root: {
         webkitTransition: 'background .5s ease',
@@ -12,7 +14,7 @@ var styles = {
         fontSize: '16px',
         padding: '16px',
         textTransform: 'uppercase',
-        fontFamily: 'ProximaNovaSemibold, arial, sans-serif',
+        fontFamily: '"Proxima Nova", arial, sans-serif',
         letterSpacing: '0.6px',
         cursor: 'pointer'
     },

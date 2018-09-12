@@ -86,11 +86,10 @@ const styles: StyleSheet = {
 		padding: '20px',
 		fontSize: '12px',
 		lineHeight: '15px',
-		fontFamily: 'ProximaNovaRegIt, arial, sans-serif',
 		fontStyle: 'italic',
+		fontFamily: '"Proxima Nova", arial, sans-serif',
 		margin: '30px 0 45px',
 		color: '#FFF',
-		fontStyle: 'italic',
 	},
 
 	edit: {

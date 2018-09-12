@@ -6,7 +6,7 @@ var react_jss_1 = require("react-jss");
 var styles = {
     base: {
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular, arial, sans-serif',
+        fontFamily: '"Proxima Nova", arial, sans-serif',
         fontWeight: 400
     },
     h1: {

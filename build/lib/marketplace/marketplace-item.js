@@ -39,7 +39,7 @@ var styles = {
         textAlign: 'left',
         margin: '20px',
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: '"Proxima Nova", arial, sans-serif',
         fontSize: '16px',
         fontWeight: 400,
         lineHeight: 1.5,
