@@ -8,7 +8,7 @@ import { H2 } from '../typography/headings';
 const styles: StyleSheet = {
   root: {
     width: '360px',
-    height: '312px',
+    height: '326px',
     marginTop: '30px',
     marginBottom: '30px',
     border: 'solid 1px #303c49',
@@ -28,7 +28,7 @@ const styles: StyleSheet = {
   },
 
   svgIcon: {
-    width: '44px',
+    
     height: '44px',
     color: '#23E6FE'
   },
@@ -49,7 +49,8 @@ const styles: StyleSheet = {
     fontFamily: 'ProximaNovaRegular',
     fontSize: '16px',
     fontWeight: 400,
-    lineHeight: 1.67
+    lineHeight: 1.5,
+    height: '130px',
   },
 
   footer: {

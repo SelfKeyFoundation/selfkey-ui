@@ -8,10 +8,6 @@ import { MarketplaceItem, MarketplaceItemProps } from './marketplace-item';
 const styles: StyleSheet = {
   header: {
     borderBottom: 'solid 1px #475768',
-    '& h1': {
-      marginLeft: '50px'
-    },
-    minHeight: '147px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start'

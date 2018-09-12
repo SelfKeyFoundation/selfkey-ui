@@ -34,6 +34,7 @@ export const styles: StyleSheet = {
 			fontSize: '12px',
 			color: '#93B0C1',
 			textTransform: 'uppercase',
+			padding: '0px 0px 5px 0px',
 		},
 	},
 
@@ -58,8 +59,8 @@ export const styles: StyleSheet = {
 			cursor: 'pointer',
 			background: '#374a5a',
 		},
-		'&>svg': {
-			marginRight: '10px',
+		'& svg': {
+			padding: '0px 15px 0px 0px',
 		},
 		maxWidth: 'calc(50% - 15px)',
 		width: '100%',
@@ -103,7 +104,7 @@ export const styles: StyleSheet = {
 	supportText: {
 		textAlign: 'center',
 		lineHeight: '22px',
-		fontFamily: 'ProximaNovaSemibold',
+		fontFamily: 'ProximaNovaSemibold, arial, sans-serif',
 		color: '#C5DCE9',
 		padding: '0 0 30px',
 	},
