@@ -173,7 +173,7 @@ let txList = [{
 	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
 }];
 
-transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{console.log(1)}}list={txList}/>);
+transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{}}list={txList}/>);
 
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };

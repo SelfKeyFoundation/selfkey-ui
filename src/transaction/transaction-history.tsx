@@ -126,6 +126,7 @@ export class TransactionHistoryComponent extends React.Component<StyledProps, Tr
         currentCopyValuesClone[index] = text;
         this.setState({ currentCopyValues: currentCopyValuesClone });
     }
+    
     handleOnCopy(itemIndex: number) {
         return () => {
             this.updateCopyText(itemIndex, this.copiedText);
