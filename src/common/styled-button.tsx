@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 
 const styles: StyleSheet = { 
   button: {
+    fontFamily: 'Lato, arial, sans-serif',
     backgroundColor: '#435160',
     color: '#FFFFFF',
     '&:hover': {

@@ -12,7 +12,7 @@ const styles: StyleSheet = {
     padding: '16px',
     textTransform: 'uppercase',
 
-    fontFamily: '"Proxima Nova", arial, sans-serif',
+    fontFamily: 'Lato, arial, sans-serif',
     letterSpacing: '0.6px',
     cursor: 'pointer'
   },

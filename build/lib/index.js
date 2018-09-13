@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var jss_setup_1 = require("./jss-setup");
+jss_setup_1.setup();
 var crypto_price_box_1 = require("./price/crypto-price-box");
 exports.CryptoPriceBox = crypto_price_box_1.CryptoPriceBox;
 var number_format_1 = require("./price/number-format");

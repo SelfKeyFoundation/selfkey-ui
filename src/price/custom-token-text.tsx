@@ -4,7 +4,7 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 const styles: StyleSheet = {
     customTokenText: {
-        fontFamily: '"Proxima Nova", arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
         color: '#93b0c1',
         paddingTop: '8px',

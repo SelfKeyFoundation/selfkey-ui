@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var CommonStyle = {
-    fontFamily: '"Proxima Nova", arial, sans-serif',
+    fontFamily: 'Lato, arial, sans-serif',
     form: {
         minHeight: '300px'
     },
     buttonPrimary: {
+        fontFamily: 'Lato, arial, sans-serif',
         color: '#fff',
         background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
         border: 0,
@@ -15,6 +16,7 @@ var CommonStyle = {
         }
     },
     buttonSecondary: {
+        fontFamily: 'Lato, arial, sans-serif',
         marginTop: '30px',
         color: '#1CA9BA',
         background: '#202A33',
@@ -25,6 +27,7 @@ var CommonStyle = {
         }
     },
     areaHeader: {
+        fontFamily: 'Lato, arial, sans-serif',
         textAlign: 'center'
     }
 };

@@ -34,7 +34,7 @@ const styles: StyleSheet = {
     textAlign: 'justify',
     margin: '20px',
     color: '#fff',
-    fontFamily: '"Proxima Nova", arial, sans-serif',
+    fontFamily: 'Lato, arial, sans-serif',
     fontSize: '16px',
     fontWeight: 400,
     lineHeight: 1.67
@@ -117,9 +117,9 @@ export type ItemDetailsProps = {
 }
 
 const getKYCRequirements = (requirements: Array<string>, classes: Partial<ClassNameMap<string>>) =>{
-  return requirements.map(requirement => {
+  return requirements.map((requirement, idx) => {
     return (
-      <Grid item>
+      <Grid item key={idx}>
         <Grid container direction='row' justify='space-between'>
           <Grid item className={classes.bullet}>
             <TickIcon />

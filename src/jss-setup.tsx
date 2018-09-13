@@ -6,8 +6,7 @@ export const setup = () => {
 	jss.setup(preset());
 	jss.createStyleSheet(reset).attach();
 	const styles: any = {
-		'@global': { "body": { fontFamily: "'Proxima Nova', arial, sans-serif" } },
+		'@global': { "body": { fontFamily: "'Lato', arial, sans-serif" } },
 	};
 	jss.createStyleSheet(styles).attach();
-	console.log(reset);
 };

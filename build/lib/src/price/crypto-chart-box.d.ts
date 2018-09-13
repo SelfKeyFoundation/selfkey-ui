@@ -53,7 +53,7 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     onMouseOutEvent: ChartEvent;
     chartEvents: ChartEvent[];
     getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string): JSX.Element[];
-    getChartData(tokens: Array<Token>): React.ReactText[][];
+    getChartData(tokens: Array<Token>): (string | number)[][];
     getColors(): string[];
     getTotalBalanceInFiat(tokens: Array<Token>): number;
     getChart(): any;

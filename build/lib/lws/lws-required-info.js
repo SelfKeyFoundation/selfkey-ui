@@ -21,6 +21,7 @@ var styles = {
                 textDecoration: 'underline',
             },
         },
+        fontFamily: 'Lato, arial, sans-serif'
     },
     areaTitle: {
         textAlign: 'center',
@@ -78,7 +79,7 @@ var styles = {
         fontSize: '12px',
         lineHeight: '15px',
         fontStyle: 'italic',
-        fontFamily: '"Proxima Nova", arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         margin: '30px 0 45px',
         color: '#FFF',
     },

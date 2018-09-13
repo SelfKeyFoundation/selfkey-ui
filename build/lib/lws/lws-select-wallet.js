@@ -55,6 +55,7 @@ exports.styles = {
             color: '#93B0C1',
             textTransform: 'uppercase',
             padding: '0px 0px 5px 0px',
+            fontFamily: 'Lato, arial, sans-serif',
         },
     },
     radioReplace: {
@@ -80,6 +81,7 @@ exports.styles = {
         '& svg': {
             padding: '0px 15px 0px 0px',
         },
+        fontFamily: 'Lato, arial, sans-serif',
         maxWidth: 'calc(50% - 15px)',
         width: '100%',
     },
@@ -93,6 +95,7 @@ exports.styles = {
         height: '52px',
         boxSizing: 'border-box',
         borderRadius: '3px',
+        fontFamily: 'Lato, arial, sans-serif',
         '&:focus': {
             outline: 'none',
             boxShadow: '0 0 5px rgba(81, 203, 238, 1)',
@@ -115,7 +118,7 @@ exports.styles = {
     supportText: {
         textAlign: 'center',
         lineHeight: '22px',
-        fontFamily: '"Proxima Nova", arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         color: '#C5DCE9',
         padding: '0 0 30px',
     },

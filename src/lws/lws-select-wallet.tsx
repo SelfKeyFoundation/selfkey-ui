@@ -35,6 +35,7 @@ export const styles: StyleSheet = {
 			color: '#93B0C1',
 			textTransform: 'uppercase',
 			padding: '0px 0px 5px 0px',
+			fontFamily: 'Lato, arial, sans-serif',
 		},
 	},
 
@@ -62,6 +63,7 @@ export const styles: StyleSheet = {
 		'& svg': {
 			padding: '0px 15px 0px 0px',
 		},
+		fontFamily: 'Lato, arial, sans-serif',
 		maxWidth: 'calc(50% - 15px)',
 		width: '100%',
 	},
@@ -76,6 +78,7 @@ export const styles: StyleSheet = {
 		height: '52px',
 		boxSizing: 'border-box',
 		borderRadius: '3px',
+		fontFamily: 'Lato, arial, sans-serif',
 		'&:focus': {
 			outline: 'none',
 			boxShadow: '0 0 5px rgba(81, 203, 238, 1)',
@@ -104,7 +107,7 @@ export const styles: StyleSheet = {
 	supportText: {
 		textAlign: 'center',
 		lineHeight: '22px',
-		fontFamily: '"Proxima Nova", arial, sans-serif',
+		fontFamily: 'Lato, arial, sans-serif',
 		color: '#C5DCE9',
 		padding: '0 0 30px',
 	},

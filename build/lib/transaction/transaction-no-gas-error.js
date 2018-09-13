@@ -18,7 +18,7 @@ var styles = {
         textAlign: 'center',
     },
     publicKey: {
-        fontFamily: '"Proxima Nova", arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         color: '#93b0c1',
     },
 };

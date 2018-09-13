@@ -13,7 +13,8 @@ const styles: StyleSheet = {
     marginTop: '30px',
     marginBottom: '30px',
     border: 'solid 1px #303c49',
-    borderRadius: '4px'
+    borderRadius: '4px',
+    fontFamily: 'Lato, arial, sans-serif'
   },
 
   svgIcon: {
@@ -32,6 +33,7 @@ const styles: StyleSheet = {
   button: {
     color: '#93b0c1',
     borderColor: '#3b4a5a',
+    fontFamily: 'Lato, arial, sans-serif',
     '&:disabled': {
       color: '#48565f'
     }
@@ -46,7 +48,7 @@ const styles: StyleSheet = {
     textAlign: 'left',
     margin: '20px',
     color: '#fff',
-    fontFamily: '"Proxima Nova", arial, sans-serif',
+    fontFamily: 'Lato, arial, sans-serif',
     fontSize: '16px',
     fontWeight: 400,
     lineHeight: 1.5,

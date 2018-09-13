@@ -6,13 +6,13 @@ var react_jss_1 = require("react-jss");
 var price_summary_1 = require("./price-summary");
 var styles = {
     cryptoCurrencyValue: {
-        fontFamily: '"Proxima Nova", arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '40px',
         fontWeight: 300,
         color: '#ffffff'
     },
     currency: {
-        fontFamily: '"Proxima Nova", arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
         color: '#93b0c1'
     }
