@@ -80,8 +80,7 @@ var styles = {
         fontFamily: 'ProximaNovaRegIt, arial, sans-serif',
         fontStyle: 'italic',
         margin: '30px 0 45px',
-        color: '#FFF',
-        fontStyle: 'italic',
+        color: '#FFF'
     },
     edit: {
         cursor: 'pointer',
