@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LWS Wallet Connection Error should show LWS Wallet Connection Error 1`] = `
-<div>
+<div
+  className="Component-lwsError-0-1-4"
+>
   <div
-    className="Component-areaTitle-0-1-6"
+    className="Component-areaTitle-0-1-7"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-7"
+      className="MuiSvgIcon-root-1 Component-root-0-1-8"
       color={undefined}
       focusable="false"
       viewBox="0 0 68 74"
@@ -77,15 +79,15 @@ exports[`LWS Wallet Connection Error should show LWS Wallet Connection Error 1`]
     className="Component-form-0-1-3"
   >
     <p
-      className="Component-supportText-0-1-5"
+      className="Component-supportText-0-1-6"
     >
       A SelfKey ID is required to securely authenticate your identity with this website. Please create one in the SelfKey Identity Wallet and keep it open to proceed.
     </p>
     <div
-      className="Component-formSubmitRow-0-1-4"
+      className="Component-formSubmitRow-0-1-5"
     >
       <button
-        className="Component-root-0-1-8 Component-buttonSecondary-0-1-2"
+        className="Component-root-0-1-9 Component-buttonSecondary-0-1-2"
         onClick={undefined}
       >
         Retry

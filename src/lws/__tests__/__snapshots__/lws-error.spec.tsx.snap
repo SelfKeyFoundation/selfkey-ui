@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LWS Error Screen should show LWS Error Screen 1`] = `
-<div>
+<div
+  className="Component-lwsError-0-1-2"
+>
   <div
-    className="Component-areaTitle-0-1-4"
+    className="Component-areaTitle-0-1-5"
   >
     <span>
       icon
@@ -19,12 +21,12 @@ exports[`LWS Error Screen should show LWS Error Screen 1`] = `
     className="Component-form-0-1-1"
   >
     <p
-      className="Component-supportText-0-1-3"
+      className="Component-supportText-0-1-4"
     >
       test
     </p>
     <div
-      className="Component-formSubmitRow-0-1-2"
+      className="Component-formSubmitRow-0-1-3"
     >
       <button>
         retry
