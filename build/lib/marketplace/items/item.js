@@ -3,12 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var paragraph_1 = require("../../typography/paragraph");
 var headings_1 = require("../../typography/headings");
 var react_truncate_1 = require("react-truncate");
 var styles = {
     root: {
         width: '360px',
-        height: '312px',
+        height: '326px',
         marginTop: '30px',
         marginBottom: '30px',
         border: 'solid 1px #303c49',
@@ -36,13 +37,14 @@ var styles = {
     },
     body: {
         width: '320px',
-        textAlign: 'justify',
+        textAlign: 'left',
         margin: '20px',
         color: '#fff',
         fontFamily: 'ProximaNovaRegular',
         fontSize: '16px',
         fontWeight: 400,
-        lineHeight: 1.67
+        lineHeight: 1.5,
+        height: '130px',
     },
     footer: {
         margin: '20px',
@@ -58,7 +60,8 @@ exports.Item = react_jss_1.default(styles)(function (_a) {
                 React.createElement(core_1.Grid, { item: true, id: 'title', className: classes.title },
                     React.createElement(headings_1.H2, null, name))),
             React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body },
-                React.createElement(react_truncate_1.default, { lines: 5 }, description)),
+                React.createElement(paragraph_1.P, null,
+                    React.createElement(react_truncate_1.default, { lines: 5 }, description))),
             React.createElement(core_1.Grid, { item: true, id: 'footer', className: classes.footer },
                 React.createElement(core_1.Button, { variant: "outlined", className: classes.button }, "View")))));
 });

@@ -54,6 +54,7 @@ exports.styles = {
             fontSize: '12px',
             color: '#93B0C1',
             textTransform: 'uppercase',
+            padding: '0px 0px 5px 0px',
         },
     },
     radioReplace: {
@@ -75,6 +76,9 @@ exports.styles = {
         '&:hover': {
             cursor: 'pointer',
             background: '#374a5a',
+        },
+        '& svg': {
+            padding: '0px 15px 0px 0px',
         },
         maxWidth: 'calc(50% - 15px)',
         width: '100%',
@@ -111,7 +115,7 @@ exports.styles = {
     supportText: {
         textAlign: 'center',
         lineHeight: '22px',
-        fontFamily: 'ProximaNovaSemibold',
+        fontFamily: 'ProximaNovaSemibold, arial, sans-serif',
         color: '#C5DCE9',
         padding: '0 0 30px',
     },
