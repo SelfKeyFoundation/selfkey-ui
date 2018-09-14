@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var _ = require("lodash");
@@ -11,8 +22,8 @@ var edit_1 = require("../icons/edit");
 var lws_button_1 = require("./lws-button");
 var styles = {
     form: common_style_1.default.form,
-    buttonPrimary: common_style_1.default.buttonPrimary,
-    buttonSecondary: common_style_1.default.buttonSecondary,
+    buttonPrimary: __assign({}, common_style_1.default.buttonPrimary, { fontWeight: 700 }),
+    buttonSecondary: __assign({}, common_style_1.default.buttonSecondary, { fontWeight: 700 }),
     requiredInfo: {
         '& a': {
             color: '#23E6FE',
@@ -71,6 +82,7 @@ var styles = {
         '& button': {
             maxWidth: '215px',
             marginTop: '0px',
+            fontWeight: 700
         },
     },
     tocMessage: {
@@ -81,7 +93,7 @@ var styles = {
         fontStyle: 'italic',
         fontFamily: 'Lato, arial, sans-serif',
         margin: '30px 0 45px',
-        color: '#FFF',
+        color: '#FFF'
     },
     edit: {
         cursor: 'pointer',

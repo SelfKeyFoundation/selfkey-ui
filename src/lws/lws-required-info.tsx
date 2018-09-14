@@ -88,7 +88,7 @@ const styles: StyleSheet = {
 		fontStyle: 'italic',
 		fontFamily: 'Lato, arial, sans-serif',
 		margin: '30px 0 45px',
-		color: '#FFF',
+		color: '#FFF'
 	},
 
 	edit: {

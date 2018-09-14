@@ -12,6 +12,7 @@ var styles = {
         marginTop: '15px',
         '& button': {
             marginTop: '30px',
+            fontWeight: 700
         },
     },
     supportText: {

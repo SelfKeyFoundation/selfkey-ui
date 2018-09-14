@@ -7,7 +7,13 @@ exports.setup = function () {
     jss_1.default.setup(jss_preset_default_1.default());
     jss_1.default.createStyleSheet(reset).attach();
     var styles = {
-        '@global': { "body": { fontFamily: "'Lato', arial, sans-serif" } },
+        '@global': {
+            body: {
+                fontFamily: 'Lato, arial, sans-serif',
+                fontSmoothing: 'antialiased',
+                osxFontSmoothing: 'grayscale',
+            },
+        },
     };
     jss_1.default.createStyleSheet(styles).attach();
 };

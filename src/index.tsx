@@ -31,3 +31,4 @@ export { LWSAuthError } from './lws/lws-auth-error';
 export { LWSLoading } from './lws/lws-loading';
 export { LWSButton } from './lws/lws-button';
 export { Marketplace } from './marketplace/marketplace';
+export { TransactionHistory } from './transaction/transaction-history';

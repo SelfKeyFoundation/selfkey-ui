@@ -82,6 +82,7 @@ exports.styles = {
             padding: '0px 15px 0px 0px',
         },
         fontFamily: 'Lato, arial, sans-serif',
+        fontWeight: 700,
         maxWidth: 'calc(50% - 15px)',
         width: '100%',
     },
@@ -109,9 +110,10 @@ exports.styles = {
         lineHeight: '20px',
         padding: '10px',
         height: '50px',
+        fontWeight: 700
     },
-    buttonPrimary: common_style_1.default.buttonPrimary,
-    buttonSecondary: common_style_1.default.buttonSecondary,
+    buttonPrimary: __assign({}, common_style_1.default.buttonPrimary, { fontWeight: 700 }),
+    buttonSecondary: __assign({}, common_style_1.default.buttonSecondary, { fontWeight: 700 }),
     selected: {
         border: "2px solid #1CA9BA",
     },
@@ -121,6 +123,7 @@ exports.styles = {
         fontFamily: 'Lato, arial, sans-serif',
         color: '#C5DCE9',
         padding: '0 0 30px',
+        fontSize: '16px'
     },
     validationMsg: {
         display: 'block',
