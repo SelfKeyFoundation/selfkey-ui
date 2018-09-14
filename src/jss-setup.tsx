@@ -6,7 +6,13 @@ export const setup = () => {
 	jss.setup(preset());
 	jss.createStyleSheet(reset).attach();
 	const styles: any = {
-		'@global': { "body": { fontFamily: "'Lato', arial, sans-serif" } },
+		'@global': {
+			body: {
+				fontFamily: 'Lato, arial, sans-serif',
+				fontSmoothing: 'antialiased',
+				osxFontSmoothing: 'grayscale',
+			},
+		},
 	};
 	jss.createStyleSheet(styles).attach();
 };

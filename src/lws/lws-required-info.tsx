@@ -11,11 +11,8 @@ import { Website } from './lws-common';
 
 const styles: StyleSheet = {
 	form: CommonStyle.form,
-
-	buttonPrimary: CommonStyle.buttonPrimary,
-
-	buttonSecondary: CommonStyle.buttonSecondary,
-
+	buttonPrimary: { ...CommonStyle.buttonPrimary, fontWeight: 700 },
+	buttonSecondary: { ...CommonStyle.buttonSecondary, fontWeight: 700 },
 	requiredInfo: {
 		'& a': {
 			color: '#23E6FE',
@@ -79,6 +76,7 @@ const styles: StyleSheet = {
 		'& button': {
 			maxWidth: '215px',
 			marginTop: '0px',
+			fontWeight: 700
 		},
 	},
 

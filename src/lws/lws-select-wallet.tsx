@@ -64,6 +64,7 @@ export const styles: StyleSheet = {
 			padding: '0px 15px 0px 0px',
 		},
 		fontFamily: 'Lato, arial, sans-serif',
+		fontWeight: 700,
 		maxWidth: 'calc(50% - 15px)',
 		width: '100%',
 	},
@@ -94,11 +95,11 @@ export const styles: StyleSheet = {
 		lineHeight: '20px',
 		padding: '10px',
 		height: '50px',
+		fontWeight: 700
 	},
 
-	buttonPrimary: CommonStyle.buttonPrimary,
-
-	buttonSecondary: CommonStyle.buttonSecondary,
+	buttonPrimary: { ...CommonStyle.buttonPrimary, fontWeight: 700 },
+	buttonSecondary: { ...CommonStyle.buttonSecondary, fontWeight: 700 },
 
 	selected: {
 		border: `2px solid #1CA9BA`,
@@ -110,6 +111,7 @@ export const styles: StyleSheet = {
 		fontFamily: 'Lato, arial, sans-serif',
 		color: '#C5DCE9',
 		padding: '0 0 30px',
+		fontSize: '16px'
 	},
 
 	validationMsg: {

@@ -13,6 +13,7 @@ const styles: StyleSheet = {
 		marginTop: '15px',
 		'& button': {
 			marginTop: '30px',
+			fontWeight: 700
 		},
 	},
 
