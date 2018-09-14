@@ -23,6 +23,7 @@ const styles: StyleSheet = {
 		fontFamily: 'Lato, arial, sans-serif',
 		color: '#C5DCE9',
 		padding: '0 0 30px',
+		fontSize: '16px'
 	},
 
 	areaTitle: {
