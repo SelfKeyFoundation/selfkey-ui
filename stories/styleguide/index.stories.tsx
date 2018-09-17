@@ -265,7 +265,24 @@ marketplaceStory.addWithJSX('WithoutBalanceModal', () => (<UnlockBox><WithoutBal
 	{
 			name: 'TagCash',
 			url: 'https://tagcash.com/'
+	},
+	{
+			name: 'Gatecoin',
+			url: 'https://gatecoin.com/'
+	},
+	{
+			name: 'WandX',
+			url: 'https://www.wandx.co/'
+	},
+	{
+			name: 'Kyber Network',
+			url: 'https://kyber.network/'
+	},
+	{
+			name: 'TagCash',
+			url: 'https://tagcash.com/'
 	}
+	
 ]} /></UnlockBox>)); 
 
 const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };

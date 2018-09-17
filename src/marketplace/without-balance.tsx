@@ -1,6 +1,6 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet, ClassNameMap } from 'react-jss';
-import { Grid } from '@material-ui/core';
+import { Grid, List, ListItem } from '@material-ui/core';
 import { H3 } from '../typography/headings';
 import { P } from '../typography/paragraph';
 import { ShieldIcon } from '../icons/shield';
@@ -14,7 +14,7 @@ const styles: StyleSheet = {
   },
 
   exchangeItem: {
-    listStyleType: 'circle',
+    listStyleType: 'circle !important',
     color: '#FFFFFF',
     fontFamily: 'Proxima Nova',
     fontSize: '18px',
@@ -30,8 +30,17 @@ const styles: StyleSheet = {
     fontFamily: 'Proxima Nova',	
     fontSize: '18px',
     lineHeight: '30px'
-  }
+  },
 
+  exchanges: {
+    columnCount: 2, 
+    marginLeft: '-15px'
+  },
+
+  circle: {
+    fontSize: '16px',
+    paddingRight: '10px'
+  }
 };
 
 export type Exchange = {
@@ -46,9 +55,9 @@ export type WithoutBalanceProps = {
 const getExchanges = (exchanges: Array<Exchange>, classes: Partial<ClassNameMap<string>>) => {
   return exchanges.map(exchange => {
     return (
-      <Grid item component='li' className={classes.exchangeItem}>
-        <a href={exchange.url} target='_blank'>{exchange.name}</a>
-      </Grid>
+      <ListItem className={classes.exchangeItem}>
+        <a href={exchange.url} target='_blank'><span className={classes.circle}>&#9675;</span> {exchange.name}</a>
+      </ListItem>
     );
   })
 }
@@ -68,9 +77,9 @@ export const WithoutBalance = injectSheet(styles)<WithoutBalanceProps>(({classes
             <Grid item>
               <P>To access this marketplace, you will need a deposit of 25 KEY tokens. This deposit is reclaimable after 30 days. KEY tokens are listed on many exchanges worldwide:</P>
             </Grid>
-            <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={24} component='ul'>
+            <List className={classes.exchanges}>
               {getExchanges(exchanges, classes)}
-            </Grid>
+            </List>
           </Grid>
         </Grid>
       </Grid>  
