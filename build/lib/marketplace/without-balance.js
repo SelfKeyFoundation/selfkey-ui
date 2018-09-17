@@ -14,7 +14,7 @@ var styles = {
         lineHeight: '24px'
     },
     exchangeItem: {
-        listStyleType: 'circle',
+        listStyleType: 'circle !important',
         color: '#FFFFFF',
         fontFamily: 'Proxima Nova',
         fontSize: '18px',
@@ -29,12 +29,23 @@ var styles = {
         fontFamily: 'Proxima Nova',
         fontSize: '18px',
         lineHeight: '30px'
+    },
+    exchanges: {
+        columnCount: 2,
+        marginLeft: '-15px'
+    },
+    circle: {
+        fontSize: '16px',
+        paddingRight: '10px'
     }
 };
 var getExchanges = function (exchanges, classes) {
     return exchanges.map(function (exchange) {
-        return (React.createElement(core_1.Grid, { item: true, component: 'li', className: classes.exchangeItem },
-            React.createElement("a", { href: exchange.url, target: '_blank' }, exchange.name)));
+        return (React.createElement(core_1.ListItem, { className: classes.exchangeItem },
+            React.createElement("a", { href: exchange.url, target: '_blank' },
+                React.createElement("span", { className: classes.circle }, "\u25CB"),
+                " ",
+                exchange.name)));
     });
 };
 exports.WithoutBalance = react_jss_1.default(styles)(function (_a) {
@@ -50,7 +61,7 @@ exports.WithoutBalance = react_jss_1.default(styles)(function (_a) {
                     React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start', spacing: 16 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement(paragraph_1.P, null, "To access this marketplace, you will need a deposit of 25 KEY tokens. This deposit is reclaimable after 30 days. KEY tokens are listed on many exchanges worldwide:")),
-                        React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start', spacing: 24, component: 'ul' }, getExchanges(exchanges, classes))))))));
+                        React.createElement(core_1.List, { className: classes.exchanges }, getExchanges(exchanges, classes))))))));
 });
 exports.default = exports.WithoutBalance;
 //# sourceMappingURL=without-balance.js.map
