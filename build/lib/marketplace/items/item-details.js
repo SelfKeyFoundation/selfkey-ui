@@ -173,7 +173,7 @@ exports.ItemDetails = react_jss_1.default(styles)(function (_a) {
                                             React.createElement("span", null,
                                                 React.createElement("strong", null, "FIAT Supported:"),
                                                 " ",
-                                                item.fiat_supported.toString().replace(/,/g, ' '),
+                                                (item.fiat_supported) ? item.fiat_supported.toString().replace(/,/g, ' ') : '',
                                                 " "),
                                             React.createElement("span", null,
                                                 React.createElement("strong", null, "Margin Trading:"),

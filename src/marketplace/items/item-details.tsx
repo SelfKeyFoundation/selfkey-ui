@@ -213,7 +213,7 @@ export const ItemDetails = injectSheet(styles)<ItemDetailsProps>(({classes, chil
                   <FormControl component="fieldset" className={classes.formControl}>
                     <FormGroup className={classes.formGroup}>
                       <span><strong>FIAT Payment:</strong> {item.fiat_payments} </span>
-                      <span><strong>FIAT Supported:</strong> {item.fiat_supported.toString().replace(/,/g, ' ')} </span>
+                      <span><strong>FIAT Supported:</strong> {(item.fiat_supported)?item.fiat_supported.toString().replace(/,/g, ' '): ''} </span>
                       <span><strong>Margin Trading:</strong> {item.margin_trading} </span>
                       <span><strong>KYC/AML:</strong> {item.kyc_aml} </span>
                       <span><strong>Excluded Resident:</strong> {item.excluded_residents} </span>
