@@ -11,11 +11,8 @@ import { Website } from './lws-common';
 
 const styles: StyleSheet = {
 	form: CommonStyle.form,
-
-	buttonPrimary: CommonStyle.buttonPrimary,
-
-	buttonSecondary: CommonStyle.buttonSecondary,
-
+	buttonPrimary: { ...CommonStyle.buttonPrimary, fontWeight: 700 },
+	buttonSecondary: { ...CommonStyle.buttonSecondary, fontWeight: 700 },
 	requiredInfo: {
 		'& a': {
 			color: '#23E6FE',
@@ -24,6 +21,7 @@ const styles: StyleSheet = {
 				textDecoration: 'underline',
 			},
 		},
+		fontFamily: 'Lato, arial, sans-serif'
 	},
 
 	areaTitle: {
@@ -78,6 +76,7 @@ const styles: StyleSheet = {
 		'& button': {
 			maxWidth: '215px',
 			marginTop: '0px',
+			fontWeight: 700
 		},
 	},
 
@@ -86,8 +85,8 @@ const styles: StyleSheet = {
 		padding: '20px',
 		fontSize: '12px',
 		lineHeight: '15px',
-		fontFamily: 'ProximaNovaRegIt, arial, sans-serif',
 		fontStyle: 'italic',
+		fontFamily: 'Lato, arial, sans-serif',
 		margin: '30px 0 45px',
 		color: '#FFF'
 	},

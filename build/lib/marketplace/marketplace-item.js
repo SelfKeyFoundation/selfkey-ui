@@ -12,7 +12,8 @@ var styles = {
         marginTop: '30px',
         marginBottom: '30px',
         border: 'solid 1px #303c49',
-        borderRadius: '4px'
+        borderRadius: '4px',
+        fontFamily: 'Lato, arial, sans-serif'
     },
     title: {
         margin: '20px'
@@ -29,6 +30,7 @@ var styles = {
     },
     button: {
         color: '#93b0c1',
+        fontFamily: 'Lato, arial, sans-serif',
         borderColor: '#3b4a5a',
         '&:disabled': {
             color: '#48565f'
@@ -39,7 +41,7 @@ var styles = {
         textAlign: 'left',
         margin: '20px',
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '16px',
         fontWeight: 400,
         lineHeight: 1.5,

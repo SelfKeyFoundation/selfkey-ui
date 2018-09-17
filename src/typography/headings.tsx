@@ -5,7 +5,7 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 const styles: StyleSheet = {
     base: {
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular, arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         fontWeight: 400
     },
 

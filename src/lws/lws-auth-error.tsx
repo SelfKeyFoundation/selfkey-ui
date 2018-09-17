@@ -7,9 +7,9 @@ import { LWSError } from './lws-error';
 import { Website } from './lws-common';
 
 const styles: StyleSheet = {
-	buttonPrimary: CommonStyle.buttonPrimary,
+	buttonPrimary: { ...CommonStyle.buttonPrimary, fontWeight: 700 },
 
-	buttonSecondary: CommonStyle.buttonSecondary,
+	buttonSecondary: { ...CommonStyle.buttonSecondary, fontWeight: 700 },
 };
 
 export type LWSAuthErrorProps = {

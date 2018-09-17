@@ -33,7 +33,7 @@ exports.styles = {
     copyButtonSpan: {
         fontSize: "11px",
         lineHeight: "12px",
-        fontFamily: "ProximaNovaRegular",
+        fontFamily: 'Lato, arial, sans-serif',
         letterSpacing: "normal",
         color: "#93b0c1"
     }

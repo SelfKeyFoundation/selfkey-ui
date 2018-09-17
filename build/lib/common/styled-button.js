@@ -5,6 +5,7 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     button: {
+        fontFamily: 'Lato, arial, sans-serif',
         backgroundColor: '#435160',
         color: '#FFFFFF',
         '&:hover': {

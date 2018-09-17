@@ -22,8 +22,11 @@ var visibility_on_1 = require("../icons/visibility-on");
 var visibility_off_1 = require("../icons/visibility-off");
 exports.styles = {
     cryptoPriceTable: {
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         width: '1140px',
+        '& td, & th': {
+            fontFamily: 'Lato, arial, sans-serif!important'
+        }
     },
     table: {
         borderSpacing: '0px',

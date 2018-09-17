@@ -30,7 +30,7 @@ var styles = {
         textAlign: 'justify',
         margin: '20px',
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '16px',
         fontWeight: 400,
         lineHeight: 1.67
@@ -77,8 +77,8 @@ var styles = {
     }
 };
 var getKYCRequirements = function (requirements, classes) {
-    return requirements.map(function (requirement) {
-        return (React.createElement(core_1.Grid, { item: true },
+    return requirements.map(function (requirement, idx) {
+        return (React.createElement(core_1.Grid, { item: true, key: idx },
             React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-between' },
                 React.createElement(core_1.Grid, { item: true, className: classes.bullet },
                     React.createElement(tick_1.TickIcon, null)),
