@@ -14,7 +14,7 @@ var styles = {
         lineHeight: '24px'
     },
     exchangeItem: {
-        listStyleType: 'circle !important',
+        columnBreakInside: 'avoid',
         color: '#FFFFFF',
         fontFamily: 'Proxima Nova',
         fontSize: '18px',
