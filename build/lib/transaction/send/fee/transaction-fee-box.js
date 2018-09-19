@@ -31,7 +31,6 @@ var actual_transaction_fee_box_1 = require("./actual-transaction-fee-box");
 var common_style_1 = require("../../../common/common-style");
 var core_1 = require("@material-ui/core");
 var icons_1 = require("@material-ui/icons");
-var Checkbox_1 = require("@material-ui/core/Checkbox");
 exports.styles = {
     container: {
         fontFamily: common_style_1.default.fontFamily
@@ -144,24 +143,19 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     function TransactionFeeBoxComponent(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            showAdvanced: props.showAdvanced || false,
-            gasLimit: ''
+            showAdvanced: false
         };
         return _this;
     }
     TransactionFeeBoxComponent.prototype.renderActualTransactionFeeBox = function () {
-        var _a = this.props, ethValue = _a.ethValue, usdValue = _a.usdValue;
-        return (React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, { ethValue: ethValue, usdValue: usdValue }));
+        return (React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, null));
     };
     TransactionFeeBoxComponent.prototype.toggleShowAdvanced = function () {
         var showAdvanced = this.state.showAdvanced;
         this.setState(__assign({}, this.state, { showAdvanced: !showAdvanced }));
     };
-    TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
-        this.setState(__assign({}, this.state, { gasLimit: event.target.value }));
-    };
     TransactionFeeBoxComponent.prototype.renderEdvancedContent = function () {
-        var _a = this.props, classes = _a.classes, nonce = _a.nonce, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction;
+        var _a = this.props, classes = _a.classes, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction;
         return (React.createElement("div", { className: classes.fullWidth },
             React.createElement(core_1.Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
@@ -170,16 +164,10 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
-                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: this.setGasLimit.bind(this), className: classes.formControl })),
-                    React.createElement(core_1.FormControlLabel, { control: React.createElement(Checkbox_1.default, { classes: {
-                                root: classes.checkboxRoot,
-                                checked: classes.checkboxChecked,
-                            }, color: undefined, value: "SomeValue" }), classes: {
-                            label: classes.checkboxLabel,
-                        }, label: "Auto Calculate" })),
+                        React.createElement("input", { type: "text", className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
-                    React.createElement("input", { disabled: true, value: nonce, type: "text", className: classes.formControl }))),
+                    React.createElement("input", { disabled: true, type: "text", className: classes.formControl }))),
             React.createElement(core_1.Grid, { container: true, justify: "center", alignItems: "flex-start" }, this.renderActualTransactionFeeBox()),
             React.createElement(core_1.Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement("div", { className: classes.currNetworkStatusContainer },

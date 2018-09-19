@@ -3,9 +3,8 @@ import * as React from 'react';
 import injectSheet, { WithStyles, StyleSheet, StyledComponentProps, ClassNameMap } from 'react-jss';
 import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
 import CommonStyle from '../../../common/common-style';
-import { Grid, FormControlLabel } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { Loop as LoopIcon } from '@material-ui/icons';
-import Checkbox from '@material-ui/core/Checkbox';
 
 export const styles: StyleSheet = {
     container: {
@@ -124,18 +123,12 @@ export type EthGasStationInfo = {
 };
 
 export type TransactionFeeBoxProps = {
-    ethValue: string,
-    usdValue: string,
-    gasLimit: string,
-    nonce: string,
-    showAdvanced?: boolean,
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void)
 }
 
 export type TransactionFeeBoxState = {
     showAdvanced: boolean
-    gasLimit: string
 };
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
@@ -146,15 +139,13 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
         super(props);
 
         this.state = {
-            showAdvanced: props.showAdvanced || false,
-            gasLimit: ''
+            showAdvanced:false
         }
     }
 
     renderActualTransactionFeeBox() {
-        const { ethValue, usdValue } = this.props;
         return (
-            <ActualTransactionFeeBox ethValue={ethValue} usdValue={usdValue} />
+            <ActualTransactionFeeBox/>
         );
     }
 
@@ -163,12 +154,8 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
         this.setState({ ...this.state, showAdvanced: !showAdvanced })
     }
 
-    setGasLimit(event: React.ChangeEvent<HTMLInputElement>) {
-        this.setState({ ...this.state, gasLimit: event.target.value })
-    }
-
     renderEdvancedContent() {
-        let { classes, nonce, ethGasStationInfo, reloadEthGasStationInfoAction } = this.props;
+        let { classes, ethGasStationInfo, reloadEthGasStationInfoAction } = this.props;
         return (
             <div className={classes.fullWidth}>
                 <Grid container className={classes.inputsContainer} direction="row" justify="space-between" alignItems="flex-start">
@@ -180,27 +167,12 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                     <div>
                         <div className={classes.formGroup}>
                             <label>Gas Limit</label>
-                            <input type="text" value={this.state.gasLimit} onChange={this.setGasLimit.bind(this)} className={classes.formControl} />
+                            <input type="text" className={classes.formControl} />
                         </div>
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    classes={{
-                                        root: classes.checkboxRoot,
-                                        checked: classes.checkboxChecked,
-                                    }}
-                                    color={undefined}
-                                    value="SomeValue"
-                                />
-                            }
-                            classes={{
-                                label: classes.checkboxLabel,
-                            }}
-                            label="Auto Calculate" />
                     </div>
                     <div className={classes.formGroup}>
                         <label>Nonce</label>
-                        <input disabled={true} value={nonce} type="text" className={classes.formControl} />
+                        <input disabled={true} type="text" className={classes.formControl} />
                     </div>
                 </Grid>
 

@@ -8,10 +8,15 @@ const ethGasStationInfo = {
     fast: '50'
 }
 
-var fn = () => {
+const getTotalBalance = () =>{
+    console.log('aq shemodis zalian bevrjel ha');
+    return (Math.random()*10).toString();
+}
 
+const onSendAction = (data: any) => {
+    console.log(data);
 };
 
 export const SendTransaction = () => (
-    <TransactionSendBox ethValue="0.00000008" onAddressFieldChange={fn} cryptoCurrency ='ETH' nonce= "1" usdValue="105.1" gasLimit="2100" showAdvanced={false} ethGasStationInfo={ethGasStationInfo}/>
+    <TransactionSendBox cryptoCurrency="ETH" onSendAction={onSendAction} totalBalance={getTotalBalance()} ethGasStationInfo={ethGasStationInfo}/>
 );
