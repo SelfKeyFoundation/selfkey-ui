@@ -211,7 +211,7 @@ marketplaceStory.addWithJSX('ItemDetails', () => <ItemDetails item={
 		logo: [{filename: 'full_GatecoinLogo.png', url:'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png'}],
 		status: 'Active',
 		integration: 'Unlock Marketplace',
-		description: 'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets.',
+		description: 'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
 		location: 'Hong Kong',
 		year_launched: 2013,
 		coin_pairs: '72',
@@ -224,7 +224,7 @@ marketplaceStory.addWithJSX('ItemDetails', () => <ItemDetails item={
 		excluded_residents: ['United States'],
 		url: 'http://www.gatecoin.com',
 		email: 'support@gatecoin.com',
-		kyc_template: ['First Name', 'Last Name', 'Country Of Residence', 'National ID', 'National ID Self'], 
+		kyc_template: [{name: 'First Name', type: 'metadata', isEntered: true}, {name: 'Last Name', type: 'metadata', isEntered: true}, {name: 'Country Of Residence', type: 'metadata', isEntered: true}, {name: 'National ID', type: 'document', isEntered: false}, {name: 'National ID Self', type: 'document', isEntered: false}], 
 	}
 } hasBalance={false}
 />); 
