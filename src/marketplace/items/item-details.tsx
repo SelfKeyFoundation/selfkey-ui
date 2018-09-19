@@ -232,78 +232,76 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
           <Button variant="outlined" className={classes.button} onClick={backAction}>&#60; Back</Button>
         </Grid> 
         <Grid container className={classes.root}>
-          <Grid item>
-            <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
-              <Grid item id='icon' className={classes.icon}>
-                <img src={item.logo[0].url}/>
-              </Grid>
-              <Grid item id='title' className={classes.title}>
-                <H2>{item.name}</H2>
-              </Grid>
+          <Grid container id='header' direction='row' justify='flex-start' alignItems='center' className={classes.header}>
+            <Grid item id='icon' className={classes.icon}>
+              <img src={item.logo[0].url}/>
             </Grid>
-            <Grid item id='body' className={classes.body}>
-              <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={32}>
-                <Grid item id='description'>
-                  <Grid container direction='row' justify='center' alignItems='flex-start' spacing={40}>
-                    <Grid item xs={8}>
-                      <P className={classes.description}>{this.renderDescription(item.description)}</P>
-                      <Button variant="outlined" className={`${classes.button} ${classes.buttonDescription}`} onClick={() => this.handleViewAllDetails()}>{(this.state.isDescriptionTruncated)?'VIEW ALL DETAILS':'COLLAPSE DETAILS'}</Button>
-                    </Grid>
-                    <Grid item xs={4}>
-                      <StyledButton  onClick={() => this.unlockActionCall(unlockAction, item, hasBalance)}>
-                        {item.status === 'Active' &&
-                          <UnlockIcon/>
-                        } 
-                        {item.integration}
-                      </StyledButton>
-                    </Grid>
+            <Grid item id='title' className={classes.title}>
+              <H2>{item.name}</H2>
+            </Grid>
+          </Grid>
+          <Grid item id='body' className={classes.body}>
+            <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={32}>
+              <Grid item id='description'>
+                <Grid container direction='row' justify='center' alignItems='flex-start' spacing={40}>
+                  <Grid item xs={8}>
+                    <P className={classes.description}>{this.renderDescription(item.description)}</P>
+                    <Button variant="outlined" className={`${classes.button} ${classes.buttonDescription}`} onClick={() => this.handleViewAllDetails()}>{(this.state.isDescriptionTruncated)?'VIEW ALL DETAILS':'COLLAPSE DETAILS'}</Button>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <StyledButton  onClick={() => this.unlockActionCall(unlockAction, item, hasBalance)}>
+                      {item.status === 'Active' &&
+                        <UnlockIcon/>
+                      } 
+                      {item.integration}
+                    </StyledButton>
                   </Grid>
                 </Grid>
-                <Grid item className={classes.dividerWrapper}>
-                  <Divider className={classes.divider}/>
-                </Grid>
-                <Grid item id='highlights'>
-                  <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
-                    <Grid item>
-                      <H3>Highlights</H3>
-                    </Grid>
-                    <Grid item>
-                      <FormControl component="fieldset" className={classes.formControl}>
-                        <FormGroup className={classes.formGroup}>
-                          <span><strong>Location:</strong> {item.location} </span>
-                          <span><strong>Year Launched:</strong> {item.year_launched} </span>
-                          <span><strong>Coin Pairs:</strong> {item.coin_pairs} </span>
-                          <span><strong>Maker Fee:</strong> {item.maker_fee} </span>
-                          <span><strong>Taker Fee:</strong> {item.taker_fee} </span>
-                          <span><strong>URL:</strong> {item.url} </span>
-                        </FormGroup>
-                      </FormControl> 
-                      <FormControl component="fieldset" className={classes.formControl}>
-                        <FormGroup className={classes.formGroup}>
-                          <span><strong>FIAT Payment:</strong> {item.fiat_payments} </span>
-                          <span><strong>FIAT Supported:</strong> {(item.fiat_supported)?item.fiat_supported.toString().replace(/,/g, ' '): ''} </span>
-                          <span><strong>Margin Trading:</strong> {item.margin_trading} </span>
-                          <span><strong>KYC/AML:</strong> {item.kyc_aml} </span>
-                          <span><strong>Excluded Resident:</strong> {item.excluded_residents} </span>
-                          <span><strong>Contact:</strong> {item.email} </span>
-                        </FormGroup>
-                      </FormControl>  
-                    </Grid>
+              </Grid>
+              <Grid item className={classes.dividerWrapper}>
+                <Divider className={classes.divider}/>
+              </Grid>
+              <Grid item id='highlights'>
+                <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
+                  <Grid item>
+                    <H3>Highlights</H3>
+                  </Grid>
+                  <Grid item>
+                    <FormControl component="fieldset" className={classes.formControl}>
+                      <FormGroup className={classes.formGroup}>
+                        <span><strong>Location:</strong> {item.location} </span>
+                        <span><strong>Year Launched:</strong> {item.year_launched} </span>
+                        <span><strong>Coin Pairs:</strong> {item.coin_pairs} </span>
+                        <span><strong>Maker Fee:</strong> {item.maker_fee} </span>
+                        <span><strong>Taker Fee:</strong> {item.taker_fee} </span>
+                        <span><strong>URL:</strong> {item.url} </span>
+                      </FormGroup>
+                    </FormControl> 
+                    <FormControl component="fieldset" className={classes.formControl}>
+                      <FormGroup className={classes.formGroup}>
+                        <span><strong>FIAT Payment:</strong> {item.fiat_payments} </span>
+                        <span><strong>FIAT Supported:</strong> {(item.fiat_supported)?item.fiat_supported.toString().replace(/,/g, ' '): ''} </span>
+                        <span><strong>Margin Trading:</strong> {item.margin_trading} </span>
+                        <span><strong>KYC/AML:</strong> {item.kyc_aml} </span>
+                        <span><strong>Excluded Resident:</strong> {item.excluded_residents} </span>
+                        <span><strong>Contact:</strong> {item.email} </span>
+                      </FormGroup>
+                    </FormControl>  
                   </Grid>
                 </Grid>
-                <Grid item className={classes.dividerWrapper}>
-                  <Divider className={classes.divider}/>
-                </Grid>
-                <Grid item id='requirements'>
-                  <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
-                    <Grid item>
-                      <H3>KYC Requirements</H3>
-                    </Grid>
-                    <Grid item>
-                      <List className={classes.requirementList}>
-                        {this.getKYCRequirements(item.kyc_template, classes)}
-                      </List> 
-                    </Grid>
+              </Grid>
+              <Grid item className={classes.dividerWrapper}>
+                <Divider className={classes.divider}/>
+              </Grid>
+              <Grid item id='requirements'>
+                <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
+                  <Grid item>
+                    <H3>KYC Requirements</H3>
+                  </Grid>
+                  <Grid item>
+                    <List className={classes.requirementList}>
+                      {this.getKYCRequirements(item.kyc_template, classes)}
+                    </List> 
                   </Grid>
                 </Grid>
               </Grid>
