@@ -5,7 +5,7 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var headings_1 = require("../typography/headings");
 var paragraph_1 = require("../typography/paragraph");
-var shield_1 = require("../icons/shield");
+var warning_shield_1 = require("../icons/warning-shield");
 var styles = {
     headerText: {
         color: '#E98548',
@@ -52,7 +52,7 @@ exports.WithoutBalance = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, exchanges = _a.exchanges;
     return (React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
         React.createElement(core_1.Grid, { item: true, xs: 2 },
-            React.createElement(shield_1.ShieldIcon, null)),
+            React.createElement(warning_shield_1.WarningShieldIcon, null)),
         React.createElement(core_1.Grid, { item: true, xs: 10 },
             React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
                 React.createElement(core_1.Grid, { item: true, id: 'header' },

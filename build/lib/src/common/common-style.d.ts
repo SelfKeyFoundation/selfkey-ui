@@ -4,7 +4,6 @@ declare const CommonStyle: {
         minHeight: string;
     };
     buttonPrimary: {
-        fontFamily: string;
         color: string;
         background: string;
         border: number;
@@ -14,7 +13,6 @@ declare const CommonStyle: {
         };
     };
     buttonSecondary: {
-        fontFamily: string;
         marginTop: string;
         color: string;
         background: string;
@@ -25,7 +23,6 @@ declare const CommonStyle: {
         };
     };
     areaHeader: {
-        fontFamily: string;
         textAlign: string;
     };
 };

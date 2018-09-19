@@ -3,7 +3,7 @@ import injectSheet, { StyleSheet, ClassNameMap } from 'react-jss';
 import { Grid, List, ListItem } from '@material-ui/core';
 import { H3 } from '../typography/headings';
 import { P } from '../typography/paragraph';
-import { ShieldIcon } from '../icons/shield';
+import { WarningShieldIcon } from '../icons/warning-shield';
 
 const styles: StyleSheet = {
   headerText: {
@@ -65,7 +65,7 @@ const getExchanges = (exchanges: Array<Exchange>, classes: Partial<ClassNameMap<
 export const WithoutBalance = injectSheet(styles)<WithoutBalanceProps>(({classes, children, exchanges}) => (
   <Grid container direction='row' justify='flex-start' alignItems='flex-start'>
     <Grid item xs={2}>
-      <ShieldIcon/>
+      <WarningShieldIcon/>
     </Grid>
     <Grid item xs={10}>
       <Grid container direction='column' justify='flex-start' alignItems='flex-start'>
