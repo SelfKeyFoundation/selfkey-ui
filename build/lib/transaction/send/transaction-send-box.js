@@ -140,16 +140,16 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         return (React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, this.props)));
     };
     TransactionSendBoxComponent.prototype.render = function () {
-        var _a = this.props, address = _a.address, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, onAddressFieldChange = _a.onAddressFieldChange, onAmountInputChange = _a.onAmountInputChange, onSelectAllAmount = _a.onSelectAllAmount, onSendAction = _a.onSendAction, amountUsd = _a.amountUsd;
+        var _a = this.props, address = _a.address, amount = _a.amount, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, onAddressFieldChange = _a.onAddressFieldChange, onAmountInputChange = _a.onAmountInputChange, onSelectAllAmount = _a.onSelectAllAmount, onSendAction = _a.onSendAction, amountUsd = _a.amountUsd;
         var sendAmountClass = classes.input + " " + classes.amountInput; // ${sendAmount.error ? classes.inputError: ''}`;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
-            React.createElement("input", { onChange: onAddressFieldChange, value: address, className: addressInputClass, placeholder: "Send to Address" }),
+            React.createElement("input", { type: 'text', onChange: onAddressFieldChange, defaultValue: address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
             React.createElement("div", { className: classes.amountContainer },
                 React.createElement("button", { onClick: onSelectAllAmount, className: classes.selectAllAmountBtn }, " ALL "),
-                React.createElement("input", { type: 'text', onChange: onAmountInputChange, className: sendAmountClass })),
+                React.createElement("input", { type: 'number', onChange: onAmountInputChange, defaultValue: String(amount), className: sendAmountClass })),
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null,
                     " ",
