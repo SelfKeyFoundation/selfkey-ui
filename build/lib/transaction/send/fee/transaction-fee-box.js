@@ -144,8 +144,8 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     function TransactionFeeBoxComponent(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            showAdvanced: props.showAdvanced || false,
-            gasLimit: ''
+            showAdvanced: false,
+            gasLimit: 0
         };
         return _this;
     }
@@ -158,7 +158,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         this.setState(__assign({}, this.state, { showAdvanced: !showAdvanced }));
     };
     TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
-        this.setState(__assign({}, this.state, { gasLimit: event.target.value }));
+        this.setState(__assign({}, this.state, { gasLimit: Number(event.target.value) }));
     };
     TransactionFeeBoxComponent.prototype.renderEdvancedContent = function () {
         var _a = this.props, classes = _a.classes, nonce = _a.nonce, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction;
@@ -170,7 +170,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
-                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: this.setGasLimit.bind(this), className: classes.formControl })),
+                        React.createElement("input", { type: "number", value: this.state.gasLimit, onChange: this.setGasLimit.bind(this), className: classes.formControl })),
                     React.createElement(core_1.FormControlLabel, { control: React.createElement(Checkbox_1.default, { classes: {
                                 root: classes.checkboxRoot,
                                 checked: classes.checkboxChecked,

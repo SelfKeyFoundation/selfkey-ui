@@ -13,5 +13,11 @@ var fn = () => {
 };
 
 export const SendTransaction = () => (
-    <TransactionSendBox ethValue="0.00000008" onAddressFieldChange={fn} cryptoCurrency ='ETH' nonce= "1" usdValue="105.1" gasLimit="2100" showAdvanced={false} ethGasStationInfo={ethGasStationInfo}/>
+    <TransactionSendBox address=''
+	amount={0}
+	networkFee={0}
+	gasPrice={0}
+	gasLimit={2100}
+	nonce={1}
+    addressError={false} ethValue={0.00000008} onAddressFieldChange={fn} cryptoCurrency ='ETH' usdValue={105.1} ethGasStationInfo={ethGasStationInfo}/>
 );

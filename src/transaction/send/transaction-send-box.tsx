@@ -101,17 +101,22 @@ export type EthGasStationInfo = {
 };
 
 export type TransactionSendBoxProps = {
-    ethValue: string;
-    usdValue: string;
-    gasLimit: string;
-    nonce: string;
-    showAdvanced?: boolean;
+    address: string,
+	amount: number,
+	networkFee: number,
+	gasPrice: number,
+	gasLimit: number,
+	nonce: number,
+    addressError: boolean
+    ethValue: number;
+    usdValue: number;
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
     cryptoCurrency: string;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     sendAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     onAddressFieldChange?: Function;
+    
 }
 
 export type TransactionSendBoxState = {};
