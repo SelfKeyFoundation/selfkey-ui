@@ -14,8 +14,8 @@ const fn = (data: any) => {
 
 export const SendTransaction = () => (
     <TransactionSendBox address=''
-	amount={0}
-	networkFee={0}
+    amount={0}
+    amountUsd={0.00}
 	gasPrice={0}
 	gasLimit={2100}
 	nonce={1}
