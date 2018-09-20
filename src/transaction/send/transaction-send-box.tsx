@@ -157,20 +157,20 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     render() {
-        let { address, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, onAmountInputChange, onSelectAllAmount, onSendAction, amountUsd } = this.props;
+        const { address, amount, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, onAmountInputChange, onSelectAllAmount, onSendAction, amountUsd } = this.props;
 
         let sendAmountClass = `${classes.input} ${classes.amountInput}` // ${sendAmount.error ? classes.inputError: ''}`;
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
 
         return (
             <TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
-                <input onChange={onAddressFieldChange} value={address} className={addressInputClass} placeholder="Send to Address" />
+                <input type='text' onChange={onAddressFieldChange} defaultValue={address} className={addressInputClass} placeholder="Send to Address" />
                 {addressError &&
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
                 }
                 <div className={classes.amountContainer}>
                     <button onClick={onSelectAllAmount} className={classes.selectAllAmountBtn}> ALL </button>
-                    <input type='text' onChange={onAmountInputChange} className={sendAmountClass}/>
+                    <input type='number' onChange={onAmountInputChange} defaultValue={String(amount)} className={sendAmountClass}/>
                 </div>
                 <Grid container direction="row" justify="space-between" alignItems="center" className={classes.usdAmoutContainer}>
                     <span> {amountUsd} </span>
