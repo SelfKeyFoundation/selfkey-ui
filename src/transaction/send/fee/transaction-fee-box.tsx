@@ -177,17 +177,13 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                     <div>
                         <div className={classes.formGroup}>
                             <label>Gas Limit</label>
-                            <input type="number" value={this.state.gasLimit} onChange={this.setGasLimit.bind(this)} className={classes.formControl} />
+                            <input type="text" value={this.state.gasLimit} onChange={this.setGasLimit.bind(this)} className={classes.formControl} />
                         </div>
                     </div>
                     <div className={classes.formGroup}>
                         <label>Nonce</label>
                         <input disabled={true} type="text" className={classes.formControl} />
                     </div>
-                </Grid>
-
-                <Grid container justify="center" alignItems="flex-start">
-                    {this.renderActualTransactionFeeBox()}
                 </Grid>
 
                 <Grid container direction="column" justify="center" alignItems="center">
@@ -213,8 +209,8 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
         return (
             <Grid container direction="row" justify="space-between" alignItems="center" className={classes.container}>
                 <Grid className={classes.flex}>
-                    <span className={classes.networkTransactionFeeTitle}> Network Transaction Fee {!showAdvanced ? ':' : ''} </span>
-                    {!showAdvanced && this.renderActualTransactionFeeBox()}
+                    <span className={classes.networkTransactionFeeTitle}> Network Transaction Fee: </span>
+                    {this.renderActualTransactionFeeBox()}
                 </Grid>
                 <Grid className={classes.showAdvancedContainer} onClick={() => this.toggleShowAdvanced()}>
                     <span> Advanced </span>

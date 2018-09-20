@@ -120,15 +120,10 @@ export type EthGasStationInfo = {
     fast: string;
 };
 
-export type InputField = {
-        value: string,
-        error: string
-};
-
 export type TransactionSendBoxProps = {
     address: string,
-	amount: number,
-	networkFee: number,
+    amount: number,
+    amountUsd: number,
 	gasPrice: number,
 	gasLimit: number,
 	nonce: number,
@@ -139,42 +134,20 @@ export type TransactionSendBoxProps = {
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
     cryptoCurrency: string;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
-
-
-    totalBalance: string,
-
-    onSendAction: Function,
-
-
+    onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void),
     onSelectAllAmount?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
-    onAddressFieldChange?: Function;
-    
+    onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+    onAmountInputChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void); 
 }
 
 export type TransactionSendBoxState = {
-    sendAmount: InputField,
-    address: InputField
-};
+}
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
 
 export class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps) {
         super(props);
-        let inputDefaultVal = {
-            value: '',
-            error: ''
-        };
-        this.state = {
-            sendAmount: inputDefaultVal,
-            address: inputDefaultVal
-        };
-
-        this.onAddressFieldChange = this.onAddressFieldChange.bind(this);
-        this.onAmountInputChange = this.onAmountInputChange.bind(this);
-        this.onSelectAllAmount = this.onSelectAllAmount.bind(this);
-
-        this.onSendAction = this.onSendAction.bind(this);
     }
 
     renderFeeBox() {
@@ -183,77 +156,29 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         );
     }
 
-    onAddressFieldChange(event: React.ChangeEvent<HTMLInputElement>) {
-        let newVal = {
-            value: event.target.value,
-            error: ''
-        }
-        this.setState({...this.state, address: newVal});
-
-        let { onAddressFieldChange } = this.props;
-        if (!onAddressFieldChange) {
-            return;
-        }
-
-        onAddressFieldChange(newVal);
-    }
-
-    setSendAmount(value: string) {
-        let newVal = {
-            value,
-            error: ''
-        }
-        this.setState({...this.state, sendAmount: newVal});
-    }
-
-    onAmountInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-        this.setSendAmount(event.target.value);
-    }
-
-    onSelectAllAmount() {
-        this.setSendAmount(this.props.totalBalance);
-    }
-
-    onSendAction() {
-        let { onSendAction } = this.props;
-        if (!onSendAction) {
-            return;
-        }
-        let { sendAmount, address } = this.state;
-
-        onSendAction({
-            sendAmount: sendAmount.value,
-            address: address.value
-        });
-        //this.state
-    }
-
     render() {
-        let { cryptoCurrency, closeAction, classes, addressError } = this.props;
-        let { sendAmount, address } =  this.state;
+        let { address, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, onAmountInputChange, onSelectAllAmount, onSendAction, amountUsd } = this.props;
 
-        let sendAmountClass = `${classes.input} ${classes.amountInput} ${sendAmount.error ? classes.inputError: ''}`;
+        let sendAmountClass = `${classes.input} ${classes.amountInput}` // ${sendAmount.error ? classes.inputError: ''}`;
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
 
         return (
             <TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
-                <input onChange={this.onAddressFieldChange} value={address.value} className={addressInputClass} placeholder="Step 1: Enter Label or ETH Address" />
+                <input onChange={onAddressFieldChange} value={address} className={addressInputClass} placeholder="Send to Address" />
                 {addressError &&
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
                 }
                 <div className={classes.amountContainer}>
-                    <button onClick={this.onSelectAllAmount} className={classes.selectAllAmountBtn}> ALL </button>
-                    <input value={sendAmount.value} onChange={this.onAmountInputChange} className={sendAmountClass} placeholder="Step 2: Select Token & Enter Amount" />
-                    <span className={classes.cryptoCurrencyText}> {cryptoCurrency}</span>
-
+                    <button onClick={onSelectAllAmount} className={classes.selectAllAmountBtn}> ALL </button>
+                    <input type='text' onChange={onAmountInputChange} className={sendAmountClass}/>
                 </div>
                 <Grid container direction="row" justify="space-between" alignItems="center" className={classes.usdAmoutContainer}>
-                    <span> 0.001 </span>
+                    <span> {amountUsd} </span>
                     <span> USD </span>
                 </Grid>
                 {this.renderFeeBox()}
                 <Grid className={classes.actionButtonsContainer} container direction="row" justify="center" alignItems="center">
-                    <button className={classes.sendButton} onClick={this.onSendAction}> SEND </button>
+                    <button className={classes.sendButton} onClick={onSendAction}> SEND </button>
                 </Grid>
             </TransactionBox>
         );
