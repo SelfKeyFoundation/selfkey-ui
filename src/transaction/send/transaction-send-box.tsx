@@ -96,7 +96,22 @@ export const styles: StyleSheet = {
         paddingLeft: '45px',
         width: 'calc(100% - 45px)',
         marginBottom: '10px'
+    },
+
+    addressErrorText: {
+        height: '19px',
+        width: '242px',
+        color: '#FE4B61',
+        fontFamily: 'Lato',
+        fontSize: '13px',
+        lineHeight: '19px'
+    },
+
+    addressErrorColor: {
+        color: '#FE4B61',
+        borderBottom: '2px solid #FE4B61',
     }
+
 };
 
 export type EthGasStationInfo = {
@@ -214,14 +229,18 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     render() {
-        let { cryptoCurrency, closeAction, classes } = this.props;
+        let { cryptoCurrency, closeAction, classes, addressError } = this.props;
         let { sendAmount, address } =  this.state;
 
         let sendAmountClass = `${classes.input} ${classes.amountInput} ${sendAmount.error ? classes.inputError: ''}`;
+        let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
 
         return (
             <TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
-                <input onChange={this.onAddressFieldChange} value={address.value} className={classes.input} placeholder="Step 1: Enter Label or ETH Address" />
+                <input onChange={this.onAddressFieldChange} value={address.value} className={addressInputClass} placeholder="Step 1: Enter Label or ETH Address" />
+                {addressError &&
+                    <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
+                }
                 <div className={classes.amountContainer}>
                     <button onClick={this.onSelectAllAmount} className={classes.selectAllAmountBtn}> ALL </button>
                     <input value={sendAmount.value} onChange={this.onAmountInputChange} className={sendAmountClass} placeholder="Step 2: Select Token & Enter Amount" />

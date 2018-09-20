@@ -117,6 +117,18 @@ exports.styles = {
         paddingLeft: '45px',
         width: 'calc(100% - 45px)',
         marginBottom: '10px'
+    },
+    addressErrorText: {
+        height: '19px',
+        width: '242px',
+        color: '#FE4B61',
+        fontFamily: 'Lato',
+        fontSize: '13px',
+        lineHeight: '19px'
+    },
+    addressErrorColor: {
+        color: '#FE4B61',
+        borderBottom: '2px solid #FE4B61',
     }
 };
 var TransactionSendBoxComponent = /** @class */ (function (_super) {
@@ -178,11 +190,14 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         //this.state
     };
     TransactionSendBoxComponent.prototype.render = function () {
-        var _a = this.props, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes;
+        var _a = this.props, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError;
         var _b = this.state, sendAmount = _b.sendAmount, address = _b.address;
         var sendAmountClass = classes.input + " " + classes.amountInput + " " + (sendAmount.error ? classes.inputError : '');
+        var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
-            React.createElement("input", { onChange: this.onAddressFieldChange, value: address.value, className: classes.input, placeholder: "Step 1: Enter Label or ETH Address" }),
+            React.createElement("input", { onChange: this.onAddressFieldChange, value: address.value, className: addressInputClass, placeholder: "Step 1: Enter Label or ETH Address" }),
+            addressError &&
+                React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
             React.createElement("div", { className: classes.amountContainer },
                 React.createElement("button", { onClick: this.onSelectAllAmount, className: classes.selectAllAmountBtn }, " ALL "),
                 React.createElement("input", { value: sendAmount.value, onChange: this.onAmountInputChange, className: sendAmountClass, placeholder: "Step 2: Select Token & Enter Amount" }),
