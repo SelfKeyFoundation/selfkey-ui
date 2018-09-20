@@ -11,8 +11,8 @@ const styles: StyleSheet = {
 };
 
 export type ActualTransactionFeeBoxProps = {
-    ethValue?: string;
-    usdValue?: string
+    ethValue: number;
+    usdValue: number
 }
 
 export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeBoxProps>(({classes, ethValue, usdValue }) => (

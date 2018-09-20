@@ -143,16 +143,20 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     function TransactionFeeBoxComponent(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            showAdvanced: false
+            showAdvanced: false,
+            gasLimit: 0
         };
         return _this;
     }
     TransactionFeeBoxComponent.prototype.renderActualTransactionFeeBox = function () {
-        return (React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, null));
+        return (React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, __assign({}, this.props)));
     };
     TransactionFeeBoxComponent.prototype.toggleShowAdvanced = function () {
         var showAdvanced = this.state.showAdvanced;
         this.setState(__assign({}, this.state, { showAdvanced: !showAdvanced }));
+    };
+    TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
+        this.setState(__assign({}, this.state, { gasLimit: Number(event.target.value) }));
     };
     TransactionFeeBoxComponent.prototype.renderEdvancedContent = function () {
         var _a = this.props, classes = _a.classes, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction;
@@ -164,7 +168,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
-                        React.createElement("input", { type: "text", className: classes.formControl }))),
+                        React.createElement("input", { type: "number", value: this.state.gasLimit, onChange: this.setGasLimit.bind(this), className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
                     React.createElement("input", { disabled: true, type: "text", className: classes.formControl }))),

@@ -123,12 +123,17 @@ export type EthGasStationInfo = {
 };
 
 export type TransactionFeeBoxProps = {
+    ethValue: number,
+    usdValue: number,
+    gasLimit: number,
+    nonce: number,
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void)
 }
 
 export type TransactionFeeBoxState = {
     showAdvanced: boolean
+    gasLimit: number
 };
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
@@ -139,19 +144,24 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
         super(props);
 
         this.state = {
-            showAdvanced:false
+            showAdvanced: false,
+            gasLimit: 0
         }
     }
 
     renderActualTransactionFeeBox() {
         return (
-            <ActualTransactionFeeBox/>
+            <ActualTransactionFeeBox {...this.props}/>
         );
     }
 
     toggleShowAdvanced() {
         const { showAdvanced } = this.state;
         this.setState({ ...this.state, showAdvanced: !showAdvanced })
+    }
+
+    setGasLimit(event: React.ChangeEvent<HTMLInputElement>) {
+        this.setState({ ...this.state, gasLimit: Number(event.target.value) })
     }
 
     renderEdvancedContent() {
@@ -167,7 +177,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                     <div>
                         <div className={classes.formGroup}>
                             <label>Gas Limit</label>
-                            <input type="text" className={classes.formControl} />
+                            <input type="number" value={this.state.gasLimit} onChange={this.setGasLimit.bind(this)} className={classes.formControl} />
                         </div>
                     </div>
                     <div className={classes.formGroup}>

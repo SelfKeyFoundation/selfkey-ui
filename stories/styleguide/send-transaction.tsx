@@ -18,5 +18,11 @@ const onSendAction = (data: any) => {
 };
 
 export const SendTransaction = () => (
-    <TransactionSendBox cryptoCurrency="ETH" onSendAction={onSendAction} totalBalance={getTotalBalance()} ethGasStationInfo={ethGasStationInfo}/>
+    <TransactionSendBox address=''
+	amount={0}
+	networkFee={0}
+	gasPrice={0}
+	gasLimit={2100}
+	nonce={1}
+    addressError={false} ethValue={0.00000008} onAddressFieldChange={fn} cryptoCurrency ='ETH' usdValue={105.1} ethGasStationInfo={ethGasStationInfo}/>
 );
