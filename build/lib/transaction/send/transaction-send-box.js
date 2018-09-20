@@ -35,36 +35,37 @@ exports.styles = {
     container: {
         fontFamily: common_style_1.default.fontFamily
     },
-    button: {
+    sendButton: {
         boxSizing: 'border-box',
+        height: '45px',
         width: '201px',
-        border: '1px solid #93B0C1',
-        opacity: 0.6,
-        borderRadius: '4px'
-    },
-    buttonText: {
-        opacity: 0.8,
-        color: '#C5DCE9',
+        border: '1px solid #0FB8D0',
+        borderRadius: '4px',
+        background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
+        boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 0 2px 2px 0 #07C1DC, 2px 0 2px 0 rgba(0,0,0,0.2)',
+        color: '#FFFFFF',
         fontSize: '16px',
         fontWeight: 600,
-        letterSpacing: '0.71px'
+        letterSpacing: '0.67px',
+        lineHeight: '20px',
+        textAlign: 'center',
+        cursor: 'pinter'
     },
     selectAllAmountBtn: {
-        minWidth: 'auto',
+        cursor: 'pointer',
+        fontSize: '13px',
+        fontWeight: 500,
+        lineHeight: '16px',
+        color: '#A9C5D6',
         position: 'absolute',
         left: 0,
         boxSizing: 'border-box',
-        borderRadius: '4px',
+        height: '37px',
         width: '37px',
         border: '1px solid #303C49',
+        borderRadius: '4px',
         backgroundColor: '#202932',
         boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)'
-    },
-    selectAllAmountText: {
-        color: '#A9C5D6',
-        fontSize: '13px',
-        fontWeight: 500,
-        lineHeight: '16px'
     },
     actionButtonsContainer: {
         paddingTop: '50px'
@@ -83,6 +84,9 @@ exports.styles = {
             fontSize: '20px',
             color: '#a9c5d6'
         }
+    },
+    inputError: {
+        borderBottom: '2px solid #FE4B61 !important'
     },
     amountContainer: {
         paddingTop: '25px',
@@ -118,40 +122,70 @@ exports.styles = {
 var TransactionSendBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionSendBoxComponent, _super);
     function TransactionSendBoxComponent(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        var inputDefaultVal = {
+            value: '',
+            error: ''
+        };
+        _this.state = {
+            sendAmount: inputDefaultVal,
+            address: inputDefaultVal
+        };
+        _this.onAddressFieldChange = _this.onAddressFieldChange.bind(_this);
+        _this.onAmountInputChange = _this.onAmountInputChange.bind(_this);
+        _this.onSelectAllAmount = _this.onSelectAllAmount.bind(_this);
+        _this.onSendAction = _this.onSendAction.bind(_this);
+        return _this;
     }
     TransactionSendBoxComponent.prototype.renderFeeBox = function () {
         return (React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, this.props)));
     };
     TransactionSendBoxComponent.prototype.onAddressFieldChange = function (event) {
+        var newVal = {
+            value: event.target.value,
+            error: ''
+        };
+        this.setState(__assign({}, this.state, { address: newVal }));
         var onAddressFieldChange = this.props.onAddressFieldChange;
         if (!onAddressFieldChange) {
             return;
         }
-        onAddressFieldChange(event.target.value);
+        onAddressFieldChange(newVal);
+    };
+    TransactionSendBoxComponent.prototype.onAmountInputChange = function (event) {
+    };
+    TransactionSendBoxComponent.prototype.onSelectAllAmount = function () {
+    };
+    TransactionSendBoxComponent.prototype.onSendAction = function () {
+        var onSendAction = this.props.onSendAction;
+        if (!onSendAction) {
+            return;
+        }
+        var _a = this.state, sendAmount = _a.sendAmount, address = _a.address;
+        onSendAction({
+            sendAmount: sendAmount.value,
+            address: address.value
+        });
+        //this.state
     };
     TransactionSendBoxComponent.prototype.render = function () {
-        var _a = this.props, cryptoCurrency = _a.cryptoCurrency, sendAction = _a.sendAction, closeAction = _a.closeAction, classes = _a.classes;
+        var _a = this.props, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes;
+        var _b = this.state, sendAmount = _b.sendAmount, address = _b.address;
+        var sendAmountClass = classes.input + " " + classes.amountInput + " " + (sendAmount.error ? classes.inputError : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
-            React.createElement("input", { onChange: this.onAddressFieldChange.bind(this), className: classes.input, placeholder: "Step 1: Enter Label or ETH Address" }),
+            React.createElement("input", { onChange: this.onAddressFieldChange, value: address.value, className: classes.input, placeholder: "Step 1: Enter Label or ETH Address" }),
             React.createElement("div", { className: classes.amountContainer },
-                React.createElement("input", { className: classes.input + " " + classes.amountInput, placeholder: "Step 2: Select Token & Enter Amount" }),
+                React.createElement("button", { onClick: this.onSelectAllAmount, className: classes.selectAllAmountBtn }, " ALL "),
+                React.createElement("input", { value: sendAmount.value, onChange: this.onAmountInputChange, className: sendAmountClass, placeholder: "Step 2: Select Token & Enter Amount" }),
                 React.createElement("span", { className: classes.cryptoCurrencyText },
                     " ",
-                    cryptoCurrency),
-                React.createElement(core_1.Button, { variant: "outlined", onClick: sendAction, classes: {
-                        root: classes.selectAllAmountBtn,
-                        label: classes.selectAllAmountText
-                    } }, " ALL ")),
+                    cryptoCurrency)),
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null, " 0.001 "),
                 React.createElement("span", null, " USD ")),
             this.renderFeeBox(),
             React.createElement(core_1.Grid, { className: classes.actionButtonsContainer, container: true, direction: "row", justify: "center", alignItems: "center" },
-                React.createElement(core_1.Button, { variant: "outlined", onClick: sendAction, classes: {
-                        root: classes.button,
-                        label: classes.buttonText
-                    } }, " SEND "))));
+                React.createElement("button", { className: classes.sendButton, onClick: this.onSendAction }, " SEND "))));
     };
     return TransactionSendBoxComponent;
 }(React.Component));

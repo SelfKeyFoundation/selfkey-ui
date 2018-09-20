@@ -6,6 +6,10 @@ export declare type EthGasStationInfo = {
     average: string;
     fast: string;
 };
+export declare type InputField = {
+    value: string;
+    error: string;
+};
 export declare type TransactionSendBoxProps = {
     address: string;
     amount: number;
@@ -20,15 +24,22 @@ export declare type TransactionSendBoxProps = {
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
     cryptoCurrency: string;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
-    sendAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    onSendAction: Function;
+    onSelectAllAmount?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
     onAddressFieldChange?: Function;
 };
-export declare type TransactionSendBoxState = {};
+export declare type TransactionSendBoxState = {
+    sendAmount: InputField;
+    address: InputField;
+};
 export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
 export declare class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps);
     renderFeeBox(): JSX.Element;
     onAddressFieldChange(event: React.ChangeEvent<HTMLInputElement>): void;
+    onAmountInputChange(event: React.ChangeEvent<HTMLInputElement>): void;
+    onSelectAllAmount(): void;
+    onSendAction(): void;
     render(): JSX.Element;
 }
 export declare const TransactionSendBox: React.ComponentType<TransactionSendBoxProps & StyledComponentProps<string>>;

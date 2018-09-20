@@ -3,9 +3,8 @@ import * as React from 'react';
 import injectSheet, { WithStyles, StyleSheet, StyledComponentProps, ClassNameMap } from 'react-jss';
 import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
 import CommonStyle from '../../../common/common-style';
-import { Grid, FormControlLabel } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { Loop as LoopIcon } from '@material-ui/icons';
-import Checkbox from '@material-ui/core/Checkbox';
 
 export const styles: StyleSheet = {
     container: {
@@ -151,9 +150,8 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     }
 
     renderActualTransactionFeeBox() {
-        const { ethValue, usdValue } = this.props;
         return (
-            <ActualTransactionFeeBox ethValue={ethValue} usdValue={usdValue} />
+            <ActualTransactionFeeBox {...this.props}/>
         );
     }
 
@@ -167,7 +165,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     }
 
     renderEdvancedContent() {
-        let { classes, nonce, ethGasStationInfo, reloadEthGasStationInfoAction } = this.props;
+        let { classes, ethGasStationInfo, reloadEthGasStationInfoAction } = this.props;
         return (
             <div className={classes.fullWidth}>
                 <Grid container className={classes.inputsContainer} direction="row" justify="space-between" alignItems="flex-start">
@@ -181,25 +179,10 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                             <label>Gas Limit</label>
                             <input type="number" value={this.state.gasLimit} onChange={this.setGasLimit.bind(this)} className={classes.formControl} />
                         </div>
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    classes={{
-                                        root: classes.checkboxRoot,
-                                        checked: classes.checkboxChecked,
-                                    }}
-                                    color={undefined}
-                                    value="SomeValue"
-                                />
-                            }
-                            classes={{
-                                label: classes.checkboxLabel,
-                            }}
-                            label="Auto Calculate" />
                     </div>
                     <div className={classes.formGroup}>
                         <label>Nonce</label>
-                        <input disabled={true} value={nonce} type="text" className={classes.formControl} />
+                        <input disabled={true} type="text" className={classes.formControl} />
                     </div>
                 </Grid>
 

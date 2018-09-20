@@ -8,8 +8,8 @@ const ethGasStationInfo = {
     fast: '50'
 }
 
-var fn = () => {
-
+const fn = (data: any) => {
+    console.log(data);
 };
 
 export const SendTransaction = () => (
@@ -19,5 +19,5 @@ export const SendTransaction = () => (
 	gasPrice={0}
 	gasLimit={2100}
 	nonce={1}
-    addressError={false} ethValue={0.00000008} onAddressFieldChange={fn} cryptoCurrency ='ETH' usdValue={105.1} ethGasStationInfo={ethGasStationInfo}/>
+    addressError={false} onSendAction={fn} ethValue={0.00000008} onAddressFieldChange={fn} cryptoCurrency ='ETH' usdValue={105.1} ethGasStationInfo={ethGasStationInfo}/>
 );
