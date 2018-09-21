@@ -8,12 +8,7 @@ const ethGasStationInfo = {
     fast: '50'
 }
 
-const getTotalBalance = () =>{
-    console.log('aq shemodis zalian bevrjel ha');
-    return (Math.random()*10).toString();
-}
-
-const onSendAction = (data: any) => {
+const fn = (data: any) => {
     console.log(data);
 };
 
@@ -26,5 +21,5 @@ export const SendTransaction = () => (
 	gasPrice={0}
 	gasLimit={2100}
 	nonce={1}
-    addressError={true} onSendAction={onSendAction} ethValue={0.00000008} onAddressFieldChange={onSendAction} cryptoCurrency ='ETH' usdValue={105.1} ethGasStationInfo={ethGasStationInfo}/>
+    addressError={true} onSendAction={fn} ethFee={0.0000000000001512} onAddressFieldChange={fn} cryptoCurrency ='ETH' usdFee={3.7190664e-11} ethGasStationInfo={ethGasStationInfo}/>
 );

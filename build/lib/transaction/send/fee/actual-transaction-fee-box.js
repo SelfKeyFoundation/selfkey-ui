@@ -19,13 +19,13 @@ exports.ActualTransactionFeeBox = react_jss_1.default(exports.styles)(function (
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { container: true, spacing: 8 },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'decimal', currency: 'ETH', value: ethFee })),
+                    React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'decimal', currency: 'ETH', value: ethFee, fractionDigits: 15 })),
                 React.createElement(core_1.Grid, { item: true }, "ETH"),
                 React.createElement(core_1.Grid, { item: true }, "/"))),
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { container: true, spacing: 8 },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'currency', currency: fiatCurrency, value: usdFee })),
+                    React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'currency', currency: fiatCurrency, value: usdFee, fractionDigits: 15 })),
                 React.createElement(core_1.Grid, { item: true }, fiatCurrency)))));
 });
 exports.default = exports.ActualTransactionFeeBox;
