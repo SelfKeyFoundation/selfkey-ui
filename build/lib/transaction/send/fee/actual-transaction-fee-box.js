@@ -12,15 +12,15 @@ var styles = {
     }
 };
 exports.ActualTransactionFeeBox = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, ethValue = _a.ethValue, usdValue = _a.usdValue;
+    var classes = _a.classes, ethFee = _a.ethFee, usdFee = _a.usdFee;
     return (React.createElement("div", { className: classes.container },
         React.createElement("span", null,
-            ethValue,
+            ethFee,
             " ETH"),
         React.createElement("span", null, " / "),
         React.createElement("span", null,
             "$",
-            usdValue,
+            usdFee,
             " USD")));
 });
 exports.default = exports.ActualTransactionFeeBox;

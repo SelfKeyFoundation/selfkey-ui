@@ -7,8 +7,8 @@ export declare type EthGasStationInfo = {
     fast: string;
 };
 export declare type TransactionFeeBoxProps = {
-    ethValue: number;
-    usdValue: number;
+    ethFee: number;
+    usdFee: number;
     gasLimit: number;
     nonce: number;
     ethGasStationInfo: EthGasStationInfo;
