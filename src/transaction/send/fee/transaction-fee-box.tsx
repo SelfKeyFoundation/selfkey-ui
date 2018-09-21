@@ -174,14 +174,14 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     setGasLimit(event: React.ChangeEvent<HTMLInputElement>) {
         this.setState({ ...this.state, gasLimit: Number(event.target.value) });
         if(this.props.changeGasLimitAction) {
-            this.props.changeGasLimitAction();
+            this.props.changeGasLimitAction(event);
         }
     }
 
     setGasPricet(event: React.ChangeEvent<HTMLInputElement>) {
         this.setState({ ...this.state, gasPrice: Number(event.target.value) });
         if(this.props.changeGasPriceAction) {
-            this.props.changeGasPriceAction();
+            this.props.changeGasPriceAction(event);
         }
     }
 
