@@ -162,13 +162,13 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
         this.setState(__assign({}, this.state, { gasLimit: Number(event.target.value) }));
         if (this.props.changeGasLimitAction) {
-            this.props.changeGasLimitAction();
+            this.props.changeGasLimitAction(event);
         }
     };
     TransactionFeeBoxComponent.prototype.setGasPricet = function (event) {
         this.setState(__assign({}, this.state, { gasPrice: Number(event.target.value) }));
         if (this.props.changeGasPriceAction) {
-            this.props.changeGasPriceAction();
+            this.props.changeGasPriceAction(event);
         }
     };
     TransactionFeeBoxComponent.prototype.renderAdvancedContent = function () {
