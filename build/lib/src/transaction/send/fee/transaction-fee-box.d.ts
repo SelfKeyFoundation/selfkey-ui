@@ -16,6 +16,8 @@ export declare type TransactionFeeBoxProps = {
     nonce: number;
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
+    changeGasLimitAction?: Function;
+    changeGasPriceAction?: Function;
 };
 export declare type TransactionFeeBoxState = {
     showAdvanced: boolean;
@@ -30,7 +32,7 @@ export declare class TransactionFeeBoxComponent extends React.Component<StyledPr
     toggleShowAdvanced(): void;
     setGasLimit(event: React.ChangeEvent<HTMLInputElement>): void;
     setGasPricet(event: React.ChangeEvent<HTMLInputElement>): void;
-    renderEdvancedContent(): JSX.Element;
+    renderAdvancedContent(): JSX.Element;
     render(): JSX.Element;
 }
 export declare const TransactionFeeBox: React.ComponentType<TransactionFeeBoxProps & StyledComponentProps<string>>;

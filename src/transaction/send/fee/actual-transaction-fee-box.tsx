@@ -25,7 +25,7 @@ export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeB
         <Grid item>
             <Grid container spacing={8}>
                 <Grid item>
-                    <NumberFormat locale={locale} style='decimal' currency='ETH' value={ethFee}/>
+                    <NumberFormat locale={locale} style='decimal' currency='ETH' value={ethFee} fractionDigits={15}/>
                 </Grid>
                 <Grid item>
                     ETH
@@ -38,7 +38,7 @@ export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeB
         <Grid item>
             <Grid container spacing={8}>
                 <Grid item>
-                    <NumberFormat locale={locale} style='currency' currency={fiatCurrency} value={usdFee}/>
+                    <NumberFormat locale={locale} style='currency' currency={fiatCurrency} value={usdFee} fractionDigits={15}/>
                 </Grid>
                 <Grid item>
                     {fiatCurrency}
