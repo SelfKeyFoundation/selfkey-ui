@@ -19,6 +19,8 @@ const onSendAction = (data: any) => {
 
 export const SendTransaction = () => (
     <TransactionSendBox address=''
+    locale='en'
+    fiatCurrency='USD'
     amount={0}
     amountUsd={0.00}
 	gasPrice={0}

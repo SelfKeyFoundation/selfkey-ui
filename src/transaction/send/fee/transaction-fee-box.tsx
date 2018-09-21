@@ -10,9 +10,6 @@ export const styles: StyleSheet = {
     container: {
         fontFamily: CommonStyle.fontFamily
     },
-    flex: {
-        display: 'flex'
-    },
     networkTransactionFeeTitle: {
         paddingRight: '5px',
         color: '#93B0C1',
@@ -123,17 +120,23 @@ export type EthGasStationInfo = {
 };
 
 export type TransactionFeeBoxProps = {
+    locale: string,
+    fiatCurrency: string,
     ethFee: number,
     usdFee: number,
     gasLimit: number,
+    gasPrice: number
     nonce: number,
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void)
+    changeGasLimitAction?: Function,
+    changeGasPriceAction?: Function 
 }
 
 export type TransactionFeeBoxState = {
     showAdvanced: boolean
-    gasLimit: number
+    gasLimit: number,
+    gasPrice: number
 };
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
@@ -145,7 +148,15 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
 
         this.state = {
             showAdvanced: false,
-            gasLimit: 0
+            gasLimit: props.gasLimit,
+            gasPrice: props.gasPrice
+        }
+    }
+
+    componentDidUpdate(prevProps: StyledProps) {
+        console.log("HEYYYyy");
+        if(prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
+            this.setState({ ...this.state, gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice });
         }
     }
 
@@ -157,27 +168,37 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
 
     toggleShowAdvanced() {
         const { showAdvanced } = this.state;
-        this.setState({ ...this.state, showAdvanced: !showAdvanced })
+        this.setState({ ...this.state, showAdvanced: !showAdvanced });
     }
 
     setGasLimit(event: React.ChangeEvent<HTMLInputElement>) {
-        this.setState({ ...this.state, gasLimit: Number(event.target.value) })
+        this.setState({ ...this.state, gasLimit: Number(event.target.value) });
+        if(this.props.changeGasLimitAction) {
+            this.props.changeGasLimitAction();
+        }
     }
 
-    renderEdvancedContent() {
+    setGasPricet(event: React.ChangeEvent<HTMLInputElement>) {
+        this.setState({ ...this.state, gasPrice: Number(event.target.value) });
+        if(this.props.changeGasPriceAction) {
+            this.props.changeGasPriceAction();
+        }
+    }
+
+    renderAdvancedContent() {
         let { classes, ethGasStationInfo, reloadEthGasStationInfoAction } = this.props;
         return (
             <div className={classes.fullWidth}>
                 <Grid container className={classes.inputsContainer} direction="row" justify="space-between" alignItems="flex-start">
                     <div className={classes.formGroup}>
                         <label>Gas Price (Gwei)</label>
-                        <input type="text" className={classes.formControl} />
+                        <input type="text" className={classes.formControl} value={this.state.gasPrice} onChange={(e) => this.setGasPricet(e)} />
                     </div>
 
                     <div>
                         <div className={classes.formGroup}>
                             <label>Gas Limit</label>
-                            <input type="text" value={this.state.gasLimit} onChange={this.setGasLimit.bind(this)} className={classes.formControl} />
+                            <input type="text" value={this.state.gasLimit} onChange={(e) => this.setGasLimit(e)} className={classes.formControl} />
                         </div>
                     </div>
                     <div className={classes.formGroup}>
@@ -208,11 +229,17 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
         let { showAdvanced } = this.state;
         return (
             <Grid container direction="row" justify="space-between" alignItems="center" className={classes.container}>
-                <Grid className={classes.flex}>
-                    <span className={classes.networkTransactionFeeTitle}> Network Transaction Fee: </span>
-                    {this.renderActualTransactionFeeBox()}
+                <Grid item>
+                    <Grid container direction="row">
+                        <Grid item>
+                            <span className={classes.networkTransactionFeeTitle}> Network Transaction Fee: </span>
+                        </Grid>
+                        <Grid item>
+                            {this.renderActualTransactionFeeBox()}
+                        </Grid>
+                    </Grid>
                 </Grid>
-                <Grid className={classes.showAdvancedContainer} onClick={() => this.toggleShowAdvanced()}>
+                <Grid item className={classes.showAdvancedContainer} onClick={() => this.toggleShowAdvanced()}>
                     <span> Advanced </span>
                     {!showAdvanced ? (
                         <i className={`${classes.icon}  ${classes.rightIcon}`}> </i>
@@ -220,8 +247,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                             <i className={`${classes.icon}  ${classes.downIcon}`}> </i>
                         )}
                 </Grid>
-
-                {showAdvanced && this.renderEdvancedContent()}
+                {showAdvanced && this.renderAdvancedContent()}
             </Grid>
         );
     }

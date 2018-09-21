@@ -7,6 +7,8 @@ export declare type EthGasStationInfo = {
     fast: string;
 };
 export declare type TransactionSendBoxProps = {
+    locale: string;
+    fiatCurrency: string;
     address: string;
     amount: number;
     amountUsd: number;

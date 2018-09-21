@@ -35,9 +35,6 @@ exports.styles = {
     container: {
         fontFamily: common_style_1.default.fontFamily
     },
-    flex: {
-        display: 'flex'
-    },
     networkTransactionFeeTitle: {
         paddingRight: '5px',
         color: '#93B0C1',
@@ -144,10 +141,17 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.state = {
             showAdvanced: false,
-            gasLimit: 0
+            gasLimit: props.gasLimit,
+            gasPrice: props.gasPrice
         };
         return _this;
     }
+    TransactionFeeBoxComponent.prototype.componentDidUpdate = function (prevProps) {
+        console.log("HEYYYyy");
+        if (prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
+            this.setState(__assign({}, this.state, { gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice }));
+        }
+    };
     TransactionFeeBoxComponent.prototype.renderActualTransactionFeeBox = function () {
         return (React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, __assign({}, this.props)));
     };
@@ -157,18 +161,28 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     };
     TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
         this.setState(__assign({}, this.state, { gasLimit: Number(event.target.value) }));
+        if (this.props.changeGasLimitAction) {
+            this.props.changeGasLimitAction();
+        }
     };
-    TransactionFeeBoxComponent.prototype.renderEdvancedContent = function () {
+    TransactionFeeBoxComponent.prototype.setGasPricet = function (event) {
+        this.setState(__assign({}, this.state, { gasPrice: Number(event.target.value) }));
+        if (this.props.changeGasPriceAction) {
+            this.props.changeGasPriceAction();
+        }
+    };
+    TransactionFeeBoxComponent.prototype.renderAdvancedContent = function () {
+        var _this = this;
         var _a = this.props, classes = _a.classes, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction;
         return (React.createElement("div", { className: classes.fullWidth },
             React.createElement(core_1.Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Gas Price (Gwei)"),
-                    React.createElement("input", { type: "text", className: classes.formControl })),
+                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: function (e) { return _this.setGasPricet(e); } })),
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
-                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: this.setGasLimit.bind(this), className: classes.formControl }))),
+                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: function (e) { return _this.setGasLimit(e); }, className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
                     React.createElement("input", { disabled: true, type: "text", className: classes.formControl }))),
@@ -197,13 +211,15 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         var classes = this.props.classes;
         var showAdvanced = this.state.showAdvanced;
         return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.container },
-            React.createElement(core_1.Grid, { className: classes.flex },
-                React.createElement("span", { className: classes.networkTransactionFeeTitle }, " Network Transaction Fee: "),
-                this.renderActualTransactionFeeBox()),
-            React.createElement(core_1.Grid, { className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(core_1.Grid, { container: true, direction: "row" },
+                    React.createElement(core_1.Grid, { item: true },
+                        React.createElement("span", { className: classes.networkTransactionFeeTitle }, " Network Transaction Fee: ")),
+                    React.createElement(core_1.Grid, { item: true }, this.renderActualTransactionFeeBox()))),
+            React.createElement(core_1.Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
                 React.createElement("span", null, " Advanced "),
                 !showAdvanced ? (React.createElement("i", { className: classes.icon + "  " + classes.rightIcon }, " ")) : (React.createElement("i", { className: classes.icon + "  " + classes.downIcon }, " "))),
-            showAdvanced && this.renderEdvancedContent()));
+            showAdvanced && this.renderAdvancedContent()));
     };
     return TransactionFeeBoxComponent;
 }(React.Component));

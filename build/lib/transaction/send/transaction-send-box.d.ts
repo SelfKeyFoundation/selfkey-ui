@@ -7,6 +7,8 @@ export declare type EthGasStationInfo = {
     fast: string;
 };
 export declare type TransactionSendBoxProps = {
+    locale: string;
+    fiatCurrency: string;
     address: string;
     amount: number;
     amountUsd: number;
@@ -24,6 +26,8 @@ export declare type TransactionSendBoxProps = {
     onSelectAllAmount?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
     onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
     onAmountInputChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+    changeGasLimitAction?: Function;
+    changeGasPriceAction?: Function;
 };
 export declare type TransactionSendBoxState = {};
 export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
