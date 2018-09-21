@@ -2,8 +2,11 @@ import * as React from 'react';
 // @ts-ignore
 import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 import CommonStyle from '../../../common/common-style';
-const styles: StyleSheet = {
-    container: {
+import { NumberFormat } from '../../../price/number-format';
+import { Grid } from '@material-ui/core';
+
+export const styles: StyleSheet = {
+    root: {
         color: '#FFFFFF',
         fontSize: '16px',
         fontFamily: CommonStyle.fontFamily,
@@ -11,16 +14,38 @@ const styles: StyleSheet = {
 };
 
 export type ActualTransactionFeeBoxProps = {
-    ethFee: number;
-    usdFee: number
+    locale: string,
+    ethFee: number,
+    usdFee: number,
+    fiatCurrency: string
 }
 
-export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeBoxProps>(({classes, ethFee, usdFee }) => (
-    <div className={classes.container}>
-        <span>{ethFee} ETH</span>
-        <span> / </span>
-        <span>${usdFee} USD</span>
-    </div>
+export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeBoxProps>(({classes, locale, ethFee, usdFee, fiatCurrency }) => (
+    <Grid container className={classes.root} direction='row' spacing={8}>
+        <Grid item>
+            <Grid container spacing={8}>
+                <Grid item>
+                    <NumberFormat locale={locale} style='decimal' currency='ETH' value={ethFee}/>
+                </Grid>
+                <Grid item>
+                    ETH
+                </Grid>
+                <Grid item>
+                    /
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid item>
+            <Grid container spacing={8}>
+                <Grid item>
+                    <NumberFormat locale={locale} style='currency' currency={fiatCurrency} value={usdFee}/>
+                </Grid>
+                <Grid item>
+                    {fiatCurrency}
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
 ));
 
 export default ActualTransactionFeeBox;

@@ -7,9 +7,12 @@ export declare type EthGasStationInfo = {
     fast: string;
 };
 export declare type TransactionFeeBoxProps = {
+    locale: string;
+    fiatCurrency: string;
     ethFee: number;
     usdFee: number;
     gasLimit: number;
+    gasPrice: number;
     nonce: number;
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
@@ -17,13 +20,16 @@ export declare type TransactionFeeBoxProps = {
 export declare type TransactionFeeBoxState = {
     showAdvanced: boolean;
     gasLimit: number;
+    gasPrice: number;
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
 export declare class TransactionFeeBoxComponent extends React.Component<StyledProps, TransactionFeeBoxState> {
     constructor(props: StyledProps);
+    componentDidUpdate(prevProps: StyledProps): void;
     renderActualTransactionFeeBox(): JSX.Element;
     toggleShowAdvanced(): void;
     setGasLimit(event: React.ChangeEvent<HTMLInputElement>): void;
+    setGasPricet(event: React.ChangeEvent<HTMLInputElement>): void;
     renderEdvancedContent(): JSX.Element;
     render(): JSX.Element;
 }
