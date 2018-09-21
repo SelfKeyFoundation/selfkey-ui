@@ -11,15 +11,15 @@ const styles: StyleSheet = {
 };
 
 export type ActualTransactionFeeBoxProps = {
-    ethValue: number;
-    usdValue: number
+    ethFee: number;
+    usdFee: number
 }
 
-export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeBoxProps>(({classes, ethValue, usdValue }) => (
+export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeBoxProps>(({classes, ethFee, usdFee }) => (
     <div className={classes.container}>
-        <span>{ethValue} ETH</span>
+        <span>{ethFee} ETH</span>
         <span> / </span>
-        <span>${usdValue} USD</span>
+        <span>${usdFee} USD</span>
     </div>
 ));
 

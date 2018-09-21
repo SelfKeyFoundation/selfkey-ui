@@ -14,8 +14,8 @@ export declare type TransactionSendBoxProps = {
     gasLimit: number;
     nonce: number;
     addressError: boolean;
-    ethValue: number;
-    usdValue: number;
+    ethFee: number;
+    usdFee: number;
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
     cryptoCurrency: string;

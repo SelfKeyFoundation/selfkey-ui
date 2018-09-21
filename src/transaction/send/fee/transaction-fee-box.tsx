@@ -123,8 +123,8 @@ export type EthGasStationInfo = {
 };
 
 export type TransactionFeeBoxProps = {
-    ethValue: number,
-    usdValue: number,
+    ethFee: number,
+    usdFee: number,
     gasLimit: number,
     nonce: number,
     ethGasStationInfo: EthGasStationInfo,
