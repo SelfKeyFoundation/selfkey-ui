@@ -32,7 +32,6 @@ var transaction_fee_box_1 = require("./fee/transaction-fee-box");
 var transaction_box_1 = require("../transaction-box");
 var core_1 = require("@material-ui/core");
 var number_format_1 = require("../../price/number-format");
-//import DynamicNumber from 'react-dynamic-number';
 exports.styles = {
     container: {
         fontFamily: common_style_1.default.fontFamily
@@ -145,6 +144,9 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
         this.setState({ amount: String(this.props.balance) });
+        if (this.props.onAmountInputChange) {
+            this.props.onAmountInputChange(this.state.amount);
+        }
     };
     TransactionSendBoxComponent.prototype.handleAmountChange = function (event) {
         var value = event.target.value;
@@ -153,7 +155,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         }
         this.setState({ amount: value });
         if (this.props.onAmountInputChange) {
-            this.props.onAmountInputChange(event);
+            this.props.onAmountInputChange(this.state.amount);
         }
     };
     TransactionSendBoxComponent.prototype.render = function () {
