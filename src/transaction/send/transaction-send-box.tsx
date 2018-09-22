@@ -5,6 +5,7 @@ import CommonStyle from '../../common/common-style';
 import { TransactionFeeBox } from './fee/transaction-fee-box';
 import TransactionBox from '../transaction-box';
 import { Grid } from '@material-ui/core';
+import { NumberFormat } from '../../price/number-format';
 
 export const styles: StyleSheet = {
     container: {
@@ -132,12 +133,12 @@ export type TransactionSendBoxProps = {
     addressError: boolean
     ethFee: number,
     usdFee: number,
+    balance: number,
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void),
     cryptoCurrency: string,
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void),
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void),
-    onSelectAllAmount?: ((event: React.MouseEvent<HTMLButtonElement>) => void),
     onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void),
     onAmountInputChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void),
     changeGasLimitAction?: Function,
@@ -146,6 +147,7 @@ export type TransactionSendBoxProps = {
 }
 
 export type TransactionSendBoxState = {
+    amount: string
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
@@ -153,6 +155,7 @@ export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxPr
 export class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps) {
         super(props);
+        this.state = { amount: '' }
     }
 
     renderFeeBox() {
@@ -161,10 +164,25 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         );
     }
 
-    render() {
-        const { address, amount, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, onAmountInputChange, onSelectAllAmount, onSendAction, amountUsd } = this.props;
+    handleAllAmountClick() {
+        this.setState({amount: String(this.props.balance)});
+    }
 
-        let sendAmountClass = `${classes.input} ${classes.amountInput}` // ${sendAmount.error ? classes.inputError: ''}`;
+    handleAmountChange(event: React.ChangeEvent<HTMLInputElement>) {
+        let value = event.target.value;
+        if (isNaN(Number(value))) { 
+            value = '' 
+        }
+        this.setState({amount: value});
+        if (this.props.onAmountInputChange) {
+            this.props.onAmountInputChange(event)
+        }
+    }
+
+    render() {
+        const { address, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, onSendAction, amountUsd, locale, fiatCurrency } = this.props;
+
+        let sendAmountClass = `${classes.input} ${classes.amountInput}`
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
 
         return (
@@ -174,11 +192,11 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
                 }
                 <div className={classes.amountContainer}>
-                    <button onClick={onSelectAllAmount} className={classes.selectAllAmountBtn}> ALL </button>
-                    <input type='number' onChange={onAmountInputChange} defaultValue={String(amount)} className={sendAmountClass}/>
+                    <button onClick={() => this.handleAllAmountClick()} className={classes.selectAllAmountBtn}> ALL </button>
+                    <input type='text' onChange={e => this.handleAmountChange(e)} value={this.state.amount} className={sendAmountClass} placeholder="0.00"/>
                 </div>
                 <Grid container direction="row" justify="space-between" alignItems="center" className={classes.usdAmoutContainer}>
-                    <span> {amountUsd} </span>
+                    <span><NumberFormat locale={locale} style='currency' currency={fiatCurrency} value={amountUsd} fractionDigits={15}/></span>
                     <span> USD </span>
                 </Grid>
                 {this.renderFeeBox()}
