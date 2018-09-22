@@ -17,6 +17,7 @@ export const SendTransaction = () => (
     locale='en'
     fiatCurrency='USD'
     amount={0}
+    balance={0.0003321}
     amountUsd={0.00}
 	gasPrice={0}
 	gasLimit={2100}

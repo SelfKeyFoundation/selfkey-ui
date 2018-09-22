@@ -18,22 +18,26 @@ export declare type TransactionSendBoxProps = {
     addressError: boolean;
     ethFee: number;
     usdFee: number;
+    balance: number;
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
     cryptoCurrency: string;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void);
-    onSelectAllAmount?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
     onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
     onAmountInputChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
     changeGasLimitAction?: Function;
     changeGasPriceAction?: Function;
 };
-export declare type TransactionSendBoxState = {};
+export declare type TransactionSendBoxState = {
+    amount: string;
+};
 export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
 export declare class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps);
     renderFeeBox(): JSX.Element;
+    handleAllAmountClick(): void;
+    handleAmountChange(event: React.ChangeEvent<HTMLInputElement>): void;
     render(): JSX.Element;
 }
 export declare const TransactionSendBox: React.ComponentType<TransactionSendBoxProps & StyledComponentProps<string>>;

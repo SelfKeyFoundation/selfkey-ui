@@ -31,6 +31,8 @@ var common_style_1 = require("../../common/common-style");
 var transaction_fee_box_1 = require("./fee/transaction-fee-box");
 var transaction_box_1 = require("../transaction-box");
 var core_1 = require("@material-ui/core");
+var number_format_1 = require("../../price/number-format");
+//import DynamicNumber from 'react-dynamic-number';
 exports.styles = {
     container: {
         fontFamily: common_style_1.default.fontFamily
@@ -134,27 +136,41 @@ exports.styles = {
 var TransactionSendBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionSendBoxComponent, _super);
     function TransactionSendBoxComponent(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = { amount: '' };
+        return _this;
     }
     TransactionSendBoxComponent.prototype.renderFeeBox = function () {
         return (React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, this.props)));
     };
+    TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
+        this.setState({ amount: String(this.props.balance) });
+    };
+    TransactionSendBoxComponent.prototype.handleAmountChange = function (event) {
+        var value = event.target.value;
+        if (isNaN(Number(value))) {
+            value = '';
+        }
+        this.setState({ amount: value });
+        if (this.props.onAmountInputChange) {
+            this.props.onAmountInputChange(event);
+        }
+    };
     TransactionSendBoxComponent.prototype.render = function () {
-        var _a = this.props, address = _a.address, amount = _a.amount, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, onAddressFieldChange = _a.onAddressFieldChange, onAmountInputChange = _a.onAmountInputChange, onSelectAllAmount = _a.onSelectAllAmount, onSendAction = _a.onSendAction, amountUsd = _a.amountUsd;
-        var sendAmountClass = classes.input + " " + classes.amountInput; // ${sendAmount.error ? classes.inputError: ''}`;
+        var _this = this;
+        var _a = this.props, address = _a.address, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, onAddressFieldChange = _a.onAddressFieldChange, onSendAction = _a.onSendAction, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
+        var sendAmountClass = classes.input + " " + classes.amountInput;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
             React.createElement("input", { type: 'text', onChange: onAddressFieldChange, defaultValue: address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
             React.createElement("div", { className: classes.amountContainer },
-                React.createElement("button", { onClick: onSelectAllAmount, className: classes.selectAllAmountBtn }, " ALL "),
-                React.createElement("input", { type: 'number', onChange: onAmountInputChange, defaultValue: String(amount), className: sendAmountClass })),
+                React.createElement("button", { onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL "),
+                React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })),
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null,
-                    " ",
-                    amountUsd,
-                    " "),
+                    React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
                 React.createElement("span", null, " USD ")),
             this.renderFeeBox(),
             React.createElement(core_1.Grid, { className: classes.actionButtonsContainer, container: true, direction: "row", justify: "center", alignItems: "center" },
