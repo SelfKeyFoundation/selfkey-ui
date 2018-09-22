@@ -143,9 +143,10 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         return (React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, this.props)));
     };
     TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
-        this.setState({ amount: String(this.props.balance) });
+        var value = String(this.props.balance);
+        this.setState({ amount: value });
         if (this.props.onAmountInputChange) {
-            this.props.onAmountInputChange(this.state.amount);
+            this.props.onAmountInputChange(value);
         }
     };
     TransactionSendBoxComponent.prototype.handleAmountChange = function (event) {
@@ -155,7 +156,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         }
         this.setState({ amount: value });
         if (this.props.onAmountInputChange) {
-            this.props.onAmountInputChange(this.state.amount);
+            this.props.onAmountInputChange(value);
         }
     };
     TransactionSendBoxComponent.prototype.render = function () {

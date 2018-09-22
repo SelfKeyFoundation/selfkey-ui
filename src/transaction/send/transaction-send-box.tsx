@@ -165,9 +165,10 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     handleAllAmountClick() {
-        this.setState({amount: String(this.props.balance)});
+        const value = String(this.props.balance);
+        this.setState({amount: value});
         if (this.props.onAmountInputChange) {
-            this.props.onAmountInputChange(this.state.amount);
+            this.props.onAmountInputChange(value);
         }
     }
 
@@ -178,7 +179,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         }
         this.setState({amount: value});
         if (this.props.onAmountInputChange) {
-            this.props.onAmountInputChange(this.state.amount)
+            this.props.onAmountInputChange(value)
         }
     }
 
