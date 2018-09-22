@@ -140,7 +140,7 @@ export type TransactionSendBoxProps = {
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void),
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void),
     onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void),
-    onAmountInputChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void),
+    onAmountInputChange?: Function,
     changeGasLimitAction?: Function,
     changeGasPriceAction?: Function,
 
@@ -166,6 +166,9 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
 
     handleAllAmountClick() {
         this.setState({amount: String(this.props.balance)});
+        if (this.props.onAmountInputChange) {
+            this.props.onAmountInputChange(this.state.amount);
+        }
     }
 
     handleAmountChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -175,7 +178,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         }
         this.setState({amount: value});
         if (this.props.onAmountInputChange) {
-            this.props.onAmountInputChange(event)
+            this.props.onAmountInputChange(this.state.amount)
         }
     }
 

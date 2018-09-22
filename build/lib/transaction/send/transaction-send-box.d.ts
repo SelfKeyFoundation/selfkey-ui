@@ -25,7 +25,7 @@ export declare type TransactionSendBoxProps = {
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void);
     onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
-    onAmountInputChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+    onAmountInputChange?: Function;
     changeGasLimitAction?: Function;
     changeGasPriceAction?: Function;
 };
