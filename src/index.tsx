@@ -24,6 +24,7 @@ export { LWSSelectWallet } from './lws/lws-select-wallet';
 export { LWSRequiredInfo } from './lws/lws-required-info';
 export { LWSWalletConnectionError } from './lws/lws-wallet-connection-error';
 export { LWSSelfkeyIdError } from './lws/lws-selfkey-id-error';
+export { LWSWssError } from './lws/lws-wss-error';
 export { LWSExtensionError } from './lws/lws-extension-error';
 export { LWSSuccess } from './lws/lws-success';
 export { LWSError } from './lws/lws-error';
