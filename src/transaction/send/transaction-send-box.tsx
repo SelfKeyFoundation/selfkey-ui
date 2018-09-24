@@ -177,6 +177,12 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         if (isNaN(Number(value))) { 
             value = '' 
         }
+
+        // Do not allow to enter values above the balance
+        if(Number(value) > this.props.balance){
+            value = String(this.props.balance)
+        }
+
         this.setState({amount: value});
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value)
