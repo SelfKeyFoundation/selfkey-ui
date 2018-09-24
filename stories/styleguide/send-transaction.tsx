@@ -21,6 +21,7 @@ export const SendTransaction = () => (
     amountUsd={0.00}
 	gasPrice={0}
 	gasLimit={2100}
-	nonce={1}
+    nonce={1}
+    sending={true}
     addressError={true} onSendAction={fn} ethFee={0.0000000000001512} onAddressFieldChange={fn} cryptoCurrency ='ETH' usdFee={3.7190664e-11} ethGasStationInfo={ethGasStationInfo}/>
 );

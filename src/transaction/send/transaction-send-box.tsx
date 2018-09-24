@@ -12,7 +12,7 @@ export const styles: StyleSheet = {
         fontFamily: CommonStyle.fontFamily
     },
 
-    sendButton: {
+    button: {
         boxSizing: 'border-box',
         height: '45px',
         width: '201px',
@@ -27,7 +27,7 @@ export const styles: StyleSheet = {
         letterSpacing: '0.67px',
         lineHeight: '20px',
         textAlign: 'center',
-        cursor: 'pinter'
+        cursor: 'pointer'
     },
 
     selectAllAmountBtn: {
@@ -143,7 +143,9 @@ export type TransactionSendBoxProps = {
     onAmountInputChange?: Function,
     changeGasLimitAction?: Function,
     changeGasPriceAction?: Function,
-
+    sending: boolean,
+    confirmAction?: ((event: React.MouseEvent<HTMLElement>) => void),
+    cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void)
 }
 
 export type TransactionSendBoxState = {
@@ -189,8 +191,32 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         }
     }
 
+    renderButtons() {
+        const { classes, onSendAction, sending, confirmAction, cancelAction } = this.props
+        if (sending) {
+            return (
+                <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={24}>
+                    <Grid item>
+                        <button className={classes.button} onClick={confirmAction}> CONFIRM </button>
+                    </Grid>
+                    <Grid item>
+                        <button className={classes.button} onClick={cancelAction}> CANCEL </button>
+                    </Grid>
+                </Grid>
+            );
+        } else {
+            return (
+                <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer}>
+                    <Grid item>
+                        <button className={classes.button} onClick={onSendAction}> SEND </button>
+                    </Grid>
+                </Grid>
+            );
+        }
+    }
+
     render() {
-        const { address, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, onSendAction, amountUsd, locale, fiatCurrency } = this.props;
+        const { address, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, amountUsd, locale, fiatCurrency } = this.props;
 
         let sendAmountClass = `${classes.input} ${classes.amountInput}`
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
@@ -210,9 +236,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                     <span> USD </span>
                 </Grid>
                 {this.renderFeeBox()}
-                <Grid className={classes.actionButtonsContainer} container direction="row" justify="center" alignItems="center">
-                    <button className={classes.sendButton} onClick={onSendAction}> SEND </button>
-                </Grid>
+                {this.renderButtons()}
             </TransactionBox>
         );
     }
