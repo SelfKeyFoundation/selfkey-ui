@@ -36,7 +36,7 @@ exports.styles = {
     container: {
         fontFamily: common_style_1.default.fontFamily
     },
-    sendButton: {
+    button: {
         boxSizing: 'border-box',
         height: '45px',
         width: '201px',
@@ -50,7 +50,7 @@ exports.styles = {
         letterSpacing: '0.67px',
         lineHeight: '20px',
         textAlign: 'center',
-        cursor: 'pinter'
+        cursor: 'pointer'
     },
     selectAllAmountBtn: {
         cursor: 'pointer',
@@ -163,9 +163,24 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
             this.props.onAmountInputChange(value);
         }
     };
+    TransactionSendBoxComponent.prototype.renderButtons = function () {
+        var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction;
+        if (sending) {
+            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 24 },
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement("button", { className: classes.button, onClick: confirmAction }, " CONFIRM ")),
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement("button", { className: classes.button, onClick: cancelAction }, " CANCEL "))));
+        }
+        else {
+            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement("button", { className: classes.button, onClick: onSendAction }, " SEND "))));
+        }
+    };
     TransactionSendBoxComponent.prototype.render = function () {
         var _this = this;
-        var _a = this.props, address = _a.address, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, onAddressFieldChange = _a.onAddressFieldChange, onSendAction = _a.onSendAction, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
+        var _a = this.props, address = _a.address, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, onAddressFieldChange = _a.onAddressFieldChange, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
         var sendAmountClass = classes.input + " " + classes.amountInput;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
@@ -180,8 +195,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
                     React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
                 React.createElement("span", null, " USD ")),
             this.renderFeeBox(),
-            React.createElement(core_1.Grid, { className: classes.actionButtonsContainer, container: true, direction: "row", justify: "center", alignItems: "center" },
-                React.createElement("button", { className: classes.sendButton, onClick: onSendAction }, " SEND "))));
+            this.renderButtons()));
     };
     return TransactionSendBoxComponent;
 }(React.Component));

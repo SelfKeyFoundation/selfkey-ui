@@ -28,6 +28,9 @@ export declare type TransactionSendBoxProps = {
     onAmountInputChange?: Function;
     changeGasLimitAction?: Function;
     changeGasPriceAction?: Function;
+    sending: boolean;
+    confirmAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 };
 export declare type TransactionSendBoxState = {
     amount: string;
@@ -38,6 +41,7 @@ export declare class TransactionSendBoxComponent extends React.Component<StyledP
     renderFeeBox(): JSX.Element;
     handleAllAmountClick(): void;
     handleAmountChange(event: React.ChangeEvent<HTMLInputElement>): void;
+    renderButtons(): JSX.Element;
     render(): JSX.Element;
 }
 export declare const TransactionSendBox: React.ComponentType<TransactionSendBoxProps & StyledComponentProps<string>>;
