@@ -38,4 +38,6 @@ var transaction_fee_box_1 = require("./transaction/send/fee/transaction-fee-box"
 exports.TransactionFeeBox = transaction_fee_box_1.TransactionFeeBox;
 var transaction_send_box_1 = require("./transaction/send//transaction-send-box");
 exports.TransactionSendBox = transaction_send_box_1.TransactionSendBox;
+var transaction_send_progress_box_1 = require("./transaction/send//transaction-send-progress-box");
+exports.TransactionSendProgressBox = transaction_send_progress_box_1.TransactionSendProgressBox;
 //# sourceMappingURL=index.js.map
