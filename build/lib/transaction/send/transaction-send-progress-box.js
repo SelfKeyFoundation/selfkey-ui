@@ -35,12 +35,12 @@ var styles = {
         paddingTop: '50px'
     },
 };
-var handleViewTransaction = function (event, openLink, address) {
+var handleViewTransaction = function (event, openLink, transactionHash) {
     event.preventDefault();
     if (!openLink) {
         return;
     }
-    openLink("https://etherscan.io/address/" + address);
+    openLink("https://etherscan.io/tx/" + transactionHash);
 };
 var renderIcon = function (status) {
     if (status === 'Pending') {
@@ -52,7 +52,7 @@ var renderIcon = function (status) {
     return;
 };
 exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, amount = _a.amount, address = _a.address, openLink = _a.openLink, locale = _a.locale, status = _a.status;
+    var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, amount = _a.amount, address = _a.address, openLink = _a.openLink, locale = _a.locale, status = _a.status, transactionHash = _a.transactionHash;
     return (React.createElement(transaction_box_1.TransactionBox, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
         React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
             React.createElement(core_1.Grid, { item: true, xs: 2 }, renderIcon(status)),
@@ -72,13 +72,14 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
                                 React.createElement(core_1.Typography, { variant: "body2" }, "sent to")),
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Typography, { variant: "headline" }, address))))),
-                React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true },
-                        React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 24 },
-                            React.createElement(core_1.Grid, { item: true },
-                                React.createElement("button", { className: classes.button, onClick: function (e) { return handleViewTransaction(e, openLink, address); } }, " VIEW TRANSACTION ")),
-                            React.createElement(core_1.Grid, { item: true },
-                                React.createElement("button", { className: classes.button2 }, " COPY TRANSACTION ID ")))))))));
+                transactionHash &&
+                    React.createElement(core_1.Grid, { item: true },
+                        React.createElement(core_1.Grid, { container: true },
+                            React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 24 },
+                                React.createElement(core_1.Grid, { item: true },
+                                    React.createElement("button", { className: classes.button, onClick: function (e) { return handleViewTransaction(e, openLink, transactionHash); } }, " VIEW TRANSACTION ")),
+                                React.createElement(core_1.Grid, { item: true },
+                                    React.createElement("button", { className: classes.button2 }, " COPY TRANSACTION ID ")))))))));
 });
 exports.default = exports.TransactionSendProgressBox;
 //# sourceMappingURL=transaction-send-progress-box.js.map

@@ -45,16 +45,17 @@ export type TransactionNoGasErrorProps = {
   closeAction?: ((event: React.MouseEvent<HTMLElement>) => void),
   address: string,
   amount: number,
+  transactionHash: string,
   openLink?: ((link: string) => void)
   status: string,
 };
 
-const handleViewTransaction = (event: React.MouseEvent<HTMLElement>, openLink: ((link: string) => void) | undefined, address: string) => {
+const handleViewTransaction = (event: React.MouseEvent<HTMLElement>, openLink: ((link: string) => void) | undefined, transactionHash: string) => {
   event.preventDefault();
   if (!openLink) {
     return;
   }
-  openLink(`https://etherscan.io/address/${address}`);
+  openLink(`https://etherscan.io/tx/${transactionHash}`);
 }
 
 const renderIcon = (status: string) => {
@@ -67,7 +68,7 @@ const renderIcon = (status: string) => {
 }
 
 export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErrorProps>(
-	({ classes, children, cryptoCurrency, closeAction, amount, address, openLink, locale, status }) => {
+	({ classes, children, cryptoCurrency, closeAction, amount, address, openLink, locale, status, transactionHash }) => {
 		return (
 			<TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
 				<Grid container direction='row' justify='flex-start' alignItems='flex-start'>
@@ -102,19 +103,21 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
                 </Grid>
               </Grid>
 
-            </Grid>  
-            <Grid item>
-              <Grid container>
-                <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={24}>
-                  <Grid item>
-                      <button className={classes.button} onClick={(e) => handleViewTransaction(e, openLink, address)}> VIEW TRANSACTION </button>
-                  </Grid>
-                  <Grid item>
-                      <button className={classes.button2}> COPY TRANSACTION ID </button>
+            </Grid>
+            {transactionHash &&
+              <Grid item>
+                <Grid container>
+                  <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={24}>
+                    <Grid item>
+                        <button className={classes.button} onClick={(e) => handleViewTransaction(e, openLink, transactionHash)}> VIEW TRANSACTION </button>
+                    </Grid>
+                    <Grid item>
+                        <button className={classes.button2}> COPY TRANSACTION ID </button>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
-            </Grid>
+            }
           </Grid>
         </Grid>
 			</TransactionBox>

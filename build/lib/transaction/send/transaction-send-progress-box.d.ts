@@ -6,6 +6,7 @@ export declare type TransactionNoGasErrorProps = {
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     address: string;
     amount: number;
+    transactionHash: string;
     openLink?: ((link: string) => void);
     status: string;
 };
