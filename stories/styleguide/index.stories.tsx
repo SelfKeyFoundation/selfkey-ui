@@ -15,6 +15,7 @@ import { CryptoChartBox } from '../../src/price/crypto-chart-box';
 import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
+import { TransactionSendProgressBox } from '../../src/transaction/send/transaction-send-progress-box';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSSelectWallet } from '../../src/lws/lws-select-wallet';
 import { LWSSelectWalletModal, LWSRequiredInfoModal, LWSWalletConnectionErrorModal, LWSSelfkeyIdErrorModal, LWSExtensionErrorModal, LWSSuccessrModal } from './lws';
@@ -142,6 +143,8 @@ transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
 transactionrStory.addWithJSX('TransactionWithoutGasError', () => <TransactionNoGasError cryptoCurrency='ITH' publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'/>);
 
 transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
+
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' amount={0.00001}/>);
 
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
