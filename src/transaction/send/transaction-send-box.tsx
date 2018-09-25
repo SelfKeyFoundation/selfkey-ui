@@ -139,7 +139,7 @@ export type TransactionSendBoxProps = {
     cryptoCurrency: string,
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void),
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void),
-    onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void),
+    onAddressFieldChange?: Function,
     onAmountInputChange?: Function,
     changeGasLimitAction?: Function,
     changeGasPriceAction?: Function,
@@ -149,7 +149,8 @@ export type TransactionSendBoxProps = {
 }
 
 export type TransactionSendBoxState = {
-    amount: string
+    amount: string,
+    address: string
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
@@ -157,7 +158,7 @@ export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxPr
 export class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps) {
         super(props);
-        this.state = { amount: '' }
+        this.state = { amount: '', address: '' }
     }
 
     renderFeeBox() {
@@ -168,10 +169,18 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
 
     handleAllAmountClick() {
         const value = String(this.props.balance);
-        this.setState({amount: value});
+        this.setState({...this.state, amount: value});
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
+    }
+
+    handleAddressChange(event: React.ChangeEvent<HTMLInputElement>) {
+        if(!this.props.onAddressFieldChange) {
+            return;
+        }
+        this.setState({...this.state, address: event.target.value});
+        this.props.onAddressFieldChange(event.target.value);
     }
 
     handleAmountChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -185,7 +194,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
             value = String(this.props.balance)
         }
 
-        this.setState({amount: value});
+        this.setState({...this.state, amount: value});
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value)
         }
@@ -216,14 +225,14 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     render() {
-        const { address, cryptoCurrency, closeAction, classes, addressError, onAddressFieldChange, amountUsd, locale, fiatCurrency } = this.props;
+        const { address, cryptoCurrency, closeAction, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
 
         let sendAmountClass = `${classes.input} ${classes.amountInput}`
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
 
         return (
             <TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
-                <input type='text' onChange={onAddressFieldChange} defaultValue={address} className={addressInputClass} placeholder="Send to Address" />
+                <input type='text' onChange={e => this.handleAddressChange(e)} value={address} className={addressInputClass} placeholder="Send to Address" />
                 {addressError &&
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
                 }
