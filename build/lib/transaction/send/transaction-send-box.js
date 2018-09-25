@@ -136,7 +136,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionSendBoxComponent, _super);
     function TransactionSendBoxComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { amount: '' };
+        _this.state = { amount: '', address: '' };
         return _this;
     }
     TransactionSendBoxComponent.prototype.renderFeeBox = function () {
@@ -144,10 +144,17 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
         var value = String(this.props.balance);
-        this.setState({ amount: value });
+        this.setState(__assign({}, this.state, { amount: value }));
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
+    };
+    TransactionSendBoxComponent.prototype.handleAddressChange = function (event) {
+        if (!this.props.onAddressFieldChange) {
+            return;
+        }
+        this.setState(__assign({}, this.state, { address: event.target.value }));
+        this.props.onAddressFieldChange(event.target.value);
     };
     TransactionSendBoxComponent.prototype.handleAmountChange = function (event) {
         var value = event.target.value;
@@ -158,7 +165,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         if (Number(value) > this.props.balance) {
             value = String(this.props.balance);
         }
-        this.setState({ amount: value });
+        this.setState(__assign({}, this.state, { amount: value }));
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
@@ -180,11 +187,11 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.render = function () {
         var _this = this;
-        var _a = this.props, address = _a.address, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, onAddressFieldChange = _a.onAddressFieldChange, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
+        var _a = this.props, address = _a.address, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
         var sendAmountClass = classes.input + " " + classes.amountInput;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
-            React.createElement("input", { type: 'text', onChange: onAddressFieldChange, defaultValue: address, className: addressInputClass, placeholder: "Send to Address" }),
+            React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
             React.createElement("div", { className: classes.amountContainer },
