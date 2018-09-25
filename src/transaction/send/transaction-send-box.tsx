@@ -225,14 +225,14 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     render() {
-        const { address, cryptoCurrency, closeAction, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
+        const { cryptoCurrency, closeAction, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
 
         let sendAmountClass = `${classes.input} ${classes.amountInput}`
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
 
         return (
             <TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
-                <input type='text' onChange={e => this.handleAddressChange(e)} value={address} className={addressInputClass} placeholder="Send to Address" />
+                <input type='text' onChange={e => this.handleAddressChange(e)} value={this.state.address} className={addressInputClass} placeholder="Send to Address" />
                 {addressError &&
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
                 }

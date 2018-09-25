@@ -24,7 +24,7 @@ export declare type TransactionSendBoxProps = {
     cryptoCurrency: string;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void);
-    onAddressFieldChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+    onAddressFieldChange?: Function;
     onAmountInputChange?: Function;
     changeGasLimitAction?: Function;
     changeGasPriceAction?: Function;
@@ -34,12 +34,14 @@ export declare type TransactionSendBoxProps = {
 };
 export declare type TransactionSendBoxState = {
     amount: string;
+    address: string;
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
 export declare class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps);
     renderFeeBox(): JSX.Element;
     handleAllAmountClick(): void;
+    handleAddressChange(event: React.ChangeEvent<HTMLInputElement>): void;
     handleAmountChange(event: React.ChangeEvent<HTMLInputElement>): void;
     renderButtons(): JSX.Element;
     render(): JSX.Element;

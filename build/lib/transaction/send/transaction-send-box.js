@@ -187,11 +187,11 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.render = function () {
         var _this = this;
-        var _a = this.props, address = _a.address, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
+        var _a = this.props, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
         var sendAmountClass = classes.input + " " + classes.amountInput;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
-            React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: address, className: addressInputClass, placeholder: "Send to Address" }),
+            React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
             React.createElement("div", { className: classes.amountContainer },
