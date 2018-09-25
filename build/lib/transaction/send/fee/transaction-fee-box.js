@@ -173,7 +173,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     };
     TransactionFeeBoxComponent.prototype.renderAdvancedContent = function () {
         var _this = this;
-        var _a = this.props, classes = _a.classes, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction;
+        var _a = this.props, classes = _a.classes, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction, nonce = _a.nonce;
         return (React.createElement("div", { className: classes.fullWidth },
             React.createElement(core_1.Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
@@ -185,7 +185,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
                         React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: function (e) { return _this.setGasLimit(e); }, className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
-                    React.createElement("input", { disabled: true, type: "text", className: classes.formControl }))),
+                    React.createElement("input", { disabled: true, type: "text", className: classes.formControl, value: nonce }))),
             React.createElement(core_1.Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement("div", { className: classes.currNetworkStatusContainer },
                     React.createElement("span", { className: classes.currNetworkStatusTitle }, "Current Network Status: "),
