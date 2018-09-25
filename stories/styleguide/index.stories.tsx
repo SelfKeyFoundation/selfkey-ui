@@ -14,6 +14,7 @@ import { CryptoChartBox } from '../../src/price/crypto-chart-box';
 import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
+import { TransactionSendProgressBox } from '../../src/transaction/send/transaction-send-progress-box';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSLoading } from '../../src/lws/lws-loading';
 import { TransactionHistory, StatusIconName } from '../../src/transaction/transaction-history';
@@ -180,6 +181,8 @@ transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=
 
 
 transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
+
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' amount={0.00001}/>);
 
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
