@@ -186,7 +186,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     }
 
     renderAdvancedContent() {
-        let { classes, ethGasStationInfo, reloadEthGasStationInfoAction } = this.props;
+        const { classes, ethGasStationInfo, reloadEthGasStationInfoAction, nonce } = this.props;
         return (
             <div className={classes.fullWidth}>
                 <Grid container className={classes.inputsContainer} direction="row" justify="space-between" alignItems="flex-start">
@@ -203,7 +203,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                     </div>
                     <div className={classes.formGroup}>
                         <label>Nonce</label>
-                        <input disabled={true} type="text" className={classes.formControl} />
+                        <input disabled={true} type="text" className={classes.formControl} value={nonce} />
                     </div>
                 </Grid>
 
