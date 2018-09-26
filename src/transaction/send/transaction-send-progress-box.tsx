@@ -1,5 +1,6 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { TransactionBox } from '../transaction-box';
 import { Grid, Typography } from '@material-ui/core';
@@ -31,12 +32,43 @@ const styles: StyleSheet = {
     width: '220px',
     border: '2px solid #1CA9BA',
     borderRadius: '3px',
-    boxShadow: 'inset 3px 3px 10px 0 rgba(0,0,0,0.1)'
+    boxShadow: 'inset 3px 3px 10px 0 rgba(0,0,0,0.1)',
+    backgroundColor: 'transparent', 
+
+    fontSize: '16px',
+    fontWeight: 600,
+    letterSpacing: '0.67px',
+    lineHeight: '20px',
+    textAlign: 'center',
+    cursor: 'pointer',
+    color: '#1CA9BA'
   },
 
   actionButtonsContainer: {
     paddingTop: '50px'
   },
+
+  amount: {
+    color: '#FFFFFF',
+    fontSize: '40px',
+    fontWeight: 300,
+    lineHeight: '48px'
+  },
+
+  address: {
+    color: '#FFFFFF',
+    fontSize: '20px',
+    letterSpacing: '1px',
+    lineHeight: '24px'
+  },
+
+  sentTo : {
+    height: '28px',
+    width: '55px',
+    color: '#93B0C1',
+    fontSize: '18px',
+    lineHeight: '28px'
+  }
 };
 
 export type TransactionNoGasErrorProps = {
@@ -83,7 +115,7 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
               <Grid item id='body' className={classes.body}>
                 <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
                   <Grid item>
-                    <Typography variant='display2'>
+                    <Typography variant='display2' className={classes.amount}>
                       <Grid container>
                         <Grid item>
                             <NumberFormat locale={locale} style='decimal' currency={cryptoCurrency} value={amount} fractionDigits={15}/> 
@@ -95,10 +127,10 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="body2">sent to</Typography>
+                    <Typography variant="body2" className={classes.sentTo}>sent to</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="headline">{address}</Typography>
+                    <Typography variant="headline" className={classes.address}>{address}</Typography>
                   </Grid>
                 </Grid>
               </Grid>
@@ -107,12 +139,14 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
             {transactionHash &&
               <Grid item>
                 <Grid container>
-                  <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={24}>
+                  <Grid container direction="row" justify="flex-start" alignItems="flex-start" className={classes.actionButtonsContainer} spacing={24}>
                     <Grid item>
                         <button className={classes.button} onClick={(e) => handleViewTransaction(e, openLink, transactionHash)}> VIEW TRANSACTION </button>
                     </Grid>
                     <Grid item>
+                      <CopyToClipboard text={transactionHash}>
                         <button className={classes.button2}> COPY TRANSACTION ID </button>
+                      </CopyToClipboard>
                     </Grid>
                   </Grid>
                 </Grid>
