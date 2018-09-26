@@ -1,3 +1,7 @@
+import { setup } from './jss-setup';
+
+setup();
+
 export { CryptoPriceBox } from './price/crypto-price-box';
 export { NumberFormat } from './price/number-format';
 export { PriceSummary } from './price/price-summary';

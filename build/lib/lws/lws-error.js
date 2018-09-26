@@ -5,18 +5,23 @@ var react_jss_1 = require("react-jss");
 var common_style_1 = require("../common/common-style");
 var styles = {
     form: common_style_1.default.form,
+    lwsError: {
+        fontFamily: 'Lato, arial, sans-serif'
+    },
     formSubmitRow: {
         marginTop: '15px',
         '& button': {
             marginTop: '30px',
+            fontWeight: 700
         },
     },
     supportText: {
         textAlign: 'center',
         lineHeight: '22px',
-        fontFamily: 'ProximaNovaSemibold, arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif',
         color: '#C5DCE9',
         padding: '0 0 30px',
+        fontSize: '16px'
     },
     areaTitle: {
         textAlign: 'center',
@@ -39,7 +44,7 @@ var styles = {
 };
 exports.LWSError = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, actionButton = _a.actionButton, actionName = _a.actionName, errorName = _a.errorName, actionIcon = _a.actionIcon, supportText = _a.supportText;
-    return (React.createElement("div", null,
+    return (React.createElement("div", { className: classes.lwsError },
         React.createElement("div", { className: classes.areaTitle },
             actionIcon,
             React.createElement("h2", null, actionName),

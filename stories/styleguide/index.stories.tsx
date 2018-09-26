@@ -1,11 +1,10 @@
 import * as React from 'react';
-
+import { setup } from '../../src/jss-setup';
 import { setAddon, storiesOf, Story } from '@storybook/react';
 import { host } from 'storybook-host';
 import JSXAddon from 'storybook-addon-jsx';
 // import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
-
 import { H1 } from '../../src/typography/headings';
 import { P } from '../../src/typography/paragraph';
 import { Logo } from '../../src/images/logo';
@@ -37,6 +36,7 @@ import { ExchangesWrapper } from './exchanges';
 import { UnlockBox } from '../../src/marketplace/unlock-box'
 import { WithoutBalance } from '../../src/marketplace/without-balance'
 
+setup();
 setAddon(JSXAddon);
 
 const lightOnDark = host({

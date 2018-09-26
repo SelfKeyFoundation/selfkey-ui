@@ -5,19 +5,25 @@ import CommonStyle from '../common/common-style';
 const styles: StyleSheet = {
 	form: CommonStyle.form,
 
+	lwsError: {
+		fontFamily: 'Lato, arial, sans-serif'
+	},
+
 	formSubmitRow: {
 		marginTop: '15px',
 		'& button': {
 			marginTop: '30px',
+			fontWeight: 700
 		},
 	},
 
 	supportText: {
 		textAlign: 'center',
 		lineHeight: '22px',
-		fontFamily: 'ProximaNovaSemibold, arial, sans-serif',
+		fontFamily: 'Lato, arial, sans-serif',
 		color: '#C5DCE9',
 		padding: '0 0 30px',
+		fontSize: '16px'
 	},
 
 	areaTitle: {
@@ -50,7 +56,7 @@ export type LWSErrorProps = {
 
 export const LWSError = injectSheet(styles)<LWSErrorProps>(
 	({ classes, actionButton, actionName, errorName, actionIcon, supportText }) => (
-		<div>
+		<div className={classes.lwsError}>
 			<div className={classes.areaTitle}>
 				{actionIcon}
 				<h2>{actionName}</h2>

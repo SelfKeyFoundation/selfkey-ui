@@ -8,7 +8,7 @@ import { Grid } from '@material-ui/core'
 const styles: StyleSheet = {
 
     cryptoCurrencyName: {
-      fontFamily: 'ProximaNovaRegular',
+      fontFamily: 'Lato, arial, sans-serif',
       fontSize: '18px',
       color: '#ffffff'   
     },
@@ -16,7 +16,7 @@ const styles: StyleSheet = {
     cryptoCurrencyShort: {
       marginTop: '4px',
       opacity: 0.7,
-      fontFamily: 'ProximaNovaRegular',
+      fontFamily: 'Lato, arial, sans-serif',
       fontSize: '14px',
       letterSpacing: '1px',
       color: '#ffffff'

@@ -5,7 +5,7 @@ var React = require("react");
 var react_jss_1 = require("react-jss");
 var styles = {
     customTokenText: {
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
         color: '#93b0c1',
         paddingTop: '8px',

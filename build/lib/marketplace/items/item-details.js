@@ -45,7 +45,7 @@ var styles = {
         textAlign: 'justify',
         margin: '20px',
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '16px',
         fontWeight: 400,
         lineHeight: 1.67

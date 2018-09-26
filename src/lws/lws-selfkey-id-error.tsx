@@ -6,9 +6,8 @@ import { ShieldIcon } from '../icons/shield';
 import { LWSError } from './lws-error';
 
 const styles: StyleSheet = {
-	buttonPrimary: CommonStyle.buttonPrimary,
-
-	buttonSecondary: CommonStyle.buttonSecondary,
+	buttonPrimary: { ...CommonStyle.buttonPrimary, fontWeight: 700 },
+	buttonSecondary: { ...CommonStyle.buttonSecondary, fontWeight: 700 },
 };
 
 export type LWSSelfkeyIdErrorProps = {

@@ -18,7 +18,7 @@ const styles: StyleSheet = {
     backgroundColor: '#262f39',
     border: 'solid 1px #303c49',
     color: '#ffffff',
-    fontFamily: 'ProximaNovaRegular',
+    fontFamily: 'Lato, arial, sans-serif',
     padding: '20px',
   },   
 

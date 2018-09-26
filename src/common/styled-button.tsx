@@ -5,7 +5,11 @@ import { Button } from '@material-ui/core';
 const styles: StyleSheet = { 
   button: {
     background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    fontFamily: 'Lato, arial, sans-serif',
+    '&:hover': {
+      backgroundColor: '#3c4956'
+    }
   },
 };
 

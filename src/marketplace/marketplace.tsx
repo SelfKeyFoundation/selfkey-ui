@@ -3,6 +3,7 @@ import injectSheet, { StyleSheet } from 'react-jss';
 
 import { Grid } from '@material-ui/core'
 import { H1 } from '../typography/headings';
+import MarketplaceIcon from '../icons/marketplace';
 import { MarketplaceItem, MarketplaceItemProps } from './marketplace-item';
 
 const styles: StyleSheet = {
@@ -10,7 +11,11 @@ const styles: StyleSheet = {
     borderBottom: 'solid 1px #475768',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    paddingBottom: '38px'
+  },
+  headerTitle: {
+    paddingLeft: '21px'
   }
 };
 
@@ -29,7 +34,8 @@ const getItems = (items: Array<MarketplaceItemProps>) =>{
 export const Marketplace = injectSheet(styles)<MarketplaceProps>(({classes, children, items}) => (
   <Grid container justify='center' alignItems='center'>
     <Grid item id='header' className={classes.header} xs={12}>
-      <H1>SelfKey Marketplace</H1> 
+      <MarketplaceIcon/>
+      <H1 className={classes.headerTitle} >SelfKey Marketplace</H1>
     </Grid>
     <Grid item id='body' xs={12}>
       <Grid container direction='row' justify='space-evenly' alignItems='center'>
