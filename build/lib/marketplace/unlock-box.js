@@ -25,7 +25,6 @@ var styles = {
             height: '22px',
             width: '346px',
             color: '#FFFFFF',
-            fontFamily: 'Proxima Nova',
             fontSize: '18px',
             lineHeight: '22px',
             marginLeft: '30px',
@@ -35,8 +34,7 @@ var styles = {
         position: 'relative'
     },
     body: {
-        marginTop: '30px',
-        marginLeft: '30px',
+        padding: '30px 42px'
     },
     closeButton: {
         position: 'absolute',

@@ -54,6 +54,8 @@ export type TransactionBoxProps = {
 const renderIcon = (shortName: string, classes: Partial<ClassNameMap<string>>) => {
 	switch (shortName) {
 		case 'KEY':
+      return (<SelfkeyIcon className={classes.icon}/>);
+    case 'KI':
 			return (<SelfkeyIcon className={classes.icon}/>);
 		case 'ETH':
       return (<EthereumIcon className={classes.icon}/>);
