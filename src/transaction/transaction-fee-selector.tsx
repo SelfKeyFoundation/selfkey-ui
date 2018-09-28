@@ -6,7 +6,7 @@ import BN from 'bignumber.js';
 
 const styles: StyleSheet = {
 	root: {
-		width: '550px',
+		width: '100%',
 		color: '#93B0C1',
 		fontFamily: CommonStyle.fontFamily,
 	},
@@ -37,7 +37,7 @@ const styles: StyleSheet = {
 	activated: {},
 	sliderLabels: {
 		height: '19px',
-		width: '550px',
+		width: '100%',
 
 		lineHeight: '19px',
 		display: 'flex',
