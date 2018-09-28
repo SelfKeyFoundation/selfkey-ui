@@ -70,4 +70,6 @@ var unlock_box_1 = require("./marketplace/unlock-box");
 exports.UnlockBox = unlock_box_1.UnlockBox;
 var without_balance_1 = require("./marketplace/without-balance");
 exports.WithoutBalance = without_balance_1.WithoutBalance;
+var unlock_1 = require("./marketplace/unlock");
+exports.Unlock = unlock_1.Unlock;
 //# sourceMappingURL=index.js.map

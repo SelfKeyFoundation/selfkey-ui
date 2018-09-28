@@ -32,3 +32,4 @@ export { Items } from './marketplace/items/items';
 export { ItemDetails } from './marketplace/items/item-details';
 export { UnlockBox } from './marketplace/unlock-box';
 export { WithoutBalance } from './marketplace/without-balance';
+export { Unlock } from './marketplace/unlock';

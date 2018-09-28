@@ -300,6 +300,8 @@ marketplaceStory.addWithJSX('UnlockModal', () => (
 			fiat="USD"
 			fiatRate={217.73}
 			onTransactionFeeChange={(value: number) => console.log(value)}
+			onConfirm={(value: number) => alert(value)}
+			onCancel={()=>alert('Canceled')}
 		/>
 	</UnlockBox>
 ));

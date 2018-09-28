@@ -20,7 +20,7 @@ var common_style_1 = require("../common/common-style");
 var bignumber_js_1 = require("bignumber.js");
 var styles = {
     root: {
-        width: '550px',
+        width: '100%',
         color: '#93B0C1',
         fontFamily: common_style_1.default.fontFamily,
     },
@@ -51,7 +51,7 @@ var styles = {
     activated: {},
     sliderLabels: {
         height: '19px',
-        width: '550px',
+        width: '100%',
         lineHeight: '19px',
         display: 'flex',
         flexFlow: 'row nowrap',
