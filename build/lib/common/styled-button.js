@@ -21,6 +21,9 @@ var styles = {
         border: '2px solid #1CA9BA',
         height: '44px',
         color: '#1CA9BA',
+        '&:hover': {
+            border: '2px solid #1CA9BA',
+        },
     },
 };
 exports.StyledButton = react_jss_1.default(styles)(function (_a) {
