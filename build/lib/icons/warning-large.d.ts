@@ -1,5 +1,5 @@
 import * as React from 'react';
 import { StyledComponentProps } from 'react-jss';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-export declare const HourglassIcon: React.ComponentType<SvgIconProps & StyledComponentProps<string>>;
-export default HourglassIcon;
+export declare const WarningLargeIcon: React.ComponentType<SvgIconProps & StyledComponentProps<string>>;
+export default WarningLargeIcon;

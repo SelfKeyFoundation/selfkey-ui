@@ -6,6 +6,7 @@ var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
 var transaction_box_1 = require("../transaction-box");
 var core_1 = require("@material-ui/core");
 var hour_glass_1 = require("../../icons/hour-glass");
+var okay_1 = require("../../icons/okay");
 var headings_1 = require("../../typography/headings");
 var number_format_1 = require("../../price/number-format");
 var styles = {
@@ -43,11 +44,14 @@ var styles = {
     actionButtonsContainer: {
         paddingTop: '50px'
     },
-    amount: {
+    amountContainer: {
         color: '#FFFFFF',
         fontSize: '40px',
         fontWeight: 300,
-        lineHeight: '48px'
+        lineHeight: '48px',
+    },
+    amount: {
+        paddingRight: '15px'
     },
     address: {
         color: '#FFFFFF',
@@ -75,7 +79,7 @@ var renderIcon = function (status) {
         return React.createElement(hour_glass_1.HourGlassIcon, null);
     }
     else if (status === 'Sent!') {
-        return React.createElement("span", null, "Missing Icon");
+        return React.createElement(okay_1.OkayIcon, null);
     }
     return;
 };
@@ -91,9 +95,9 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
                     React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body },
                         React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start', spacing: 16 },
                             React.createElement(core_1.Grid, { item: true },
-                                React.createElement(core_1.Typography, { variant: 'display2', className: classes.amount },
+                                React.createElement(core_1.Typography, { variant: 'display2', className: classes.amountContainer },
                                     React.createElement(core_1.Grid, { container: true },
-                                        React.createElement(core_1.Grid, { item: true },
+                                        React.createElement(core_1.Grid, { className: classes.amount, item: true },
                                             React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'decimal', currency: cryptoCurrency, value: amount, fractionDigits: 15 })),
                                         React.createElement(core_1.Grid, { item: true }, cryptoCurrency)))),
                             React.createElement(core_1.Grid, { item: true },
