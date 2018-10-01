@@ -81,7 +81,7 @@ var UnlockComponent = /** @class */ (function (_super) {
         return _this;
     }
     UnlockComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, _b = _a.amount, amount = _b === void 0 ? 25 : _b, _c = _a.token, token = _c === void 0 ? 'KEY' : _c, _d = _a.days, days = _d === void 0 ? 30 : _d, minGasPrice = _a.minGasPrice, maxGasPrice = _a.maxGasPrice, gasLimit = _a.gasLimit, fiat = _a.fiat, fiatRate = _a.fiatRate;
+        var _a = this.props, classes = _a.classes, _b = _a.amount, amount = _b === void 0 ? 25 : _b, _c = _a.token, token = _c === void 0 ? 'KEY' : _c, _d = _a.days, days = _d === void 0 ? 30 : _d, minGasPrice = _a.minGasPrice, maxGasPrice = _a.maxGasPrice, gasLimit = _a.gasLimit, fiat = _a.fiat, fiatRate = _a.fiatRate, onCancel = _a.onCancel;
         var _e = this.state, error = _e.error, understood = _e.understood;
         return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "flex-start", alignItems: "flex-start" },
             React.createElement(core_1.Grid, { item: true, xs: 2 },
@@ -110,7 +110,7 @@ var UnlockComponent = /** @class */ (function (_super) {
                                 error ? (React.createElement(core_1.FormHelperText, null, "Please confirm you understand how the deposit works.")) : ('')),
                             React.createElement("div", { className: classes.actions },
                                 React.createElement(styled_button_1.StyledButton, { variant: "contained", size: "medium", type: "submit" }, "Confirm"),
-                                React.createElement(styled_button_1.StyledButton, { variant: "outlined", size: "medium" }, "Cancel"))))))));
+                                React.createElement(styled_button_1.StyledButton, { variant: "outlined", size: "medium", onClick: onCancel }, "Cancel"))))))));
     };
     return UnlockComponent;
 }(React.Component));

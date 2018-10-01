@@ -96,6 +96,7 @@ export class UnlockComponent extends React.Component<StyledProps, UnlockState> {
 			gasLimit,
 			fiat,
 			fiatRate,
+			onCancel,
 		} = this.props;
 
 		const { error, understood } = this.state;
@@ -154,7 +155,7 @@ export class UnlockComponent extends React.Component<StyledProps, UnlockState> {
 									<StyledButton variant="contained" size="medium" type="submit">
 										Confirm
 									</StyledButton>
-									<StyledButton variant="outlined" size="medium">
+									<StyledButton variant="outlined" size="medium" onClick={onCancel}>
 										Cancel
 									</StyledButton>
 								</div>
