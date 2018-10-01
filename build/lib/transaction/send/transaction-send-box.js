@@ -58,8 +58,6 @@ exports.styles = {
         fontWeight: 500,
         lineHeight: '16px',
         color: '#A9C5D6',
-        position: 'absolute',
-        left: 0,
         boxSizing: 'border-box',
         height: '37px',
         width: '37px',
@@ -115,9 +113,10 @@ exports.styles = {
         }
     },
     amountInput: {
-        paddingLeft: '45px',
         width: 'calc(100% - 45px)',
-        marginBottom: '10px'
+        border: 'none',
+        margin: '0px',
+        padding: '0px'
     },
     addressErrorText: {
         height: '19px',
@@ -130,13 +129,35 @@ exports.styles = {
     addressErrorColor: {
         color: '#FE4B61',
         borderBottom: '2px solid #FE4B61',
+    },
+    divider: {
+        borderBottom: '2px solid #93b0c1',
+        paddingTop: '10px'
+    },
+    cryptoSelect: {
+        height: '40px',
+        width: '300px',
+        color: '#FFFFFF',
+        fontFamily: 'Lato',
+        fontSize: '20px',
+        lineHeight: '36px',
+        backgroundColor: '#1E262E',
+        border: '1px solid #384656',
+        borderRadius: '30px',
+        paddingLeft: '10px',
+        paddingBottom: '10px',
+    },
+    selectItem: {
+        border: 0,
+        backgroundColor: '#1E262E',
+        color: '#FFFFFF',
     }
 };
 var TransactionSendBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionSendBoxComponent, _super);
     function TransactionSendBoxComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { amount: '', address: '' };
+        _this.state = { amount: '', address: '', cryptoCurrency: '' };
         return _this;
     }
     TransactionSendBoxComponent.prototype.renderFeeBox = function () {
@@ -170,6 +191,19 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
             this.props.onAmountInputChange(value);
         }
     };
+    TransactionSendBoxComponent.prototype.handleCryptoCurrencyChange = function (event) {
+        var value = event.target.value;
+        this.setState(__assign({}, this.state, { cryptoCurrency: value }));
+        if (this.props.onCryptoCurrencyChange) {
+            this.props.onCryptoCurrencyChange(value);
+        }
+    };
+    TransactionSendBoxComponent.prototype.renderSelectTokenItems = function () {
+        var _a = this.props, tokens = _a.tokens, classes = _a.classes;
+        return tokens.map(function (token) {
+            return (React.createElement("option", { value: token.symbol, className: classes.selectItem }, token.name + " - " + token.balance + " " + token.symbol));
+        });
+    };
     TransactionSendBoxComponent.prototype.renderButtons = function () {
         var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction;
         if (sending) {
@@ -194,9 +228,18 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
             React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
-            React.createElement("div", { className: classes.amountContainer },
-                React.createElement("button", { onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL "),
-                React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })),
+            React.createElement(core_1.Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 16 },
+                        React.createElement(core_1.Grid, { item: true },
+                            React.createElement("button", { onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
+                        React.createElement(core_1.Grid, { item: true },
+                            React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect },
+                        React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
+                        this.renderSelectTokenItems()))),
+            React.createElement(core_1.Divider, { className: classes.divider }),
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null,
                     React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
