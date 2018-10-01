@@ -11,7 +11,8 @@ const styles: StyleSheet = {
     fontSize: '16px',
     padding: '16px',
     textTransform: 'uppercase',
-    fontFamily: 'ProximaNovaSemibold',
+    fontWeight: 700,
+    fontFamily: 'Lato, arial, sans-serif',
     letterSpacing: '0.6px',
     cursor: 'pointer'
   },

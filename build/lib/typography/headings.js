@@ -6,14 +6,17 @@ var react_jss_1 = require("react-jss");
 var styles = {
     base: {
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontWeight: 400
     },
     h1: {
         fontSize: '26px'
     },
     h2: {
-        fontSize: '20px'
+        fontSize: '22px'
+    },
+    h3: {
+        fontSize: '18px'
     }
 };
 exports.H1 = react_jss_1.default(styles)(function (_a) {
@@ -23,6 +26,10 @@ exports.H1 = react_jss_1.default(styles)(function (_a) {
 exports.H2 = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, className = _a.className;
     return (React.createElement("h1", { className: classes.base + " " + classes.h2 + " " + className }, children));
+});
+exports.H3 = react_jss_1.default(styles)(function (_a) {
+    var classes = _a.classes, children = _a.children, className = _a.className;
+    return (React.createElement("h1", { className: classes.base + " " + classes.h3 + " " + className }, children));
 });
 exports.default = exports.H1;
 //# sourceMappingURL=headings.js.map

@@ -37,7 +37,6 @@ const styles: StyleSheet = {
     borderRadius: '3px',
     boxShadow: 'inset 3px 3px 10px 0 rgba(0,0,0,0.1)',
     backgroundColor: 'transparent',
-
     fontSize: '16px',
     fontWeight: 600,
     letterSpacing: '0.67px',
@@ -50,7 +49,6 @@ const styles: StyleSheet = {
   actionButtonsContainer: {
     paddingTop: '50px'
   },
-
   amountContainer: {
     color: '#FFFFFF',
     fontSize: '40px',

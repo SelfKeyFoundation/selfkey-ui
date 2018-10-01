@@ -9,8 +9,11 @@ import { VisibilityOffIcon } from '../icons/visibility-off';
 
 export const styles: StyleSheet = {
 	cryptoPriceTable: {
-		fontFamily: 'ProximaNovaRegular',
+		fontFamily: 'Lato, arial, sans-serif',
 		width: '1140px',
+		'& td, & th': {
+			fontFamily: 'Lato, arial, sans-serif!important'
+		}
 	},
 	table: {
 		borderSpacing: '0px',
@@ -45,6 +48,9 @@ export const styles: StyleSheet = {
 			textAlign: 'left',
 			color: '#ffffff',
 			borderBottom: '0px',
+			'& svg g': {
+				fill: '#7f8fa4',
+			},
 		},
 		'& td:first-child': {
 			paddingLeft: '24px !important',

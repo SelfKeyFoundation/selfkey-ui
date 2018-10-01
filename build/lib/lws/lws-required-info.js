@@ -1,16 +1,39 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+var _ = require("lodash");
 var react_jss_1 = require("react-jss");
 var common_style_1 = require("../common/common-style");
 var check_1 = require("../icons/check");
+var check_empty_1 = require("../icons/check-empty");
 var warning_1 = require("../icons/warning");
 var edit_1 = require("../icons/edit");
 var lws_button_1 = require("./lws-button");
 var styles = {
     form: common_style_1.default.form,
-    buttonPrimary: common_style_1.default.buttonPrimary,
-    buttonSecondary: common_style_1.default.buttonSecondary,
+    buttonPrimary: __assign({}, common_style_1.default.buttonPrimary, { fontWeight: 700 }),
+    buttonSecondary: __assign({}, common_style_1.default.buttonSecondary, { fontWeight: 700 }),
+    requiredInfo: {
+        '& a': {
+            color: '#23E6FE',
+            textDecoration: 'none',
+            '&:hover': {
+                textDecoration: 'underline',
+            },
+        },
+        fontFamily: 'Lato, arial, sans-serif'
+    },
     areaTitle: {
         textAlign: 'center',
         '& h4': {
@@ -20,14 +43,17 @@ var styles = {
             margin: '0',
             lineHeight: '22px',
             textAlign: 'left',
-            color: '#FFF'
-        }
+            color: '#FFF',
+        },
     },
     attribute: {
         display: 'flex',
         flexDirection: 'row',
         padding: '0 0 30px',
         color: '#FFF',
+        '& svg': {
+            flex: '20px',
+        },
         '& dl': {
             display: 'flex',
             justifyContent: 'space-between',
@@ -36,14 +62,18 @@ var styles = {
             '& dd': {
                 color: '#93B0C1',
                 wordBreak: 'break-word',
-                textAlign: 'right'
-            }
+                textAlign: 'right',
+            },
         },
+    },
+    clickable: {
+        cursor: 'pointer',
     },
     waringMessage: {
         color: '#FFA700',
         fontSize: '13px',
-        marginTop: '-15px'
+        marginTop: '-20px',
+        padding: '0 0 20px 35px',
     },
     formSubmitColumn: {
         flexDirection: 'row',
@@ -51,66 +81,105 @@ var styles = {
         justifyContent: 'space-between',
         '& button': {
             maxWidth: '215px',
-            marginTop: '0px'
-        }
+            marginTop: '0px',
+            fontWeight: 700
+        },
     },
     tocMessage: {
         background: '#293743',
         padding: '20px',
         fontSize: '12px',
         lineHeight: '15px',
-        fontFamily: 'ProximaNovaRegIt',
+        fontStyle: 'italic',
+        fontFamily: 'Lato, arial, sans-serif',
         margin: '30px 0 45px',
         color: '#FFF'
     },
     edit: {
-        cursor: 'pointer'
+        cursor: 'pointer',
+    },
+};
+var getAttributeValue = function (attribute) {
+    if (!attribute.data)
+        return null;
+    if (attribute.document && attribute.data && attribute.data.value) {
+        return 'document';
+    }
+    switch (attribute.key) {
+        case 'birthdate':
+            return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
+        case 'work_place':
+        case 'physical_address':
+            var value = attribute.data.address1 + ', ';
+            if (attribute.data.address2) {
+                value += attribute.data.address2 + ', ';
+            }
+            value += attribute.data.city + ', ';
+            value += attribute.data.region + ', ';
+            value += attribute.data.zip + ', ';
+            value += attribute.data.country;
+            return value;
+        case 'phonenumber_countrycode':
+            return attribute.data.countryCode + ' ' + attribute.data.telephoneNumber;
+        default:
+            return attribute.data.value || null;
     }
 };
-var renderAttributes = function (attributes, classes, editAction) {
-    return attributes.map(function (attribute, index) {
-        if (attribute.value) {
+var renderAttributes = function (requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction) {
+    var attrs = requested.map(function (attr) {
+        return _.find(attributes, { key: attr.key }) || attr;
+    });
+    return attrs.map(function (attribute, index) {
+        var attributeValue = getAttributeValue(attribute);
+        var notAllowed = !!_.find(notAllowedAttributes, { key: attribute.key });
+        if (attributeValue) {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
-                    React.createElement(check_1.CheckIcon, null),
+                    React.createElement("span", { className: classes.clickable, onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(check_empty_1.CheckEmptyIcon, null) : React.createElement(check_1.CheckIcon, null)),
                     React.createElement("dl", null,
-                        React.createElement("dt", null, attribute.name),
-                        React.createElement("dd", null, attribute.value)))));
+                        React.createElement("dt", null, attribute.label),
+                        React.createElement("dd", null, attributeValue)))));
         }
         else {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
                     React.createElement(warning_1.WarningIcon, null),
                     React.createElement("dl", null,
-                        React.createElement("dt", null, attribute.name),
-                        React.createElement("dd", null,
+                        React.createElement("dt", null, attribute.label),
+                        editAction ? (React.createElement("dd", null,
                             React.createElement("a", { onClick: editAction, className: classes.edit },
-                                React.createElement(edit_1.EditIcon, null))))),
+                                React.createElement(edit_1.EditIcon, null)))) : null)),
                 React.createElement("div", { className: classes.waringMessage }, "Please update your missing details.")));
         }
     });
 };
 exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, allowAction = _a.allowAction, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, website = _a.website;
-    return (React.createElement("div", null,
+    var classes = _a.classes, allowAction = _a.allowAction, requested = _a.requested, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, _b = _a.notAllowedAttributes, notAllowedAttributes = _b === void 0 ? [] : _b, website = _a.website, _c = _a.disallowAttributeAction, disallowAttributeAction = _c === void 0 ? function (attribute, disallow) { } : _c;
+    return (React.createElement("div", { className: classes.requiredInfo },
         React.createElement("div", { className: classes.areaTitle },
             React.createElement("h4", null,
-                React.createElement("a", { href: website.url, target: '_blank' },
+                React.createElement("a", { href: website.url, target: "_blank" },
                     React.createElement("strong", null, website.name)),
-                " would like to access this information:")),
+                ' ',
+                "would like to access this information:")),
         React.createElement("div", { className: classes.form },
-            renderAttributes(attributes, classes, editAction),
+            renderAttributes(requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction),
             React.createElement("div", { className: classes.tocMessage },
-                "By clicking \"Allow\", your information listed above will be used by ",
-                React.createElement("a", { href: website.url, target: '_blank' }, website.name),
-                " with respect to their ",
-                React.createElement("a", { href: website.termsUrl, target: '_blank' }, "[Terms of Service]"),
-                " and ",
-                React.createElement("a", { href: website.policyUrl, target: '_blank' }, "[Privacy Policy]"),
+                "By clicking \"Allow\", your information listed above will be used by",
+                ' ',
+                React.createElement("a", { href: website.url, target: "_blank" }, website.name),
+                ' ',
+                "with respect to their",
+                ' ',
+                React.createElement("a", { href: website.termsUrl, target: "_blank" }, "Terms of Service"),
+                ' ',
+                "and",
+                ' ',
+                React.createElement("a", { href: website.policyUrl, target: "_blank" }, "Privacy Policy"),
                 "."),
             React.createElement("div", { className: classes.formSubmitColumn },
-                React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary }, "Cancel"),
-                React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary }, "Allow")))));
+                React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary, onClick: cancelAction }, "Cancel"),
+                React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: allowAction }, "Allow")))));
 });
 exports.default = exports.LWSRequiredInfo;
 //# sourceMappingURL=lws-required-info.js.map

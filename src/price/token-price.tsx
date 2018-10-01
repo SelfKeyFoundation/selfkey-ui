@@ -6,14 +6,14 @@ import { PriceSummary } from './price-summary';
 
 const styles: StyleSheet = {
     cryptoCurrencyValue: {
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '40px',
         fontWeight: 300,
         color: '#ffffff'
     },
 
     currency: {
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
         color: '#93b0c1'
     }

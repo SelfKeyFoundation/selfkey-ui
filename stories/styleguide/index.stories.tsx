@@ -1,11 +1,10 @@
 import * as React from 'react';
-
+import { setup } from '../../src/jss-setup';
 import { setAddon, storiesOf, Story } from '@storybook/react';
 import { host } from 'storybook-host';
 import JSXAddon from 'storybook-addon-jsx';
 // import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
-
 import { H1 } from '../../src/typography/headings';
 import { P } from '../../src/typography/paragraph';
 import { Logo } from '../../src/images/logo';
@@ -17,18 +16,42 @@ import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
 import { TransactionSendProgressBox } from '../../src/transaction/send/transaction-send-progress-box';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
+<<<<<<< HEAD
 import { LWSSelectWallet } from '../../src/lws/lws-select-wallet';
 import { LWSSelectWalletModal, LWSRequiredInfoModal, LWSWalletConnectionErrorModal, LWSSelfkeyIdErrorModal, LWSExtensionErrorModal, LWSSuccessrModal } from './lws';
 import { SendTransaction } from './send-transaction';
 
 
 
+=======
+import { LWSLoading } from '../../src/lws/lws-loading';
+import { TransactionHistory, StatusIconName } from '../../src/transaction/transaction-history';
+import { SendTransaction } from './send-transaction';
+
+import {
+	LWSSelectWalletWrapper,
+	LWSRequiredInfoWrapper,
+	LWSWalletConnectionErrorWrapper,
+	LWSSelfkeyIdErrorWrapper,
+	LWSExtensionErrorWrapper,
+	LWSSuccessWrapper,
+	LWSAuthErrorWrapper,
+} from './lws';
+
+import { ItemDetails } from '../../src/marketplace/items/item-details';
+
+import { MarketplaceWrapper } from './marketplace';
+import { ExchangesWrapper } from './exchanges';
+
+setup();
+>>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6
 setAddon(JSXAddon);
 
 const lightOnDark = host({
 	title: 'Light on Dark',
 	align: 'center',
 	background: '#222b34',
+	width: '1400px',
 });
 
 const transferModal = host({
@@ -69,7 +92,7 @@ priceStory.addWithJSX('CryptoChartBox', () => (
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
-			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 }
+			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 20.52 },
 		]}
 		topTokenListSize={5}
 		viewAll={true}
@@ -135,12 +158,39 @@ priceStory.addWithJSX('CryptoPriceTable', () => (
 	/>
 ));
 
-const transactionrStory = storiesOf('Transaction', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
+const transactionrStory = storiesOf('Transaction', module).addDecorator(transferModal) as Story & {
+	addWithJSX: Function;
+};
 
 transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
 
+transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
+	<TransactionNoGasError cryptoCurrency="ITH" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+));
 
-transactionrStory.addWithJSX('TransactionWithoutGasError', () => <TransactionNoGasError cryptoCurrency='ITH' publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'/>);
+let txList = [{
+	statusText: 'sented',
+	date: '1995/45/45',
+	cryptoCurrency: 'eth',
+	value: '+1578',
+	statusIconName: 'failed' as StatusIconName,
+	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
+},{
+	statusText: 'received',
+	date: '1995/45/41',
+	cryptoCurrency: 'key',
+	value: '+15',
+	statusIconName: 'receive' as StatusIconName,
+	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
+}];
+
+transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{}}list={txList}/>);
+
+
+transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
+
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' transactionHash='0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd' amount={0.00001}/>);
+
 
 transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
 
@@ -151,16 +201,65 @@ const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { ad
 
 lws.addWithJSX('LWSHeader', () => <LWSModalHeader />);
 
-lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWallet wallets={[{publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe'}]}/>);
+lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWalletWrapper />);
 
+lws.addWithJSX('LWSRequiredInfo', () => <LWSRequiredInfoWrapper />);
+
+lws.addWithJSX('LWSWalletConnectionError', () => <LWSWalletConnectionErrorWrapper />);
+
+lws.addWithJSX('LWSSelfkeyIdError', () => <LWSSelfkeyIdErrorWrapper />);
+
+<<<<<<< HEAD
 lws.addWithJSX('LWSSelectWalletModal', () => <LWSSelectWalletModal />);
+=======
+lws.addWithJSX('LWSExtensionError', () => <LWSExtensionErrorWrapper />);
+>>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6
 
-lws.addWithJSX('LWSRequiredInfoModal', () => <LWSRequiredInfoModal />);
+lws.addWithJSX('LWSSuccess', () => <LWSSuccessWrapper />);
+lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorWrapper />);
 
+<<<<<<< HEAD
 lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorModal />);
 
 lws.addWithJSX('LWSSelfkeyIdErrorModal', () => <LWSSelfkeyIdErrorModal />);
+=======
+lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
 
-lws.addWithJSX('LWSExtensionErrorModal', () => <LWSExtensionErrorModal />);
+lws.addWithJSX('LWSLoading', () => <LWSLoading />);
+>>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6
 
+const marketplaceStory = storiesOf('Marketplace', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+<<<<<<< HEAD
 lws.addWithJSX('LWSSuccessrModal', () => <LWSSuccessrModal />);
+=======
+marketplaceStory.addWithJSX('Marketplace', () => <MarketplaceWrapper />);
+
+marketplaceStory.addWithJSX('Exchanges', () => <ExchangesWrapper />);
+
+marketplaceStory.addWithJSX('ItemDetails', () => (
+	<ItemDetails
+		item={{
+			name: 'Gatecoin',
+			logo: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+			status: 'Active',
+			integration: 'Unlock Marketplace',
+			description:
+				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets.',
+			location: 'Hong Kong',
+			year_launched: 2013,
+			coin_pairs: '72',
+			maker_fee: '0.25%',
+			taker_fee: '0.35%',
+			fiat_payments: 'Bank trasnfer',
+			fiat_supported: ['EUR', 'USD', 'HKD'],
+			margin_trading: 'no',
+			kyc_aml: 'yes',
+			excluded_residents: 'United States',
+			url: 'http://www.gatecoin.com',
+			email: 'support@gatecoin.com',
+			kyc_template: ['First Name', 'Last Name', 'Country Of Residence', 'National ID', 'National ID Self'],
+		}}
+	/>
+));
+>>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6

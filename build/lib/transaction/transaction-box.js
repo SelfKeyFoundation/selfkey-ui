@@ -37,7 +37,8 @@ var styles = {
         border: 'solid 1px #303c49',
         color: '#fff',
         fontSize: '25px',
-        fontWeight: 600
+        fontWeight: 600,
+        fontFamily: 'Lato, arial, sans-serif'
     }
 };
 var renderIcon = function (shortName, classes) {

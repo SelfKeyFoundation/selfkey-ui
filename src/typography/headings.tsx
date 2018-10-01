@@ -5,14 +5,20 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 const styles: StyleSheet = {
     base: {
         color: '#fff',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontWeight: 400
     },
+
     h1: {
         fontSize: '26px'
     },
+
     h2: {
-        fontSize: '20px'
+        fontSize: '22px'
+    },
+    
+    h3: {
+        fontSize: '18px'
     }
 };
 
@@ -27,6 +33,11 @@ export const H1 = injectSheet(styles)<HeadingsProps>(({ classes, children, class
 
 export const H2 = injectSheet(styles)<HeadingsProps>(({ classes, children, className}) => (
     <h1 className={`${classes.base} ${classes.h2} ${className}`}>{children}</h1>
+));
+
+
+export const H3 = injectSheet(styles)<HeadingsProps>(({ classes, children, className}) => (
+    <h1 className={`${classes.base} ${classes.h3} ${className}`}>{children}</h1>
 ));
 
 export default H1;

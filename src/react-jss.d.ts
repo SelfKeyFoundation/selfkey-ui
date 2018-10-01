@@ -16,9 +16,9 @@ declare module 'react-jss' {
   export type StyleSheet<Props = {}>
     = Record<
         string,
-        ExtendedCSSProperties
         | CSSProperties 
         | ((props: Props) => React.CSSProperties)
+        | Record<string, CSSProperties>
       >;
 
   type StyleRules<ClassKey extends string = string, Props = {}> 

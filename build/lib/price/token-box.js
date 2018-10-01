@@ -37,7 +37,7 @@ var styles = {
     publicKey: {
         outline: 'none',
         cursor: 'pointer',
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '12px',
         color: '#93b0c1'
     },
@@ -48,14 +48,14 @@ var styles = {
         outline: 'none'
     },
     cryptoCurrencyName: {
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '18px',
         color: '#ffffff'
     },
     cryptoCurrencyShort: {
         marginTop: '4px',
         opacity: 0.7,
-        fontFamily: 'ProximaNovaRegular',
+        fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
         letterSpacing: '1px',
         color: '#ffffff'

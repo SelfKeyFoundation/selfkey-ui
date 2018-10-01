@@ -21,7 +21,7 @@ const styles: StyleSheet = {
 	},
 
 	publicKey: {
-		fontFamily: 'ProximaNovaRegular',
+		fontFamily: 'Lato, arial, sans-serif',
 		color: '#93b0c1',
 	},
 };
