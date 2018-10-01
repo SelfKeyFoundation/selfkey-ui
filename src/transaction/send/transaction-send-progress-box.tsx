@@ -5,8 +5,11 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { TransactionBox } from '../transaction-box';
 import { Grid, Typography } from '@material-ui/core';
 import { HourGlassIcon } from '../../icons/hour-glass';
+import { OkayIcon } from '../../icons/okay';
+
 import { H2 } from '../../typography/headings';
 import { NumberFormat } from '../../price/number-format';
+
 
 const styles: StyleSheet = {
   button: {
@@ -33,7 +36,7 @@ const styles: StyleSheet = {
     border: '2px solid #1CA9BA',
     borderRadius: '3px',
     boxShadow: 'inset 3px 3px 10px 0 rgba(0,0,0,0.1)',
-    backgroundColor: 'transparent', 
+    backgroundColor: 'transparent',
 
     fontSize: '16px',
     fontWeight: 600,
@@ -48,13 +51,15 @@ const styles: StyleSheet = {
     paddingTop: '50px'
   },
 
-  amount: {
+  amountContainer: {
     color: '#FFFFFF',
     fontSize: '40px',
     fontWeight: 300,
-    lineHeight: '48px'
+    lineHeight: '48px',
   },
-
+  amount: {
+    paddingRight: '15px'
+  },
   address: {
     color: '#FFFFFF',
     fontSize: '20px',
@@ -94,7 +99,7 @@ const renderIcon = (status: string) => {
   if(status === 'Pending') {
     return <HourGlassIcon/>
   } else if (status === 'Sent!') {
-    return <span>Missing Icon</span>
+    return <OkayIcon/>
   }
   return;
 }
@@ -115,10 +120,10 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
               <Grid item id='body' className={classes.body}>
                 <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
                   <Grid item>
-                    <Typography variant='display2' className={classes.amount}>
+                    <Typography variant='display2' className={classes.amountContainer}>
                       <Grid container>
-                        <Grid item>
-                            <NumberFormat locale={locale} style='decimal' currency={cryptoCurrency} value={amount} fractionDigits={15}/> 
+                        <Grid className={classes.amount} item>
+                            <NumberFormat locale={locale} style='decimal' currency={cryptoCurrency} value={amount} fractionDigits={15}/>
                         </Grid>
                         <Grid item>
                           {cryptoCurrency}
