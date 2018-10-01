@@ -16,14 +16,6 @@ import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
 import { TransactionSendProgressBox } from '../../src/transaction/send/transaction-send-progress-box';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
-<<<<<<< HEAD
-import { LWSSelectWallet } from '../../src/lws/lws-select-wallet';
-import { LWSSelectWalletModal, LWSRequiredInfoModal, LWSWalletConnectionErrorModal, LWSSelfkeyIdErrorModal, LWSExtensionErrorModal, LWSSuccessrModal } from './lws';
-import { SendTransaction } from './send-transaction';
-
-
-
-=======
 import { LWSLoading } from '../../src/lws/lws-loading';
 import { TransactionHistory, StatusIconName } from '../../src/transaction/transaction-history';
 import { SendTransaction } from './send-transaction';
@@ -44,7 +36,6 @@ import { MarketplaceWrapper } from './marketplace';
 import { ExchangesWrapper } from './exchanges';
 
 setup();
->>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6
 setAddon(JSXAddon);
 
 const lightOnDark = host({
@@ -209,30 +200,17 @@ lws.addWithJSX('LWSWalletConnectionError', () => <LWSWalletConnectionErrorWrappe
 
 lws.addWithJSX('LWSSelfkeyIdError', () => <LWSSelfkeyIdErrorWrapper />);
 
-<<<<<<< HEAD
-lws.addWithJSX('LWSSelectWalletModal', () => <LWSSelectWalletModal />);
-=======
 lws.addWithJSX('LWSExtensionError', () => <LWSExtensionErrorWrapper />);
->>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6
 
 lws.addWithJSX('LWSSuccess', () => <LWSSuccessWrapper />);
 lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorWrapper />);
 
-<<<<<<< HEAD
-lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorModal />);
-
-lws.addWithJSX('LWSSelfkeyIdErrorModal', () => <LWSSelfkeyIdErrorModal />);
-=======
 lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
 
 lws.addWithJSX('LWSLoading', () => <LWSLoading />);
->>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6
 
 const marketplaceStory = storiesOf('Marketplace', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
-<<<<<<< HEAD
-lws.addWithJSX('LWSSuccessrModal', () => <LWSSuccessrModal />);
-=======
 marketplaceStory.addWithJSX('Marketplace', () => <MarketplaceWrapper />);
 
 marketplaceStory.addWithJSX('Exchanges', () => <ExchangesWrapper />);
@@ -262,4 +240,3 @@ marketplaceStory.addWithJSX('ItemDetails', () => (
 		}}
 	/>
 ));
->>>>>>> e8ee399c4208fd4e84a893fa0a9ee6ecefce3ed6
