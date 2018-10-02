@@ -4,7 +4,7 @@ import injectSheet, { WithStyles, StyleSheet, StyledComponentProps, ClassNameMap
 import CommonStyle from '../../common/common-style';
 import { TransactionFeeBox } from './fee/transaction-fee-box';
 import TransactionBox from '../transaction-box';
-import { Grid } from '@material-ui/core';
+import { Grid, Divider } from '@material-ui/core';
 import { NumberFormat } from '../../price/number-format';
 
 export const styles: StyleSheet = {
@@ -36,9 +36,6 @@ export const styles: StyleSheet = {
         fontWeight: 500,
         lineHeight: '16px',
         color: '#A9C5D6',
-
-        position: 'absolute',
-        left: 0,
         boxSizing: 'border-box',
         height: '37px',
         width: '37px',
@@ -94,9 +91,10 @@ export const styles: StyleSheet = {
         }
     },
     amountInput: {
-        paddingLeft: '45px',
         width: 'calc(100% - 45px)',
-        marginBottom: '10px'
+        border: 'none',
+        margin: '0px',
+        padding: '0px'
     },
 
     addressErrorText: {
@@ -111,14 +109,49 @@ export const styles: StyleSheet = {
     addressErrorColor: {
         color: '#FE4B61',
         borderBottom: '2px solid #FE4B61',
-    }
+    },
 
+    divider: {
+        borderBottom: '2px solid #93b0c1',
+        paddingTop: '10px'
+    },
+
+    cryptoSelect: {	
+        height: '40px',
+        width: '300px',	
+        color: '#FFFFFF',	
+        fontFamily: 'Lato',	
+        fontSize: '20px',
+        lineHeight: '36px',
+        backgroundColor: '#1E262E',
+        border: '1px solid #384656',	
+        borderRadius: '30px',
+        paddingLeft: '10px',
+        paddingBottom: '10px',
+    },
+
+    selectItem: {
+        border: 0,
+        backgroundColor: '#1E262E',
+        color: '#FFFFFF',
+    }
 };
 
 export type EthGasStationInfo = {
     safeLow: string;
     average: string;
     fast: string;
+};
+
+export type Token = {
+	name: string;
+	symbol: string;
+	price: number;
+	balance: number;
+	balanceInFiat: number;
+	address?: string;
+	hidden: boolean;
+	isCustom: boolean;
 };
 
 export type TransactionSendBoxProps = {
@@ -141,16 +174,19 @@ export type TransactionSendBoxProps = {
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void),
     onAddressFieldChange?: Function,
     onAmountInputChange?: Function,
+    onCryptoCurrencyChange?: Function,
     changeGasLimitAction?: Function,
     changeGasPriceAction?: Function,
     sending: boolean,
     confirmAction?: ((event: React.MouseEvent<HTMLElement>) => void),
-    cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void)
+    cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void),
+    tokens: Array<Token>
 }
 
 export type TransactionSendBoxState = {
     amount: string,
-    address: string
+    address: string,
+    cryptoCurrency: string
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
@@ -158,7 +194,7 @@ export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxPr
 export class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps) {
         super(props);
-        this.state = { amount: '', address: '' }
+        this.state = { amount: '', address: '', cryptoCurrency: '' }
     }
 
     renderFeeBox() {
@@ -196,8 +232,26 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
 
         this.setState({...this.state, amount: value});
         if (this.props.onAmountInputChange) {
-            this.props.onAmountInputChange(value)
+            this.props.onAmountInputChange(value);
         }
+    }
+
+    handleCryptoCurrencyChange(event: React.ChangeEvent<HTMLSelectElement>) {
+        const value = event.target.value;
+        this.setState({...this.state, cryptoCurrency: value});
+        if (this.props.onCryptoCurrencyChange) {
+            this.props.onCryptoCurrencyChange(value);
+        }
+    }
+
+    renderSelectTokenItems() {
+        const { tokens, classes } = this.props;
+
+        return tokens.map(token => {
+            return (
+                <option value={token.symbol} className={classes.selectItem}>{`${token.name} - ${token.balance} ${token.symbol}`}</option>
+            );
+        });
     }
 
     renderButtons() {
@@ -236,10 +290,35 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                 {addressError &&
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
                 }
-                <div className={classes.amountContainer}>
-                    <button onClick={() => this.handleAllAmountClick()} className={classes.selectAllAmountBtn}> ALL </button>
-                    <input type='text' onChange={e => this.handleAmountChange(e)} value={this.state.amount} className={sendAmountClass} placeholder="0.00"/>
-                </div>
+                <Grid container direction='row' className={classes.amountContainer} alignItems='center' justify='space-between'>
+                    <Grid item>
+                        <Grid container direction='row' justify='flex-start' alignItems="center" spacing={16}>
+                                <Grid item>
+                                    <button onClick={() => this.handleAllAmountClick()} className={classes.selectAllAmountBtn}> ALL </button>
+                                </Grid>
+                                <Grid item>
+                                    <input type='text' onChange={e => this.handleAmountChange(e)} value={this.state.amount} className={sendAmountClass} placeholder="0.00"/>
+                                </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item>
+                        {cryptoCurrency !== 'KEY' && cryptoCurrency !== 'ETH' &&
+                            <select
+                                value={this.state.cryptoCurrency}
+                                onChange={e => this.handleCryptoCurrencyChange(e)}
+                                name="cryptoCurrency"
+                                className={classes.cryptoSelect}
+                                
+                            >   
+                                <option value="" disabled className={classes.selectItem}>
+                                    Custom Token
+                                </option>
+                                {this.renderSelectTokenItems()}
+                            </select>
+                        }
+                    </Grid>
+                </Grid>
+                <Divider className={classes.divider}/>
                 <Grid container direction="row" justify="space-between" alignItems="center" className={classes.usdAmoutContainer}>
                     <span><NumberFormat locale={locale} style='currency' currency={fiatCurrency} value={amountUsd} fractionDigits={15}/></span>
                     <span> USD </span>
