@@ -302,18 +302,20 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                         </Grid>
                     </Grid>
                     <Grid item>
-                        <select
-                            value={this.state.cryptoCurrency}
-                            onChange={e => this.handleCryptoCurrencyChange(e)}
-                            name="cryptoCurrency"
-                            className={classes.cryptoSelect}
-                            
-                        >   
-                            <option value="" disabled className={classes.selectItem}>
-                                Custom Token
-                            </option>
-                            {this.renderSelectTokenItems()}
-                        </select>
+                        {cryptoCurrency !== 'KEY' && cryptoCurrency !== 'ETH' &&
+                            <select
+                                value={this.state.cryptoCurrency}
+                                onChange={e => this.handleCryptoCurrencyChange(e)}
+                                name="cryptoCurrency"
+                                className={classes.cryptoSelect}
+                                
+                            >   
+                                <option value="" disabled className={classes.selectItem}>
+                                    Custom Token
+                                </option>
+                                {this.renderSelectTokenItems()}
+                            </select>
+                        }
                     </Grid>
                 </Grid>
                 <Divider className={classes.divider}/>

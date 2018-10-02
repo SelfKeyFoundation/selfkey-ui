@@ -235,7 +235,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
                             React.createElement("button", { onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
-                React.createElement(core_1.Grid, { item: true },
+                React.createElement(core_1.Grid, { item: true }, cryptoCurrency !== 'KEY' && cryptoCurrency !== 'ETH' &&
                     React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect },
                         React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
                         this.renderSelectTokenItems()))),
