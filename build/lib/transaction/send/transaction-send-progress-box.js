@@ -109,7 +109,7 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
                         React.createElement(core_1.Grid, { container: true },
                             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "flex-start", alignItems: "flex-start", className: classes.actionButtonsContainer, spacing: 24 },
                                 React.createElement(core_1.Grid, { item: true },
-                                    React.createElement("button", { className: classes.button, onClick: function (e) { return handleViewTransaction(e, openLink, transactionHash); } }, " VIEW TRANSACTION ")),
+                                    React.createElement("button", { id: 'viewTransactionButton', className: classes.button, onClick: function (e) { return handleViewTransaction(e, openLink, transactionHash); } }, " VIEW TRANSACTION ")),
                                 React.createElement(core_1.Grid, { item: true },
                                     React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: transactionHash },
                                         React.createElement("button", { className: classes.button2 }, " COPY TRANSACTION ID "))))))))));
