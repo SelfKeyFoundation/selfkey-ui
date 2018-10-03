@@ -20,6 +20,7 @@ import { LWSLoading } from '../../src/lws/lws-loading';
 import { TransactionHistory, StatusIconName } from '../../src/transaction/transaction-history';
 import { SendTransaction } from './send-transaction';
 import { TransactionErrorBox } from '../../src/transaction/transaction-error-box';
+import { TransactionError } from '../../src/transaction/transaction-error';
 
 
 
@@ -182,7 +183,9 @@ transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=
 
 
 transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
-transactionrStory.addWithJSX('TransactionError', () => <TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('TransactionNoGasError', () => <TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('TransactionErrorBox', () => <TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('TransactionError', () => <TransactionError message="Returned error: intrinsic gas too low" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
 
 
 

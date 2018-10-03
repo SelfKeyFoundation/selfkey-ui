@@ -70,4 +70,6 @@ var transaction_send_box_1 = require("./transaction/send//transaction-send-box")
 exports.TransactionSendBox = transaction_send_box_1.TransactionSendBox;
 var transaction_send_progress_box_1 = require("./transaction/send//transaction-send-progress-box");
 exports.TransactionSendProgressBox = transaction_send_progress_box_1.TransactionSendProgressBox;
+var transaction_error_1 = require("./transaction/transaction-error");
+exports.TransactionError = transaction_error_1.TransactionError;
 //# sourceMappingURL=index.js.map
