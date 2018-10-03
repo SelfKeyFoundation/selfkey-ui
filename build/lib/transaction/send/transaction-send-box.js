@@ -157,7 +157,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionSendBoxComponent, _super);
     function TransactionSendBoxComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { amount: '', address: '', cryptoCurrency: '' };
+        _this.state = { amount: '', address: '', cryptoCurrency: props.cryptoCurrency };
         return _this;
     }
     TransactionSendBoxComponent.prototype.renderFeeBox = function () {
@@ -221,7 +221,8 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.render = function () {
         var _this = this;
-        var _a = this.props, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, classes = _a.classes, addressError = _a.addressError, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
+        var _a = this.props, closeAction = _a.closeAction, isSendCustomToken = _a.isSendCustomToken, classes = _a.classes, addressError = _a.addressError, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
+        var cryptoCurrency = this.state.cryptoCurrency;
         var sendAmountClass = classes.input + " " + classes.amountInput;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
@@ -235,7 +236,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
                             React.createElement("button", { onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
-                React.createElement(core_1.Grid, { item: true }, cryptoCurrency !== 'KEY' && cryptoCurrency !== 'ETH' &&
+                React.createElement(core_1.Grid, { item: true }, isSendCustomToken &&
                     React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect },
                         React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
                         this.renderSelectTokenItems()))),

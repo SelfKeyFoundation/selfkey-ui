@@ -116,15 +116,15 @@ export const styles: StyleSheet = {
         paddingTop: '10px'
     },
 
-    cryptoSelect: {	
+    cryptoSelect: {
         height: '40px',
-        width: '300px',	
-        color: '#FFFFFF',	
-        fontFamily: 'Lato',	
+        width: '300px',
+        color: '#FFFFFF',
+        fontFamily: 'Lato',
         fontSize: '20px',
         lineHeight: '36px',
         backgroundColor: '#1E262E',
-        border: '1px solid #384656',	
+        border: '1px solid #384656',
         borderRadius: '30px',
         paddingLeft: '10px',
         paddingBottom: '10px',
@@ -170,6 +170,7 @@ export type TransactionSendBoxProps = {
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void),
     cryptoCurrency: string,
+    isSendCustomToken?: boolean,
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void),
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void),
     onAddressFieldChange?: Function,
@@ -194,7 +195,7 @@ export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxPr
 export class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps) {
         super(props);
-        this.state = { amount: '', address: '', cryptoCurrency: '' }
+        this.state = { amount: '', address: '', cryptoCurrency: props.cryptoCurrency }
     }
 
     renderFeeBox() {
@@ -221,8 +222,8 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
 
     handleAmountChange(event: React.ChangeEvent<HTMLInputElement>) {
         let value = event.target.value;
-        if (isNaN(Number(value))) { 
-            value = '' 
+        if (isNaN(Number(value))) {
+            value = ''
         }
 
         // Do not allow to enter values above the balance
@@ -279,7 +280,8 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     render() {
-        const { cryptoCurrency, closeAction, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
+        const {closeAction, isSendCustomToken, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
+        let { cryptoCurrency } = this.state;
 
         let sendAmountClass = `${classes.input} ${classes.amountInput}`
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
@@ -302,14 +304,14 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                         </Grid>
                     </Grid>
                     <Grid item>
-                        {cryptoCurrency !== 'KEY' && cryptoCurrency !== 'ETH' &&
+                        {isSendCustomToken &&
                             <select
                                 value={this.state.cryptoCurrency}
                                 onChange={e => this.handleCryptoCurrencyChange(e)}
                                 name="cryptoCurrency"
                                 className={classes.cryptoSelect}
-                                
-                            >   
+
+                            >
                                 <option value="" disabled className={classes.selectItem}>
                                     Custom Token
                                 </option>

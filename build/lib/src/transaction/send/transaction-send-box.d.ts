@@ -32,6 +32,7 @@ export declare type TransactionSendBoxProps = {
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
     cryptoCurrency: string;
+    isSendCustomToken?: boolean;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void);
     onAddressFieldChange?: Function;
