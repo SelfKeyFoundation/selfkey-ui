@@ -31,7 +31,7 @@ export declare type TransactionSendBoxProps = {
     balance: number;
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
-    cryptoCurrency?: string;
+    cryptoCurrency: string;
     isSendCustomToken?: boolean;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void);
@@ -48,7 +48,7 @@ export declare type TransactionSendBoxProps = {
 export declare type TransactionSendBoxState = {
     amount: string;
     address: string;
-    cryptoCurrency?: string;
+    cryptoCurrency: string;
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
 export declare class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
