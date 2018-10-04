@@ -28,58 +28,65 @@ var styles = {
     line: {
         height: '1px',
         transform: 'scaleY(-1)',
-        backgroundColor: '#475768'
+        backgroundColor: '#475768',
     },
     flex: {
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     row: {
         paddingTop: '32px',
         paddingBottom: '24px',
-        fontFamily: common_style_1.default.fontFamily
+        fontFamily: common_style_1.default.fontFamily,
     },
     date: {
         color: '#93B0C1',
         fontSize: '15px',
         lineHeight: '18px',
         paddingLeft: '17px',
-        paddingRight: '40px'
+        paddingRight: '40px',
+        boxSizing: 'border-box',
+        minWidth: '220px',
+    },
+    icon: {
+        minWidth: '32px',
+        textAlign: 'center',
+        display: 'inline-block'
     },
     status: {
         color: '#FFFFFF',
         fontSize: '15px',
-        lineHeight: '18px'
+        lineHeight: '18px',
     },
     cryptoCurrency: {
         color: '#FFFFFF',
         fontSize: '15px',
         fontWeight: 600,
-        lineHeight: '18px'
+        lineHeight: '18px',
     },
     value: {
         color: '#FFFFFF',
         fontSize: '15px',
         lineHeight: '18px',
-        textAlign: 'right'
+        textAlign: 'right',
     },
     actionTitle: {
         color: '#93B0C1',
         fontSize: '14px',
         lineHeight: '17px',
-        paddingLeft: '14px'
+        paddingLeft: '14px',
     },
     viewActionContainer: {
         paddingLeft: '20px',
         cursor: 'pointer',
-        display: 'flex'
+        display: 'flex',
     },
     copyActionContainer: {
         width: '65px',
         paddingLeft: '99px',
         cursor: 'pointer',
-        display: 'flex'
-    }
+        display: 'flex',
+    },
 };
 var TransactionHistoryComponent = /** @class */ (function (_super) {
     __extends(TransactionHistoryComponent, _super);
@@ -88,7 +95,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
         _this.copyText = 'Copy';
         _this.copiedText = 'Copied';
         _this.state = {
-            currentCopyValues: []
+            currentCopyValues: [],
         };
         return _this;
     }
@@ -100,14 +107,18 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
         }
         openLink(externalLink);
     };
-    ;
     TransactionHistoryComponent.prototype.renderIcon = function (statusIconName) {
         switch (statusIconName) {
-            case 'failed': return React.createElement(failed_1.default, null);
-            case 'receive': return React.createElement(receive_1.default, null);
-            case 'hourglass': return React.createElement(hourglass_1.default, null);
-            case 'sent': return React.createElement(sent_1.default, null);
-            default: return;
+            case 'failed':
+                return React.createElement(failed_1.default, null);
+            case 'receive':
+                return React.createElement(receive_1.default, null);
+            case 'hourglass':
+                return React.createElement(hourglass_1.default, null);
+            case 'sent':
+                return React.createElement(sent_1.default, null);
+            default:
+                return;
         }
     };
     TransactionHistoryComponent.prototype.updateCopyText = function (index, text) {
@@ -132,7 +143,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
         return (React.createElement("div", { key: index },
             React.createElement(core_1.Grid, { container: true, className: classes.row, direction: "row", justify: "space-between", alignItems: "center" },
                 React.createElement("div", { className: classes.flex },
-                    this.renderIcon(item.statusIconName),
+                    React.createElement("span", { className: classes.icon }, this.renderIcon(item.statusIconName)),
                     React.createElement("span", { className: classes.date }, item.date),
                     React.createElement("div", null,
                         React.createElement("span", { className: classes.status },
@@ -145,10 +156,12 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
                         React.createElement("div", { className: classes.copyActionContainer },
                             React.createElement(copy_1.default, null),
                             React.createElement("span", { className: classes.actionTitle },
-                                " ",
+                                ' ',
                                 currentCopyValues[index] || this.copyText,
-                                " "))),
-                    React.createElement("div", { onClick: function (event) { _this.handleLinkClick.call(_this, event, item.externalLink); }, className: classes.viewActionContainer },
+                                ' '))),
+                    React.createElement("div", { onClick: function (event) {
+                            _this.handleLinkClick.call(_this, event, item.externalLink);
+                        }, className: classes.viewActionContainer },
                         React.createElement(view_1.default, null),
                         React.createElement("span", { className: classes.actionTitle }, " View ")))),
             React.createElement("div", { className: classes.line }, " ")));
@@ -158,7 +171,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
         list = list || [];
         var txRows = list.map(this.renderRow.bind(this));
         return (React.createElement(core_1.Grid, null,
-            list.length ? (React.createElement("div", { className: classes.line }, " ")) : '',
+            list.length ? React.createElement("div", { className: classes.line }, " ") : '',
             txRows));
     };
     return TransactionHistoryComponent;

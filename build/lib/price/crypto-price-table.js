@@ -60,7 +60,7 @@ exports.styles = {
             color: '#ffffff',
             borderBottom: '0px',
             '& svg g': {
-                fill: '#7f8fa4',
+                fill: '#ffffff',
             },
         },
         '& td:first-child': {

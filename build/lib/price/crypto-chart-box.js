@@ -180,11 +180,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                 _this.setState({ activations: newTokens });
             },
         };
-        _this.chartEvents = [
-            _this.selectEvent,
-            _this.onMouseOutEvent,
-            _this.onMouseOverEvent
-        ];
+        _this.DEFAULT_COLLOR = '#2A3540';
         _this.initActivations(props.tokens);
         _this.initSelection();
         return _this;
@@ -205,10 +201,17 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     CryptoChartBoxComponent.prototype.componentDidUpdate = function (prevProps) {
         this.chart.setSelection(this.selection);
     };
+    CryptoChartBoxComponent.prototype.getChartEvents = function () {
+        return this.hasBalance() ? [
+            this.selectEvent,
+            this.onMouseOutEvent,
+            this.onMouseOverEvent
+        ] : [];
+    };
     CryptoChartBoxComponent.prototype.getTokensLegend = function (classes, tokens, locale, fiatCurrency) {
         var _this = this;
         return tokens.map(function (token, index) {
-            return (React.createElement(core_1.Grid, { item: true, xs: 6, key: index, className: _this.state.activations[index] && _this.state.activations[index].active ? classes.active : '', onMouseEnter: function () { return _this.onItemHoverEnter(index); }, onMouseLeave: function () { return _this.onItemHoverLeave(index); } },
+            return (React.createElement(core_1.Grid, { item: true, xs: 6, key: index, className: _this.state.activations[index] && _this.state.activations[index].active ? classes.active : '', onMouseEnter: function () { return _this.onItemHoverEnter(index); }, onMouseLeave: function () { return _this.onItemHoverLeave(); } },
                 React.createElement(core_1.Grid, { container: true, alignItems: 'flex-start' },
                     React.createElement(core_1.Grid, { item: true, xs: 2 },
                         React.createElement("div", { className: classes.coloredBox, style: { backgroundColor: (index <= 4) ? _this.getColors()[index] : _this.OTHERS_COLOR } },
@@ -226,11 +229,25 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         });
     };
     ;
+    CryptoChartBoxComponent.prototype.hasBalance = function () {
+        var tokens = this.props.tokens;
+        tokens = tokens || [];
+        var check = tokens.find(function (token) {
+            return token.balanceInFiat > 0;
+        });
+        return !!check;
+    };
     CryptoChartBoxComponent.prototype.getChartData = function (tokens) {
         var data = [['Content', 'percents']];
-        var dataPoints = tokens.map(function (token) {
-            return [token.name, token.balanceInFiat];
-        });
+        var dataPoints = null;
+        if (this.hasBalance()) {
+            dataPoints = tokens.map(function (token) {
+                return [token.name, token.balanceInFiat];
+            });
+        }
+        else {
+            dataPoints = [['', 1]]; // negativa value is needed for pie chart
+        }
         return data.concat(dataPoints);
     };
     CryptoChartBoxComponent.prototype.getColors = function () {
@@ -250,14 +267,14 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     };
     CryptoChartBoxComponent.prototype.onItemHoverEnter = function (index) {
         var chart = this.getChart();
-        if (!chart) {
+        if (!chart || !this.hasBalance()) {
             return;
         }
         chart.setSelection([{ row: index }]);
     };
-    CryptoChartBoxComponent.prototype.onItemHoverLeave = function (index) {
+    CryptoChartBoxComponent.prototype.onItemHoverLeave = function () {
         var chart = this.getChart();
-        if (!chart) {
+        if (!chart || !this.hasBalance()) {
             return;
         }
         chart.setSelection([]);
@@ -280,6 +297,12 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
     };
     CryptoChartBoxComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, locale = _a.locale, fiatCurrency = _a.fiatCurrency, tokens = _a.tokens, manageCryptoAction = _a.manageCryptoAction;
+        var hasBalance = this.hasBalance();
+        var colors = hasBalance ? this.getColors() : [this.DEFAULT_COLLOR];
+        var tooltip = hasBalance ? {
+            trigger: 'focus',
+            isHtml: true
+        } : { trigger: 'none' };
         return (React.createElement("div", { className: classes.cryptoBox },
             React.createElement(core_1.Grid, { container: true, alignItems: 'center', spacing: 16 },
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
@@ -299,19 +322,16 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                                     chartArea: { left: 15, top: 15, bottom: 15, right: 15 },
                                     pieHole: 0.7,
                                     pieSliceBorderColor: 'none',
-                                    colors: this.getColors(),
+                                    colors: colors,
                                     legend: {
                                         position: 'none'
                                     },
                                     pieSliceText: 'none',
-                                    tooltip: {
-                                        trigger: 'focus',
-                                        isHtml: true
-                                    },
+                                    tooltip: tooltip,
                                     animation: {
                                         startup: true
                                     }
-                                }, graph_id: "PieChart", width: "100%", height: "300px", legend_toggle: true, chartEvents: this.chartEvents, ref: 'pieChart' }),
+                                }, graph_id: "PieChart", width: "100%", height: "300px", legend_toggle: true, chartEvents: this.getChartEvents(), ref: 'pieChart' }),
                             React.createElement("div", { className: classes.chartCenterContainer },
                                 React.createElement("div", { className: classes.totalPrice },
                                     React.createElement(number_format_1.NumberFormat, { locale: locale, currency: fiatCurrency, style: 'currency', value: this.getTotalBalanceInFiat(tokens) })),

@@ -14,9 +14,15 @@ import { CryptoChartBox } from '../../src/price/crypto-chart-box';
 import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
+import { TransactionSendProgressBox } from '../../src/transaction/send/transaction-send-progress-box';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSLoading } from '../../src/lws/lws-loading';
 import { TransactionHistory, StatusIconName } from '../../src/transaction/transaction-history';
+import { SendTransaction } from './send-transaction';
+import { TransactionErrorBox } from '../../src/transaction/transaction-error-box';
+import { TransactionError } from '../../src/transaction/transaction-error';
+
+
 
 import {
 	LWSSelectWalletWrapper,
@@ -150,7 +156,7 @@ const transactionrStory = storiesOf('Transaction', module).addDecorator(transfer
 transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
 
 transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
-	<TransactionNoGasError cryptoCurrency="ITH" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+	<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
 ));
 
 let txList = [{
@@ -172,6 +178,16 @@ let txList = [{
 transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{}}list={txList}/>);
 
 
+transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
+transactionrStory.addWithJSX('TransactionNoGasError', () => <TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('TransactionErrorBox', () => <TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('TransactionError', () => <TransactionError message="Returned error: intrinsic gas too low" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+
+
+
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' transactionHash='0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd' amount={0.00001}/>);
+
+
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
 lws.addWithJSX('LWSHeader', () => <LWSModalHeader />);
@@ -187,6 +203,7 @@ lws.addWithJSX('LWSSelfkeyIdError', () => <LWSSelfkeyIdErrorWrapper />);
 lws.addWithJSX('LWSExtensionError', () => <LWSExtensionErrorWrapper />);
 
 lws.addWithJSX('LWSSuccess', () => <LWSSuccessWrapper />);
+lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorWrapper />);
 
 lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
 
