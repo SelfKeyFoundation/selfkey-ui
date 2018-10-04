@@ -326,7 +326,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
         return [token.name, token.balanceInFiat]
       });
     } else {
-      dataPoints = [['', 1]]; // negativa value is needed for pie chart
+      dataPoints = [['', 1]]; // positive value is needed for pie chart
     }
 
     return data.concat(dataPoints);
