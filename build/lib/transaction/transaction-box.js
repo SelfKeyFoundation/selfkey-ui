@@ -17,7 +17,8 @@ var styles = {
     iconWrapper: {
         position: 'absolute',
         top: '-32px',
-        left: 'calc(50% - 32px)'
+        left: '50%',
+        transform: 'translate(-50%)'
     },
     icon: {
         width: '64px !important',

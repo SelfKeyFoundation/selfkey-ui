@@ -26,7 +26,7 @@ export const NumberFormat: SFC<NumberFormatProps> = ({
   value,
   fractionDigits
 }) => {
-  fractionDigits = fractionDigits || (Number(value) >= 1) ? 2 : 10;
+  fractionDigits = (fractionDigits)? fractionDigits : (Number(value) >= 1) ? 2 : 10;
   const formatString = `${locale}:${style}:${currency}:${fractionDigits || "default"}`;
 
   if (locale && !formatters[formatString]) {
