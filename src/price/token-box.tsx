@@ -60,7 +60,7 @@ const styles: StyleSheet = {
     cryptoCurrencyName: {
       fontFamily: 'Lato, arial, sans-serif',
       fontSize: '18px',
-      color: '#ffffff'   
+      color: '#ffffff'
     },
 
     cryptoCurrencyShort: {
@@ -102,7 +102,7 @@ export const TokenBox = injectSheet(styles)<TokenBoxProps>(({classes, children, 
     </Grid>
     <Grid className={classes.tokenBoxFooter}>
         <div className={classes.horizontalDivider}></div>
-    </Grid> 
+    </Grid>
     <Grid container className={classes.addressBox}>
       <Grid item xs={12} sm={10}>
         <span className={classes.publicKey}>
@@ -113,7 +113,7 @@ export const TokenBox = injectSheet(styles)<TokenBoxProps>(({classes, children, 
 
         <Copy text={publicKey}>
         </Copy>
-        
+
       </Grid>
     </Grid>
   </div>
