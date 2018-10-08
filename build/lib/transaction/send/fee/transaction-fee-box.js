@@ -144,6 +144,9 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionFeeBoxComponent, _super);
     function TransactionFeeBoxComponent(props) {
         var _this = _super.call(this, props) || this;
+        _this.timerToUpdateGasPrice = 0;
+        _this.timerToUpdateGasLimit = 0;
+        _this.TIME_FOR_INOUT_CHANGE = 1000;
         _this.state = {
             showAdvanced: false,
             gasLimit: props.gasLimit,
@@ -152,7 +155,6 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         return _this;
     }
     TransactionFeeBoxComponent.prototype.componentDidUpdate = function (prevProps) {
-        console.log("HEYYYyy");
         if (prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
             this.setState(__assign({}, this.state, { gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice }));
         }
@@ -165,16 +167,28 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         this.setState(__assign({}, this.state, { showAdvanced: !showAdvanced }));
     };
     TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
-        this.setState(__assign({}, this.state, { gasLimit: Number(event.target.value) }));
-        if (this.props.changeGasLimitAction) {
-            this.props.changeGasLimitAction(event);
-        }
+        var _this = this;
+        var value = event.target.value;
+        if (this.timerToUpdateGasLimit)
+            clearTimeout(this.timerToUpdateGasLimit);
+        this.setState(__assign({}, this.state, { gasLimit: Number(value) }));
+        this.timerToUpdateGasLimit = window.setTimeout(function () {
+            if (_this.props.changeGasLimitAction) {
+                _this.props.changeGasLimitAction(event);
+            }
+        }, this.TIME_FOR_INOUT_CHANGE);
     };
-    TransactionFeeBoxComponent.prototype.setGasPricet = function (event) {
-        this.setState(__assign({}, this.state, { gasPrice: Number(event.target.value) }));
-        if (this.props.changeGasPriceAction) {
-            this.props.changeGasPriceAction(event);
-        }
+    TransactionFeeBoxComponent.prototype.setGasPrice = function (event) {
+        var _this = this;
+        var value = event.target.value;
+        if (this.timerToUpdateGasPrice)
+            clearTimeout(this.timerToUpdateGasPrice);
+        this.setState(__assign({}, this.state, { gasPrice: Number(value) }));
+        this.timerToUpdateGasPrice = window.setTimeout(function () {
+            if (_this.props.changeGasPriceAction) {
+                _this.props.changeGasPriceAction(event);
+            }
+        }, this.TIME_FOR_INOUT_CHANGE);
     };
     TransactionFeeBoxComponent.prototype.renderAdvancedContent = function () {
         var _this = this;
@@ -183,7 +197,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
             React.createElement(core_1.Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Gas Price (Gwei)"),
-                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: function (e) { return _this.setGasPricet(e); } })),
+                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: function (e) { return _this.setGasPrice(e); } })),
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
