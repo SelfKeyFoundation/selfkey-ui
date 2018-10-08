@@ -28,7 +28,9 @@ exports.styles = {
         border: "none",
         borderRadius: "4px",
         margin: 0,
-        color: "#ffffff !important"
+        color: "#ffffff !important",
+        display: 'flex',
+        justifyContent: 'center'
     },
     copyButtonSpan: {
         fontSize: "11px",

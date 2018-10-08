@@ -9,7 +9,7 @@ exports[`Visibility on Icon should show Visibility on Icon 1`] = `
   viewBox="0 0 24 24"
 >
   <g
-    fill="#000000"
+    fill="#ffffff"
   >
     <path
       d="M0 0h24v24H0z"

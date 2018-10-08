@@ -9,7 +9,7 @@ exports[`Visibility off Icon should show Visibility off Icon 1`] = `
   viewBox="0 0 24 24"
 >
   <g
-    fill="#000000"
+    fill="#ffffff"
   >
     <path
       d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z"
