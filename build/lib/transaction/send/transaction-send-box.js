@@ -50,7 +50,11 @@ exports.styles = {
         letterSpacing: '0.67px',
         lineHeight: '20px',
         textAlign: 'center',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        '&:disabled': {
+            cursor: 'default',
+            opacity: 0.7
+        }
     },
     selectAllAmountBtn: {
         cursor: 'pointer',
@@ -205,7 +209,8 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         });
     };
     TransactionSendBoxComponent.prototype.renderButtons = function () {
-        var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction;
+        var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction, addressError = _a.addressError;
+        var sendBtnIsEnabled = this.state.address && this.state.amount && !addressError;
         if (sending) {
             return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 24 },
                 React.createElement(core_1.Grid, { item: true },
@@ -216,7 +221,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         else {
             return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement("button", { className: classes.button, onClick: onSendAction }, " SEND "))));
+                    React.createElement("button", { disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction }, " SEND "))));
         }
     };
     TransactionSendBoxComponent.prototype.render = function () {

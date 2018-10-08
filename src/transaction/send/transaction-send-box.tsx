@@ -27,7 +27,11 @@ export const styles: StyleSheet = {
         letterSpacing: '0.67px',
         lineHeight: '20px',
         textAlign: 'center',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        '&:disabled': {
+            cursor: 'default',
+            opacity: 0.7
+        }
     },
 
     selectAllAmountBtn: {
@@ -256,7 +260,8 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     renderButtons() {
-        const { classes, onSendAction, sending, confirmAction, cancelAction } = this.props
+        const { classes, onSendAction, sending, confirmAction, cancelAction, addressError } = this.props;
+        const sendBtnIsEnabled = this.state.address && this.state.amount && !addressError;
         if (sending) {
             return (
                 <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={24}>
@@ -272,7 +277,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
             return (
                 <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer}>
                     <Grid item>
-                        <button className={classes.button} onClick={onSendAction}> SEND </button>
+                        <button disabled={!sendBtnIsEnabled} className={classes.button} onClick={onSendAction}> SEND </button>
                     </Grid>
                 </Grid>
             );
