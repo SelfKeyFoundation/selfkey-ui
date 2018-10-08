@@ -94,6 +94,11 @@ exports.styles = {
         fontSize: '14px',
         lineHeight: '14px'
     },
+    nonceValue: {
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px'
+    },
     formControl: {
         paddingLeft: '12px',
         boxSizing: 'border-box',
@@ -185,7 +190,10 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
                         React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: function (e) { return _this.setGasLimit(e); }, className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
-                    React.createElement("input", { disabled: true, type: "text", className: classes.formControl, value: nonce }))),
+                    React.createElement("span", { className: classes.nonceValue },
+                        " ",
+                        nonce,
+                        " "))),
             React.createElement(core_1.Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement("div", { className: classes.currNetworkStatusContainer },
                     React.createElement("span", { className: classes.currNetworkStatusTitle }, "Current Network Status: "),

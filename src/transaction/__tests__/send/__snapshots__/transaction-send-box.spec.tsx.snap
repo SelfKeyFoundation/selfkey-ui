@@ -148,7 +148,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-9"
           >
             <div
-              className="MuiGrid-container-8 MuiGrid-spacing-xs-8-30 Component-root-0-1-41"
+              className="MuiGrid-container-8 MuiGrid-spacing-xs-8-30 Component-root-0-1-42"
             >
               <div
                 className="MuiGrid-item-9"

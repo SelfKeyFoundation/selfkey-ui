@@ -23,7 +23,7 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
         className="MuiGrid-item-2"
       >
         <div
-          className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 Component-root-0-1-19"
+          className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 Component-root-0-1-20"
         >
           <div
             className="MuiGrid-item-2"
