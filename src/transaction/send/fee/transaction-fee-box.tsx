@@ -186,7 +186,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
 
         this.timerToUpdateGasLimit = window.setTimeout(()=>{
             if(this.props.changeGasLimitAction) {
-                this.props.changeGasLimitAction(event);
+                this.props.changeGasLimitAction(value);
             }
         }, this.TIME_FOR_INPUT_CHANGE);
         
@@ -199,7 +199,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
 
         this.timerToUpdateGasPrice = window.setTimeout(()=>{
             if(this.props.changeGasPriceAction) {
-                this.props.changeGasPriceAction(event);
+                this.props.changeGasPriceAction(value);
             }
         }, this.TIME_FOR_INPUT_CHANGE);
     }

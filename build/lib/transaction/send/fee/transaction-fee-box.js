@@ -174,7 +174,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         this.setState(__assign({}, this.state, { gasLimit: Number(value) }));
         this.timerToUpdateGasLimit = window.setTimeout(function () {
             if (_this.props.changeGasLimitAction) {
-                _this.props.changeGasLimitAction(event);
+                _this.props.changeGasLimitAction(value);
             }
         }, this.TIME_FOR_INPUT_CHANGE);
     };
@@ -186,7 +186,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         this.setState(__assign({}, this.state, { gasPrice: Number(value) }));
         this.timerToUpdateGasPrice = window.setTimeout(function () {
             if (_this.props.changeGasPriceAction) {
-                _this.props.changeGasPriceAction(event);
+                _this.props.changeGasPriceAction(value);
             }
         }, this.TIME_FOR_INPUT_CHANGE);
     };
