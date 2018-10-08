@@ -150,7 +150,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     timerToUpdateGasPrice = 0;
     timerToUpdateGasLimit = 0;
 
-    TIME_FOR_INOUT_CHANGE = 1000;
+    TIME_FOR_INPUT_CHANGE = 1000;
 
     constructor(props: StyledProps) {
         super(props);
@@ -188,7 +188,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
             if(this.props.changeGasLimitAction) {
                 this.props.changeGasLimitAction(event);
             }
-        }, this.TIME_FOR_INOUT_CHANGE);
+        }, this.TIME_FOR_INPUT_CHANGE);
         
     }
 
@@ -201,7 +201,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
             if(this.props.changeGasPriceAction) {
                 this.props.changeGasPriceAction(event);
             }
-        }, this.TIME_FOR_INOUT_CHANGE);
+        }, this.TIME_FOR_INPUT_CHANGE);
     }
 
     renderAdvancedContent() {

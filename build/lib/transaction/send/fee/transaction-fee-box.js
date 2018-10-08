@@ -146,7 +146,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.timerToUpdateGasPrice = 0;
         _this.timerToUpdateGasLimit = 0;
-        _this.TIME_FOR_INOUT_CHANGE = 1000;
+        _this.TIME_FOR_INPUT_CHANGE = 1000;
         _this.state = {
             showAdvanced: false,
             gasLimit: props.gasLimit,
@@ -176,7 +176,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
             if (_this.props.changeGasLimitAction) {
                 _this.props.changeGasLimitAction(event);
             }
-        }, this.TIME_FOR_INOUT_CHANGE);
+        }, this.TIME_FOR_INPUT_CHANGE);
     };
     TransactionFeeBoxComponent.prototype.setGasPrice = function (event) {
         var _this = this;
@@ -188,7 +188,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
             if (_this.props.changeGasPriceAction) {
                 _this.props.changeGasPriceAction(event);
             }
-        }, this.TIME_FOR_INOUT_CHANGE);
+        }, this.TIME_FOR_INPUT_CHANGE);
     };
     TransactionFeeBoxComponent.prototype.renderAdvancedContent = function () {
         var _this = this;
