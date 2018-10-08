@@ -71,6 +71,11 @@ export const styles: StyleSheet = {
         fontSize: '14px',
         lineHeight: '14px'
     },
+    nonceValue: {
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px'
+    },
     formControl: {
         paddingLeft: '12px',
         boxSizing: 'border-box',
@@ -130,7 +135,7 @@ export type TransactionFeeBoxProps = {
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void)
     changeGasLimitAction?: Function,
-    changeGasPriceAction?: Function 
+    changeGasPriceAction?: Function
 }
 
 export type TransactionFeeBoxState = {
@@ -203,7 +208,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                     </div>
                     <div className={classes.formGroup}>
                         <label>Nonce</label>
-                        <input disabled={true} type="text" className={classes.formControl} value={nonce} />
+                        <span className={classes.nonceValue}> {nonce} </span>
                     </div>
                 </Grid>
 
