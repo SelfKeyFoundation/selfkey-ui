@@ -28,7 +28,7 @@ export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionF
 export declare class TransactionFeeBoxComponent extends React.Component<StyledProps, TransactionFeeBoxState> {
     timerToUpdateGasPrice: number;
     timerToUpdateGasLimit: number;
-    TIME_FOR_INPUT_CHANGE: number;
+    TIME_FOR_INOUT_CHANGE: number;
     constructor(props: StyledProps);
     componentDidUpdate(prevProps: StyledProps): void;
     renderActualTransactionFeeBox(): JSX.Element;
