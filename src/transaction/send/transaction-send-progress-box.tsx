@@ -67,7 +67,6 @@ const styles: StyleSheet = {
 
   sentTo : {
     height: '28px',
-    width: '55px',
     color: '#93B0C1',
     fontSize: '18px',
     lineHeight: '28px'
@@ -130,7 +129,7 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="body2" className={classes.sentTo}>sent to</Typography>
+                    <Typography variant="body2" className={classes.sentTo}>Destination address</Typography>
                   </Grid>
                   <Grid item>
                     <Typography variant="headline" className={classes.address}>{address}</Typography>
