@@ -261,7 +261,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
 
     renderButtons() {
         const { classes, onSendAction, sending, confirmAction, cancelAction, addressError } = this.props;
-        const sendBtnIsEnabled = this.state.address && this.state.amount && !addressError;
+        const sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
             return (
                 <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={24}>
