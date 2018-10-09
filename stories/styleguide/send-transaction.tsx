@@ -27,9 +27,10 @@ export const SendTransaction = () => (
     onSendAction={fn}
     ethFee={0.0000000000001512}
     onAddressFieldChange={fn}
-    cryptoCurrency ='ETH'
+    cryptoCurrency =''
     usdFee={3.7190664e-11}
     ethGasStationInfo={ethGasStationInfo}
+    isSendCustomToken= {true}
     tokens={[
         {
             name: 'Selfkey',

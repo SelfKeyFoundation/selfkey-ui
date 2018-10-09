@@ -173,7 +173,7 @@ export type TransactionSendBoxProps = {
     balance: number,
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void),
-    cryptoCurrency: string,
+    cryptoCurrency?: string,
     isSendCustomToken?: boolean,
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void),
     onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void),
@@ -191,7 +191,7 @@ export type TransactionSendBoxProps = {
 export type TransactionSendBoxState = {
     amount: string,
     address: string,
-    cryptoCurrency: string
+    cryptoCurrency?: string
 }
 
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
@@ -291,8 +291,9 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         let sendAmountClass = `${classes.input} ${classes.amountInput}`
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
 
+        let cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
         return (
-            <TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
+            <TransactionBox cryptoCurrency={cryptoCurrencyText} closeAction={closeAction}>
                 <input type='text' onChange={e => this.handleAddressChange(e)} value={this.state.address} className={addressInputClass} placeholder="Send to Address" />
                 {addressError &&
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
@@ -317,7 +318,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                                 className={classes.cryptoSelect}
 
                             >
-                                <option value="" disabled className={classes.selectItem}>
+                                <option value="" disabled selected className={classes.selectItem}>
                                     Custom Token
                                 </option>
                                 {this.renderSelectTokenItems()}
