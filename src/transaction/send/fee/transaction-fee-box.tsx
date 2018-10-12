@@ -132,6 +132,7 @@ export type TransactionFeeBoxProps = {
     gasLimit: number,
     gasPrice: number
     nonce: number,
+    showAdvanced?: boolean,
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void)
     changeGasLimitAction?: Function,
@@ -156,7 +157,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
         super(props);
 
         this.state = {
-            showAdvanced: false,
+            showAdvanced: props.showAdvanced || false,
             gasLimit: props.gasLimit,
             gasPrice: props.gasPrice
         }
@@ -189,7 +190,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                 this.props.changeGasLimitAction(value);
             }
         }, this.TIME_FOR_INPUT_CHANGE);
-        
+
     }
 
     setGasPrice(event: React.ChangeEvent<HTMLInputElement>) {
