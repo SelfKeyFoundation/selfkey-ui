@@ -61,7 +61,6 @@ var styles = {
     },
     sentTo: {
         height: '28px',
-        width: '55px',
         color: '#93B0C1',
         fontSize: '18px',
         lineHeight: '28px'
@@ -101,7 +100,7 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
                                             React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'decimal', currency: cryptoCurrency, value: amount, fractionDigits: 15 })),
                                         React.createElement(core_1.Grid, { item: true }, cryptoCurrency)))),
                             React.createElement(core_1.Grid, { item: true },
-                                React.createElement(core_1.Typography, { variant: "body2", className: classes.sentTo }, "sent to")),
+                                React.createElement(core_1.Typography, { variant: "body2", className: classes.sentTo }, "Destination address")),
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Typography, { variant: "headline", className: classes.address }, address))))),
                 transactionHash &&

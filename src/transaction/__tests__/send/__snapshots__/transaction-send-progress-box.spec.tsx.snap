@@ -181,7 +181,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                 <aside
                   className="MuiTypography-root-105 MuiTypography-body2-113 Component-sentTo-0-1-7"
                 >
-                  sent to
+                  Destination address
                 </aside>
               </div>
               <div
@@ -416,7 +416,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                 <aside
                   className="MuiTypography-root-105 MuiTypography-body2-113 Component-sentTo-0-1-7"
                 >
-                  sent to
+                  Destination address
                 </aside>
               </div>
               <div
@@ -651,7 +651,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                 <aside
                   className="MuiTypography-root-105 MuiTypography-body2-113 Component-sentTo-0-1-7"
                 >
-                  sent to
+                  Destination address
                 </aside>
               </div>
               <div
@@ -886,7 +886,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                 <aside
                   className="MuiTypography-root-105 MuiTypography-body2-113 Component-sentTo-0-1-7"
                 >
-                  sent to
+                  Destination address
                 </aside>
               </div>
               <div
@@ -1120,7 +1120,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                 <aside
                   className="MuiTypography-root-105 MuiTypography-body2-113 Component-sentTo-0-1-7"
                 >
-                  sent to
+                  Destination address
                 </aside>
               </div>
               <div
@@ -1355,7 +1355,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                 <aside
                   className="MuiTypography-root-105 MuiTypography-body2-113 Component-sentTo-0-1-7"
                 >
-                  sent to
+                  Destination address
                 </aside>
               </div>
               <div
@@ -1532,7 +1532,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                 <aside
                   className="MuiTypography-root-105 MuiTypography-body2-113 Component-sentTo-0-1-7"
                 >
-                  sent to
+                  Destination address
                 </aside>
               </div>
               <div

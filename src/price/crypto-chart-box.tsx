@@ -20,7 +20,7 @@ const styles: StyleSheet = {
     color: '#ffffff',
     fontFamily: 'Lato, arial, sans-serif',
     padding: '20px',
-  },   
+  },
 
   horizontalDivider: {
     height: '1px',
@@ -46,7 +46,7 @@ const styles: StyleSheet = {
   prices: {
     paddingTop: '0px',
   },
-  
+
   texts: {
     fontSize: '18px',
   },
@@ -161,7 +161,7 @@ export type ChartWrapperType = {
 }
 
 export class CryptoChartBoxComponent extends React.Component<StyledProps, CryptoChartBoxState> {
-  
+
   OTHERS_COLOR = '#71a6b8';
 
   activations: Array<Active> = [];
@@ -176,7 +176,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   public refs: {
     pieChart: HTMLElement & ChartElementType;
   };
-  
+
   constructor(props: StyledProps) {
     super(props);
     this.initActivations(props.tokens);
@@ -190,7 +190,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     tokens.forEach((token, index) => {
       this.state.activations[index] = {active: false};
     });
-  } 
+  }
 
   initSelection() {
     this.selection = [];
@@ -198,7 +198,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
   }
 
   componentDidUpdate(prevProps: StyledProps) {
-    this.chart.setSelection(this.selection); 
+    this.chart.setSelection(this.selection);
   }
 
   selectEvent: ChartEvent = {
@@ -210,7 +210,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
 
       if (!selection || !selection[0]) {
         return;
-      } 
+      }
       const row = selection[0].row;
       const newTokens = this.state.activations.map((activation, index) => {
         if (index !== row) {
@@ -219,12 +219,12 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
           this.selection = selection;
           this.chart = Chart.chart;
           return {active: true}
-        }  
-      }); 
+        }
+      });
       this.setState({activations: newTokens});
     },
   }
-  
+
   onMouseOverEvent: ChartEvent = {
     eventName: 'onmouseover',
     callback: (Chart: any, chartItem: any) => {
@@ -262,17 +262,19 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
     },
   }
 
-  chartEvents = [
-    this.selectEvent,
-    this.onMouseOutEvent,
-    this.onMouseOverEvent
-  ];
+  getChartEvents() {
+    return this.hasBalance() ? [
+      this.selectEvent,
+      this.onMouseOutEvent,
+      this.onMouseOverEvent
+    ] : [];
+  }
 
   getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string) {
     return tokens.map((token, index) => {
       return (
-        <Grid item xs={6} key={index} className={this.state.activations[index] && this.state.activations[index].active? classes.active: ''} onMouseEnter={() => this.onItemHoverEnter(index)} onMouseLeave={() => this.onItemHoverLeave(index)}>
-          <Grid container alignItems='flex-start'>  
+        <Grid item xs={6} key={index} className={this.state.activations[index] && this.state.activations[index].active? classes.active: ''} onMouseEnter={() => this.onItemHoverEnter(index)} onMouseLeave={() => this.onItemHoverLeave()}>
+          <Grid container alignItems='flex-start'>
             <Grid item xs={2}>
               <div className={classes.coloredBox} style={{backgroundColor: (index <= 4)? this.getColors()[index]: this.OTHERS_COLOR}}>
                 <div className={classes.coloredBoxText} >
@@ -299,21 +301,38 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
                   <PriceSummary locale={locale} style='currency' currency={fiatCurrency} className={classes.prices} valueClass={classes.texts} value={token.balanceInFiat} justify='flex-end'/>
                 </Grid>
               </Grid>
-            </Grid>          
+            </Grid>
           </Grid>
         </Grid>
       );
     });
   };
 
-  getChartData(tokens: Array<Token>) {
-    const data: Array<Array<string | number>>  = [['Content', 'percents']];
-    const dataPoints = tokens.map(token => {
-      return [token.name, token.balanceInFiat]
+  hasBalance() {
+   let { tokens } = this.props;
+   tokens = tokens || [];
+    let check = tokens.find(token => {
+      return token.balanceInFiat > 0;
     });
-  
+
+    return !!check;
+  }
+
+  getChartData(tokens: Array<Token>) {
+    const data: Array<Array<string | number>> = [['Content', 'percents']];
+    let dataPoints = null;
+    if (this.hasBalance()) {
+      dataPoints = tokens.map(token => {
+        return [token.name, token.balanceInFiat]
+      });
+    } else {
+      dataPoints = [['', 1]]; // positive value is needed for pie chart
+    }
+
     return data.concat(dataPoints);
   }
+
+  DEFAULT_COLLOR = '#2A3540';
 
   getColors() {
     return ['#46dfba', '#46b7df', '#238db4', '#1d7999', '#0e4b61'];
@@ -335,15 +354,15 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
 
   onItemHoverEnter(index: number) {
     const chart = this.getChart();
-    if (!chart) {
+    if (!chart || !this.hasBalance()) {
       return;
     }
     chart.setSelection([{row: index}]);
   }
 
-  onItemHoverLeave(index: number) {
+  onItemHoverLeave() {
     const chart = this.getChart();
-    if (!chart) {
+    if (!chart || !this.hasBalance()) {
       return;
     }
     chart.setSelection([]);
@@ -377,6 +396,14 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
 
   render() {
     const {classes, locale, fiatCurrency, tokens, manageCryptoAction} = this.props;
+
+    let hasBalance = this.hasBalance();
+    let colors = hasBalance ? this.getColors() : [this.DEFAULT_COLLOR];
+    let tooltip = hasBalance ? {
+      trigger: 'focus',
+      isHtml: true
+    } : { trigger: 'none' };
+
     return (
       <div className={classes.cryptoBox}>
         <Grid container alignItems='center' spacing={16}>
@@ -387,14 +414,14 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
               </Grid>
               <Grid item xs={1}>
                 <button className={classes.gearButton} onClick={manageCryptoAction}>
-                  <GearIcon/>  
+                  <GearIcon/>
                 </button>
               </Grid>
             </Grid>
           </Grid>
           <Grid item xs={12}>
             <div className={classes.horizontalDivider}></div>
-          </Grid> 
+          </Grid>
           <Grid item xs={12}>
             <Grid container alignItems='flex-start' spacing={0}>
               <Grid item xs={4} className={classes.chart}>
@@ -407,15 +434,12 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
                     chartArea: { left: 15, top: 15, bottom: 15, right: 15 },
                     pieHole: 0.7,
                     pieSliceBorderColor: 'none',
-                    colors: this.getColors(),
+                    colors: colors,
                     legend: {
                       position: 'none'
                     },
                     pieSliceText: 'none',
-                    tooltip: {
-                      trigger: 'focus',
-                      isHtml: true
-                    },
+                    tooltip: tooltip,
                     animation: {
                       startup: true
                     }
@@ -424,16 +448,16 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
                   width="100%"
                   height="300px"
                   legend_toggle
-                  chartEvents={this.chartEvents}
+                  chartEvents={this.getChartEvents()}
                   ref='pieChart'
                 />
                 <div className={classes.chartCenterContainer}>
                   <div className={classes.totalPrice}>
-                    <NumberFormat locale={locale} currency={fiatCurrency} style='currency' value={this.getTotalBalanceInFiat(tokens)}/> 
+                    <NumberFormat locale={locale} currency={fiatCurrency} style='currency' value={this.getTotalBalanceInFiat(tokens)}/>
                   </div>
                   <div className={classes.totalPriceText}>
                     Total Value {fiatCurrency}
-                  </div>  
+                  </div>
                 </div>
               </Grid>
               <Grid item xs={8}>
@@ -441,8 +465,8 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
                     {this.getTokensLegend(classes, tokens, locale, fiatCurrency)}
                   </Grid>
               </Grid>
-            </Grid>   
-          </Grid> 
+            </Grid>
+          </Grid>
           {this.getViewAllSection()}
         </Grid>
       </div>

@@ -50,7 +50,11 @@ exports.styles = {
         letterSpacing: '0.67px',
         lineHeight: '20px',
         textAlign: 'center',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        '&:disabled': {
+            cursor: 'default',
+            opacity: 0.7
+        }
     },
     selectAllAmountBtn: {
         cursor: 'pointer',
@@ -205,7 +209,8 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         });
     };
     TransactionSendBoxComponent.prototype.renderButtons = function () {
-        var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction;
+        var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction, addressError = _a.addressError;
+        var sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
             return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 24 },
                 React.createElement(core_1.Grid, { item: true },
@@ -216,7 +221,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         else {
             return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement("button", { className: classes.button, onClick: onSendAction }, " SEND "))));
+                    React.createElement("button", { disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction }, " SEND "))));
         }
     };
     TransactionSendBoxComponent.prototype.render = function () {
@@ -225,7 +230,8 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         var cryptoCurrency = this.state.cryptoCurrency;
         var sendAmountClass = classes.input + " " + classes.amountInput;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
-        return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
+        var cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
+        return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrencyText, closeAction: closeAction },
             React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
@@ -238,7 +244,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
                             React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
                 React.createElement(core_1.Grid, { item: true }, isSendCustomToken &&
                     React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect },
-                        React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
+                        React.createElement("option", { value: "", disabled: true, selected: true, className: classes.selectItem }, "Custom Token"),
                         this.renderSelectTokenItems()))),
             React.createElement(core_1.Divider, { className: classes.divider }),
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },

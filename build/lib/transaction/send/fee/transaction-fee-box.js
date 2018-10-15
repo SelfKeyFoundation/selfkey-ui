@@ -94,6 +94,11 @@ exports.styles = {
         fontSize: '14px',
         lineHeight: '14px'
     },
+    nonceValue: {
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px'
+    },
     formControl: {
         paddingLeft: '12px',
         boxSizing: 'border-box',
@@ -139,6 +144,9 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionFeeBoxComponent, _super);
     function TransactionFeeBoxComponent(props) {
         var _this = _super.call(this, props) || this;
+        _this.timerToUpdateGasPrice = 0;
+        _this.timerToUpdateGasLimit = 0;
+        _this.TIME_FOR_INPUT_CHANGE = 1000;
         _this.state = {
             showAdvanced: false,
             gasLimit: props.gasLimit,
@@ -147,7 +155,6 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         return _this;
     }
     TransactionFeeBoxComponent.prototype.componentDidUpdate = function (prevProps) {
-        console.log("HEYYYyy");
         if (prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
             this.setState(__assign({}, this.state, { gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice }));
         }
@@ -160,16 +167,28 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         this.setState(__assign({}, this.state, { showAdvanced: !showAdvanced }));
     };
     TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
-        this.setState(__assign({}, this.state, { gasLimit: Number(event.target.value) }));
-        if (this.props.changeGasLimitAction) {
-            this.props.changeGasLimitAction(event);
-        }
+        var _this = this;
+        var value = event.target.value;
+        if (this.timerToUpdateGasLimit)
+            clearTimeout(this.timerToUpdateGasLimit);
+        this.setState(__assign({}, this.state, { gasLimit: Number(value) }));
+        this.timerToUpdateGasLimit = window.setTimeout(function () {
+            if (_this.props.changeGasLimitAction) {
+                _this.props.changeGasLimitAction(value);
+            }
+        }, this.TIME_FOR_INPUT_CHANGE);
     };
-    TransactionFeeBoxComponent.prototype.setGasPricet = function (event) {
-        this.setState(__assign({}, this.state, { gasPrice: Number(event.target.value) }));
-        if (this.props.changeGasPriceAction) {
-            this.props.changeGasPriceAction(event);
-        }
+    TransactionFeeBoxComponent.prototype.setGasPrice = function (event) {
+        var _this = this;
+        var value = event.target.value;
+        if (this.timerToUpdateGasPrice)
+            clearTimeout(this.timerToUpdateGasPrice);
+        this.setState(__assign({}, this.state, { gasPrice: Number(value) }));
+        this.timerToUpdateGasPrice = window.setTimeout(function () {
+            if (_this.props.changeGasPriceAction) {
+                _this.props.changeGasPriceAction(value);
+            }
+        }, this.TIME_FOR_INPUT_CHANGE);
     };
     TransactionFeeBoxComponent.prototype.renderAdvancedContent = function () {
         var _this = this;
@@ -178,14 +197,17 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
             React.createElement(core_1.Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Gas Price (Gwei)"),
-                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: function (e) { return _this.setGasPricet(e); } })),
+                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: function (e) { return _this.setGasPrice(e); } })),
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
                         React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: function (e) { return _this.setGasLimit(e); }, className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
-                    React.createElement("input", { disabled: true, type: "text", className: classes.formControl, value: nonce }))),
+                    React.createElement("span", { className: classes.nonceValue },
+                        " ",
+                        nonce,
+                        " "))),
             React.createElement(core_1.Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement("div", { className: classes.currNetworkStatusContainer },
                     React.createElement("span", { className: classes.currNetworkStatusTitle }, "Current Network Status: "),

@@ -71,6 +71,11 @@ export const styles: StyleSheet = {
         fontSize: '14px',
         lineHeight: '14px'
     },
+    nonceValue: {
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px'
+    },
     formControl: {
         paddingLeft: '12px',
         boxSizing: 'border-box',
@@ -130,7 +135,7 @@ export type TransactionFeeBoxProps = {
     ethGasStationInfo: EthGasStationInfo,
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void)
     changeGasLimitAction?: Function,
-    changeGasPriceAction?: Function 
+    changeGasPriceAction?: Function
 }
 
 export type TransactionFeeBoxState = {
@@ -142,6 +147,10 @@ export type TransactionFeeBoxState = {
 export type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
 
 export class TransactionFeeBoxComponent extends React.Component<StyledProps, TransactionFeeBoxState> {
+    timerToUpdateGasPrice = 0;
+    timerToUpdateGasLimit = 0;
+
+    TIME_FOR_INPUT_CHANGE = 1000;
 
     constructor(props: StyledProps) {
         super(props);
@@ -154,7 +163,6 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     }
 
     componentDidUpdate(prevProps: StyledProps) {
-        console.log("HEYYYyy");
         if(prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
             this.setState({ ...this.state, gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice });
         }
@@ -172,17 +180,28 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     }
 
     setGasLimit(event: React.ChangeEvent<HTMLInputElement>) {
-        this.setState({ ...this.state, gasLimit: Number(event.target.value) });
-        if(this.props.changeGasLimitAction) {
-            this.props.changeGasLimitAction(event);
-        }
+        const value = event.target.value;
+        if(this.timerToUpdateGasLimit) clearTimeout(this.timerToUpdateGasLimit);
+        this.setState({ ...this.state, gasLimit: Number(value) });
+
+        this.timerToUpdateGasLimit = window.setTimeout(()=>{
+            if(this.props.changeGasLimitAction) {
+                this.props.changeGasLimitAction(value);
+            }
+        }, this.TIME_FOR_INPUT_CHANGE);
+        
     }
 
-    setGasPricet(event: React.ChangeEvent<HTMLInputElement>) {
-        this.setState({ ...this.state, gasPrice: Number(event.target.value) });
-        if(this.props.changeGasPriceAction) {
-            this.props.changeGasPriceAction(event);
-        }
+    setGasPrice(event: React.ChangeEvent<HTMLInputElement>) {
+        const value = event.target.value;
+        if(this.timerToUpdateGasPrice) clearTimeout(this.timerToUpdateGasPrice);
+        this.setState({ ...this.state, gasPrice: Number(value) });
+
+        this.timerToUpdateGasPrice = window.setTimeout(()=>{
+            if(this.props.changeGasPriceAction) {
+                this.props.changeGasPriceAction(value);
+            }
+        }, this.TIME_FOR_INPUT_CHANGE);
     }
 
     renderAdvancedContent() {
@@ -192,7 +211,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                 <Grid container className={classes.inputsContainer} direction="row" justify="space-between" alignItems="flex-start">
                     <div className={classes.formGroup}>
                         <label>Gas Price (Gwei)</label>
-                        <input type="text" className={classes.formControl} value={this.state.gasPrice} onChange={(e) => this.setGasPricet(e)} />
+                        <input type="text" className={classes.formControl} value={this.state.gasPrice} onChange={(e) => this.setGasPrice(e)} />
                     </div>
 
                     <div>
@@ -203,7 +222,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                     </div>
                     <div className={classes.formGroup}>
                         <label>Nonce</label>
-                        <input disabled={true} type="text" className={classes.formControl} value={nonce} />
+                        <span className={classes.nonceValue}> {nonce} </span>
                     </div>
                 </Grid>
 

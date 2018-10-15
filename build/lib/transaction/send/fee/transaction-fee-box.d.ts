@@ -26,12 +26,15 @@ export declare type TransactionFeeBoxState = {
 };
 export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
 export declare class TransactionFeeBoxComponent extends React.Component<StyledProps, TransactionFeeBoxState> {
+    timerToUpdateGasPrice: number;
+    timerToUpdateGasLimit: number;
+    TIME_FOR_INPUT_CHANGE: number;
     constructor(props: StyledProps);
     componentDidUpdate(prevProps: StyledProps): void;
     renderActualTransactionFeeBox(): JSX.Element;
     toggleShowAdvanced(): void;
     setGasLimit(event: React.ChangeEvent<HTMLInputElement>): void;
-    setGasPricet(event: React.ChangeEvent<HTMLInputElement>): void;
+    setGasPrice(event: React.ChangeEvent<HTMLInputElement>): void;
     renderAdvancedContent(): JSX.Element;
     render(): JSX.Element;
 }
