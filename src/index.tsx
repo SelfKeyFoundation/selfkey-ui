@@ -29,6 +29,12 @@ export { LWSLoading } from './lws/lws-loading';
 export { LWSButton } from './lws/lws-button';
 export { Marketplace } from './marketplace/marketplace';
 export { TransactionHistory } from './transaction/transaction-history';
+export { Items } from './marketplace/items/items';
+export { ItemDetails } from './marketplace/items/item-details';
+export { UnlockBox } from './marketplace/unlock-box';
+export { WithoutBalance } from './marketplace/without-balance';
+export { Unlock } from './marketplace/unlock';
+export { UnlockProgress } from './marketplace/unlock-progress';
 export { TransferPrice }  from './price/transfer-price';
 export { TransactionBox }  from './transaction/transaction-box';
 export { TransactionNoGasError }  from './transaction/transaction-no-gas-error';
@@ -50,11 +56,6 @@ export { GreenTickIcon } from './icons/green-tick'
 export { EditTransparentIcon } from './icons/edit-transparent'
 export { DeleteIcon } from './icons/delete'
 export { ViewIcon } from './icons/view'
-export { Items } from './marketplace/items/items';
-export { ItemDetails } from './marketplace/items/item-details';
-export { UnlockBox } from './marketplace/unlock-box';
-export { WithoutBalance } from './marketplace/without-balance';
-export { Unlock } from './marketplace/unlock';
 
 
 

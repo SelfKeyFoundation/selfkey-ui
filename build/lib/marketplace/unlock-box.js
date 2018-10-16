@@ -8,7 +8,7 @@ var close_button_1 = require("../icons/close-button");
 var styles = {
     root: {
         boxSizing: 'border-box',
-        minHeight: '423px',
+        minHeight: '300px',
         width: '781px',
         border: '1px solid #303C49',
         borderRadius: '4px',
