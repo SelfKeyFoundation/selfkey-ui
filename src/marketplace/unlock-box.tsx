@@ -7,7 +7,7 @@ import { CloseButtonIcon } from '../icons/close-button';
 const styles: StyleSheet = { 
   root: {
     boxSizing: 'border-box',
-    minHeight: '423px',
+    minHeight: '300px',
     width: '781px',
     border: '1px solid #303C49',
     borderRadius: '4px',

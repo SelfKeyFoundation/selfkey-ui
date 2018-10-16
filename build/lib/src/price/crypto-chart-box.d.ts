@@ -51,14 +51,16 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     selectEvent: ChartEvent;
     onMouseOverEvent: ChartEvent;
     onMouseOutEvent: ChartEvent;
-    chartEvents: ChartEvent[];
+    getChartEvents(): ChartEvent[];
     getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string): JSX.Element[];
+    hasBalance(): boolean;
     getChartData(tokens: Array<Token>): React.ReactText[][];
+    DEFAULT_COLLOR: string;
     getColors(): string[];
     getTotalBalanceInFiat(tokens: Array<Token>): number;
     getChart(): any;
     onItemHoverEnter(index: number): void;
-    onItemHoverLeave(index: number): void;
+    onItemHoverLeave(): void;
     toggleViewAll(): void;
     getViewAllSection(): JSX.Element | "";
     render(): JSX.Element;

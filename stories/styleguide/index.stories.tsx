@@ -42,6 +42,7 @@ import { ExchangesWrapper } from './exchanges';
 import { UnlockBox } from '../../src/marketplace/unlock-box';
 import { WithoutBalance } from '../../src/marketplace/without-balance';
 import { Unlock } from '../../src/marketplace/unlock';
+import { UnlockProgress } from '../../src/marketplace/unlock-progress';
 
 setup();
 setAddon(JSXAddon);
@@ -318,3 +319,11 @@ marketplaceStory.addWithJSX('UnlockModal', () => (
 		/>
 	</UnlockBox>
 ));
+
+marketplaceStory.addWithJSX('UnlockProgress', () => (
+	<UnlockBox>
+		<UnlockProgress/>
+	</UnlockBox>
+));
+
+

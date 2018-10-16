@@ -34,6 +34,7 @@ export { ItemDetails } from './marketplace/items/item-details';
 export { UnlockBox } from './marketplace/unlock-box';
 export { WithoutBalance } from './marketplace/without-balance';
 export { Unlock } from './marketplace/unlock';
+export { UnlockProgress } from './marketplace/unlock-progress';
 export { TransferPrice }  from './price/transfer-price';
 export { TransactionBox }  from './transaction/transaction-box';
 export { TransactionNoGasError }  from './transaction/transaction-no-gas-error';
