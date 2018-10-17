@@ -14,6 +14,7 @@ export declare type TransactionFeeBoxProps = {
     gasLimit: number;
     gasPrice: number;
     nonce: number;
+    showAdvanced?: boolean;
     ethGasStationInfo: EthGasStationInfo;
     reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
     changeGasLimitAction?: Function;
