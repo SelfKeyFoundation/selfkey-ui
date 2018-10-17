@@ -13,17 +13,27 @@ describe('Transaction Fee Box', () => {
     const component = create(
       <TransactionFeeBox locale='en'
       fiatCurrency='USD'
-      amount={0}
-      balance={0.0003321}
-      amountUsd={0.00}
       gasPrice={0}
       gasLimit={2100}
       nonce={1}
-      sending={true}
-      addressError={true} 
-      ethFee={0.0000000000001512} 
-      cryptoCurrency ='ETH' 
-      usdFee={3.7190664e-11} 
+      ethFee={0.0000000000001512}
+      usdFee={3.7190664e-11}
+      ethGasStationInfo={ethGasStationInfo}/>,
+    );
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should show Transaction Advanced Fee Box screen', () => {
+    const component = create(
+      <TransactionFeeBox locale='en'
+      fiatCurrency='USD'
+      gasPrice={0}
+      gasLimit={2100}
+      nonce={1}
+      ethFee={0.0000000000001512}
+      usdFee={3.7190664e-11}
+      showAdvanced={true}
       ethGasStationInfo={ethGasStationInfo}/>,
     );
     let tree = component.toJSON();
