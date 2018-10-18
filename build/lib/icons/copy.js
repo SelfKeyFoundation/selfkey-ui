@@ -16,7 +16,7 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
-        width: '14px !important',
+        width: '16px !important',
         height: '16px !important'
     }
 };

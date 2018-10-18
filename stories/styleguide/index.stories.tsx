@@ -23,7 +23,6 @@ import { TransactionErrorBox } from '../../src/transaction/transaction-error-box
 import { TransactionError } from '../../src/transaction/transaction-error';
 
 
-
 import {
 	LWSSelectWalletWrapper,
 	LWSRequiredInfoWrapper,
@@ -38,6 +37,9 @@ import { ItemDetails } from '../../src/marketplace/items/item-details';
 
 import { MarketplaceWrapper } from './marketplace';
 import { ExchangesWrapper } from './exchanges';
+
+import { AddressBook } from '../../src/address-book/address-book';
+
 
 setup();
 setAddon(JSXAddon);
@@ -240,3 +242,19 @@ marketplaceStory.addWithJSX('ItemDetails', () => (
 		}}
 	/>
 ));
+
+const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+addressBook.addWithJSX('AddressBook', () => <AddressBook addresses={
+	[
+		{
+			id: 1,
+			label: 'John',
+			address: '0x4184288c556524df9cb9e58b73265ee66dca4efe'
+		}
+	]
+}
+
+onEdit={id => alert('onEdit' + id)}
+onDelete={id =>alert('onDelete' + id)}
+/>);

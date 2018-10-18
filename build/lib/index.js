@@ -72,4 +72,6 @@ var transaction_send_progress_box_1 = require("./transaction/send/transaction-se
 exports.TransactionSendProgressBox = transaction_send_progress_box_1.TransactionSendProgressBox;
 var transaction_error_1 = require("./transaction/transaction-error");
 exports.TransactionError = transaction_error_1.TransactionError;
+var address_book_1 = require("./address-book/address-book");
+exports.AddressBook = address_book_1.AddressBook;
 //# sourceMappingURL=index.js.map

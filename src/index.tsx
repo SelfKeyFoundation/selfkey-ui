@@ -37,6 +37,7 @@ export { TransactionFeeBox }  from './transaction/send/fee/transaction-fee-box';
 export { TransactionSendBox }  from './transaction/send/transaction-send-box';
 export { TransactionSendProgressBox }  from './transaction/send/transaction-send-progress-box';
 export { TransactionError } from './transaction/transaction-error';
+export { AddressBook } from './address-book/address-book';
 
 
 
