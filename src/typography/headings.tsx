@@ -32,12 +32,12 @@ export const H1 = injectSheet(styles)<HeadingsProps>(({ classes, children, class
 
 
 export const H2 = injectSheet(styles)<HeadingsProps>(({ classes, children, className}) => (
-    <h1 className={`${classes.base} ${classes.h2} ${className}`}>{children}</h1>
+    <h2 className={`${classes.base} ${classes.h2} ${className}`}>{children}</h2>
 ));
 
 
 export const H3 = injectSheet(styles)<HeadingsProps>(({ classes, children, className}) => (
-    <h1 className={`${classes.base} ${classes.h3} ${className}`}>{children}</h1>
+    <h3 className={`${classes.base} ${classes.h3} ${className}`}>{children}</h3>
 ));
 
 export default H1;

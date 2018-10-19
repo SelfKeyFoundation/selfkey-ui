@@ -39,6 +39,8 @@ import { MarketplaceWrapper } from './marketplace';
 import { ExchangesWrapper } from './exchanges';
 
 import { AddressBook } from '../../src/address-book/address-book';
+import { AddressBookAdd } from '../../src/address-book/address-book-add';
+import { ModalBox } from '../../src/common/modal-box';
 
 
 setup();
@@ -258,3 +260,11 @@ addressBook.addWithJSX('AddressBook', () => <AddressBook addresses={
 onEdit={id => alert('onEdit' + id)}
 onDelete={id =>alert('onDelete' + id)}
 />);
+
+
+addressBook.addWithJSX('AddressBookAdd', () => (<ModalBox headerText='Add Address'><AddressBookAdd 
+onSave={(label, address) => alert('onEdit' + label +  address)}
+onCancel={() => alert('onCancel')}
+onLabelChange={label => alert('onLabelChange ' + label)}
+onAddressChange={address => alert('onAddressChange ' + address)}
+/></ModalBox>));

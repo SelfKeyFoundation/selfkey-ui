@@ -38,6 +38,7 @@ export { TransactionSendBox }  from './transaction/send/transaction-send-box';
 export { TransactionSendProgressBox }  from './transaction/send/transaction-send-progress-box';
 export { TransactionError } from './transaction/transaction-error';
 export { AddressBook } from './address-book/address-book';
-
+export { AddressBookAdd } from './address-book/address-book-add';
+export { ModalBox } from './common/modal-box';
 
 
