@@ -89,7 +89,7 @@ var renderAddresses = function (addresses, classes, onEdit, onDelete) {
     });
 };
 exports.AddressBook = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, addresses = _a.addresses, onEdit = _a.onEdit, onDelete = _a.onDelete;
+    var classes = _a.classes, addresses = _a.addresses, onEdit = _a.onEdit, onDelete = _a.onDelete, onAdd = _a.onAdd;
     return (React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center', className: classes.addressBook, spacing: 32 },
         React.createElement(core_1.Grid, { item: true },
             React.createElement(address_book_1.default, null)),
@@ -98,7 +98,7 @@ exports.AddressBook = react_jss_1.default(styles)(function (_a) {
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to auto-fill commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
         React.createElement(core_1.Grid, { item: true },
-            React.createElement(core_1.Button, { className: classes.button }, "ADD ADDRESS")),
+            React.createElement(core_1.Button, { className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Table, { className: classes.table },
                 React.createElement(core_1.TableHead, null,

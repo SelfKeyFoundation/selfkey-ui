@@ -9,6 +9,7 @@ export declare type AddressBookProps = {
     addresses: Array<AddressBook>;
     onEdit: (id: number) => void;
     onDelete: (id: number) => void;
+    onAdd: () => void;
 };
 export declare const AddressBook: React.ComponentType<AddressBookProps & import("react-jss").StyledComponentProps<string>>;
 export default AddressBook;

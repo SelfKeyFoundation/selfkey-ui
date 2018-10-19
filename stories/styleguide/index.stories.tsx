@@ -259,6 +259,7 @@ addressBook.addWithJSX('AddressBook', () => <AddressBook addresses={
 
 onEdit={id => alert('onEdit' + id)}
 onDelete={id =>alert('onDelete' + id)}
+onAdd={() =>alert('onAdd')}
 />);
 
 

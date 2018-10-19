@@ -84,7 +84,8 @@ export type AddressBook = {
 export type AddressBookProps = {
     addresses: Array<AddressBook>,
     onEdit: (id: number) => void,
-    onDelete: (id: number) => void
+    onDelete: (id: number) => void,
+    onAdd: () => void
 }
 
 const renderAddresses = (addresses:Array<AddressBook>, classes: Partial<ClassNameMap<string>>, onEdit: (id: number) => void, onDelete: (id: number) => void) => {
@@ -119,7 +120,7 @@ const renderAddresses = (addresses:Array<AddressBook>, classes: Partial<ClassNam
     })
 }
 
-export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addresses, onEdit, onDelete}) => (
+export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addresses, onEdit, onDelete, onAdd}) => (
     <Grid container direction='column' justify='center' alignItems='center' className={classes.addressBook} spacing={32}>
         <Grid item>
             <AddressBookIcon/>
@@ -131,7 +132,7 @@ export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addr
             <Typography variant='body1' className={classes.descriptionText}>Create and assign labels to auto-fill commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.</Typography>
         </Grid>
         <Grid item>
-            <Button className={classes.button}>ADD ADDRESS</Button>
+            <Button className={classes.button} onClick={onAdd}>ADD ADDRESS</Button>
         </Grid>
         <Grid item>
             <Table className={classes.table}>
