@@ -14,8 +14,9 @@ export const styles: StyleSheet = {
     },
 
     errorColor: {
-        color: '#FE4B61',
-        borderBottom: '2px solid #FE4B61',
+        color: '#FE4B61 !important',
+        border: '2px solid #FE4B61 !important',
+        backgroundColor: 'rgba(255,46,99,0.09) !important'
     },
 
     input: {
@@ -90,8 +91,10 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
 
   render() {
     const { classes, labelError, addressError, onCancel} = this.props;
-    const labelInputClass = `${classes.input} ${labelError !== '' ? classes.errorColor : ''}`;
-    const addressInputClass = `${classes.input} ${addressError !== '' ? classes.errorColor : ''}`;
+    const hasLabelError = (labelError !== '' && labelError !== undefined)
+    const hasAddressError = (addressError !== '' && addressError !== undefined)
+    const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
+    const addressInputClass = `${classes.input} ${hasAddressError ? classes.errorColor : ''}`;
     return (
         <form className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
             <Grid container direction='column' spacing={32}>
@@ -102,7 +105,7 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
                         </Grid>
                         <Grid item>
                             <input type='text' onChange={this.handleLabelChange} value={this.state.label} className={labelInputClass} placeholder="Address label" />
-                            {labelError !== '' &&
+                            {hasLabelError &&
                                 <span className={classes.errorText}>{labelError}</span>
                             }
                         </Grid>
@@ -115,7 +118,7 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
                         </Grid>
                         <Grid item>
                             <input type='text' onChange={this.handleAddressChange} value={this.state.address} className={addressInputClass} placeholder="0x" />
-                            {addressError !== '' &&
+                            {hasAddressError &&
                                 <span className={classes.errorText}>{addressError}</span>
                             }
                         </Grid>
@@ -124,7 +127,7 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
                 <Grid item>
                     <Grid container direction='row' spacing={24}>
                         <Grid item>
-                            <StyledButton variant="contained" size="medium" type="submit" disabled={(!this.state.label || !this.state.address || (addressError !== '' && addressError !== undefined) || (labelError !== '' && labelError !== undefined))}>
+                            <StyledButton variant="contained" size="medium" type="submit" disabled={(!this.state.label || !this.state.address || hasAddressError || hasLabelError)}>
                                 Save
                             </StyledButton>
                         </Grid>

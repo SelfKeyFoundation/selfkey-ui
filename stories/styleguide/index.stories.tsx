@@ -268,4 +268,5 @@ onSave={(label, address) => alert('onEdit' + label +  address)}
 onCancel={() => alert('onCancel')}
 onLabelChange={label => alert('onLabelChange ' + label)}
 onAddressChange={address => alert('onAddressChange ' + address)}
+labelError='hey'
 /></ModalBox>));
