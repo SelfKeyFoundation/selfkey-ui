@@ -67,6 +67,10 @@ export class AddressBookEditComponent extends React.Component<StyledProps, Addre
 
   constructor(props: StyledProps) {
     super(props);
+    this.state = {label: props.label};
+  }
+
+  componentDidUpdate() {
     this.state = {label: this.props.label};
   }
 

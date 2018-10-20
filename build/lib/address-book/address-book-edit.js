@@ -82,9 +82,12 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
             event.preventDefault();
             return _this.props.onSave(_this.state.label);
         };
-        _this.state = { label: _this.props.label };
+        _this.state = { label: props.label };
         return _this;
     }
+    AddressBookEditComponent.prototype.componentDidUpdate = function () {
+        this.state = { label: this.props.label };
+    };
     AddressBookEditComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, labelError = _a.labelError, onCancel = _a.onCancel;
         var hasLabelError = (labelError !== '' && labelError !== undefined);

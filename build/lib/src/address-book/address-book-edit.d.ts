@@ -15,6 +15,7 @@ export declare type AddressBookEditProps = {
 export declare type StyledProps = WithStyles<keyof typeof styles> & AddressBookEditProps;
 export declare class AddressBookEditComponent extends React.Component<StyledProps, AddressBookEditState> {
     constructor(props: StyledProps);
+    componentDidUpdate(): void;
     handleLabelChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     handleSubmit: (event: any) => void;
     render(): JSX.Element;
