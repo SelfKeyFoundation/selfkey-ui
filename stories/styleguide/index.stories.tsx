@@ -40,6 +40,8 @@ import { ExchangesWrapper } from './exchanges';
 
 import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
+import { AddressBookEdit } from '../../src/address-book/address-book-edit';
+
 import { ModalBox } from '../../src/common/modal-box';
 
 
@@ -268,5 +270,13 @@ onSave={(label, address) => alert('onEdit' + label +  address)}
 onCancel={() => alert('onCancel')}
 onLabelChange={label => alert('onLabelChange ' + label)}
 onAddressChange={address => alert('onAddressChange ' + address)}
+labelError='hey'
+/></ModalBox>));
+
+
+addressBook.addWithJSX('AddressBookEdit', () => (<ModalBox headerText='Edit Label'><AddressBookEdit
+onSave={(label) => alert('onEdit' + label)}
+onCancel={() => alert('onCancel')}
+onLabelChange={label => alert('onLabelChange ' + label)}
 labelError='hey'
 /></ModalBox>));
