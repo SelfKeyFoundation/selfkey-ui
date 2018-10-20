@@ -6,6 +6,7 @@ export declare type AddressBookEditState = {
     label: string;
 };
 export declare type AddressBookEditProps = {
+    label: string;
     onSave: (label: string) => void;
     labelError?: string;
     onCancel: () => void;

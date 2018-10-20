@@ -54,6 +54,7 @@ export type AddressBookEditState = {
 };
 
 export type AddressBookEditProps = {
+    label: string,
     onSave: (label: string) => void,
     labelError?: string,
     onCancel: () => void,
@@ -66,7 +67,7 @@ export class AddressBookEditComponent extends React.Component<StyledProps, Addre
 
   constructor(props: StyledProps) {
     super(props);
-    this.state = {label: ''};
+    this.state = {label: this.props.label};
   }
 
   handleLabelChange = (event: React.ChangeEvent<HTMLInputElement>) => {

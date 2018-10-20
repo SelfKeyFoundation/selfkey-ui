@@ -82,7 +82,7 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
             event.preventDefault();
             return _this.props.onSave(_this.state.label);
         };
-        _this.state = { label: '' };
+        _this.state = { label: _this.props.label };
         return _this;
     }
     AddressBookEditComponent.prototype.render = function () {

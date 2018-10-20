@@ -275,6 +275,7 @@ labelError='hey'
 
 
 addressBook.addWithJSX('AddressBookEdit', () => (<ModalBox headerText='Edit Label'><AddressBookEdit
+label='Test'
 onSave={(label) => alert('onEdit' + label)}
 onCancel={() => alert('onCancel')}
 onLabelChange={label => alert('onLabelChange ' + label)}
