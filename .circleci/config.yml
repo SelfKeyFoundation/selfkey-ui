@@ -25,7 +25,7 @@ jobs:
                       - node_modules/
             - run:
                   name: Tests
-                  command: yarn test
+                  command: yarn test -u
     'deploy':
         docker: *DOCKERIMAGE
         steps:
