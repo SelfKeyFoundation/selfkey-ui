@@ -27,8 +27,8 @@ var styles = {
     },
 };
 exports.StyledButton = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, _b = _a.variant, variant = _b === void 0 ? 'contained' : _b, size = _a.size, _c = _a.color, color = _c === void 0 ? 'primary' : _c, _d = _a.type, type = _d === void 0 ? 'button' : _d, onClick = _a.onClick, disabled = _a.disabled;
-    return (React.createElement(core_1.Button, { variant: variant, size: size, classes: classes, color: color, type: type, onClick: onClick, disabled: disabled }, children));
+    var classes = _a.classes, children = _a.children, _b = _a.variant, variant = _b === void 0 ? 'contained' : _b, size = _a.size, _c = _a.color, color = _c === void 0 ? 'primary' : _c, _d = _a.type, type = _d === void 0 ? 'button' : _d, onClick = _a.onClick, disabled = _a.disabled, id = _a.id;
+    return (React.createElement(core_1.Button, { id: id, variant: variant, size: size, classes: classes, color: color, type: type, onClick: onClick, disabled: disabled }, children));
 });
 exports.default = exports.StyledButton;
 //# sourceMappingURL=styled-button.js.map

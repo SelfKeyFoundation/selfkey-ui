@@ -99,9 +99,9 @@ export class AddressBookEditComponent extends React.Component<StyledProps, Addre
                             <label className={classes.label}>LABEL</label>
                         </Grid>
                         <Grid item>
-                            <input type='text' onChange={this.handleLabelChange} value={this.state.label} className={labelInputClass} placeholder="Address label" />
+                            <input type='text' id='labelInput' onChange={this.handleLabelChange} value={this.state.label} className={labelInputClass} placeholder="Address label" />
                             {hasLabelError &&
-                                <span className={classes.errorText}>{labelError}</span>
+                                <span id='labelError' className={classes.errorText}>{labelError}</span>
                             }
                         </Grid>
                     </Grid>
@@ -109,12 +109,12 @@ export class AddressBookEditComponent extends React.Component<StyledProps, Addre
                 <Grid item>
                     <Grid container direction='row' spacing={24}>
                         <Grid item>
-                            <StyledButton variant="contained" size="medium" type="submit" disabled={(!this.state.label || hasLabelError)}>
+                            <StyledButton id='saveButton' variant="contained" size="medium" type="submit" disabled={(!this.state.label || hasLabelError)}>
                                 Save
                             </StyledButton>
                         </Grid>
                         <Grid item>
-                            <StyledButton variant="outlined" size="medium" onClick={onCancel}>
+                            <StyledButton id='cancelButton' variant="outlined" size="medium" onClick={onCancel}>
                                 Cancel
                             </StyledButton>
                         </Grid>

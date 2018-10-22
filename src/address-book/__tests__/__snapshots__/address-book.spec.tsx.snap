@@ -93,6 +93,7 @@ exports[`Address Book should show Address Book 1`] = `
     <button
       className="MuiButtonBase-root-156 MuiButton-root-130 MuiButton-text-132 MuiButton-flat-135 Component-button-0-1-2"
       disabled={false}
+      id="addAddressButton"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -273,6 +274,7 @@ exports[`Address Book should show Address Book 1`] = `
                 <button
                   className="MuiButtonBase-root-156 MuiIconButton-root-182"
                   disabled={false}
+                  id="editButton"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
@@ -355,6 +357,7 @@ exports[`Address Book should show Address Book 1`] = `
                 <button
                   className="MuiButtonBase-root-156 MuiIconButton-root-182"
                   disabled={false}
+                  id="deleteButton"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}

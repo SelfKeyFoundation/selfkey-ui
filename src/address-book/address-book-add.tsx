@@ -104,9 +104,9 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
                             <label className={classes.label}>LABEL</label>
                         </Grid>
                         <Grid item>
-                            <input type='text' onChange={this.handleLabelChange} value={this.state.label} className={labelInputClass} placeholder="Address label" />
+                            <input type='text' id='labelInput' onChange={this.handleLabelChange} value={this.state.label} className={labelInputClass} placeholder="Address label" />
                             {hasLabelError &&
-                                <span className={classes.errorText}>{labelError}</span>
+                                <span  id='labelError' className={classes.errorText}>{labelError}</span>
                             }
                         </Grid>
                     </Grid>
@@ -117,9 +117,9 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
                             <label className={classes.label}>ETH ADDRESS</label>
                         </Grid>
                         <Grid item>
-                            <input type='text' onChange={this.handleAddressChange} value={this.state.address} className={addressInputClass} placeholder="0x" />
+                            <input type='text' id='addressInput' onChange={this.handleAddressChange} value={this.state.address} className={addressInputClass} placeholder="0x" />
                             {hasAddressError &&
-                                <span className={classes.errorText}>{addressError}</span>
+                                <span id='addressError' className={classes.errorText}>{addressError}</span>
                             }
                         </Grid>
                     </Grid>
@@ -127,12 +127,12 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
                 <Grid item>
                     <Grid container direction='row' spacing={24}>
                         <Grid item>
-                            <StyledButton variant="contained" size="medium" type="submit" disabled={(!this.state.label || !this.state.address || hasAddressError || hasLabelError)}>
+                            <StyledButton id='saveButton' variant="contained" size="medium" type="submit" disabled={(!this.state.label || !this.state.address || hasAddressError || hasLabelError)}>
                                 Save
                             </StyledButton>
                         </Grid>
                         <Grid item>
-                            <StyledButton variant="outlined" size="medium" onClick={onCancel}>
+                            <StyledButton id='cancelButton' variant="outlined" size="medium" onClick={onCancel}>
                                 Cancel
                             </StyledButton>
                         </Grid>

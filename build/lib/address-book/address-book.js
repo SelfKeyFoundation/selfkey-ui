@@ -81,10 +81,10 @@ var renderAddresses = function (addresses, classes, onEdit, onDelete) {
                             React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: address.address },
                                 React.createElement(copy_1.default, null)))),
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement(core_1.IconButton, { onClick: function () { return onEdit(address.id); } },
+                        React.createElement(core_1.IconButton, { id: 'editButton', onClick: function () { return onEdit(address.id); } },
                             React.createElement(edit_transparent_1.default, null))),
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement(core_1.IconButton, { onClick: function () { return onDelete(address.id); } },
+                        React.createElement(core_1.IconButton, { id: 'deleteButton', onClick: function () { return onDelete(address.id); } },
                             React.createElement(delete_1.default, null)))))));
     });
 };
@@ -98,7 +98,7 @@ exports.AddressBook = react_jss_1.default(styles)(function (_a) {
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to auto-fill commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
         React.createElement(core_1.Grid, { item: true },
-            React.createElement(core_1.Button, { className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
+            React.createElement(core_1.Button, { id: 'addAddressButton', className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Table, { className: classes.table },
                 React.createElement(core_1.TableHead, null,

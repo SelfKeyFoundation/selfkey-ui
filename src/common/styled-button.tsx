@@ -31,13 +31,14 @@ export type ButtonProps = {
 	size?: 'large' | 'medium' | 'small';
 	variant?: 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
 	color?: 'primary' | 'secondary';
-  type?: 'button' | 'submit';
-  disabled?: boolean
+  	type?: 'button' | 'submit';
+	disabled?: boolean;
+	id?: string;
 };
 
 export const StyledButton = injectSheet(styles)<ButtonProps>(
-	({ classes, children, variant = 'contained', size, color = 'primary', type = 'button', onClick, disabled }) => (
-		<Button variant={variant} size={size} classes={classes} color={color} type={type} onClick={onClick} disabled={disabled}>
+	({ classes, children, variant = 'contained', size, color = 'primary', type = 'button', onClick, disabled, id }) => (
+		<Button id={id} variant={variant} size={size} classes={classes} color={color} type={type} onClick={onClick} disabled={disabled}>
 			{children}
 		</Button>
 	)

@@ -102,23 +102,23 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("label", { className: classes.label }, "LABEL")),
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement("input", { type: 'text', onChange: this.handleLabelChange, value: this.state.label, className: labelInputClass, placeholder: "Address label" }),
+                            React.createElement("input", { type: 'text', id: 'labelInput', onChange: this.handleLabelChange, value: this.state.label, className: labelInputClass, placeholder: "Address label" }),
                             hasLabelError &&
-                                React.createElement("span", { className: classes.errorText }, labelError)))),
+                                React.createElement("span", { id: 'labelError', className: classes.errorText }, labelError)))),
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 8 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("label", { className: classes.label }, "ETH ADDRESS")),
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement("input", { type: 'text', onChange: this.handleAddressChange, value: this.state.address, className: addressInputClass, placeholder: "0x" }),
+                            React.createElement("input", { type: 'text', id: 'addressInput', onChange: this.handleAddressChange, value: this.state.address, className: addressInputClass, placeholder: "0x" }),
                             hasAddressError &&
-                                React.createElement("span", { className: classes.errorText }, addressError)))),
+                                React.createElement("span", { id: 'addressError', className: classes.errorText }, addressError)))),
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 24 },
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement(styled_button_1.default, { variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || !this.state.address || hasAddressError || hasLabelError) }, "Save")),
+                            React.createElement(styled_button_1.default, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || !this.state.address || hasAddressError || hasLabelError) }, "Save")),
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement(styled_button_1.default, { variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
+                            React.createElement(styled_button_1.default, { id: 'cancelButton', variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
     };
     return AddressBookAddComponent;
 }(React.Component));
