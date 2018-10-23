@@ -92,7 +92,7 @@ const renderAddresses = (addresses:Array<AddressBook>, classes: Partial<ClassNam
     return addresses.map((address, index) => {
         return (
             <TableRow key={index} className={classes.bodyTableRow}>
-				<TableCell>{address.label}</TableCell>
+				<TableCell id={address.label}>{address.label}</TableCell>
 				<TableCell>{address.address}</TableCell>
 				<TableCell>
                     <Grid container direction='row' justify='flex-start' alignItems='center'>

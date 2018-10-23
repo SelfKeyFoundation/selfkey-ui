@@ -72,7 +72,7 @@ var styles = {
 var renderAddresses = function (addresses, classes, onEdit, onDelete) {
     return addresses.map(function (address, index) {
         return (React.createElement(core_1.TableRow, { key: index, className: classes.bodyTableRow },
-            React.createElement(core_1.TableCell, null, address.label),
+            React.createElement(core_1.TableCell, { id: address.label }, address.label),
             React.createElement(core_1.TableCell, null, address.address),
             React.createElement(core_1.TableCell, null,
                 React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'center' },
