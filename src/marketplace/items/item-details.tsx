@@ -207,7 +207,7 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 	}
 
 	unlockActionCall(unlockAction: Function | undefined, item: ItemProps, hasBalance: boolean) {
-		if (item.status !== 'Active' || !unlockAction) {
+		if (!unlockAction) {
 			return;
 		}
 		unlockAction(hasBalance);
