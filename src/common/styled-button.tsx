@@ -7,6 +7,9 @@ const styles: StyleSheet = {
 		fontFamily: 'Lato, arial, sans-serif',
 		fontWeight: 'bold',
 		height: '45px',
+		'& svg': {
+			marginRight: '10px',
+		},
 	},
 	containedPrimary: {
 		background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
@@ -24,6 +27,10 @@ const styles: StyleSheet = {
 			border: '2px solid #1CA9BA',
 		},
 	},
+	disabled: {
+		background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
+		boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 0 2px 2px 0 #07C1DC, 2px 0 2px 0 rgba(0,0,0,0.2)',
+	},
 };
 
 export type ButtonProps = {
@@ -32,11 +39,29 @@ export type ButtonProps = {
 	variant?: 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
 	color?: 'primary' | 'secondary';
 	type?: 'button' | 'submit';
+	disabled?: boolean;
 };
 
 export const StyledButton = injectSheet(styles)<ButtonProps>(
-	({ classes, children, variant = 'contained', size, color = 'primary', type = 'button', onClick }) => (
-		<Button variant={variant} size={size} classes={classes} color={color} type={type} onClick={onClick}>
+	({
+		classes,
+		children,
+		variant = 'contained',
+		size,
+		color = 'primary',
+		type = 'button',
+		onClick,
+		disabled = false,
+	}) => (
+		<Button
+			variant={variant}
+			size={size}
+			classes={classes}
+			color={color}
+			type={type}
+			onClick={onClick}
+			disabled={disabled}
+		>
 			{children}
 		</Button>
 	)
