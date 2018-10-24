@@ -134,7 +134,7 @@ var ItemDetailsComponent = /** @class */ (function (_super) {
         });
     };
     ItemDetailsComponent.prototype.unlockActionCall = function (unlockAction, item, hasBalance) {
-        if (item.status !== 'Active' || !unlockAction) {
+        if (!unlockAction) {
             return;
         }
         unlockAction(hasBalance);
