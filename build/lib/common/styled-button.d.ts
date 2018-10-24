@@ -7,7 +7,6 @@ export declare type ButtonProps = {
     color?: 'primary' | 'secondary';
     type?: 'button' | 'submit';
     disabled?: boolean;
-    id?: string;
 };
 export declare const StyledButton: React.ComponentType<ButtonProps & import("react-jss").StyledComponentProps<string>>;
 export default StyledButton;
