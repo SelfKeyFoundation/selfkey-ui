@@ -76,6 +76,9 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
         };
         return _this;
     }
+    TransactionFeeSelectorComponent.prototype.componentDidMount = function () {
+        this.props.onChange(this.value);
+    };
     Object.defineProperty(TransactionFeeSelectorComponent.prototype, "avarageGasPrice", {
         get: function () {
             return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
@@ -106,7 +109,6 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
     });
     TransactionFeeSelectorComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, minGasPrice = _a.minGasPrice, maxGasPrice = _a.maxGasPrice, fiat = _a.fiat;
-        console.log(this.value);
         return (React.createElement("div", { className: classes.root },
             React.createElement("div", { className: classes.networkFee },
                 React.createElement("span", null, "Network Transaction Fee:"),

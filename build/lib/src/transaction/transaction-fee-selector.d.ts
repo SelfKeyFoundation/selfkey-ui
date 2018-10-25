@@ -22,6 +22,7 @@ export declare class TransactionFeeSelectorComponent extends React.Component<Sty
         value: null;
     };
     handleChange: (event: React.ChangeEvent<Element>, value: number) => void;
+    componentDidMount(): void;
     readonly avarageGasPrice: number;
     readonly value: number;
     readonly transactionFee: BN;

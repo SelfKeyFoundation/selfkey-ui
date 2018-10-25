@@ -77,6 +77,9 @@ export class TransactionFeeSelectorComponent extends React.Component<StyledProps
 		this.setState({ value });
 		this.props.onChange(value);
 	};
+	componentDidMount() {
+		this.props.onChange(this.value);
+	}
 	get avarageGasPrice() {
 		return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
 	}
@@ -92,7 +95,6 @@ export class TransactionFeeSelectorComponent extends React.Component<StyledProps
 	}
 	render() {
 		const { classes, minGasPrice, maxGasPrice, fiat } = this.props;
-		console.log(this.value);
 		return (
 			<div className={classes.root}>
 				<div className={classes.networkFee}>
