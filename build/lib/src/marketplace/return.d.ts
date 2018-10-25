@@ -27,9 +27,8 @@ export declare class ReturnComponent extends React.Component<StyledProps, Return
         understood: boolean;
         fee: number;
     };
-    handleUnderstoodChange: (event: object, checked: boolean) => void;
     handleFeeChange: (fee: number) => void;
-    handleSubmit: (event: any) => void;
+    handleConfirm: (event: any) => void;
     render(): JSX.Element;
 }
 export declare const Return: React.ComponentType<ReturnProps & import("react-jss").StyledComponentProps<string>>;

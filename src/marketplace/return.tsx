@@ -70,17 +70,11 @@ export class ReturnComponent extends React.Component<StyledProps, ReturnState> {
 		understood: false,
 		fee: 0,
 	};
-	handleUnderstoodChange = (event: object, checked: boolean) => {
-		this.setState({ understood: checked });
-	};
 	handleFeeChange = (fee: number) => {
 		this.setState({ fee });
 	};
-	handleSubmit = (event: any) => {
+	handleConfirm = (event: any) => {
 		event.preventDefault();
-		if (!this.state.understood) {
-			return this.setState({ error: true });
-		}
 		return this.props.onConfirm(this.state.fee);
 	};
 
@@ -120,16 +114,14 @@ export class ReturnComponent extends React.Component<StyledProps, ReturnState> {
 							/>
 						</Grid>
 						<Grid item classes={{ item: classes.footer }}>
-							<form onSubmit={this.handleSubmit}>
-								<div className={classes.actions}>
-									<StyledButton variant="contained" size="medium" type="submit">
-										Confirm
-									</StyledButton>
-									<StyledButton variant="outlined" size="medium" onClick={onCancel}>
-										Cancel
-									</StyledButton>
-								</div>
-							</form>
+							<div className={classes.actions}>
+								<StyledButton variant="contained" size="medium" onClick={this.handleConfirm}>
+									Confirm
+								</StyledButton>
+								<StyledButton variant="outlined" size="medium" onClick={onCancel}>
+									Cancel
+								</StyledButton>
+							</div>
 						</Grid>
 					</Grid>
 				</Grid>
