@@ -65,17 +65,11 @@ var ReturnComponent = /** @class */ (function (_super) {
             understood: false,
             fee: 0,
         };
-        _this.handleUnderstoodChange = function (event, checked) {
-            _this.setState({ understood: checked });
-        };
         _this.handleFeeChange = function (fee) {
             _this.setState({ fee: fee });
         };
-        _this.handleSubmit = function (event) {
+        _this.handleConfirm = function (event) {
             event.preventDefault();
-            if (!_this.state.understood) {
-                return _this.setState({ error: true });
-            }
             return _this.props.onConfirm(_this.state.fee);
         };
         return _this;
@@ -97,10 +91,9 @@ var ReturnComponent = /** @class */ (function (_super) {
                     React.createElement(core_1.Grid, { item: true, classes: { item: classes.contentSection } },
                         React.createElement(transaction_fee_selector_1.TransactionFeeSelector, { minGasPrice: minGasPrice, maxGasPrice: maxGasPrice, gasLimit: gasLimit, fiat: fiat, fiatRate: fiatRate, onChange: this.handleFeeChange })),
                     React.createElement(core_1.Grid, { item: true, classes: { item: classes.footer } },
-                        React.createElement("form", { onSubmit: this.handleSubmit },
-                            React.createElement("div", { className: classes.actions },
-                                React.createElement(styled_button_1.StyledButton, { variant: "contained", size: "medium", type: "submit" }, "Confirm"),
-                                React.createElement(styled_button_1.StyledButton, { variant: "outlined", size: "medium", onClick: onCancel }, "Cancel"))))))));
+                        React.createElement("div", { className: classes.actions },
+                            React.createElement(styled_button_1.StyledButton, { variant: "contained", size: "medium", onClick: this.handleConfirm }, "Confirm"),
+                            React.createElement(styled_button_1.StyledButton, { variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
     };
     return ReturnComponent;
 }(React.Component));
