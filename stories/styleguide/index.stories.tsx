@@ -22,8 +22,6 @@ import { SendTransaction } from './send-transaction';
 import { TransactionErrorBox } from '../../src/transaction/transaction-error-box';
 import { TransactionError } from '../../src/transaction/transaction-error';
 
-
-
 import {
 	LWSSelectWalletWrapper,
 	LWSRequiredInfoWrapper,
@@ -42,6 +40,7 @@ import { ExchangesWrapper } from './exchanges';
 import { UnlockBox } from '../../src/marketplace/unlock-box';
 import { WithoutBalance } from '../../src/marketplace/without-balance';
 import { Unlock } from '../../src/marketplace/unlock';
+import { Return } from '../../src/marketplace/return';
 import { UnlockProgress } from '../../src/marketplace/unlock-progress';
 
 setup();
@@ -92,7 +91,7 @@ priceStory.addWithJSX('CryptoChartBox', () => (
 		tokens={[
 			{ name: 'Selfkey', symbol: 'KEY', balance: 30, balanceInFiat: 0 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 0 },
-			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 0 }
+			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 0 },
 		]}
 		topTokenListSize={5}
 		viewAll={true}
@@ -189,15 +188,30 @@ let txList = [
 
 transactionrStory.addWithJSX('History', () => <TransactionHistory openLink={() => {}} list={txList} />);
 
-transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
-transactionrStory.addWithJSX('TransactionNoGasError', () => <TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
-transactionrStory.addWithJSX('TransactionErrorBox', () => <TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
-transactionrStory.addWithJSX('TransactionError', () => <TransactionError message="Returned error: intrinsic gas too low" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction />);
+transactionrStory.addWithJSX('TransactionNoGasError', () => (
+	<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+));
+transactionrStory.addWithJSX('TransactionErrorBox', () => (
+	<TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+));
+transactionrStory.addWithJSX('TransactionError', () => (
+	<TransactionError
+		message="Returned error: intrinsic gas too low"
+		publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"
+	/>
+));
 
-
-
-transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' transactionHash='0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd' amount={0.00001}/>);
-
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
+	<TransactionSendProgressBox
+		locale="en"
+		status="Pending"
+		cryptoCurrency="KEY"
+		address="0x4184288c556524df9cb9e58b73265ee66dca4efe"
+		transactionHash="0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd"
+		amount={0.00001}
+	/>
+));
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
@@ -378,8 +392,6 @@ marketplaceStory.addWithJSX('ItemDetails unlocked', () => (
 	/>
 ));
 
-
-
 marketplaceStory.addWithJSX('WithoutBalanceModal', () => (
 	<UnlockBox>
 		<WithoutBalance
@@ -431,15 +443,29 @@ marketplaceStory.addWithJSX('UnlockModal', () => (
 			fiatRate={217.73}
 			onTransactionFeeChange={(value: number) => console.log(value)}
 			onConfirm={(value: number) => alert(value)}
-			onCancel={()=>alert('Canceled')}
+			onCancel={() => alert('Canceled')}
+		/>
+	</UnlockBox>
+));
+
+
+marketplaceStory.addWithJSX('ReturnModal', () => (
+	<UnlockBox text="Return KEY Deposit">
+		<Return
+			minGasPrice={11800000000}
+			maxGasPrice={13000000000}
+			gasLimit={45000}
+			fiat="USD"
+			fiatRate={217.73}
+			onTransactionFeeChange={(value: number) => console.log(value)}
+			onConfirm={(value: number) => alert(value)}
+			onCancel={() => alert('Canceled')}
 		/>
 	</UnlockBox>
 ));
 
 marketplaceStory.addWithJSX('UnlockProgress', () => (
 	<UnlockBox>
-		<UnlockProgress/>
+		<UnlockProgress />
 	</UnlockBox>
 ));
-
-

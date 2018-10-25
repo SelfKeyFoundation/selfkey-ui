@@ -13,7 +13,7 @@ var styles = {
         border: '1px solid #303C49',
         borderRadius: '4px',
         backgroundColor: '#262F39',
-        boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)'
+        boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)',
     },
     header: {
         height: '65px',
@@ -28,13 +28,13 @@ var styles = {
             fontSize: '18px',
             lineHeight: '22px',
             marginLeft: '30px',
-            marginTop: '20px'
+            marginTop: '20px',
         },
         overflow: 'visible',
-        position: 'relative'
+        position: 'relative',
     },
     body: {
-        padding: '30px 42px'
+        padding: '30px 42px',
     },
     closeButton: {
         position: 'absolute',
@@ -43,13 +43,13 @@ var styles = {
     },
 };
 exports.UnlockBox = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, closeAction = _a.closeAction;
-    return (React.createElement(core_1.Grid, { container: true, className: classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
-        React.createElement(core_1.Grid, { item: true, id: 'header', className: classes.header },
-            React.createElement(headings_1.H2, null, "Unlock This Marketplace: Crypto Exchanges"),
+    var classes = _a.classes, children = _a.children, closeAction = _a.closeAction, text = _a.text;
+    return (React.createElement(core_1.Grid, { container: true, className: classes.root, direction: "column", justify: "flex-start", alignItems: "flex-start" },
+        React.createElement(core_1.Grid, { item: true, id: "header", className: classes.header },
+            React.createElement(headings_1.H2, null, text || 'Unlock This Marketplace: Crypto Exchanges'),
             React.createElement("a", { className: classes.closeButton, onClick: closeAction },
                 React.createElement(close_button_1.CloseButtonIcon, null))),
-        React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body }, children)));
+        React.createElement(core_1.Grid, { item: true, id: "body", className: classes.body }, children)));
 });
 exports.default = exports.UnlockBox;
 //# sourceMappingURL=unlock-box.js.map
