@@ -23,7 +23,6 @@ import { TransactionErrorBox } from '../../src/transaction/transaction-error-box
 import { TransactionError } from '../../src/transaction/transaction-error';
 
 
-
 import {
 	LWSSelectWalletWrapper,
 	LWSRequiredInfoWrapper,
@@ -38,6 +37,13 @@ import { ItemDetails } from '../../src/marketplace/items/item-details';
 
 import { MarketplaceWrapper } from './marketplace';
 import { ExchangesWrapper } from './exchanges';
+
+import { AddressBook } from '../../src/address-book/address-book';
+import { AddressBookAdd } from '../../src/address-book/address-book-add';
+import { AddressBookEdit } from '../../src/address-book/address-book-edit';
+
+import { ModalBox } from '../../src/common/modal-box';
+
 
 setup();
 setAddon(JSXAddon);
@@ -240,3 +246,38 @@ marketplaceStory.addWithJSX('ItemDetails', () => (
 		}}
 	/>
 ));
+
+const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+addressBook.addWithJSX('AddressBook', () => <AddressBook addresses={
+	[
+		{
+			id: 1,
+			label: 'John',
+			address: '0x4184288c556524df9cb9e58b73265ee66dca4efe'
+		}
+	]
+}
+
+onEdit={id => alert('onEdit' + id)}
+onDelete={id =>alert('onDelete' + id)}
+onAdd={() =>alert('onAdd')}
+/>);
+
+
+addressBook.addWithJSX('AddressBookAdd', () => (<ModalBox headerText='Add Address'><AddressBookAdd 
+onSave={(label, address) => alert('onEdit' + label +  address)}
+onCancel={() => alert('onCancel')}
+onLabelChange={label => alert('onLabelChange ' + label)}
+onAddressChange={address => alert('onAddressChange ' + address)}
+labelError='hey'
+/></ModalBox>));
+
+
+addressBook.addWithJSX('AddressBookEdit', () => (<ModalBox headerText='Edit Label'><AddressBookEdit
+label='Test'
+onSave={(label) => alert('onEdit' + label)}
+onCancel={() => alert('onCancel')}
+onLabelChange={label => alert('onLabelChange ' + label)}
+labelError='hey'
+/></ModalBox>));

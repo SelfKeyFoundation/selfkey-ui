@@ -6,7 +6,7 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles: StyleSheet = {
   root: {
-    width: '14px !important',
+    width: '16px !important',
     height: '16px !important'
   }
 };

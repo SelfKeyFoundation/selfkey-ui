@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Box should show Modal Box 1`] = `
+<div
+  className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-align-items-xs-flex-start-10 Component-root-0-1-1"
+>
+  <div
+    className="MuiGrid-item-2 Component-header-0-1-2"
+    id="header"
+  >
+    <h2
+      className="Component-base-0-1-5 Component-h2-0-1-7 undefined"
+    >
+      Modal boc
+    </h2>
+    <a
+      className="Component-closeButton-0-1-4"
+      onClick={undefined}
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-98 Component-root-0-1-9"
+        color={undefined}
+        focusable="false"
+        viewBox="0 0 38 38"
+      >
+        <title>
+          Close
+        </title>
+        <desc>
+          Created with Sketch.
+        </desc>
+        <defs />
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Symbols"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            id="Close-button"
+            transform="translate(1.000000, 1.000000)"
+          >
+            <g
+              id="Close"
+            >
+              <circle
+                cx="18"
+                cy="18"
+                fill="#262F39"
+                id="Oval-2"
+                r="18"
+                stroke="#1D505F"
+              />
+              <g
+                fill="#23E6FE"
+                fillRule="nonzero"
+                id="icons8-delete_sign"
+                transform="translate(9.000000, 9.000000)"
+              >
+                <polygon
+                  id="Shape"
+                  points="1.81534091 0.639204545 0.639204545 1.81534091 7.82386364 9 0.639204545 16.1846591 1.81534091 17.3607955 9 10.1761364 16.1846591 17.3607955 17.3607955 16.1846591 10.1761364 9 17.3607955 1.81534091 16.1846591 0.639204545 9 7.82386364"
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </div>
+  <div
+    className="MuiGrid-item-2 Component-body-0-1-3"
+    id="body"
+  />
+</div>
+`;

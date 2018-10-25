@@ -148,7 +148,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         _this.timerToUpdateGasLimit = 0;
         _this.TIME_FOR_INPUT_CHANGE = 1000;
         _this.state = {
-            showAdvanced: false,
+            showAdvanced: props.showAdvanced || false,
             gasLimit: props.gasLimit,
             gasPrice: props.gasPrice
         };

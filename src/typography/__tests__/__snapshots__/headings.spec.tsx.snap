@@ -9,9 +9,9 @@ exports[`Headings should show Heading 1 1`] = `
 `;
 
 exports[`Headings should show Heading 2 1`] = `
-<h1
+<h2
   className="Component-base-0-1-5 Component-h2-0-1-7 undefined"
 >
   TEST
-</h1>
+</h2>
 `;
