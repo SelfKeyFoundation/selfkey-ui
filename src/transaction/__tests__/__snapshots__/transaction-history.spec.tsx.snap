@@ -529,10 +529,15 @@ exports[`Transaction History should show transaction history list 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-98 Component-root-0-1-16"
+            className="MuiSvgIcon-root-98"
             color={undefined}
             focusable="false"
-            role="presentation"
+            style={
+              Object {
+                "height": "26px",
+                "width": "20px",
+              }
+            }
             viewBox="0 0 20 26"
           >
             <title>
@@ -551,7 +556,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             >
               <g
                 fill="#697C95"
-                fill-rule="nonzero"
+                fillRule="nonzero"
                 id="302-Dashboard-Full-State-Expanded"
                 transform="translate(-186.000000, -1871.000000)"
               >
@@ -775,7 +780,7 @@ exports[`Transaction History should show transaction history list 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-98 Component-root-0-1-17"
+            className="MuiSvgIcon-root-98 Component-root-0-1-16"
             color={undefined}
             focusable="false"
             role="presentation"
