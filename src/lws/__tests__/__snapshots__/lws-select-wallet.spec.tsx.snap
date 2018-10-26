@@ -71,11 +71,11 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         </g>
       </g>
     </svg>
-    <h1
+    <h2
       className="Component-base-0-1-17 Component-h2-0-1-19 LWSSelectWalletComponent-title-0-1-2"
     >
       Verify Ownership Of Your SelfKey ID
-    </h1>
+    </h2>
   </div>
   <div
     className="LWSSelectWalletComponent-form-0-1-3"

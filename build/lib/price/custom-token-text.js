@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-// @ts-ignore
 var react_jss_1 = require("react-jss");
 var styles = {
     customTokenText: {

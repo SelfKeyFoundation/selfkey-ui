@@ -138,11 +138,11 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
             className="MuiGrid-item-9"
             id="header"
           >
-            <h1
+            <h2
               className="Component-base-0-1-16 Component-h2-0-1-18 undefined"
             >
               Sent!
-            </h1>
+            </h2>
           </div>
           <div
             className="MuiGrid-item-9"
@@ -373,11 +373,11 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
             className="MuiGrid-item-9"
             id="header"
           >
-            <h1
+            <h2
               className="Component-base-0-1-16 Component-h2-0-1-18 undefined"
             >
               Sent!
-            </h1>
+            </h2>
           </div>
           <div
             className="MuiGrid-item-9"
@@ -608,11 +608,11 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
             className="MuiGrid-item-9"
             id="header"
           >
-            <h1
+            <h2
               className="Component-base-0-1-16 Component-h2-0-1-18 undefined"
             >
               Sent!
-            </h1>
+            </h2>
           </div>
           <div
             className="MuiGrid-item-9"
@@ -843,11 +843,11 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
             className="MuiGrid-item-9"
             id="header"
           >
-            <h1
+            <h2
               className="Component-base-0-1-16 Component-h2-0-1-18 undefined"
             >
               Sent!
-            </h1>
+            </h2>
           </div>
           <div
             className="MuiGrid-item-9"
@@ -1077,11 +1077,11 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
             className="MuiGrid-item-9"
             id="header"
           >
-            <h1
+            <h2
               className="Component-base-0-1-16 Component-h2-0-1-18 undefined"
             >
               Pending
-            </h1>
+            </h2>
           </div>
           <div
             className="MuiGrid-item-9"
@@ -1312,11 +1312,11 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
             className="MuiGrid-item-9"
             id="header"
           >
-            <h1
+            <h2
               className="Component-base-0-1-16 Component-h2-0-1-18 undefined"
             >
               Sent!
-            </h1>
+            </h2>
           </div>
           <div
             className="MuiGrid-item-9"
@@ -1489,11 +1489,11 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
             className="MuiGrid-item-9"
             id="header"
           >
-            <h1
+            <h2
               className="Component-base-0-1-16 Component-h2-0-1-18 undefined"
             >
               hey!
-            </h1>
+            </h2>
           </div>
           <div
             className="MuiGrid-item-9"

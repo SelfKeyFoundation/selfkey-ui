@@ -42,6 +42,7 @@ export type ButtonProps = {
 	color?: 'primary' | 'secondary';
 	type?: 'button' | 'submit';
 	disabled?: boolean;
+	id?: string;
 };
 
 export const StyledButton = injectSheet(styles)<ButtonProps>(
@@ -54,8 +55,10 @@ export const StyledButton = injectSheet(styles)<ButtonProps>(
 		type = 'button',
 		onClick,
 		disabled = false,
+		id,
 	}) => (
 		<Button
+			id={id}
 			variant={variant}
 			size={size}
 			classes={classes}

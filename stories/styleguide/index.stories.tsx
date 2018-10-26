@@ -42,6 +42,12 @@ import { WithoutBalance } from '../../src/marketplace/without-balance';
 import { Unlock } from '../../src/marketplace/unlock';
 import { Return } from '../../src/marketplace/return';
 import { UnlockProgress } from '../../src/marketplace/unlock-progress';
+import { AddressBook } from '../../src/address-book/address-book';
+import { AddressBookAdd } from '../../src/address-book/address-book-add';
+import { AddressBookEdit } from '../../src/address-book/address-book-edit';
+
+import { ModalBox } from '../../src/common/modal-box';
+
 
 setup();
 setAddon(JSXAddon);
@@ -507,3 +513,37 @@ marketplaceStory.addWithJSX('UnlockProgress', () => (
 		<UnlockProgress />
 	</UnlockBox>
 ));
+const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+addressBook.addWithJSX('AddressBook', () => <AddressBook addresses={
+	[
+		{
+			id: 1,
+			label: 'John',
+			address: '0x4184288c556524df9cb9e58b73265ee66dca4efe'
+		}
+	]
+}
+
+onEdit={id => alert('onEdit' + id)}
+onDelete={id =>alert('onDelete' + id)}
+onAdd={() =>alert('onAdd')}
+/>);
+
+
+addressBook.addWithJSX('AddressBookAdd', () => (<ModalBox headerText='Add Address'><AddressBookAdd 
+onSave={(label, address) => alert('onEdit' + label +  address)}
+onCancel={() => alert('onCancel')}
+onLabelChange={label => alert('onLabelChange ' + label)}
+onAddressChange={address => alert('onAddressChange ' + address)}
+labelError='hey'
+/></ModalBox>));
+
+
+addressBook.addWithJSX('AddressBookEdit', () => (<ModalBox headerText='Edit Label'><AddressBookEdit
+label='Test'
+onSave={(label) => alert('onEdit' + label)}
+onCancel={() => alert('onCancel')}
+onLabelChange={label => alert('onLabelChange ' + label)}
+labelError='hey'
+/></ModalBox>));
