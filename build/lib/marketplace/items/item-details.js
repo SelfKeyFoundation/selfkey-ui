@@ -84,7 +84,7 @@ var styles = {
     description: {
         marginTop: '0px',
         textAlign: 'left',
-        width: '620px',
+        maxWidth: '620px',
     },
     buttonWrapper: {
         marginRight: '30px',
@@ -160,9 +160,9 @@ var ItemDetailsComponent = /** @class */ (function (_super) {
                         React.createElement("img", { src: item.logo[0].url })),
                     React.createElement(core_1.Grid, { item: true, id: "title", className: classes.title },
                         React.createElement(headings_1.H2, null, item.name))),
-                React.createElement(core_1.Grid, { item: true, id: "body", className: classes.body },
-                    React.createElement(core_1.Grid, { container: true, direction: "column", justify: "flex-start", alignItems: "flex-start", spacing: 32 },
-                        React.createElement(core_1.Grid, { item: true, id: "description" },
+                React.createElement(core_1.Grid, { item: true, id: "body", className: classes.body, xs: 12 },
+                    React.createElement(core_1.Grid, { container: true, direction: "column", justify: "flex-start", alignItems: "flex-start", spacing: 32, xs: 12 },
+                        React.createElement(core_1.Grid, { item: true, id: "description", xs: 12 },
                             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "flex-start", spacing: 40 },
                                 React.createElement(core_1.Grid, { item: true, xs: 8 },
                                     React.createElement(paragraph_1.P, { className: classes.description }, this.renderDescription(item.description)),
@@ -170,7 +170,7 @@ var ItemDetailsComponent = /** @class */ (function (_super) {
                                         ? 'VIEW ALL DETAILS'
                                         : 'COLLAPSE DETAILS')),
                                 React.createElement(core_1.Grid, { item: true, xs: 4 },
-                                    React.createElement(styled_button_1.StyledButton, { disabled: item.status === 'pending', variant: ['unlocked', 'locked'].includes(item.status) ? 'outlined' : 'contained', onClick: function () { return _this.unlockActionCall(unlockAction, item, hasBalance); } },
+                                    React.createElement(styled_button_1.StyledButton, { disabled: ['pending', 'Inactive'].includes(item.status), variant: ['unlocked', 'locked'].includes(item.status) ? 'outlined' : 'contained', onClick: function () { return _this.unlockActionCall(unlockAction, item, hasBalance); } },
                                         item.status === 'Active' && React.createElement(unlock_1.UnlockIcon, null),
                                         item.status === 'pending' && React.createElement(hourglass_1.HourglassIcon, { width: "10px", height: "14px" }),
                                         item.status === 'unlocked' && React.createElement(return_1.ReturnIcon, null),

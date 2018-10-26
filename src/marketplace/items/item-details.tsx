@@ -93,7 +93,7 @@ const styles: StyleSheet = {
 	description: {
 		marginTop: '0px',
 		textAlign: 'left',
-		width: '620px',
+		maxWidth: '620px',
 	},
 
 	buttonWrapper: {
@@ -251,9 +251,9 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 							<H2>{item.name}</H2>
 						</Grid>
 					</Grid>
-					<Grid item id="body" className={classes.body}>
-						<Grid container direction="column" justify="flex-start" alignItems="flex-start" spacing={32}>
-							<Grid item id="description">
+					<Grid item id="body" className={classes.body} xs={12}>
+						<Grid container direction="column" justify="flex-start" alignItems="flex-start" spacing={32} xs={12}>
+							<Grid item id="description" xs={12}>
 								<Grid container direction="row" justify="center" alignItems="flex-start" spacing={40}>
 									<Grid item xs={8}>
 										<P className={classes.description}>
@@ -271,7 +271,7 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 									</Grid>
 									<Grid item xs={4}>
 										<StyledButton
-											disabled={item.status === 'pending'}
+											disabled={['pending', 'Inactive'].includes(item.status)}
 											variant={
 												['unlocked', 'locked'].includes(item.status) ? 'outlined' : 'contained'
 											}
