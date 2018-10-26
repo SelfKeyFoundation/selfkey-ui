@@ -6,7 +6,8 @@ const styles: StyleSheet = {
 	root: {
 		fontFamily: 'Lato, arial, sans-serif',
 		fontWeight: 'bold',
-		height: '45px',
+		minHeight: '45px',
+		height: 'auto',
 		'& svg': {
 			marginRight: '10px',
 		},
@@ -21,7 +22,8 @@ const styles: StyleSheet = {
 	},
 	outlined: {
 		border: '2px solid #1CA9BA',
-		height: '44px',
+		minHeight: '44px',
+		height: 'auto',
 		color: '#1CA9BA',
 		'&:hover': {
 			border: '2px solid #1CA9BA',

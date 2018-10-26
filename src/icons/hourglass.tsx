@@ -9,9 +9,10 @@ const styles: StyleSheet = {};
 export const HourglassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => {
 	let width = props.width || '20px';
 	let height = props.height || '26px';
+	let fill = props.fill || '#697C95';
 
 	return (
-		<SvgIcon {...props} style={{width, height}} viewBox="0 0 20 26">
+		<SvgIcon {...props} style={{ width, height }} viewBox="0 0 20 26">
 			<title>icon-hourglass</title>
 			<desc>Created with Sketch.</desc>
 			<defs />
@@ -19,8 +20,8 @@ export const HourglassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconPr
 				<g
 					id="302-Dashboard-Full-State-Expanded"
 					transform="translate(-186.000000, -1871.000000)"
-					fill="#697C95"
-					fill-rule="nonzero"
+					fill={fill}
+					fillRule="nonzero"
 				>
 					<g id="Transactions" transform="translate(150.000000, 1616.000000)">
 						<g id="Table" transform="translate(29.000000, 105.000000)">

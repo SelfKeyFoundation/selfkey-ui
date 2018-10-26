@@ -19,6 +19,7 @@ import { TickIcon } from '../../icons/tick';
 import { UnlockIcon } from '../../icons/unlock';
 import { ReturnIcon } from '../../icons/return';
 import { HourglassIcon } from '../../icons/hourglass';
+import { CalendarIcon } from '../../icons/calendar';
 import { StyledButton } from '../../common/styled-button';
 import Truncate from 'react-truncate';
 import { DocumentIcon } from '../../icons/document';
@@ -128,6 +129,18 @@ const styles: StyleSheet = {
 		borderRadius: '18px',
 		backgroundColor: '#F5A623',
 	},
+
+	unlockButtonText: {
+		display: 'flex',
+		flexFlow: 'column',
+		minWidth: '180px',
+		textAlign: 'center',
+	},
+
+	daysLeft: {
+		color: '#93B0C1',
+		fontSize: '13px',
+	},
 };
 
 export type Logo = {
@@ -145,6 +158,7 @@ export type ItemProps = {
 	name: string;
 	logo: Array<Logo>;
 	status: string;
+	releaseDate?: number;
 	integration: string;
 	description: string;
 	location: string;
@@ -228,7 +242,10 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 
 	render() {
 		const { classes, item, unlockAction, hasBalance, backAction } = this.props;
-
+		let daysLeft = 0;
+		if (item.status === 'locked' && item.releaseDate) {
+			daysLeft = Math.ceil((item.releaseDate - Date.now()) / 1000 / 60 / 60 / 24);
+		}
 		return (
 			<Grid container>
 				<Grid item className={classes.buttonWrapper}>
@@ -253,7 +270,14 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 						</Grid>
 					</Grid>
 					<Grid item id="body" className={classes.body} xs={12}>
-						<Grid container direction="column" justify="flex-start" alignItems="flex-start" spacing={32} xs={12}>
+						<Grid
+							container
+							direction="column"
+							justify="flex-start"
+							alignItems="flex-start"
+							spacing={32}
+							xs={12}
+						>
 							<Grid item id="description" xs={12}>
 								<Grid container direction="row" justify="center" alignItems="flex-start" spacing={40}>
 									<Grid item xs={8}>
@@ -279,9 +303,18 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 											onClick={() => this.unlockActionCall(unlockAction, item, hasBalance)}
 										>
 											{item.status === 'Active' && <UnlockIcon />}
-											{item.status === 'pending' && <HourglassIcon width="10px" height="14px" />}
+											{item.status === 'pending' && (
+												<HourglassIcon width="10px" height="14px" fill="rgba(0, 0, 0, 0.26)" />
+											)}
+											{item.status === 'locked' && <CalendarIcon />}
 											{item.status === 'unlocked' && <ReturnIcon />}
-											{item.integration}
+											<div className={classes.unlockButtonText}>
+												<span>{item.integration}</span>
+												{item.status === 'locked' &&
+													daysLeft && (
+														<span className={classes.daysLeft}>{daysLeft} days left</span>
+													)}
+											</div>
 										</StyledButton>
 									</Grid>
 								</Grid>

@@ -15,6 +15,7 @@ export declare type ItemProps = {
     name: string;
     logo: Array<Logo>;
     status: string;
+    releaseDate?: number;
     integration: string;
     description: string;
     location: string;
