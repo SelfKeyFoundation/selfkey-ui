@@ -22,6 +22,7 @@ var tick_1 = require("../../icons/tick");
 var unlock_1 = require("../../icons/unlock");
 var return_1 = require("../../icons/return");
 var hourglass_1 = require("../../icons/hourglass");
+var calendar_1 = require("../../icons/calendar");
 var styled_button_1 = require("../../common/styled-button");
 var react_truncate_1 = require("react-truncate");
 var document_1 = require("../../icons/document");
@@ -113,6 +114,16 @@ var styles = {
         borderRadius: '18px',
         backgroundColor: '#F5A623',
     },
+    unlockButtonText: {
+        display: 'flex',
+        flexFlow: 'column',
+        minWidth: '180px',
+        textAlign: 'center',
+    },
+    daysLeft: {
+        color: '#93B0C1',
+        fontSize: '13px',
+    },
 };
 var ItemDetailsComponent = /** @class */ (function (_super) {
     __extends(ItemDetailsComponent, _super);
@@ -151,6 +162,10 @@ var ItemDetailsComponent = /** @class */ (function (_super) {
     ItemDetailsComponent.prototype.render = function () {
         var _this = this;
         var _a = this.props, classes = _a.classes, item = _a.item, unlockAction = _a.unlockAction, hasBalance = _a.hasBalance, backAction = _a.backAction;
+        var daysLeft = 0;
+        if (item.status === 'locked' && item.releaseDate) {
+            daysLeft = Math.ceil((item.releaseDate - Date.now()) / 1000 / 60 / 60 / 24);
+        }
         return (React.createElement(core_1.Grid, { container: true },
             React.createElement(core_1.Grid, { item: true, className: classes.buttonWrapper },
                 React.createElement(core_1.Button, { variant: "outlined", className: classes.button, onClick: backAction }, "< Back")),
@@ -172,9 +187,15 @@ var ItemDetailsComponent = /** @class */ (function (_super) {
                                 React.createElement(core_1.Grid, { item: true, xs: 4 },
                                     React.createElement(styled_button_1.StyledButton, { disabled: ['pending', 'Inactive'].includes(item.status), variant: ['unlocked', 'locked'].includes(item.status) ? 'outlined' : 'contained', onClick: function () { return _this.unlockActionCall(unlockAction, item, hasBalance); } },
                                         item.status === 'Active' && React.createElement(unlock_1.UnlockIcon, null),
-                                        item.status === 'pending' && React.createElement(hourglass_1.HourglassIcon, { width: "10px", height: "14px" }),
+                                        item.status === 'pending' && (React.createElement(hourglass_1.HourglassIcon, { width: "10px", height: "14px", fill: "rgba(0, 0, 0, 0.26)" })),
+                                        item.status === 'locked' && React.createElement(calendar_1.CalendarIcon, null),
                                         item.status === 'unlocked' && React.createElement(return_1.ReturnIcon, null),
-                                        item.integration)))),
+                                        React.createElement("div", { className: classes.unlockButtonText },
+                                            React.createElement("span", null, item.integration),
+                                            item.status === 'locked' &&
+                                                daysLeft && (React.createElement("span", { className: classes.daysLeft },
+                                                daysLeft,
+                                                " days left"))))))),
                         React.createElement(core_1.Grid, { item: true, className: classes.dividerWrapper },
                             React.createElement(core_1.Divider, { className: classes.divider })),
                         React.createElement(core_1.Grid, { item: true, id: "highlights" },

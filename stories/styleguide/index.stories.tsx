@@ -328,6 +328,7 @@ marketplaceStory.addWithJSX('ItemDetails Locked', () => (
 			],
 			status: 'locked',
 			integration: 'KEY DEPOSIT',
+			releaseDate: Date.now() + 2 * 24 * 60 * 60 * 1000,
 			description:
 				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
 			location: 'Hong Kong',
@@ -485,7 +486,6 @@ marketplaceStory.addWithJSX('UnlockModal', () => (
 		/>
 	</UnlockBox>
 ));
-
 
 marketplaceStory.addWithJSX('ReturnModal', () => (
 	<UnlockBox text="Return KEY Deposit">
