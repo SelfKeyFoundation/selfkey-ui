@@ -129,7 +129,7 @@ export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addr
             <H2>Address Book</H2>
         </Grid>
         <Grid item>
-            <Typography variant='body1' className={classes.descriptionText}>Create and assign labels to auto-fill commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.</Typography>
+            <Typography variant='body1' className={classes.descriptionText}>Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.</Typography>
         </Grid>
         <Grid item>
             <Button id='addAddressButton' className={classes.button} onClick={onAdd}>ADD ADDRESS</Button>

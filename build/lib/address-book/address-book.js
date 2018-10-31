@@ -96,7 +96,7 @@ exports.AddressBook = react_jss_1.default(styles)(function (_a) {
         React.createElement(core_1.Grid, { item: true },
             React.createElement(headings_1.H2, null, "Address Book")),
         React.createElement(core_1.Grid, { item: true },
-            React.createElement(core_1.Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to auto-fill commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
+            React.createElement(core_1.Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Button, { id: 'addAddressButton', className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
         React.createElement(core_1.Grid, { item: true },
