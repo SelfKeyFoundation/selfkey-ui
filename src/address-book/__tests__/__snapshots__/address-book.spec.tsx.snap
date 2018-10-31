@@ -84,7 +84,7 @@ exports[`Address Book should show Address Book 1`] = `
     <p
       className="MuiTypography-root-105 MuiTypography-body1-114 Component-descriptionText-0-1-3"
     >
-      Create and assign labels to auto-fill commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.
+      Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.
     </p>
   </div>
   <div
