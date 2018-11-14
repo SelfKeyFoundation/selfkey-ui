@@ -22,6 +22,7 @@ exports[`Modal Box should show Modal Box 1`] = `
         className="MuiSvgIcon-root-98 Component-root-0-1-9"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 38 38"
       >
         <title>

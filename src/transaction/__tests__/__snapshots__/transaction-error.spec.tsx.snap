@@ -21,6 +21,7 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
         className="MuiSvgIcon-root-1 Component-root-0-1-11"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 38 38"
       >
         <title>
@@ -70,16 +71,17 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-container-8 MuiGrid-align-items-xs-flex-start-17 Component-bodyContainer-0-1-5"
+    className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-5"
   >
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-2-38"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-12"
         color={undefined}
         focusable="false"
+        role="presentation"
         version="1.1"
         viewBox="0 0 68 74"
       >
@@ -134,10 +136,10 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-10-46"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
-        className="MuiGrid-container-8 MuiGrid-direction-xs-column-11 MuiGrid-align-items-xs-flex-start-17"
+        className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
       >
         <div
           className="Component-txFailedText-0-1-6"

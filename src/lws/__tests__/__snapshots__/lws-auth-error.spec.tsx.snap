@@ -12,6 +12,7 @@ exports[`LWS Auth Error Screen should show LWS Auth Error Screen 1`] = `
       className="MuiSvgIcon-root-1 Component-root-0-1-8"
       color={undefined}
       focusable="false"
+      role="presentation"
       viewBox="0 0 68 74"
     >
       <title>

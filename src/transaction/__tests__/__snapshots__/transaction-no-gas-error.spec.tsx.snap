@@ -21,6 +21,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 38 38"
       >
         <title>
@@ -70,16 +71,17 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-container-8 MuiGrid-align-items-xs-flex-start-17 Component-bodyContainer-0-1-7"
+    className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-2-38"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
         color={undefined}
         focusable="false"
+        role="presentation"
         version="1.1"
         viewBox="0 0 68 74"
       >
@@ -134,10 +136,10 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-10-46"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
-        className="MuiGrid-container-8 MuiGrid-direction-xs-column-11 MuiGrid-align-items-xs-flex-start-17"
+        className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
       >
         <div
           className="Component-txFailedText-0-1-8"
@@ -222,6 +224,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 38 38"
       >
         <title>
@@ -271,16 +274,17 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-container-8 MuiGrid-align-items-xs-flex-start-17 Component-bodyContainer-0-1-7"
+    className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-2-38"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
         color={undefined}
         focusable="false"
+        role="presentation"
         version="1.1"
         viewBox="0 0 68 74"
       >
@@ -335,10 +339,10 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-10-46"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
-        className="MuiGrid-container-8 MuiGrid-direction-xs-column-11 MuiGrid-align-items-xs-flex-start-17"
+        className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
       >
         <div
           className="Component-txFailedText-0-1-8"
@@ -423,6 +427,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 38 38"
       >
         <title>
@@ -472,16 +477,17 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-container-8 MuiGrid-align-items-xs-flex-start-17 Component-bodyContainer-0-1-7"
+    className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-2-38"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
         color={undefined}
         focusable="false"
+        role="presentation"
         version="1.1"
         viewBox="0 0 68 74"
       >
@@ -536,10 +542,10 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-10-46"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
-        className="MuiGrid-container-8 MuiGrid-direction-xs-column-11 MuiGrid-align-items-xs-flex-start-17"
+        className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
       >
         <div
           className="Component-txFailedText-0-1-8"
@@ -624,6 +630,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 38 38"
       >
         <title>
@@ -673,16 +680,17 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-container-8 MuiGrid-align-items-xs-flex-start-17 Component-bodyContainer-0-1-7"
+    className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-2-38"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
         color={undefined}
         focusable="false"
+        role="presentation"
         version="1.1"
         viewBox="0 0 68 74"
       >
@@ -737,10 +745,10 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-9 MuiGrid-grid-xs-10-46"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
-        className="MuiGrid-container-8 MuiGrid-direction-xs-column-11 MuiGrid-align-items-xs-flex-start-17"
+        className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
       >
         <div
           className="Component-txFailedText-0-1-8"

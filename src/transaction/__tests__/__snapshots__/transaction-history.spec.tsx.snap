@@ -24,6 +24,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-12"
             color={undefined}
             focusable="false"
+            role="presentation"
             viewBox="0 0 26 26"
           >
             <title>
@@ -115,6 +116,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 14 16"
           >
@@ -185,6 +187,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 22 16"
           >
@@ -277,6 +280,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-15"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 32 26"
           >
@@ -364,6 +368,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 14 16"
           >
@@ -434,6 +439,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 22 16"
           >
@@ -526,6 +532,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-16"
             color={undefined}
             focusable="false"
+            role="presentation"
             viewBox="0 0 20 26"
           >
             <title>
@@ -607,6 +614,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 14 16"
           >
@@ -677,6 +685,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 22 16"
           >
@@ -769,6 +778,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-17"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 26 26"
           >
@@ -856,6 +866,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 14 16"
           >
@@ -926,6 +937,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
             color={undefined}
             focusable="false"
+            role="presentation"
             version="1.1"
             viewBox="0 0 22 16"
           >

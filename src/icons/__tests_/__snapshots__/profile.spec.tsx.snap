@@ -6,6 +6,7 @@ exports[`Profile  Icon should show Profile Icon 1`] = `
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
   color={undefined}
   focusable="false"
+  role="presentation"
   viewBox="0 0 42 37"
 >
   <title>

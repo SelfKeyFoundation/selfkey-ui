@@ -112,7 +112,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-item-2"
         >
           <button
-            className="MuiButtonBase-root-124 MuiButton-root-98 Component-root-0-1-6 MuiButton-text-100 MuiButton-textPrimary-101 MuiButton-outlined-106 Component-outlined-0-1-8 MuiButton-outlinedPrimary-107"
+            className="MuiButtonBase-root-124 MuiButton-root-98 Component-root-0-1-6 MuiButton-outlined-106 Component-outlined-0-1-8 MuiButton-outlinedPrimary-107"
             disabled={false}
             id="cancelButton"
             onBlur={[Function]}

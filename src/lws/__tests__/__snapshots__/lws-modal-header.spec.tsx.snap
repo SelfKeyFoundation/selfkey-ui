@@ -9,6 +9,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
     className="MuiSvgIcon-root-1 Component-root-0-1-4"
     color={undefined}
     focusable="false"
+    role="presentation"
     viewBox="0 0 53 60"
   >
     <title>
@@ -130,6 +131,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
       className="MuiSvgIcon-root-1 Component-root-0-1-9"
       color={undefined}
       focusable="false"
+      role="presentation"
       viewBox="0 0 38 38"
     >
       <title>

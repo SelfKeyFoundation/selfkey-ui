@@ -6,6 +6,7 @@ exports[`Check Icon should show Check Icon 1`] = `
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
   color={undefined}
   focusable="false"
+  role="presentation"
   viewBox="0 0 18 18"
 >
   <title>
