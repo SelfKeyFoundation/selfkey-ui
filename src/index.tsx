@@ -42,4 +42,6 @@ export { AddressBookAdd } from './address-book/address-book-add';
 export { AddressBookEdit } from './address-book/address-book-edit';
 export { ModalBox } from './common/modal-box';
 
+export { SelfkeyDarkTheme } from './theme/selfkey-dark-theme'
+
 
