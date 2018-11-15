@@ -82,4 +82,7 @@ var modal_box_1 = require("./common/modal-box");
 exports.ModalBox = modal_box_1.ModalBox;
 var selfkey_dark_theme_1 = require("./theme/selfkey-dark-theme");
 exports.SelfkeyDarkTheme = selfkey_dark_theme_1.SelfkeyDarkTheme;
+// Icons
+var green_tick_1 = require("./icons/green-tick");
+exports.GreenTickIcon = green_tick_1.GreenTickIcon;
 //# sourceMappingURL=index.js.map

@@ -45,3 +45,6 @@ export { ModalBox } from './common/modal-box';
 export { SelfkeyDarkTheme } from './theme/selfkey-dark-theme'
 
 
+// Icons
+export { GreenTickIcon } from './icons/green-tick'
+
