@@ -85,4 +85,8 @@ exports.SelfkeyDarkTheme = selfkey_dark_theme_1.SelfkeyDarkTheme;
 // Icons
 var green_tick_1 = require("./icons/green-tick");
 exports.GreenTickIcon = green_tick_1.GreenTickIcon;
+var edit_transparent_1 = require("./icons/edit-transparent");
+exports.EditTransparentIcon = edit_transparent_1.EditTransparentIcon;
+var delete_1 = require("./icons/delete");
+exports.DeleteIcon = delete_1.DeleteIcon;
 //# sourceMappingURL=index.js.map

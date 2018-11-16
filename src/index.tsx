@@ -47,4 +47,6 @@ export { SelfkeyDarkTheme } from './theme/selfkey-dark-theme'
 
 // Icons
 export { GreenTickIcon } from './icons/green-tick'
+export { EditTransparentIcon } from './icons/edit-transparent'
+export { DeleteIcon } from './icons/delete'
 
