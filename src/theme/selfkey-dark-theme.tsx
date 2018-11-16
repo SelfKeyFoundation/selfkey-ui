@@ -5,6 +5,12 @@ const theme = createMuiTheme({
     palette: {
       primary: { main: '#00C0D9' }, 
       secondary: { main: '#697C95' },
+      text: {
+        primary: "#FFFFFF",
+        secondary: "rgba(0, 0, 0, 0.54)",
+        disabled: "rgba(0, 0, 0, 0.38)",
+        hint: "rgba(0, 0, 0, 0.38)"
+      }
     },
     typography: {
         fontFamily: [
@@ -13,7 +19,7 @@ const theme = createMuiTheme({
           'sans-serif'
         ].join(','),
         fontSize: 16,
-        useNextVariants: true,
+        useNextVariants: true
     },
     overrides: {
       MuiCard: { 
