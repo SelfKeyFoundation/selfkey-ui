@@ -42,4 +42,13 @@ export { AddressBookAdd } from './address-book/address-book-add';
 export { AddressBookEdit } from './address-book/address-book-edit';
 export { ModalBox } from './common/modal-box';
 
+export { SelfkeyDarkTheme } from './theme/selfkey-dark-theme'
+
+
+// Icons
+export { GreenTickIcon } from './icons/green-tick'
+export { EditTransparentIcon } from './icons/edit-transparent'
+export { DeleteIcon } from './icons/delete'
+export { ViewIcon } from './icons/view'
+
 

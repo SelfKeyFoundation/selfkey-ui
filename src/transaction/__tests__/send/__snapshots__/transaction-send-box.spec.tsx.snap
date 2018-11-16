@@ -13,6 +13,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       className="MuiSvgIcon-root-1 Component-root-0-1-21"
       color={undefined}
       focusable="false"
+      role="presentation"
       viewBox="\\"0 0 38 38"
     >
       <g
@@ -42,6 +43,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       className="MuiSvgIcon-root-1 Component-root-0-1-22 Component-icon-0-1-18"
       color={undefined}
       focusable="false"
+      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -76,16 +78,16 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       Invalid address. Please check and try again.
     </span>
     <div
-      className="MuiGrid-container-8 MuiGrid-align-items-xs-center-16 MuiGrid-justify-xs-space-between-27 TransactionSendBoxComponent-amountContainer-0-1-7"
+      className="MuiGrid-container-10 MuiGrid-align-items-xs-center-18 MuiGrid-justify-xs-space-between-29 TransactionSendBoxComponent-amountContainer-0-1-7"
     >
       <div
-        className="MuiGrid-item-9"
+        className="MuiGrid-item-11"
       >
         <div
-          className="MuiGrid-container-8 MuiGrid-spacing-xs-16-31 MuiGrid-align-items-xs-center-16"
+          className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-align-items-xs-center-18"
         >
           <div
-            className="MuiGrid-item-9"
+            className="MuiGrid-item-11"
           >
             <button
               className="TransactionSendBoxComponent-selectAllAmountBtn-0-1-3"
@@ -95,7 +97,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             </button>
           </div>
           <div
-            className="MuiGrid-item-9"
+            className="MuiGrid-item-11"
           >
             <input
               className="TransactionSendBoxComponent-input-0-1-5 TransactionSendBoxComponent-amountInput-0-1-10"
@@ -108,14 +110,14 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-item-9"
+        className="MuiGrid-item-11"
       />
     </div>
     <hr
-      className="MuiDivider-root-105 TransactionSendBoxComponent-divider-0-1-13"
+      className="MuiDivider-root-107 TransactionSendBoxComponent-divider-0-1-13"
     />
     <div
-      className="MuiGrid-container-8 MuiGrid-align-items-xs-center-16 MuiGrid-justify-xs-space-between-27 TransactionSendBoxComponent-usdAmoutContainer-0-1-9"
+      className="MuiGrid-container-10 MuiGrid-align-items-xs-center-18 MuiGrid-justify-xs-space-between-29 TransactionSendBoxComponent-usdAmoutContainer-0-1-9"
     >
       <span>
         <div>
@@ -127,16 +129,16 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       </span>
     </div>
     <div
-      className="MuiGrid-container-8 MuiGrid-align-items-xs-center-16 MuiGrid-justify-xs-space-between-27 TransactionSendBoxComponent-container-0-1-1"
+      className="MuiGrid-container-10 MuiGrid-align-items-xs-center-18 MuiGrid-justify-xs-space-between-29 TransactionSendBoxComponent-container-0-1-1"
     >
       <div
-        className="MuiGrid-item-9"
+        className="MuiGrid-item-11"
       >
         <div
-          className="MuiGrid-container-8"
+          className="MuiGrid-container-10"
         >
           <div
-            className="MuiGrid-item-9"
+            className="MuiGrid-item-11"
           >
             <span
               className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-24"
@@ -145,51 +147,51 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             </span>
           </div>
           <div
-            className="MuiGrid-item-9"
+            className="MuiGrid-item-11"
           >
             <div
-              className="MuiGrid-container-8 MuiGrid-spacing-xs-8-30 Component-root-0-1-42"
+              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-42"
             >
               <div
-                className="MuiGrid-item-9"
+                className="MuiGrid-item-11"
               >
                 <div
-                  className="MuiGrid-container-8 MuiGrid-spacing-xs-8-30"
+                  className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32"
                 >
                   <div
-                    className="MuiGrid-item-9"
+                    className="MuiGrid-item-11"
                   >
                     <div>
                       0.000000000000151
                     </div>
                   </div>
                   <div
-                    className="MuiGrid-item-9"
+                    className="MuiGrid-item-11"
                   >
                     ETH
                   </div>
                   <div
-                    className="MuiGrid-item-9"
+                    className="MuiGrid-item-11"
                   >
                     /
                   </div>
                 </div>
               </div>
               <div
-                className="MuiGrid-item-9"
+                className="MuiGrid-item-11"
               >
                 <div
-                  className="MuiGrid-container-8 MuiGrid-spacing-xs-8-30"
+                  className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32"
                 >
                   <div
-                    className="MuiGrid-item-9"
+                    className="MuiGrid-item-11"
                   >
                     <div>
                       $0.000000000037191
                     </div>
                   </div>
                   <div
-                    className="MuiGrid-item-9"
+                    className="MuiGrid-item-11"
                   >
                     USD
                   </div>
@@ -200,7 +202,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-item-9 TransactionFeeBoxComponent-showAdvancedContainer-0-1-25"
+        className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-25"
         onClick={[Function]}
       >
         <span>
@@ -214,10 +216,10 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-container-8 MuiGrid-spacing-xs-24-32 MuiGrid-align-items-xs-center-16 MuiGrid-justify-xs-center-25 TransactionSendBoxComponent-actionButtonsContainer-0-1-4"
+      className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-center-18 MuiGrid-justify-xs-center-27 TransactionSendBoxComponent-actionButtonsContainer-0-1-4"
     >
       <div
-        className="MuiGrid-item-9"
+        className="MuiGrid-item-11"
       >
         <button
           className="TransactionSendBoxComponent-button-0-1-2"
@@ -227,7 +229,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
         </button>
       </div>
       <div
-        className="MuiGrid-item-9"
+        className="MuiGrid-item-11"
       >
         <button
           className="TransactionSendBoxComponent-button-0-1-2"

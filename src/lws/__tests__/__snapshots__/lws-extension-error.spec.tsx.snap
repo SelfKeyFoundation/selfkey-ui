@@ -10,6 +10,7 @@ exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] =
       className="MuiSvgIcon-root-1 Component-root-0-1-7"
       color={undefined}
       focusable="false"
+      role="presentation"
       viewBox="0 0 74 74"
     >
       <title>

@@ -15,6 +15,7 @@ exports[`Token Box should show Token Box for key 1`] = `
         className="MuiSvgIcon-root-98 Component-root-0-1-10"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 44 44"
       >
         <g
@@ -62,6 +63,7 @@ exports[`Token Box should show Token Box for key 1`] = `
           className="MuiSvgIcon-root-98 Component-root-0-1-11"
           color={undefined}
           focusable="false"
+          role="presentation"
           viewBox="0 0 489.2 489.2"
         >
           <g>

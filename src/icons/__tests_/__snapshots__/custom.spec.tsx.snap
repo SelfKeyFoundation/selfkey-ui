@@ -6,6 +6,7 @@ exports[`Custom Icon should show Custom Icon 1`] = `
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
   color={undefined}
   focusable="false"
+  role="presentation"
   viewBox="0 0 33 32"
 >
   <g

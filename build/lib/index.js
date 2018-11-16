@@ -80,4 +80,15 @@ var address_book_edit_1 = require("./address-book/address-book-edit");
 exports.AddressBookEdit = address_book_edit_1.AddressBookEdit;
 var modal_box_1 = require("./common/modal-box");
 exports.ModalBox = modal_box_1.ModalBox;
+var selfkey_dark_theme_1 = require("./theme/selfkey-dark-theme");
+exports.SelfkeyDarkTheme = selfkey_dark_theme_1.SelfkeyDarkTheme;
+// Icons
+var green_tick_1 = require("./icons/green-tick");
+exports.GreenTickIcon = green_tick_1.GreenTickIcon;
+var edit_transparent_1 = require("./icons/edit-transparent");
+exports.EditTransparentIcon = edit_transparent_1.EditTransparentIcon;
+var delete_1 = require("./icons/delete");
+exports.DeleteIcon = delete_1.DeleteIcon;
+var view_1 = require("./icons/view");
+exports.ViewIcon = view_1.ViewIcon;
 //# sourceMappingURL=index.js.map

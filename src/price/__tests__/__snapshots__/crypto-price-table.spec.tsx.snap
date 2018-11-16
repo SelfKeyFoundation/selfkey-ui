@@ -308,6 +308,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
               className="MuiSvgIcon-root-114 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
               color={undefined}
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <g
@@ -413,6 +414,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
               className="MuiSvgIcon-root-114 Component-root-0-2-10 CryptoPriceTableComponent-iconSize-0-2-5"
               color={undefined}
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <g
@@ -518,6 +520,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
               className="MuiSvgIcon-root-114 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
               color={undefined}
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <g

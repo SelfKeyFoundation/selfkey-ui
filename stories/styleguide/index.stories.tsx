@@ -21,7 +21,7 @@ import { TransactionHistory, StatusIconName } from '../../src/transaction/transa
 import { SendTransaction } from './send-transaction';
 import { TransactionErrorBox } from '../../src/transaction/transaction-error-box';
 import { TransactionError } from '../../src/transaction/transaction-error';
-
+import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
 
 import {
 	LWSSelectWalletWrapper,
@@ -43,6 +43,7 @@ import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
 
 import { ModalBox } from '../../src/common/modal-box';
+import { Button, Card, CardContent } from '@material-ui/core';
 
 
 setup();
@@ -281,3 +282,15 @@ onCancel={() => alert('onCancel')}
 onLabelChange={label => alert('onLabelChange ' + label)}
 labelError='hey'
 /></ModalBox>));
+
+
+const theme = storiesOf('Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+theme.addWithJSX('SelfkeyDarkTheme', () => (<SelfkeyDarkTheme>
+	<Card>
+		<CardContent>
+			<Button color="primary" variant="contained">Primary</Button> <br/> <br/>
+			<Button color="secondary" variant="contained">Secondary</Button>
+		</CardContent>
+	</Card>
+</SelfkeyDarkTheme>));

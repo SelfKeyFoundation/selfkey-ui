@@ -13,6 +13,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
         className="MuiSvgIcon-root-98 Component-root-0-1-3"
         color={undefined}
         focusable="false"
+        role="presentation"
         viewBox="0 0 44 44"
       >
         <g
