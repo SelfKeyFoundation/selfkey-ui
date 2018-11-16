@@ -21,6 +21,7 @@ import { TransactionHistory, StatusIconName } from '../../src/transaction/transa
 import { SendTransaction } from './send-transaction';
 import { TransactionErrorBox } from '../../src/transaction/transaction-error-box';
 import { TransactionError } from '../../src/transaction/transaction-error';
+import { TableLarge, TableSmall, TableMultiLine } from './style-guide';
 
 
 
@@ -38,6 +39,7 @@ import { ItemDetails } from '../../src/marketplace/items/item-details';
 
 import { MarketplaceWrapper } from './marketplace';
 import { ExchangesWrapper } from './exchanges';
+import Input from '../../src/common/form/input';
 
 setup();
 setAddon(JSXAddon);
@@ -240,3 +242,11 @@ marketplaceStory.addWithJSX('ItemDetails', () => (
 		}}
 	/>
 ));
+
+
+const styleGuideStory = storiesOf('StyleGuide', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+styleGuideStory.addWithJSX('TableLarge', () => <TableLarge />);
+styleGuideStory.addWithJSX('TableSmall', () => <TableSmall />);
+styleGuideStory.addWithJSX('TableMultiLine', () => <TableMultiLine />);
+styleGuideStory.addWithJSX('Input', () => <Input />);
