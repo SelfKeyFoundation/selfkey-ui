@@ -43,7 +43,7 @@ import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
 
 import { ModalBox } from '../../src/common/modal-box';
-import { Button, Card, CardContent } from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 
 
 setup();
@@ -286,11 +286,94 @@ labelError='hey'
 
 const theme = storiesOf('Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
+const underlineStyle = {
+	textDecoration: 'underline',
+}
+
 theme.addWithJSX('SelfkeyDarkTheme', () => (<SelfkeyDarkTheme>
 	<Card>
 		<CardContent>
-			<Button color="primary" variant="contained">Primary</Button> <br/> <br/>
-			<Button color="secondary" variant="contained">Secondary</Button>
+			{/* <Button color="primary" variant="contained">Primary</Button> <br/> <br/>
+			<Button color="secondary" variant="contained">Secondary</Button> <br/><br/> */}
+			<Typography variant="h5" color="error" gutterBottom>
+				Typography
+			</Typography>
+			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+				Headings
+			</Typography>
+			<Typography variant="h1" gutterBottom>
+				H1 - Heading
+			</Typography>
+			<Typography variant="h2" gutterBottom>
+				H2 - Heading 2
+			</Typography>
+			<Typography variant="h2" gutterBottom>
+				H2 - Notifications Unread (Bold)
+			</Typography>
+			<Typography variant="h3" color="primary" gutterBottom>
+				H3 - Heading 3
+			</Typography> <br/>
+
+
+			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+				Body Text
+			</Typography>
+			<Typography variant="body1" gutterBottom>
+				Paragraph Large 18px
+			</Typography>
+			<Typography variant="body2" gutterBottom>
+				Paragraph 16px
+			</Typography>
+			<Typography variant="body2" color="textSecondary" gutterBottom>
+				Definition Title 16px
+			</Typography>
+			<Typography variant="body2" gutterBottom>
+				Definition Description 16px (semibold)
+			</Typography>
+			<Typography variant="body1" color="textSecondary" gutterBottom>
+				Explanatory Large 18px
+			</Typography>
+			<Typography variant="caption" color="textSecondary" gutterBottom>
+				Explanatory 13/19px
+			</Typography> <br/>
+
+
+			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+				Tables
+			</Typography>
+			<Typography variant="subtitle2" className="tableHeader" color="textSecondary" gutterBottom>
+				Table Header 12/15px (Uppercase - SemiBold)
+			</Typography>
+			<Typography variant="body2" gutterBottom>
+				Table Text 15/18px 
+			</Typography>
+			<Typography variant="subtitle1" gutterBottom>
+				Table Small Text 14/17px 
+			</Typography>
+			<Typography variant="subtitle1" gutterBottom>
+				Table Small Text Disabled 14/17px (color - gray)
+			</Typography>
+			<Typography variant="subtitle1" color="primary" gutterBottom>
+				Table Small Link 14/17px (color - primary)
+			</Typography> <br/>
+
+
+			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+				Forms
+			</Typography>
+			<Typography variant="subtitle1" color="textSecondary" gutterBottom>
+				Form Placeholder 14px
+			</Typography>
+			<Typography variant="subtitle2" color="textSecondary" gutterBottom>
+				Form Label 12/15px (Uppercase)
+			</Typography>
+			<Typography variant="caption" color="error" gutterBottom>
+				Error Message 13/19px
+			</Typography>
+			<Typography variant="body2" gutterBottom>
+				Warning Message 16/24px (color - warning)
+			</Typography> <br/>
+
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));
