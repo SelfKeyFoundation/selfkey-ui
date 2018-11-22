@@ -38,7 +38,7 @@ import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
 import { ModalBox } from '../../src/common/modal-box';
-import { Card, CardContent, Typography } from '@material-ui/core';
+import { Card, CardContent, Typography, ListItem, List } from '@material-ui/core';
 import { 
 	SelfkeyDarkTheme,
 	ParagraphLarge,
@@ -54,8 +54,9 @@ import {
 	FormPlaceholder,
 	FormLabel,
 	ErrorMessage, 
-	WarningMessage  
+	WarningMessage,  
 } from '../../src/theme/selfkey-dark-theme';
+import { GreenTick, DefaultBullet } from '../../src/lists/lists-materialui';
 
 
 setup();
@@ -374,6 +375,52 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 				Warning Message 16/24px
 			</WarningMessage> <br/>
 
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Lists
+			</Typography>
+			<Paragraph>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit:
+			</Paragraph>
+			<List>
+				{['Binance', 'KuCoin', 'IDEX'].map(item => (
+					<ListItem key={item}>
+						<DefaultBullet />
+						<ParagraphLarge>{item}</ParagraphLarge>
+					</ListItem>
+				))}
+			</List> <br/>
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Definition Lists
+			</Typography>
+			<List>
+				{['United States', 'LLC', '08/08/2016'].map(item => (
+					<ListItem key={item}>
+						<Definition color="textSecondary">
+							Jurisdiction
+						</Definition>
+						<GreenTick />
+						<DefinitionDescription>
+							{item}
+						</DefinitionDescription>
+					</ListItem>
+				))}
+			</List> <br/>
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Check Lists
+			</Typography>
+			<List>
+				{['Full Legal Name', 'Country of Residency', 'National ID Document', 'National ID with Selfie'].map(item => (
+					<ListItem key={item}>
+						<GreenTick />
+						<Definition color="textSecondary">
+							{item}
+						</Definition>
+					</ListItem>
+				))}
+			</List> <br/>
 
 		</CardContent>
 	</Card>

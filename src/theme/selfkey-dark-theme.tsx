@@ -14,8 +14,9 @@ export {
   FormPlaceholder,
   FormLabel,
   ErrorMessage, 
-  WarningMessage 
+  WarningMessage,
 } from '../typography/materialui/typography-materialui';
+export { DefaultBullet, GreenTick } from '../lists/lists-materialui';
 
 const theme = createMuiTheme({
     palette: {
@@ -83,9 +84,7 @@ const theme = createMuiTheme({
       },
       MuiSvgIcon: {
         root: {
-          height: '16px',
           marginRight: '13px',
-          width: '16px',
         }
       },
     },
