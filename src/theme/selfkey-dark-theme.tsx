@@ -1,5 +1,21 @@
 import * as React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+export { 
+  ParagraphLarge,
+  Paragraph,
+  Definition,
+  DefinitionDescription,
+  ExplanatoryLarge,
+  Explanatory,
+  TableHeader,
+  TableText,
+  TableSmallText,
+  TableSmallTextDisabled,
+  FormPlaceholder,
+  FormLabel,
+  ErrorMessage, 
+  WarningMessage 
+} from '../typography/materialui/typography-materialui';
 
 const theme = createMuiTheme({
     palette: {
@@ -7,8 +23,12 @@ const theme = createMuiTheme({
         main: '#00C0D9',
         light: '#23E6FE',
       }, 
-      secondary: { main: '#697C95' },
-      error: { main: '#FE4B61' },
+      secondary: { 
+        main: '#E98548' 
+      },
+      error: { 
+        main: '#FE4B61' 
+      },
       text: {
         primary: "#FFFFFF",
         secondary: "#93B0C1",
@@ -49,37 +69,34 @@ const theme = createMuiTheme({
           fontSize: '16px',
           lineHeight: '24px',
         },
-        body1: {
+      },
+      MuiListItem: {
+        root: {
+          paddingBottom: '0',
+          paddingTop: '0',
+        }
+      },
+      MuiListItemText: {
+        root: {
           fontSize: '18px',
-          lineHeight: '30px',
-        },
-        body2: {
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-        subtitle1: {
-          fontSize: '14px',
-          lineHeight: '17px',
-        },
-        subtitle2: {
-          fontSize: '12px',
-          lineHeight: '15px',
-        },
-        caption: {
-          fontSize: '13px',
-          lineHeight: '19px',
-        },
+        }
+      },
+      MuiSvgIcon: {
+        root: {
+          height: '16px',
+          marginRight: '13px',
+          width: '16px',
+        }
       },
     },
 });
 
-
 export const SelfkeyDarkTheme: React.SFC<{}> = ({children}) => {
-    return (
-        <MuiThemeProvider theme={theme}>
-          {children}
-        </MuiThemeProvider>
-      );
+  return (
+    <MuiThemeProvider theme={theme}>
+      {children}
+    </MuiThemeProvider>
+  );
 }
-
+        
 export default SelfkeyDarkTheme;

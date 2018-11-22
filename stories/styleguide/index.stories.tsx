@@ -21,8 +21,6 @@ import { TransactionHistory, StatusIconName } from '../../src/transaction/transa
 import { SendTransaction } from './send-transaction';
 import { TransactionErrorBox } from '../../src/transaction/transaction-error-box';
 import { TransactionError } from '../../src/transaction/transaction-error';
-import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
-
 import {
 	LWSSelectWalletWrapper,
 	LWSRequiredInfoWrapper,
@@ -34,16 +32,30 @@ import {
 } from './lws';
 
 import { ItemDetails } from '../../src/marketplace/items/item-details';
-
 import { MarketplaceWrapper } from './marketplace';
 import { ExchangesWrapper } from './exchanges';
-
 import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
-
 import { ModalBox } from '../../src/common/modal-box';
 import { Card, CardContent, Typography } from '@material-ui/core';
+import { 
+	SelfkeyDarkTheme,
+	ParagraphLarge,
+	Paragraph,
+	Definition,
+	DefinitionDescription,
+	ExplanatoryLarge,
+	Explanatory,
+	TableHeader,
+	TableText,
+	TableSmallText,
+	TableSmallTextDisabled,
+	FormPlaceholder,
+	FormLabel,
+	ErrorMessage, 
+	WarningMessage  
+} from '../../src/theme/selfkey-dark-theme';
 
 
 setup();
@@ -161,7 +173,6 @@ const transactionrStory = storiesOf('Transaction', module).addDecorator(transfer
 };
 
 transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
-
 transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
 	<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
 ));
@@ -184,13 +195,10 @@ let txList = [{
 
 transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{}}list={txList}/>);
 
-
 transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
 transactionrStory.addWithJSX('TransactionNoGasError', () => <TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
 transactionrStory.addWithJSX('TransactionErrorBox', () => <TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
 transactionrStory.addWithJSX('TransactionError', () => <TransactionError message="Returned error: intrinsic gas too low" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
-
-
 
 transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' transactionHash='0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd' amount={0.00001}/>);
 
@@ -198,22 +206,14 @@ transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSen
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
 lws.addWithJSX('LWSHeader', () => <LWSModalHeader />);
-
 lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWalletWrapper />);
-
 lws.addWithJSX('LWSRequiredInfo', () => <LWSRequiredInfoWrapper />);
-
 lws.addWithJSX('LWSWalletConnectionError', () => <LWSWalletConnectionErrorWrapper />);
-
 lws.addWithJSX('LWSSelfkeyIdError', () => <LWSSelfkeyIdErrorWrapper />);
-
 lws.addWithJSX('LWSExtensionError', () => <LWSExtensionErrorWrapper />);
-
 lws.addWithJSX('LWSSuccess', () => <LWSSuccessWrapper />);
 lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorWrapper />);
-
 lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
-
 lws.addWithJSX('LWSLoading', () => <LWSLoading />);
 
 const marketplaceStory = storiesOf('Marketplace', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
@@ -265,7 +265,6 @@ onDelete={id =>alert('onDelete' + id)}
 onAdd={() =>alert('onAdd')}
 />);
 
-
 addressBook.addWithJSX('AddressBookAdd', () => (<ModalBox headerText='Add Address'><AddressBookAdd 
 onSave={(label, address) => alert('onEdit' + label +  address)}
 onCancel={() => alert('onCancel')}
@@ -273,7 +272,6 @@ onLabelChange={label => alert('onLabelChange ' + label)}
 onAddressChange={address => alert('onAddressChange ' + address)}
 labelError='hey'
 /></ModalBox>));
-
 
 addressBook.addWithJSX('AddressBookEdit', () => (<ModalBox headerText='Edit Label'><AddressBookEdit
 label='Test'
@@ -290,7 +288,9 @@ const underlineStyle = {
 	textDecoration: 'underline',
 }
 
-theme.addWithJSX('SelfkeyDarkTheme', () => (<SelfkeyDarkTheme>
+
+theme.addWithJSX('SelfkeyDarkTheme', () => (
+<SelfkeyDarkTheme>
 	<Card>
 		<CardContent>
 			{/* <Button color="primary" variant="contained">Primary</Button> <br/> <br/>
@@ -298,7 +298,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (<SelfkeyDarkTheme>
 			<Typography variant="h5" color="error" gutterBottom>
 				Typography
 			</Typography>
-			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Headings
 			</Typography>
 			<Typography variant="h1" gutterBottom>
@@ -310,70 +310,72 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (<SelfkeyDarkTheme>
 			<Typography variant="h2" gutterBottom>
 				H2 - Notifications Unread (Bold)
 			</Typography>
-			<Typography variant="h3" color="primary" gutterBottom>
+			<Typography variant="h3" color="textSecondary" gutterBottom>
 				H3 - Heading 3
 			</Typography> <br/>
 
 
-			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Body Text
 			</Typography>
-			<Typography variant="body1" gutterBottom>
+			<ParagraphLarge gutterBottom>
 				Paragraph Large 18px
-			</Typography>
-			<Typography variant="body2" gutterBottom>
+			</ParagraphLarge>
+			<Paragraph gutterBottom>
 				Paragraph 16px
-			</Typography>
-			<Typography variant="body2" color="textSecondary" gutterBottom>
+			</Paragraph>
+			<Definition color="textSecondary" gutterBottom>
 				Definition Title 16px
-			</Typography>
-			<Typography variant="body2" gutterBottom>
-				Definition Description 16px (semibold)
-			</Typography>
-			<Typography variant="body1" color="textSecondary" gutterBottom>
+			</Definition>
+			<DefinitionDescription gutterBottom>
+				Definition description Title 16px
+			</DefinitionDescription>
+			<ExplanatoryLarge color="textSecondary" gutterBottom>
 				Explanatory Large 18px
-			</Typography>
-			<Typography variant="caption" color="textSecondary" gutterBottom>
+			</ExplanatoryLarge>
+			<Explanatory color="textSecondary" gutterBottom>
 				Explanatory 13/19px
-			</Typography> <br/>
+			</Explanatory> <br/>
 
 
-			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Tables
 			</Typography>
-			<Typography variant="subtitle2" className="tableHeader" color="textSecondary" gutterBottom>
-				Table Header 12/15px (Uppercase - SemiBold)
-			</Typography>
-			<Typography variant="body2" gutterBottom>
+			<TableHeader color="textSecondary" gutterBottom>
+				Table Header 12/15px
+			</TableHeader>
+			<TableText gutterBottom>
 				Table Text 15/18px 
-			</Typography>
-			<Typography variant="subtitle1" gutterBottom>
-				Table Small Text 14/17px 
-			</Typography>
-			<Typography variant="subtitle1" gutterBottom>
-				Table Small Text Disabled 14/17px (color - gray)
-			</Typography>
-			<Typography variant="subtitle1" color="primary" gutterBottom>
-				Table Small Link 14/17px (color - primary)
-			</Typography> <br/>
+			</TableText>
+			<TableSmallText gutterBottom>
+				Table Small Text 14/17px
+			</TableSmallText>
+			<TableSmallTextDisabled gutterBottom>
+				Table Small Text Disabled 14/17px
+			</TableSmallTextDisabled>
+			<TableSmallText color="primary" gutterBottom>
+				Table Small Link 14/17px
+			</TableSmallText> <br/>
+			
 
-
-			<Typography variant="subheading" style={underlineStyle} gutterBottom>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Forms
 			</Typography>
-			<Typography variant="subtitle1" color="textSecondary" gutterBottom>
-				Form Placeholder 14px
-			</Typography>
-			<Typography variant="subtitle2" color="textSecondary" gutterBottom>
-				Form Label 12/15px (Uppercase)
-			</Typography>
-			<Typography variant="caption" color="error" gutterBottom>
+			<FormPlaceholder color="textSecondary" gutterBottom>
+				Form Placeholder 14/21px
+			</FormPlaceholder>
+			<FormLabel color="textSecondary" gutterBottom>
+				Form Label 12/15px
+			</FormLabel>
+			<ErrorMessage color="error" gutterBottom>
 				Error Message 13/19px
-			</Typography>
-			<Typography variant="body2" gutterBottom>
-				Warning Message 16/24px (color - warning)
-			</Typography> <br/>
+			</ErrorMessage>
+			<WarningMessage color="secondary" gutterBottom>
+				Warning Message 16/24px
+			</WarningMessage> <br/>
+
 
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));
+
