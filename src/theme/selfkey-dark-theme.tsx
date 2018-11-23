@@ -1,5 +1,15 @@
 import * as React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+import {
+  primary,
+  typography,
+  error,
+  primaryTint,
+  warning,
+  white,
+  grey,
+  base,
+} from '../colors';
 export { 
   ParagraphLarge,
   Paragraph,
@@ -22,23 +32,26 @@ export {
   CheckedIcon,
   CheckedIcon2,
 } from '../lists/lists-materialui';
+export {
+  NormalInput,
+} from '../forms/inputs';
 
 const theme = createMuiTheme({
     palette: {
       primary: { 
-        main: '#00C0D9',
-        light: '#23E6FE',
+        main: primary,
+        light: primaryTint,
       }, 
       secondary: { 
-        main: '#E98548' 
+        main: warning,
       },
       error: { 
-        main: '#FE4B61' 
+        main: error, 
       },
       text: {
-        primary: "#FFFFFF",
-        secondary: "#93B0C1",
-        disabled: "#697C95",
+        primary: white,
+        secondary: typography,
+        disabled: grey,
         hint: "rgba(0, 0, 0, 0.38)",
       }
     },
@@ -54,7 +67,7 @@ const theme = createMuiTheme({
     overrides: {
       MuiCard: { 
         root: { 
-          backgroundColor: '#262F39',
+          backgroundColor: base,
         },
       },
       MuiTypography: {
@@ -92,6 +105,8 @@ const theme = createMuiTheme({
         root: {
           marginRight: '13px',
         }
+      },
+      MuiInput: {
       },
     },
 });
