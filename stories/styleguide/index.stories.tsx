@@ -54,14 +54,13 @@ import {
 	FormPlaceholder,
 	FormLabel,
 	ErrorMessage, 
-	WarningMessage,  
-} from '../../src/theme/selfkey-dark-theme';
-import { 
+	WarningMessage,
 	GreenTick, 
 	DefaultBullet, 
 	CheckedIcon, 
 	// CheckedIcon2, 
-} from '../../src/lists/lists-materialui';
+	// NormalInput,  
+} from '../../src/theme/selfkey-dark-theme';
 
 setup();
 import { UnlockBox } from '../../src/marketplace/unlock-box'
@@ -348,7 +347,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<Typography variant="h2" gutterBottom>
 				H2 - Notifications Unread (Bold)
 			</Typography>
-			<Typography variant="h3" color="textSecondary" gutterBottom>
+			<Typography variant="h3" gutterBottom>
 				H3 - Heading 3
 			</Typography> <br/>
 
@@ -362,16 +361,16 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<Paragraph gutterBottom>
 				Paragraph 16px
 			</Paragraph>
-			<Definition color="textSecondary" gutterBottom>
+			<Definition gutterBottom>
 				Definition Title 16px
 			</Definition>
 			<DefinitionDescription gutterBottom>
 				Definition description Title 16px
 			</DefinitionDescription>
-			<ExplanatoryLarge color="textSecondary" gutterBottom>
+			<ExplanatoryLarge gutterBottom>
 				Explanatory Large 18px
 			</ExplanatoryLarge>
-			<Explanatory color="textSecondary" gutterBottom>
+			<Explanatory gutterBottom>
 				Explanatory 13/19px
 			</Explanatory> <br/>
 
@@ -379,7 +378,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Tables
 			</Typography>
-			<TableHeader color="textSecondary" gutterBottom>
+			<TableHeader gutterBottom>
 				Table Header 12/15px
 			</TableHeader>
 			<TableText gutterBottom>
@@ -399,16 +398,16 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Forms
 			</Typography>
-			<FormPlaceholder color="textSecondary" gutterBottom>
+			<FormPlaceholder gutterBottom>
 				Form Placeholder 14/21px
 			</FormPlaceholder>
-			<FormLabel color="textSecondary" gutterBottom>
+			<FormLabel gutterBottom>
 				Form Label 12/15px
 			</FormLabel>
-			<ErrorMessage color="error" gutterBottom>
+			<ErrorMessage gutterBottom>
 				Error Message 13/19px
 			</ErrorMessage>
-			<WarningMessage color="secondary" gutterBottom>
+			<WarningMessage gutterBottom>
 				Warning Message 16/24px
 			</WarningMessage> <br/>
 
@@ -434,7 +433,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<List>
 				{['United States', 'LLC', '08/08/2016'].map(item => (
 					<ListItem key={item}>
-						<Definition color="textSecondary">
+						<Definition>
 							Jurisdiction
 						</Definition>
 						<GreenTick />
@@ -452,7 +451,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 				{['Full Legal Name', 'Country of Residency', 'National ID Document', 'National ID with Selfie'].map(item => (
 					<ListItem key={item}>
 						<CheckedIcon />
-						<Definition color="textSecondary">
+						<Definition>
 							{item}
 						</Definition>
 					</ListItem>

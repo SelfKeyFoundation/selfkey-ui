@@ -1,4 +1,5 @@
 import { withStyles, Typography } from '@material-ui/core';
+import { grey, typography, error, warning } from '../../colors';
 
 export const ParagraphLarge = withStyles({
 	root: {
@@ -16,6 +17,7 @@ export const Paragraph = withStyles({
 
 export const Definition = withStyles({
 	root: {
+		color: typography,
 		fontSize: '16px',
 		lineHeight: '20px',
 	},
@@ -31,6 +33,7 @@ export const DefinitionDescription = withStyles({
 
 export const ExplanatoryLarge = withStyles({
 	root: {
+		color: typography,
 		fontSize: '18px',
 		lineHeight: '28px',
 	},
@@ -38,6 +41,7 @@ export const ExplanatoryLarge = withStyles({
 
 export const Explanatory = withStyles({
 	root: {
+		color: typography,
 		fontSize: '13px',
 		lineHeight: '19px',
 	},
@@ -45,6 +49,7 @@ export const Explanatory = withStyles({
 
 export const TableHeader = withStyles({
 	root: {
+		color: typography,
 		fontSize: '12px',
 		fontWeight: 600,
 		lineHeight: '15px',
@@ -68,7 +73,7 @@ export const TableSmallText = withStyles({
 
 export const TableSmallTextDisabled = withStyles({
 	root: {
-		color: '#697C95',
+		color: grey,
 		fontSize: '14px',
 		lineHeight: '17px',
 	},
@@ -76,6 +81,7 @@ export const TableSmallTextDisabled = withStyles({
 
 export const FormPlaceholder = withStyles({
 	root: {
+		color: typography,
 		fontSize: '14px',
 		lineHeight: '21px',
 	},
@@ -83,6 +89,7 @@ export const FormPlaceholder = withStyles({
 
 export const FormLabel = withStyles({
 	root: {
+		color: typography,
 		fontSize: '12px',
 		fontWeight: 600,
 		lineHeight: '15px',
@@ -92,6 +99,7 @@ export const FormLabel = withStyles({
 
 export const ErrorMessage = withStyles({
 	root: {
+		color: error,
 		fontSize: '13px',
 		lineHeight: '19px',
 	},
@@ -99,6 +107,7 @@ export const ErrorMessage = withStyles({
 
 export const WarningMessage = withStyles({
 	root: {
+		color: warning,
 		fontSize: '16px',
 		lineHeight: '24px',
 	},
