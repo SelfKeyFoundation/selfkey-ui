@@ -16,7 +16,12 @@ export {
   ErrorMessage, 
   WarningMessage,
 } from '../typography/materialui/typography-materialui';
-export { DefaultBullet, GreenTick } from '../lists/lists-materialui';
+export { 
+  DefaultBullet, 
+  GreenTick, 
+  CheckedIcon,
+  CheckedIcon2,
+} from '../lists/lists-materialui';
 
 const theme = createMuiTheme({
     palette: {
@@ -73,6 +78,7 @@ const theme = createMuiTheme({
       },
       MuiListItem: {
         root: {
+          marginBottom: '10px',
           paddingBottom: '0',
           paddingTop: '0',
         }
