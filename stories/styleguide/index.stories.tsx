@@ -56,7 +56,12 @@ import {
 	ErrorMessage, 
 	WarningMessage,  
 } from '../../src/theme/selfkey-dark-theme';
-import { GreenTick, DefaultBullet } from '../../src/lists/lists-materialui';
+import { 
+	GreenTick, 
+	DefaultBullet, 
+	CheckedIcon, 
+	// CheckedIcon2, 
+} from '../../src/lists/lists-materialui';
 
 
 setup();
@@ -414,7 +419,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<List>
 				{['Full Legal Name', 'Country of Residency', 'National ID Document', 'National ID with Selfie'].map(item => (
 					<ListItem key={item}>
-						<GreenTick />
+						<CheckedIcon />
 						<Definition color="textSecondary">
 							{item}
 						</Definition>
