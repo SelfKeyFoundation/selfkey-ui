@@ -10,31 +10,9 @@ import {
   grey,
   base,
 } from '../colors';
-export { 
-  ParagraphLarge,
-  Paragraph,
-  Definition,
-  DefinitionDescription,
-  ExplanatoryLarge,
-  Explanatory,
-  TableHeader,
-  TableText,
-  TableSmallText,
-  TableSmallTextDisabled,
-  FormPlaceholder,
-  FormLabel,
-  ErrorMessage, 
-  WarningMessage,
-} from '../typography/materialui/typography-materialui';
-export { 
-  DefaultBullet, 
-  GreenTick, 
-  CheckedIcon,
-  CheckedIcon2,
-} from '../lists/lists-materialui';
-export {
-  NormalInput,
-} from '../forms/inputs';
+export * from '../typography/materialui/typography-materialui';
+export * from '../lists/lists-materialui';
+export * from '../forms/inputs';
 
 const theme = createMuiTheme({
     palette: {
@@ -89,6 +67,9 @@ const theme = createMuiTheme({
           fontSize: '16px',
           lineHeight: '24px',
         },
+        h5: {
+          fontWeight: 600,
+        },
       },
       MuiListItem: {
         root: {
@@ -106,8 +87,6 @@ const theme = createMuiTheme({
         root: {
           marginRight: '13px',
         }
-      },
-      MuiInput: {
       },
     },
 });

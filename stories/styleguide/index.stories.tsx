@@ -38,7 +38,7 @@ import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
 import { ModalBox } from '../../src/common/modal-box';
-import { Card, CardContent, Typography, ListItem, List } from '@material-ui/core';
+import { Card, CardContent, Typography, ListItem, List, Grid } from '@material-ui/core';
 import { 
 	SelfkeyDarkTheme,
 	ParagraphLarge,
@@ -59,7 +59,7 @@ import {
 	DefaultBullet, 
 	CheckedIcon, 
 	// CheckedIcon2, 
-	// NormalInput,  
+	InputField,
 } from '../../src/theme/selfkey-dark-theme';
 
 setup();
@@ -412,51 +412,103 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			</WarningMessage> <br/>
 
 
-			<Typography variant="h3" style={underlineStyle} gutterBottom>
-				Lists
-			</Typography>
-			<Paragraph>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit:
-			</Paragraph>
-			<List>
-				{['Binance', 'KuCoin', 'IDEX'].map(item => (
-					<ListItem key={item}>
-						<DefaultBullet />
-						<ParagraphLarge>{item}</ParagraphLarge>
-					</ListItem>
-				))}
-			</List> <br/>
+			<Grid container spacing={24}>
+				<Grid item xs>
+					<Typography variant="h3" style={underlineStyle} gutterBottom>
+						Lists
+					</Typography>
+					<Paragraph>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit:
+					</Paragraph>
+					<List>
+						{['Binance', 'KuCoin', 'IDEX'].map(item => (
+							<ListItem key={item}>
+								<DefaultBullet />
+								<ParagraphLarge>{item}</ParagraphLarge>
+							</ListItem>
+						))}
+					</List> <br/>
+				</Grid>
 
-			<Typography variant="h3" style={underlineStyle} gutterBottom>
-				Definition Lists
-			</Typography>
-			<List>
-				{['United States', 'LLC', '08/08/2016'].map(item => (
-					<ListItem key={item}>
-						<Definition>
-							Jurisdiction
-						</Definition>
-						<GreenTick />
-						<DefinitionDescription>
-							{item}
-						</DefinitionDescription>
-					</ListItem>
-				))}
-			</List> <br/>
+				<Grid item xs>
+					<Typography variant="h3" style={underlineStyle} gutterBottom>
+						Definition Lists
+					</Typography>
+					<List>
+						{['United States', 'LLC', '08/08/2016'].map(item => (
+							<ListItem key={item}>
+								<Definition>
+									Jurisdiction
+								</Definition>
+								<GreenTick />
+								<DefinitionDescription>
+									{item}
+								</DefinitionDescription>
+							</ListItem>
+						))}
+					</List> <br/>
+				</Grid>
 
-			<Typography variant="h3" style={underlineStyle} gutterBottom>
-				Check Lists
+				<Grid item xs>
+					<Typography variant="h3" style={underlineStyle} gutterBottom>
+						Check Lists
+					</Typography>
+					<List>
+						{['Full Legal Name', 'Country of Residency', 'National ID Document', 'National ID with Selfie'].map(item => (
+							<ListItem key={item}>
+								<CheckedIcon />
+								<Definition>
+									{item}
+								</Definition>
+							</ListItem>
+						))}
+					</List> <br/>
+				</Grid>
+			</Grid>
+
+
+
+			<Typography variant="h5" color="error" gutterBottom>
+				Forms
 			</Typography>
-			<List>
-				{['Full Legal Name', 'Country of Residency', 'National ID Document', 'National ID with Selfie'].map(item => (
-					<ListItem key={item}>
-						<CheckedIcon />
-						<Definition>
-							{item}
-						</Definition>
-					</ListItem>
-				))}
-			</List> <br/>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Text Input
+			</Typography>
+
+			<Grid container spacing={24}>
+				<Grid item>
+					<TableHeader gutterBottom>
+						Normal / Focused
+					</TableHeader>
+					<InputField
+						disableUnderline={ true }
+						placeholder="First Name"
+					/>
+				</Grid>
+
+				<Grid item>
+					<TableHeader gutterBottom>
+						Disabled
+					</TableHeader>
+					<InputField
+						disabled
+						disableUnderline={ true }
+						placeholder="First Name"
+					/>
+				</Grid>
+
+				<Grid item>
+					<TableHeader gutterBottom>
+						Error
+					</TableHeader>
+					<InputField
+						error
+						disableUnderline={ true }
+						placeholder="First Name"
+					/>
+				</Grid>
+			</Grid>
+
 
 		</CardContent>
 	</Card>
