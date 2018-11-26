@@ -38,7 +38,17 @@ import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
 import { ModalBox } from '../../src/common/modal-box';
-import { Card, CardContent, Typography, ListItem, List, Grid } from '@material-ui/core';
+import { 
+	Card, 
+	CardContent, 
+	Typography, 
+	ListItem, 
+	List, 
+	Grid, 
+	// FormControl, 
+	// InputLabel, 
+	// MenuItem,
+} from '@material-ui/core';
 import { 
 	SelfkeyDarkTheme,
 	ParagraphLarge,
@@ -58,8 +68,12 @@ import {
 	GreenTick, 
 	DefaultBullet, 
 	CheckedIcon, 
-	// CheckedIcon2, 
 	InputField,
+	// DropdownInputField,
+	// DropdownSelect,
+	FullButton,
+	OutlineButton,
+	OutlineSecondaryButton,
 } from '../../src/theme/selfkey-dark-theme';
 
 setup();
@@ -292,7 +306,6 @@ const underlineStyle = {
 	textDecoration: 'underline',
 }
 
-
 theme.addWithJSX('SelfkeyDarkTheme', () => (
 <SelfkeyDarkTheme>
 	<Card>
@@ -474,8 +487,55 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 						placeholder="First Name"
 					/>
 				</Grid>
-			</Grid>
+			</Grid> <br/>
 
+
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Buttons
+			</Typography>
+			<TableHeader gutterBottom>
+				Full Primary
+			</TableHeader>
+			<FullButton size="large">Large</FullButton>
+			<FullButton disabled size="large">
+				Disabled
+			</FullButton> 
+			<FullButton>Medium</FullButton> 
+			<FullButton size="small">Small</FullButton>
+			<br/><br/>
+
+			<TableHeader gutterBottom>
+				Shell Primary
+			</TableHeader>
+			<OutlineButton size="large">Large</OutlineButton>
+			<OutlineButton disabled size="large">
+				Disabled
+			</OutlineButton> 
+			<OutlineButton>Medium</OutlineButton> 
+			<OutlineButton size="small">Small</OutlineButton>
+			<br/><br/>
+
+			<TableHeader gutterBottom>
+				Shell Secondary
+			</TableHeader>
+			<OutlineSecondaryButton size="large">Large</OutlineSecondaryButton>
+			<OutlineSecondaryButton disabled size="large">
+				Disabled
+			</OutlineSecondaryButton> 
+			<OutlineSecondaryButton>Medium</OutlineSecondaryButton> 
+			<OutlineSecondaryButton size="small">Small</OutlineSecondaryButton>
+			<br/><br/>
+
+			{/* <Typography variant="h3" style={underlineStyle} gutterBottom>
+				Checkboxes
+			</Typography>
+			<FormControlLabel
+				control={
+					<DefaultCheckbox />
+				}
+				label="Primary"
+			/> */}
 
 		</CardContent>
 	</Card>
