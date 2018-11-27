@@ -1,5 +1,10 @@
 import { withStyles, Button } from '@material-ui/core';
-import { white, primary, typography, base, baseDark } from '../colors';
+import { 
+    white, 
+    primary, 
+    typography, 
+    baseDark 
+} from '../colors';
 
 export const FullButton = withStyles({
 	root: {
@@ -10,8 +15,7 @@ export const FullButton = withStyles({
         color: white,
         marginRight: '25px',
         '&:hover': {
-            background: base,
-            // background: 'linear-gradient(to bottom, #0D95A6 0%, #097F8D 100%)',
+            background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
             border: '1px solid #0FB8D0',
         },
         '&:focus': {
