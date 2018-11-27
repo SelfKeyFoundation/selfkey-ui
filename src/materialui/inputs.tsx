@@ -26,10 +26,12 @@ export const InputField = withStyles({
         backgroundColor: 'rgba(255, 46, 99, 0.09)',
         border: `1px solid ${error}`,
         color: error,
+        marginBottom: '6px',
     },
     disabled: {
+        color: '#93B0C1',
         opacity: 0.5,
-    }
+    },
 })(Input);
 
 export const DropdownInputField = withStyles({

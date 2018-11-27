@@ -46,11 +46,7 @@ import {
 	List, 
 	Grid,
 	FormControlLabel,
-	// Checkbox,
-	Radio, 
-	// FormControl, 
-	// InputLabel, 
-	// MenuItem,
+	Radio,
 } from '@material-ui/core';
 import { 
 	SelfkeyDarkTheme,
@@ -73,8 +69,6 @@ import {
 	DefaultBullet, 
 	CheckedIcon, 
 	InputField,
-	// DropdownInputField,
-	// DropdownSelect,
 	FullButton,
 	OutlineButton,
 	OutlineSecondaryButton,
@@ -654,6 +648,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 						disableUnderline={ true }
 						placeholder="First Name"
 					/>
+					<ErrorMessage>Error message</ErrorMessage>
 				</Grid>
 			</Grid> <br/>
 
