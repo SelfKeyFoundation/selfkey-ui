@@ -171,11 +171,6 @@ const theme = createMuiTheme({
           padding: '7px 0 7px 10px',
         },
       },
-      // MuiGrid: {
-      //   root: {
-      //     flexGrow: 0,
-      //   },
-      // },
     },
 });
 
