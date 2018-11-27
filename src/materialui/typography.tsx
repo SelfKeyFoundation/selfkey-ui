@@ -1,5 +1,18 @@
 import { withStyles, Typography } from '@material-ui/core';
-import { grey, typography, error, warning } from '../../colors';
+import { 
+	grey, 
+	typography, 
+	error, 
+	warning 
+} from '../colors';
+
+export const UnreadNotification = withStyles({
+	root: {
+		fontSize: '18px',
+		fontWeight: 600,
+		lineHeight: '26px',
+	},
+})(Typography);
 
 export const ParagraphLarge = withStyles({
 	root: {

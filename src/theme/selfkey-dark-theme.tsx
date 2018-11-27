@@ -11,11 +11,12 @@ import {
   base,
   baseDark,
 } from '../colors';
-export * from '../typography/materialui/typography-materialui';
-export * from '../lists/lists-materialui';
-export * from '../forms/inputs';
-// export * from '../forms/checkboxes';
-export * from '../buttons/buttons';
+export * from '../materialui/typography';
+export * from '../materialui/lists';
+export * from '../materialui/inputs';
+export * from '../materialui/checkboxes';
+export * from '../materialui/buttons';
+export * from '../materialui/colorPresentation';
 
 const theme = createMuiTheme({
     palette: {
@@ -74,8 +75,6 @@ const theme = createMuiTheme({
           fontWeight: 600,
         },
       },
-      MuiList: {
-      },
       MuiListItem: {
         root: {
           marginBottom: '10px',
@@ -84,17 +83,17 @@ const theme = createMuiTheme({
         },
         selected: {
           backgroundColor: primary,
-        }
+        },
       },
       MuiListItemText: {
         root: {
           fontSize: '18px',
-        }
+        },
       },
       MuiSvgIcon: {
         root: {
           marginRight: '13px',
-        }
+        },
       },
       MuiCheckbox: {
         root: {
@@ -102,13 +101,16 @@ const theme = createMuiTheme({
         },
         checked: {
           color: 'green'
-        }
+        },
+        colorSecondary: {
+          main: primary,
+        },
       },
       MuiSelect: {
         root: {
           backgroundColor: baseDark,
           borderRadius: '4px',
-        }
+        },
       },
       MuiPaper: {
         root: {
@@ -132,11 +134,16 @@ const theme = createMuiTheme({
           minWidth: '200px',
         },
       },
+      MuiFormControlLabel: {
+        label: {
+          color: typography,
+        },
+      },
       MuiFormLabel: {
         root: {
           fontSize: '14px',
           lineHeight: '21px',
-        }
+        },
       },
       MuiButton: {
         root: {
@@ -159,6 +166,16 @@ const theme = createMuiTheme({
           padding: '0 10px',
         },
       },
+      MuiIconButton: {
+        root: {
+          padding: '7px 0 7px 10px',
+        },
+      },
+      // MuiGrid: {
+      //   root: {
+      //     flexGrow: 0,
+      //   },
+      // },
     },
 });
 

@@ -44,13 +44,17 @@ import {
 	Typography, 
 	ListItem, 
 	List, 
-	Grid, 
+	Grid,
+	FormControlLabel,
+	// Checkbox,
+	Radio, 
 	// FormControl, 
 	// InputLabel, 
 	// MenuItem,
 } from '@material-ui/core';
 import { 
 	SelfkeyDarkTheme,
+	UnreadNotification,
 	ParagraphLarge,
 	Paragraph,
 	Definition,
@@ -74,6 +78,18 @@ import {
 	FullButton,
 	OutlineButton,
 	OutlineSecondaryButton,
+	DefaultCheckbox,
+	PrimaryCard,
+	PrimaryTintCard,
+	TypographyCard,
+	GreyCard,
+	BaseLightCard,
+	BaseDarkCard,
+	BaseCard,
+	SuccessCard,
+	WarningCard,
+	ErrorCard,
+	WhiteCard,
 } from '../../src/theme/selfkey-dark-theme';
 
 setup();
@@ -343,8 +359,127 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 <SelfkeyDarkTheme>
 	<Card>
 		<CardContent>
-			{/* <Button color="primary" variant="contained">Primary</Button> <br/> <br/>
-			<Button color="secondary" variant="contained">Secondary</Button> <br/><br/> */}
+
+			<Typography variant="h5" color="error" gutterBottom>
+				Colors
+			</Typography>
+			<Grid container spacing={24}>
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Primary
+					</Typography>
+					<PrimaryCard>
+						<CardContent>
+						</CardContent>
+					</PrimaryCard>
+				</Grid>
+
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Primary Tint
+					</Typography>
+					<PrimaryTintCard>
+						<CardContent>
+						</CardContent>
+					</PrimaryTintCard>
+				</Grid>
+
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Typography
+					</Typography>
+					<TypographyCard>
+						<CardContent>
+						</CardContent>
+					</TypographyCard>
+				</Grid>
+
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						White
+					</Typography>
+					<WhiteCard>
+						<CardContent>
+						</CardContent>
+					</WhiteCard>
+				</Grid> 
+			</Grid>
+
+			<Grid container spacing={24}>
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Grey
+					</Typography>
+					<GreyCard>
+						<CardContent>
+						</CardContent>
+					</GreyCard>
+				</Grid>
+
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Base Light
+					</Typography>
+					<BaseLightCard>
+						<CardContent>
+						</CardContent>
+					</BaseLightCard>
+				</Grid>
+				
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Base Dark
+					</Typography>
+					<BaseDarkCard>
+						<CardContent>
+						</CardContent>
+					</BaseDarkCard>
+				</Grid>
+
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Base
+					</Typography>
+					<BaseCard>
+						<CardContent>
+						</CardContent>
+					</BaseCard>
+				</Grid>
+			</Grid>
+
+			<Grid container spacing={24} justify="flex-start">
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Success
+					</Typography>
+					<SuccessCard>
+						<CardContent>
+						</CardContent>
+					</SuccessCard>
+				</Grid>
+
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Warning
+					</Typography>
+					<WarningCard>
+						<CardContent>
+						</CardContent>
+					</WarningCard>
+				</Grid>
+
+				<Grid item >
+					<Typography color="textSecondary" gutterBottom>
+						Error
+					</Typography>
+					<ErrorCard>
+						<CardContent>
+						</CardContent>
+					</ErrorCard>
+				</Grid>
+			</Grid> <br/>
+
+
 			<Typography variant="h5" color="error" gutterBottom>
 				Typography
 			</Typography>
@@ -357,9 +492,9 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<Typography variant="h2" gutterBottom>
 				H2 - Heading 2
 			</Typography>
-			<Typography variant="h2" gutterBottom>
-				H2 - Notifications Unread (Bold)
-			</Typography>
+			<UnreadNotification gutterBottom>
+				H2 - Notifications Unread
+			</UnreadNotification>
 			<Typography variant="h3" gutterBottom>
 				H3 - Heading 3
 			</Typography> <br/>
@@ -560,15 +695,118 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<OutlineSecondaryButton size="small">Small</OutlineSecondaryButton>
 			<br/><br/>
 
-			{/* <Typography variant="h3" style={underlineStyle} gutterBottom>
-				Checkboxes
-			</Typography>
-			<FormControlLabel
-				control={
-					<DefaultCheckbox />
-				}
-				label="Primary"
-			/> */}
+
+
+			<Grid container spacing={8} justify="flex-start">
+				<Grid item xs={3}>
+					<Typography variant="h3" style={underlineStyle} gutterBottom>
+						Checkboxes
+					</Typography>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox icon />
+						}
+						label="Default"
+					/> <br/>
+					<FormControlLabel
+						checked
+						control={
+							<DefaultCheckbox icon />
+						}
+						label="Selected"
+					/> <br/>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox icon/>
+						}
+						label="Unselected, Error"
+					/> <br/>
+					<FormControlLabel
+						checked
+						color="primary"
+						control={
+							<DefaultCheckbox color="primary" />
+						}
+						label="Selected, Error"
+					/> <br/>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox indeterminate />
+						}
+						label="Bulk"
+					/> <br/>
+					<FormControlLabel
+						disabled
+						control={
+							<DefaultCheckbox />
+						}
+						label="Unselected, Disabled"
+					/> <br/>
+					<FormControlLabel
+						disabled
+						checked
+						control={
+							<DefaultCheckbox />
+						}
+						label="Selected, Disabled"
+					/> <br/>
+				</Grid>
+
+
+				<Grid item xs={3}>
+					<Typography variant="h3" style={underlineStyle} gutterBottom>
+						Radio buttons
+					</Typography>
+					<FormControlLabel
+						control={
+							<Radio icon />
+						}
+						label="Default"
+					/> <br/>
+					<FormControlLabel
+						checked
+						control={
+							<Radio icon />
+						}
+						label="Selected"
+					/> <br/>
+					<FormControlLabel
+						control={
+							<Radio icon/>
+						}
+						label="Unselected, Error"
+					/> <br/>
+					<FormControlLabel
+						checked
+						color="primary"
+						control={
+							<Radio color="primary" />
+						}
+						label="Selected, Error"
+					/> <br/>
+					<FormControlLabel
+						control={
+							<Radio />
+						}
+						label="Bulk"
+					/> <br/>
+					<FormControlLabel
+						disabled
+						control={
+							<Radio />
+						}
+						label="Unselected, Disabled"
+					/> <br/>
+					<FormControlLabel
+						disabled
+						checked
+						control={
+							<Radio />
+						}
+						label="Selected, Disabled"
+					/> <br/>
+				</Grid>
+			</Grid>
 
 		</CardContent>
 	</Card>
