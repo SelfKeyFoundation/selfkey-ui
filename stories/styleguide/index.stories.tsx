@@ -52,12 +52,13 @@ import {
 	MenuItem,
 	Select,
 	InputLabel,
-	Table,
+	// Table,
 	TableRow,
 	TableCell,
 	TableHead,
 	TableBody,
 	IconButton,
+	Table,
 	// Select,
 } from '@material-ui/core';
 import { 
@@ -99,8 +100,13 @@ import {
 	DropdownSelect,
 	DropdownInputField,
 	MuiEditIcon,
+	LargeTableHeadRow,
+	SmallTableHeadRow,
+	SmallTableCell,
+	SmallTableRow,
 } from '../../src/theme/selfkey-dark-theme';
 import DeleteIcon from '../../src/icons/delete';
+import SelfkeyLogo from '../../src/materialui/selfkeyLogo';
 
 setup();
 setAddon(JSXAddon);
@@ -736,16 +742,17 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Large Table
 			</Typography>
+
 			<Table>
 				<TableHead>
-					<TableRow>
+					<LargeTableHeadRow>
 						<TableCell><TableHeader>Name</TableHeader></TableCell>
 						<TableCell><TableHeader>Type</TableHeader></TableCell>
 						<TableCell><TableHeader>Role</TableHeader></TableCell>
 						<TableCell><TableHeader>Residency/Domicile</TableHeader></TableCell>
 						<TableCell><TableHeader>Shares</TableHeader></TableCell>
 						<TableCell><TableHeader>Actions</TableHeader></TableCell>
-					</TableRow>
+					</LargeTableHeadRow>
 				</TableHead>
 
 				<TableBody>
@@ -806,7 +813,108 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 						);
 					})}
 				</TableBody>
+			</Table><br/>
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Small Table
+			</Typography>
+			<div>
+			<Table>
+				<TableHead>
+					<SmallTableHeadRow>
+						<SmallTableCell><TableHeader>Type</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>Role</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>Name</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>E-Mail</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>Citizensip / Incorporation</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>Residency / Domicile</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>Shares</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>Selfkey User</TableHeader></SmallTableCell>
+						<SmallTableCell><TableHeader>Actions</TableHeader></SmallTableCell>
+					</SmallTableHeadRow>
+				</TableHead>
+
+				<TableBody>
+					{[
+						{
+							type: 'Person',
+							role: 'Director, Shareholder',
+							name: 'Giacomo Guilizzoni',
+							email: 'giacomo.guilizzoni@mail.com',
+							citizensip: 'Singapore',
+							residency: 'Singapore',
+							shares: '45%',
+							user: 'invite',
+							icons: 'icon, icon',
+						},
+						{
+							type: 'Corporate',
+							role: 'Shareholder',
+							name: 'Marco Botton Ltd',
+							email: 'giacomo.guilizzoni@mail.com',
+							citizensip: 'Hong Kong',
+							residency: 'Hong Kong',
+							shares: '9%',
+							user: 'logo',
+							icons: 'icon, icon',
+						},
+						{
+							type: 'Corporate',
+							role: 'Shareholder',
+							name: 'Big Things Limited',
+							email: 'giacomo.guilizzoni@mail.com',
+							citizensip: 'Hong Kong',
+							residency: 'Hong Kong',
+							shares: '53%',
+							user: 'resend',
+							icons: 'icon, icon',
+						},
+					].map(row => {
+						return (
+						<SmallTableRow key={row.name}>
+							<SmallTableCell>
+								<TableSmallText>{row.type}</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText>{row.role}</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText>{row.name}</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText>{row.email}</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText>{row.citizensip}</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText>{row.residency}</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText>{row.shares}</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText color="primary">
+									{ row.user === 'logo' ? <SelfkeyLogo/> : row.user}
+								</TableSmallText>
+							</SmallTableCell>
+							<SmallTableCell>
+								<TableSmallText>
+									<IconButton aria-label="Edit">
+										<MuiEditIcon/>
+									</IconButton>
+									<IconButton aria-label="Delete">
+										<DeleteIcon/>
+									</IconButton>
+								</TableSmallText>
+							</SmallTableCell>
+						</SmallTableRow>
+						);
+					})}
+				</TableBody>
 			</Table>
+
+			</div>
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));
