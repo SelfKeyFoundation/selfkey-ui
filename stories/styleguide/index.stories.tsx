@@ -45,8 +45,20 @@ import {
 	ListItem, 
 	List, 
 	Grid,
-	FormControlLabel,
-	Radio,
+	// FormControlLabel,
+	// Radio,
+	FormControl,
+	// InputLabel,
+	MenuItem,
+	Select,
+	InputLabel,
+	Table,
+	TableRow,
+	TableCell,
+	TableHead,
+	TableBody,
+	IconButton,
+	// Select,
 } from '@material-ui/core';
 import { 
 	SelfkeyDarkTheme,
@@ -72,7 +84,7 @@ import {
 	FullButton,
 	OutlineButton,
 	OutlineSecondaryButton,
-	DefaultCheckbox,
+	// DefaultCheckbox,
 	PrimaryCard,
 	PrimaryTintCard,
 	TypographyCard,
@@ -84,7 +96,11 @@ import {
 	WarningCard,
 	ErrorCard,
 	WhiteCard,
+	DropdownSelect,
+	DropdownInputField,
+	MuiEditIcon,
 } from '../../src/theme/selfkey-dark-theme';
+import DeleteIcon from '../../src/icons/delete';
 
 setup();
 import { UnlockBox } from '../../src/marketplace/unlock-box'
@@ -653,6 +669,61 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			</Grid> <br/>
 
 
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Dropdown
+			</Typography>
+			<TableHeader gutterBottom>
+				Normal/Selection
+			</TableHeader>
+			<FormControl variant="filled">
+				<InputLabel 
+					htmlFor="filled-age-simple"
+				>
+					Choose...
+				</InputLabel>
+				<DropdownSelect
+					input={
+						<DropdownInputField
+							id="filled-age-simple"
+							disableUnderline={ true }
+							/>
+						}
+				>
+					<MenuItem value="">
+						<em>Choose\\...</em>
+					</MenuItem>
+					{['Andorra', 'Malta', 'Russia', 'Spain', 'Uruguay'].map(item => (
+						<MenuItem 
+							key={item}
+							value={item}
+						>
+							{item}
+						</MenuItem>
+					))}
+				</DropdownSelect>
+			</FormControl>
+			<br/><br/>
+
+			<FormControl >
+				<Select
+					value=""
+					displayEmpty
+					disableUnderline={ true }
+					name="number"
+				>
+					<MenuItem value="">Test text</MenuItem>
+					{['Andorra', 'Malta', 'Russia', 'Spain', 'Spain2', 'Andorra', 'Malta', 'Russia', 'Spain', 'Spain2'].map(item => (
+						<MenuItem 
+							key={item}
+							value={item}
+						>
+							{item}
+						</MenuItem>
+					))}
+				</Select>
+			</FormControl>
+			<br/><br/>
+
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Buttons
@@ -688,121 +759,87 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			</OutlineSecondaryButton> 
 			<OutlineSecondaryButton>Medium</OutlineSecondaryButton> 
 			<OutlineSecondaryButton size="small">Small</OutlineSecondaryButton>
-			<br/><br/>
+			<br/><br/><br/>
 
 
 
-			<Grid container spacing={8} justify="flex-start">
-				<Grid item xs={3}>
-					<Typography variant="h3" style={underlineStyle} gutterBottom>
-						Checkboxes
-					</Typography>
-					<FormControlLabel
-						control={
-							<DefaultCheckbox icon />
-						}
-						label="Default"
-					/> <br/>
-					<FormControlLabel
-						checked
-						control={
-							<DefaultCheckbox icon />
-						}
-						label="Selected"
-					/> <br/>
-					<FormControlLabel
-						control={
-							<DefaultCheckbox icon/>
-						}
-						label="Unselected, Error"
-					/> <br/>
-					<FormControlLabel
-						checked
-						color="primary"
-						control={
-							<DefaultCheckbox color="primary" />
-						}
-						label="Selected, Error"
-					/> <br/>
-					<FormControlLabel
-						control={
-							<DefaultCheckbox indeterminate />
-						}
-						label="Bulk"
-					/> <br/>
-					<FormControlLabel
-						disabled
-						control={
-							<DefaultCheckbox />
-						}
-						label="Unselected, Disabled"
-					/> <br/>
-					<FormControlLabel
-						disabled
-						checked
-						control={
-							<DefaultCheckbox />
-						}
-						label="Selected, Disabled"
-					/> <br/>
-				</Grid>
+			<Typography variant="h5" color="error" gutterBottom>
+				Tables
+			</Typography>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Large Table
+			</Typography>
+			<Table>
+				<TableHead>
+					<TableRow>
+						<TableCell><TableHeader>Name</TableHeader></TableCell>
+						<TableCell><TableHeader>Type</TableHeader></TableCell>
+						<TableCell><TableHeader>Role</TableHeader></TableCell>
+						<TableCell><TableHeader>Residency/Domicile</TableHeader></TableCell>
+						<TableCell><TableHeader>Shares</TableHeader></TableCell>
+						<TableCell><TableHeader>Actions</TableHeader></TableCell>
+					</TableRow>
+				</TableHead>
 
-
-				<Grid item xs={3}>
-					<Typography variant="h3" style={underlineStyle} gutterBottom>
-						Radio buttons
-					</Typography>
-					<FormControlLabel
-						control={
-							<Radio icon />
-						}
-						label="Default"
-					/> <br/>
-					<FormControlLabel
-						checked
-						control={
-							<Radio icon />
-						}
-						label="Selected"
-					/> <br/>
-					<FormControlLabel
-						control={
-							<Radio icon/>
-						}
-						label="Unselected, Error"
-					/> <br/>
-					<FormControlLabel
-						checked
-						color="primary"
-						control={
-							<Radio color="primary" />
-						}
-						label="Selected, Error"
-					/> <br/>
-					<FormControlLabel
-						control={
-							<Radio />
-						}
-						label="Bulk"
-					/> <br/>
-					<FormControlLabel
-						disabled
-						control={
-							<Radio />
-						}
-						label="Unselected, Disabled"
-					/> <br/>
-					<FormControlLabel
-						disabled
-						checked
-						control={
-							<Radio />
-						}
-						label="Selected, Disabled"
-					/> <br/>
-				</Grid>
-			</Grid>
-
+				<TableBody>
+					{[
+						{
+							name: 'Giacomo Guilizzoni',
+							type: 'Person',
+							role: 'Director, Shareholder',
+							residency: 'Singapore',
+							shares: '45%',
+							icons: 'icon, icon',
+						},
+						{
+							name: 'Marco Botton Ltd',
+							type: 'Corporate',
+							role: 'Shareholder',
+							residency: 'Hong Kong',
+							shares: '9%',
+							icons: 'icon, icon',
+						},
+						{
+							name: 'Big Things Limited',
+							type: 'Corporate',
+							role: 'Shareholder',
+							residency: 'Hong Kong',
+							shares: '53%',
+							icons: 'icon, icon',
+						},
+					].map(row => {
+						return (
+						<TableRow key={row.name}>
+							<TableCell>
+								<TableText>{row.name}</TableText>
+							</TableCell>
+							<TableCell>
+								<TableText>{row.type}</TableText>
+							</TableCell>
+							<TableCell>
+								<TableText>{row.role}</TableText>
+							</TableCell>
+							<TableCell>
+								<TableText>{row.residency}</TableText>
+							</TableCell>
+							<TableCell>
+								<TableText>{row.shares}</TableText>
+							</TableCell>
+							<TableCell>
+								<TableText>
+									<IconButton aria-label="Edit">
+										<MuiEditIcon/>
+									</IconButton>
+									<IconButton aria-label="Delete">
+										<DeleteIcon />
+									</IconButton>
+								</TableText>
+							</TableCell>
+						</TableRow>
+						);
+					})}
+				</TableBody>
+			</Table>
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));

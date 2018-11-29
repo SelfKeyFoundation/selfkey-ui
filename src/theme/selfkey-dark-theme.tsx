@@ -17,6 +17,7 @@ export * from '../materialui/inputs';
 export * from '../materialui/checkboxes';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
+export { MuiEditIcon } from '../icons/muiedit';
 
 const theme = createMuiTheme({
     palette: {
@@ -75,6 +76,18 @@ const theme = createMuiTheme({
           fontWeight: 600,
         },
       },
+      MuiList: {
+        // root: {
+        //   paddingRight: 0,
+        // },
+        padding: {
+          boxSizing: 'border-box',
+          paddingBottom: '4px',
+          paddingLeft: '8px',
+          paddingRight: '8px',
+          paddingTop: '5px',
+        },
+      },
       MuiListItem: {
         root: {
           marginBottom: '10px',
@@ -84,14 +97,33 @@ const theme = createMuiTheme({
         selected: {
           backgroundColor: primary,
         },
+        button: {
+          margin: '0',
+          "&:hover": {
+            backgroundColor: grey,
+          },
+        },
       },
       MuiListItemText: {
         root: {
           fontSize: '18px',
         },
       },
+      MuiInput: {
+        formControl: {
+          marginTop: 0,
+          label: {
+            marginTop: '16px',
+          },
+        },
+      },
+      MuiInputLabel: {
+        filled: {
+        },
+      },
       MuiSvgIcon: {
         root: {
+          color: grey,
           marginRight: '13px',
         },
       },
@@ -111,6 +143,17 @@ const theme = createMuiTheme({
           backgroundColor: baseDark,
           borderRadius: '4px',
         },
+        selectMenu: {
+          color: typography,
+          fontSize: '14px',
+          lineHeight: '21px',
+        },
+      },
+      MuiMenu: {
+        paper: {
+          maxHeight: '131px',
+          overflow: 'scroll',
+        },
       },
       MuiPaper: {
         root: {
@@ -125,6 +168,7 @@ const theme = createMuiTheme({
       },
       MuiMenuItem: {
         root: {
+          borderRadius: '4px',
           fontSize: '14px',
           lineHeight: '21px',
         },
@@ -141,9 +185,13 @@ const theme = createMuiTheme({
       },
       MuiFormLabel: {
         root: {
+          display: 'block',
           fontSize: '14px',
           lineHeight: '21px',
         },
+        focused: {
+          display: 'none',
+        }
       },
       MuiButton: {
         root: {
@@ -169,6 +217,30 @@ const theme = createMuiTheme({
       MuiIconButton: {
         root: {
           padding: '7px 0 7px 10px',
+        },
+      },
+      MuiTableRow: {
+        root: {
+          '&:nth-of-type(odd)': {
+            backgroundColor: '#2E3945',
+          },
+        },
+        head: {
+          height: '50px',
+        },
+      },
+      MuiTableCell: {
+        root: {
+          borderBottom: 0,
+          padding: '0 30px',
+        },
+        head: {
+          backgroundColor: baseDark,
+          borderBottom: 0,
+          height: '50px',
+        },
+        body: {
+          height: '74px',
         },
       },
     },
