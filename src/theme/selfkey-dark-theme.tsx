@@ -17,6 +17,8 @@ export * from '../materialui/inputs';
 export * from '../materialui/checkboxes';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
+export * from '../materialui/tables';
+export * from '../materialui/selfkeyLogo';
 export { MuiEditIcon } from '../icons/muiedit';
 
 const theme = createMuiTheme({
@@ -233,6 +235,9 @@ const theme = createMuiTheme({
         root: {
           borderBottom: 0,
           padding: '0 30px',
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
         },
         head: {
           backgroundColor: baseDark,
