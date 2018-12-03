@@ -18,7 +18,10 @@ export * from '../materialui/checkboxes';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/tables';
-export * from '../materialui/selfkeyLogo';
+export * from '../icons/selfkeyLogo';
+export * from '../icons/corporate';
+export * from '../icons/person';
+
 export { MuiEditIcon } from '../icons/muiedit';
 
 const theme = createMuiTheme({
@@ -227,9 +230,6 @@ const theme = createMuiTheme({
             backgroundColor: '#2E3945',
           },
         },
-        head: {
-          height: '50px',
-        },
       },
       MuiTableCell: {
         root: {
@@ -242,10 +242,13 @@ const theme = createMuiTheme({
         head: {
           backgroundColor: baseDark,
           borderBottom: 0,
-          height: '50px',
         },
         body: {
           height: '74px',
+        },
+        footer: {
+          // backgroundColor: warning,
+          color: warning,
         },
       },
     },

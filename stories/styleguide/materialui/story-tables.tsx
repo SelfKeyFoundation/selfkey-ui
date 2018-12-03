@@ -17,9 +17,12 @@ import {
 	SmallTableHeadRow,
 	SmallTableCell,
 	SmallTableRow,
+    TableSmallTextDisabled,
 } from '../../../src/theme/selfkey-dark-theme';
 import DeleteIcon from '../../../src/icons/delete';
-import SelfkeyLogo from '../../../src/materialui/selfkeyLogo';
+import PersonIcon from '../../../src/icons/person';
+import CorporateIcon from '../../../src/icons/corporate';
+import SelfkeyLogo from '../../../src/icons/selfkeyLogo';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -156,50 +159,131 @@ export default function TableStories () {
                             user: 'resend',
                             icons: 'icon, icon',
                         },
+                        {
+                            type: 'Corporate',
+                            role: 'Shareholder',
+                            name: 'Big Things Limited',
+                            email: 'giacomo.guilizzoni@mail.com',
+                            citizensip: 'Hong Kong',
+                            residency: 'Hong Kong',
+                            shares: '53%',
+                            user: 'resend',
+                            icons: 'icon, icon',
+                        },
                     ].map(row => {
                         return (
-                        <SmallTableRow key={row.name}>
-                            <SmallTableCell>
-                                <TableSmallText>{row.type}</TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText>{row.role}</TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText>{row.name}</TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText>{row.email}</TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText>{row.citizensip}</TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText>{row.residency}</TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText>{row.shares}</TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText color="primary">
-                                    { row.user === 'logo' ? <SelfkeyLogo/> : row.user}
-                                </TableSmallText>
-                            </SmallTableCell>
-                            <SmallTableCell>
-                                <TableSmallText>
+                                <SmallTableRow key={row.name}>
+                                    <SmallTableCell>
+                                        <TableSmallText>{row.type}</TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText>{row.role}</TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText>{row.name}</TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText>{row.email}</TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText>{row.citizensip}</TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText>{row.residency}</TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText>{row.shares}</TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText color="primary">
+                                            { row.user === 'logo' ? <SelfkeyLogo/> : row.user}
+                                        </TableSmallText>
+                                    </SmallTableCell>
+                                    <SmallTableCell>
+                                        <TableSmallText>
+                                            <IconButton aria-label="Edit">
+                                                <MuiEditIcon/>
+                                            </IconButton>
+                                            <IconButton aria-label="Delete">
+                                                <DeleteIcon/>
+                                            </IconButton>
+                                        </TableSmallText>
+                                    </SmallTableCell>
+                                </SmallTableRow>
+                        );
+                    })}
+                </TableBody>
+            </Table><br/>
+
+            <Typography variant="h3" style={underlineStyle} gutterBottom>
+                Multi-Line Table
+            </Typography>
+            <Table>
+                <TableHead>
+                    <LargeTableHeadRow>
+                        <TableCell><TableHeader></TableHeader></TableCell>
+                        <TableCell><TableHeader>Name</TableHeader></TableCell>
+                        <TableCell><TableHeader>Type</TableHeader></TableCell>
+                        <TableCell><TableHeader>Shares</TableHeader></TableCell>
+                        <TableCell><TableHeader>Actions</TableHeader></TableCell>
+                    </LargeTableHeadRow>
+                </TableHead>
+
+                <TableBody>
+                    {[
+                        {
+                            name: 'Giacomo Guilizzoni',
+                            role: 'Director',
+                            type: 'Person',
+                            shares: '45%',
+                            icons: 'icon, icon',
+                        },
+                        {
+                            name: 'Marco Botton Ltd',
+                            role: 'Shareholder',
+                            type: 'Corporate',
+                            shares: '9%',
+                            icons: 'icon, icon',
+                        },
+                        {
+                            name: 'Big Things Limited',
+                            role: 'Shareholder',
+                            type: 'Corporate',
+                            shares: '53%',
+                            icons: 'icon, icon',
+                        },
+                    ].map(row => {
+                        return (
+                        <TableRow key={row.name}>
+                            <TableCell>
+                                { row.type === 'Person' ? <PersonIcon/> : <CorporateIcon/> }
+                            </TableCell>
+                            <TableCell>
+                                <TableText>{row.name}</TableText>
+                                <TableSmallTextDisabled>{row.role}</TableSmallTextDisabled>
+                            </TableCell>
+                            <TableCell>
+                                <TableText>{row.type}</TableText>
+                            </TableCell>
+                            <TableCell>
+                                <TableText>{row.shares}</TableText>
+                            </TableCell>
+                            <TableCell>
+                                <TableText>
                                     <IconButton aria-label="Edit">
                                         <MuiEditIcon/>
                                     </IconButton>
                                     <IconButton aria-label="Delete">
-                                        <DeleteIcon/>
+                                        <DeleteIcon />
                                     </IconButton>
-                                </TableSmallText>
-                            </SmallTableCell>
-                        </SmallTableRow>
+                                </TableText>
+                            </TableCell>
+                        </TableRow>
                         );
                     })}
                 </TableBody>
-            </Table>
+            </Table><br/>
+
         </div>
     )
 }
