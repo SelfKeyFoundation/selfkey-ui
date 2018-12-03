@@ -147,6 +147,7 @@ export default function TableStories () {
                             shares: '9%',
                             user: 'logo',
                             icons: 'icon, icon',
+                            disabled: true,
                         },
                         {
                             type: 'Corporate',
@@ -169,47 +170,80 @@ export default function TableStories () {
                             shares: '53%',
                             user: 'resend',
                             icons: 'icon, icon',
+                            disabled: true,
                         },
                     ].map(row => {
                         return (
-                                <SmallTableRow key={row.name}>
-                                    <SmallTableCell>
-                                        <TableSmallText>{row.type}</TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText>{row.role}</TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText>{row.name}</TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText>{row.email}</TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText>{row.citizensip}</TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText>{row.residency}</TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText>{row.shares}</TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText color="primary">
-                                            { row.user === 'logo' ? <SelfkeyLogo/> : row.user}
-                                        </TableSmallText>
-                                    </SmallTableCell>
-                                    <SmallTableCell>
-                                        <TableSmallText>
-                                            <IconButton aria-label="Edit">
-                                                <MuiEditIcon/>
-                                            </IconButton>
-                                            <IconButton aria-label="Delete">
-                                                <DeleteIcon/>
-                                            </IconButton>
-                                        </TableSmallText>
-                                    </SmallTableCell>
-                                </SmallTableRow>
+                            <SmallTableRow key={row.name}>
+                                <SmallTableCell>
+                                    { row.disabled 
+                                        ? <TableSmallTextDisabled>{row.type}</TableSmallTextDisabled> 
+                                        : <TableSmallText>{row.type}</TableSmallText>
+                                    }
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    { row.disabled 
+                                        ? <TableSmallTextDisabled>{row.role}</TableSmallTextDisabled> 
+                                        : <TableSmallText>{row.role}</TableSmallText>
+                                    }
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    { row.disabled 
+                                        ? <TableSmallTextDisabled>{row.name}</TableSmallTextDisabled> 
+                                        : <TableSmallText>{row.name}</TableSmallText>
+                                    }
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    { row.disabled 
+                                        ? <TableSmallTextDisabled>{row.email}</TableSmallTextDisabled> 
+                                        : <TableSmallText>{row.email}</TableSmallText>
+                                    }
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    { row.disabled 
+                                        ? <TableSmallTextDisabled>{row.citizensip}</TableSmallTextDisabled> 
+                                        : <TableSmallText>{row.citizensip}</TableSmallText>
+                                    }
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    { row.disabled 
+                                        ? <TableSmallTextDisabled>{row.residency}</TableSmallTextDisabled> 
+                                        : <TableSmallText>{row.residency}</TableSmallText>
+                                    }
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    { row.disabled 
+                                        ? <TableSmallTextDisabled>{row.shares}</TableSmallTextDisabled> 
+                                        : <TableSmallText>{row.shares}</TableSmallText>
+                                    }
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    <TableSmallText color="primary">
+                                        { row.user === 'logo' ? <SelfkeyLogo/> : row.user}
+                                    </TableSmallText>
+                                </SmallTableCell>
+                                <SmallTableCell>
+                                    <TableSmallText>
+                                        { row.disabled 
+                                            ?  <IconButton aria-label="Edit" disabled>
+                                                    <MuiEditIcon/>
+                                                </IconButton>    
+                                            :  <IconButton aria-label="Edit"> 
+                                                    <MuiEditIcon/>
+                                                </IconButton>    
+                                        }
+
+                                        { row.disabled 
+                                            ?  <IconButton aria-label="Delete" disabled>
+                                                    <DeleteIcon/>
+                                                </IconButton>
+                                            :  <IconButton aria-label="Delete">
+                                                    <DeleteIcon/>
+                                                </IconButton>
+                                        }
+                                    </TableSmallText>
+                                </SmallTableCell>
+                            </SmallTableRow>
                         );
                     })}
                 </TableBody>
