@@ -1,4 +1,5 @@
 import { withStyles, TableRow, TableCell } from '@material-ui/core';
+import { warning } from 'colors';
 
 export const LargeTableHeadRow = withStyles({
   root: {
@@ -23,5 +24,9 @@ export const SmallTableCell = withStyles({
     height: '40px',
     // maxWidth: '150px',
     padding: '0 15px',
+  },
+  footer: {
+    backgroundColor: warning,
+    color: warning,
   },
 })(TableCell);
