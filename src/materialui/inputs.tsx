@@ -13,6 +13,7 @@ export const InputField = withStyles({
         border: '1px solid #384656',
         color: typography,
         fontSize: '14px',
+        height: '44px',
         lineHeight: '21px',
         paddingLeft: '16px',
     },
@@ -45,14 +46,13 @@ export const DropdownInputField = withStyles({
         backgroundColor: baseDark,
         borderRadius: '4px',
         border: '1px solid #384656',
-        boxSizing: 'border-box',
         color: typography,
         fontSize: '14px',
         lineHeight: '21px',
         // paddingLeft: '16px',
     },
     focused: {
-    }
+    },
 })(InputField);
 
 export const DropdownSelect = withStyles({

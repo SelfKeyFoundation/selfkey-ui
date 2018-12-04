@@ -130,6 +130,7 @@ const theme = createMuiTheme({
       },
       MuiInputLabel: {
         filled: {
+          marginTop: '5px',
         },
       },
       MuiInputAdornment: {
