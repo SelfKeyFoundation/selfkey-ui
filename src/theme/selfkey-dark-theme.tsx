@@ -82,9 +82,9 @@ const theme = createMuiTheme({
         },
       },
       MuiList: {
-        // root: {
-        //   paddingRight: 0,
-        // },
+        root: {
+          paddingRight: '8px!important',
+        },
         padding: {
           boxSizing: 'border-box',
           paddingBottom: '4px',
@@ -121,6 +121,12 @@ const theme = createMuiTheme({
             marginTop: '16px',
           },
         },
+      },
+      MuiInputBase: {
+        inputType: {
+          height: '22px',
+          textTransform: 'uppercase',
+        }
       },
       MuiInputLabel: {
         filled: {

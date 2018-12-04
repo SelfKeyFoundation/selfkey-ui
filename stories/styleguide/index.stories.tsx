@@ -46,7 +46,6 @@ import {
 import { SelfkeyDarkTheme,} from '../../src/theme/selfkey-dark-theme';
 import TableStories from './materialui/story-tables';
 import ButtonStories from './materialui/story-buttons';
-import DropdownStories from './materialui/story-dropdown';
 import InputStories from './materialui/story-input';
 import ListStories from './materialui/story-lists';
 import TypographyStories from './materialui/story-typography';
@@ -297,7 +296,6 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 				Forms
 			</Typography>
 			<InputStories />
-			<DropdownStories />
 			<ButtonStories />
 
 			<Typography variant="h5" color="error" gutterBottom>
