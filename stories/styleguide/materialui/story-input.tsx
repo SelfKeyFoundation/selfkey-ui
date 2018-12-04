@@ -13,7 +13,8 @@ import {
     ErrorMessage,
 	DropdownSelect,
 	DropdownInputField,
-	DecimalInput, 
+	DecimalInput,
+	UnreadNotification, 
 } from '../../../src/theme/selfkey-dark-theme';
 
 const underlineStyle = {
@@ -87,10 +88,10 @@ export default function InputStories () {
 
 
 
+
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Specific
 			</Typography>
-
 			<Grid container spacing={24}>
 				<Grid item>
 					<TableHeader gutterBottom>
@@ -101,7 +102,11 @@ export default function InputStories () {
 						disableUnderline={ true }
 						placeholder="0"
 						type="number"
-						endAdornment={<InputAdornment position="end">%</InputAdornment>}
+						endAdornment={
+							<InputAdornment position="end">
+								<UnreadNotification color="primary">%</UnreadNotification>
+							</InputAdornment>
+						}
 					/>
 				</Grid>
 
