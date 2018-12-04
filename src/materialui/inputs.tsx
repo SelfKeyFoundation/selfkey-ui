@@ -34,6 +34,12 @@ export const InputField = withStyles({
     },
 })(Input);
 
+export const DecimalInput = withStyles({
+    inputType: {
+        textAlign: 'right',
+    },
+})(InputField);
+
 export const DropdownInputField = withStyles({
 	root: {
         backgroundColor: baseDark,
@@ -47,7 +53,7 @@ export const DropdownInputField = withStyles({
     },
     focused: {
     }
-})(Input);
+})(InputField);
 
 export const DropdownSelect = withStyles({
 	root: {

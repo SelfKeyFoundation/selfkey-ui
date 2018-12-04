@@ -5,13 +5,15 @@ import {
 	FormControl,
 	InputLabel,
 	MenuItem,
+	InputAdornment,
 } from '@material-ui/core';
 import { 
     TableHeader, 
     InputField, 
     ErrorMessage,
 	DropdownSelect,
-	DropdownInputField, 
+	DropdownInputField,
+	DecimalInput, 
 } from '../../../src/theme/selfkey-dark-theme';
 
 const underlineStyle = {
@@ -94,13 +96,13 @@ export default function InputStories () {
 					<TableHeader gutterBottom>
 						Decimal
 					</TableHeader>
-					
-					<InputField
+
+					<DecimalInput 
 						disableUnderline={ true }
 						placeholder="0"
 						type="number"
+						endAdornment={<InputAdornment position="end">%</InputAdornment>}
 					/>
-					<br/><br/>
 				</Grid>
 
 				<Grid item>
