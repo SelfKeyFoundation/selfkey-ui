@@ -21,6 +21,7 @@ export * from '../materialui/tables';
 export * from '../icons/selfkeyLogo';
 export * from '../icons/corporate';
 export * from '../icons/person';
+export * from '../icons/info';
 
 export { MuiEditIcon } from '../icons/muiedit';
 
@@ -142,7 +143,12 @@ const theme = createMuiTheme({
       MuiSvgIcon: {
         root: {
           color: grey,
-          marginRight: '13px',
+          '&:hover': {
+            color: primary,
+          },
+          '&:focus': {
+            color: primary,
+          },
         },
       },
       MuiCheckbox: {
@@ -262,6 +268,19 @@ const theme = createMuiTheme({
         footer: {
           // backgroundColor: warning,
           color: warning,
+        },
+      },
+      MuiTooltip: {
+        tooltip: {
+          backgroundColor: '#1F2830',
+          border: '1px solid #43505B',
+          borderRadius: '3px',
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
+          '&:focus': {
+            backgroundColor: 'transparent',
+          },
         },
       },
     },

@@ -3,21 +3,25 @@ import { SvgIcon } from '@material-ui/core';
 
 const defaultBulletStyle = {
     height: '8px',
+    marginRight: '13px',
     width: '8px',
 };
 
 const greenTickStyle = {
     height: '16px',
+    marginRight: '13px',
     width: '16px',
 };
 
 const checkedStyle = {
     height: '28px',
+    marginRight: '13px',
     width: '30px',
 };
 
 const checkedStyle2 = {
     height: '44px',
+    marginRight: '13px',
     width: '30px',
 };
 
