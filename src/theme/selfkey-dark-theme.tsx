@@ -132,6 +132,12 @@ const theme = createMuiTheme({
         filled: {
         },
       },
+      MuiInputAdornment: {
+        positionEnd: {
+          marginLeft: '151px',
+          position: 'absolute',
+        }
+      },
       MuiSvgIcon: {
         root: {
           color: grey,
