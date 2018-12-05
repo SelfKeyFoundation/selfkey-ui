@@ -143,10 +143,13 @@ const theme = createMuiTheme({
       MuiSvgIcon: {
         root: {
           color: grey,
-          '&:hover': {
+          // '&:hover': {
+          //   color: primary,
+          // },
+          '&:focus': {
             color: primary,
           },
-          '&:focus': {
+          '&:checked': {
             color: primary,
           },
         },
@@ -156,6 +159,7 @@ const theme = createMuiTheme({
           color: grey,
         },
         checked: {
+          backgroundColor: primary,
           color: 'green'
         },
         colorSecondary: {
@@ -266,7 +270,6 @@ const theme = createMuiTheme({
           height: '74px',
         },
         footer: {
-          // backgroundColor: warning,
           color: warning,
         },
       },
@@ -280,6 +283,26 @@ const theme = createMuiTheme({
           },
           '&:focus': {
             backgroundColor: 'transparent',
+          },
+        },
+      },
+      MuiTabs: {
+        root: {
+          // borderBottom: `1px solid ${grey}`,
+        },
+        indicator: {
+          backgroundColor: primary,
+          height: '4px',
+        },
+      },
+      MuiTab: {
+        root: {
+          borderBottom: `1px solid ${grey}`,
+          textTransform: 'initial',
+          '&:hover': {
+            borderBottom: `4px solid ${grey}`,
+            boxSizing: 'border-box',
+            color: white,
           },
         },
       },
