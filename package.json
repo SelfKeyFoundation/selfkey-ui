@@ -31,6 +31,7 @@
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
+    "@material-ui/lab": "^3.0.0-alpha.24",
     "@types/google.visualization": "^0.0.42",
     "@types/react-dom": "^16.0.6",
     "jss": "^9.8.7",
