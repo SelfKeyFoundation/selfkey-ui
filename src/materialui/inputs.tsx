@@ -79,11 +79,11 @@ export const ToggleBtn = withStyles({
         textTransform: 'initial',
         '&:hover': {
             background: '#313D49',
-            border: '2px solid #23E6FE',
+            border: '1px solid #23E6FE',
         },
         '&:focus': {
             background: '#1E262E',
-            border: '2px solid #1CA9BA',
+            border: '1px solid #1CA9BA',
         },
     },
 })(ToggleButton);
