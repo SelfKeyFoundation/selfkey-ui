@@ -41,7 +41,7 @@ import { ModalBox } from '../../src/common/modal-box';
 import { 
 	Card, 
 	CardContent, 
-	Typography, 
+	Typography,
 } from '@material-ui/core';
 import { SelfkeyDarkTheme,} from '../../src/theme/selfkey-dark-theme';
 import TableStories from './materialui/story-tables';
@@ -50,6 +50,7 @@ import InputStories from './materialui/story-input';
 import ListStories from './materialui/story-lists';
 import TypographyStories from './materialui/story-typography';
 import ColorStories from './materialui/story-colors';
+import TabStories from './materialui/story-tabs';
 
 setup();
 setAddon(JSXAddon);
@@ -302,6 +303,11 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
                 Tables
             </Typography>
 			<TableStories />
+
+			<Typography variant="h5" color="error" gutterBottom>
+                UI Elements
+            </Typography>
+			<TabStories />
 			
 		</CardContent>
 	</Card>
