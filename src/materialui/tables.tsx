@@ -30,3 +30,14 @@ export const SmallTableCell = withStyles({
     color: warning,
   },
 })(TableCell);
+
+export const TagTableCell = withStyles({
+  root: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    maxWidth: '350px',
+  },
+})(TableCell);

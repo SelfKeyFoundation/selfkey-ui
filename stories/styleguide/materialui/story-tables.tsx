@@ -18,6 +18,8 @@ import {
 	SmallTableCell,
 	SmallTableRow,
     TableSmallTextDisabled,
+    Tag,
+    TagTableCell,
 } from '../../../src/theme/selfkey-dark-theme';
 import DeleteIcon from '../../../src/icons/delete';
 import PersonIcon from '../../../src/icons/person';
@@ -258,6 +260,7 @@ export default function TableStories () {
                         <TableCell><TableHeader></TableHeader></TableCell>
                         <TableCell><TableHeader>Name</TableHeader></TableCell>
                         <TableCell><TableHeader>Type</TableHeader></TableCell>
+                        <TableCell><TableHeader>Good for</TableHeader></TableCell>
                         <TableCell><TableHeader>Shares</TableHeader></TableCell>
                         <TableCell><TableHeader>Actions</TableHeader></TableCell>
                     </LargeTableHeadRow>
@@ -269,6 +272,7 @@ export default function TableStories () {
                             name: 'Giacomo Guilizzoni',
                             role: 'Director',
                             type: 'Person',
+                            tags: ['Territorial Tax', 'China Market Entry', 'ASEAN Market Entry', 'Structuring', 'Holding Company', 'Banking'],
                             shares: '45%',
                             icons: 'icon, icon',
                         },
@@ -276,6 +280,7 @@ export default function TableStories () {
                             name: 'Marco Botton Ltd',
                             role: 'Shareholder',
                             type: 'Corporate',
+                            tags: ['TerritorialTax', 'ChinaMarketEntry', 'ASEANMarket', 'Structuring', 'HoldingCompany', 'Banking'],
                             shares: '9%',
                             icons: 'icon, icon',
                         },
@@ -283,6 +288,7 @@ export default function TableStories () {
                             name: 'Big Things Limited',
                             role: 'Shareholder',
                             type: 'Corporate',
+                            tags: ['7th tag', '8th tag', '9th tag'],
                             shares: '53%',
                             icons: 'icon, icon',
                         },
@@ -299,6 +305,15 @@ export default function TableStories () {
                             <TableCell>
                                 <TableText>{row.type}</TableText>
                             </TableCell>
+                            <TagTableCell>
+                                {
+                                    row.tags.map(tag => {
+                                        return (
+                                            <Tag key={tag}>{tag}</Tag>
+                                        )
+                                    })
+                                }
+                            </TagTableCell>
                             <TableCell>
                                 <TableText>{row.shares}</TableText>
                             </TableCell>
@@ -316,7 +331,7 @@ export default function TableStories () {
                         );
                     })}
                 </TableBody>
-            </Table><br/>
+            </Table><br/><br/>
 
         </div>
     )
