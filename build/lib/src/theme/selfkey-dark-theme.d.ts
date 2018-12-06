@@ -10,6 +10,7 @@ export * from '../icons/selfkeyLogo';
 export * from '../icons/corporate';
 export * from '../icons/person';
 export * from '../icons/info';
+export * from '../icons/incorporations';
 export { MuiEditIcon } from '../icons/muiedit';
 export declare const SelfkeyDarkTheme: React.SFC<{}>;
 export default SelfkeyDarkTheme;

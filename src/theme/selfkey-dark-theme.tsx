@@ -22,6 +22,7 @@ export * from '../icons/selfkeyLogo';
 export * from '../icons/corporate';
 export * from '../icons/person';
 export * from '../icons/info';
+export * from '../icons/incorporations';
 
 export { MuiEditIcon } from '../icons/muiedit';
 
@@ -288,7 +289,7 @@ const theme = createMuiTheme({
       },
       MuiTabs: {
         root: {
-          // borderBottom: `1px solid ${grey}`,
+          borderBottom: `1px solid ${grey}`,
         },
         indicator: {
           backgroundColor: primary,
@@ -297,7 +298,6 @@ const theme = createMuiTheme({
       },
       MuiTab: {
         root: {
-          borderBottom: `1px solid ${grey}`,
           textTransform: 'initial',
           '&:hover': {
             borderBottom: `4px solid ${grey}`,

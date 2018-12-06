@@ -341,7 +341,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
                 UI Elements
             </Typography>
 			<TabStories />
-			
+			<br/>
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));
