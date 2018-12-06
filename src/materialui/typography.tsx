@@ -3,7 +3,8 @@ import {
 	grey, 
 	typography, 
 	error, 
-	warning 
+	warning, 
+	baseDark
 } from '../colors';
 
 export const UnreadNotification = withStyles({
@@ -66,7 +67,8 @@ export const TableHeader = withStyles({
 		fontSize: '12px',
 		fontWeight: 600,
 		lineHeight: '15px',
-	  	textTransform: 'uppercase',
+		textTransform: 'uppercase',
+		whiteSpace: 'normal',
 	},
 })(Typography);
 
@@ -123,5 +125,18 @@ export const WarningMessage = withStyles({
 		color: warning,
 		fontSize: '16px',
 		lineHeight: '24px',
+	},
+})(Typography);
+
+export const Tag = withStyles({
+	root: {
+		backgroundColor: baseDark,
+		borderRadius: '10px',
+		color: typography,
+		display: 'inline',
+		fontSize: '12px',
+		lineHeight: '13px',
+		margin: '4px 4px 4px 0',
+		padding: '2px 10px',
 	},
 })(Typography);

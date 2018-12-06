@@ -15,7 +15,8 @@ import {
     FormPlaceholder,
     FormLabel,
     ErrorMessage,
-    WarningMessage, 
+    WarningMessage,
+	Tag, 
 } from '../../../src/theme/selfkey-dark-theme';
 
 const underlineStyle = {
@@ -82,7 +83,16 @@ export default function TypographyStories () {
 			</TableSmallTextDisabled>
 			<TableSmallText color="primary" gutterBottom>
 				Table Small Link 14/17px
-			</TableSmallText> <br/>
+			</TableSmallText> 
+			<Tag gutterBottom>
+				First tag
+			</Tag> 
+			<Tag gutterBottom>
+				Second tag
+			</Tag>
+			<Tag gutterBottom>
+				Third tag
+			</Tag> <br/><br/>
 			
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
@@ -99,7 +109,8 @@ export default function TypographyStories () {
 			</ErrorMessage>
 			<WarningMessage gutterBottom>
 				Warning Message 16/24px
-			</WarningMessage> <br/>
+			</WarningMessage> 
+			<br/>
         </div>
     )
 }
