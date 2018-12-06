@@ -5,18 +5,20 @@ import {
 	Tooltip,
 	IconButton, 
 } from '@material-ui/core';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+// import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import { 
     TableHeader, 
     FullButton, 
     OutlineButton, 
 	OutlineSecondaryButton,
 	ToggleBtn,
-	DefinitionDescription,
+	ToggleBtnGroup,
+	// DefinitionDescription,
 } from '../../../src/theme/selfkey-dark-theme';
 import Fingerprint from '@material-ui/icons/Fingerprint';
 import Wallpaper from '@material-ui/icons/Wallpaper';
 import InfoTooltip from '../../../src/icons/info';
+import InteractiveButtonGroups from '../../../src/materialui/buttonGroups';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -84,28 +86,21 @@ export default function ButtonStories () {
 			</TableHeader>
 			<Grid container spacing={24}>
 				<Grid item>
-					<ToggleButtonGroup value="" exclusive>
-						<ToggleBtn value="fingerprint">
+					<ToggleBtnGroup 
+						exclusive
+						value=''
+					>
+s						<ToggleBtn value="fingerprint">
 							<Fingerprint />
 						</ToggleBtn>
-						<ToggleBtn value="wallpeper">
+						<ToggleBtn value="wallpaper">
 							<Wallpaper />
 						</ToggleBtn>
-					</ToggleButtonGroup>
+					</ToggleBtnGroup>
 				</Grid>
 
 				<Grid item>
-					<ToggleButtonGroup value="" exclusive>
-						<ToggleBtn value="first">
-							<DefinitionDescription>First</DefinitionDescription>
-						</ToggleBtn>
-						<ToggleBtn value="second">
-							<DefinitionDescription>second</DefinitionDescription>
-						</ToggleBtn>
-						<ToggleBtn value="third">
-							<DefinitionDescription>third</DefinitionDescription>
-						</ToggleBtn>
-					</ToggleButtonGroup>
+					<InteractiveButtonGroups />
 				</Grid>
 			</Grid>
 			<br/><br/>
