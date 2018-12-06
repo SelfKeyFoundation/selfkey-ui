@@ -42,6 +42,7 @@ export const DefinitionDescription = withStyles({
 		fontSize: '16px',
 		fontWeight: 600,
 		lineHeight: '20px',
+		zIndex: 1,
 	},
 })(Typography);
 
