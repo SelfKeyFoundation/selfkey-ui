@@ -51,8 +51,6 @@ export const DropdownInputField = withStyles({
         lineHeight: '21px',
         // paddingLeft: '16px',
     },
-    focused: {
-    },
 })(InputField);
 
 export const DropdownSelect = withStyles({

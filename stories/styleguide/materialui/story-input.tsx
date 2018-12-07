@@ -6,6 +6,8 @@ import {
 	InputLabel,
 	MenuItem,
 	InputAdornment,
+	// FormControlLabel,
+	// Checkbox,
 } from '@material-ui/core';
 import { 
     TableHeader, 
@@ -14,7 +16,8 @@ import {
 	DropdownSelect,
 	DropdownInputField,
 	DecimalInput,
-	UnreadNotification, 
+	UnreadNotification,
+	// DefaultCheckbox, 
 } from '../../../src/theme/selfkey-dark-theme';
 
 const underlineStyle = {
@@ -134,6 +137,40 @@ export default function InputStories () {
 					/>
 				</Grid>
 			</Grid>
+			<br/>
+
+			<br/><br/>
+
+			{/* <Typography variant="h3" style={underlineStyle} gutterBottom>
+				Checkboxes
+			</Typography>
+			<FormControlLabel
+				control={
+					<DefaultCheckbox color="primary" />
+				}
+				label="Primary"
+			/>
+
+			<FormControlLabel
+				control={
+					<DefaultCheckbox checked />
+				}
+				label="Primary"
+			/>
+
+			<FormControlLabel
+				control={
+					<DefaultCheckbox color="secondary" />
+				}
+				label="Primary"
+			/>
+
+			<FormControlLabel
+				control={
+					<Checkbox color="secondary" />
+				}
+				label="Primary"
+			/> */}
 
 
 
