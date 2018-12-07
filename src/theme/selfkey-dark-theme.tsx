@@ -182,6 +182,9 @@ const theme = createMuiTheme({
         paper: {
           maxHeight: '131px',
           overflow: 'scroll',
+          marginLeft: '-17px',
+          marginTop: '-6px',
+          width: '200px',
         },
       },
       MuiPaper: {
