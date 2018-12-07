@@ -51,6 +51,8 @@ import ListStories from './materialui/story-lists';
 import TypographyStories from './materialui/story-typography';
 import ColorStories from './materialui/story-colors';
 import TabStories from './materialui/story-tabs';
+import AccordionStories from './materialui/story-accordion';
+import SliderStories from './materialui/story-slider';
 
 setup();
 setAddon(JSXAddon);
@@ -308,7 +310,8 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
                 UI Elements
             </Typography>
 			<TabStories />
-			<br/>
+			<AccordionStories />
+			<SliderStories />
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));

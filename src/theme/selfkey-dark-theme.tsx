@@ -246,6 +246,7 @@ const theme = createMuiTheme({
       MuiIconButton: {
         root: {
           padding: '7px 0 7px 10px',
+          // padding: '0',
         },
       },
       MuiTableRow: {
@@ -304,6 +305,35 @@ const theme = createMuiTheme({
             boxSizing: 'border-box',
             color: white,
           },
+        },
+      },
+      MuiExpansionPanel: {
+        root: {
+          backgroundColor: base,
+          borderRadius: '4px',
+          boxShadow: 'none',
+          position: 'initial',
+        },
+      },
+      MuiExpansionPanelSummary: {
+        content: {
+          alignItems: 'baseline',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          paddingLeft: '30px',
+        },
+        expandIcon: {
+          left: '18px',
+          padding: '0',
+          right: 'initial',
+          transform: 'translateY(-50%) rotate(90deg)',
+          transformOrigin: '50%',
+        },
+      },
+      MuiDivider: {
+        root: {
+          backgroundColor: '#303C49',
+          height: '1px',
         },
       },
     },
