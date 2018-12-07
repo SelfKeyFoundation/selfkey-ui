@@ -1,11 +1,13 @@
 import * as React from 'react';
-export * from '../materialui/typography';
-export * from '../materialui/lists';
-export * from '../materialui/inputs';
-export * from '../materialui/checkboxes';
+export * from '../materialui/buttonGroups';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
+export * from '../materialui/inputs';
+export * from '../materialui/lists';
+export * from '../materialui/sliders';
 export * from '../materialui/tables';
+export * from '../materialui/tabs';
+export * from '../materialui/typography';
 export * from '../icons/selfkeyLogo';
 export * from '../icons/corporate';
 export * from '../icons/person';
