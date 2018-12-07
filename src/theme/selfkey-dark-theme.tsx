@@ -180,10 +180,12 @@ const theme = createMuiTheme({
       },
       MuiMenu: {
         paper: {
-          maxHeight: '131px',
-          overflow: 'scroll',
+          border: `1px solid ${primary}`,
+          boxShadow: `0 0 3px 1px ${primary}`,
           marginLeft: '-17px',
           marginTop: '-6px',
+          maxHeight: '131px',
+          overflow: 'scroll',
           width: '200px',
         },
       },
