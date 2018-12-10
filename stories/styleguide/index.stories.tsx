@@ -42,8 +42,9 @@ import {
 	Card, 
 	CardContent, 
 	Typography,
+	// TablePagination,
 } from '@material-ui/core';
-import { SelfkeyDarkTheme,} from '../../src/theme/selfkey-dark-theme';
+import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
 import TableStories from './materialui/story-tables';
 import ButtonStories from './materialui/story-buttons';
 import InputStories from './materialui/story-input';
@@ -53,6 +54,9 @@ import ColorStories from './materialui/story-colors';
 import TabStories from './materialui/story-tabs';
 import AccordionStories from './materialui/story-accordion';
 import SliderStories from './materialui/story-slider';
+// import Pagination from './../../src/materialui/pagination';
+import FileUploadInProgressStory from './materialui/story-fileUploadInProgress';
+import FileUploadStory from './materialui/story-fileUpload';
 
 setup();
 setAddon(JSXAddon);
@@ -312,6 +316,14 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<TabStories />
 			<AccordionStories />
 			<SliderStories />
+
+			{/* <Pagination /> */}
+
+			<br/>
+
+			<FileUploadInProgressStory />
+			<FileUploadStory />
+						
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));

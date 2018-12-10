@@ -344,6 +344,22 @@ const theme = createMuiTheme({
           height: '1px',
         },
       },
+      MuiLinearProgress: {
+        root: {
+          backgroundColor: '#414F63',
+          borderRadius: '10px',
+          height: '4px',
+          marginBottom: '15px',
+          marginTop: '10px',
+          width: '235px',
+        },
+        colorPrimary: {
+          backgroundColor: '#414F63',
+        },
+        barColorPrimary: {
+          background: 'linear-gradient(to right, #2DA1F8 0%, #08BCCD 20%)',
+        },
+      },
     },
 });
 
