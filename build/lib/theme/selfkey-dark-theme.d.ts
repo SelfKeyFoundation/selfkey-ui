@@ -1,3 +1,18 @@
 import * as React from 'react';
+export * from '../materialui/buttonGroups';
+export * from '../materialui/buttons';
+export * from '../materialui/colorPresentation';
+export * from '../materialui/inputs';
+export * from '../materialui/lists';
+export * from '../materialui/sliders';
+export * from '../materialui/tables';
+export * from '../materialui/tabs';
+export * from '../materialui/typography';
+export * from '../icons/selfkeyLogo';
+export * from '../icons/corporate';
+export * from '../icons/person';
+export * from '../icons/info';
+export * from '../icons/incorporations';
+export { MuiEditIcon } from '../icons/muiedit';
 export declare const SelfkeyDarkTheme: React.SFC<{}>;
 export default SelfkeyDarkTheme;
