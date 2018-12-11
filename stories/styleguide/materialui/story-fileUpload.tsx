@@ -52,8 +52,8 @@ export default function FileUploadStory () {
                     <FileUploadLabel htmlFor="key-upload">
                         <HardDriveIcon />
                         <div>
-                            <TableSmallText>Your National ID with Selfie</TableSmallText>
-                            <Explanatory>This is stored locally.</Explanatory>
+                            <TableSmallText>Select Document</TableSmallText>
+                            <Explanatory>This is stored locally on your machine.</Explanatory>
                         </div>
                     </FileUploadLabel>
                     <FileUploadInput 
