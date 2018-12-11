@@ -11,11 +11,12 @@ import {
   base,
   baseDark,
 } from '../colors';
-// export * from '../materialui/checkboxes';
+export * from '../materialui/checkboxes';
 export * from '../materialui/buttonGroups';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/inputs';
+export * from '../materialui/modal';
 export * from '../materialui/lists';
 export * from '../materialui/sliders';
 export * from '../materialui/tables';
@@ -163,8 +164,8 @@ const theme = createMuiTheme({
           color: grey,
         },
         checked: {
-          backgroundColor: primary,
-          color: 'green'
+          // backgroundColor: primary,
+          // color: 'green'
         },
         colorSecondary: {
           main: primary,
@@ -375,6 +376,21 @@ const theme = createMuiTheme({
           color: primary,
           right: '5px',
           top: '6px',
+        },
+      },
+      // MuiModal: {
+      //   root: {
+      //     backgroundColor: white,
+      //     border: '1px solid #303C49',
+      //     borderRadius: '4px',
+      //     boxSizing: 'border-box',
+      //     margin: 'auto',
+      //     width: '780px',
+      //   },
+      // },
+      MuiBackdrop: {
+        root: {
+          backgroundColor: base,
         },
       },
     },

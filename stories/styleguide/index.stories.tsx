@@ -57,6 +57,7 @@ import SliderStories from './materialui/story-slider';
 import PaginationStories from './materialui/story-pagination';
 import FileUploadInProgressStory from './materialui/story-fileUploadInProgress';
 import FileUploadStory from './materialui/story-fileUpload';
+import ModalStories from './materialui/story-modals';
 
 setup();
 setAddon(JSXAddon);
@@ -317,11 +318,15 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<AccordionStories />
 			<SliderStories />
 			<PaginationStories />
-
 			<br/>
-
 			<FileUploadInProgressStory />
 			<FileUploadStory />
+
+			<br/>
+			<Typography variant="h5" color="error" gutterBottom>
+                Modals
+            </Typography>
+			<ModalStories />
 						
 		</CardContent>
 	</Card>
