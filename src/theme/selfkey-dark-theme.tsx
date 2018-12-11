@@ -360,6 +360,23 @@ const theme = createMuiTheme({
           background: 'linear-gradient(to right, #2DA1F8 0%, #08BCCD 20%)',
         },
       },
+      MuiTablePagination: {
+        actions: {
+        
+        },
+        select: {
+          backgroundColor: base,
+          border: '1px solid #313D49',
+          borderRadius: 0,
+          paddingLeft: '12px',
+          paddingRight: '30px',
+        },
+        selectIcon: {
+          color: primary,
+          right: '5px',
+          top: '6px',
+        },
+      },
     },
 });
 
