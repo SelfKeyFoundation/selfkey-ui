@@ -54,7 +54,7 @@ import ColorStories from './materialui/story-colors';
 import TabStories from './materialui/story-tabs';
 import AccordionStories from './materialui/story-accordion';
 import SliderStories from './materialui/story-slider';
-// import Pagination from './../../src/materialui/pagination';
+import PaginationStories from './materialui/story-pagination';
 import FileUploadInProgressStory from './materialui/story-fileUploadInProgress';
 import FileUploadStory from './materialui/story-fileUpload';
 
@@ -316,8 +316,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<TabStories />
 			<AccordionStories />
 			<SliderStories />
-
-			{/* <Pagination /> */}
+			<PaginationStories />
 
 			<br/>
 
