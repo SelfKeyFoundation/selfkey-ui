@@ -6,11 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var colors_1 = require("../colors");
-// export * from '../materialui/checkboxes';
+__export(require("../materialui/checkboxes"));
 __export(require("../materialui/buttonGroups"));
 __export(require("../materialui/buttons"));
 __export(require("../materialui/colorPresentation"));
 __export(require("../materialui/inputs"));
+__export(require("../materialui/modal"));
 __export(require("../materialui/lists"));
 __export(require("../materialui/sliders"));
 __export(require("../materialui/tables"));
@@ -157,8 +158,8 @@ var theme = core_1.createMuiTheme({
                 color: colors_1.grey,
             },
             checked: {
-                backgroundColor: colors_1.primary,
-                color: 'green'
+            // backgroundColor: primary,
+            // color: 'green'
             },
             colorSecondary: {
                 main: colors_1.primary,
@@ -351,6 +352,36 @@ var theme = core_1.createMuiTheme({
             },
             barColorPrimary: {
                 background: 'linear-gradient(to right, #2DA1F8 0%, #08BCCD 20%)',
+            },
+        },
+        MuiTablePagination: {
+            actions: {},
+            select: {
+                backgroundColor: colors_1.base,
+                border: '1px solid #313D49',
+                borderRadius: 0,
+                paddingLeft: '12px',
+                paddingRight: '30px',
+            },
+            selectIcon: {
+                color: colors_1.primary,
+                right: '5px',
+                top: '6px',
+            },
+        },
+        // MuiModal: {
+        //   root: {
+        //     backgroundColor: white,
+        //     border: '1px solid #303C49',
+        //     borderRadius: '4px',
+        //     boxSizing: 'border-box',
+        //     margin: 'auto',
+        //     width: '780px',
+        //   },
+        // },
+        MuiBackdrop: {
+            root: {
+                backgroundColor: colors_1.base,
             },
         },
     },
