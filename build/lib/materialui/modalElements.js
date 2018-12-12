@@ -26,6 +26,16 @@ exports.ModalBody = core_1.withStyles({
         width: '100%',
     },
 })(core_1.Paper);
+exports.ModalBody2 = core_1.withStyles({
+    root: {
+        backgroundColor: 'transparent',
+        border: 'none',
+        boxShadow: 'none',
+        boxSizing: 'border-box',
+        margin: '0 auto',
+        width: '780px',
+    },
+})(core_1.Paper);
 exports.ModalCloseButton = core_1.withStyles({
     root: {
         height: 0,

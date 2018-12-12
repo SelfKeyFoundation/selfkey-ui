@@ -3,6 +3,7 @@ import {
     Typography, 
 } from '@material-ui/core';
 import SimpleModal from '../../../src/materialui/modal';
+import ModalWithBackButton from '../../../src/materialui/modalWithBackButton';
 // import KeyModal from '../../../src/materialui/modal';
 
 const underlineStyle = {
@@ -17,6 +18,12 @@ export default function ModalStories () {
             </Typography>
             {/* <KeyModal /> */}
             <SimpleModal />
+            <br/>
+            <Typography variant="h3" style={underlineStyle} gutterBottom>
+                Inline with Back Button
+            </Typography>
+            
+            <ModalWithBackButton />
         </div>
     )
 }
