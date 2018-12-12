@@ -255,7 +255,9 @@ const theme = createMuiTheme({
       MuiIconButton: {
         root: {
           padding: '7px 0 7px 10px',
-          // padding: '0',
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
         },
       },
       MuiTableRow: {
@@ -289,12 +291,6 @@ const theme = createMuiTheme({
           backgroundColor: '#1F2830',
           border: '1px solid #43505B',
           borderRadius: '3px',
-          '&:hover': {
-            backgroundColor: 'transparent',
-          },
-          '&:focus': {
-            backgroundColor: 'transparent',
-          },
         },
       },
       MuiTabs: {

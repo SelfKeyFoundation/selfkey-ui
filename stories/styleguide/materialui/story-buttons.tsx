@@ -13,7 +13,6 @@ import {
 	OutlineSecondaryButton,
 	ToggleBtn,
 	ToggleBtnGroup,
-	// DefinitionDescription,
 } from '../../../src/theme/selfkey-dark-theme';
 import Fingerprint from '@material-ui/icons/Fingerprint';
 import Wallpaper from '@material-ui/icons/Wallpaper';
@@ -71,7 +70,13 @@ export default function ButtonStories () {
 					<TableHeader gutterBottom>
 						Tooltips
 					</TableHeader>
-					<Tooltip interactive placement="top-start" title='Aliquam eget finibus ante, non facilisis lectus. Sed vitae dignissim est, vel aliquam tellus. Praesent non nunc mollis, fermentum neque at, semper arcu. Nullam eget est sed sem iaculis gravida eget <a href="selfkey.org">click here</a>'>
+					<Tooltip interactive placement="top-start" 
+						title={
+							<React.Fragment>
+								<span>Tooltip test with link <a color="primary" href="https://selfkey.org">SelfKey</a></span>
+							</React.Fragment>
+						}
+					>
 						<IconButton aria-label="Info">
 							<InfoTooltip />
 						</IconButton>
