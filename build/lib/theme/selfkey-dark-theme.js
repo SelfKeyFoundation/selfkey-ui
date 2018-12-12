@@ -249,6 +249,9 @@ var theme = core_1.createMuiTheme({
         MuiIconButton: {
             root: {
                 padding: '7px 0 7px 10px',
+                '&:hover': {
+                    backgroundColor: 'transparent',
+                },
             },
         },
         MuiTableRow: {
@@ -282,12 +285,6 @@ var theme = core_1.createMuiTheme({
                 backgroundColor: '#1F2830',
                 border: '1px solid #43505B',
                 borderRadius: '3px',
-                '&:hover': {
-                    backgroundColor: 'transparent',
-                },
-                '&:focus': {
-                    backgroundColor: 'transparent',
-                },
             },
         },
         MuiTabs: {
