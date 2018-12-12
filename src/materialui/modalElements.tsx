@@ -23,7 +23,7 @@ export const ModalBody = withStyles({
         backgroundColor: '#262F39',
         border: 'none',
         borderRadius: '0 0 3px 3px',
-        boxShadow: 'none',
+        boxShadow: '0 50px 70px -50px black',
         boxSizing: 'border-box',
         minHeight: '200px',
         padding: '28px 30px',
