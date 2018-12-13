@@ -130,7 +130,7 @@ export const CheckedIcon = ((item: any ) => (
                 <g id="list-count/checked">
                     <g>
                         <rect id="Base" stroke="#495B70" fill="#3B4B59" x="0.5" y="0.5" width="29" height="27" rx="13.5"></rect>
-                        { item.item !== 'verified' ? <InsideTick color="#1CBA7D" /> : <InsideTick color="#93B0C1" /> }
+                        { item.item === 'verified' ? <InsideTick color="#1CBA7D" /> : <InsideTick color="#93B0C1" /> }
                     </g>
                 </g>
                 <polygon id="Line" fill="#364357" opacity="0.800000012" points="15 28 16 28 16 44 15 44"></polygon>
