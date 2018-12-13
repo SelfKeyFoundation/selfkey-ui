@@ -2,23 +2,21 @@ import * as React from 'react';
 import { 
     Typography, 
     Grid,
-	FormControl,
-	InputLabel,
-	MenuItem,
 	InputAdornment,
-	// FormControlLabel,
-	// Checkbox,
+	FormControlLabel,
+	Checkbox,
 } from '@material-ui/core';
 import { 
     TableHeader, 
     InputField, 
     ErrorMessage,
-	DropdownSelect,
-	DropdownInputField,
 	DecimalInput,
 	UnreadNotification,
-	// DefaultCheckbox, 
+	DefaultCheckbox,
+	NewCheckbox, 
 } from '../../../src/theme/selfkey-dark-theme';
+
+import KeyDropdown from './../../../src/materialui/dropdowns'
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -66,30 +64,15 @@ export default function InputStories () {
 				</Grid>
 			</Grid> <br/>
 
+
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Dropdown
 			</Typography>
 			<TableHeader gutterBottom>
 				Normal/Selection
 			</TableHeader>
-			<FormControl variant="filled">
-				<InputLabel htmlFor="filled-age-simple">
-					Choose...
-				</InputLabel>
-				<DropdownSelect input={ <DropdownInputField id="filled-age-simple" disableUnderline={ true }/> }>
-					<MenuItem value="">
-						<em>Choose...</em>
-					</MenuItem>
-					{['Andorra', 'Malta', 'Russia', 'Spain', 'Uruguay'].map(item => (
-						<MenuItem key={item} value={item}>
-							{item}
-						</MenuItem>
-					))}
-				</DropdownSelect>
-			</FormControl>
+			<KeyDropdown />
 			<br/><br/>
-
-
 
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
@@ -141,7 +124,7 @@ export default function InputStories () {
 
 			<br/><br/>
 
-			{/* <Typography variant="h3" style={underlineStyle} gutterBottom>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Checkboxes
 			</Typography>
 			<FormControlLabel
@@ -153,9 +136,9 @@ export default function InputStories () {
 
 			<FormControlLabel
 				control={
-					<DefaultCheckbox checked />
+					<NewCheckbox />
 				}
-				label="Primary"
+				label="New Checkbox"
 			/>
 
 			<FormControlLabel
@@ -170,7 +153,7 @@ export default function InputStories () {
 					<Checkbox color="secondary" />
 				}
 				label="Primary"
-			/> */}
+			/>
 
 
 
