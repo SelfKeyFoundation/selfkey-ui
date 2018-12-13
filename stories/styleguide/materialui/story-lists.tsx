@@ -12,7 +12,7 @@ import {
     Definition,
     GreenTick,
     DefinitionDescription,
-    CheckedIcon, 
+    CheckedIcon,
 } from '../../../src/theme/selfkey-dark-theme';
 
 const underlineStyle = {
@@ -64,11 +64,28 @@ export default function InputStories () {
 						Check Lists
 					</Typography>
 					<List>
-						{['Full Legal Name', 'Country of Residency', 'National ID Document', 'National ID with Selfie'].map(item => (
-							<ListItem key={item}>
-								<CheckedIcon />
-								<Definition>
-									{item}
+						{[
+							{
+								name: 'Full Legal Name',
+								icon: ''
+							},
+							{
+								name: 'Status: Verified',
+								icon: 'verified'
+							},
+							{
+								name: 'Status: Unverified',
+								icon: 'unverified'
+							},
+							{
+								name: 'National ID with Selfie',
+								icon: ''
+							},
+						].map(item => (
+							<ListItem key={item.name}>
+								<CheckedIcon item={item.icon} data-item={item} />
+								<Definition gutterBottom>
+									{item.name}
 								</Definition>
 							</ListItem>
 						))}
