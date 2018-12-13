@@ -10,6 +10,7 @@ __export(require("../materialui/checkboxes"));
 __export(require("../materialui/buttonGroups"));
 __export(require("../materialui/buttons"));
 __export(require("../materialui/colorPresentation"));
+__export(require("../materialui/dropdowns"));
 __export(require("../materialui/inputs"));
 __export(require("../materialui/modal"));
 __export(require("../materialui/lists"));
@@ -169,6 +170,9 @@ var theme = core_1.createMuiTheme({
             root: {
                 backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
+            },
+            icon: {
+                color: 'rgba(147, 176, 193, 0.5)',
             },
             selectMenu: {
                 color: colors_1.typography,

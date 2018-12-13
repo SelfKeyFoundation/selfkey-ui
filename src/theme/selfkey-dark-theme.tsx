@@ -15,6 +15,7 @@ export * from '../materialui/checkboxes';
 export * from '../materialui/buttonGroups';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
+export * from '../materialui/dropdowns';
 export * from '../materialui/inputs';
 export * from '../materialui/modal';
 export * from '../materialui/lists';
@@ -175,6 +176,9 @@ const theme = createMuiTheme({
         root: {
           backgroundColor: baseDark,
           borderRadius: '4px',
+        },
+        icon: {
+          color: 'rgba(147, 176, 193, 0.5)',
         },
         selectMenu: {
           color: typography,
