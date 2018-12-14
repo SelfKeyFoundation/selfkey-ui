@@ -3,6 +3,7 @@ export * from '../materialui/checkboxes';
 export * from '../materialui/buttonGroups';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
+export * from '../materialui/dropdowns';
 export * from '../materialui/inputs';
 export * from '../materialui/modal';
 export * from '../materialui/lists';

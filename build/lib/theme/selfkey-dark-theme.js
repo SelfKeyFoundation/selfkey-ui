@@ -142,7 +142,8 @@ var theme = core_1.createMuiTheme({
         },
         MuiSvgIcon: {
             root: {
-                color: colors_1.grey,
+                color: 'inherit',
+                // fill: 'transparent',
                 // '&:hover': {
                 //   color: primary,
                 // },
@@ -157,13 +158,51 @@ var theme = core_1.createMuiTheme({
         MuiCheckbox: {
             root: {
                 color: colors_1.grey,
+                '&$checked:not($disabled):not($colorSecondary)': {
+                    backgroundColor: colors_1.primary + " !important",
+                    border: "1px solid " + colors_1.primary + " !important",
+                    color: colors_1.baseDark + " !important",
+                },
+                '&$checked:not($disabled)': {
+                    backgroundColor: colors_1.error + " !important",
+                    border: "1px solid " + colors_1.error + " !important",
+                    color: "#392E3C !important",
+                },
+                '&$checked': {
+                    backgroundColor: "#384656 !important",
+                    border: "1px solid #2F3B48 !important",
+                    color: colors_1.baseDark + " !important",
+                },
+                '&$disabled': {
+                    color: 'transparent',
+                },
             },
-            checked: {
-            // backgroundColor: primary,
-            // color: 'green'
+            colorPrimary: {
+                backgroundColor: colors_1.baseDark,
+                border: "1px solid " + colors_1.grey,
+                borderRadius: '3px',
+                color: 'transparent',
+                height: '18px',
+                padding: 0,
+                width: '18px',
             },
             colorSecondary: {
-                main: colors_1.primary,
+                backgroundColor: 'rgba(255, 46, 99, 0.09)',
+                border: "1px solid " + colors_1.error,
+                borderRadius: '3px',
+                color: 'transparent',
+                height: '18px',
+                padding: 0,
+                width: '18px',
+            },
+            disabled: {
+                backgroundColor: '#222B34',
+                border: '1px solid #2F3B48',
+                borderRadius: '3px',
+                color: 'transparent',
+                height: '18px',
+                padding: 0,
+                width: '18px',
             },
         },
         MuiSelect: {
@@ -214,11 +253,11 @@ var theme = core_1.createMuiTheme({
                 minWidth: '200px',
             },
         },
-        MuiFormControlLabel: {
-            label: {
-                color: colors_1.typography,
-            },
-        },
+        // MuiFormControlLabel: {
+        //   label: {
+        //     color: typography,
+        //   },
+        // },
         MuiFormLabel: {
             root: {
                 display: 'block',
