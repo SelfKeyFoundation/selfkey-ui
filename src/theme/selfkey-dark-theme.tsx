@@ -148,7 +148,8 @@ const theme = createMuiTheme({
       },
       MuiSvgIcon: {
         root: {
-          color: grey,
+          color: 'inherit',
+          // fill: 'transparent',
           // '&:hover': {
           //   color: primary,
           // },
@@ -163,13 +164,51 @@ const theme = createMuiTheme({
       MuiCheckbox: {
         root: {
           color: grey,
+          '&$checked:not($disabled):not($colorSecondary)': {
+            backgroundColor: `${primary} !important`,
+            border: `1px solid ${primary} !important`,
+            color: `${baseDark} !important`,
+          },
+          '&$checked:not($disabled)': {
+            backgroundColor: `${error} !important`,
+            border: `1px solid ${error} !important`,
+            color: `#392E3C !important`,
+          },
+          '&$checked': {
+            backgroundColor: `#384656 !important`,
+            border: `1px solid #2F3B48 !important`,
+            color: `${baseDark} !important`,
+          },
+          '&$disabled': {
+            color: 'transparent',
+          },
         },
-        checked: {
-          // backgroundColor: primary,
-          // color: 'green'
+        colorPrimary: {
+          backgroundColor: baseDark,
+          border: `1px solid ${grey}`,
+          borderRadius: '3px',
+          color: 'transparent',
+          height: '18px',
+          padding: 0,
+          width: '18px',
         },
         colorSecondary: {
-          main: primary,
+          backgroundColor: 'rgba(255, 46, 99, 0.09)',
+          border: `1px solid ${error}`,
+          borderRadius: '3px',
+          color: 'transparent',
+          height: '18px',
+          padding: 0,
+          width: '18px',
+        },
+        disabled: {
+          backgroundColor: '#222B34',
+          border: '1px solid #2F3B48',
+          borderRadius: '3px',
+          color: 'transparent',
+          height: '18px',
+          padding: 0,
+          width: '18px',
         },
       },
       MuiSelect: {
@@ -220,11 +259,11 @@ const theme = createMuiTheme({
           minWidth: '200px',
         },
       },
-      MuiFormControlLabel: {
-        label: {
-          color: typography,
-        },
-      },
+      // MuiFormControlLabel: {
+      //   label: {
+      //     color: typography,
+      //   },
+      // },
       MuiFormLabel: {
         root: {
           display: 'block',

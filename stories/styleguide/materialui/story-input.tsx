@@ -4,7 +4,6 @@ import {
     Grid,
 	InputAdornment,
 	FormControlLabel,
-	Checkbox,
 } from '@material-ui/core';
 import { 
     TableHeader, 
@@ -13,7 +12,6 @@ import {
 	DecimalInput,
 	UnreadNotification,
 	DefaultCheckbox,
-	NewCheckbox, 
 } from '../../../src/theme/selfkey-dark-theme';
 
 import KeyDropdown from './../../../src/materialui/dropdowns'
@@ -127,34 +125,71 @@ export default function InputStories () {
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Checkboxes
 			</Typography>
-			<FormControlLabel
-				control={
-					<DefaultCheckbox color="primary" />
-				}
-				label="Primary"
-			/>
 
-			<FormControlLabel
-				control={
-					<NewCheckbox />
-				}
-				label="New Checkbox"
-			/>
+			<Grid container spacing={24} direction='column' >
+				<Grid item>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox color="primary" />
+						}
+						label="Default"
+					/>
+				</Grid>
 
-			<FormControlLabel
-				control={
-					<DefaultCheckbox color="secondary" />
-				}
-				label="Primary"
-			/>
+				<Grid item>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox color="primary" checked />
+						}
+						label="Selected"
+					/>
+				</Grid>
 
-			<FormControlLabel
-				control={
-					<Checkbox color="secondary" />
-				}
-				label="Primary"
-			/>
+				<Grid item>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox color="secondary" />
+						}
+						label="Unselected, Error"
+					/>
+				</Grid>
 
+				<Grid item>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox color="secondary" checked />
+						}
+						label="Selected, Error"
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox color="primary" indeterminate checked />
+						}
+						label="Bulk"
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox disabled />
+						}
+						label="Unselected, Disabled"
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						control={
+							<DefaultCheckbox disabled checked />
+						}
+						label="Selected, Disabled"
+					/>
+				</Grid>
+			</Grid>
 
 
 			{/* <FormControl >
