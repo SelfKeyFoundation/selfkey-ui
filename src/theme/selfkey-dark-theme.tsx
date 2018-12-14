@@ -425,6 +425,7 @@ const theme = createMuiTheme({
           paddingLeft: '30px',
         },
         expandIcon: {
+          color: typography,
           left: '18px',
           padding: '0',
           right: 'initial',
