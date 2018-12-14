@@ -12,6 +12,7 @@ import {
 	DecimalInput,
 	UnreadNotification,
 	DefaultCheckbox,
+	DefaultRadio,
 } from '../../../src/theme/selfkey-dark-theme';
 
 import KeyDropdown from './../../../src/materialui/dropdowns'
@@ -192,24 +193,79 @@ export default function InputStories () {
 			</Grid>
 
 
-			{/* <FormControl >
-				<Select
-					value=""
-					displayEmpty
-					disableUnderline={ true }
-					name="number"
-				>
-					<MenuItem value="">Test text</MenuItem>
-					{['Andorra', 'Malta', 'Russia', 'Spain', 'Spain2', 'Andorra', 'Malta', 'Russia', 'Spain', 'Spain2'].map(item => (
-						<MenuItem 
-							key={item}
-							value={item}
-						>
-							{item}
-						</MenuItem>
-					))}
-				</Select>
-			</FormControl> */}
+			<br/><br/>
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Radio buttons
+			</Typography>
+
+			<Grid container spacing={24} direction='column' >
+				<Grid item>
+					<FormControlLabel
+						label="Default"
+						value="end"
+						labelPlacement="end"
+						control={
+							<DefaultRadio color="primary" />
+						}
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						label="Selected"
+						value="end"
+						labelPlacement="end"
+						control={
+							<DefaultRadio color="primary" checked />
+						}
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						label="Unselected, Error"
+						value="end"
+						labelPlacement="end"
+						control={
+							<DefaultRadio color="secondary" />
+						}
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						label="Selected, Error"
+						value="end"
+						labelPlacement="end"
+						control={
+							<DefaultRadio color="secondary" checked />
+						}
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						label="Unselected, Disabled"
+						value="end"
+						labelPlacement="end"
+						control={
+							<DefaultRadio disabled />
+						}
+					/>
+				</Grid>
+
+				<Grid item>
+					<FormControlLabel
+						label="Selected, Disabled"
+						value="end"
+						labelPlacement="end"
+						control={
+							<DefaultRadio disabled checked />
+						}
+					/>
+				</Grid>
+			</Grid>
 			<br/><br/>
         </div>
     )

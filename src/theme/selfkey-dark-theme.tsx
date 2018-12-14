@@ -14,6 +14,7 @@ import {
 export * from '../materialui/checkboxes';
 export * from '../materialui/buttonGroups';
 export * from '../materialui/buttons';
+export * from '../materialui/checkboxes';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/dropdowns';
 export * from '../materialui/inputs';
@@ -205,6 +206,59 @@ const theme = createMuiTheme({
           backgroundColor: '#222B34',
           border: '1px solid #2F3B48',
           borderRadius: '3px',
+          color: 'transparent',
+          height: '18px',
+          padding: 0,
+          width: '18px',
+        },
+      },
+      MuiRadio: {
+        root: {
+          boxSizing: 'border-box',
+          color: grey,
+          '&$checked:not($disabled):not($colorSecondary)': {
+            backgroundColor: `#1e262d !important`,
+            border: `1px solid ${primary} !important`,
+            // boxSizing: 'border-box',
+            color: `${primary} !important`,
+          },
+          '&$checked:not($disabled)': {
+            backgroundColor: `#392E3C !important`,
+            border: `1px solid ${error} !important`,
+            // boxSizing: 'border-box',
+            color: `${error} !important`,
+          },
+          '&$checked': {
+            backgroundColor: `${baseDark} !important`,
+            border: `1px solid ${baseDark} !important`,
+            color: `#35424e !important`,
+          },
+          '&$disabled': {
+            color: 'transparent',
+          },
+        },
+        colorPrimary: {
+          backgroundColor: baseDark,
+          border: `1px solid ${grey}`,
+          borderRadius: '50%',
+          color: 'transparent',
+          height: '18px',
+          padding: 0,
+          width: '18px',
+        },
+        colorSecondary: {
+          backgroundColor: 'rgba(255, 46, 99, 0.09)',
+          border: `1px solid ${error}`,
+          borderRadius: '50%',
+          color: 'transparent',
+          height: '18px',
+          padding: 0,
+          width: '18px',
+        },
+        disabled: {
+          backgroundColor: '#222B34',
+          border: '1px solid #2F3B48',
+          borderRadius: '50%',
           color: 'transparent',
           height: '18px',
           padding: 0,
