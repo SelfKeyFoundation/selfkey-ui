@@ -351,9 +351,13 @@ const theme = createMuiTheme({
       },
       MuiIconButton: {
         root: {
+          color: grey,
           padding: '7px 0 7px 10px',
           '&:hover': {
             backgroundColor: 'transparent',
+          },
+          '&$disabled': {
+            color: grey,
           },
         },
       },
