@@ -17,7 +17,6 @@ export const FullButton = withStyles({
         borderRadius: '4px',
         boxSizing: 'border-box',
         color: white,
-        marginRight: '25px',
         '&:hover': {
             background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
             border: '1px solid #0FB8D0',
@@ -41,7 +40,6 @@ export const OutlineButton = withStyles({
         borderRadius: '4px',
         boxSizing: 'border-box',
         color: primary,
-        marginRight: '25px',
         '&:hover': {
             background: '#313D49',
             border: '2px solid #23E6FE',
@@ -65,7 +63,6 @@ export const OutlineSecondaryButton = withStyles({
         borderRadius: '4px',
         boxSizing: 'border-box',
         color: typography,
-        marginRight: '25px',
         '&:hover': {
             background: '#313D49',
             borderColor: typography,

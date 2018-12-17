@@ -4,6 +4,7 @@ import Modal from "@material-ui/core/Modal";
 import { 
     withStyles, 
     Paper,
+    Grid,
 } from "@material-ui/core";
 import { base } from "colors";
 import { Paragraph } from "./typography";
@@ -74,8 +75,15 @@ class SimpleModal extends React.Component {
                             Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
                             </Paragraph>
                             <br/><br/>
-                            <FullButton size="large">Continue</FullButton>
-                            <OutlineButton size="large">Cancel</OutlineButton>
+                            <Grid container spacing={24}>
+                                <Grid item>
+                                    <FullButton size="large">Continue</FullButton>
+                                </Grid>
+
+                                <Grid item>
+                                    <OutlineButton size="large">Cancel</OutlineButton>
+                                </Grid>
+                            </Grid>
                         </ModalBody>
                     </ModalWrap>
                 </Modal>

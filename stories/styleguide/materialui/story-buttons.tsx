@@ -2,7 +2,7 @@ import * as React from 'react';
 import { 
 	Typography, 
 	Grid, 
-	Tooltip,
+	// Tooltip,
 	IconButton, 
 } from '@material-ui/core';
 // import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
@@ -18,6 +18,8 @@ import Fingerprint from '@material-ui/icons/Fingerprint';
 import Wallpaper from '@material-ui/icons/Wallpaper';
 import InfoTooltip from '../../../src/icons/info';
 import InteractiveButtonGroups from '../../../src/materialui/buttonGroups';
+import { TooltipArrow, 
+	KeyTooltip} from '../../../src/materialui/tooltipArrow';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -36,51 +38,93 @@ export default function ButtonStories () {
 						Full Primary
 					</TableHeader>
 
-					<FullButton size="large">Large</FullButton>
-					<FullButton disabled size="large">
-						Disabled
-					</FullButton> 
-					<FullButton>Medium</FullButton> 
-					<FullButton size="small">Small</FullButton>
+					<Grid container spacing={24}>
+						<Grid item>
+							<FullButton size="large">Large</FullButton>
+						</Grid>
+
+						<Grid item>
+							<FullButton disabled size="large">
+								Disabled
+							</FullButton> 
+						</Grid>
+
+						<Grid item>
+							<FullButton>Medium</FullButton> 
+						</Grid>
+
+						<Grid item>
+							<FullButton size="small">Small</FullButton>
+						</Grid>
+					</Grid>
 					<br/><br/>
 
 					<TableHeader gutterBottom>
 						Shell Primary
 					</TableHeader>
-					<OutlineButton size="large">Large</OutlineButton>
-					<OutlineButton disabled size="large">
-						Disabled
-					</OutlineButton> 
-					<OutlineButton>Medium</OutlineButton> 
-					<OutlineButton size="small">Small</OutlineButton>
+
+					<Grid container spacing={24}>
+						<Grid item>
+							<OutlineButton size="large">Large</OutlineButton>
+						</Grid>
+
+						<Grid item>
+							<OutlineButton disabled size="large">
+								Disabled
+							</OutlineButton> 
+						</Grid>
+
+						<Grid item>
+							<OutlineButton>Medium</OutlineButton> 
+						</Grid>
+
+						<Grid item>
+							<OutlineButton size="small">Small</OutlineButton>
+						</Grid>
+					</Grid>
 					<br/><br/>
 
 					<TableHeader gutterBottom>
 						Shell Secondary
 					</TableHeader>
-					<OutlineSecondaryButton size="large">Large</OutlineSecondaryButton>
-					<OutlineSecondaryButton disabled size="large">
-						Disabled
-					</OutlineSecondaryButton> 
-					<OutlineSecondaryButton>Medium</OutlineSecondaryButton> 
-					<OutlineSecondaryButton size="small">Small</OutlineSecondaryButton>
+
+					<Grid container spacing={24}>
+						<Grid item>
+							<OutlineSecondaryButton size="large">Large</OutlineSecondaryButton>
+						</Grid>
+
+						<Grid item>
+							<OutlineSecondaryButton disabled size="large">
+								Disabled
+							</OutlineSecondaryButton> 
+						</Grid>
+
+						<Grid item>
+							<OutlineSecondaryButton>Medium</OutlineSecondaryButton> 
+						</Grid>
+
+						<Grid item>
+							<OutlineSecondaryButton size="small">Small</OutlineSecondaryButton>
+						</Grid>
+					</Grid>
 				</Grid>
 
 				<Grid item>
 					<TableHeader gutterBottom>
 						Tooltips
 					</TableHeader>
-					<Tooltip interactive placement="top-start" 
+					<KeyTooltip interactive placement="top-start" 
 						title={
 							<React.Fragment>
 								<span>Tooltip test with link <a color="primary" href="https://selfkey.org">SelfKey</a></span>
+								<TooltipArrow />
 							</React.Fragment>
 						}
 					>
 						<IconButton aria-label="Info">
 							<InfoTooltip />
 						</IconButton>
-					</Tooltip>
+					</KeyTooltip>
 				</Grid>
 			</Grid>
 			<br/><br/><br/>
@@ -95,7 +139,7 @@ export default function ButtonStories () {
 						exclusive
 						value=''
 					>
-s						<ToggleBtn value="fingerprint">
+						<ToggleBtn value="fingerprint">
 							<Fingerprint />
 						</ToggleBtn>
 						<ToggleBtn value="wallpaper">

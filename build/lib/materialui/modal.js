@@ -68,8 +68,11 @@ var SimpleModal = /** @class */ (function (_super) {
                         React.createElement(typography_1.Paragraph, { id: "simple-modal-description", gutterBottom: true }, "Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. Duis mollis, est non commodo luctus, nisi erat porttitor ligula."),
                         React.createElement("br", null),
                         React.createElement("br", null),
-                        React.createElement(buttons_1.FullButton, { size: "large" }, "Continue"),
-                        React.createElement(buttons_1.OutlineButton, { size: "large" }, "Cancel"))))));
+                        React.createElement(core_1.Grid, { container: true, spacing: 24 },
+                            React.createElement(core_1.Grid, { item: true },
+                                React.createElement(buttons_1.FullButton, { size: "large" }, "Continue")),
+                            React.createElement(core_1.Grid, { item: true },
+                                React.createElement(buttons_1.OutlineButton, { size: "large" }, "Cancel"))))))));
     };
     return SimpleModal;
 }(React.Component));

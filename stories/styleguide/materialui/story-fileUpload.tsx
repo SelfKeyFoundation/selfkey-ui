@@ -63,8 +63,15 @@ export default function FileUploadStory () {
                 </Grid>
             </FileUploadGrid>
             <br/>
-            <FullButton size="large">Save</FullButton>
-            <OutlineButton size="large">Cancel</OutlineButton>
+            <Grid container spacing={24}>
+                <Grid item>
+                    <FullButton size="large">Save</FullButton>
+                </Grid>
+
+                <Grid item>
+                    <OutlineButton size="large">Cancel</OutlineButton>
+                </Grid>
+            </Grid>
             <br/>
             <br/>
         </div>
