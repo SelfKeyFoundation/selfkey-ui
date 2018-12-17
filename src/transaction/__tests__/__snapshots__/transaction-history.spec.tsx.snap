@@ -532,6 +532,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             className="MuiSvgIcon-root-98"
             color={undefined}
             focusable="false"
+            role="presentation"
             style={
               Object {
                 "height": "26px",

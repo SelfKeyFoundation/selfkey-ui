@@ -1,4 +1,4 @@
+/// <reference path="../../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { StyledComponentProps } from 'react-jss';
-export declare const CustomTokenText: React.ComponentType<StyledComponentProps<string>>;
+export declare const CustomTokenText: React.ComponentType<import("react-jss").StyledComponentProps<string>>;
 export default CustomTokenText;

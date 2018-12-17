@@ -35,13 +35,17 @@ const styles: StyleSheet = {
 	},
 };
 
+export type Variant = 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
+export type Color = 'primary' | 'secondary';
+
 export type ButtonProps = {
 	onClick?: ((event: React.MouseEvent<HTMLElement>) => void);
 	size?: 'large' | 'medium' | 'small';
-	variant?: 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
-	color?: 'primary' | 'secondary';
+	variant?: Variant;
+	color?: Color;
 	type?: 'button' | 'submit';
 	disabled?: boolean;
+	id?: string;
 };
 
 export const StyledButton = injectSheet(styles)<ButtonProps>(
@@ -54,12 +58,14 @@ export const StyledButton = injectSheet(styles)<ButtonProps>(
 		type = 'button',
 		onClick,
 		disabled = false,
+		id
 	}) => (
 		<Button
-			variant={variant}
+			id={id}
+			variant={variant as Variant}
 			size={size}
 			classes={classes}
-			color={color}
+			color={color as Color}
 			type={type}
 			onClick={onClick}
 			disabled={disabled}

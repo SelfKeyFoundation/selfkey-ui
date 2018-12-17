@@ -101,7 +101,7 @@ var UnlockComponent = /** @class */ (function (_super) {
                         React.createElement(transaction_fee_selector_1.TransactionFeeSelector, { minGasPrice: minGasPrice, maxGasPrice: maxGasPrice, gasLimit: gasLimit, fiat: fiat, fiatRate: fiatRate, onChange: this.handleFeeChange })),
                     React.createElement(core_1.Grid, { item: true, classes: { item: classes.footer } },
                         React.createElement("form", { onSubmit: this.handleSubmit },
-                            React.createElement(core_1.FormControl, { required: true, component: "fieldset", error: error },
+                            React.createElement(core_1.FormControl, { required: true, error: error },
                                 React.createElement(core_1.FormControlLabel, { classes: { label: classes.understandLabel }, checked: understood, value: "understood", onChange: this.handleUnderstoodChange, control: React.createElement(core_1.Checkbox, { color: "primary", classes: {
                                             root: classes.understandCheckbox,
                                             colorPrimary: classes.primary,

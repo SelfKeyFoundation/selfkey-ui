@@ -334,7 +334,7 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 										<H3>Highlights</H3>
 									</Grid>
 									<Grid item>
-										<FormControl component="fieldset" className={classes.formControl}>
+										<FormControl className={classes.formControl}>
 											<FormGroup className={classes.formGroup}>
 												<span>
 													<strong>Location:</strong> {item.location}{' '}
@@ -356,7 +356,7 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 												</span>
 											</FormGroup>
 										</FormControl>
-										<FormControl component="fieldset" className={classes.formControl}>
+										<FormControl className={classes.formControl}>
 											<FormGroup className={classes.formGroup}>
 												<span>
 													<strong>FIAT Payment:</strong> {item.fiat_payments}{' '}

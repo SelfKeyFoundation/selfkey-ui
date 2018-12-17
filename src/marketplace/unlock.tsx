@@ -125,7 +125,7 @@ export class UnlockComponent extends React.Component<StyledProps, UnlockState> {
 						</Grid>
 						<Grid item classes={{ item: classes.footer }}>
 							<form onSubmit={this.handleSubmit}>
-								<FormControl required={true} component="fieldset" error={error}>
+								<FormControl required={true} error={error}>
 									<FormControlLabel
 										classes={{ label: classes.understandLabel }}
 										checked={understood}
