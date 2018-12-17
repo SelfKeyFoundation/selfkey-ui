@@ -18,17 +18,18 @@ export * from '../materialui/checkboxes';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/dropdowns';
 export * from '../materialui/inputs';
-export * from '../materialui/modal';
 export * from '../materialui/lists';
+export * from '../materialui/modal';
+export * from '../materialui/pagination';
 export * from '../materialui/sliders';
 export * from '../materialui/tables';
 export * from '../materialui/tabs';
 export * from '../materialui/typography';
-export * from '../icons/selfkeyLogo';
 export * from '../icons/corporate';
-export * from '../icons/person';
-export * from '../icons/info';
 export * from '../icons/incorporations';
+export * from '../icons/info';
+export * from '../icons/person';
+export * from '../icons/selfkeyLogo';
 
 export { MuiEditIcon } from '../icons/muiedit';
 
@@ -461,7 +462,6 @@ const theme = createMuiTheme({
       },
       MuiTablePagination: {
         actions: {
-        
         },
         select: {
           backgroundColor: base,

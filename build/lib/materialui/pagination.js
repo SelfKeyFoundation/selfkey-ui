@@ -15,16 +15,60 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.KeyPagination = core_1.withStyles({
+var FirstPage_1 = require("@material-ui/icons/FirstPage");
+var KeyboardArrowLeft_1 = require("@material-ui/icons/KeyboardArrowLeft");
+var KeyboardArrowRight_1 = require("@material-ui/icons/KeyboardArrowRight");
+var LastPage_1 = require("@material-ui/icons/LastPage");
+exports.KeyIconButton = core_1.withStyles({
     root: {
-        label: {},
-    },
-    selectIcon: {
-        label: {
-            border: '5px solid #313D49',
+        border: '1px solid #313D49',
+        borderRadius: 0,
+        margin: '0 5px',
+        padding: '5px',
+        '&:hover': {
+            backgroundColor: '#2D3742',
+            border: '1px solid #687C8A',
         },
     },
-})(core_1.TablePagination);
+})(core_1.IconButton);
+var TablePaginationActions = /** @class */ (function (_super) {
+    __extends(TablePaginationActions, _super);
+    function TablePaginationActions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    // handleFirstPageButtonClick = event => {
+    //   this.props.onChangePage(event, 0);
+    // };
+    // handleBackButtonClick = event => {
+    //   this.props.onChangePage(event, this.props.page - 1);
+    // };
+    // handleNextButtonClick = event => {
+    //   this.props.onChangePage(event, this.props.page + 1);
+    // };
+    // handleLastPageButtonClick = event => {
+    //   this.props.onChangePage(
+    //     event,
+    //     Math.max(0, Math.ceil(this.props.count / this.props.rowsPerPage) - 1),
+    //   );
+    // };
+    TablePaginationActions.prototype.render = function () {
+        //   const { classes, count, page, rowsPerPage, theme } = this.props;
+        return (React.createElement(core_1.Grid, { container: true, direction: 'row' },
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "First Page" },
+                    React.createElement(FirstPage_1.default, null))),
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "Previous Page" },
+                    React.createElement(KeyboardArrowLeft_1.default, null))),
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "Next Page" },
+                    React.createElement(KeyboardArrowRight_1.default, null))),
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "Last Page" },
+                    React.createElement(LastPage_1.default, null)))));
+    };
+    return TablePaginationActions;
+}(React.Component));
 var Pagination = /** @class */ (function (_super) {
     __extends(Pagination, _super);
     function Pagination() {
@@ -38,10 +82,11 @@ var Pagination = /** @class */ (function (_super) {
         return _this;
     }
     Pagination.prototype.render = function () {
-        // const { value } = this.state;
-        return (React.createElement(exports.KeyPagination, { rowsPerPageOptions: [5, 10, 25], colSpan: 3, count: 2, rowsPerPage: 5, page: 2, SelectProps: {
-                native: true,
-            }, onChangePage: this.handleChangePage }));
+        return (React.createElement(core_1.TablePagination, { rowsPerPageOptions: [5, 10, 25], component: "div", count: 148, rowsPerPage: 5, page: 0, backIconButtonProps: {
+                'aria-label': 'Previous Page',
+            }, nextIconButtonProps: {
+                'aria-label': 'Next Page',
+            }, onChangePage: this.handleChangePage, ActionsComponent: TablePaginationActions }));
     };
     return Pagination;
 }(React.Component));

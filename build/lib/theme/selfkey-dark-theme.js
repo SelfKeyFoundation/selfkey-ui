@@ -9,6 +9,7 @@ var colors_1 = require("../colors");
 __export(require("../materialui/checkboxes"));
 __export(require("../materialui/buttonGroups"));
 __export(require("../materialui/buttons"));
+__export(require("../materialui/checkboxes"));
 __export(require("../materialui/colorPresentation"));
 __export(require("../materialui/dropdowns"));
 __export(require("../materialui/inputs"));
@@ -344,9 +345,13 @@ var theme = core_1.createMuiTheme({
         },
         MuiIconButton: {
             root: {
+                color: colors_1.grey,
                 padding: '7px 0 7px 10px',
                 '&:hover': {
                     backgroundColor: 'transparent',
+                },
+                '&$disabled': {
+                    color: colors_1.grey,
                 },
             },
         },
@@ -418,6 +423,7 @@ var theme = core_1.createMuiTheme({
                 paddingLeft: '30px',
             },
             expandIcon: {
+                color: colors_1.typography,
                 left: '18px',
                 padding: '0',
                 right: 'initial',
