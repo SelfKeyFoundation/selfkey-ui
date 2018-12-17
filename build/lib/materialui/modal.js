@@ -58,7 +58,7 @@ var SimpleModal = /** @class */ (function (_super) {
     SimpleModal.prototype.render = function () {
         return (React.createElement("div", null,
             React.createElement(buttons_1.OutlineButton, { size: "large", onClick: this.handleOpen }, "Open Modal"),
-            React.createElement(Modal_1.default, { open: this.state.open, onClose: this.handleClose },
+            React.createElement(Modal_1.default, { open: this.state.open },
                 React.createElement(exports.ModalWrap, null,
                     React.createElement(modalElements_1.ModalCloseButton, { onClick: this.handleState },
                         React.createElement(modal_close_1.default, null)),
