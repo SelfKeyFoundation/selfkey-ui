@@ -56,10 +56,7 @@ class SimpleModal extends React.Component {
         return (
             <div>
                 <OutlineButton size="large" onClick={this.handleOpen}>Open Modal</OutlineButton>
-                <Modal
-                open={this.state.open}
-                onClose={this.handleClose}
-                >
+                <Modal open={this.state.open}>
                     <ModalWrap>
                         <ModalCloseButton onClick={this.handleState} >
                             <ModalCloseIcon />
