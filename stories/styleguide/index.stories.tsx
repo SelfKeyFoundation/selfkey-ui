@@ -58,6 +58,7 @@ import PaginationStories from './materialui/story-pagination';
 import FileUploadInProgressStory from './materialui/story-fileUploadInProgress';
 import FileUploadStory from './materialui/story-fileUpload';
 import ModalStories from './materialui/story-modals';
+import DatePickerStories from './materialui/story-datepickers';
 
 setup();
 setAddon(JSXAddon);
@@ -327,6 +328,12 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
                 Modals
             </Typography>
 			<ModalStories />
+
+			<br/>
+			<Typography variant="h5" color="error" gutterBottom>
+                Date Picker
+            </Typography>
+			<DatePickerStories />
 						
 		</CardContent>
 	</Card>
