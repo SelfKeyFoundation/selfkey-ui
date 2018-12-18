@@ -45,6 +45,8 @@ var renderIcon = function (shortName, classes) {
     switch (shortName) {
         case 'KEY':
             return (React.createElement(selfkey_1.default, { className: classes.icon }));
+        case 'KI':
+            return (React.createElement(selfkey_1.default, { className: classes.icon }));
         case 'ETH':
             return (React.createElement(ethereum_1.default, { className: classes.icon }));
         default:

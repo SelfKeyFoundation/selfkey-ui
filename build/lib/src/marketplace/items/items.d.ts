@@ -4,7 +4,8 @@ import { ItemProps } from './item';
 export declare type ItemsProps = {
     category: string;
     items: Array<ItemProps>;
-    svgIcon: string;
+    backAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    viewAction?: Function;
 };
 export declare const Items: React.ComponentType<ItemsProps & import("react-jss").StyledComponentProps<string>>;
 export default Items;

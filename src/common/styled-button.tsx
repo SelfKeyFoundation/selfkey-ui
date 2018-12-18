@@ -6,7 +6,11 @@ const styles: StyleSheet = {
 	root: {
 		fontFamily: 'Lato, arial, sans-serif',
 		fontWeight: 'bold',
-		height: '45px',
+		minHeight: '45px',
+		height: 'auto',
+		'& svg': {
+			marginRight: '10px',
+		},
 	},
 	containedPrimary: {
 		background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
@@ -18,27 +22,54 @@ const styles: StyleSheet = {
 	},
 	outlined: {
 		border: '2px solid #1CA9BA',
-		height: '44px',
+		minHeight: '44px',
+		height: 'auto',
 		color: '#1CA9BA',
 		'&:hover': {
 			border: '2px solid #1CA9BA',
 		},
 	},
+	disabled: {
+		background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
+		boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 0 2px 2px 0 #07C1DC, 2px 0 2px 0 rgba(0,0,0,0.2)',
+	},
 };
+
+export type Variant = 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
+export type Color = 'primary' | 'secondary';
 
 export type ButtonProps = {
 	onClick?: ((event: React.MouseEvent<HTMLElement>) => void);
 	size?: 'large' | 'medium' | 'small';
-	variant?: 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
-	color?: 'primary' | 'secondary';
-  	type?: 'button' | 'submit';
+	variant?: Variant;
+	color?: Color;
+	type?: 'button' | 'submit';
 	disabled?: boolean;
 	id?: string;
 };
 
 export const StyledButton = injectSheet(styles)<ButtonProps>(
-	({ classes, children, variant = 'contained', size, color = 'primary', type = 'button', onClick, disabled, id }) => (
-		<Button id={id} variant={variant} size={size} classes={classes} color={color} type={type} onClick={onClick} disabled={disabled}>
+	({
+		classes,
+		children,
+		variant = 'contained',
+		size,
+		color = 'primary',
+		type = 'button',
+		onClick,
+		disabled = false,
+		id
+	}) => (
+		<Button
+			id={id}
+			variant={variant as Variant}
+			size={size}
+			classes={classes}
+			color={color as Color}
+			type={type}
+			onClick={onClick}
+			disabled={disabled}
+		>
 			{children}
 		</Button>
 	)
