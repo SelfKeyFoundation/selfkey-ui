@@ -72,7 +72,8 @@ tfoot td {
 }
 
 .rdtDay:hover,
-.rdtMonth:hover {
+.rdtMonth:hover,
+.rdtYear:hover {
     background-color: #00C0D9;
     border-radius: 3px;
 }
@@ -85,7 +86,15 @@ tfoot td {
 .rdtDays,
 .rdtMonths,
 .rdtYears,
-.rdtCounters {
+.rdtTime {
+    min-height: 326px;
+    min-width: 273px;
+}
+
+.rdtDays,
+.rdtMonths,
+.rdtYears,
+.rdtTime {
     background-color: #1E262E;
     border-radius: 3px;
     border: 1px solid #313D49;
@@ -93,10 +102,77 @@ tfoot td {
 }
 
 .rdtMonths table:first-child,
-.rdtYears table:first-child {
+.rdtYears table:first-child,
+.rdtTime table {
     width: 100%;
 }
 
+.rdtYears table:nth-child(2),
+.rdtMonths table:nth-child(2) {
+    display: flex;
+    width: 100%;
+}
+
+.rdtYears table:nth-child(2) tbody,
+.rdtMonths table:nth-child(2) tbody {
+    margin-top: 65px;
+    text-align: center;
+    width: inherit;
+}
+
+.rdtTime table tbody {
+    display: inherit;
+    margin-top: 85px;
+    text-align: center;
+    width: inherit;
+}
+
+.rdtYears table:nth-child(2) tbody tr,
+.rdtMonths table:nth-child(2) tbody tr {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
 .rdtPicker {
+    min-height: 325px;
     padding: 4px 0;
+}
+
+.rdtCount {
+    border: 1px solid #384656;
+    border-radius: 4px;
+    margin: 15px 0;
+    padding: 15px 17px;
+    width: 25px;
+}
+
+.rdtCounter:first-child::before {
+    color: #93B0C1;
+    content: 'Hours';
+    margin-left: -15px;
+    margin-top: -35px;
+    position: absolute;
+}
+
+.rdtCounter:nth-child(3):before {
+    color: #93B0C1;
+    content: 'Minutes';
+    margin-left: -21px;
+    margin-top: -35px;
+    position: absolute;
+}
+
+.rdtCounters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rdtCounterSeparator {
+    display: none;
+}
+
+.rdtActive {
+    background-color: #00C0D9;
+    border-radius: 3px;
 }
