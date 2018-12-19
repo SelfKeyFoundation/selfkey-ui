@@ -4,6 +4,7 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
+import { TablePaginationActionsProps } from '@material-ui/core/TablePagination/TablePaginationActions';
 
 export const KeyIconButton = withStyles({
     root: {
@@ -18,7 +19,7 @@ export const KeyIconButton = withStyles({
     },
 })(IconButton);
 
-class TablePaginationActions extends React.Component {
+class TablePaginationActions extends React.Component<TablePaginationActionsProps, any, any> {
     // handleFirstPageButtonClick = event => {
     //   this.props.onChangePage(event, 0);
     // };
