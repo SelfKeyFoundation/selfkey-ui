@@ -343,7 +343,7 @@ const theme = createMuiTheme({
         },
         sizeSmall: {
           fontSize: '12px',
-          fontWeight: 300,
+          fontWeight: 400,
           height: '26px',
           minHeight: '26px',
           minWidth: '50px',
