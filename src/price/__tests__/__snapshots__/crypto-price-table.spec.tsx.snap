@@ -58,7 +58,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
       </tr>
     </thead>
     <tbody
-      className="MuiTableBody-root-16"
+      className="MuiTableBody-root-20"
     >
       <tr
         className="MuiTableRow-root-3 CryptoPriceTableComponent-bodyTableRow-0-2-4"
@@ -66,27 +66,24 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           Selfkey
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           KEY
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 30
@@ -97,13 +94,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $0.01
@@ -114,13 +110,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $0.42432
@@ -131,14 +126,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           test
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         />
       </tr>
       <tr
@@ -147,27 +140,24 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           Ethereum
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           ETH
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 0.00548
@@ -178,13 +168,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $400.00
@@ -195,13 +184,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $20.52
@@ -212,12 +200,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         />
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         />
       </tr>
       <tr
@@ -226,27 +212,24 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           Other token
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           OTHR
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 0.00548
@@ -257,13 +240,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $500.00
@@ -274,13 +256,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $20.52
@@ -291,22 +272,19 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           dsadsadsa
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           <div
             onClick={[Function]}
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-114 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
-              color={undefined}
+              className="MuiSvgIcon-root-118 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -332,27 +310,24 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           Ethereum
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           OTHR
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 0.00548
@@ -363,13 +338,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $400.00
@@ -380,13 +354,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $20.52
@@ -397,22 +370,19 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           dsadsadsa
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           <div
             onClick={[Function]}
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-114 Component-root-0-2-10 CryptoPriceTableComponent-iconSize-0-2-5"
-              color={undefined}
+              className="MuiSvgIcon-root-118 Component-root-0-2-10 CryptoPriceTableComponent-iconSize-0-2-5"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -438,27 +408,24 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           Ethereum
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           OTHR
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 0.00548
@@ -469,13 +436,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $400.00
@@ -486,13 +452,12 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10 MuiTableCell-numeric-12"
-          scope={undefined}
         >
           <div
-            className="MuiGrid-container-17 MuiGrid-spacing-xs-8-39 MuiGrid-align-items-xs-center-25 Component-row-0-2-6"
+            className="MuiGrid-container-21 MuiGrid-spacing-xs-8-43 MuiGrid-align-items-xs-center-29 Component-row-0-2-6"
           >
             <div
-              className="MuiGrid-item-18 Component-value-0-2-8"
+              className="MuiGrid-item-22 Component-value-0-2-8"
             >
               <div>
                 $20.52
@@ -503,22 +468,19 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           dsadsadsa
         </td>
         <td
           aria-sort={null}
           className="MuiTableCell-root-8 MuiTableCell-body-10"
-          scope={undefined}
         >
           <div
             onClick={[Function]}
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-114 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
-              color={undefined}
+              className="MuiSvgIcon-root-118 Component-root-0-2-9 CryptoPriceTableComponent-iconSize-0-2-5"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
