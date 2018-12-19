@@ -3,7 +3,6 @@
 exports[`Address Book Add should show Address Book Add 1`] = `
 <form
   autoComplete="off"
-  className={undefined}
   noValidate={true}
   onSubmit={[Function]}
 >
@@ -84,11 +83,11 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-item-2"
         >
           <button
-            className="MuiButtonBase-root-124 MuiButtonBase-disabled-125 MuiButton-root-98 Component-root-0-1-6 MuiButton-contained-109 MuiButton-containedPrimary-110 Component-containedPrimary-0-1-7 MuiButton-raised-112 MuiButton-raisedPrimary-113 MuiButton-disabled-118"
+            className="MuiButtonBase-root-124 MuiButtonBase-disabled-125 MuiButton-root-98 Component-root-0-1-6 MuiButton-contained-109 MuiButton-containedPrimary-110 Component-containedPrimary-0-1-7 MuiButton-raised-112 MuiButton-raisedPrimary-113 MuiButton-disabled-118 Component-disabled-0-1-9"
             disabled={true}
             id="saveButton"
             onBlur={[Function]}
-            onClick={undefined}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -117,6 +116,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
             id="cancelButton"
             onBlur={[Function]}
             onClick={[Function]}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}

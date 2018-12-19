@@ -23,12 +23,10 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -103,19 +101,6 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -340,12 +325,10 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -420,19 +403,6 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -657,12 +627,10 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -737,19 +705,6 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -974,12 +929,10 @@ exports[`Crypto Chart Box should call toggle function with false 1`] = `
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -1054,19 +1007,6 @@ exports[`Crypto Chart Box should call toggle function with false 1`] = `
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -1612,7 +1552,6 @@ exports[`Crypto Chart Box should call toggle function with false 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1660,12 +1599,10 @@ exports[`Crypto Chart Box should call toggle function with false 2`] = `
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -1740,19 +1677,6 @@ exports[`Crypto Chart Box should call toggle function with false 2`] = `
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -2298,7 +2222,6 @@ exports[`Crypto Chart Box should call toggle function with false 2`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -2346,12 +2269,10 @@ exports[`Crypto Chart Box should call toggle function with true 1`] = `
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -2426,19 +2347,6 @@ exports[`Crypto Chart Box should call toggle function with true 1`] = `
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -2984,7 +2892,6 @@ exports[`Crypto Chart Box should call toggle function with true 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -3032,12 +2939,10 @@ exports[`Crypto Chart Box should call toggle function with true 2`] = `
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -3112,19 +3017,6 @@ exports[`Crypto Chart Box should call toggle function with true 2`] = `
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -3670,7 +3562,6 @@ exports[`Crypto Chart Box should call toggle function with true 2`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -3718,12 +3609,10 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -3798,19 +3687,6 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -4356,7 +4232,6 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -4404,12 +4279,10 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -4484,19 +4357,6 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -5042,7 +4902,6 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -5090,12 +4949,10 @@ exports[`Crypto Chart Box should show Chart with all 1`] = `
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -5170,19 +5027,6 @@ exports[`Crypto Chart Box should show Chart with all 1`] = `
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -5728,7 +5572,6 @@ exports[`Crypto Chart Box should show Chart with all 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -5776,12 +5619,10 @@ exports[`Crypto Chart Box should show Chart with less than 5 items 1`] = `
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -5856,19 +5697,6 @@ exports[`Crypto Chart Box should show Chart with less than 5 items 1`] = `
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -6093,12 +5921,10 @@ exports[`Crypto Chart Box should show chart with Others 1`] = `
         >
           <button
             className="CryptoChartBoxComponent-gearButton-0-1-12"
-            onClick={undefined}
           >
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-98 Component-root-0-1-18"
-              color={undefined}
               focusable="false"
               role="presentation"
               version="1.1"
@@ -6173,19 +5999,6 @@ exports[`Crypto Chart Box should show chart with Others 1`] = `
         <div
           className="MuiGrid-item-2 MuiGrid-grid-xs-4-33 CryptoChartBoxComponent-chart-0-1-11"
         >
-          <div
-            id="PieChart"
-            style={
-              Object {
-                "height": "300px",
-                "width": "100%",
-              }
-            }
-          >
-            <div>
-              Rendering Chart
-            </div>
-          </div>
           <div
             className="CryptoChartBoxComponent-chartCenterContainer-0-1-10"
           >
@@ -6731,7 +6544,6 @@ exports[`Crypto Chart Box should show chart with Others 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 CryptoChartBoxComponent-expandMore-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"

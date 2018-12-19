@@ -61,6 +61,13 @@ import ModalStories from './materialui/story-modals';
 import DatePickerStories from './materialui/story-datepickers';
 
 setup();
+import { UnlockBox } from '../../src/marketplace/unlock-box'
+import { WithoutBalance } from '../../src/marketplace/without-balance'
+import { Unlock } from '../../src/marketplace/unlock';
+import { Return } from '../../src/marketplace/return';
+import { UnlockProgress } from '../../src/marketplace/unlock-progress';
+
+
 setAddon(JSXAddon);
 
 const lightOnDark = host({
@@ -76,6 +83,10 @@ const transferModal = host({
 	background: '#222b34',
 	width: '700px',
 });
+
+const commonStory = storiesOf('Common', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+
+commonStory.addWithJSX('Slider', () => {});
 
 const tStory = storiesOf('Typography', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
@@ -104,7 +115,7 @@ priceStory.addWithJSX('CryptoChartBox', () => (
 		tokens={[
 			{ name: 'Selfkey', symbol: 'KEY', balance: 30, balanceInFiat: 0 },
 			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 0 },
-			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 0 }
+			{ name: 'Ethereum', symbol: 'ETH', balance: 0.00548, balanceInFiat: 0 },
 		]}
 		topTokenListSize={5}
 		viewAll={true}
@@ -204,6 +215,16 @@ transactionrStory.addWithJSX('TransactionError', () => <TransactionError message
 
 transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' transactionHash='0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd' amount={0.00001}/>);
 
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
+	<TransactionSendProgressBox
+		locale="en"
+		status="Pending"
+		cryptoCurrency="KEY"
+		address="0x4184288c556524df9cb9e58b73265ee66dca4efe"
+		transactionHash="0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd"
+		amount={0.00001}
+	/>
+));
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
@@ -228,11 +249,16 @@ marketplaceStory.addWithJSX('ItemDetails', () => (
 	<ItemDetails
 		item={{
 			name: 'Gatecoin',
-			logo: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+			logo: [
+				{
+					filename: 'full_GatecoinLogo.png',
+					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+				},
+			],
 			status: 'Active',
 			integration: 'Unlock Marketplace',
 			description:
-				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets.',
+				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
 			location: 'Hong Kong',
 			year_launched: 2013,
 			coin_pairs: '72',
@@ -242,11 +268,18 @@ marketplaceStory.addWithJSX('ItemDetails', () => (
 			fiat_supported: ['EUR', 'USD', 'HKD'],
 			margin_trading: 'no',
 			kyc_aml: 'yes',
-			excluded_residents: 'United States',
+			excluded_residents: ['United States'],
 			url: 'http://www.gatecoin.com',
 			email: 'support@gatecoin.com',
-			kyc_template: ['First Name', 'Last Name', 'Country Of Residence', 'National ID', 'National ID Self'],
+			kyc_template: [
+				{ name: 'First Name', type: 'metadata', isEntered: true },
+				{ name: 'Last Name', type: 'metadata', isEntered: true },
+				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
+				{ name: 'National ID', type: 'document', isEntered: false },
+				{ name: 'National ID Self', type: 'document', isEntered: false },
+			],
 		}}
+		hasBalance={false}
 	/>
 ));
 
@@ -338,4 +371,232 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));
+marketplaceStory.addWithJSX('ItemDetails Pending', () => (
+	<ItemDetails
+		item={{
+			name: 'Gatecoin',
+			logo: [
+				{
+					filename: 'full_GatecoinLogo.png',
+					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+				},
+			],
+			status: 'pending',
+			integration: 'PENDING KEY DEPOSIT',
+			description:
+				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
+			location: 'Hong Kong',
+			year_launched: 2013,
+			coin_pairs: '72',
+			maker_fee: '0.25%',
+			taker_fee: '0.35%',
+			fiat_payments: 'Bank trasnfer',
+			fiat_supported: ['EUR', 'USD', 'HKD'],
+			margin_trading: 'no',
+			kyc_aml: 'yes',
+			excluded_residents: ['United States'],
+			url: 'http://www.gatecoin.com',
+			email: 'support@gatecoin.com',
+			kyc_template: [
+				{ name: 'First Name', type: 'metadata', isEntered: true },
+				{ name: 'Last Name', type: 'metadata', isEntered: true },
+				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
+				{ name: 'National ID', type: 'document', isEntered: false },
+				{ name: 'National ID Self', type: 'document', isEntered: false },
+			],
+		}}
+		hasBalance={false}
+	/>
+));
 
+marketplaceStory.addWithJSX('ItemDetails Locked', () => (
+	<ItemDetails
+		item={{
+			name: 'Gatecoin',
+			logo: [
+				{
+					filename: 'full_GatecoinLogo.png',
+					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+				},
+			],
+			status: 'locked',
+			integration: 'KEY DEPOSIT',
+			releaseDate: Date.now() + 2 * 24 * 60 * 60 * 1000,
+			description:
+				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
+			location: 'Hong Kong',
+			year_launched: 2013,
+			coin_pairs: '72',
+			maker_fee: '0.25%',
+			taker_fee: '0.35%',
+			fiat_payments: 'Bank trasnfer',
+			fiat_supported: ['EUR', 'USD', 'HKD'],
+			margin_trading: 'no',
+			kyc_aml: 'yes',
+			excluded_residents: ['United States'],
+			url: 'http://www.gatecoin.com',
+			email: 'support@gatecoin.com',
+			kyc_template: [
+				{ name: 'First Name', type: 'metadata', isEntered: true },
+				{ name: 'Last Name', type: 'metadata', isEntered: true },
+				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
+				{ name: 'National ID', type: 'document', isEntered: false },
+				{ name: 'National ID Self', type: 'document', isEntered: false },
+			],
+		}}
+		hasBalance={false}
+	/>
+));
+
+marketplaceStory.addWithJSX('ItemDetails unlocked', () => (
+	<ItemDetails
+		item={{
+			name: 'Gatecoin',
+			logo: [
+				{
+					filename: 'full_GatecoinLogo.png',
+					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+				},
+			],
+			status: 'unlocked',
+			integration: 'Unlock Marketplace',
+			description:
+				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
+			location: 'Hong Kong',
+			year_launched: 2013,
+			coin_pairs: '72',
+			maker_fee: '0.25%',
+			taker_fee: '0.35%',
+			fiat_payments: 'Bank trasnfer',
+			fiat_supported: ['EUR', 'USD', 'HKD'],
+			margin_trading: 'no',
+			kyc_aml: 'yes',
+			excluded_residents: ['United States'],
+			url: 'http://www.gatecoin.com',
+			email: 'support@gatecoin.com',
+			kyc_template: [
+				{ name: 'First Name', type: 'metadata', isEntered: true },
+				{ name: 'Last Name', type: 'metadata', isEntered: true },
+				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
+				{ name: 'National ID', type: 'document', isEntered: false },
+				{ name: 'National ID Self', type: 'document', isEntered: false },
+			],
+		}}
+		hasBalance={false}
+	/>
+));
+
+marketplaceStory.addWithJSX('ItemDetails inactive', () => (
+	<ItemDetails
+		item={{
+			name: 'Gatecoin',
+			logo: [
+				{
+					filename: 'full_GatecoinLogo.png',
+					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
+				},
+			],
+			status: 'Inactive',
+			integration: 'Coming Soon',
+			description:
+				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
+			location: 'Hong Kong',
+			year_launched: 2013,
+			coin_pairs: '72',
+			maker_fee: '0.25%',
+			taker_fee: '0.35%',
+			fiat_payments: 'Bank trasnfer',
+			fiat_supported: ['EUR', 'USD', 'HKD'],
+			margin_trading: 'no',
+			kyc_aml: 'yes',
+			excluded_residents: ['United States'],
+			url: 'http://www.gatecoin.com',
+			email: 'support@gatecoin.com',
+			kyc_template: [
+				{ name: 'First Name', type: 'metadata', isEntered: true },
+				{ name: 'Last Name', type: 'metadata', isEntered: true },
+				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
+				{ name: 'National ID', type: 'document', isEntered: false },
+				{ name: 'National ID Self', type: 'document', isEntered: false },
+			],
+		}}
+		hasBalance={false}
+	/>
+));
+
+marketplaceStory.addWithJSX('WithoutBalanceModal', () => (
+	<UnlockBox>
+		<WithoutBalance
+			exchanges={[
+				{
+					name: 'Gatecoin',
+					url: 'https://gatecoin.com/',
+				},
+				{
+					name: 'WandX',
+					url: 'https://www.wandx.co/',
+				},
+				{
+					name: 'Kyber Network',
+					url: 'https://kyber.network/',
+				},
+				{
+					name: 'TagCash',
+					url: 'https://tagcash.com/',
+				},
+				{
+					name: 'Gatecoin',
+					url: 'https://gatecoin.com/',
+				},
+				{
+					name: 'WandX',
+					url: 'https://www.wandx.co/',
+				},
+				{
+					name: 'Kyber Network',
+					url: 'https://kyber.network/',
+				},
+				{
+					name: 'TagCash',
+					url: 'https://tagcash.com/',
+				},
+			]}
+		/>
+	</UnlockBox>
+));
+
+marketplaceStory.addWithJSX('UnlockModal', () => (
+	<UnlockBox>
+		<Unlock
+			minGasPrice={11800000000}
+			maxGasPrice={13000000000}
+			gasLimit={45000}
+			fiat="USD"
+			fiatRate={217.73}
+			onTransactionFeeChange={(value: number) => console.log(value)}
+			onConfirm={(value: number) => alert(value)}
+			onCancel={() => alert('Canceled')}
+		/>
+	</UnlockBox>
+));
+
+marketplaceStory.addWithJSX('ReturnModal', () => (
+	<UnlockBox text="Return KEY Deposit">
+		<Return
+			minGasPrice={11800000000}
+			maxGasPrice={13000000000}
+			gasLimit={45000}
+			fiat="USD"
+			fiatRate={217.73}
+			onTransactionFeeChange={(value: number) => console.log(value)}
+			onConfirm={(value: number) => alert(value)}
+			onCancel={() => alert('Canceled')}
+		/>
+	</UnlockBox>
+));
+
+marketplaceStory.addWithJSX('UnlockProgress', () => (
+	<UnlockBox>
+		<UnlockProgress />
+	</UnlockBox>
+));

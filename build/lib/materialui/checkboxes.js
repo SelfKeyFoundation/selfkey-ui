@@ -71,15 +71,6 @@ exports.DefaultRadio = core_1.withStyles({
         padding: 0,
         width: '18px',
     },
-    '&$checked:not($disabled):not($colorSecondary)': {
-    // backgroundColor: `${primary} !important`,
-    // border: `1px solid ${primary} !important`,
-    // color: `${baseDark} !important`,
-    // backgroundColor: `#1e262d !important`,
-    // border: `1px solid ${primary} !important`,
-    // boxSizing: 'border-box',
-    // color: `${primary} !important`,
-    },
     disabled: {
         backgroundColor: '#222B34',
         border: '1px solid #2F3B48',

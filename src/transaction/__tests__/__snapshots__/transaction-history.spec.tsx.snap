@@ -22,7 +22,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-12"
-            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 26 26"
@@ -114,7 +113,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
-            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -185,7 +183,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
-            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -278,7 +275,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-15"
-            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -366,7 +362,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
-            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -437,7 +432,255 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
-            color={undefined}
+            focusable="false"
+            role="presentation"
+            version="1.1"
+            viewBox="0 0 22 16"
+          >
+            <title>
+              icon-view
+            </title>
+            <desc>
+              Created with Sketch.
+            </desc>
+            <defs />
+            <g
+              fill="none"
+              fillRule="evenodd"
+              id="🖥-Main-Dashboard"
+              stroke="none"
+              strokeWidth="1"
+            >
+              <g
+                fill="#93B0C1"
+                id="302-Dashboard-Full-State-Expanded"
+                transform="translate(-1199.000000, -2026.000000)"
+              >
+                <g
+                  id="Transactions"
+                  transform="translate(150.000000, 1616.000000)"
+                >
+                  <g
+                    id="Table"
+                    transform="translate(29.000000, 105.000000)"
+                  >
+                    <g
+                      id="Col4"
+                      transform="translate(946.000000, 4.000000)"
+                    >
+                      <g
+                        id="action"
+                        transform="translate(0.000000, 300.000000)"
+                      >
+                        <g
+                          id="view"
+                          transform="translate(74.000000, 0.000000)"
+                        >
+                          <g
+                            id="icon-view"
+                            transform="translate(0.000000, 1.000000)"
+                          >
+                            <path
+                              d="M20.9872593,7.03051852 C20.8165926,6.75081481 16.7205926,0.18962963 10.770963,0.18962963 C4.82133333,0.18962963 0.725333333,6.75081481 0.554666667,7.03051852 C0.27231237,7.48825637 0.27231237,8.066114 0.554666667,8.52385185 C0.725333333,8.80355556 4.82133333,15.341037 10.7662222,15.36 L10.7946667,15.36 C16.7253333,15.36 20.8213333,8.79881481 20.992,8.51911111 C21.2709566,8.06163691 21.269124,7.48620666 20.9872593,7.03051852 L20.9872593,7.03051852 Z M10.7946667,13.9377778 L10.7946667,13.9377778 C5.57985185,13.9377778 1.78725926,7.77481481 1.78725926,7.77481481 C1.78725926,7.77481481 5.57985185,1.61185185 10.7946667,1.61185185 C16.0094815,1.61185185 19.8020741,7.77481481 19.8020741,7.77481481 C19.8020741,7.77481481 15.9952593,13.9377778 10.7946667,13.9377778 Z"
+                              id="Shape"
+                            />
+                            <path
+                              d="M10.770963,3.98222222 C8.67637191,3.98222222 6.97837037,5.68022376 6.97837037,7.77481481 C6.97837037,9.86940587 8.67637191,11.5674074 10.770963,11.5674074 C12.865554,11.5674074 14.5635556,9.86940587 14.5635556,7.77481481 C14.5635556,5.68022376 12.865554,3.98222222 10.770963,3.98222222 Z M10.770963,10.1451852 C9.46184356,10.1451852 8.40059259,9.08393422 8.40059259,7.77481481 C8.40059259,6.46569541 9.46184356,5.40444444 10.770963,5.40444444 C12.0800824,5.40444444 13.1413333,6.46569541 13.1413333,7.77481481 C13.1413333,9.08393422 12.0800824,10.1451852 10.770963,10.1451852 L10.770963,10.1451852 Z"
+                              id="Shape"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <span
+            className="TransactionHistoryComponent-actionTitle-0-1-9"
+          >
+             View 
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="TransactionHistoryComponent-line-0-1-1"
+    >
+       
+    </div>
+  </div>
+  <div>
+    <div
+      className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-space-between-20 TransactionHistoryComponent-row-0-1-3"
+    >
+      <div
+        className="TransactionHistoryComponent-flex-0-1-2"
+      >
+        <span
+          className="TransactionHistoryComponent-icon-0-1-5"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-98"
+            focusable="false"
+            role="presentation"
+            style={
+              Object {
+                "height": "26px",
+                "width": "20px",
+              }
+            }
+            viewBox="0 0 20 26"
+          >
+            <title>
+              icon-hourglass
+            </title>
+            <desc>
+              Created with Sketch.
+            </desc>
+            <defs />
+            <g
+              fill="none"
+              fillRule="evenodd"
+              id="🖥-Main-Dashboard"
+              stroke="none"
+              strokeWidth="1"
+            >
+              <g
+                fill="#697C95"
+                fillRule="nonzero"
+                id="302-Dashboard-Full-State-Expanded"
+                transform="translate(-186.000000, -1871.000000)"
+              >
+                <g
+                  id="Transactions"
+                  transform="translate(150.000000, 1616.000000)"
+                >
+                  <g
+                    id="Table"
+                    transform="translate(29.000000, 105.000000)"
+                  >
+                    <g
+                      id="Col0"
+                      transform="translate(1.000000, 0.000000)"
+                    >
+                      <path
+                        d="M24.28125,150 L7.21875,150 C6.54564453,150 6,150.545645 6,151.21875 L6,152.03125 C6,152.704355 6.54564453,153.25 7.21875,153.25 C7.21875,157.869316 9.80940625,161.767742 13.3552578,163 C9.80940625,164.232258 7.21875,168.130684 7.21875,172.75 C6.54564453,172.75 6,173.295645 6,173.96875 L6,174.78125 C6,175.454355 6.54564453,176 7.21875,176 L24.28125,176 C24.9543555,176 25.5,175.454355 25.5,174.78125 L25.5,173.96875 C25.5,173.295645 24.9543555,172.75 24.28125,172.75 C24.28125,168.130684 21.6905937,164.232258 18.1447422,163 C21.6905937,161.767742 24.28125,157.869316 24.28125,153.25 C24.9543555,153.25 25.5,152.704355 25.5,152.03125 L25.5,151.21875 C25.5,150.545645 24.9543555,150 24.28125,150 Z M20.4686953,169.5 L11.0314062,169.5 C11.8976836,167.12359 13.6769062,165.4375 15.75,165.4375 C17.8229414,165.4375 19.6023672,167.123234 20.4686953,169.5 Z M20.4696602,156.5 L11.0313047,156.5 C10.6712656,155.512203 10.46875,154.405172 10.46875,153.25 L21.03125,153.25 C21.03125,154.408066 20.8287852,155.514184 20.4696602,156.5 Z"
+                        id="icon-hourglass"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span
+          className="TransactionHistoryComponent-date-0-1-4"
+        >
+          1995/45/41
+        </span>
+        <div>
+          <span
+            className="TransactionHistoryComponent-status-0-1-6"
+          >
+            panding
+             
+          </span>
+          <span
+            className="TransactionHistoryComponent-cryptoCurrency-0-1-7"
+          >
+            key
+          </span>
+        </div>
+      </div>
+      <div
+        className="TransactionHistoryComponent-flex-0-1-2"
+      >
+        <span
+          className="TransactionHistoryComponent-value-0-1-8"
+        >
+          +15
+        </span>
+        <div
+          className="TransactionHistoryComponent-copyActionContainer-0-1-11"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-98 Component-root-0-1-13"
+            focusable="false"
+            role="presentation"
+            version="1.1"
+            viewBox="0 0 14 16"
+          >
+            <title>
+              icon-copy
+            </title>
+            <desc>
+              Created with Sketch.
+            </desc>
+            <defs />
+            <g
+              fill="none"
+              fillRule="evenodd"
+              id="🖥-Main-Dashboard"
+              stroke="none"
+              strokeWidth="1"
+            >
+              <g
+                fill="#93B0C1"
+                id="302-Dashboard-Full-State-Expanded"
+                transform="translate(-1125.000000, -2025.000000)"
+              >
+                <g
+                  id="Transactions"
+                  transform="translate(150.000000, 1616.000000)"
+                >
+                  <g
+                    id="Table"
+                    transform="translate(29.000000, 105.000000)"
+                  >
+                    <g
+                      id="Col4"
+                      transform="translate(946.000000, 4.000000)"
+                    >
+                      <g
+                        id="action"
+                        transform="translate(0.000000, 300.000000)"
+                      >
+                        <g
+                          id="copy"
+                        >
+                          <path
+                            d="M13.5625,2.0625 C13.8541681,2.35416813 14,2.70833125 14,3.125 L14,11.5 C14,11.9166688 13.8541681,12.2708319 13.5625,12.5625 C13.2708319,12.8541681 12.9166687,13 12.5,13 L10,13 L10,14.5 C10,14.9166688 9.85416812,15.2708319 9.5625,15.5625 C9.27083188,15.8541681 8.91666875,16 8.5,16 L1.5,16 C1.08333125,16 0.729168125,15.8541681 0.4375,15.5625 C0.145831875,15.2708319 0,14.9166688 0,14.5 L0,4.5 C0,4.08333125 0.145831875,3.72916813 0.4375,3.4375 C0.729168125,3.14583187 1.08333125,3 1.5,3 L4,3 L4,1.5 C4,1.08333125 4.14583188,0.729168125 4.4375,0.4375 C4.72916812,0.145831875 5.08333125,0 5.5,0 L10.875,0 C11.2916687,0 11.6458319,0.145831875 11.9375,0.4375 L13.5625,2.0625 Z M8.3125,14.5 C8.35416688,14.5 8.39583312,14.4791669 8.4375,14.4375 C8.47916688,14.3958331 8.5,14.3541669 8.5,14.3125 L8.5,13 L5.5,13 C5.08333125,13 4.72916812,12.8541681 4.4375,12.5625 C4.14583188,12.2708319 4,11.9166688 4,11.5 L4,4.5 L1.6875,4.5 C1.64583312,4.5 1.60416688,4.52083313 1.5625,4.5625 C1.52083312,4.60416687 1.5,4.64583313 1.5,4.6875 L1.5,14.3125 C1.5,14.3541669 1.52083312,14.3958331 1.5625,14.4375 C1.60416688,14.4791669 1.64583312,14.5 1.6875,14.5 L8.3125,14.5 Z M12.3125,11.5 C12.3541669,11.5 12.3958331,11.4791669 12.4375,11.4375 C12.4791669,11.3958331 12.5,11.3541669 12.5,11.3125 L12.5,5 L9.75,5 C9.54166562,5 9.36458406,4.92708406 9.21875,4.78125 C9.07291594,4.63541594 9,4.45833438 9,4.25 L9,1.5 L5.6875,1.5 C5.64583312,1.5 5.60416688,1.52083313 5.5625,1.5625 C5.52083312,1.60416687 5.5,1.64583313 5.5,1.6875 L5.5,11.3125 C5.5,11.3541669 5.52083312,11.3958331 5.5625,11.4375 C5.60416688,11.4791669 5.64583312,11.5 5.6875,11.5 L12.3125,11.5 Z M12.5,3.5 L12.5,3.1875 C12.5,3.14583313 12.4791669,3.10416687 12.4375,3.0625 L10.9375,1.5625 C10.8958331,1.52083313 10.8541669,1.5 10.8125,1.5 L10.5,1.5 L10.5,3.5 L12.5,3.5 Z"
+                            id="icon-copy"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <span
+            className="TransactionHistoryComponent-actionTitle-0-1-9"
+          >
+             
+            Copy
+             
+          </span>
+        </div>
+        <div
+          className="TransactionHistoryComponent-viewActionContainer-0-1-10"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-98 Component-root-0-1-14"
             focusable="false"
             role="presentation"
             version="1.1"
@@ -530,253 +773,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-16"
-            color={undefined}
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 20 26"
-          >
-            <title>
-              icon-hourglass
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
-            <defs />
-            <g
-              fill="none"
-              fillRule="evenodd"
-              id="🖥-Main-Dashboard"
-              stroke="none"
-              strokeWidth="1"
-            >
-              <g
-                fill="#697C95"
-                fill-rule="nonzero"
-                id="302-Dashboard-Full-State-Expanded"
-                transform="translate(-186.000000, -1871.000000)"
-              >
-                <g
-                  id="Transactions"
-                  transform="translate(150.000000, 1616.000000)"
-                >
-                  <g
-                    id="Table"
-                    transform="translate(29.000000, 105.000000)"
-                  >
-                    <g
-                      id="Col0"
-                      transform="translate(1.000000, 0.000000)"
-                    >
-                      <path
-                        d="M24.28125,150 L7.21875,150 C6.54564453,150 6,150.545645 6,151.21875 L6,152.03125 C6,152.704355 6.54564453,153.25 7.21875,153.25 C7.21875,157.869316 9.80940625,161.767742 13.3552578,163 C9.80940625,164.232258 7.21875,168.130684 7.21875,172.75 C6.54564453,172.75 6,173.295645 6,173.96875 L6,174.78125 C6,175.454355 6.54564453,176 7.21875,176 L24.28125,176 C24.9543555,176 25.5,175.454355 25.5,174.78125 L25.5,173.96875 C25.5,173.295645 24.9543555,172.75 24.28125,172.75 C24.28125,168.130684 21.6905937,164.232258 18.1447422,163 C21.6905937,161.767742 24.28125,157.869316 24.28125,153.25 C24.9543555,153.25 25.5,152.704355 25.5,152.03125 L25.5,151.21875 C25.5,150.545645 24.9543555,150 24.28125,150 Z M20.4686953,169.5 L11.0314062,169.5 C11.8976836,167.12359 13.6769062,165.4375 15.75,165.4375 C17.8229414,165.4375 19.6023672,167.123234 20.4686953,169.5 Z M20.4696602,156.5 L11.0313047,156.5 C10.6712656,155.512203 10.46875,154.405172 10.46875,153.25 L21.03125,153.25 C21.03125,154.408066 20.8287852,155.514184 20.4696602,156.5 Z"
-                        id="icon-hourglass"
-                      />
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-        <span
-          className="TransactionHistoryComponent-date-0-1-4"
-        >
-          1995/45/41
-        </span>
-        <div>
-          <span
-            className="TransactionHistoryComponent-status-0-1-6"
-          >
-            panding
-             
-          </span>
-          <span
-            className="TransactionHistoryComponent-cryptoCurrency-0-1-7"
-          >
-            key
-          </span>
-        </div>
-      </div>
-      <div
-        className="TransactionHistoryComponent-flex-0-1-2"
-      >
-        <span
-          className="TransactionHistoryComponent-value-0-1-8"
-        >
-          +15
-        </span>
-        <div
-          className="TransactionHistoryComponent-copyActionContainer-0-1-11"
-          onClick={[Function]}
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-98 Component-root-0-1-13"
-            color={undefined}
-            focusable="false"
-            role="presentation"
-            version="1.1"
-            viewBox="0 0 14 16"
-          >
-            <title>
-              icon-copy
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
-            <defs />
-            <g
-              fill="none"
-              fillRule="evenodd"
-              id="🖥-Main-Dashboard"
-              stroke="none"
-              strokeWidth="1"
-            >
-              <g
-                fill="#93B0C1"
-                id="302-Dashboard-Full-State-Expanded"
-                transform="translate(-1125.000000, -2025.000000)"
-              >
-                <g
-                  id="Transactions"
-                  transform="translate(150.000000, 1616.000000)"
-                >
-                  <g
-                    id="Table"
-                    transform="translate(29.000000, 105.000000)"
-                  >
-                    <g
-                      id="Col4"
-                      transform="translate(946.000000, 4.000000)"
-                    >
-                      <g
-                        id="action"
-                        transform="translate(0.000000, 300.000000)"
-                      >
-                        <g
-                          id="copy"
-                        >
-                          <path
-                            d="M13.5625,2.0625 C13.8541681,2.35416813 14,2.70833125 14,3.125 L14,11.5 C14,11.9166688 13.8541681,12.2708319 13.5625,12.5625 C13.2708319,12.8541681 12.9166687,13 12.5,13 L10,13 L10,14.5 C10,14.9166688 9.85416812,15.2708319 9.5625,15.5625 C9.27083188,15.8541681 8.91666875,16 8.5,16 L1.5,16 C1.08333125,16 0.729168125,15.8541681 0.4375,15.5625 C0.145831875,15.2708319 0,14.9166688 0,14.5 L0,4.5 C0,4.08333125 0.145831875,3.72916813 0.4375,3.4375 C0.729168125,3.14583187 1.08333125,3 1.5,3 L4,3 L4,1.5 C4,1.08333125 4.14583188,0.729168125 4.4375,0.4375 C4.72916812,0.145831875 5.08333125,0 5.5,0 L10.875,0 C11.2916687,0 11.6458319,0.145831875 11.9375,0.4375 L13.5625,2.0625 Z M8.3125,14.5 C8.35416688,14.5 8.39583312,14.4791669 8.4375,14.4375 C8.47916688,14.3958331 8.5,14.3541669 8.5,14.3125 L8.5,13 L5.5,13 C5.08333125,13 4.72916812,12.8541681 4.4375,12.5625 C4.14583188,12.2708319 4,11.9166688 4,11.5 L4,4.5 L1.6875,4.5 C1.64583312,4.5 1.60416688,4.52083313 1.5625,4.5625 C1.52083312,4.60416687 1.5,4.64583313 1.5,4.6875 L1.5,14.3125 C1.5,14.3541669 1.52083312,14.3958331 1.5625,14.4375 C1.60416688,14.4791669 1.64583312,14.5 1.6875,14.5 L8.3125,14.5 Z M12.3125,11.5 C12.3541669,11.5 12.3958331,11.4791669 12.4375,11.4375 C12.4791669,11.3958331 12.5,11.3541669 12.5,11.3125 L12.5,5 L9.75,5 C9.54166562,5 9.36458406,4.92708406 9.21875,4.78125 C9.07291594,4.63541594 9,4.45833438 9,4.25 L9,1.5 L5.6875,1.5 C5.64583312,1.5 5.60416688,1.52083313 5.5625,1.5625 C5.52083312,1.60416687 5.5,1.64583313 5.5,1.6875 L5.5,11.3125 C5.5,11.3541669 5.52083312,11.3958331 5.5625,11.4375 C5.60416688,11.4791669 5.64583312,11.5 5.6875,11.5 L12.3125,11.5 Z M12.5,3.5 L12.5,3.1875 C12.5,3.14583313 12.4791669,3.10416687 12.4375,3.0625 L10.9375,1.5625 C10.8958331,1.52083313 10.8541669,1.5 10.8125,1.5 L10.5,1.5 L10.5,3.5 L12.5,3.5 Z"
-                            id="icon-copy"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-          <span
-            className="TransactionHistoryComponent-actionTitle-0-1-9"
-          >
-             
-            Copy
-             
-          </span>
-        </div>
-        <div
-          className="TransactionHistoryComponent-viewActionContainer-0-1-10"
-          onClick={[Function]}
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-98 Component-root-0-1-14"
-            color={undefined}
-            focusable="false"
-            role="presentation"
-            version="1.1"
-            viewBox="0 0 22 16"
-          >
-            <title>
-              icon-view
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
-            <defs />
-            <g
-              fill="none"
-              fillRule="evenodd"
-              id="🖥-Main-Dashboard"
-              stroke="none"
-              strokeWidth="1"
-            >
-              <g
-                fill="#93B0C1"
-                id="302-Dashboard-Full-State-Expanded"
-                transform="translate(-1199.000000, -2026.000000)"
-              >
-                <g
-                  id="Transactions"
-                  transform="translate(150.000000, 1616.000000)"
-                >
-                  <g
-                    id="Table"
-                    transform="translate(29.000000, 105.000000)"
-                  >
-                    <g
-                      id="Col4"
-                      transform="translate(946.000000, 4.000000)"
-                    >
-                      <g
-                        id="action"
-                        transform="translate(0.000000, 300.000000)"
-                      >
-                        <g
-                          id="view"
-                          transform="translate(74.000000, 0.000000)"
-                        >
-                          <g
-                            id="icon-view"
-                            transform="translate(0.000000, 1.000000)"
-                          >
-                            <path
-                              d="M20.9872593,7.03051852 C20.8165926,6.75081481 16.7205926,0.18962963 10.770963,0.18962963 C4.82133333,0.18962963 0.725333333,6.75081481 0.554666667,7.03051852 C0.27231237,7.48825637 0.27231237,8.066114 0.554666667,8.52385185 C0.725333333,8.80355556 4.82133333,15.341037 10.7662222,15.36 L10.7946667,15.36 C16.7253333,15.36 20.8213333,8.79881481 20.992,8.51911111 C21.2709566,8.06163691 21.269124,7.48620666 20.9872593,7.03051852 L20.9872593,7.03051852 Z M10.7946667,13.9377778 L10.7946667,13.9377778 C5.57985185,13.9377778 1.78725926,7.77481481 1.78725926,7.77481481 C1.78725926,7.77481481 5.57985185,1.61185185 10.7946667,1.61185185 C16.0094815,1.61185185 19.8020741,7.77481481 19.8020741,7.77481481 C19.8020741,7.77481481 15.9952593,13.9377778 10.7946667,13.9377778 Z"
-                              id="Shape"
-                            />
-                            <path
-                              d="M10.770963,3.98222222 C8.67637191,3.98222222 6.97837037,5.68022376 6.97837037,7.77481481 C6.97837037,9.86940587 8.67637191,11.5674074 10.770963,11.5674074 C12.865554,11.5674074 14.5635556,9.86940587 14.5635556,7.77481481 C14.5635556,5.68022376 12.865554,3.98222222 10.770963,3.98222222 Z M10.770963,10.1451852 C9.46184356,10.1451852 8.40059259,9.08393422 8.40059259,7.77481481 C8.40059259,6.46569541 9.46184356,5.40444444 10.770963,5.40444444 C12.0800824,5.40444444 13.1413333,6.46569541 13.1413333,7.77481481 C13.1413333,9.08393422 12.0800824,10.1451852 10.770963,10.1451852 L10.770963,10.1451852 Z"
-                              id="Shape"
-                            />
-                          </g>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-          <span
-            className="TransactionHistoryComponent-actionTitle-0-1-9"
-          >
-             View 
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      className="TransactionHistoryComponent-line-0-1-1"
-    >
-       
-    </div>
-  </div>
-  <div>
-    <div
-      className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-space-between-20 TransactionHistoryComponent-row-0-1-3"
-    >
-      <div
-        className="TransactionHistoryComponent-flex-0-1-2"
-      >
-        <span
-          className="TransactionHistoryComponent-icon-0-1-5"
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-98 Component-root-0-1-17"
-            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -864,7 +860,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
-            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -935,7 +930,6 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
-            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
