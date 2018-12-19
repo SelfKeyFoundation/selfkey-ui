@@ -1,4 +1,7 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
 var jss_setup_1 = require("./jss-setup");
 jss_setup_1.setup();
@@ -94,8 +97,7 @@ var address_book_edit_1 = require("./address-book/address-book-edit");
 exports.AddressBookEdit = address_book_edit_1.AddressBookEdit;
 var modal_box_1 = require("./common/modal-box");
 exports.ModalBox = modal_box_1.ModalBox;
-var selfkey_dark_theme_1 = require("./theme/selfkey-dark-theme");
-exports.SelfkeyDarkTheme = selfkey_dark_theme_1.SelfkeyDarkTheme;
+__export(require("./theme/selfkey-dark-theme"));
 // Icons
 var green_tick_1 = require("./icons/green-tick");
 exports.GreenTickIcon = green_tick_1.GreenTickIcon;
