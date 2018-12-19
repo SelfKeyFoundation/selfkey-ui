@@ -1,20 +1,20 @@
 import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
-import { 
-    withStyles, 
+import {
+    withStyles,
     Paper,
     Grid,
 } from "@material-ui/core";
 import { base } from "colors";
 import { Paragraph } from "./typography";
-import { 
+import {
     OutlineButton,
-    FullButton, 
+    FullButton,
 } from "./buttons";
-import ModalCloseIcon from '../../src/icons/modal-close';
-import { 
-    ModalHeader, 
+import ModalCloseIcon from '../icons/modal-close';
+import {
+    ModalHeader,
     ModalBody,
     ModalCloseButton,
 } from "./modalElements";

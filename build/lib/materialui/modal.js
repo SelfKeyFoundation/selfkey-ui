@@ -20,7 +20,7 @@ var core_1 = require("@material-ui/core");
 var colors_1 = require("colors");
 var typography_1 = require("./typography");
 var buttons_1 = require("./buttons");
-var modal_close_1 = require("../../src/icons/modal-close");
+var modal_close_1 = require("../icons/modal-close");
 var modalElements_1 = require("./modalElements");
 exports.ModalWrap = core_1.withStyles({
     root: {
