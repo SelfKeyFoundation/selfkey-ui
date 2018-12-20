@@ -33,6 +33,7 @@ export * from '../icons/person';
 export * from '../icons/selfkeyLogo';
 
 export { MuiEditIcon } from '../icons/muiedit';
+export { MuiDeleteIcon } from '../icons/muidelete';
 
 const theme = createMuiTheme({
     palette: {

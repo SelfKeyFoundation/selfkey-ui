@@ -12,7 +12,8 @@ import {
 	TableHeader,
 	TableText,
 	TableSmallText,
-	MuiEditIcon,
+    MuiEditIcon,
+    MuiDeleteIcon,
 	LargeTableHeadRow,
 	SmallTableHeadRow,
 	SmallTableCell,
@@ -21,7 +22,6 @@ import {
     Tag,
     TagTableCell,
 } from '../../../src/theme/selfkey-dark-theme';
-import DeleteIcon from '../../../src/icons/delete';
 import PersonIcon from '../../../src/icons/person';
 import CorporateIcon from '../../../src/icons/corporate';
 import SelfkeyLogo from '../../../src/icons/selfkeyLogo';
@@ -98,7 +98,7 @@ export default function TableStories () {
                                         <MuiEditIcon/>
                                     </IconButton>
                                     <IconButton aria-label="Delete">
-                                        <DeleteIcon />
+                                        <MuiDeleteIcon />
                                     </IconButton>
                                 </TableText>
                             </TableCell>
@@ -237,10 +237,10 @@ export default function TableStories () {
 
                                         { row.disabled 
                                             ?  <IconButton aria-label="Delete" disabled>
-                                                    <DeleteIcon/>
+                                                    <MuiDeleteIcon/>
                                                 </IconButton>
                                             :  <IconButton aria-label="Delete">
-                                                    <DeleteIcon/>
+                                                    <MuiDeleteIcon/>
                                                 </IconButton>
                                         }
                                     </TableSmallText>
@@ -323,7 +323,7 @@ export default function TableStories () {
                                         <MuiEditIcon/>
                                     </IconButton>
                                     <IconButton aria-label="Delete">
-                                        <DeleteIcon />
+                                        <MuiDeleteIcon />
                                     </IconButton>
                                 </TableText>
                             </TableCell>

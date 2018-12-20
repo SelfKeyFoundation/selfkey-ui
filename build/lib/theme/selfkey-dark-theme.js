@@ -28,6 +28,8 @@ __export(require("../icons/person"));
 __export(require("../icons/selfkeyLogo"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
+var muidelete_1 = require("../icons/muidelete");
+exports.MuiDeleteIcon = muidelete_1.MuiDeleteIcon;
 var theme = core_1.createMuiTheme({
     palette: {
         primary: {
