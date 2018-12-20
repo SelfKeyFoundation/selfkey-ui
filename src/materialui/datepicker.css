@@ -26,6 +26,7 @@
     line-height: 21px;
     outline: none;
     padding-left: 16px;
+    padding-right: 16px;
 }
 
 .rdt .form-control:focus {

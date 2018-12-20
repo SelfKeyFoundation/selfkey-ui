@@ -7,7 +7,8 @@ class KeyPicker extends React.Component {
         return (
             <React.Fragment>
                 <Datetime 
-                    inputProps={{ placeholder: '19/12/2018 11:23 AM' }}
+                    dateFormat="DD MMM YYYY"
+                    inputProps={{ placeholder: '19 Dec 2018 11:23 AM' }}
                     closeOnSelect={true}
                 />
             </React.Fragment>
