@@ -13,7 +13,6 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
 var Datetime = require("react-datetime");
 require("./datepicker.css");
 var KeyPicker = /** @class */ (function (_super) {
@@ -21,11 +20,7 @@ var KeyPicker = /** @class */ (function (_super) {
     function KeyPicker() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    KeyPicker.prototype.render = function () {
-        return (React.createElement(React.Fragment, null,
-            React.createElement(Datetime, { dateFormat: "DD MMM YYYY", inputProps: { placeholder: '19 Dec 2018 11:23 AM' }, closeOnSelect: true })));
-    };
     return KeyPicker;
-}(React.Component));
+}(Datetime));
 exports.default = KeyPicker;
 //# sourceMappingURL=datepicker.js.map
