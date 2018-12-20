@@ -11,6 +11,7 @@ __export(require("../materialui/buttonGroups"));
 __export(require("../materialui/buttons"));
 __export(require("../materialui/checkboxes"));
 __export(require("../materialui/colorPresentation"));
+__export(require("../materialui/datepicker"));
 __export(require("../materialui/dropdowns"));
 __export(require("../materialui/inputs"));
 __export(require("../materialui/lists"));

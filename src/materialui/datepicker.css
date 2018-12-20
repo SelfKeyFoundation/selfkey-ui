@@ -1,7 +1,19 @@
 .rdt {
-    display: table;
     font-family: 'Lato', arial, sans-serif;
+}
+
+.rdtOpen {
+    display: table; 
     position: relative;
+}
+
+.rdtPicker {
+    display: none;
+}
+
+.rdtOpen .rdtPicker {
+    display: block;
+    position: absolute;
 }
 
 .rdt .form-control {
@@ -15,14 +27,41 @@
     outline: none;
     padding-left: 16px;
 }
+
 .rdt .form-control:focus {
     border: 1px solid #00C0D9;
     box-shadow: 0 0 3px 1px #00C0D9;
 }
 
+.rdt .form-control::placeholder {
+    color: #404B55;
+}
+
 .rdtSwitch,
 .dow {
     color: #93B0C1;
+}
+
+.rdtSwitch:hover,
+.rdtTimeToggle:hover {
+    color: white;
+}
+
+.rdtNext,
+.rdtPrev {
+    color: #697C95;
+    width: 40px;
+}
+
+.rdtNext span,
+.rdtPrev span {
+    font-size: 2.2em;
+    vertical-align: sub;
+}
+
+.rdtNext:hover,
+.rdtPrev:hover {
+    color: white;
 }
 
 .dow {
@@ -46,8 +85,8 @@ thead tr:first-child {
 
 thead tr:first-child th {
     cursor: pointer;
-    padding-bottom: 18px;
-    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-top: 0;
 }
 
 thead tr:nth-child(2) {
@@ -93,18 +132,12 @@ tfoot td {
 .rdtMonths,
 .rdtYears,
 .rdtTime {
-    min-height: 326px;
-    min-width: 273px;
-}
-
-.rdtDays,
-.rdtMonths,
-.rdtYears,
-.rdtTime {
     background-color: #1E262E;
     border-radius: 3px;
     border: 1px solid #313D49;
-    padding: 15px 25px;
+    min-height: 326px;
+    min-width: 273px;
+    padding: 5px 25px 15px 25px;
 }
 
 .rdtMonths table:first-child,
@@ -131,6 +164,12 @@ tfoot td {
     margin-top: 85px;
     text-align: center;
     width: inherit;
+}
+
+.rdtTime .rdtSwitch {
+    font-weight: 400;
+    padding-bottom: 18px !important;
+    padding-top: 14px !important;
 }
 
 .rdtYears table:nth-child(2) tbody tr,
@@ -174,6 +213,14 @@ tfoot td {
 .rdtCounters {
     display: flex;
     justify-content: space-around;
+}
+
+.rdtBtn {
+    color: #697C95;
+}
+
+.rdtBtn:hover {
+    color: white;
 }
 
 .rdtCounterSeparator {

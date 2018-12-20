@@ -15,15 +15,15 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var Datetime = require("react-datetime");
-require("./test.css");
+require("./datepicker.css");
 var KeyPicker = /** @class */ (function (_super) {
     __extends(KeyPicker, _super);
     function KeyPicker() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     KeyPicker.prototype.render = function () {
-        return (React.createElement("div", null,
-            React.createElement(Datetime, { inputProps: { placeholder: '18/12/2018' }, open: false })));
+        return (React.createElement(React.Fragment, null,
+            React.createElement(Datetime, { inputProps: { placeholder: '19/12/2018 11:23 AM' }, closeOnSelect: true })));
     };
     return KeyPicker;
 }(React.Component));

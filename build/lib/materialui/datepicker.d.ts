@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './test.css';
+import './datepicker.css';
 declare class KeyPicker extends React.Component {
     render(): JSX.Element;
 }
