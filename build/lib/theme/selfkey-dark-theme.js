@@ -19,7 +19,6 @@ __export(require("../materialui/modal"));
 __export(require("../materialui/pagination"));
 __export(require("../materialui/sliders"));
 __export(require("../materialui/tables"));
-__export(require("../materialui/tabs"));
 __export(require("../materialui/typography"));
 __export(require("../icons/corporate"));
 __export(require("../icons/incorporations"));

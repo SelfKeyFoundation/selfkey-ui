@@ -1,19 +1,35 @@
 import * as React from 'react';
-import { Typography } from '@material-ui/core';
-import InteractiveTabs from '../../../src/materialui/tabs';
+import { Typography, Tabs, Tab } from '@material-ui/core';
 
 const underlineStyle = {
     textDecoration: 'underline',
 }
 
-export default function TabStories () {
-    return (
-        <div>
-            <Typography variant="h3" style={underlineStyle} gutterBottom>
-				Tabs
-			</Typography>
-            <InteractiveTabs />
-            <br/><br/>
-        </div>
-    )
+class TabStories extends React.Component {
+    state = {
+        value: 0
+    };
+
+    handleChange = (event: any, value: any) => {
+        this.setState({ value });
+    };
+
+    render() {
+        return (
+            <div>
+                <Typography variant="h3" style={underlineStyle} gutterBottom>
+                    Tabs
+                </Typography>
+        
+                <Tabs value={this.state.value} onChange={this.handleChange}>
+                    <Tab label="First tab" />
+                    <Tab label="Second" />
+                    <Tab label="Third tab" />
+                </Tabs>
+                <br/><br/>
+            </div>
+        )
+    }
 }
+
+export default TabStories;

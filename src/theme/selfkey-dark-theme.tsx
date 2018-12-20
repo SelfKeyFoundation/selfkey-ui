@@ -24,7 +24,6 @@ export * from '../materialui/modal';
 export * from '../materialui/pagination';
 export * from '../materialui/sliders';
 export * from '../materialui/tables';
-export * from '../materialui/tabs';
 export * from '../materialui/typography';
 export * from '../icons/corporate';
 export * from '../icons/incorporations';
