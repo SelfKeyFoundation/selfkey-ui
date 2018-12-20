@@ -75,13 +75,14 @@ tbody {
     font-weight: 600;
 }
 
-thead tr:first-child {
+thead tr:first-child::after {
     border-bottom: 1px solid #313D49;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 60px;
+    width: 100%;
 }
-
-/* tbody tr:last-child td {
-    padding-bottom: 25px;
-} */
 
 thead tr:first-child th {
     cursor: pointer;
@@ -94,16 +95,21 @@ thead tr:nth-child(2) {
     text-transform: uppercase;
 }
 
-tfoot tr {
-    border-top: 1px solid #313D49;
-}
-
 tfoot td {
     color: #93B0C1;
     cursor: pointer;
     font-size: 12px;
-    padding-top: 15px;
+    padding-top: 26px;
     text-align: center;
+}
+
+tfoot::before {
+    border-top: 1px solid #313D49;
+    content: '';
+    left: 0;
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
 }
 
 .rdtDay,
@@ -213,6 +219,16 @@ tfoot td {
 .rdtCounters {
     display: flex;
     justify-content: space-around;
+}
+
+.rdtBtn,
+.rdtNext,
+.rdtPrev,
+.rdtSwitch {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .rdtBtn {
