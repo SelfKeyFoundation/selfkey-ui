@@ -5,7 +5,6 @@ import {
 	// Tooltip,
 	IconButton, 
 } from '@material-ui/core';
-// import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import { 
     TableHeader, 
     FullButton, 
@@ -17,9 +16,11 @@ import {
 import Fingerprint from '@material-ui/icons/Fingerprint';
 import Wallpaper from '@material-ui/icons/Wallpaper';
 import InfoTooltip from '../../../src/icons/info';
-import InteractiveButtonGroups from '../../../src/materialui/buttonGroups';
-import { TooltipArrow, 
-	KeyTooltip} from '../../../src/materialui/tooltipArrow';
+import { 
+	TooltipArrow, 
+	KeyTooltip,
+} from '../../../src/materialui/tooltipArrow';
+import ToggleButtonGroupStory from './story-buttonGroups';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -149,7 +150,7 @@ export default function ButtonStories () {
 				</Grid>
 
 				<Grid item>
-					<InteractiveButtonGroups />
+					<ToggleButtonGroupStory />
 				</Grid>
 			</Grid>
 			<br/><br/>

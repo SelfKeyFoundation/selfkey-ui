@@ -1,8 +1,5 @@
 import * as React from 'react';
-export * from '../materialui/checkboxes';
-export * from '../materialui/buttonGroups';
 export * from '../materialui/buttons';
-export * from '../materialui/checkboxes';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
 export * from '../materialui/dropdowns';

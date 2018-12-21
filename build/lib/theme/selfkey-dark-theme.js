@@ -6,10 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var colors_1 = require("../colors");
-__export(require("../materialui/checkboxes"));
-__export(require("../materialui/buttonGroups"));
 __export(require("../materialui/buttons"));
-__export(require("../materialui/checkboxes"));
 __export(require("../materialui/colorPresentation"));
 __export(require("../materialui/datepicker"));
 __export(require("../materialui/dropdowns"));
@@ -161,7 +158,12 @@ var theme = core_1.createMuiTheme({
         },
         MuiCheckbox: {
             root: {
+                borderRadius: '3px',
                 color: colors_1.grey,
+                height: '18px',
+                marginRight: '10px',
+                padding: 0,
+                width: '18px',
                 '&$checked:not($disabled):not($colorSecondary)': {
                     backgroundColor: colors_1.primary + " !important",
                     border: "1px solid " + colors_1.primary + " !important",
@@ -203,7 +205,7 @@ var theme = core_1.createMuiTheme({
                 backgroundColor: '#222B34',
                 border: '1px solid #2F3B48',
                 borderRadius: '3px',
-                color: 'transparent',
+                color: 'transparent !important',
                 height: '18px',
                 padding: 0,
                 width: '18px',
@@ -211,18 +213,21 @@ var theme = core_1.createMuiTheme({
         },
         MuiRadio: {
             root: {
+                borderRadius: '50%',
                 boxSizing: 'border-box',
                 color: colors_1.grey,
+                height: '18px',
+                marginRight: '10px',
+                padding: 0,
+                width: '18px',
                 '&$checked:not($disabled):not($colorSecondary)': {
                     backgroundColor: "#1e262d !important",
                     border: "1px solid " + colors_1.primary + " !important",
-                    // boxSizing: 'border-box',
                     color: colors_1.primary + " !important",
                 },
                 '&$checked:not($disabled)': {
                     backgroundColor: "#392E3C !important",
                     border: "1px solid " + colors_1.error + " !important",
-                    // boxSizing: 'border-box',
                     color: colors_1.error + " !important",
                 },
                 '&$checked': {
@@ -256,7 +261,7 @@ var theme = core_1.createMuiTheme({
                 backgroundColor: '#222B34',
                 border: '1px solid #2F3B48',
                 borderRadius: '50%',
-                color: 'transparent',
+                color: 'transparent !important',
                 height: '18px',
                 padding: 0,
                 width: '18px',

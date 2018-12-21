@@ -1,8 +1,11 @@
 import * as React from 'react';
-import { ToggleBtn, ToggleBtnGroup } from './buttons';
-import { DefinitionDescription } from './typography';
+import { 
+    ToggleBtnGroup, 
+    ToggleBtn 
+} from '../../../src/materialui/buttons';
+import { DefinitionDescription } from '../../../src/materialui/typography';
 
-class InteractiveButtonGroups extends React.Component {
+class ToggleButtonGroupStory extends React.Component {
     state = {
         value: "left"
     };
@@ -32,4 +35,4 @@ class InteractiveButtonGroups extends React.Component {
     }
 }
 
-export default InteractiveButtonGroups;
+export default ToggleButtonGroupStory;

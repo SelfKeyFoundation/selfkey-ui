@@ -4,6 +4,8 @@ import {
     Grid,
 	InputAdornment,
 	FormControlLabel,
+	Checkbox,
+	Radio,
 } from '@material-ui/core';
 import { 
     TableHeader, 
@@ -11,8 +13,6 @@ import {
     ErrorMessage,
 	DecimalInput,
 	UnreadNotification,
-	DefaultCheckbox,
-	DefaultRadio,
 } from '../../../src/theme/selfkey-dark-theme';
 
 import KeyDropdown from './../../../src/materialui/dropdowns'
@@ -131,7 +131,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<DefaultCheckbox color="primary" />
+							<Checkbox color="primary" />
 						}
 						label="Default"
 					/>
@@ -140,7 +140,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<DefaultCheckbox color="primary" checked />
+							<Checkbox color="primary" checked />
 						}
 						label="Selected"
 					/>
@@ -149,7 +149,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<DefaultCheckbox color="secondary" />
+							<Checkbox color="secondary" />
 						}
 						label="Unselected, Error"
 					/>
@@ -158,7 +158,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<DefaultCheckbox color="secondary" checked />
+							<Checkbox color="secondary" checked />
 						}
 						label="Selected, Error"
 					/>
@@ -167,7 +167,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<DefaultCheckbox color="primary" indeterminate checked />
+							<Checkbox color="primary" indeterminate checked />
 						}
 						label="Bulk"
 					/>
@@ -176,7 +176,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<DefaultCheckbox disabled />
+							<Checkbox disabled />
 						}
 						label="Unselected, Disabled"
 					/>
@@ -185,7 +185,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<DefaultCheckbox disabled checked />
+							<Checkbox disabled checked />
 						}
 						label="Selected, Disabled"
 					/>
@@ -206,7 +206,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<DefaultRadio color="primary" />
+							<Radio color="primary" />
 						}
 					/>
 				</Grid>
@@ -217,7 +217,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<DefaultRadio color="primary" checked />
+							<Radio color="primary" checked />
 						}
 					/>
 				</Grid>
@@ -228,7 +228,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<DefaultRadio color="secondary" />
+							<Radio color="secondary" />
 						}
 					/>
 				</Grid>
@@ -239,7 +239,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<DefaultRadio color="secondary" checked />
+							<Radio color="secondary" checked />
 						}
 					/>
 				</Grid>
@@ -250,7 +250,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<DefaultRadio disabled />
+							<Radio disabled />
 						}
 					/>
 				</Grid>
@@ -261,7 +261,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<DefaultRadio disabled checked />
+							<Radio disabled checked />
 						}
 					/>
 				</Grid>
