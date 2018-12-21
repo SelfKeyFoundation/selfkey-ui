@@ -71,12 +71,12 @@
     padding-top: 25px;
 }
 
-tbody {
+.rdt tbody {
     font-size: 14px;
     font-weight: 600;
 }
 
-thead tr:first-child::after {
+.rdt thead tr:first-child::after {
     border-bottom: 1px solid #313D49;
     content: '';
     left: 0;
@@ -85,18 +85,18 @@ thead tr:first-child::after {
     width: 100%;
 }
 
-thead tr:first-child th {
+.rdt thead tr:first-child th {
     cursor: pointer;
     padding-bottom: 10px;
     padding-top: 0;
 }
 
-thead tr:nth-child(2) {
+.rdt thead tr:nth-child(2) {
     font-size: 14px;
     text-transform: uppercase;
 }
 
-tfoot td {
+.rdt tfoot td {
     color: #93B0C1;
     cursor: pointer;
     font-size: 12px;
@@ -104,7 +104,7 @@ tfoot td {
     text-align: center;
 }
 
-tfoot::before {
+.rdt tfoot::before {
     border-top: 1px solid #313D49;
     content: '';
     left: 0;
