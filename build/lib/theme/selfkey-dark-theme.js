@@ -13,7 +13,7 @@ __export(require("../materialui/inputs"));
 __export(require("../materialui/lists"));
 __export(require("../materialui/modalElements"));
 __export(require("../materialui/pagination"));
-__export(require("../materialui/sliders"));
+__export(require("../materialui/slider"));
 __export(require("../materialui/tables"));
 __export(require("../materialui/typography"));
 __export(require("../icons/corporate"));

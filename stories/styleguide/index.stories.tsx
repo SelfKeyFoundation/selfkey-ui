@@ -53,12 +53,12 @@ import TypographyStories from './materialui/story-typography';
 import ColorStories from './materialui/story-colors';
 import TabStories from './materialui/story-tabs';
 import AccordionStories from './materialui/story-accordion';
-import SliderStories from './materialui/story-slider';
 import PaginationStories from './materialui/story-pagination';
 import FileUploadInProgressStory from './materialui/story-fileUploadInProgress';
 import FileUploadStory from './materialui/story-fileUpload';
 import ModalStories from './materialui/story-modals';
 import DatePickerStories from './materialui/story-datepickers';
+import SliderStory from './materialui/story-sliders';
 
 setup();
 import { UnlockBox } from '../../src/marketplace/unlock-box'
@@ -350,7 +350,7 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
             </Typography>
 			<TabStories />
 			<AccordionStories />
-			<SliderStories />
+			<SliderStory />
 			<PaginationStories />
 			<br/>
 			<FileUploadInProgressStory />

@@ -18,7 +18,7 @@ export * from '../materialui/inputs';
 export * from '../materialui/lists';
 export * from '../materialui/modalElements';
 export * from '../materialui/pagination';
-export * from '../materialui/sliders';
+export * from '../materialui/slider';
 export * from '../materialui/tables';
 export * from '../materialui/typography';
 export * from '../icons/corporate';
