@@ -1,39 +1,22 @@
 import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
-import {
-    withStyles,
-    Paper,
-    Grid,
-} from "@material-ui/core";
-import { base } from "colors";
-import { Paragraph } from "./typography";
-import {
-    OutlineButton,
+import { Grid } from "@material-ui/core";
+import { 
+    OutlineButton, 
     FullButton,
-} from "./buttons";
-import ModalCloseIcon from '../icons/modal-close';
-import {
+} from "../../../src/materialui/buttons";
+import { 
+    ModalWrap, 
+    ModalCloseButton, 
     ModalHeader,
     ModalBody,
-    ModalCloseButton,
-} from "./modalElements";
+} from "../../../src/materialui/modalElements";
+import { Paragraph } from "../../../src/materialui/typography";
+import ModalCloseIcon from "../../../src/icons/modal-close";
 
-export const ModalWrap = withStyles({
-	root: {
-        backgroundColor: base,
-        boxSizing: 'border-box',
-        boxShadow: 'none',
-        left: 'calc(50% - 390px)',
-        margin: '0 auto',
-        outline: 'none',
-        position: 'absolute',
-        top: '100px',
-        width: '780px',
-    },
-})(Paper);
 
-class SimpleModal extends React.Component {
+class SimpleModalStory extends React.Component {
     state = {
         open: false
     };
@@ -89,4 +72,4 @@ class SimpleModal extends React.Component {
     }
 }
 
-export default SimpleModal;
+export default SimpleModalStory;

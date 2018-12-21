@@ -16,7 +16,7 @@ export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
 export * from '../materialui/inputs';
 export * from '../materialui/lists';
-export * from '../materialui/modal';
+export * from '../materialui/modalElements';
 export * from '../materialui/pagination';
 export * from '../materialui/sliders';
 export * from '../materialui/tables';

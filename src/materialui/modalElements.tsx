@@ -3,6 +3,21 @@ import {
     Button, 
     withStyles,
 } from '@material-ui/core';
+import { base } from 'colors';
+
+export const ModalWrap = withStyles({
+	root: {
+        backgroundColor: base,
+        boxSizing: 'border-box',
+        boxShadow: 'none',
+        left: 'calc(50% - 390px)',
+        margin: '0 auto',
+        outline: 'none',
+        position: 'absolute',
+        top: '100px',
+        width: '780px',
+    },
+})(Paper);
 
 export const ModalHeader = withStyles({
 	root: {

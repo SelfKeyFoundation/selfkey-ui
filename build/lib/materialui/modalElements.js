@@ -1,6 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@material-ui/core");
+var colors_1 = require("colors");
+exports.ModalWrap = core_1.withStyles({
+    root: {
+        backgroundColor: colors_1.base,
+        boxSizing: 'border-box',
+        boxShadow: 'none',
+        left: 'calc(50% - 390px)',
+        margin: '0 auto',
+        outline: 'none',
+        position: 'absolute',
+        top: '100px',
+        width: '780px',
+    },
+})(core_1.Paper);
 exports.ModalHeader = core_1.withStyles({
     root: {
         backgroundColor: '#2A3540',

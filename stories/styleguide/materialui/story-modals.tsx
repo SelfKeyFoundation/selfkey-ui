@@ -2,8 +2,8 @@ import * as React from 'react';
 import { 
     Typography, 
 } from '@material-ui/core';
-import SimpleModal from '../../../src/materialui/modal';
 import ModalWithBackButton from '../../../src/materialui/modalWithBackButton';
+import SimpleModalStory from './story-simplemodal';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -15,7 +15,7 @@ export default function ModalStories () {
             <Typography variant="h3" style={underlineStyle} gutterBottom>
                 With Close Button
             </Typography>
-            <SimpleModal />
+            <SimpleModalStory />
             <br/>
             <Typography variant="h3" style={underlineStyle} gutterBottom>
                 Inline with Back Button

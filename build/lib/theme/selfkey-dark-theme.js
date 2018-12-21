@@ -11,7 +11,7 @@ __export(require("../materialui/colorPresentation"));
 __export(require("../materialui/datepicker"));
 __export(require("../materialui/inputs"));
 __export(require("../materialui/lists"));
-__export(require("../materialui/modal"));
+__export(require("../materialui/modalElements"));
 __export(require("../materialui/pagination"));
 __export(require("../materialui/sliders"));
 __export(require("../materialui/tables"));
