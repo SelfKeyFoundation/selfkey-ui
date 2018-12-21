@@ -6,16 +6,16 @@ import {
 	FormControlLabel,
 	Checkbox,
 	Radio,
+	Input,
 } from '@material-ui/core';
 import { 
     TableHeader, 
-    InputField, 
     ErrorMessage,
 	DecimalInput,
 	UnreadNotification,
 } from '../../../src/theme/selfkey-dark-theme';
 
-import KeyDropdown from './../../../src/materialui/dropdowns'
+import DropdownStories from './story-dropdowns';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -33,7 +33,7 @@ export default function InputStories () {
 					<TableHeader gutterBottom>
 						Normal / Focused
 					</TableHeader>
-					<InputField
+					<Input
 						disableUnderline={ true }
 						placeholder="First Name"
 					/>
@@ -43,7 +43,7 @@ export default function InputStories () {
 					<TableHeader gutterBottom>
 						Disabled
 					</TableHeader>
-					<InputField
+					<Input
 						disabled
 						disableUnderline={ true }
 						placeholder="First Name"
@@ -54,7 +54,7 @@ export default function InputStories () {
 					<TableHeader gutterBottom>
 						Error
 					</TableHeader>
-					<InputField
+					<Input
 						error
 						disableUnderline={ true }
 						placeholder="First Name"
@@ -70,7 +70,7 @@ export default function InputStories () {
 			<TableHeader gutterBottom>
 				Normal/Selection
 			</TableHeader>
-			<KeyDropdown />
+			<DropdownStories />
 			<br/><br/>
 
 
@@ -100,7 +100,7 @@ export default function InputStories () {
 						Date
 					</TableHeader>
 
-					<InputField
+					<Input
 						disableUnderline={ true }
 						type="date"
 					/>
@@ -112,7 +112,7 @@ export default function InputStories () {
 						Numeric
 					</TableHeader>
 
-					<InputField
+					<Input
 						disableUnderline={ true }
 						placeholder="0"
 						type="number"

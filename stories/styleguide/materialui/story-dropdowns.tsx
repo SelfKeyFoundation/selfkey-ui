@@ -2,14 +2,12 @@ import * as React from "react";
 import { 
     FormControl, 
     MenuItem,
+    Select,
+    Input,
 } from "@material-ui/core";
 import { KeyboardArrowDown } from '@material-ui/icons';
-import { 
-    DropdownSelect, 
-    DropdownInputField,
-} from "./inputs";
 
-class KeyDropdown extends React.Component {
+class DropdownStories extends React.Component {
     state = {
         country: '',
     };
@@ -22,7 +20,7 @@ class KeyDropdown extends React.Component {
         return (
             <form autoComplete="off">
                 <FormControl variant="filled">
-                    <DropdownSelect
+                    <Select
                         value={ this.state.country }
                         onChange={ this.handleChange }
                         displayEmpty
@@ -30,7 +28,7 @@ class KeyDropdown extends React.Component {
                         disableUnderline={ true }
                         IconComponent={ KeyboardArrowDown }
                         input={ 
-                            <DropdownInputField id="filled-age-simple" disableUnderline={ true }/> 
+                            <Input disableUnderline={ true }/> 
                         }
                     >
                         <MenuItem value="">
@@ -41,11 +39,11 @@ class KeyDropdown extends React.Component {
                                 { item }
                             </MenuItem>
                         ))}
-                    </DropdownSelect>
+                    </Select>
                 </FormControl>
             </form>
         );
     }
 }
 
-export default KeyDropdown;
+export default DropdownStories;

@@ -2,7 +2,6 @@ import * as React from 'react';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
-export * from '../materialui/dropdowns';
 export * from '../materialui/inputs';
 export * from '../materialui/lists';
 export * from '../materialui/modal';

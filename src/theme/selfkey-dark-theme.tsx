@@ -14,7 +14,6 @@ import {
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
-export * from '../materialui/dropdowns';
 export * from '../materialui/inputs';
 export * from '../materialui/lists';
 export * from '../materialui/modal';
@@ -122,11 +121,37 @@ const theme = createMuiTheme({
         },
       },
       MuiInput: {
+        root: {
+          backgroundColor: baseDark,
+          borderRadius: '4px',
+          border: '1px solid #384656',
+          color: typography,
+          fontSize: '14px',
+          height: '44px',
+          lineHeight: '21px',
+          paddingLeft: '16px',
+        },
         formControl: {
           marginTop: 0,
           label: {
             marginTop: '16px',
           },
+        },
+        focused: {
+            "&$focused:not($error):not($disabled)": {
+                border: `1px solid ${primary}`,
+                boxShadow: `0 0 3px 1px ${primary}`,
+            },
+        },
+        error: {
+            backgroundColor: 'rgba(255, 46, 99, 0.09)',
+            border: `1px solid ${error}`,
+            color: error,
+            marginBottom: '6px',
+        },
+        disabled: {
+            color: '#93B0C1',
+            opacity: 0.5,
         },
       },
       MuiInputBase: {

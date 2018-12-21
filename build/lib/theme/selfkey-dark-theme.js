@@ -9,7 +9,6 @@ var colors_1 = require("../colors");
 __export(require("../materialui/buttons"));
 __export(require("../materialui/colorPresentation"));
 __export(require("../materialui/datepicker"));
-__export(require("../materialui/dropdowns"));
 __export(require("../materialui/inputs"));
 __export(require("../materialui/lists"));
 __export(require("../materialui/modal"));
@@ -117,11 +116,37 @@ var theme = core_1.createMuiTheme({
             },
         },
         MuiInput: {
+            root: {
+                backgroundColor: colors_1.baseDark,
+                borderRadius: '4px',
+                border: '1px solid #384656',
+                color: colors_1.typography,
+                fontSize: '14px',
+                height: '44px',
+                lineHeight: '21px',
+                paddingLeft: '16px',
+            },
             formControl: {
                 marginTop: 0,
                 label: {
                     marginTop: '16px',
                 },
+            },
+            focused: {
+                "&$focused:not($error):not($disabled)": {
+                    border: "1px solid " + colors_1.primary,
+                    boxShadow: "0 0 3px 1px " + colors_1.primary,
+                },
+            },
+            error: {
+                backgroundColor: 'rgba(255, 46, 99, 0.09)',
+                border: "1px solid " + colors_1.error,
+                color: colors_1.error,
+                marginBottom: '6px',
+            },
+            disabled: {
+                color: '#93B0C1',
+                opacity: 0.5,
             },
         },
         MuiInputBase: {
