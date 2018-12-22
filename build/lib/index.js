@@ -107,4 +107,6 @@ var delete_1 = require("./icons/delete");
 exports.DeleteIcon = delete_1.DeleteIcon;
 var view_1 = require("./icons/view");
 exports.ViewIcon = view_1.ViewIcon;
+var selfkeyLogo_1 = require("./icons/selfkeyLogo");
+exports.SelfkeyLogo = selfkeyLogo_1.SelfkeyLogo;
 //# sourceMappingURL=index.js.map

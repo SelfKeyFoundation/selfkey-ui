@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const SelfkeyLogo = ((props: SvgIconProps) => (
+export const SelfkeyLogo = ((props: SvgIconProps) => (
         <SvgIcon width="18px" height="20px" {...props} viewBox="0 0 18 20">
             <defs>
                 <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="linearGradient-1">
