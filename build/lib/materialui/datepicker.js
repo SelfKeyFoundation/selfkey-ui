@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Datetime = require("react-datetime");
-require("./datepicker.css");
+require("../assets/datepicker.css");
 var KeyPicker = /** @class */ (function (_super) {
     __extends(KeyPicker, _super);
     function KeyPicker() {
