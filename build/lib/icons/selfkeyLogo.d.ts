@@ -1,2 +1,4 @@
 /// <reference types="react" />
-export default function SelfkeyLogo(): JSX.Element;
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
+declare const SelfkeyLogo: (props: SvgIconProps) => JSX.Element;
+export default SelfkeyLogo;

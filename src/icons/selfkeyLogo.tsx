@@ -1,14 +1,15 @@
 import * as React from 'react';
+import { SvgIcon } from '@material-ui/core';
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-export default function SelfkeyLogo () {
-    return (
-        <svg width="18px" height="20px" viewBox="0 0 18 20">
+const SelfkeyLogo = ((props: SvgIconProps) => (
+        <SvgIcon width="18px" height="20px" {...props} viewBox="0 0 18 20">
             <defs>
                 <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="linearGradient-1">
                     <stop stop-color="#08BCCD" offset="0%"></stop>
                     <stop stop-color="#2DA1F8" offset="100%"></stop>
                 </linearGradient>
-                <linearGradient x1="50%" y1="97.784%" x2="41.849%" y2="-16.397%" id="linearGradient-2">
+                <linearGradient x1="50%" y1="97.784%" x2="4git 1.849%" y2="-16.397%" id="linearGradient-2">
                     <stop stop-color="#08BCCD" offset="0%"></stop>
                     <stop stop-color="#2DA1F8" offset="100%"></stop>
                 </linearGradient>
@@ -27,6 +28,8 @@ export default function SelfkeyLogo () {
                     </g>
                 </g>
             </g>
-        </svg>
+        </SvgIcon>
     )
-}
+);
+
+export default SelfkeyLogo;
