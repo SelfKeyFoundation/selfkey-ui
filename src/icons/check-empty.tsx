@@ -16,8 +16,8 @@ export const CheckEmptyIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconP
     <title>icon-check-empty</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Modal---Dark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1.3.-Required-Information---missing-info" transform="translate(-490.000000, -340.000000)" fill="#202A33" stroke="#93B0C1" stroke-width="2">
+    <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="1.3.-Required-Information---missing-info" transform="translate(-490.000000, -340.000000)" fill="#202A33" stroke="#93B0C1" strokeWidth="2">
             <g id="Modal-content" transform="translate(420.000000, 100.000000)">
                 <g id="Form" transform="translate(70.000000, 177.000000)">
                     <g id="line-1" transform="translate(0.000000, 62.000000)">

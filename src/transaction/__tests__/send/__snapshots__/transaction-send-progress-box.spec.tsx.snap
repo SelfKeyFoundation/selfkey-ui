@@ -1061,7 +1061,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
             fillRule="evenodd"
             id="-Wallet-Setup"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
           >
             <g
               fill="url(#linearGradient-1)"

@@ -17,8 +17,8 @@ export const MarketplaceIcon = injectSheet(styles)<SvgIconProps>((props: SvgIcon
         <desc>Created with Sketch.</desc>
         <defs>
             <linearGradient x1="11.0842631%" y1="68.33943%" x2="36.0705554%" y2="0%" id="linearGradient-1">
-                <stop stop-color="#09A8BA" offset="0%"></stop>
-                <stop stop-color="#0ABBD0" offset="100%"></stop>
+                <stop stopColor="#09A8BA" offset="0%"></stop>
+                <stop stopColor="#0ABBD0" offset="100%"></stop>
             </linearGradient>
         </defs>
         <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

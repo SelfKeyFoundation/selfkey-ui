@@ -19,24 +19,24 @@ exports[`Return Large Icon should show Return Large Icon 1`] = `
     >
       <stop
         offset="0%"
-        stop-color="#09A8BA"
+        stopColor="#09A8BA"
       />
       <stop
         offset="100%"
-        stop-color="#0ABBD0"
+        stopColor="#0ABBD0"
       />
     </linearGradient>
   </defs>
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="💹-Marketplace"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="url(#linearGradient-1)"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="507---Exchange-Details-+-Reclaim-Stake-+-Generate-Transaction"
       transform="translate(-375.000000, -273.000000)"
     >

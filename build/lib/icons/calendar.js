@@ -21,7 +21,7 @@ var styles = {
     },
 };
 exports.CalendarIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 20 20", version: "1.1" }),
-    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "405.1---Edit-Attribute-+-Date-of-Birth", transform: "translate(-1035.000000, -347.000000)", fill: "#23E6FE" },
             React.createElement("g", { id: "Modal", transform: "translate(330.000000, 200.000000)" },
                 React.createElement("g", { id: "address-1", transform: "translate(40.000000, 109.000000)" },

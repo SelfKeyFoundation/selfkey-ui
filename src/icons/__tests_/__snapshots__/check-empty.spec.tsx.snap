@@ -18,16 +18,16 @@ exports[`Check Empty Icon should show CheckEmpty Icon 1`] = `
   <defs />
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Modal---Dark"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#202A33"
       id="1.3.-Required-Information---missing-info"
       stroke="#93B0C1"
-      stroke-width="2"
+      strokeWidth="2"
       transform="translate(-490.000000, -340.000000)"
     >
       <g

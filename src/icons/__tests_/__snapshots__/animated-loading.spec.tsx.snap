@@ -25,7 +25,7 @@ exports[`Animated Loading Icon should show Animated Loading Icon 1`] = `
       values="15;9;15"
     />
     <animate
-      attributeName="fill-opacity"
+      attributeName="fillOpacity"
       begin="0s"
       calcMode="linear"
       dur="0.8s"
@@ -38,7 +38,7 @@ exports[`Animated Loading Icon should show Animated Loading Icon 1`] = `
   <circle
     cx="60"
     cy="15"
-    fill-opacity="0.3"
+    fillOpacity="0.3"
     r="9"
   >
     <animate
@@ -52,7 +52,7 @@ exports[`Animated Loading Icon should show Animated Loading Icon 1`] = `
       values="9;15;9"
     />
     <animate
-      attributeName="fill-opacity"
+      attributeName="fillOpacity"
       begin="0s"
       calcMode="linear"
       dur="0.8s"
@@ -78,7 +78,7 @@ exports[`Animated Loading Icon should show Animated Loading Icon 1`] = `
       values="15;9;15"
     />
     <animate
-      attributeName="fill-opacity"
+      attributeName="fillOpacity"
       begin="0s"
       calcMode="linear"
       dur="0.8s"

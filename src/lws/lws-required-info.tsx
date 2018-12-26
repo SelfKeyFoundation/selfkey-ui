@@ -21,7 +21,7 @@ const styles: StyleSheet = {
 				textDecoration: 'underline',
 			},
 		},
-		fontFamily: 'Lato, arial, sans-serif'
+		fontFamily: 'Lato, arial, sans-serif',
 	},
 
 	areaTitle: {
@@ -76,7 +76,7 @@ const styles: StyleSheet = {
 		'& button': {
 			maxWidth: '215px',
 			marginTop: '0px',
-			fontWeight: 700
+			fontWeight: 700,
 		},
 	},
 
@@ -88,7 +88,7 @@ const styles: StyleSheet = {
 		fontStyle: 'italic',
 		fontFamily: 'Lato, arial, sans-serif',
 		margin: '30px 0 45px',
-		color: '#FFF'
+		color: '#FFF',
 	},
 
 	edit: {
@@ -96,13 +96,7 @@ const styles: StyleSheet = {
 	},
 };
 
-export type Attribute = {
-	label: string;
-	key: string;
-	attribute?: string;
-	data?: any;
-	document?: boolean;
-};
+export type Attribute = any;
 
 export type LWSRequiredInfoProps = {
 	allowAction?: ((event: React.MouseEvent<HTMLElement>) => void);
@@ -116,32 +110,9 @@ export type LWSRequiredInfoProps = {
 };
 
 const getAttributeValue = (attribute: Attribute) => {
-	if (!attribute.data) return null;
-	if (attribute.document && attribute.data && attribute.data.value) {
-		return 'document';
-	}
-	switch (attribute.key) {
-		case 'birthdate':
-			return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
-		case 'work_place':
-		case 'physical_address':
-			let value = attribute.data.address1 + ', ';
-
-			if (attribute.data.address2) {
-				value += attribute.data.address2 + ', ';
-			}
-
-			value += attribute.data.city + ', ';
-			value += attribute.data.region + ', ';
-			value += attribute.data.zip + ', ';
-			value += attribute.data.country;
-
-			return value;
-		case 'phonenumber_countrycode':
-			return attribute.data.countryCode + ' ' + attribute.data.telephoneNumber;
-		default:
-			return attribute.data.value || null;
-	}
+	if (!attribute.value) return null;
+	if (typeof attribute.value !== 'object') return attribute.value;
+	return attribute.name;
 };
 
 const renderAttributes = (
@@ -153,11 +124,20 @@ const renderAttributes = (
 	editAction: ((event: React.MouseEvent<HTMLElement>) => void) | undefined
 ) => {
 	let attrs = requested.map(attr => {
-		return _.find(attributes, { key: attr.key }) || attr;
+		if (typeof attr !== 'object') {
+			attr = { attribute: attr };
+		}
+		let found = _.find(attributes, { url: attr.id || attr.attribute }) || {};
+		let merged = { ...attr, ...found };
+		if (!merged.label && merged.schema && merged.schema.title) {
+			merged.label = merged.schema.title;
+		}
+		return merged;
 	});
 	return attrs.map((attribute, index) => {
 		const attributeValue = getAttributeValue(attribute);
-		const notAllowed = !!_.find(notAllowedAttributes, { key: attribute.key });
+		const notAllowed = notAllowedAttributes.includes(attribute.url);
+		
 		if (attributeValue) {
 			return (
 				<div key={index}>

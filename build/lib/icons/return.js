@@ -21,7 +21,7 @@ var styles = {
     },
 };
 exports.ReturnIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 15 18" }),
-    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "506.1---Exchange-Details-+-Active-Stake-+-Reclaim-KEY", transform: "translate(-931.000000, -347.000000)", fill: "#1CA9BA" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },
                 React.createElement("g", { id: "Area-Body", transform: "translate(0.000000, 71.000000)" },

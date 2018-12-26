@@ -15,16 +15,16 @@ export const ReturnLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIcon
 	<SvgIcon {...props} viewBox="0 0 66 66">
 		<defs>
 			<linearGradient x1="11.0842631%" y1="68.33943%" x2="36.0705554%" y2="0%" id="linearGradient-1">
-				<stop stop-color="#09A8BA" offset="0%" />
-				<stop stop-color="#0ABBD0" offset="100%" />
+				<stop stopColor="#09A8BA" offset="0%" />
+				<stop stopColor="#0ABBD0" offset="100%" />
 			</linearGradient>
 		</defs>
-		<g id="💹-Marketplace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				id="507---Exchange-Details-+-Reclaim-Stake-+-Generate-Transaction"
 				transform="translate(-375.000000, -273.000000)"
 				fill="url(#linearGradient-1)"
-				fill-rule="nonzero"
+				fillRule="nonzero"
 			>
 				<g id="Modal" transform="translate(330.000000, 159.000000)">
 					<path

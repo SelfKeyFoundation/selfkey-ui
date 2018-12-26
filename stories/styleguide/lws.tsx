@@ -26,34 +26,70 @@ export const LWSRequiredInfoWrapper = () => (
 	<div>
 		<LWSRequiredInfo
 			requested={[
-				{ label: 'Name', key: 'first_name' },
+				{
+					label: 'Name',
+					key: 'first_name',
+					attribute: 'http://platform.selfkey.org/schema/attribute/first-name.json',
+				},
 				{ label: 'Country', key: 'country' },
 				{
-					label: 'Address',
-					key: 'physical_address',
+					key: 'last_name',
+					attribute: 'http://platform.selfkey.org/schema/attribute/last-name.json',
 				},
 				{
 					label: 'Birth Day',
 					key: 'birthdate',
+					attribute: 'http://platform.selfkey.org/schema/attribute/birth-date.json',
 				},
 			]}
 			attributes={[
-				{ label: 'Name', key: 'first_name', data: { value: 'Rodrigo Pavezi' } },
-				{ label: 'Birth Day', key: 'birthdate', data: { value: Date.now() } },
 				{
-					label: 'Address',
-					key: 'physical_address',
-					data: {
-						address1: 'address1',
-						address2: 'address2',
-						city: 'city1',
-						region: 'region1',
-						zip: 'zip',
-						country: 'country1',
+					url: 'http://platform.selfkey.org/schema/attribute/first-name.json',
+					value: 'Test1',
+					name: 'first_name',
+					schema: {
+						$id: 'http://platform.selfkey.org/schema/attribute/first-name.json',
+						$schema: 'http://platform.selfkey.org/schema/identity-attribute.json',
+						identityAttribute: true,
+						identityAttributeRepository: 'http://platform.selfkey.org/repository.json',
+						title: 'First Name',
+						description: "An individual's first (given) name.",
+						type: 'string',
 					},
+					id: 1,
+				},
+				{
+					url: 'http://platform.selfkey.org/schema/attribute/last-name.json',
+					value: 'Test2',
+					name: 'last_name',
+					schema: {
+						$id: 'http://platform.selfkey.org/schema/attribute/last-name.json',
+						$schema: 'http://platform.selfkey.org/schema/identity-attribute.json',
+						identityAttribute: true,
+						identityAttributeRepository: 'http://platform.selfkey.org/repository.json',
+						title: 'Last Name',
+						description: "An individual's last (family) name.",
+						type: 'string',
+					},
+					id: 2,
+				},
+				{
+					url: 'http://platform.selfkey.org/schema/attribute/birth-date.json',
+					value: { day: 1, month: 2, year: 1991 },
+					name: 'birthdate1',
+					schema: {
+						$id: 'http://platform.selfkey.org/schema/attribute/last-name.json',
+						$schema: 'http://platform.selfkey.org/schema/identity-attribute.json',
+						identityAttribute: true,
+						identityAttributeRepository: 'http://platform.selfkey.org/repository.json',
+						title: 'Birtdate',
+						description: "An individual's last (family) name.",
+						type: 'string',
+					},
+					id: 2,
 				},
 			]}
-			notAllowedAttributes={[{ label: 'Birth Day', key: 'birthdate' }]}
+			notAllowedAttributes={['http://platform.selfkey.org/schema/attribute/birth-date.json']}
 			disallowAttributeAction={(attribute, disallow) => {
 				alert(attribute.key + ' ' + disallow);
 			}}

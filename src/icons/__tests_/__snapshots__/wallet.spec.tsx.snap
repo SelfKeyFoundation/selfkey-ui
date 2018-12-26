@@ -25,24 +25,24 @@ exports[`Wallet  Icon should show Wallet Icon 1`] = `
     >
       <stop
         offset="0%"
-        stop-color="#DB7400"
+        stopColor="#DB7400"
       />
       <stop
         offset="100%"
-        stop-color="#B44000"
+        stopColor="#B44000"
       />
     </linearGradient>
   </defs>
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Modal---Dark"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="url(#linearGradient-1)"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="2-Error---Connection-to-wallet"
       transform="translate(-686.000000, -277.000000)"
     >
