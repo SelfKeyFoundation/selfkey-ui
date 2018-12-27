@@ -1,5 +1,3 @@
-import * as Datetime from 'react-datetime';
-import '../assets/datepicker.css';
-declare class KeyPicker extends Datetime {
-}
+/// <reference types="react" />
+export declare const KeyPicker: (props: any) => JSX.Element;
 export default KeyPicker;
