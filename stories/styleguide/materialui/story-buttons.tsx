@@ -2,7 +2,6 @@ import * as React from 'react';
 import { 
 	Typography, 
 	Grid, 
-	// Tooltip,
 	IconButton, 
 } from '@material-ui/core';
 import { 
@@ -10,11 +9,7 @@ import {
     FullButton, 
     OutlineButton, 
 	OutlineSecondaryButton,
-	ToggleBtn,
-	ToggleBtnGroup,
 } from '../../../src/theme/selfkey-dark-theme';
-import Fingerprint from '@material-ui/icons/Fingerprint';
-import Wallpaper from '@material-ui/icons/Wallpaper';
 import InfoTooltip from '../../../src/icons/info';
 import { 
 	TooltipArrow, 
@@ -135,20 +130,6 @@ export default function ButtonStories () {
 				Button Groups
 			</TableHeader>
 			<Grid container spacing={24}>
-				<Grid item>
-					<ToggleBtnGroup 
-						exclusive
-						value=''
-					>
-						<ToggleBtn value="fingerprint">
-							<Fingerprint />
-						</ToggleBtn>
-						<ToggleBtn value="wallpaper">
-							<Wallpaper />
-						</ToggleBtn>
-					</ToggleBtnGroup>
-				</Grid>
-
 				<Grid item>
 					<ToggleButtonGroupStory />
 				</Grid>

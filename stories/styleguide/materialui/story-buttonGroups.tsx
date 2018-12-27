@@ -4,6 +4,8 @@ import {
     ToggleBtn 
 } from '../../../src/materialui/buttons';
 import { DefinitionDescription } from '../../../src/materialui/typography';
+import StructureIcon from '../../../src/icons/structure';
+import ListIcon from '../../../src/icons/list';
 
 class ToggleButtonGroupStory extends React.Component {
     state = {
@@ -29,6 +31,12 @@ class ToggleButtonGroupStory extends React.Component {
                 </ToggleBtn>
                 <ToggleBtn value="third">
                     <DefinitionDescription>third</DefinitionDescription>
+                </ToggleBtn>
+                <ToggleBtn value="structure">
+                    <StructureIcon />
+                </ToggleBtn>
+                <ToggleBtn value="list">
+                    <ListIcon />
                 </ToggleBtn>
             </ToggleBtnGroup>
         );

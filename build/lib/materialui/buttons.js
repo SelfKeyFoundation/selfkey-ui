@@ -82,6 +82,7 @@ exports.ToggleBtn = core_1.withStyles({
         backgroundColor: '#293743',
         border: '1px solid #1D505F',
         boxSizing: 'border-box',
+        fill: colors_1.typography,
         height: '44px',
         textTransform: 'initial',
         '&:hover': {
@@ -91,6 +92,8 @@ exports.ToggleBtn = core_1.withStyles({
     selected: {
         background: '#313D49',
         border: "1px solid " + colors_1.primaryTint,
+        fill: colors_1.primary,
+        color: colors_1.primary,
     },
 })(ToggleButton_1.default);
 //# sourceMappingURL=buttons.js.map

@@ -51,10 +51,10 @@ export default function FileUploadStory () {
                 <Grid justify='center' alignItems='center' direction='column'>
                     <FileUploadLabel htmlFor="key-upload">
                         <HardDriveIcon />
-                        <div>
+                        <Grid item>
                             <TableSmallText>Select Document</TableSmallText>
                             <Explanatory>This is stored locally on your machine.</Explanatory>
-                        </div>
+                        </Grid>
                     </FileUploadLabel>
                     <FileUploadInput 
                         id="key-upload"
