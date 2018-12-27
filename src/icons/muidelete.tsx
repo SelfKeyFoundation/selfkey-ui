@@ -3,14 +3,15 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import { grey, white } from 'colors';
 
 const styles: StyleSheet = {
   root: {
-    fill: '#697C95',
+    fill: grey,
     height: '16px !important',
     width: '16px !important',
     '&:hover': {
-        fill: 'white',
+        fill: white,
     },
   }
 };

@@ -14,13 +14,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var colors_1 = require("colors");
 var styles = {
     root: {
-        fill: '#697C95',
+        fill: colors_1.grey,
         height: '16px !important',
         width: '16px !important',
         '&:hover': {
-            fill: 'white',
+            fill: colors_1.white,
         },
     }
 };

@@ -14,17 +14,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var colors_1 = require("colors");
 var styles = {
     root: {
+        fill: colors_1.white,
+        height: '44px !important',
         width: '44px !important',
-        height: '44px !important'
-    }
+        '&:hover': {
+            fill: colors_1.primary,
+        }
+    },
 };
 exports.HardDriveIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 44 44", version: "1.1" }),
     React.createElement("title", null, "Shape"),
     React.createElement("desc", null, "Created with Sketch."),
-    React.createElement("g", { stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "5.-Style-Guide---UI-Elements", transform: "translate(-1026.000000, -785.000000)", fill: "#FFFFFF", "fill-rule": "nonzero" },
+    React.createElement("g", { stroke: "none", "stroke-width": "1", "fill-rule": "evenodd" },
+        React.createElement("g", { id: "5.-Style-Guide---UI-Elements", transform: "translate(-1026.000000, -785.000000)", fill: "inherit", "fill-rule": "nonzero" },
             React.createElement("g", { id: "File-upload", transform: "translate(930.000000, 124.000000)" },
                 React.createElement("g", { id: "Upload", transform: "translate(0.000000, 661.000000)" },
                     React.createElement("g", { id: "Hard-Drive", transform: "translate(96.000000, 0.000000)" },

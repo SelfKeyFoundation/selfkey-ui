@@ -3,20 +3,25 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import { primary, white } from 'colors';
 
 const styles: StyleSheet = {
     root: {
+        fill: white,
+        height: '44px !important',
         width: '44px !important',
-        height: '44px !important'
-    }
+        '&:hover': {
+            fill: primary,
+        }
+    },
 };
 
 export const HardDriveIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
     <SvgIcon  {...props} viewBox="0 0 44 44" version="1.1">
         <title>Shape</title>
         <desc>Created with Sketch.</desc>
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="5.-Style-Guide---UI-Elements" transform="translate(-1026.000000, -785.000000)" fill="#FFFFFF" fill-rule="nonzero">
+        <g stroke="none" stroke-width="1"  fill-rule="evenodd">
+            <g id="5.-Style-Guide---UI-Elements" transform="translate(-1026.000000, -785.000000)" fill="inherit" fill-rule="nonzero">
                 <g id="File-upload" transform="translate(930.000000, 124.000000)">
                     <g id="Upload" transform="translate(0.000000, 661.000000)">
                         <g id="Hard-Drive" transform="translate(96.000000, 0.000000)">
