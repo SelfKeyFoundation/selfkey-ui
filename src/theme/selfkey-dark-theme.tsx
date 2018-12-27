@@ -11,6 +11,7 @@ import {
   base,
   baseDark,
 } from '../colors';
+export * from '../colors';
 export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';

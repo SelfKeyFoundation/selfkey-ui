@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var colors_1 = require("../colors");
+__export(require("../colors"));
 __export(require("../materialui/buttons"));
 __export(require("../materialui/colorPresentation"));
 __export(require("../materialui/datepicker"));
