@@ -112,7 +112,7 @@ export type LWSRequiredInfoProps = {
 const getAttributeValue = (attribute: Attribute) => {
 	if (!attribute.value) return null;
 	if (typeof attribute.value !== 'object') return attribute.value;
-	return attribute.name;
+	return attribute.name || attribute.schema.title || attribute.url;
 };
 
 const renderAttributes = (
@@ -149,7 +149,7 @@ const renderAttributes = (
 							{notAllowed ? <CheckEmptyIcon /> : <CheckIcon />}
 						</span>
 						<dl>
-							<dt>{attribute.label}</dt>
+							<dt>{attribute.label || attribute.schema.title}</dt>
 							<dd>{attributeValue}</dd>
 						</dl>
 					</div>

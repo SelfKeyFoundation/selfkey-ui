@@ -104,7 +104,7 @@ var getAttributeValue = function (attribute) {
         return null;
     if (typeof attribute.value !== 'object')
         return attribute.value;
-    return attribute.name;
+    return attribute.name || attribute.schema.title || attribute.url;
 };
 var renderAttributes = function (requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction) {
     var attrs = requested.map(function (attr) {
@@ -126,7 +126,7 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
                 React.createElement("div", { className: classes.attribute },
                     React.createElement("span", { className: classes.clickable, onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(check_empty_1.CheckEmptyIcon, null) : React.createElement(check_1.CheckIcon, null)),
                     React.createElement("dl", null,
-                        React.createElement("dt", null, attribute.label),
+                        React.createElement("dt", null, attribute.label || attribute.schema.title),
                         React.createElement("dd", null, attributeValue)))));
         }
         else {
