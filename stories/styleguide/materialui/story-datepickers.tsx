@@ -14,11 +14,7 @@ export default function DatePickerStories () {
                 Date Picker
             </Typography>
 
-            <KeyPicker 
-                dateFormat="DD MMM YYYY"
-                inputProps={{ placeholder: '19 Dec 2018 11:23 AM' }}
-                closeOnSelect={true}
-            />
+            <KeyPicker />
 
             <br/><br/>
             <TableSmallTextDisabled>
