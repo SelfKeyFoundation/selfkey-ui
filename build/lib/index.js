@@ -115,4 +115,6 @@ var quit_1 = require("./icons/quit");
 exports.QuitIcon = quit_1.QuitIcon;
 var modal_close_1 = require("./icons/modal-close");
 exports.ModalCloseIcon = modal_close_1.ModalCloseIcon;
+var warning_shield_1 = require("./icons/warning-shield");
+exports.WarningShieldIcon = warning_shield_1.WarningShieldIcon;
 //# sourceMappingURL=index.js.map
