@@ -113,4 +113,6 @@ var help_1 = require("./icons/help");
 exports.HelpIcon = help_1.HelpIcon;
 var quit_1 = require("./icons/quit");
 exports.QuitIcon = quit_1.QuitIcon;
+var modal_close_1 = require("./icons/modal-close");
+exports.ModalCloseIcon = modal_close_1.ModalCloseIcon;
 //# sourceMappingURL=index.js.map

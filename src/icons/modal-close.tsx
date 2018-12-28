@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-export default function ModalCloseIcon () {
-    return (
+
+export const ModalCloseIcon = (
+
         <div style={{ height: '38px', marginLeft: '779px', marginTop: '-20px', position: 'absolute', width: '38px', cursor: 'pointer' }}>
             <svg viewBox="0 0 38 38">
                 <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -17,4 +18,5 @@ export default function ModalCloseIcon () {
             </svg>
         </div>
     )
-}
+
+export default ModalCloseIcon;

@@ -60,6 +60,7 @@ export { ViewIcon } from './icons/view'
 export { SelfkeyLogo } from './icons/selfkeyLogo'
 export { HelpIcon } from './icons/help'
 export { QuitIcon } from './icons/quit'
+export { ModalCloseIcon } from './icons/modal-close'
 
 
 
