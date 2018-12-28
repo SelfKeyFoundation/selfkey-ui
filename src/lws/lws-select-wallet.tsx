@@ -248,7 +248,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 							{wallets.filter(w => w.profile === 'local').map((wallet, index) => {
 								return (
 									<option key={index} value={wallet.publicKey}>
-										{wallet.publicKey}
+										0x{wallet.publicKey.replace('0x', '')}
 									</option>
 								);
 							})}
