@@ -117,4 +117,6 @@ var modal_close_1 = require("./icons/modal-close");
 exports.ModalCloseIcon = modal_close_1.ModalCloseIcon;
 var warning_shield_1 = require("./icons/warning-shield");
 exports.WarningShieldIcon = warning_shield_1.WarningShieldIcon;
+var incorporations_1 = require("./icons/incorporations");
+exports.IncorporationsIcon = incorporations_1.IncorporationsIcon;
 //# sourceMappingURL=index.js.map

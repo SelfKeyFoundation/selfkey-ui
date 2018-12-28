@@ -62,7 +62,5 @@ export { HelpIcon } from './icons/help';
 export { QuitIcon } from './icons/quit';
 export { ModalCloseIcon } from './icons/modal-close';
 export { WarningShieldIcon } from './icons/warning-shield';
-
-
-
+export { IncorporationsIcon } from './icons/incorporations';
 
