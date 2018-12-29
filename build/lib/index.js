@@ -119,4 +119,6 @@ var warning_shield_1 = require("./icons/warning-shield");
 exports.WarningShieldIcon = warning_shield_1.WarningShieldIcon;
 var incorporations_1 = require("./icons/incorporations");
 exports.IncorporationsIcon = incorporations_1.IncorporationsIcon;
+var password_1 = require("./icons/password");
+exports.PasswordIcon = password_1.PasswordIcon;
 //# sourceMappingURL=index.js.map
