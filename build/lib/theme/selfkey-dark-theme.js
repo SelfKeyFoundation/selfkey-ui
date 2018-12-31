@@ -127,7 +127,6 @@ var theme = core_1.createMuiTheme({
                 fontSize: '14px',
                 height: '44px',
                 lineHeight: '21px',
-                paddingLeft: '16px',
             },
             formControl: {
                 marginTop: 0,
