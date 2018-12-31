@@ -6,6 +6,11 @@ var Datetime = require("react-datetime");
 var styles = {
     datepickerWrap: {
         fontFamily: 'Lato, arial, sans-serif',
+        '& .rdt': {
+            '& input::placeholder': {
+                color: 'rgba(147, 176, 193, 0.42)',
+            },
+        },
         '& .rdtOpen': {
             display: 'table',
             position: 'relative',
