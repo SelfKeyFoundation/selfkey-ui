@@ -61,7 +61,7 @@ class SimpleModalStory extends React.Component {
                                 </Grid>
 
                                 <Grid item>
-                                    <OutlineButton size="large">Cancel</OutlineButton>
+                                    <OutlineButton size="large" onClick={this.handleState}>Cancel</OutlineButton>
                                 </Grid>
                             </Grid>
                         </ModalBody>
