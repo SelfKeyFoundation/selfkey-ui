@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.ModalCloseIcon = (function (props) { return (React.createElement("div", { style: { height: '38px', marginLeft: '779px', marginTop: '-20px', position: 'absolute', width: '38px', cursor: 'pointer' } },
-    React.createElement(core_1.SvgIcon, __assign({ width: "38px", height: "38px" }, props, { viewBox: "0 0 38 38" }),
+    React.createElement(core_1.SvgIcon, __assign({}, props, { width: "38px", height: "38px", viewBox: "0 0 38 38", fontSize: "large" }),
         React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
             React.createElement("g", { id: "Close-button", transform: "translate(1.000000, 1.000000)" },
                 React.createElement("g", { id: "icon-close-modal" },
