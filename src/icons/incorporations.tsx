@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { SvgIcon } from '@material-ui/core';
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-export default function Incorporations () {
-    return (
-        <svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
+export const IncorporationsIcon = ((props: SvgIconProps) => (
+        <SvgIcon width="36px" height="36px" {...props} viewBox="0 0 36 36" version="1.1">
             <title>icon-marketplace-incorporations</title>
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="700---Incorporations-Marketplace" transform="translate(-150.000000, -153.000000)" fill="#00C0D9" fill-rule="nonzero">
@@ -13,6 +14,8 @@ export default function Incorporations () {
                     </g>
                 </g>
             </g>
-        </svg>
+        </SvgIcon>
     )
-}
+);
+
+export default IncorporationsIcon;
