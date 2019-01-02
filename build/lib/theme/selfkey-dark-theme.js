@@ -360,10 +360,25 @@ var theme = core_1.createMuiTheme({
         },
         MuiButton: {
             root: {
+                background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
+                border: '1px solid #0FB8D0',
+                borderRadius: '4px',
+                boxSizing: 'border-box',
+                color: colors_1.white,
                 fontSize: '13px',
                 fontWeight: 600,
                 height: '36px',
                 minWidth: '164px',
+                '&:hover': {
+                    background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
+                },
+                '&:focus': {
+                    background: 'linear-gradient(to top right, #0A99D0 10%, #097CBA 70%);',
+                },
+                '&$disabled': {
+                    color: colors_1.white,
+                    opacity: 0.5,
+                },
             },
             sizeLarge: {
                 fontSize: '16px',

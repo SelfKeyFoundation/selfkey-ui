@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { 
     Grid, 
+    Button,
     Typography,
     withStyles,
 } from '@material-ui/core';
@@ -11,7 +12,7 @@ import {
 } from '../../../src/materialui/typography';
 import { base } from '../../../src/colors';
 import { FileUploadInput, FileUploadLabel } from '../../../src/materialui/inputs';
-import { FullButton, OutlineButton } from '../../../src/materialui/buttons';
+import { OutlineButton } from '../../../src/materialui/buttons';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -65,7 +66,7 @@ export default function FileUploadStory () {
             <br/>
             <Grid container spacing={24}>
                 <Grid item>
-                    <FullButton size="large">Save</FullButton>
+                    <Button size="large">Save</Button>
                 </Grid>
 
                 <Grid item>

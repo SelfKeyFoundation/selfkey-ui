@@ -1,10 +1,9 @@
 import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
-import { Grid } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import { 
     OutlineButton, 
-    FullButton,
 } from "../../../src/materialui/buttons";
 import { 
     ModalWrap, 
@@ -57,7 +56,7 @@ class SimpleModalStory extends React.Component {
                             <br/><br/>
                             <Grid container spacing={24}>
                                 <Grid item>
-                                    <FullButton size="large">Continue</FullButton>
+                                    <Button size="large">Continue</Button>
                                 </Grid>
 
                                 <Grid item>

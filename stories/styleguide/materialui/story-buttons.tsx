@@ -3,10 +3,10 @@ import {
 	Typography, 
 	Grid, 
 	IconButton, 
+	Button,
 } from '@material-ui/core';
 import { 
     TableHeader, 
-    FullButton, 
     OutlineButton, 
 	OutlineSecondaryButton,
 } from '../../../src/theme/selfkey-dark-theme';
@@ -36,21 +36,21 @@ export default function ButtonStories () {
 
 					<Grid container spacing={24}>
 						<Grid item>
-							<FullButton size="large">Large</FullButton>
+							<Button size="large">Large</Button>
 						</Grid>
 
 						<Grid item>
-							<FullButton disabled size="large">
+							<Button disabled size="large">
 								Disabled
-							</FullButton> 
+							</Button> 
 						</Grid>
 
 						<Grid item>
-							<FullButton>Medium</FullButton> 
+							<Button>Medium</Button> 
 						</Grid>
 
 						<Grid item>
-							<FullButton size="small">Small</FullButton>
+							<Button size="small">Small</Button>
 						</Grid>
 					</Grid>
 					<br/><br/>
