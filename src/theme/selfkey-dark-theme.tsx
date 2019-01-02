@@ -365,7 +365,8 @@ const theme = createMuiTheme({
       },
       MuiButton: {
         root: {
-          background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
+          // background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
+          background: 'black',
           border: '1px solid #0FB8D0',
           borderRadius: '4px',
           boxSizing: 'border-box',
