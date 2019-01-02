@@ -52,6 +52,7 @@ exports.ModalBody2 = core_1.withStyles({
 })(core_1.Paper);
 exports.ModalCloseButton = core_1.withStyles({
     root: {
+        border: 0,
         height: 0,
         left: 0,
         margin: 0,
