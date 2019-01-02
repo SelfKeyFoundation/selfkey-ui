@@ -197,7 +197,7 @@ const theme = createMuiTheme({
             marginRight: '10px',
             padding: 0,
             width: '18px',
-            '&$checked:not($disabled):not($colorSecondary)': {
+            '&$checked:not($disabled):not($colorPrimary)': {
               backgroundColor: `${primary} !important`,
               border: `1px solid ${primary} !important`,
               color: `${baseDark} !important`,
@@ -215,8 +215,11 @@ const theme = createMuiTheme({
             '&$disabled': {
               color: 'transparent',
             },
+            '&:hover': {
+              backgroundColor: '#384656',
+            },
         },
-        colorPrimary: {
+        colorSecondary: {
             backgroundColor: baseDark,
             border: `1px solid ${grey}`,
             borderRadius: '3px',
@@ -225,7 +228,7 @@ const theme = createMuiTheme({
             padding: 0,
             width: '18px',
         },
-        colorSecondary: {
+        colorPrimary: {
             backgroundColor: 'rgba(255, 46, 99, 0.09)',
             border: `1px solid ${error}`,
             borderRadius: '3px',
@@ -233,6 +236,9 @@ const theme = createMuiTheme({
             height: '18px',
             padding: 0,
             width: '18px',
+            '&:hover': {
+              backgroundColor: 'rgba(255, 46, 99, 0.05)',
+            },
         },
         disabled: {
             backgroundColor: '#222B34',
@@ -253,7 +259,7 @@ const theme = createMuiTheme({
           marginRight: '10px',
           padding: 0,
           width: '18px',
-          '&$checked:not($disabled):not($colorSecondary)': {
+          '&$checked:not($disabled):not($colorPrimary)': {
             backgroundColor: `#1e262d !important`,
             border: `1px solid ${primary} !important`,
             color: `${primary} !important`,
@@ -271,8 +277,11 @@ const theme = createMuiTheme({
           '&$disabled': {
             color: 'transparent',
           },
+          '&:hover': {
+            backgroundColor: '#384656',
+          },
         },
-        colorPrimary: {
+        colorSecondary: {
           backgroundColor: baseDark,
           border: `1px solid ${grey}`,
           borderRadius: '50%',
@@ -281,7 +290,7 @@ const theme = createMuiTheme({
           padding: 0,
           width: '18px',
         },
-        colorSecondary: {
+        colorPrimary: {
           backgroundColor: 'rgba(255, 46, 99, 0.09)',
           border: `1px solid ${error}`,
           borderRadius: '50%',
@@ -289,6 +298,9 @@ const theme = createMuiTheme({
           height: '18px',
           padding: 0,
           width: '18px',
+          '&:hover': {
+            backgroundColor: 'rgba(255, 46, 99, 0.05)',
+          },
         },
         disabled: {
           backgroundColor: '#222B34',

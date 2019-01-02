@@ -131,7 +131,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<Checkbox color="primary" />
+							<Checkbox />
 						}
 						label="Default"
 					/>
@@ -140,7 +140,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<Checkbox color="primary" checked />
+							<Checkbox checked />
 						}
 						label="Selected"
 					/>
@@ -149,7 +149,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<Checkbox color="secondary" />
+							<Checkbox color="primary" />
 						}
 						label="Unselected, Error"
 					/>
@@ -158,7 +158,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<Checkbox color="secondary" checked />
+							<Checkbox color="primary" checked />
 						}
 						label="Selected, Error"
 					/>
@@ -167,7 +167,7 @@ export default function InputStories () {
 				<Grid item>
 					<FormControlLabel
 						control={
-							<Checkbox color="primary" indeterminate checked />
+							<Checkbox indeterminate checked />
 						}
 						label="Bulk"
 					/>
@@ -206,7 +206,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<Radio color="primary" />
+							<Radio />
 						}
 					/>
 				</Grid>
@@ -217,7 +217,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<Radio color="primary" checked />
+							<Radio checked />
 						}
 					/>
 				</Grid>
@@ -228,7 +228,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<Radio color="secondary" />
+							<Radio color="primary" />
 						}
 					/>
 				</Grid>
@@ -239,7 +239,7 @@ export default function InputStories () {
 						value="end"
 						labelPlacement="end"
 						control={
-							<Radio color="secondary" checked />
+							<Radio color="primary" checked />
 						}
 					/>
 				</Grid>

@@ -192,7 +192,7 @@ var theme = core_1.createMuiTheme({
                 marginRight: '10px',
                 padding: 0,
                 width: '18px',
-                '&$checked:not($disabled):not($colorSecondary)': {
+                '&$checked:not($disabled):not($colorPrimary)': {
                     backgroundColor: colors_1.primary + " !important",
                     border: "1px solid " + colors_1.primary + " !important",
                     color: colors_1.baseDark + " !important",
@@ -210,8 +210,11 @@ var theme = core_1.createMuiTheme({
                 '&$disabled': {
                     color: 'transparent',
                 },
+                '&:hover': {
+                    backgroundColor: '#384656',
+                },
             },
-            colorPrimary: {
+            colorSecondary: {
                 backgroundColor: colors_1.baseDark,
                 border: "1px solid " + colors_1.grey,
                 borderRadius: '3px',
@@ -220,7 +223,7 @@ var theme = core_1.createMuiTheme({
                 padding: 0,
                 width: '18px',
             },
-            colorSecondary: {
+            colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
                 border: "1px solid " + colors_1.error,
                 borderRadius: '3px',
@@ -228,6 +231,9 @@ var theme = core_1.createMuiTheme({
                 height: '18px',
                 padding: 0,
                 width: '18px',
+                '&:hover': {
+                    backgroundColor: 'rgba(255, 46, 99, 0.05)',
+                },
             },
             disabled: {
                 backgroundColor: '#222B34',
@@ -248,7 +254,7 @@ var theme = core_1.createMuiTheme({
                 marginRight: '10px',
                 padding: 0,
                 width: '18px',
-                '&$checked:not($disabled):not($colorSecondary)': {
+                '&$checked:not($disabled):not($colorPrimary)': {
                     backgroundColor: "#1e262d !important",
                     border: "1px solid " + colors_1.primary + " !important",
                     color: colors_1.primary + " !important",
@@ -266,8 +272,11 @@ var theme = core_1.createMuiTheme({
                 '&$disabled': {
                     color: 'transparent',
                 },
+                '&:hover': {
+                    backgroundColor: '#384656',
+                },
             },
-            colorPrimary: {
+            colorSecondary: {
                 backgroundColor: colors_1.baseDark,
                 border: "1px solid " + colors_1.grey,
                 borderRadius: '50%',
@@ -276,7 +285,7 @@ var theme = core_1.createMuiTheme({
                 padding: 0,
                 width: '18px',
             },
-            colorSecondary: {
+            colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
                 border: "1px solid " + colors_1.error,
                 borderRadius: '50%',
@@ -284,6 +293,9 @@ var theme = core_1.createMuiTheme({
                 height: '18px',
                 padding: 0,
                 width: '18px',
+                '&:hover': {
+                    backgroundColor: 'rgba(255, 46, 99, 0.05)',
+                },
             },
             disabled: {
                 backgroundColor: '#222B34',
