@@ -28,7 +28,7 @@ export default function InputStories () {
             <Typography variant="h3" style={underlineStyle} gutterBottom>
 				Text Input
 			</Typography>
-
+            
 			<Grid container spacing={24}>
 				<Grid item>
 					<TableHeader gutterBottom>
@@ -62,7 +62,13 @@ export default function InputStories () {
 					/>
 					<ErrorMessage>Error message</ErrorMessage>
 				</Grid>
+			</Grid>
 
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Text Field
+			</Typography>
+			<Grid container spacing={24}>
 				<Grid item>
 					<TableHeader gutterBottom>
 						Multi line
@@ -71,7 +77,7 @@ export default function InputStories () {
 						multiline
 					/>
 				</Grid>
-			</Grid> <br/>
+			</Grid><br/>
 
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
