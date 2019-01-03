@@ -97,6 +97,8 @@ var address_book_edit_1 = require("./address-book/address-book-edit");
 exports.AddressBookEdit = address_book_edit_1.AddressBookEdit;
 var modal_box_1 = require("./common/modal-box");
 exports.ModalBox = modal_box_1.ModalBox;
+var copy_1 = require("./common/copy");
+exports.Copy = copy_1.Copy;
 __export(require("./theme/selfkey-dark-theme"));
 // Icons
 var green_tick_1 = require("./icons/green-tick");
