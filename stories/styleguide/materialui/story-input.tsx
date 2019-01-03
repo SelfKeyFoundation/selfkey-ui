@@ -34,7 +34,7 @@ export default function InputStories () {
 						Normal / Focused
 					</TableHeader>
 					<Input
-						disableUnderline={ true }
+						disableUnderline
 						placeholder="First Name"
 					/>
 				</Grid>
@@ -45,7 +45,7 @@ export default function InputStories () {
 					</TableHeader>
 					<Input
 						disabled
-						disableUnderline={ true }
+						disableUnderline
 						placeholder="First Name"
 					/>
 				</Grid>
@@ -56,7 +56,7 @@ export default function InputStories () {
 					</TableHeader>
 					<Input
 						error
-						disableUnderline={ true }
+						disableUnderline
 						placeholder="First Name"
 					/>
 					<ErrorMessage>Error message</ErrorMessage>
@@ -84,7 +84,7 @@ export default function InputStories () {
 					</TableHeader>
 
 					<DecimalInput 
-						disableUnderline={ true }
+						disableUnderline
 						placeholder="0"
 						type="number"
 						endAdornment={
@@ -101,7 +101,7 @@ export default function InputStories () {
 					</TableHeader>
 
 					<Input
-						disableUnderline={ true }
+						disableUnderline
 						type="date"
 					/>
 				</Grid>
@@ -113,7 +113,7 @@ export default function InputStories () {
 					</TableHeader>
 
 					<Input
-						disableUnderline={ true }
+						disableUnderline
 						placeholder="0"
 						type="number"
 					/>

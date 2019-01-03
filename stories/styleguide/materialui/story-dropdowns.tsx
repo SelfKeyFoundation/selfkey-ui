@@ -25,10 +25,10 @@ class DropdownStories extends React.Component {
                         onChange={ this.handleChange }
                         displayEmpty
                         name="country"
-                        disableUnderline={ true }
+                        disableUnderline
                         IconComponent={ KeyboardArrowDown }
                         input={ 
-                            <Input disableUnderline={ true }/> 
+                            <Input disableUnderline/> 
                         }
                     >
                         <MenuItem value="">
