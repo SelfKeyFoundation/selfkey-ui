@@ -128,6 +128,7 @@ const theme = createMuiTheme({
           backgroundColor: baseDark,
           borderRadius: '4px',
           border: '1px solid #384656',
+          boxSizing: 'border-box',
           color: typography,
           fontSize: '14px',
           height: '44px',
@@ -161,6 +162,9 @@ const theme = createMuiTheme({
           height: '22px',
           textTransform: 'uppercase',
           paddingLeft: '16px',
+        },
+        multiline: {
+          overflow: 'scroll',
         }
       },
       MuiInputLabel: {

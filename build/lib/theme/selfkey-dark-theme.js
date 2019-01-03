@@ -123,6 +123,7 @@ var theme = core_1.createMuiTheme({
                 backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
                 border: '1px solid #384656',
+                boxSizing: 'border-box',
                 color: colors_1.typography,
                 fontSize: '14px',
                 height: '44px',
@@ -156,6 +157,9 @@ var theme = core_1.createMuiTheme({
                 height: '22px',
                 textTransform: 'uppercase',
                 paddingLeft: '16px',
+            },
+            multiline: {
+                overflow: 'scroll',
             }
         },
         MuiInputLabel: {
