@@ -7,6 +7,7 @@ import {
 	Checkbox,
 	Radio,
 	Input,
+	TextField,
 } from '@material-ui/core';
 import { 
     TableHeader, 
@@ -60,6 +61,15 @@ export default function InputStories () {
 						placeholder="First Name"
 					/>
 					<ErrorMessage>Error message</ErrorMessage>
+				</Grid>
+
+				<Grid item>
+					<TableHeader gutterBottom>
+						Multi line
+					</TableHeader>
+					<TextField
+						multiline
+					/>
 				</Grid>
 			</Grid> <br/>
 
