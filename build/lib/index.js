@@ -123,4 +123,6 @@ var incorporations_1 = require("./icons/incorporations");
 exports.IncorporationsIcon = incorporations_1.IncorporationsIcon;
 var password_1 = require("./icons/password");
 exports.PasswordIcon = password_1.PasswordIcon;
+var download_2_1 = require("./icons/download-2");
+exports.DownloadIcon2 = download_2_1.DownloadIcon2;
 //# sourceMappingURL=index.js.map

@@ -65,4 +65,4 @@ export { ModalCloseIcon } from './icons/modal-close';
 export { WarningShieldIcon } from './icons/warning-shield';
 export { IncorporationsIcon } from './icons/incorporations';
 export { PasswordIcon } from './icons/password'
-
+export { DownloadIcon2 } from './icons/download-2'
