@@ -71,7 +71,7 @@ export default function InputStories () {
 			<Grid container spacing={24}>
 				<Grid item>
 					<TableHeader gutterBottom>
-						Multi line
+						Multiline
 					</TableHeader>
 					<TextField
 						multiline
