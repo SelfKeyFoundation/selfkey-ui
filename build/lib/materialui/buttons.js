@@ -4,45 +4,6 @@ var core_1 = require("@material-ui/core");
 var colors_1 = require("../colors");
 var ToggleButton_1 = require("@material-ui/lab/ToggleButton");
 var ToggleButtonGroup_1 = require("@material-ui/lab/ToggleButtonGroup");
-exports.OutlineButton = core_1.withStyles({
-    root: {
-        background: 'transparent',
-        border: '2px solid #1CA9BA',
-        color: colors_1.primary,
-        '&:hover': {
-            background: '#313D49',
-            borderColor: '#23E6FE',
-        },
-        '&:focus': {
-            background: '#1E262E',
-        },
-        '&$disabled': {
-            color: colors_1.primary,
-        },
-    },
-    disabled: {
-        opacity: 0.5,
-    },
-})(core_1.Button);
-exports.OutlineSecondaryButton = core_1.withStyles({
-    root: {
-        background: 'transparent',
-        border: "1px solid " + colors_1.typography,
-        color: colors_1.typography,
-        '&:hover': {
-            background: '#313D49',
-        },
-        '&:focus': {
-            background: colors_1.baseDark,
-        },
-        '&$disabled': {
-            color: colors_1.typography,
-        },
-    },
-    disabled: {
-        opacity: 0.5,
-    },
-})(core_1.Button);
 exports.ToggleBtnGroup = core_1.withStyles({
     selected: {
         backgroundColor: 'transparent',

@@ -18,7 +18,7 @@ var Typography_1 = require("@material-ui/core/Typography");
 var Modal_1 = require("@material-ui/core/Modal");
 var core_1 = require("@material-ui/core");
 var modalElements_1 = require("./modalElements");
-var buttons_1 = require("./buttons");
+// import { OutlineButton, OutlineSecondaryButton } from "./buttons";
 var typography_1 = require("./typography");
 var incorporations_1 = require("../icons/incorporations");
 var inputs_1 = require("./inputs");
@@ -84,11 +84,11 @@ var ModalWithBackButton = /** @class */ (function (_super) {
                 React.createElement("br", null),
                 React.createElement(typography_1.ExplanatoryLarge, { gutterBottom: true }, "Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard."),
                 React.createElement("br", null),
-                React.createElement(buttons_1.OutlineButton, { size: "large", onClick: this.handleOpen }, "Add Token")),
+                React.createElement(core_1.Button, { variant: 'outlined', size: "large", onClick: this.handleOpen }, "Add Token")),
             React.createElement("br", null),
             React.createElement(Modal_1.default, { open: this.state.open, onClose: this.handleClose },
                 React.createElement(exports.ModalWrap, null,
-                    React.createElement(buttons_1.OutlineSecondaryButton, { size: 'small', onClick: this.handleState }, "\u2039 Back"),
+                    React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
                     React.createElement(modalElements_1.ModalBody2, null,
                         React.createElement(Typography_1.default, { variant: "h2" }, "Add Attribute"),
                         React.createElement(typography_1.ExplanatoryLarge, { gutterBottom: true }, "Select the type of attribute you would like to add to your identity wallet."),

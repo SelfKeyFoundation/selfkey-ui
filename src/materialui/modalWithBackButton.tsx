@@ -5,9 +5,10 @@ import {
     withStyles, 
     Paper,
     Grid,
+    Button,
 } from "@material-ui/core";
 import { ModalBody2 } from "./modalElements";
-import { OutlineButton, OutlineSecondaryButton } from "./buttons";
+// import { OutlineButton, OutlineSecondaryButton } from "./buttons";
 import { ExplanatoryLarge, TableSmallText, Explanatory } from "./typography";
 import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
@@ -81,7 +82,7 @@ class ModalWithBackButton extends React.Component {
                         Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard. 
                     </ExplanatoryLarge>
                     <br/>
-                    <OutlineButton size="large" onClick={this.handleOpen}>Add Token</OutlineButton>
+                    <Button variant='outlined' size="large" onClick={this.handleOpen}>Add Token</Button>
                 </Grid>
                 <br />
 
@@ -91,7 +92,7 @@ class ModalWithBackButton extends React.Component {
                     onClose={this.handleClose}
                 >
                     <ModalWrap>
-                        <OutlineSecondaryButton size='small' onClick={this.handleState}>‹ Back</OutlineSecondaryButton>
+                        <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
                         <ModalBody2>
                             <Typography variant="h2">
                                 Add Attribute

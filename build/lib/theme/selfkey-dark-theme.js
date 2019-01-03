@@ -390,8 +390,6 @@ var theme = core_1.createMuiTheme({
         },
         MuiButton: {
             root: {
-                background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
-                border: '1px solid #0FB8D0',
                 borderRadius: '4px',
                 boxSizing: 'border-box',
                 color: colors_1.white,
@@ -399,6 +397,15 @@ var theme = core_1.createMuiTheme({
                 fontWeight: 600,
                 height: '36px',
                 minWidth: '164px',
+                '&$disabled': {
+                    color: colors_1.white,
+                    opacity: 0.5,
+                },
+            },
+            contained: {
+                background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
+                border: '1px solid #0FB8D0',
+                color: colors_1.white,
                 '&:hover': {
                     background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
                 },
@@ -407,7 +414,37 @@ var theme = core_1.createMuiTheme({
                 },
                 '&$disabled': {
                     color: colors_1.white,
-                    opacity: 0.5,
+                },
+            },
+            outlined: {
+                background: 'transparent',
+                border: '2px solid #1CA9BA',
+                color: colors_1.primary,
+                '&:hover': {
+                    background: '#313D49',
+                    borderColor: '#23E6FE',
+                },
+                '&:focus': {
+                    background: '#1E262E',
+                },
+                '&$disabled': {
+                    color: colors_1.primary,
+                },
+            },
+            outlinedSecondary: {
+                background: 'transparent',
+                border: "1px solid " + colors_1.typography,
+                color: colors_1.typography,
+                '&:hover': {
+                    backgroundColor: '#313D49',
+                    border: "1px solid " + colors_1.typography,
+                },
+                '&:focus': {
+                    background: colors_1.baseDark,
+                },
+                '&$disabled': {
+                    border: "1px solid " + colors_1.typography,
+                    color: colors_1.typography,
                 },
             },
             sizeLarge: {

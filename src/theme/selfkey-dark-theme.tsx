@@ -395,8 +395,6 @@ const theme = createMuiTheme({
       },
       MuiButton: {
         root: {
-          background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
-          border: '1px solid #0FB8D0',
           borderRadius: '4px',
           boxSizing: 'border-box',
           color: white,
@@ -404,15 +402,54 @@ const theme = createMuiTheme({
           fontWeight: 600,
           height: '36px',
           minWidth: '164px',
+          '&$disabled': {
+            color: white,
+            opacity: 0.5,
+          },
+        },
+        contained: {
+          background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
+          border: '1px solid #0FB8D0',
+          color: white,
           '&:hover': {
-              background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
+            background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
           },
           '&:focus': {
               background: 'linear-gradient(to top right, #0A99D0 10%, #097CBA 70%);',
           },
           '&$disabled': {
             color: white,
-            opacity: 0.5,
+          },
+        },
+        outlined: {
+          background: 'transparent',
+          border: '2px solid #1CA9BA',
+          color: primary,
+          '&:hover': {
+            background: '#313D49',
+            borderColor: '#23E6FE',
+          },
+          '&:focus': {
+            background: '#1E262E',
+          },
+          '&$disabled': {
+            color: primary,
+          },
+        },
+        outlinedSecondary: {
+          background: 'transparent',
+          border: `1px solid ${typography}`,
+          color: typography,
+          '&:hover': {
+            backgroundColor: '#313D49',
+            border: `1px solid ${typography}`,
+          },
+          '&:focus': {
+            background: baseDark,
+          },
+          '&$disabled': {
+            border: `1px solid ${typography}`,
+            color: typography,
           },
         },
         sizeLarge: {

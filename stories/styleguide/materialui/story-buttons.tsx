@@ -5,11 +5,7 @@ import {
 	IconButton, 
 	Button,
 } from '@material-ui/core';
-import { 
-    TableHeader, 
-    OutlineButton, 
-	OutlineSecondaryButton,
-} from '../../../src/theme/selfkey-dark-theme';
+import { TableHeader } from '../../../src/theme/selfkey-dark-theme';
 import InfoTooltip from '../../../src/icons/info';
 import { 
 	TooltipArrow, 
@@ -36,21 +32,21 @@ export default function ButtonStories () {
 
 					<Grid container spacing={24}>
 						<Grid item>
-							<Button size="large">Large</Button>
+							<Button variant='contained' size='large'>Large</Button>
 						</Grid>
 
 						<Grid item>
-							<Button disabled size="large">
+							<Button variant='contained' disabled size='large'>
 								Disabled
 							</Button> 
 						</Grid>
 
 						<Grid item>
-							<Button>Medium</Button> 
+							<Button variant='contained'>Medium</Button> 
 						</Grid>
 
 						<Grid item>
-							<Button size="small">Small</Button>
+							<Button variant='contained' size='small'>Small</Button>
 						</Grid>
 					</Grid>
 					<br/><br/>
@@ -61,21 +57,21 @@ export default function ButtonStories () {
 
 					<Grid container spacing={24}>
 						<Grid item>
-							<OutlineButton size="large">Large</OutlineButton>
+							<Button variant='outlined' size='large'>Large</Button>
 						</Grid>
 
 						<Grid item>
-							<OutlineButton disabled size="large">
+							<Button variant='outlined' disabled size='large'>
 								Disabled
-							</OutlineButton> 
+							</Button> 
 						</Grid>
 
 						<Grid item>
-							<OutlineButton>Medium</OutlineButton> 
+							<Button variant='outlined'>Medium</Button> 
 						</Grid>
 
 						<Grid item>
-							<OutlineButton size="small">Small</OutlineButton>
+							<Button variant='outlined' size='small'>Small</Button>
 						</Grid>
 					</Grid>
 					<br/><br/>
@@ -86,23 +82,24 @@ export default function ButtonStories () {
 
 					<Grid container spacing={24}>
 						<Grid item>
-							<OutlineSecondaryButton size="large">Large</OutlineSecondaryButton>
+							<Button variant='outlined' color='secondary' size='large'>Large</Button>
 						</Grid>
 
 						<Grid item>
-							<OutlineSecondaryButton disabled size="large">
+							<Button variant='outlined' color='secondary' disabled size='large'>
 								Disabled
-							</OutlineSecondaryButton> 
+							</Button> 
 						</Grid>
 
 						<Grid item>
-							<OutlineSecondaryButton>Medium</OutlineSecondaryButton> 
+							<Button variant='outlined' color='secondary'>Medium</Button> 
 						</Grid>
 
 						<Grid item>
-							<OutlineSecondaryButton size="small">Small</OutlineSecondaryButton>
+							<Button variant='outlined' color='secondary' size='small'>Small</Button>
 						</Grid>
 					</Grid>
+					<br/><br/>
 				</Grid>
 
 				<Grid item>

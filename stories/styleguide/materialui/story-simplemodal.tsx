@@ -3,9 +3,6 @@ import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import { Grid, Button } from "@material-ui/core";
 import { 
-    OutlineButton, 
-} from "../../../src/materialui/buttons";
-import { 
     ModalWrap, 
     ModalCloseButton, 
     ModalHeader,
@@ -37,7 +34,7 @@ class SimpleModalStory extends React.Component {
     render() {
         return (
             <div>
-                <OutlineButton size="large" onClick={this.handleOpen}>Open Modal</OutlineButton>
+                <Button variant='outlined' size="large" onClick={this.handleOpen}>Open Modal</Button>
                 <Modal open={this.state.open}>
                     <ModalWrap>
                         <ModalCloseButton onClick={this.handleState} >
@@ -56,11 +53,11 @@ class SimpleModalStory extends React.Component {
                             <br/><br/>
                             <Grid container spacing={24}>
                                 <Grid item>
-                                    <Button size="large">Continue</Button>
+                                    <Button variant='contained' size="large">Continue</Button>
                                 </Grid>
 
                                 <Grid item>
-                                    <OutlineButton size="large" onClick={this.handleState}>Cancel</OutlineButton>
+                                    <Button variant='outlined' size="large" onClick={this.handleState}>Cancel</Button>
                                 </Grid>
                             </Grid>
                         </ModalBody>
