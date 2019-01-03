@@ -140,6 +140,20 @@ const theme = createMuiTheme({
             marginTop: '16px',
           },
         },
+        underline: {
+          '&:hover:not($disabled):not($focused):not($error):before': {
+            borderBottom: '0',
+          },
+          '&:hover:not($disabled):not($focused):not($error):after': {
+            borderBottom: '0',
+          },
+          '&:after': {
+            borderBottom: '0',
+          },
+          '&:before': {
+            borderBottom: '0',
+          },
+        },
         focused: {
             "&$focused:not($error):not($disabled)": {
                 border: `1px solid ${primary}`,
@@ -165,7 +179,7 @@ const theme = createMuiTheme({
         },
         multiline: {
           overflow: 'scroll',
-        }
+        },
       },
       MuiInputLabel: {
         filled: {
