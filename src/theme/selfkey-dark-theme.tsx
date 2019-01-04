@@ -107,9 +107,9 @@ const theme = createMuiTheme({
           marginBottom: '10px',
           paddingBottom: '0',
           paddingTop: '0',
-        },
-        selected: {
-          backgroundColor: primary,
+          '&$selected': {
+            backgroundColor: primary,
+          },
         },
         button: {
           margin: '0',
@@ -133,6 +133,17 @@ const theme = createMuiTheme({
           fontSize: '14px',
           height: '44px',
           lineHeight: '21px',
+          paddingLeft: '16px',
+          '&$focused': {
+              "&$focused:not($error):not($disabled)": {
+                  border: `1px solid ${primary}`,
+                  boxShadow: `0 0 3px 1px ${primary}`,
+              },
+          },
+          '&$disabled': {
+              color: '#93B0C1',
+              opacity: 0.5,
+          },
         },
         formControl: {
           marginTop: 0,
@@ -154,21 +165,11 @@ const theme = createMuiTheme({
             borderBottom: '0',
           },
         },
-        focused: {
-            "&$focused:not($error):not($disabled)": {
-                border: `1px solid ${primary}`,
-                boxShadow: `0 0 3px 1px ${primary}`,
-            },
-        },
         error: {
             backgroundColor: 'rgba(255, 46, 99, 0.09)',
             border: `1px solid ${error}`,
             color: error,
             marginBottom: '6px',
-        },
-        disabled: {
-            color: '#93B0C1',
-            opacity: 0.5,
         },
       },
       MuiInputBase: {
@@ -230,8 +231,17 @@ const theme = createMuiTheme({
               border: `1px solid #2F3B48 !important`,
               color: `${baseDark} !important`,
             },
+            '&$disabled:not($checked)': {
+              color: 'transparent !important',
+            },
             '&$disabled': {
+              backgroundColor: '#222B34',
+              border: '1px solid #2F3B48',
+              borderRadius: '3px',
               color: 'transparent',
+              height: '18px',
+              padding: 0,
+              width: '18px',
             },
             '&:hover': {
               backgroundColor: '#384656',
@@ -258,15 +268,6 @@ const theme = createMuiTheme({
               backgroundColor: 'rgba(255, 46, 99, 0.05)',
             },
         },
-        disabled: {
-            backgroundColor: '#222B34',
-            border: '1px solid #2F3B48',
-            borderRadius: '3px',
-            color: 'transparent !important',
-            height: '18px',
-            padding: 0,
-            width: '18px',
-        },
       },
       MuiRadio: {
         root: {
@@ -292,8 +293,17 @@ const theme = createMuiTheme({
             border: `1px solid ${baseDark} !important`,
             color: `#35424e !important`,
           },
+          '&$disabled:not($checked)': {
+            color: 'transparent !important',
+          },
           '&$disabled': {
+            backgroundColor: '#222B34',
+            border: '1px solid #2F3B48',
+            borderRadius: '50%',
             color: 'transparent',
+            height: '18px',
+            padding: 0,
+            width: '18px',
           },
           '&:hover': {
             backgroundColor: '#384656',
@@ -319,15 +329,6 @@ const theme = createMuiTheme({
           '&:hover': {
             backgroundColor: 'rgba(255, 46, 99, 0.05)',
           },
-        },
-        disabled: {
-          backgroundColor: '#222B34',
-          border: '1px solid #2F3B48',
-          borderRadius: '50%',
-          color: 'transparent !important',
-          height: '18px',
-          padding: 0,
-          width: '18px',
         },
       },
       MuiSelect: {
@@ -388,10 +389,10 @@ const theme = createMuiTheme({
           display: 'block',
           fontSize: '14px',
           lineHeight: '21px',
+          '$&focused': {
+            display: 'none',
+          },
         },
-        focused: {
-          display: 'none',
-        }
       },
       MuiButton: {
         root: {
