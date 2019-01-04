@@ -131,4 +131,6 @@ var visibility_on_1 = require("./icons/visibility-on");
 exports.VisibilityOnIcon = visibility_on_1.VisibilityOnIcon;
 var print_1 = require("./icons/print");
 exports.PrintIcon = print_1.PrintIcon;
+var menu_button_1 = require("./icons/menu-button");
+exports.MenuButtonIcon = menu_button_1.MenuButtonIcon;
 //# sourceMappingURL=index.js.map

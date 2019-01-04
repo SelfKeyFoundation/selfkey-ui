@@ -69,4 +69,5 @@ export { DownloadIcon2 } from './icons/download-2';
 export { VisibilityOffIcon } from './icons/visibility-off';
 export { VisibilityOnIcon } from './icons/visibility-on';
 export { PrintIcon } from './icons/print';
+export { MenuButtonIcon } from './icons/menu-button';
 
