@@ -64,8 +64,9 @@ export { QuitIcon } from './icons/quit';
 export { ModalCloseIcon } from './icons/modal-close';
 export { WarningShieldIcon } from './icons/warning-shield';
 export { IncorporationsIcon } from './icons/incorporations';
-export { PasswordIcon } from './icons/password'
-export { DownloadIcon2 } from './icons/download-2'
-export { VisibilityOffIcon } from './icons/visibility-off'
-export { VisibilityOnIcon } from './icons/visibility-on'
+export { PasswordIcon } from './icons/password';
+export { DownloadIcon2 } from './icons/download-2';
+export { VisibilityOffIcon } from './icons/visibility-off';
+export { VisibilityOnIcon } from './icons/visibility-on';
+export { PrintIcon } from './icons/print';
 

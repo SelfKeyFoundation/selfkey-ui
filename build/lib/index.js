@@ -129,4 +129,6 @@ var visibility_off_1 = require("./icons/visibility-off");
 exports.VisibilityOffIcon = visibility_off_1.VisibilityOffIcon;
 var visibility_on_1 = require("./icons/visibility-on");
 exports.VisibilityOnIcon = visibility_on_1.VisibilityOnIcon;
+var print_1 = require("./icons/print");
+exports.PrintIcon = print_1.PrintIcon;
 //# sourceMappingURL=index.js.map
