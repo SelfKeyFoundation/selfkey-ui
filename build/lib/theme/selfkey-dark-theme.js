@@ -104,6 +104,9 @@ var theme = core_1.createMuiTheme({
                 paddingTop: '0',
                 '&$selected': {
                     backgroundColor: colors_1.primary,
+                    '&:hover': {
+                        backgroundColor: colors_1.primary,
+                    },
                 },
             },
             button: {

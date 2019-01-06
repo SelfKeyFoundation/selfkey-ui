@@ -109,6 +109,9 @@ const theme = createMuiTheme({
           paddingTop: '0',
           '&$selected': {
             backgroundColor: primary,
+            '&:hover': {
+              backgroundColor: primary,
+            },
           },
         },
         button: {
