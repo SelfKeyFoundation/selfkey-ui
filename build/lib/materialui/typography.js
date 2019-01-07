@@ -9,38 +9,12 @@ exports.UnreadNotification = core_1.withStyles({
         lineHeight: '26px',
     },
 })(core_1.Typography);
-exports.ParagraphLarge = core_1.withStyles({
-    root: {
-        fontSize: '18px',
-        lineHeight: '30px',
-    },
-})(core_1.Typography);
-exports.Paragraph = core_1.withStyles({
-    root: {
-        fontSize: '16px',
-        lineHeight: '24px',
-    },
-})(core_1.Typography);
-exports.Definition = core_1.withStyles({
-    root: {
-        color: colors_1.typography,
-        fontSize: '16px',
-        lineHeight: '20px',
-    },
-})(core_1.Typography);
 exports.DefinitionDescription = core_1.withStyles({
     root: {
         fontSize: '16px',
         fontWeight: 600,
         lineHeight: '20px',
         zIndex: 1,
-    },
-})(core_1.Typography);
-exports.ExplanatoryLarge = core_1.withStyles({
-    root: {
-        color: colors_1.typography,
-        fontSize: '18px',
-        lineHeight: '28px',
     },
 })(core_1.Typography);
 exports.Explanatory = core_1.withStyles({

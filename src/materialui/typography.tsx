@@ -15,42 +15,12 @@ export const UnreadNotification = withStyles({
 	},
 })(Typography);
 
-export const ParagraphLarge = withStyles({
-	root: {
-		fontSize: '18px',
-		lineHeight: '30px',
-	},
-})(Typography);
-
-export const Paragraph = withStyles({
-	root: {
-		fontSize: '16px',
-		lineHeight: '24px',
-	},
-})(Typography);
-
-export const Definition = withStyles({
-	root: {
-		color: typography,
-		fontSize: '16px',
-		lineHeight: '20px',
-	},
-})(Typography);
-
 export const DefinitionDescription = withStyles({
 	root: {
 		fontSize: '16px',
 		fontWeight: 600,
 		lineHeight: '20px',
 		zIndex: 1,
-	},
-})(Typography);
-
-export const ExplanatoryLarge = withStyles({
-	root: {
-		color: typography,
-		fontSize: '18px',
-		lineHeight: '28px',
 	},
 })(Typography);
 

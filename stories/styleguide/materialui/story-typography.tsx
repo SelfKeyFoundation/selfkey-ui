@@ -1,12 +1,8 @@
 import * as React from 'react';
 import { Typography } from '@material-ui/core';
 import { 
-    Paragraph,
-    ParagraphLarge,
-    Definition,
     DefinitionDescription,
     UnreadNotification,
-    ExplanatoryLarge,
     Explanatory,
     TableText,
     TableSmallText,
@@ -40,24 +36,25 @@ export default function TypographyStories () {
 				H3 - Heading 3
 			</Typography> <br/>
 
+
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Body Text
 			</Typography>
-			<ParagraphLarge gutterBottom>
+			<Typography variant="body1" gutterBottom>
 				Paragraph Large 18px
-			</ParagraphLarge>
-			<Paragraph gutterBottom>
+			</Typography>
+			<Typography variant="body2" gutterBottom>
 				Paragraph 16px
-			</Paragraph>
-			<Definition gutterBottom>
+			</Typography>
+			<Typography variant="body2" color="textSecondary" gutterBottom>
 				Definition Title 16px
-			</Definition>
+			</Typography>
 			<DefinitionDescription gutterBottom>
 				Definition description Title 16px
 			</DefinitionDescription>
-			<ExplanatoryLarge gutterBottom>
+			<Typography variant="body1" color="textSecondary" gutterBottom>
 				Explanatory Large 18px
-			</ExplanatoryLarge>
+			</Typography>
 			<Explanatory gutterBottom>
 				Explanatory 13/19px
 			</Explanatory> <br/>

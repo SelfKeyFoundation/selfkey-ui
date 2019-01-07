@@ -18,7 +18,6 @@ var Typography_1 = require("@material-ui/core/Typography");
 var Modal_1 = require("@material-ui/core/Modal");
 var core_1 = require("@material-ui/core");
 var modalElements_1 = require("./modalElements");
-// import { OutlineButton, OutlineSecondaryButton } from "./buttons";
 var typography_1 = require("./typography");
 var incorporations_1 = require("../icons/incorporations");
 var inputs_1 = require("./inputs");
@@ -82,7 +81,7 @@ var ModalWithBackButton = /** @class */ (function (_super) {
                 React.createElement("br", null),
                 React.createElement(Typography_1.default, { variant: "h1", gutterBottom: true }, "Manage My Crypto"),
                 React.createElement("br", null),
-                React.createElement(typography_1.ExplanatoryLarge, { gutterBottom: true }, "Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard."),
+                React.createElement(Typography_1.default, { variant: "body1", color: "textSecondary", gutterBottom: true }, "Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard."),
                 React.createElement("br", null),
                 React.createElement(core_1.Button, { variant: 'outlined', size: "large", onClick: this.handleOpen }, "Add Token")),
             React.createElement("br", null),
@@ -91,13 +90,13 @@ var ModalWithBackButton = /** @class */ (function (_super) {
                     React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
                     React.createElement(modalElements_1.ModalBody2, null,
                         React.createElement(Typography_1.default, { variant: "h2" }, "Add Attribute"),
-                        React.createElement(typography_1.ExplanatoryLarge, { gutterBottom: true }, "Select the type of attribute you would like to add to your identity wallet."),
-                        React.createElement(typography_1.ExplanatoryLarge, { gutterBottom: true }, "Add Identity Wallet Attribute"),
+                        React.createElement(Typography_1.default, { variant: "body1", color: "textSecondary", gutterBottom: true }, "Select the type of attribute you would like to add to your identity wallet."),
+                        React.createElement(Typography_1.default, { variant: "body1", color: "textSecondary", gutterBottom: true }, "Add Identity Wallet Attribute"),
                         React.createElement(exports.FileUploadGrid, { container: true, direction: 'column', alignItems: 'center', justify: 'center' },
                             React.createElement(exports.FileUploadHeaderGrid, { item: true },
                                 React.createElement(Typography_1.default, { variant: 'h2' }, "Upload Your National ID Document")),
                             React.createElement("br", null),
-                            React.createElement(core_1.Grid, { justify: 'center', alignItems: 'center', direction: 'column' },
+                            React.createElement(core_1.Grid, { container: true, justify: 'center', alignItems: 'center', direction: 'column' },
                                 React.createElement(inputs_1.FileUploadLabel, { htmlFor: "key-upload" },
                                     React.createElement(hard_drive_1.default, null),
                                     React.createElement("div", null,

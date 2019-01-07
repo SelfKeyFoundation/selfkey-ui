@@ -97,7 +97,7 @@ const theme = createMuiTheme({
         },
         body1: {
           fontSize: '18px',
-		      lineHeight: '30px',
+          lineHeight: '30px',
         },
         body2: {
           fontSize: '16px',

@@ -6,10 +6,7 @@ import {
     ListItem, 
 } from '@material-ui/core';
 import { 
-    Paragraph,
     DefaultBullet,
-    ParagraphLarge,
-    Definition,
     GreenTick,
     DefinitionDescription,
     CheckedIcon,
@@ -27,14 +24,14 @@ export default function InputStories () {
 					<Typography variant="h3" style={underlineStyle} gutterBottom>
 						Lists
 					</Typography>
-					<Paragraph>
+					<Typography variant="body2" gutterBottom>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit:
-					</Paragraph>
+					</Typography>
 					<List>
 						{['Binance', 'KuCoin', 'IDEX'].map(item => (
 							<ListItem key={item}>
 								<DefaultBullet />
-								<ParagraphLarge>{item}</ParagraphLarge>
+								<Typography variant="body2" gutterBottom>{item}</Typography>
 							</ListItem>
 						))}
 					</List> <br/>
@@ -47,9 +44,9 @@ export default function InputStories () {
 					<List>
 						{['United States', 'LLC', '08/08/2016'].map(item => (
 							<ListItem key={item}>
-								<Definition>
+								<Typography variant="body2" color="textSecondary" gutterBottom>
 									Jurisdiction
-								</Definition>
+								</Typography>
 								<GreenTick />
 								<DefinitionDescription>
 									{item}
@@ -84,9 +81,9 @@ export default function InputStories () {
 						].map(item => (
 							<ListItem key={item.name}>
 								<CheckedIcon item={item.icon} data-item={item} />
-								<Definition gutterBottom>
+								<Typography variant="body2" color="textSecondary" gutterBottom>
 									{item.name}
-								</Definition>
+								</Typography>
 							</ListItem>
 						))}
 					</List> <br/>

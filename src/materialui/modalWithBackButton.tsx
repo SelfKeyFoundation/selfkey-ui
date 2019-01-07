@@ -8,8 +8,10 @@ import {
     Button,
 } from "@material-ui/core";
 import { ModalBody2 } from "./modalElements";
-// import { OutlineButton, OutlineSecondaryButton } from "./buttons";
-import { ExplanatoryLarge, TableSmallText, Explanatory } from "./typography";
+import { 
+    TableSmallText, 
+    Explanatory 
+} from "./typography";
 import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
 import HardDriveIcon from "../icons/hard-drive";
@@ -78,9 +80,9 @@ class ModalWithBackButton extends React.Component {
                         Manage My Crypto
                     </Typography>
                     <br/>
-                    <ExplanatoryLarge gutterBottom>
+                    <Typography variant="body1" color="textSecondary" gutterBottom>
                         Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard. 
-                    </ExplanatoryLarge>
+                    </Typography>
                     <br/>
                     <Button variant='outlined' size="large" onClick={this.handleOpen}>Add Token</Button>
                 </Grid>
@@ -97,13 +99,13 @@ class ModalWithBackButton extends React.Component {
                             <Typography variant="h2">
                                 Add Attribute
                             </Typography>
-                            <ExplanatoryLarge gutterBottom>
+                            <Typography variant="body1" color="textSecondary" gutterBottom>
                                 Select the type of attribute you would like to add to your identity wallet. 
-                            </ExplanatoryLarge>
+                            </Typography>
                             
-                            <ExplanatoryLarge gutterBottom>
+                            <Typography variant="body1" color="textSecondary" gutterBottom>
                                 Add Identity Wallet Attribute
-                            </ExplanatoryLarge>
+                            </Typography>
 
                             <FileUploadGrid container direction='column' alignItems='center' justify='center' >
                                 <FileUploadHeaderGrid item>
@@ -111,7 +113,7 @@ class ModalWithBackButton extends React.Component {
                                 </FileUploadHeaderGrid>
 
                                 <br />
-                                <Grid justify='center' alignItems='center' direction='column'>
+                                <Grid container justify='center' alignItems='center' direction='column'>
                                     <FileUploadLabel htmlFor="key-upload">
                                         <HardDriveIcon />
                                         <div>

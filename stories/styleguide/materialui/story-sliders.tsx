@@ -3,10 +3,6 @@ import {
     Grid, 
     Typography, 
 } from '@material-ui/core';
-import { 
-    Definition, 
-    Paragraph,
-} from '../../../src/materialui/typography';
 import { KeySlider } from '../../../src/materialui/slider';
 
 const underlineStyle = {
@@ -27,17 +23,19 @@ class SliderStory extends React.Component {
                     Slider
                 </Typography>
                 <Grid container justify='flex-start' alignItems='baseline' >
-                    <Definition>Network Transaction Fee: &nbsp;</Definition>
-                    <Paragraph>0.00042 ETH / $0.01 USD</Paragraph>
+                    <Typography variant="body2" color="textSecondary" gutterBottom>
+                        Network Transaction Fee: &nbsp;
+                    </Typography>
+                    <Typography variant="body1" gutterBottom>0.00042 ETH / $0.01 USD</Typography>
                 </Grid>
                 <KeySlider
                     value={this.state.value}
                     onChange={this.handleChange}
                 />
                 <Grid container justify='space-between'>
-                    <Definition>Slow</Definition>
-                    <Definition>Medium</Definition>
-                    <Definition>Fast</Definition>
+                    <Typography variant="body2" color="textSecondary" gutterBottom>Slow</Typography>
+                    <Typography variant="body2" color="textSecondary" gutterBottom>Medium</Typography>
+                    <Typography variant="body2" color="textSecondary" gutterBottom>Fast</Typography>
                 </Grid>
             </React.Fragment>
         );
