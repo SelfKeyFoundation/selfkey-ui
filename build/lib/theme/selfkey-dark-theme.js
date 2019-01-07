@@ -81,8 +81,28 @@ var theme = core_1.createMuiTheme({
                 fontSize: '16px',
                 lineHeight: '24px',
             },
+            h4: {},
             h5: {
                 fontWeight: 600,
+            },
+            h6: {},
+            body1: {
+                fontSize: '18px',
+                lineHeight: '30px',
+            },
+            body2: {
+                fontSize: '16px',
+                lineHeight: '24px',
+            },
+            subtitle1: {},
+            subtitle2: {},
+            overline: {
+                color: colors_1.typography,
+                fontSize: '12px',
+                fontWeight: 600,
+                lineHeight: '15px',
+                textTransform: 'uppercase',
+                whiteSpace: 'normal',
             },
         },
         MuiList: {
