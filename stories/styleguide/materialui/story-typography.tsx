@@ -8,12 +8,10 @@ import {
     UnreadNotification,
     ExplanatoryLarge,
     Explanatory,
-    TableHeader,
     TableText,
     TableSmallText,
     TableSmallTextDisabled,
     FormPlaceholder,
-    FormLabel,
     ErrorMessage,
     WarningMessage,
 	Tag, 
@@ -42,7 +40,6 @@ export default function TypographyStories () {
 				H3 - Heading 3
 			</Typography> <br/>
 
-
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Body Text
 			</Typography>
@@ -69,9 +66,9 @@ export default function TypographyStories () {
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Tables
 			</Typography>
-			<TableHeader gutterBottom>
+			<Typography variant="overline" gutterBottom>
 				Table Header 12/15px
-			</TableHeader>
+			</Typography>
 			<TableText gutterBottom>
 				Table Text 15/18px 
 			</TableText>
@@ -101,9 +98,9 @@ export default function TypographyStories () {
 			<FormPlaceholder gutterBottom>
 				Form Placeholder 14/21px
 			</FormPlaceholder>
-			<FormLabel gutterBottom>
-				Form Label 12/15px
-			</FormLabel>
+			<Typography variant="overline" gutterBottom>
+				Form Label  12/15px
+			</Typography>
 			<ErrorMessage gutterBottom>
 				Error Message 13/19px
 			</ErrorMessage>

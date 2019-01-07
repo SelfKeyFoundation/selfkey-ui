@@ -62,17 +62,6 @@ export const Explanatory = withStyles({
 	},
 })(Typography);
 
-export const TableHeader = withStyles({
-	root: {
-		color: typography,
-		fontSize: '12px',
-		fontWeight: 600,
-		lineHeight: '15px',
-		textTransform: 'uppercase',
-		whiteSpace: 'normal',
-	},
-})(Typography);
-
 export const TableText = withStyles({
 	root: {
 		fontSize: '15px',
@@ -100,16 +89,6 @@ export const FormPlaceholder = withStyles({
 		color: typography,
 		fontSize: '14px',
 		lineHeight: '21px',
-	},
-})(Typography);
-
-export const FormLabel = withStyles({
-	root: {
-		color: typography,
-		fontSize: '12px',
-		fontWeight: 600,
-		lineHeight: '15px',
-		textTransform: 'uppercase',
 	},
 })(Typography);
 

@@ -5,7 +5,6 @@ import {
 	IconButton, 
 	Button,
 } from '@material-ui/core';
-import { TableHeader } from '../../../src/theme/selfkey-dark-theme';
 import InfoTooltip from '../../../src/icons/info';
 import { 
 	TooltipArrow, 
@@ -26,9 +25,9 @@ export default function ButtonStories () {
 
 			<Grid container spacing={24}>
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Full Primary
-					</TableHeader>
+					</Typography>
 
 					<Grid container spacing={24}>
 						<Grid item>
@@ -51,9 +50,9 @@ export default function ButtonStories () {
 					</Grid>
 					<br/><br/>
 
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Shell Primary
-					</TableHeader>
+					</Typography>
 
 					<Grid container spacing={24}>
 						<Grid item>
@@ -76,9 +75,9 @@ export default function ButtonStories () {
 					</Grid>
 					<br/><br/>
 
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Shell Secondary
-					</TableHeader>
+					</Typography>
 
 					<Grid container spacing={24}>
 						<Grid item>
@@ -103,9 +102,9 @@ export default function ButtonStories () {
 				</Grid>
 
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Tooltips
-					</TableHeader>
+					</Typography>
 					<KeyTooltip interactive placement="top-start" 
 						title={
 							<React.Fragment>
@@ -123,9 +122,9 @@ export default function ButtonStories () {
 			<br/><br/><br/>
 
 
-			<TableHeader gutterBottom>
+			<Typography variant="overline" gutterBottom>
 				Button Groups
-			</TableHeader>
+			</Typography>
 			<Grid container spacing={24}>
 				<Grid item>
 					<ToggleButtonGroupStory />

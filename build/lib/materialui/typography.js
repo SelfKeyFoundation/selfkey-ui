@@ -50,16 +50,6 @@ exports.Explanatory = core_1.withStyles({
         lineHeight: '19px',
     },
 })(core_1.Typography);
-exports.TableHeader = core_1.withStyles({
-    root: {
-        color: colors_1.typography,
-        fontSize: '12px',
-        fontWeight: 600,
-        lineHeight: '15px',
-        textTransform: 'uppercase',
-        whiteSpace: 'normal',
-    },
-})(core_1.Typography);
 exports.TableText = core_1.withStyles({
     root: {
         fontSize: '15px',
@@ -84,15 +74,6 @@ exports.FormPlaceholder = core_1.withStyles({
         color: colors_1.typography,
         fontSize: '14px',
         lineHeight: '21px',
-    },
-})(core_1.Typography);
-exports.FormLabel = core_1.withStyles({
-    root: {
-        color: colors_1.typography,
-        fontSize: '12px',
-        fontWeight: 600,
-        lineHeight: '15px',
-        textTransform: 'uppercase',
     },
 })(core_1.Typography);
 exports.ErrorMessage = core_1.withStyles({

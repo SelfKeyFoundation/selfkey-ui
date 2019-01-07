@@ -9,7 +9,6 @@ import {
 	Table,
 } from '@material-ui/core';
 import { 
-	TableHeader,
 	TableText,
 	TableSmallText,
     MuiEditIcon,
@@ -39,12 +38,12 @@ export default function TableStories () {
             <Table>
                 <TableHead>
                     <LargeTableHeadRow>
-                        <TableCell><TableHeader>Name</TableHeader></TableCell>
-                        <TableCell><TableHeader>Type</TableHeader></TableCell>
-                        <TableCell><TableHeader>Role</TableHeader></TableCell>
-                        <TableCell><TableHeader>Residency/Domicile</TableHeader></TableCell>
-                        <TableCell><TableHeader>Shares</TableHeader></TableCell>
-                        <TableCell><TableHeader>Actions</TableHeader></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Name</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Type</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Role</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Residency/Domicile</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Shares</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Actions</Typography></TableCell>
                     </LargeTableHeadRow>
                 </TableHead>
 
@@ -114,15 +113,15 @@ export default function TableStories () {
             <Table>
                 <TableHead>
                     <SmallTableHeadRow>
-                        <SmallTableCell><TableHeader>Type</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>Role</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>Name</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>E-Mail</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>Citizensip / Incorporation</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>Residency / Domicile</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>Shares</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>Selfkey User</TableHeader></SmallTableCell>
-                        <SmallTableCell><TableHeader>Actions</TableHeader></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Type</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Role</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Name</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>E-Mail</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Citizensip / Incorporation</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Residency / Domicile</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Shares</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Selfkey User</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" gutterBottom>Actions</Typography></SmallTableCell>
                     </SmallTableHeadRow>
                 </TableHead>
 
@@ -257,12 +256,12 @@ export default function TableStories () {
             <Table>
                 <TableHead>
                     <LargeTableHeadRow>
-                        <TableCell><TableHeader></TableHeader></TableCell>
-                        <TableCell><TableHeader>Name</TableHeader></TableCell>
-                        <TableCell><TableHeader>Type</TableHeader></TableCell>
-                        <TableCell><TableHeader>Good for</TableHeader></TableCell>
-                        <TableCell><TableHeader>Shares</TableHeader></TableCell>
-                        <TableCell><TableHeader>Actions</TableHeader></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom></Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Name</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Type</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Good for</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Shares</Typography></TableCell>
+                        <TableCell><Typography variant="overline" gutterBottom>Actions</Typography></TableCell>
                     </LargeTableHeadRow>
                 </TableHead>
 

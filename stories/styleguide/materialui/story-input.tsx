@@ -10,7 +10,6 @@ import {
 	TextField,
 } from '@material-ui/core';
 import { 
-    TableHeader, 
     ErrorMessage,
 	DecimalInput,
 	UnreadNotification,
@@ -31,9 +30,9 @@ export default function InputStories () {
             
 			<Grid container spacing={24}>
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Normal / Focused
-					</TableHeader>
+					</Typography>
 					<Input
 						disableUnderline
 						placeholder="First Name"
@@ -41,9 +40,9 @@ export default function InputStories () {
 				</Grid>
 
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Disabled
-					</TableHeader>
+					</Typography>
 					<Input
 						disabled
 						disableUnderline
@@ -52,9 +51,9 @@ export default function InputStories () {
 				</Grid>
 
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Error
-					</TableHeader>
+					</Typography>
 					<Input
 						error
 						disableUnderline
@@ -70,9 +69,9 @@ export default function InputStories () {
 			</Typography>
 			<Grid container spacing={24}>
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Multiline
-					</TableHeader>
+					</Typography>
 					<TextField
 						multiline
 					/>
@@ -83,9 +82,9 @@ export default function InputStories () {
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Dropdown
 			</Typography>
-			<TableHeader gutterBottom>
+			<Typography variant="overline" gutterBottom>
 				Normal/Selection
-			</TableHeader>
+			</Typography>
 			<DropdownStories />
 			<br/><br/>
 
@@ -95,9 +94,9 @@ export default function InputStories () {
 			</Typography>
 			<Grid container spacing={24}>
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Decimal
-					</TableHeader>
+					</Typography>
 
 					<DecimalInput 
 						disableUnderline
@@ -112,9 +111,9 @@ export default function InputStories () {
 				</Grid>
 
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Date
-					</TableHeader>
+					</Typography>
 
 					<Input
 						disableUnderline
@@ -124,9 +123,9 @@ export default function InputStories () {
 
 
 				<Grid item>
-					<TableHeader gutterBottom>
+					<Typography variant="overline" gutterBottom>
 						Numeric
-					</TableHeader>
+					</Typography>
 
 					<Input
 						disableUnderline
