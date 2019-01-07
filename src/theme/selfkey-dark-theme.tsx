@@ -376,6 +376,12 @@ const theme = createMuiTheme({
           lineHeight: '21px',
         },
       },
+      MuiFormGroup: {
+        root: {
+          backgroundColor: base,
+          marginBottom: '15px',
+        },
+      },
       MuiFormControl: {
         root: {
           minWidth: '200px',

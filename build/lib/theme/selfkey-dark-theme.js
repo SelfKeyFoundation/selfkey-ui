@@ -371,6 +371,12 @@ var theme = core_1.createMuiTheme({
                 lineHeight: '21px',
             },
         },
+        MuiFormGroup: {
+            root: {
+                backgroundColor: colors_1.base,
+                marginBottom: '15px',
+            },
+        },
         MuiFormControl: {
             root: {
                 minWidth: '200px',
