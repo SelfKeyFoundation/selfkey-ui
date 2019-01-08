@@ -55,8 +55,8 @@ export default function InputStories () {
 						disableUnderline
 						placeholder="First Name"
 					/>
-					<Typography variant="subtitle1" color="error" gutterBottom>
-						Error Message 14px
+					<Typography variant="subtitle2" color="error" gutterBottom>
+						Error Message
 					</Typography>
 				</Grid>
 			</Grid>
