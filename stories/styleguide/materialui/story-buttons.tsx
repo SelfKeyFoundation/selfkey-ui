@@ -119,8 +119,6 @@ export default function ButtonStories () {
 					</KeyTooltip>
 				</Grid>
 			</Grid>
-			<br/><br/><br/>
-
 
 			<Typography variant="overline" gutterBottom>
 				Button Groups
@@ -130,7 +128,7 @@ export default function ButtonStories () {
 					<ToggleButtonGroupStory />
 				</Grid>
 			</Grid>
-			<br/><br/>
+			<br/><br/><br/>
         </div>
     )
 }

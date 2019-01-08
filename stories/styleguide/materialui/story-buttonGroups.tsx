@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { 
-    ToggleBtnGroup, 
-    ToggleBtn 
-} from '../../../src/materialui/buttons';
 import StructureIcon from '../../../src/icons/structure';
 import ListIcon from '../../../src/icons/list';
 import { Typography } from '@material-ui/core';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import ToggleButton from '@material-ui/lab/ToggleButton';
 
 class ToggleButtonGroupStory extends React.Component {
     state = {
@@ -18,27 +16,27 @@ class ToggleButtonGroupStory extends React.Component {
         const { value } = this.state;
 
         return (
-            <ToggleBtnGroup 
+            <ToggleButtonGroup 
                 exclusive
                 value={value}
                 onChange={this.handleChange}
             >
-                <ToggleBtn value="first">
-                    <Typography variant="h5" gutterBottom>First</Typography>
-                </ToggleBtn>
-                <ToggleBtn value="second">
-                    <Typography variant="h5" gutterBottom>second</Typography>
-                </ToggleBtn>
-                <ToggleBtn value="third">
-                    <Typography variant="h5" gutterBottom>third</Typography>
-                </ToggleBtn>
-                <ToggleBtn value="structure">
+                <ToggleButton value="first">
+                    <Typography variant="h5">First</Typography>
+                </ToggleButton>
+                <ToggleButton value="second">
+                    <Typography variant="h5">second</Typography>
+                </ToggleButton>
+                <ToggleButton value="third">
+                    <Typography variant="h5">third</Typography>
+                </ToggleButton>
+                <ToggleButton value="structure">
                     <StructureIcon />
-                </ToggleBtn>
-                <ToggleBtn value="list">
+                </ToggleButton>
+                <ToggleButton value="list">
                     <ListIcon />
-                </ToggleBtn>
-            </ToggleBtnGroup>
+                </ToggleButton>
+            </ToggleButtonGroup>
         );
     }
 }

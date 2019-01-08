@@ -12,7 +12,6 @@ import {
   baseDark,
 } from '../colors';
 export * from '../colors';
-export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
 export * from '../materialui/inputs';
@@ -655,6 +654,36 @@ const theme = createMuiTheme({
       MuiBackdrop: {
         root: {
           backgroundColor: base,
+        },
+      },
+      // @ts-ignore
+      MuiToggleButtonGroup: {
+        root: {
+          background: error,
+          boxShadow: 'none',
+        },
+        selected: {
+          backgroundColor: 'transparent',
+          boxShadow: 'none',
+        }
+      },
+      MuiToggleButton: {
+        root: {
+          backgroundColor: '#293743',
+          border: '1px solid #1D505F',
+          boxSizing: 'border-box',
+          fill: typography,
+          height: '44px',
+          textTransform: 'initial',
+          '&:hover': {
+              border: `1px solid ${primaryTint}`,
+          },
+        },
+        selected: {
+          background: '#313D49',
+          border: `1px solid ${primaryTint}`,
+          fill: primary,
+          color: primary,
         },
       },
     },

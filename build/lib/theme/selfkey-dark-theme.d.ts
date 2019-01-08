@@ -1,6 +1,5 @@
 import * as React from 'react';
 export * from '../colors';
-export * from '../materialui/buttons';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
 export * from '../materialui/inputs';

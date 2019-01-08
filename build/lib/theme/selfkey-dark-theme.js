@@ -7,7 +7,6 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var colors_1 = require("../colors");
 __export(require("../colors"));
-__export(require("../materialui/buttons"));
 __export(require("../materialui/colorPresentation"));
 __export(require("../materialui/datepicker"));
 __export(require("../materialui/inputs"));
@@ -649,6 +648,36 @@ var theme = core_1.createMuiTheme({
         MuiBackdrop: {
             root: {
                 backgroundColor: colors_1.base,
+            },
+        },
+        // @ts-ignore
+        MuiToggleButtonGroup: {
+            root: {
+                background: colors_1.error,
+                boxShadow: 'none',
+            },
+            selected: {
+                backgroundColor: 'transparent',
+                boxShadow: 'none',
+            }
+        },
+        MuiToggleButton: {
+            root: {
+                backgroundColor: '#293743',
+                border: '1px solid #1D505F',
+                boxSizing: 'border-box',
+                fill: colors_1.typography,
+                height: '44px',
+                textTransform: 'initial',
+                '&:hover': {
+                    border: "1px solid " + colors_1.primaryTint,
+                },
+            },
+            selected: {
+                background: '#313D49',
+                border: "1px solid " + colors_1.primaryTint,
+                fill: colors_1.primary,
+                color: colors_1.primary,
             },
         },
     },
