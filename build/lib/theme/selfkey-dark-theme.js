@@ -653,7 +653,6 @@ var theme = core_1.createMuiTheme({
         // @ts-ignore
         MuiToggleButtonGroup: {
             root: {
-                background: colors_1.error,
                 boxShadow: 'none',
             },
             selected: {

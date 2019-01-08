@@ -659,7 +659,6 @@ const theme = createMuiTheme({
       // @ts-ignore
       MuiToggleButtonGroup: {
         root: {
-          background: error,
           boxShadow: 'none',
         },
         selected: {
