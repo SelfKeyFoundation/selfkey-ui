@@ -323,29 +323,29 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 <SelfkeyDarkTheme>
 	<Card>
 		<CardContent>
-			<Typography variant="h5" color="error" gutterBottom>
+			<Typography variant="h1" color="error" gutterBottom>
 				Colors
 			</Typography>
 			<ColorStories />
 
-			<Typography variant="h5" color="error" gutterBottom>
+			<Typography variant="h1" color="error" gutterBottom>
 				Typography
 			</Typography>
 			<TypographyStories />
 			<ListStories />
 
-			<Typography variant="h5" color="error" gutterBottom>
+			<Typography variant="h1" color="error" gutterBottom>
 				Forms
 			</Typography>
 			<InputStories />
 			<ButtonStories />
 
-			<Typography variant="h5" color="error" gutterBottom>
+			<Typography variant="h1" color="error" gutterBottom>
                 Tables
             </Typography>
 			<TableStories />
 
-			<Typography variant="h5" color="error" gutterBottom>
+			<Typography variant="h1" color="error" gutterBottom>
                 UI Elements
             </Typography>
 			<TabStories />
@@ -357,13 +357,13 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 			<FileUploadStory />
 
 			<br/>
-			<Typography variant="h5" color="error" gutterBottom>
+			<Typography variant="h1" color="error" gutterBottom>
                 Modals
             </Typography>
 			<ModalStories />
 
 			<br/>
-			<Typography variant="h5" color="error" gutterBottom>
+			<Typography variant="h1" color="error" gutterBottom>
                 Date Picker
             </Typography>
 			<DatePickerStories />

@@ -3,7 +3,6 @@ import {
     Grid, Typography, LinearProgress
 } from '@material-ui/core';
 import HardDriveIcon from '../../../src/icons/hard-drive';
-import { TableSmallText, Explanatory } from '../../../src/materialui/typography';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -26,8 +25,8 @@ export default function FileUploadInProgressStory () {
                 </Grid>
 
                 <Grid container direction='column' alignItems='center' justify='center'>
-                    <TableSmallText>Your National ID with Selfie</TableSmallText>
-                    <Explanatory>This is stored locally.</Explanatory>
+                    <Typography variant="subtitle1" gutterBottom>Your National ID with Selfie</Typography>
+                    <Typography variant="subtitle2" color="secondary" gutterBottom>This is stored locally.</Typography>
                 </Grid>
             </Grid>
             <br/><br/>

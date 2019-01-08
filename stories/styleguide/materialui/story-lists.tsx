@@ -8,7 +8,6 @@ import {
 import { 
     DefaultBullet,
     GreenTick,
-    DefinitionDescription,
     CheckedIcon,
 } from '../../../src/theme/selfkey-dark-theme';
 
@@ -48,9 +47,9 @@ export default function InputStories () {
 									Jurisdiction
 								</Typography>
 								<GreenTick />
-								<DefinitionDescription>
+								<Typography variant="h5" gutterBottom>
 									{item}
-								</DefinitionDescription>
+								</Typography>
 							</ListItem>
 						))}
 					</List> <br/>

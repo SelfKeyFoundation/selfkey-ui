@@ -1,17 +1,6 @@
 import * as React from 'react';
 import { Typography } from '@material-ui/core';
-import { 
-    DefinitionDescription,
-    UnreadNotification,
-    Explanatory,
-    TableText,
-    TableSmallText,
-    TableSmallTextDisabled,
-    FormPlaceholder,
-    ErrorMessage,
-    WarningMessage,
-	Tag, 
-} from '../../../src/theme/selfkey-dark-theme';
+import { Tag } from '../../../src/theme/selfkey-dark-theme';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -29,13 +18,12 @@ export default function TypographyStories () {
 			<Typography variant="h2" gutterBottom>
 				H2 - Heading 2
 			</Typography>
-			<UnreadNotification gutterBottom>
+			<Typography variant="h4" gutterBottom>
 				H2 - Notifications Unread
-			</UnreadNotification>
+			</Typography>
 			<Typography variant="h3" gutterBottom>
 				H3 - Heading 3
-			</Typography> <br/>
-
+			</Typography><br/>
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Body Text
@@ -46,19 +34,18 @@ export default function TypographyStories () {
 			<Typography variant="body2" gutterBottom>
 				Paragraph 16px
 			</Typography>
-			<Typography variant="body2" color="textSecondary" gutterBottom>
+			<Typography variant="body2" color="secondary" gutterBottom>
 				Definition Title 16px
 			</Typography>
-			<DefinitionDescription gutterBottom>
+			<Typography variant="h5" gutterBottom>
 				Definition description Title 16px
-			</DefinitionDescription>
-			<Typography variant="body1" color="textSecondary" gutterBottom>
+			</Typography>
+			<Typography variant="body1" color="secondary" gutterBottom>
 				Explanatory Large 18px
 			</Typography>
-			<Explanatory gutterBottom>
+			<Typography variant="subtitle2" color="secondary" gutterBottom>
 				Explanatory 13/19px
-			</Explanatory> <br/>
-
+			</Typography><br/>
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Tables
@@ -66,18 +53,18 @@ export default function TypographyStories () {
 			<Typography variant="overline" gutterBottom>
 				Table Header 12/15px
 			</Typography>
-			<TableText gutterBottom>
+			<Typography variant="h6" gutterBottom>
 				Table Text 15/18px 
-			</TableText>
-			<TableSmallText gutterBottom>
+			</Typography>
+			<Typography variant="subtitle1" gutterBottom>
 				Table Small Text 14/17px
-			</TableSmallText>
-			<TableSmallTextDisabled gutterBottom>
+			</Typography>
+			<Typography variant="subtitle1" color="textSecondary" gutterBottom>
 				Table Small Text Disabled 14/17px
-			</TableSmallTextDisabled>
-			<TableSmallText color="primary" gutterBottom>
+			</Typography>
+			<Typography variant="subtitle1" color="primary" gutterBottom>
 				Table Small Link 14/17px
-			</TableSmallText> 
+			</Typography>
 			<Tag gutterBottom>
 				First tag
 			</Tag> 
@@ -86,25 +73,23 @@ export default function TypographyStories () {
 			</Tag>
 			<Tag gutterBottom>
 				Third tag
-			</Tag> <br/><br/>
-			
+			</Tag><br/><br/>
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Forms
 			</Typography>
-			<FormPlaceholder gutterBottom>
+			<Typography variant="subtitle1" color="secondary" gutterBottom>
 				Form Placeholder 14/21px
-			</FormPlaceholder>
-			<Typography variant="overline" gutterBottom>
-				Form Label  12/15px
 			</Typography>
-			<ErrorMessage gutterBottom>
+			<Typography variant="overline" gutterBottom>
+				Form Label 12/15px
+			</Typography>
+			<Typography variant="subtitle2" color="error" gutterBottom>
 				Error Message 13/19px
-			</ErrorMessage>
-			<WarningMessage gutterBottom>
+			</Typography>
+			<Typography variant="caption" gutterBottom>
 				Warning Message 16/24px
-			</WarningMessage> 
-			<br/>
+			</Typography><br/>
         </div>
     )
 }

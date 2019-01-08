@@ -18,7 +18,6 @@ var Typography_1 = require("@material-ui/core/Typography");
 var Modal_1 = require("@material-ui/core/Modal");
 var core_1 = require("@material-ui/core");
 var modalElements_1 = require("./modalElements");
-var typography_1 = require("./typography");
 var incorporations_1 = require("../icons/incorporations");
 var inputs_1 = require("./inputs");
 var hard_drive_1 = require("../icons/hard-drive");
@@ -100,8 +99,8 @@ var ModalWithBackButton = /** @class */ (function (_super) {
                                 React.createElement(inputs_1.FileUploadLabel, { htmlFor: "key-upload" },
                                     React.createElement(hard_drive_1.default, null),
                                     React.createElement("div", null,
-                                        React.createElement(typography_1.TableSmallText, null, "Select Document"),
-                                        React.createElement(typography_1.Explanatory, null, "This is stored locally on your machine."))),
+                                        React.createElement(Typography_1.default, { variant: "subtitle1", gutterBottom: true }, "Select Document"),
+                                        React.createElement(Typography_1.default, { variant: "subtitle2", color: "secondary", gutterBottom: true }, "This is stored locally on your machine."))),
                                 React.createElement(inputs_1.FileUploadInput, { id: "key-upload", type: "file" }))),
                         React.createElement("br", null))))));
     };

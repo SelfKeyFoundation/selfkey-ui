@@ -40,14 +40,14 @@ const theme = createMuiTheme({
         light: primaryTint,
       }, 
       secondary: { 
-        main: warning,
+        main: typography,
       },
       error: { 
         main: error, 
       },
       text: {
         primary: white,
-        secondary: typography,
+        secondary: grey,
         disabled: grey,
         hint: "rgba(0, 0, 0, 0.38)",
       }
@@ -87,13 +87,19 @@ const theme = createMuiTheme({
           lineHeight: '24px',
         },
         h4: {
-
+          fontSize: '18px',
+          fontWeight: 600,
+          lineHeight: '26px',
         },
         h5: {
+          fontSize: '16px',
           fontWeight: 600,
+          lineHeight: '20px',
+          zIndex: 1,
         },
         h6: {
-
+          fontSize: '15px',
+          lineHeight: '18px',
         },
         body1: {
           fontSize: '18px',
@@ -104,10 +110,17 @@ const theme = createMuiTheme({
 		      lineHeight: '24px',
         },
         subtitle1: {
-
+          fontSize: '14px',
+		      lineHeight: '17px',
         },
         subtitle2: {
-
+          fontSize: '13px',
+		      lineHeight: '19px',
+        },
+        caption: {
+          color: warning,
+          fontSize: '16px',
+		      lineHeight: '24px',
         },
         overline: {
           color: typography,
@@ -415,11 +428,11 @@ const theme = createMuiTheme({
           minWidth: '200px',
         },
       },
-      // MuiFormControlLabel: {
-      //   label: {
-      //     color: typography,
-      //   },
-      // },
+      MuiFormControlLabel: {
+        label: {
+          color: typography,
+        },
+      },
       MuiFormLabel: {
         root: {
           display: 'block',

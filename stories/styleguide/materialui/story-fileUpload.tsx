@@ -6,10 +6,6 @@ import {
     withStyles,
 } from '@material-ui/core';
 import HardDriveIcon from '../../../src/icons/hard-drive';
-import { 
-    TableSmallText, 
-    Explanatory 
-} from '../../../src/materialui/typography';
 import { base } from '../../../src/colors';
 import { FileUploadInput, FileUploadLabel } from '../../../src/materialui/inputs';
 
@@ -48,12 +44,12 @@ export default function FileUploadStory () {
                 </FileUploadHeaderGrid>
 
                 <br />
-                <Grid justify='center' alignItems='center' direction='column'>
+                <Grid container justify='center' alignItems='center' direction='column'>
                     <FileUploadLabel htmlFor="key-upload">
                         <HardDriveIcon />
                         <Grid item>
-                            <TableSmallText>Select Document</TableSmallText>
-                            <Explanatory>This is stored locally on your machine.</Explanatory>
+                            <Typography variant="subtitle1" gutterBottom>Select Document</Typography>
+                            <Typography variant="subtitle2" color="secondary" gutterBottom>This is stored locally on your machine.</Typography>
                         </Grid>
                     </FileUploadLabel>
                     <FileUploadInput 

@@ -40,7 +40,7 @@ class SimpleModalStory extends React.Component {
                             <ModalCloseIcon />
                         </ModalCloseButton>
                         <ModalHeader>
-                            <Typography variant="h6" id="modal-title">
+                            <Typography variant="body1" id="modal-title">
                                 Token Removed
                             </Typography>
                         </ModalHeader>

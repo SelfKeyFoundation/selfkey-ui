@@ -8,10 +8,6 @@ import {
     Button,
 } from "@material-ui/core";
 import { ModalBody2 } from "./modalElements";
-import { 
-    TableSmallText, 
-    Explanatory 
-} from "./typography";
 import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
 import HardDriveIcon from "../icons/hard-drive";
@@ -117,8 +113,8 @@ class ModalWithBackButton extends React.Component {
                                     <FileUploadLabel htmlFor="key-upload">
                                         <HardDriveIcon />
                                         <div>
-                                            <TableSmallText>Select Document</TableSmallText>
-                                            <Explanatory>This is stored locally on your machine.</Explanatory>
+                                            <Typography variant="subtitle1" gutterBottom>Select Document</Typography>
+                                            <Typography variant="subtitle2" color="secondary" gutterBottom>This is stored locally on your machine.</Typography>
                                         </div>
                                     </FileUploadLabel>
                                     <FileUploadInput 

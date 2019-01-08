@@ -3,9 +3,9 @@ import {
     ToggleBtnGroup, 
     ToggleBtn 
 } from '../../../src/materialui/buttons';
-import { DefinitionDescription } from '../../../src/materialui/typography';
 import StructureIcon from '../../../src/icons/structure';
 import ListIcon from '../../../src/icons/list';
+import { Typography } from '@material-ui/core';
 
 class ToggleButtonGroupStory extends React.Component {
     state = {
@@ -24,13 +24,13 @@ class ToggleButtonGroupStory extends React.Component {
                 onChange={this.handleChange}
             >
                 <ToggleBtn value="first">
-                    <DefinitionDescription>First</DefinitionDescription>
+                    <Typography variant="h5" gutterBottom>First</Typography>
                 </ToggleBtn>
                 <ToggleBtn value="second">
-                    <DefinitionDescription>second</DefinitionDescription>
+                    <Typography variant="h5" gutterBottom>second</Typography>
                 </ToggleBtn>
                 <ToggleBtn value="third">
-                    <DefinitionDescription>third</DefinitionDescription>
+                    <Typography variant="h5" gutterBottom>third</Typography>
                 </ToggleBtn>
                 <ToggleBtn value="structure">
                     <StructureIcon />

@@ -9,15 +9,12 @@ import {
 	Table,
 } from '@material-ui/core';
 import { 
-	TableText,
-	TableSmallText,
     MuiEditIcon,
     MuiDeleteIcon,
 	LargeTableHeadRow,
 	SmallTableHeadRow,
 	SmallTableCell,
 	SmallTableRow,
-    TableSmallTextDisabled,
     Tag,
     TagTableCell,
 } from '../../../src/theme/selfkey-dark-theme';
@@ -77,29 +74,29 @@ export default function TableStories () {
                         return (
                         <TableRow key={row.name}>
                             <TableCell>
-                                <TableText>{row.name}</TableText>
+                                <Typography variant="h6" gutterBottom>{row.name}</Typography>
                             </TableCell>
                             <TableCell>
-                                <TableText>{row.type}</TableText>
+                                <Typography variant="h6" gutterBottom>{row.type}</Typography>
                             </TableCell>
                             <TableCell>
-                                <TableText>{row.role}</TableText>
+                                <Typography variant="h6" gutterBottom>{row.role}</Typography>
                             </TableCell>
                             <TableCell>
-                                <TableText>{row.residency}</TableText>
+                                <Typography variant="h6" gutterBottom>{row.residency}</Typography>
                             </TableCell>
                             <TableCell>
-                                <TableText>{row.shares}</TableText>
+                                <Typography variant="h6" gutterBottom>{row.shares}</Typography>
                             </TableCell>
                             <TableCell>
-                                <TableText>
+                                <Typography variant="h6" gutterBottom>
                                     <IconButton aria-label="Edit">
                                         <MuiEditIcon/>
                                     </IconButton>
                                     <IconButton aria-label="Delete">
                                         <MuiDeleteIcon />
                                     </IconButton>
-                                </TableText>
+                                </Typography>
                             </TableCell>
                         </TableRow>
                         );
@@ -178,53 +175,53 @@ export default function TableStories () {
                             <SmallTableRow key={row.name}>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <TableSmallTextDisabled>{row.type}</TableSmallTextDisabled> 
-                                        : <TableSmallText>{row.type}</TableSmallText>
+                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.type}</Typography> 
+                                        : <Typography variant="subtitle1" gutterBottom>{row.type}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <TableSmallTextDisabled>{row.role}</TableSmallTextDisabled> 
-                                        : <TableSmallText>{row.role}</TableSmallText>
+                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.role}</Typography> 
+                                        : <Typography variant="subtitle1" gutterBottom>{row.role}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <TableSmallTextDisabled>{row.name}</TableSmallTextDisabled> 
-                                        : <TableSmallText>{row.name}</TableSmallText>
+                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.name}</Typography> 
+                                        : <Typography variant="subtitle1" gutterBottom>{row.name}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <TableSmallTextDisabled>{row.email}</TableSmallTextDisabled> 
-                                        : <TableSmallText>{row.email}</TableSmallText>
+                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.email}</Typography> 
+                                        : <Typography variant="subtitle1" gutterBottom>{row.email}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <TableSmallTextDisabled>{row.citizensip}</TableSmallTextDisabled> 
-                                        : <TableSmallText>{row.citizensip}</TableSmallText>
+                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.citizensip}</Typography> 
+                                        : <Typography variant="subtitle1" gutterBottom>{row.citizensip}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <TableSmallTextDisabled>{row.residency}</TableSmallTextDisabled> 
-                                        : <TableSmallText>{row.residency}</TableSmallText>
+                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.residency}</Typography> 
+                                        : <Typography variant="subtitle1" gutterBottom>{row.residency}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <TableSmallTextDisabled>{row.shares}</TableSmallTextDisabled> 
-                                        : <TableSmallText>{row.shares}</TableSmallText>
+                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.shares}</Typography> 
+                                        : <Typography variant="subtitle1" gutterBottom>{row.shares}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    <TableSmallText color="primary">
+                                    <Typography variant="subtitle1" color="primary" gutterBottom>
                                         { row.user === 'logo' ? <SelfkeyLogo/> : row.user}
-                                    </TableSmallText>
+                                    </Typography>
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    <TableSmallText>
+                                    <Typography variant="subtitle1" gutterBottom>
                                         { row.disabled 
                                             ?  <IconButton aria-label="Edit" disabled>
                                                     <MuiEditIcon/>
@@ -242,7 +239,7 @@ export default function TableStories () {
                                                     <MuiDeleteIcon/>
                                                 </IconButton>
                                         }
-                                    </TableSmallText>
+                                    </Typography>
                                 </SmallTableCell>
                             </SmallTableRow>
                         );
@@ -298,11 +295,11 @@ export default function TableStories () {
                                 { row.type === 'Person' ? <PersonIcon/> : <CorporateIcon/> }
                             </TableCell>
                             <TableCell>
-                                <TableText>{row.name}</TableText>
-                                <TableSmallTextDisabled>{row.role}</TableSmallTextDisabled>
+                                <Typography variant="h6" gutterBottom>{row.name}</Typography>
+                                <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.role}</Typography>
                             </TableCell>
                             <TableCell>
-                                <TableText>{row.type}</TableText>
+                                <Typography variant="h6" gutterBottom>{row.type}</Typography>
                             </TableCell>
                             <TagTableCell>
                                 {
@@ -314,17 +311,17 @@ export default function TableStories () {
                                 }
                             </TagTableCell>
                             <TableCell>
-                                <TableText>{row.shares}</TableText>
+                                <Typography variant="h6" gutterBottom>{row.shares}</Typography>
                             </TableCell>
                             <TableCell>
-                                <TableText>
+                                <Typography variant="h6" gutterBottom>
                                     <IconButton aria-label="Edit">
                                         <MuiEditIcon/>
                                     </IconButton>
                                     <IconButton aria-label="Delete">
                                         <MuiDeleteIcon />
                                     </IconButton>
-                                </TableText>
+                                </Typography>
                             </TableCell>
                         </TableRow>
                         );

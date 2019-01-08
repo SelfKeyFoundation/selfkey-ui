@@ -8,7 +8,6 @@ import {
     Grid
 } from '@material-ui/core';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import { Explanatory } from '../../../src/materialui/typography';
 import { 
     GreenTick,
     DeniedTick, 
@@ -31,13 +30,13 @@ export default function AccordionStories () {
                 <ExpansionPanelSummary expandIcon={<ExpandLessIcon />}>
                     <Grid container direction='row' justify='flex-start' alignItems='baseline'>
                         <Typography variant="h2">Location </Typography>
-                        <Explanatory>- Explanatory</Explanatory>
+                        <Typography variant="subtitle2" color="secondary" gutterBottom>- Explanatory</Typography>
                     </Grid>
                     <Grid container direction='row' justify='flex-end' alignItems='center'>
                         <GreenTick />
-                        <Explanatory>
+                        <Typography variant="subtitle2" color="secondary" gutterBottom>
                             Approved
-                        </Explanatory>
+                        </Typography>
                     </Grid>
                 </ExpansionPanelSummary>
                 <Divider />
@@ -54,13 +53,13 @@ export default function AccordionStories () {
                 <ExpansionPanelSummary expandIcon={<ExpandLessIcon />}>
                     <Grid container direction='row' justify='flex-start' alignItems='baseline'>
                         <Typography variant="h2">Location</Typography>
-                        <Explanatory>- Explanatory</Explanatory>
+                        <Typography variant="subtitle2" color="secondary" gutterBottom>- Explanatory</Typography>
                     </Grid>
                     <Grid container direction='row' justify='flex-end' alignItems='center'>
                         <DeniedTick />
-                        <Explanatory>
+                        <Typography variant="subtitle2" color="secondary" gutterBottom>
                             Denied
-                        </Explanatory>
+                        </Typography>
                     </Grid>
                 </ExpansionPanelSummary>
                 <Divider />
@@ -77,13 +76,13 @@ export default function AccordionStories () {
                 <ExpansionPanelSummary expandIcon={<ExpandLessIcon />}>
                     <Grid container direction='row' justify='flex-start' alignItems='baseline'>
                         <Typography variant="h2">Location</Typography>
-                        <Explanatory>- Explanatory</Explanatory>
+                        <Typography variant="subtitle2" color="secondary" gutterBottom>- Explanatory</Typography>
                     </Grid>
                     <Grid container direction='row' justify='flex-end' alignItems='center'>
                         <HourGlassIcon />
-                        <Explanatory>
+                        <Typography variant="subtitle2" color="secondary" gutterBottom>
                             Pending
-                        </Explanatory>
+                        </Typography>
                     </Grid>
                 </ExpansionPanelSummary>
                 <Divider />

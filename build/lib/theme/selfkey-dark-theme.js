@@ -35,14 +35,14 @@ var theme = core_1.createMuiTheme({
             light: colors_1.primaryTint,
         },
         secondary: {
-            main: colors_1.warning,
+            main: colors_1.typography,
         },
         error: {
             main: colors_1.error,
         },
         text: {
             primary: colors_1.white,
-            secondary: colors_1.typography,
+            secondary: colors_1.grey,
             disabled: colors_1.grey,
             hint: "rgba(0, 0, 0, 0.38)",
         }
@@ -81,11 +81,21 @@ var theme = core_1.createMuiTheme({
                 fontSize: '16px',
                 lineHeight: '24px',
             },
-            h4: {},
-            h5: {
+            h4: {
+                fontSize: '18px',
                 fontWeight: 600,
+                lineHeight: '26px',
             },
-            h6: {},
+            h5: {
+                fontSize: '16px',
+                fontWeight: 600,
+                lineHeight: '20px',
+                zIndex: 1,
+            },
+            h6: {
+                fontSize: '15px',
+                lineHeight: '18px',
+            },
             body1: {
                 fontSize: '18px',
                 lineHeight: '30px',
@@ -94,8 +104,19 @@ var theme = core_1.createMuiTheme({
                 fontSize: '16px',
                 lineHeight: '24px',
             },
-            subtitle1: {},
-            subtitle2: {},
+            subtitle1: {
+                fontSize: '14px',
+                lineHeight: '17px',
+            },
+            subtitle2: {
+                fontSize: '13px',
+                lineHeight: '19px',
+            },
+            caption: {
+                color: colors_1.warning,
+                fontSize: '16px',
+                lineHeight: '24px',
+            },
             overline: {
                 color: colors_1.typography,
                 fontSize: '12px',
@@ -402,11 +423,11 @@ var theme = core_1.createMuiTheme({
                 minWidth: '200px',
             },
         },
-        // MuiFormControlLabel: {
-        //   label: {
-        //     color: typography,
-        //   },
-        // },
+        MuiFormControlLabel: {
+            label: {
+                color: colors_1.typography,
+            },
+        },
         MuiFormLabel: {
             root: {
                 display: 'block',

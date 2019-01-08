@@ -9,11 +9,7 @@ import {
 	Input,
 	TextField,
 } from '@material-ui/core';
-import { 
-    ErrorMessage,
-	DecimalInput,
-	UnreadNotification,
-} from '../../../src/theme/selfkey-dark-theme';
+import { DecimalInput } from '../../../src/theme/selfkey-dark-theme';
 
 import DropdownStories from './story-dropdowns';
 
@@ -59,7 +55,9 @@ export default function InputStories () {
 						disableUnderline
 						placeholder="First Name"
 					/>
-					<ErrorMessage>Error message</ErrorMessage>
+					<Typography variant="subtitle1" color="error" gutterBottom>
+						Error Message 14px
+					</Typography>
 				</Grid>
 			</Grid>
 
@@ -104,7 +102,7 @@ export default function InputStories () {
 						type="number"
 						endAdornment={
 							<InputAdornment position="end">
-								<UnreadNotification color="primary">%</UnreadNotification>
+								<Typography variant="h4" gutterBottom>%</Typography>
 							</InputAdornment>
 						}
 					/>
