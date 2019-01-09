@@ -148,54 +148,42 @@ export default function InputStories () {
 						}
 						label="Default"
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						control={
 							<Checkbox checked />
 						}
 						label="Selected"
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						control={
 							<Checkbox color="primary" />
 						}
 						label="Unselected, Error"
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						control={
 							<Checkbox color="primary" checked />
 						}
 						label="Selected, Error"
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						control={
 							<Checkbox indeterminate checked />
 						}
 						label="Bulk"
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						control={
 							<Checkbox disabled />
 						}
 						label="Unselected, Disabled"
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						control={
 							<Checkbox disabled checked />
@@ -222,9 +210,7 @@ export default function InputStories () {
 							<Radio />
 						}
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						label="Selected"
 						value="end"
@@ -233,9 +219,7 @@ export default function InputStories () {
 							<Radio checked />
 						}
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						label="Unselected, Error"
 						value="end"
@@ -244,9 +228,7 @@ export default function InputStories () {
 							<Radio color="primary" />
 						}
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						label="Selected, Error"
 						value="end"
@@ -255,9 +237,7 @@ export default function InputStories () {
 							<Radio color="primary" checked />
 						}
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						label="Unselected, Disabled"
 						value="end"
@@ -266,9 +246,7 @@ export default function InputStories () {
 							<Radio disabled />
 						}
 					/>
-				</Grid>
 
-				<Grid item>
 					<FormControlLabel
 						label="Selected, Disabled"
 						value="end"

@@ -424,6 +424,7 @@ var theme = core_1.createMuiTheme({
         },
         MuiFormControlLabel: {
             root: {
+                marginBottom: '15px',
                 marginLeft: 0,
             },
             label: {
