@@ -684,6 +684,9 @@ const theme = createMuiTheme({
           fill: primary,
           color: primary,
         },
+        disabled: {
+          opacity: 0.5,
+        },
       },
     },
 });

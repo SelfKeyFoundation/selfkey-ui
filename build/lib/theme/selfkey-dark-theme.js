@@ -678,6 +678,9 @@ var theme = core_1.createMuiTheme({
                 fill: colors_1.primary,
                 color: colors_1.primary,
             },
+            disabled: {
+                opacity: 0.5,
+            },
         },
     },
 });

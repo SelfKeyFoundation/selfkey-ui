@@ -27,7 +27,7 @@ class ToggleButtonGroupStory extends React.Component {
                 <ToggleButton value="second">
                     <Typography variant="h5">second</Typography>
                 </ToggleButton>
-                <ToggleButton value="third">
+                <ToggleButton value="third" disabled>
                     <Typography variant="h5">third</Typography>
                 </ToggleButton>
                 <ToggleButton value="structure">
