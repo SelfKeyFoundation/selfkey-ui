@@ -141,4 +141,6 @@ var selfkey_id_menu_1 = require("./icons/selfkey-id-menu");
 exports.SelfkeyIDMenuIcon = selfkey_id_menu_1.SelfkeyIDMenuIcon;
 var address_book_menu_1 = require("./icons/address-book-menu");
 exports.AddressBookMenuIcon = address_book_menu_1.AddressBookMenuIcon;
+var refresh_1 = require("./icons/refresh");
+exports.RefreshIcon = refresh_1.RefreshIcon;
 //# sourceMappingURL=index.js.map

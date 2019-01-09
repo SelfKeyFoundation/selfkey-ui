@@ -66,3 +66,4 @@ export { DashboardMenuIcon } from './icons/dashboard-menu';
 export { MarketplaceMenuIcon } from './icons/marketplace-menu';
 export { SelfkeyIDMenuIcon } from './icons/selfkey-id-menu';
 export { AddressBookMenuIcon } from './icons/address-book-menu';
+export { RefreshIcon } from './icons/refresh';
