@@ -13,7 +13,6 @@ __export(require("../materialui/inputs"));
 __export(require("../materialui/lists"));
 __export(require("../materialui/modalElements"));
 __export(require("../materialui/pagination"));
-__export(require("../materialui/slider"));
 __export(require("../materialui/tables"));
 __export(require("../materialui/typography"));
 __export(require("../icons/corporate"));
@@ -684,6 +683,23 @@ var theme = core_1.createMuiTheme({
             },
             disabled: {
                 opacity: 0.5,
+            },
+        },
+        MuiSlider: {
+            root: {
+                margin: '20px 0 33px',
+            },
+            track: {
+                borderRadius: '6px',
+                height: '10px',
+            },
+            trackAfter: {
+                backgroundColor: '#313D49',
+                opacity: 1,
+            },
+            thumb: {
+                height: '18px',
+                width: '18px',
             },
         },
     },

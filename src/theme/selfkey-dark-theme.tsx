@@ -18,7 +18,6 @@ export * from '../materialui/inputs';
 export * from '../materialui/lists';
 export * from '../materialui/modalElements';
 export * from '../materialui/pagination';
-export * from '../materialui/slider';
 export * from '../materialui/tables';
 export * from '../materialui/typography';
 export * from '../icons/corporate';
@@ -690,6 +689,23 @@ const theme = createMuiTheme({
         },
         disabled: {
           opacity: 0.5,
+        },
+      },
+      MuiSlider: {
+        root: {
+          margin: '20px 0 33px',
+        },
+        track: {
+            borderRadius: '6px',
+            height: '10px',
+        },
+        trackAfter: {
+            backgroundColor: '#313D49',
+            opacity: 1,
+        },
+        thumb: {
+            height: '18px',
+            width: '18px',
         },
       },
     },
