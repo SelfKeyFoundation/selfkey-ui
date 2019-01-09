@@ -428,6 +428,9 @@ const theme = createMuiTheme({
         },
       },
       MuiFormControlLabel: {
+        root: {
+          marginLeft: 0,
+        },
         label: {
           color: typography,
         },
