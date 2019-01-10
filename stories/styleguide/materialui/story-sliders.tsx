@@ -3,7 +3,7 @@ import {
     Grid, 
     Typography, 
 } from '@material-ui/core';
-import { KeySlider } from '../../../src/materialui/slider';
+import Slider from '@material-ui/lab/Slider';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -28,7 +28,7 @@ class SliderStory extends React.Component {
                     </Typography>
                     <Typography variant="body1" gutterBottom>0.00042 ETH / $0.01 USD</Typography>
                 </Grid>
-                <KeySlider
+                <Slider
                     value={this.state.value}
                     onChange={this.handleChange}
                 />
