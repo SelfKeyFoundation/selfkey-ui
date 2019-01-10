@@ -388,7 +388,6 @@ var theme = core_1.createMuiTheme({
                 marginTop: '-6px',
                 maxHeight: '131px',
                 overflow: 'scroll',
-                width: '200px',
             },
         },
         MuiPaper: {
