@@ -217,7 +217,6 @@ const theme = createMuiTheme({
       MuiInputBase: {
         inputType: {
           height: '22px',
-          textTransform: 'uppercase',
         },
         multiline: {
           overflow: 'scroll',

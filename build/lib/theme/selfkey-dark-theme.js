@@ -212,7 +212,6 @@ var theme = core_1.createMuiTheme({
         MuiInputBase: {
             inputType: {
                 height: '22px',
-                textTransform: 'uppercase',
             },
             multiline: {
                 overflow: 'scroll',
