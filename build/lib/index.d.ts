@@ -71,3 +71,8 @@ export { CopyIcon } from './icons/copy';
 export { FailedIcon } from './icons/failed';
 export { ReceiveIcon } from './icons/receive';
 export { SentIcon } from './icons/sent';
+export { ExistingAddressIcon } from './icons/existing-address';
+export { NewAddressIcon } from './icons/new-address';
+export { KeyIcon } from './icons/key';
+export { LedgerIcon } from './icons/ledger';
+export { TrezorIcon } from './icons/trezor';
