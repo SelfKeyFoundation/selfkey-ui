@@ -150,7 +150,7 @@ export default function TableStories () {
                         {
                             type: 'Corporate',
                             role: 'Shareholder',
-                            name: 'Big Things Limited',
+                            name: 'Big Things Limited2',
                             email: 'giacomo.guilizzoni@mail.com',
                             citizensip: 'Hong Kong',
                             residency: 'Hong Kong',
@@ -161,7 +161,7 @@ export default function TableStories () {
                         {
                             type: 'Corporate',
                             role: 'Shareholder',
-                            name: 'Big Things Limited',
+                            name: 'Big Things Limited3',
                             email: 'giacomo.guilizzoni@mail.com',
                             citizensip: 'Hong Kong',
                             residency: 'Hong Kong',
@@ -281,7 +281,7 @@ export default function TableStories () {
                             icons: 'icon, icon',
                         },
                         {
-                            name: 'Big Things Limited',
+                            name: 'Big Things Limited4',
                             role: 'Shareholder',
                             type: 'Corporate',
                             tags: ['7th tag', '8th tag', '9th tag'],
