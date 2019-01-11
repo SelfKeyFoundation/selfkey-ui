@@ -661,11 +661,11 @@ const theme = createMuiTheme({
       MuiToggleButtonGroup: {
         root: {
           boxShadow: 'none',
+          '&$selected': {
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+          },
         },
-        selected: {
-          backgroundColor: 'transparent',
-          boxShadow: 'none',
-        }
       },
       MuiToggleButton: {
         root: {
@@ -678,15 +678,15 @@ const theme = createMuiTheme({
           '&:hover': {
               border: `1px solid ${primaryTint}`,
           },
-        },
-        selected: {
-          background: '#313D49',
-          border: `1px solid ${primaryTint}`,
-          fill: primary,
-          color: primary,
-        },
-        disabled: {
-          opacity: 0.5,
+          '&$selected': {
+            background: '#313D49',
+            border: `1px solid ${primaryTint}`,
+            fill: primary,
+            color: primary,
+          },
+          '&$disabled': {
+            opacity: 0.5,
+          },
         },
       },
       MuiSlider: {
