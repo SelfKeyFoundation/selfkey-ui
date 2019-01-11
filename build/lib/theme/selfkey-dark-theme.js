@@ -142,16 +142,16 @@ var theme = core_1.createMuiTheme({
                 paddingBottom: '0',
                 paddingTop: '0',
                 '&$selected': {
-                    backgroundColor: colors_1.primary,
+                    backgroundColor: colors_1.grey,
                     '&:hover': {
-                        backgroundColor: colors_1.primary,
+                        backgroundColor: colors_1.grey,
                     },
                 },
             },
             button: {
                 margin: '0',
                 "&:hover": {
-                    backgroundColor: colors_1.grey,
+                    backgroundColor: '#394553',
                 },
             },
         },

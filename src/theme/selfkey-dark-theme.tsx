@@ -147,16 +147,16 @@ const theme = createMuiTheme({
           paddingBottom: '0',
           paddingTop: '0',
           '&$selected': {
-            backgroundColor: primary,
+            backgroundColor: grey,
             '&:hover': {
-              backgroundColor: primary,
+              backgroundColor: grey,
             },
           },
         },
         button: {
           margin: '0',
           "&:hover": {
-            backgroundColor: grey,
+            backgroundColor: '#394553',
           },
         },
       },
