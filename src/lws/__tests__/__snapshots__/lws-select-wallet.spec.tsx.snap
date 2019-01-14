@@ -8,6 +8,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-16"
+      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 74 74"
@@ -90,6 +91,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-21"
+          color={undefined}
           focusable="false"
           role="presentation"
           viewBox="0 0 42 37"
@@ -196,6 +198,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-22"
+          color={undefined}
           focusable="false"
           role="presentation"
           viewBox="0 0 42 39"

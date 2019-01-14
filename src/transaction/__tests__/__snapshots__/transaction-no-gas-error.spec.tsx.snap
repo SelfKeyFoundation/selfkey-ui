@@ -14,10 +14,12 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
     </span>
     <div
       className="Component-closeDialogIconWrapper-0-1-12"
+      onClick={undefined}
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        color={undefined}
         focusable="false"
         role="presentation"
         viewBox="0 0 38 38"
@@ -77,6 +79,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
+        color={undefined}
         focusable="false"
         role="presentation"
         version="1.1"
@@ -214,10 +217,12 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
     </span>
     <div
       className="Component-closeDialogIconWrapper-0-1-12"
+      onClick={undefined}
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        color={undefined}
         focusable="false"
         role="presentation"
         viewBox="0 0 38 38"
@@ -277,6 +282,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
+        color={undefined}
         focusable="false"
         role="presentation"
         version="1.1"
@@ -414,10 +420,12 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
     </span>
     <div
       className="Component-closeDialogIconWrapper-0-1-12"
+      onClick={undefined}
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        color={undefined}
         focusable="false"
         role="presentation"
         viewBox="0 0 38 38"
@@ -477,6 +485,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
+        color={undefined}
         focusable="false"
         role="presentation"
         version="1.1"
@@ -614,10 +623,12 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
     </span>
     <div
       className="Component-closeDialogIconWrapper-0-1-12"
+      onClick={undefined}
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        color={undefined}
         focusable="false"
         role="presentation"
         viewBox="0 0 38 38"
@@ -677,6 +688,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-14"
+        color={undefined}
         focusable="false"
         role="presentation"
         version="1.1"

@@ -150,7 +150,9 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-98 TransactionFeeBoxComponent-reloadNetworkIcon-0-1-18"
+          color={undefined}
           focusable="false"
+          onClick={undefined}
           role="presentation"
           viewBox="0 0 24 24"
         >

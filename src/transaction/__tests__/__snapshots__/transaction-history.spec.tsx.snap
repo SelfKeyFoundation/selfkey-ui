@@ -22,6 +22,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-12"
+            color={undefined}
             focusable="false"
             role="presentation"
             viewBox="0 0 26 26"
@@ -113,6 +114,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -183,6 +185,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -275,6 +278,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-15"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -362,6 +366,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -432,6 +437,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -524,6 +530,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98"
+            color={undefined}
             focusable="false"
             role="presentation"
             style={
@@ -611,6 +618,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -681,6 +689,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -773,6 +782,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-16"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -860,6 +870,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-13"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"
@@ -930,6 +941,7 @@ exports[`Transaction History should show transaction history list 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-98 Component-root-0-1-14"
+            color={undefined}
             focusable="false"
             role="presentation"
             version="1.1"

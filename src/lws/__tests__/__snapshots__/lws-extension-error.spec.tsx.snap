@@ -8,6 +8,7 @@ exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] =
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-7"
+      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 74 74"
@@ -85,6 +86,7 @@ exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] =
     >
       <button
         className="Component-root-0-1-8 Component-buttonPrimary-0-1-1"
+        onClick={undefined}
       >
         Install Browser Extension
       </button>

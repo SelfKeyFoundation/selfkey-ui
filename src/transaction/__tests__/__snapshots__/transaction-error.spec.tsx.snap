@@ -14,10 +14,12 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
     </span>
     <div
       className="Component-closeDialogIconWrapper-0-1-10"
+      onClick={undefined}
     >
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-11"
+        color={undefined}
         focusable="false"
         role="presentation"
         viewBox="0 0 38 38"
@@ -77,6 +79,7 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
       <svg
         aria-hidden="true"
         className="MuiSvgIcon-root-1 Component-root-0-1-12"
+        color={undefined}
         focusable="false"
         role="presentation"
         version="1.1"

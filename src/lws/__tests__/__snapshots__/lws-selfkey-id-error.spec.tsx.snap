@@ -10,6 +10,7 @@ exports[`LWS Selfkey Id Error should show LWS Selfkey Id Error 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-8"
+      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 68 74"
@@ -88,6 +89,7 @@ exports[`LWS Selfkey Id Error should show LWS Selfkey Id Error 1`] = `
     >
       <button
         className="Component-root-0-1-9 Component-buttonSecondary-0-1-2"
+        onClick={undefined}
       >
         Retry
       </button>

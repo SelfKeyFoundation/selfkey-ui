@@ -10,6 +10,7 @@ exports[`LWS Success should show LWS Success 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-3"
+      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 68 74"

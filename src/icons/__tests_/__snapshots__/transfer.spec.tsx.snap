@@ -4,6 +4,7 @@ exports[`Transfer Icon should show Transfer Icon 1`] = `
 <svg
   aria-hidden="true"
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  color={undefined}
   focusable="false"
   role="presentation"
   viewBox="0 0 489.2 489.2"
