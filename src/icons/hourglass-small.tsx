@@ -6,7 +6,7 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles: StyleSheet = {};
 
-export const HourglassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => {
+export const HourGlassSmallIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => {
 	let width = props.width || '20px';
 	let height = props.height || '26px';
 	let fill = props.fill || '#697C95';
@@ -39,4 +39,4 @@ export const HourglassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconPr
 	);
 });
 
-export default HourglassIcon;
+export default HourGlassSmallIcon;

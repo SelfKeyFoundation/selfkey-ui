@@ -18,7 +18,7 @@ import { P } from '../../typography/paragraph';
 import { TickIcon } from '../../icons/tick';
 import { UnlockIcon } from '../../icons/unlock';
 import { ReturnIcon } from '../../icons/return';
-import { HourglassIcon } from '../../icons/hourglass';
+import { HourGlassSmallIcon } from '../../icons/hourglass-small';
 import { CalendarIcon } from '../../icons/calendar';
 import { StyledButton } from '../../common/styled-button';
 import Truncate from 'react-truncate';
@@ -304,7 +304,7 @@ export class ItemDetailsComponent extends React.Component<StyledProps, ItemDetai
 										>
 											{item.status === 'Active' && <UnlockIcon />}
 											{item.status === 'pending' && (
-												<HourglassIcon width="10px" height="14px" fill="rgba(0, 0, 0, 0.26)" />
+												<HourGlassSmallIcon width="10px" height="14px" fill="rgba(0, 0, 0, 0.26)" />
 											)}
 											{item.status === 'locked' && <CalendarIcon />}
 											{item.status === 'unlocked' && <ReturnIcon />}

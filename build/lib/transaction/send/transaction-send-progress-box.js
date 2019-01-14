@@ -5,7 +5,7 @@ var react_jss_1 = require("react-jss");
 var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
 var transaction_box_1 = require("../transaction-box");
 var core_1 = require("@material-ui/core");
-var hour_glass_1 = require("../../icons/hour-glass");
+var hourglass_large_1 = require("../../icons/hourglass-large");
 var okay_1 = require("../../icons/okay");
 var headings_1 = require("../../typography/headings");
 var number_format_1 = require("../../price/number-format");
@@ -75,7 +75,7 @@ var handleViewTransaction = function (event, openLink, transactionHash) {
 };
 var renderIcon = function (status) {
     if (status === 'Pending') {
-        return React.createElement(hour_glass_1.HourGlassIcon, null);
+        return React.createElement(hourglass_large_1.HourGlassLargeIcon, null);
     }
     else if (status === 'Sent!') {
         return React.createElement(okay_1.OkayIcon, null);

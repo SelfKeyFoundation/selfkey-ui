@@ -11,7 +11,7 @@ const styles: StyleSheet = {
   }
 };
 
-export const HourGlassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const HourGlassLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 66 66'>
     <title>icon-hourglass-large</title>
     <desc>Created with Sketch.</desc>
@@ -31,7 +31,7 @@ export const HourGlassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconPr
   </SvgIcon>
 ));
 
-export default HourGlassIcon;
+export default HourGlassLargeIcon;
 
 
 
