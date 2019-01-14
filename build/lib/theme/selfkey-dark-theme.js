@@ -58,6 +58,12 @@ var theme = core_1.createMuiTheme({
         MuiCard: {
             root: {
                 backgroundColor: colors_1.base,
+                height: '100%',
+            },
+        },
+        MuiCardContent: {
+            root: {
+                height: '100%',
             },
         },
         MuiTypography: {

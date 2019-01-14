@@ -63,6 +63,12 @@ const theme = createMuiTheme({
       MuiCard: { 
         root: { 
           backgroundColor: base,
+          height: '100%',
+        },
+      },
+      MuiCardContent: {
+        root: {
+          height: '100%',
         },
       },
       MuiTypography: {
