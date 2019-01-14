@@ -6,12 +6,10 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
 >
   <div
     className="Component-closeDialogIconWrapper-0-1-11"
-    onClick={undefined}
   >
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-13"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="\\"0 0 38 38"
@@ -41,7 +39,6 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -75,7 +72,6 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-20"
-          color={undefined}
           focusable="false"
           role="presentation"
           version="1.1"
@@ -244,12 +240,10 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
 >
   <div
     className="Component-closeDialogIconWrapper-0-1-11"
-    onClick={undefined}
   >
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-13"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="\\"0 0 38 38"
@@ -279,7 +273,6 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -313,7 +306,6 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-20"
-          color={undefined}
           focusable="false"
           role="presentation"
           version="1.1"
@@ -482,12 +474,10 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
 >
   <div
     className="Component-closeDialogIconWrapper-0-1-11"
-    onClick={undefined}
   >
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-13"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="\\"0 0 38 38"
@@ -517,7 +507,6 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -551,7 +540,6 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-20"
-          color={undefined}
           focusable="false"
           role="presentation"
           version="1.1"
@@ -720,12 +708,10 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
 >
   <div
     className="Component-closeDialogIconWrapper-0-1-11"
-    onClick={undefined}
   >
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-13"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="\\"0 0 38 38"
@@ -755,7 +741,6 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -789,7 +774,6 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-20"
-          color={undefined}
           focusable="false"
           role="presentation"
           version="1.1"
@@ -958,12 +942,10 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
 >
   <div
     className="Component-closeDialogIconWrapper-0-1-11"
-    onClick={undefined}
   >
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-13"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="\\"0 0 38 38"
@@ -993,7 +975,6 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -1027,7 +1008,6 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-15"
-          color={undefined}
           focusable="false"
           role="presentation"
           viewBox="0 0 66 66"
@@ -1195,12 +1175,10 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
 >
   <div
     className="Component-closeDialogIconWrapper-0-1-11"
-    onClick={undefined}
   >
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-13"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="\\"0 0 38 38"
@@ -1230,7 +1208,6 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -1264,7 +1241,6 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root-1 Component-root-0-1-20"
-          color={undefined}
           focusable="false"
           role="presentation"
           version="1.1"
@@ -1433,12 +1409,10 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
 >
   <div
     className="Component-closeDialogIconWrapper-0-1-11"
-    onClick={undefined}
   >
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-13"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="\\"0 0 38 38"
@@ -1468,7 +1442,6 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"

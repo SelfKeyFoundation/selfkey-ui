@@ -10,7 +10,6 @@ exports[`LWS Auth Error Screen should show LWS Auth Error Screen 1`] = `
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root-1 Component-root-0-1-8"
-      color={undefined}
       focusable="false"
       role="presentation"
       viewBox="0 0 68 74"
@@ -89,7 +88,6 @@ exports[`LWS Auth Error Screen should show LWS Auth Error Screen 1`] = `
     >
       <button
         className="Component-root-0-1-9 Component-buttonSecondary-0-1-2"
-        onClick={undefined}
       >
         Retry
       </button>
