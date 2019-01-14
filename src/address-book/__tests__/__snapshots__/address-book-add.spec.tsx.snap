@@ -3,7 +3,6 @@
 exports[`Address Book Add should show Address Book Add 1`] = `
 <form
   autoComplete="off"
-  className={undefined}
   noValidate={true}
   onSubmit={[Function]}
 >
@@ -88,7 +87,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
             disabled={true}
             id="saveButton"
             onBlur={[Function]}
-            onClick={undefined}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -117,6 +116,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
             id="cancelButton"
             onBlur={[Function]}
             onClick={[Function]}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
