@@ -4,7 +4,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { TransactionBox } from '../transaction-box';
 import { Grid, Typography } from '@material-ui/core';
-import { HourGlassIcon } from '../../icons/hour-glass';
+import { HourGlassLargeIcon } from '../../icons/hourglass-large';
 import { OkayIcon } from '../../icons/okay';
 
 import { H2 } from '../../typography/headings';
@@ -94,7 +94,7 @@ const handleViewTransaction = (event: React.MouseEvent<HTMLElement>, openLink: (
 
 const renderIcon = (status: string) => {
   if(status === 'Pending') {
-    return <HourGlassIcon/>
+    return <HourGlassLargeIcon/>
   } else if (status === 'Sent!') {
     return <OkayIcon/>
   }

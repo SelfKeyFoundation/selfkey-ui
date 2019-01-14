@@ -76,3 +76,5 @@ export { NewAddressIcon } from './icons/new-address';
 export { KeyIcon } from './icons/key';
 export { LedgerIcon } from './icons/ledger';
 export { TrezorIcon } from './icons/trezor';
+export { HourGlassLargeIcon } from './icons/hourglass-large';
+export { HourGlassSmallIcon } from './icons/hourglass-small';
