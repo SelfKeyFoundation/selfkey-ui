@@ -1,4 +1,4 @@
-const CommonStyle = {
+export const CommonStyle = {
   fontFamily: 'Lato, arial, sans-serif',
 
   form: {
