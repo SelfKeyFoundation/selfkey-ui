@@ -11,10 +11,10 @@ exports[`Calendar  Icon should show Calendar Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="💻-ID-Dashboard"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#23E6FE"

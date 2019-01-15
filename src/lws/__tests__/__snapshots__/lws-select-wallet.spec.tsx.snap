@@ -294,7 +294,8 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
           <option
             value="0x4184288c556524df9cb9e58b73265ee66dca4efe"
           >
-            0x4184288c556524df9cb9e58b73265ee66dca4efe
+            0x
+            4184288c556524df9cb9e58b73265ee66dca4efe
           </option>
         </select>
       </div>

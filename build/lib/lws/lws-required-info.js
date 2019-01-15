@@ -32,7 +32,7 @@ var styles = {
                 textDecoration: 'underline',
             },
         },
-        fontFamily: 'Lato, arial, sans-serif'
+        fontFamily: 'Lato, arial, sans-serif',
     },
     areaTitle: {
         textAlign: 'center',
@@ -82,7 +82,7 @@ var styles = {
         '& button': {
             maxWidth: '215px',
             marginTop: '0px',
-            fontWeight: 700
+            fontWeight: 700,
         },
     },
     tocMessage: {
@@ -93,51 +93,40 @@ var styles = {
         fontStyle: 'italic',
         fontFamily: 'Lato, arial, sans-serif',
         margin: '30px 0 45px',
-        color: '#FFF'
+        color: '#FFF',
     },
     edit: {
         cursor: 'pointer',
     },
 };
 var getAttributeValue = function (attribute) {
-    if (!attribute.data)
+    if (!attribute.value)
         return null;
-    if (attribute.document && attribute.data && attribute.data.value) {
-        return 'document';
-    }
-    switch (attribute.key) {
-        case 'birthdate':
-            return new Date(Number(attribute.data.value)).toLocaleDateString('en-US');
-        case 'work_place':
-        case 'physical_address':
-            var value = attribute.data.address1 + ', ';
-            if (attribute.data.address2) {
-                value += attribute.data.address2 + ', ';
-            }
-            value += attribute.data.city + ', ';
-            value += attribute.data.region + ', ';
-            value += attribute.data.zip + ', ';
-            value += attribute.data.country;
-            return value;
-        case 'phonenumber_countrycode':
-            return attribute.data.countryCode + ' ' + attribute.data.telephoneNumber;
-        default:
-            return attribute.data.value || null;
-    }
+    if (typeof attribute.value !== 'object')
+        return attribute.value;
+    return attribute.name || attribute.schema.title || attribute.url;
 };
 var renderAttributes = function (requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction) {
     var attrs = requested.map(function (attr) {
-        return _.find(attributes, { key: attr.key }) || attr;
+        if (typeof attr !== 'object') {
+            attr = { attribute: attr };
+        }
+        var found = _.find(attributes, { url: attr.id || attr.attribute }) || {};
+        var merged = __assign({}, attr, found);
+        if (!merged.label && merged.schema && merged.schema.title) {
+            merged.label = merged.schema.title;
+        }
+        return merged;
     });
     return attrs.map(function (attribute, index) {
         var attributeValue = getAttributeValue(attribute);
-        var notAllowed = !!_.find(notAllowedAttributes, { key: attribute.key });
+        var notAllowed = notAllowedAttributes.includes(attribute.url);
         if (attributeValue) {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
                     React.createElement("span", { className: classes.clickable, onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(check_empty_1.CheckEmptyIcon, null) : React.createElement(check_1.CheckIcon, null)),
                     React.createElement("dl", null,
-                        React.createElement("dt", null, attribute.label),
+                        React.createElement("dt", null, attribute.label || attribute.schema.title),
                         React.createElement("dd", null, attributeValue)))));
         }
         else {

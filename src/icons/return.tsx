@@ -13,7 +13,7 @@ const styles: StyleSheet = {
 
 export const ReturnIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 15 18">
-		<g id="💹-Marketplace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				id="506.1---Exchange-Details-+-Active-Stake-+-Reclaim-KEY"
 				transform="translate(-931.000000, -347.000000)"

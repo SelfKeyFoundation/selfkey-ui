@@ -224,7 +224,9 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Choose an existing ETH Address"),
                     React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: function (evt) { return _this.setWallet(evt); }, value: publicKey }, wallets.filter(function (w) { return w.profile === 'local'; }).map(function (wallet, index) {
-                        return (React.createElement("option", { key: index, value: wallet.publicKey }, wallet.publicKey));
+                        return (React.createElement("option", { key: index, value: wallet.publicKey },
+                            "0x",
+                            wallet.publicKey.replace('0x', '')));
                     }))),
                 wallet && wallet.unlocked ? null : (React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Password"),

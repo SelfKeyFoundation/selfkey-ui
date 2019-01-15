@@ -13,7 +13,7 @@ const styles: StyleSheet = {
 
 export const CalendarIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 20 20" version="1.1">
-		<g id="💻-ID-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				id="405.1---Edit-Attribute-+-Date-of-Birth"
 				transform="translate(-1035.000000, -347.000000)"
