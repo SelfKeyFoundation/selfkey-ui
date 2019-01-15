@@ -2,7 +2,7 @@ import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
 import { Grid, Typography } from '@material-ui/core';
 import { H2 } from '../typography/headings';
-import HourGlassIcon from '../icons/hour-glass';
+import HourGlassLargeIcon from '../icons/hourglass-large';
 
 const styles: StyleSheet = {
 
@@ -21,7 +21,7 @@ const styles: StyleSheet = {
 export const UnlockProgress = injectSheet(styles)<{}>(({classes}) => (
     <Grid container direction='row' justify='flex-start' alignItems='flex-start'>
     <Grid item xs={2}>
-        <HourGlassIcon/>
+        <HourGlassLargeIcon/>
     </Grid>
     <Grid item xs={10}>
       <Grid container direction='column' justify='flex-start' alignItems='flex-start'>

@@ -5,7 +5,7 @@ import CommonStyle from '../common/common-style';
 
 import FailedIcon from '../icons/failed';
 import ReceiveIcon from '../icons/receive';
-import HourglassIcon from '../icons/hourglass';
+import HourGlassSmallIcon from '../icons/hourglass-small';
 import SentIcon from '../icons/sent';
 import CopyIcon from '../icons/copy';
 import ViewIcon from '../icons/view';
@@ -125,7 +125,7 @@ export class TransactionHistoryComponent extends React.Component<StyledProps, Tr
 			case 'receive':
 				return <ReceiveIcon />;
 			case 'hourglass':
-				return <HourglassIcon />;
+				return <HourGlassSmallIcon />;
 			case 'sent':
 				return <SentIcon />;
 			default:

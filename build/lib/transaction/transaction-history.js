@@ -19,7 +19,7 @@ var core_1 = require("@material-ui/core");
 var common_style_1 = require("../common/common-style");
 var failed_1 = require("../icons/failed");
 var receive_1 = require("../icons/receive");
-var hourglass_1 = require("../icons/hourglass");
+var hourglass_small_1 = require("../icons/hourglass-small");
 var sent_1 = require("../icons/sent");
 var copy_1 = require("../icons/copy");
 var view_1 = require("../icons/view");
@@ -114,7 +114,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
             case 'receive':
                 return React.createElement(receive_1.default, null);
             case 'hourglass':
-                return React.createElement(hourglass_1.default, null);
+                return React.createElement(hourglass_small_1.default, null);
             case 'sent':
                 return React.createElement(sent_1.default, null);
             default:

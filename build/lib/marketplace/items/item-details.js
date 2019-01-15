@@ -21,7 +21,7 @@ var paragraph_1 = require("../../typography/paragraph");
 var tick_1 = require("../../icons/tick");
 var unlock_1 = require("../../icons/unlock");
 var return_1 = require("../../icons/return");
-var hourglass_1 = require("../../icons/hourglass");
+var hourglass_small_1 = require("../../icons/hourglass-small");
 var calendar_1 = require("../../icons/calendar");
 var styled_button_1 = require("../../common/styled-button");
 var react_truncate_1 = require("react-truncate");
@@ -187,7 +187,7 @@ var ItemDetailsComponent = /** @class */ (function (_super) {
                                 React.createElement(core_1.Grid, { item: true, xs: 4 },
                                     React.createElement(styled_button_1.StyledButton, { disabled: ['pending', 'Inactive'].includes(item.status), variant: ['unlocked', 'locked'].includes(item.status) ? 'outlined' : 'contained', onClick: function () { return _this.unlockActionCall(unlockAction, item, hasBalance); } },
                                         item.status === 'Active' && React.createElement(unlock_1.UnlockIcon, null),
-                                        item.status === 'pending' && (React.createElement(hourglass_1.HourglassIcon, { width: "10px", height: "14px", fill: "rgba(0, 0, 0, 0.26)" })),
+                                        item.status === 'pending' && (React.createElement(hourglass_small_1.HourGlassSmallIcon, { width: "10px", height: "14px", fill: "rgba(0, 0, 0, 0.26)" })),
                                         item.status === 'locked' && React.createElement(calendar_1.CalendarIcon, null),
                                         item.status === 'unlocked' && React.createElement(return_1.ReturnIcon, null),
                                         React.createElement("div", { className: classes.unlockButtonText },
