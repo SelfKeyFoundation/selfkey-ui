@@ -16,8 +16,8 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
+        height: '16px !important',
         width: '16px !important',
-        height: '16px !important'
     }
 };
 exports.DeleteIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 16 16", version: "1.1" }),

@@ -21,8 +21,6 @@ import { TransactionHistory, StatusIconName } from '../../src/transaction/transa
 import { SendTransaction } from './send-transaction';
 import { TransactionErrorBox } from '../../src/transaction/transaction-error-box';
 import { TransactionError } from '../../src/transaction/transaction-error';
-import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
-
 import {
 	LWSSelectWalletWrapper,
 	LWSRequiredInfoWrapper,
@@ -34,16 +32,33 @@ import {
 } from './lws';
 
 import { ItemDetails } from '../../src/marketplace/items/item-details';
-
 import { MarketplaceWrapper } from './marketplace';
 import { ExchangesWrapper } from './exchanges';
-
 import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
-
 import { ModalBox } from '../../src/common/modal-box';
-import { Button, Card, CardContent } from '@material-ui/core';
+import { 
+	Card, 
+	CardContent, 
+	Typography,
+	// TablePagination,
+} from '@material-ui/core';
+import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
+import TableStories from './materialui/story-tables';
+import ButtonStories from './materialui/story-buttons';
+import InputStories from './materialui/story-input';
+import ListStories from './materialui/story-lists';
+import TypographyStories from './materialui/story-typography';
+import ColorStories from './materialui/story-colors';
+import TabStories from './materialui/story-tabs';
+import AccordionStories from './materialui/story-accordion';
+import PaginationStories from './materialui/story-pagination';
+import FileUploadInProgressStory from './materialui/story-fileUploadInProgress';
+import FileUploadStory from './materialui/story-fileUpload';
+import ModalStories from './materialui/story-modals';
+import DatePickerStories from './materialui/story-datepickers';
+import SliderStory from './materialui/story-sliders';
 
 setup();
 import { UnlockBox } from '../../src/marketplace/unlock-box'
@@ -171,45 +186,34 @@ const transactionrStory = storiesOf('Transaction', module).addDecorator(transfer
 };
 
 transactionrStory.addWithJSX('TransferPrice', () => <TransferPriceWrapper />);
-
 transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
 	<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
 ));
 
-let txList = [
-	{
-		statusText: 'sented',
-		date: '1995/45/45',
-		cryptoCurrency: 'eth',
-		value: '+1578',
-		statusIconName: 'failed' as StatusIconName,
-		externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b',
-	},
-	{
-		statusText: 'received',
-		date: '1995/45/41',
-		cryptoCurrency: 'key',
-		value: '+15',
-		statusIconName: 'receive' as StatusIconName,
-		externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b',
-	},
-];
+let txList = [{
+	statusText: 'sented',
+	date: '1995/45/45',
+	cryptoCurrency: 'eth',
+	value: '+1578',
+	statusIconName: 'failed' as StatusIconName,
+	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
+},{
+	statusText: 'received',
+	date: '1995/45/41',
+	cryptoCurrency: 'key',
+	value: '+15',
+	statusIconName: 'receive' as StatusIconName,
+	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
+}];
 
-transactionrStory.addWithJSX('History', () => <TransactionHistory openLink={() => {}} list={txList} />);
+transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{}}list={txList}/>);
 
-transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction />);
-transactionrStory.addWithJSX('TransactionNoGasError', () => (
-	<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
-));
-transactionrStory.addWithJSX('TransactionErrorBox', () => (
-	<TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
-));
-transactionrStory.addWithJSX('TransactionError', () => (
-	<TransactionError
-		message="Returned error: intrinsic gas too low"
-		publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"
-	/>
-));
+transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
+transactionrStory.addWithJSX('TransactionNoGasError', () => <TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('TransactionErrorBox', () => <TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('TransactionError', () => <TransactionError message="Returned error: intrinsic gas too low" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' transactionHash='0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd' amount={0.00001}/>);
 
 transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
 	<TransactionSendProgressBox
@@ -225,22 +229,14 @@ transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
 lws.addWithJSX('LWSHeader', () => <LWSModalHeader />);
-
 lws.addWithJSX('LWSSelectWallet', () => <LWSSelectWalletWrapper />);
-
 lws.addWithJSX('LWSRequiredInfo', () => <LWSRequiredInfoWrapper />);
-
 lws.addWithJSX('LWSWalletConnectionError', () => <LWSWalletConnectionErrorWrapper />);
-
 lws.addWithJSX('LWSSelfkeyIdError', () => <LWSSelfkeyIdErrorWrapper />);
-
 lws.addWithJSX('LWSExtensionError', () => <LWSExtensionErrorWrapper />);
-
 lws.addWithJSX('LWSSuccess', () => <LWSSuccessWrapper />);
 lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorWrapper />);
-
 lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
-
 lws.addWithJSX('LWSLoading', () => <LWSLoading />);
 
 const marketplaceStory = storiesOf('Marketplace', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
@@ -304,7 +300,6 @@ onDelete={id =>alert('onDelete' + id)}
 onAdd={() =>alert('onAdd')}
 />);
 
-
 addressBook.addWithJSX('AddressBookAdd', () => (<ModalBox headerText='Add Address'><AddressBookAdd 
 onSave={(label, address) => alert('onEdit' + label +  address)}
 onCancel={() => alert('onCancel')}
@@ -312,7 +307,6 @@ onLabelChange={label => alert('onLabelChange ' + label)}
 onAddressChange={address => alert('onAddressChange ' + address)}
 labelError='hey'
 /></ModalBox>));
-
 
 addressBook.addWithJSX('AddressBookEdit', () => (<ModalBox headerText='Edit Label'><AddressBookEdit
 label='Test'
@@ -325,11 +319,55 @@ labelError='hey'
 
 const theme = storiesOf('Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
-theme.addWithJSX('SelfkeyDarkTheme', () => (<SelfkeyDarkTheme>
+theme.addWithJSX('SelfkeyDarkTheme', () => (
+<SelfkeyDarkTheme>
 	<Card>
 		<CardContent>
-			<Button color="primary" variant="contained">Primary</Button> <br/> <br/>
-			<Button color="secondary" variant="contained">Secondary</Button>
+			<Typography variant="h1" color="error" gutterBottom>
+				Colors
+			</Typography>
+			<ColorStories />
+
+			<Typography variant="h1" color="error" gutterBottom>
+				Typography
+			</Typography>
+			<TypographyStories />
+			<ListStories />
+
+			<Typography variant="h1" color="error" gutterBottom>
+				Forms
+			</Typography>
+			<InputStories />
+			<ButtonStories />
+
+			<Typography variant="h1" color="error" gutterBottom>
+                Tables
+            </Typography>
+			<TableStories />
+
+			<Typography variant="h1" color="error" gutterBottom>
+                UI Elements
+            </Typography>
+			<TabStories />
+			<AccordionStories />
+			<SliderStory />
+			<PaginationStories />
+			<br/>
+			<FileUploadInProgressStory />
+			<FileUploadStory />
+
+			<br/>
+			<Typography variant="h1" color="error" gutterBottom>
+                Modals
+            </Typography>
+			<ModalStories />
+
+			<br/>
+			<Typography variant="h1" color="error" gutterBottom>
+                Date Picker
+            </Typography>
+			<DatePickerStories />
+						
 		</CardContent>
 	</Card>
 </SelfkeyDarkTheme>));
