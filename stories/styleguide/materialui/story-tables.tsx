@@ -7,6 +7,7 @@ import {
 	TableBody,
 	IconButton,
 	Table,
+    Grid,
 } from '@material-ui/core';
 import { 
     MuiEditIcon,
@@ -17,6 +18,8 @@ import {
 	SmallTableRow,
     Tag,
     TagTableCell,
+    FilePdfIcon,
+    FileImageIcon,
 } from '../../../src/theme/selfkey-dark-theme';
 import PersonIcon from '../../../src/icons/person';
 import CorporateIcon from '../../../src/icons/corporate';
@@ -175,43 +178,43 @@ export default function TableStories () {
                             <SmallTableRow key={row.name}>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.type}</Typography> 
+                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.type}</Typography> 
                                         : <Typography variant="subtitle1" gutterBottom>{row.type}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.role}</Typography> 
+                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.role}</Typography> 
                                         : <Typography variant="subtitle1" gutterBottom>{row.role}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.name}</Typography> 
+                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.name}</Typography> 
                                         : <Typography variant="subtitle1" gutterBottom>{row.name}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.email}</Typography> 
+                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.email}</Typography> 
                                         : <Typography variant="subtitle1" gutterBottom>{row.email}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.citizensip}</Typography> 
+                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.citizensip}</Typography> 
                                         : <Typography variant="subtitle1" gutterBottom>{row.citizensip}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.residency}</Typography> 
+                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.residency}</Typography> 
                                         : <Typography variant="subtitle1" gutterBottom>{row.residency}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.shares}</Typography> 
+                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.shares}</Typography> 
                                         : <Typography variant="subtitle1" gutterBottom>{row.shares}</Typography>
                                     }
                                 </SmallTableCell>
@@ -296,10 +299,18 @@ export default function TableStories () {
                             </TableCell>
                             <TableCell>
                                 <Typography variant="h6" gutterBottom>{row.name}</Typography>
-                                <Typography variant="subtitle1" color="textSecondary" gutterBottom>{row.role}</Typography>
+                                <Typography variant="subtitle1" color="secondary" gutterBottom>{row.role}</Typography>
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.type}</Typography>
+                                <Grid container>
+                                    <Grid item xs={3}>
+                                        { row.type === 'Person' ? <FilePdfIcon /> : <FileImageIcon /> }
+                                    </Grid>
+                                    <Grid item xs={6}>
+                                        <Typography variant="h6" gutterBottom>{row.name}</Typography>
+                                        <Typography variant="subtitle1" color="secondary" gutterBottom>{row.role}</Typography>
+                                    </Grid>
+                                </Grid>
                             </TableCell>
                             <TagTableCell>
                                 {

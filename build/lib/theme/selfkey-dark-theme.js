@@ -22,6 +22,8 @@ __export(require("../icons/list"));
 __export(require("../icons/person"));
 __export(require("../icons/selfkeyLogo"));
 __export(require("../icons/structure"));
+__export(require("../icons/file-pdf"));
+__export(require("../icons/file-image"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muidelete_1 = require("../icons/muidelete");

@@ -78,3 +78,5 @@ export { LedgerIcon } from './icons/ledger';
 export { TrezorIcon } from './icons/trezor';
 export { HourGlassLargeIcon } from './icons/hourglass-large';
 export { HourGlassSmallIcon } from './icons/hourglass-small';
+export { FilePdfIcon } from './icons/file-pdf';
+export { FileImageIcon } from './icons/file-image';

@@ -15,6 +15,8 @@ export * from '../icons/list';
 export * from '../icons/person';
 export * from '../icons/selfkeyLogo';
 export * from '../icons/structure';
+export * from '../icons/file-pdf';
+export * from '../icons/file-image';
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
 export declare const SelfkeyDarkTheme: React.SFC<{}>;
