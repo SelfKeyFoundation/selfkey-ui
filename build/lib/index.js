@@ -82,6 +82,8 @@ var modal_box_1 = require("./common/modal-box");
 exports.ModalBox = modal_box_1.ModalBox;
 var copy_1 = require("./common/copy");
 exports.Copy = copy_1.Copy;
+var styled_button_1 = require("./common/styled-button");
+exports.StyledButton = styled_button_1.StyledButton;
 __export(require("./theme/selfkey-dark-theme"));
 // Icons
 var green_tick_1 = require("./icons/green-tick");
