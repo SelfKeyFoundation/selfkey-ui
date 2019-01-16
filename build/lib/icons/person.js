@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 function PersonIcon() {
     return (React.createElement("svg", { width: "46px", height: "46px", viewBox: "0 0 46 46", version: "1.1" },
-        React.createElement("g", { stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+        React.createElement("g", { stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
             React.createElement("g", { id: "4.-Style-Guide---Tables", transform: "translate(-1217.000000, -249.000000)" },
                 React.createElement("g", { id: "Multi-Line-Table", transform: "translate(1193.000000, 124.000000)" },
                     React.createElement("g", { id: "Table-multi-line", transform: "translate(0.000000, 61.000000)" },

@@ -6,16 +6,16 @@ export const SelfkeyLogo = ((props: SvgIconProps) => (
         <SvgIcon width="18px" height="20px" {...props} viewBox="0 0 18 20">
             <defs>
                 <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="linearGradient-1">
-                    <stop stop-color="#08BCCD" offset="0%"></stop>
-                    <stop stop-color="#2DA1F8" offset="100%"></stop>
+                    <stop stopColor="#08BCCD" offset="0%"></stop>
+                    <stop stopColor="#2DA1F8" offset="100%"></stop>
                 </linearGradient>
                 <linearGradient x1="50%" y1="97.784%" x2="4git 1.849%" y2="-16.397%" id="linearGradient-2">
-                    <stop stop-color="#08BCCD" offset="0%"></stop>
-                    <stop stop-color="#2DA1F8" offset="100%"></stop>
+                    <stop stopColor="#08BCCD" offset="0%"></stop>
+                    <stop stopColor="#2DA1F8" offset="100%"></stop>
                 </linearGradient>
             </defs>
-            <g id="🌈-UI-Guidelines" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="4.-Style-Guide---Tables" transform="translate(-1002.000000, -744.000000)" fill-rule="nonzero">
+            <g id="🌈-UI-Guidelines" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <g id="4.-Style-Guide---Tables" transform="translate(-1002.000000, -744.000000)" fillRule="nonzero">
                     <g id="Small-table" transform="translate(39.000000, 588.000000)">
                         <g id="Table-small" transform="translate(0.000000, 66.000000)">
                             <g id="Col8" transform="translate(963.000000, 4.000000)">

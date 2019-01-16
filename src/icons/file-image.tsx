@@ -15,8 +15,8 @@ export const FileImageIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconPr
   <SvgIcon {...props} viewBox='0 0 29 36'>
     <title>icon-file-image</title>
     <desc>Created with Sketch.</desc>
-    <g id="💻-ID-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="406---Delete-Attribute" transform="translate(-392.000000, -1475.000000)" fill="#697C95" fill-rule="nonzero">
+    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="406---Delete-Attribute" transform="translate(-392.000000, -1475.000000)" fill="#697C95" fillRule="nonzero">
             <g id="Area-box-3" transform="translate(150.000000, 1262.000000)">
                 <g id="Table" transform="translate(14.000000, 80.000000)">
                     <g id="Col2" transform="translate(228.000000, 11.000000)">

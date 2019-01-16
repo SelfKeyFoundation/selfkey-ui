@@ -4,7 +4,7 @@ var React = require("react");
 exports.StructureIcon = function () {
     return (React.createElement("svg", { width: "27px", height: "24px", viewBox: "0 0 27 24", version: "1.1" },
         React.createElement("title", null, "icon-structure"),
-        React.createElement("g", { id: "\uD83C\uDF08-UI-Guidelines", stroke: "none", "stroke-width": "1", "fill-rule": "evenodd" },
+        React.createElement("g", { id: "\uD83C\uDF08-UI-Guidelines", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
             React.createElement("g", { id: "3.-Style-Guide---Forms", transform: "translate(-1042.000000, -859.000000)", fill: "inherit" },
                 React.createElement("g", { id: "Line-3-Buttons", transform: "translate(39.000000, 559.000000)" },
                     React.createElement("g", { id: "button-groups", transform: "translate(979.000000, 242.000000)" },

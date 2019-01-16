@@ -63,7 +63,7 @@ export const GreenTick = (() => (
 
 export const DeniedTick = (() => (
     <SvgIcon viewBox='0 0 16 16' style={ defaultIconStyle }>
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="5.-Style-Guide---UI-Elements" transform="translate(-647.000000, -657.000000)">
                 <g id="Accordion" transform="translate(39.000000, 322.000000)">
                     <g id="Content" transform="translate(0.000000, 51.000000)">
@@ -74,9 +74,9 @@ export const DeniedTick = (() => (
                                         <rect id="Base" fill="#FE4B61" x="0" y="0" width="16" height="16" rx="4"></rect>
                                         <g id="Group-9" transform="translate(4.444444, 4.444444)">
                                             <path d="M7.11111111,0 L0,7.11111111" id="Fill-1" fill-opacity="0" fill="#000000"></path>
-                                            <path d="M7.11111111,0 L0,7.11111111" id="Stroke-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                                            <path d="M7.11111111,0 L0,7.11111111" id="Stroke-3" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="square"></path>
                                             <path d="M7.11111111,7.11111111 L0,0" id="Fill-4" fill-opacity="0" fill="#000000"></path>
-                                            <path d="M7.11111111,7.11111111 L0,0" id="Stroke-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                                            <path d="M7.11111111,7.11111111 L0,0" id="Stroke-5" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="square"></path>
                                         </g>
                                     </g>
                                 </g>
@@ -91,8 +91,8 @@ export const DeniedTick = (() => (
 
 export const HourGlassIcon = (() => (
     <SvgIcon viewBox='0 0 16 16' style={ defaultIconStyle }>
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="5.-Style-Guide---UI-Elements" transform="translate(-643.000000, -394.000000)" fill="#697C95" fill-rule="nonzero">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <g id="5.-Style-Guide---UI-Elements" transform="translate(-643.000000, -394.000000)" fill="#697C95" fillRule="nonzero">
                 <g id="Accordion" transform="translate(39.000000, 322.000000)">
                     <g id="Content" transform="translate(0.000000, 51.000000)">
                         <g id="Collapse-box-1">
