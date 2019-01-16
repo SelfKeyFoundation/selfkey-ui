@@ -48,6 +48,7 @@ export { SelfkeyLogo } from './icons/selfkeyLogo';
 export { HelpIcon } from './icons/help';
 export { QuitIcon } from './icons/quit';
 export { ModalCloseIcon } from './icons/modal-close';
+export { CloseButtonIcon } from './icons/close-button';
 export { WarningShieldIcon } from './icons/warning-shield';
 export { IncorporationsIcon } from './icons/incorporations';
 export { PasswordIcon } from './icons/password';
