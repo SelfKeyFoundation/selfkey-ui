@@ -63,6 +63,7 @@ export { PrintIcon } from './icons/print';
 export { MenuButtonIcon } from './icons/menu-button';
 export { DashboardMenuIcon } from './icons/dashboard-menu';
 export { MarketplaceMenuIcon } from './icons/marketplace-menu';
+export { MarketplaceIcon } from './icons/marketplace';
 export { SelfkeyIDMenuIcon } from './icons/selfkey-id-menu';
 export { AddressBookMenuIcon } from './icons/address-book-menu';
 export { RefreshIcon } from './icons/refresh';
