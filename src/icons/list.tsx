@@ -3,7 +3,7 @@ import * as React from 'react';
 export const ListIcon = () => {
     return (
         <svg width="32px" height="16px" viewBox="0 0 32 16" version="1.1">
-            <g id="🌈-UI-Guidelines" stroke="none" stroke-width="1" fill-rule="evenodd">
+            <g id="🌈-UI-Guidelines" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="3.-Style-Guide---Forms" transform="translate(-1098.000000, -863.000000)" fill="inherit">
                     <g id="Line-3-Buttons" transform="translate(39.000000, 559.000000)">
                         <g id="button-groups" transform="translate(979.000000, 242.000000)">

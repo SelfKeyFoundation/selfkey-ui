@@ -1,4 +1,4 @@
-declare const CommonStyle: {
+export declare const CommonStyle: {
     fontFamily: string;
     form: {
         minHeight: string;

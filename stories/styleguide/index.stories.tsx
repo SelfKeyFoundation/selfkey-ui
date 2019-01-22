@@ -31,16 +31,13 @@ import {
 	LWSAuthErrorWrapper,
 } from './lws';
 
-import { ItemDetails } from '../../src/marketplace/items/item-details';
-import { MarketplaceWrapper } from './marketplace';
-import { ExchangesWrapper } from './exchanges';
 import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
 import { ModalBox } from '../../src/common/modal-box';
-import { 
-	Card, 
-	CardContent, 
+import {
+	Card,
+	CardContent,
 	Typography,
 	// TablePagination,
 } from '@material-ui/core';
@@ -61,12 +58,6 @@ import DatePickerStories from './materialui/story-datepickers';
 import SliderStory from './materialui/story-sliders';
 
 setup();
-import { UnlockBox } from '../../src/marketplace/unlock-box'
-import { WithoutBalance } from '../../src/marketplace/without-balance'
-import { Unlock } from '../../src/marketplace/unlock';
-import { Return } from '../../src/marketplace/return';
-import { UnlockProgress } from '../../src/marketplace/unlock-progress';
-
 
 setAddon(JSXAddon);
 
@@ -190,30 +181,51 @@ transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
 	<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
 ));
 
-let txList = [{
-	statusText: 'sented',
-	date: '1995/45/45',
-	cryptoCurrency: 'eth',
-	value: '+1578',
-	statusIconName: 'failed' as StatusIconName,
-	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
-},{
-	statusText: 'received',
-	date: '1995/45/41',
-	cryptoCurrency: 'key',
-	value: '+15',
-	statusIconName: 'receive' as StatusIconName,
-	externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b'
-}];
+let txList = [
+	{
+		statusText: 'sented',
+		date: '1995/45/45',
+		cryptoCurrency: 'eth',
+		value: '+1578',
+		statusIconName: 'failed' as StatusIconName,
+		externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b',
+	},
+	{
+		statusText: 'received',
+		date: '1995/45/41',
+		cryptoCurrency: 'key',
+		value: '+15',
+		statusIconName: 'receive' as StatusIconName,
+		externalLink: 'https://etherscan.io/tx/0x3360ee6307e5a0dd05add1a3e7550948a2f2b323a22037a79b58fa17808ad49b',
+	},
+];
 
-transactionrStory.addWithJSX('History', () => <TransactionHistory openLink= {()=>{}}list={txList}/>);
+transactionrStory.addWithJSX('History', () => <TransactionHistory openLink={() => {}} list={txList} />);
 
-transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction/>);
-transactionrStory.addWithJSX('TransactionNoGasError', () => <TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
-transactionrStory.addWithJSX('TransactionErrorBox', () => <TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
-transactionrStory.addWithJSX('TransactionError', () => <TransactionError message="Returned error: intrinsic gas too low" publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"/>);
+transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction />);
+transactionrStory.addWithJSX('TransactionNoGasError', () => (
+	<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+));
+transactionrStory.addWithJSX('TransactionErrorBox', () => (
+	<TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+));
+transactionrStory.addWithJSX('TransactionError', () => (
+	<TransactionError
+		message="Returned error: intrinsic gas too low"
+		publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"
+	/>
+));
 
-transactionrStory.addWithJSX('TransactionSendProgressBox', () => <TransactionSendProgressBox locale='en' status='Pending' cryptoCurrency='KEY' address='0x4184288c556524df9cb9e58b73265ee66dca4efe' transactionHash='0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd' amount={0.00001}/>);
+transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
+	<TransactionSendProgressBox
+		locale="en"
+		status="Pending"
+		cryptoCurrency="KEY"
+		address="0x4184288c556524df9cb9e58b73265ee66dca4efe"
+		transactionHash="0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd"
+		amount={0.00001}
+	/>
+));
 
 transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
 	<TransactionSendProgressBox
@@ -239,364 +251,98 @@ lws.addWithJSX('LWSWalletConnectionErrorModal', () => <LWSWalletConnectionErrorW
 lws.addWithJSX('LWSAuthError', () => <LWSAuthErrorWrapper />);
 lws.addWithJSX('LWSLoading', () => <LWSLoading />);
 
-const marketplaceStory = storiesOf('Marketplace', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
-marketplaceStory.addWithJSX('Marketplace', () => <MarketplaceWrapper />);
-
-marketplaceStory.addWithJSX('Exchanges', () => <ExchangesWrapper />);
-
-marketplaceStory.addWithJSX('ItemDetails', () => (
-	<ItemDetails
-		item={{
-			name: 'Gatecoin',
-			logo: [
-				{
-					filename: 'full_GatecoinLogo.png',
-					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
-				},
-			],
-			status: 'Active',
-			integration: 'Unlock Marketplace',
-			description:
-				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
-			location: 'Hong Kong',
-			year_launched: 2013,
-			coin_pairs: '72',
-			maker_fee: '0.25%',
-			taker_fee: '0.35%',
-			fiat_payments: 'Bank trasnfer',
-			fiat_supported: ['EUR', 'USD', 'HKD'],
-			margin_trading: 'no',
-			kyc_aml: 'yes',
-			excluded_residents: ['United States'],
-			url: 'http://www.gatecoin.com',
-			email: 'support@gatecoin.com',
-			kyc_template: [
-				{ name: 'First Name', type: 'metadata', isEntered: true },
-				{ name: 'Last Name', type: 'metadata', isEntered: true },
-				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
-				{ name: 'National ID', type: 'document', isEntered: false },
-				{ name: 'National ID Self', type: 'document', isEntered: false },
-			],
-		}}
-		hasBalance={false}
+addressBook.addWithJSX('AddressBook', () => (
+	<AddressBook
+		addresses={[
+			{
+				id: 1,
+				label: 'John',
+				address: '0x4184288c556524df9cb9e58b73265ee66dca4efe',
+			},
+		]}
+		onEdit={id => alert('onEdit' + id)}
+		onDelete={id => alert('onDelete' + id)}
+		onAdd={() => alert('onAdd')}
 	/>
 ));
 
-const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+addressBook.addWithJSX('AddressBookAdd', () => (
+	<ModalBox headerText="Add Address">
+		<AddressBookAdd
+			onSave={(label, address) => alert('onEdit' + label + address)}
+			onCancel={() => alert('onCancel')}
+			onLabelChange={label => alert('onLabelChange ' + label)}
+			onAddressChange={address => alert('onAddressChange ' + address)}
+			labelError="hey"
+		/>
+	</ModalBox>
+));
 
-addressBook.addWithJSX('AddressBook', () => <AddressBook addresses={
-	[
-		{
-			id: 1,
-			label: 'John',
-			address: '0x4184288c556524df9cb9e58b73265ee66dca4efe'
-		}
-	]
-}
-
-onEdit={id => alert('onEdit' + id)}
-onDelete={id =>alert('onDelete' + id)}
-onAdd={() =>alert('onAdd')}
-/>);
-
-addressBook.addWithJSX('AddressBookAdd', () => (<ModalBox headerText='Add Address'><AddressBookAdd 
-onSave={(label, address) => alert('onEdit' + label +  address)}
-onCancel={() => alert('onCancel')}
-onLabelChange={label => alert('onLabelChange ' + label)}
-onAddressChange={address => alert('onAddressChange ' + address)}
-labelError='hey'
-/></ModalBox>));
-
-addressBook.addWithJSX('AddressBookEdit', () => (<ModalBox headerText='Edit Label'><AddressBookEdit
-label='Test'
-onSave={(label) => alert('onEdit' + label)}
-onCancel={() => alert('onCancel')}
-onLabelChange={label => alert('onLabelChange ' + label)}
-labelError='hey'
-/></ModalBox>));
-
+addressBook.addWithJSX('AddressBookEdit', () => (
+	<ModalBox headerText="Edit Label">
+		<AddressBookEdit
+			label="Test"
+			onSave={label => alert('onEdit' + label)}
+			onCancel={() => alert('onCancel')}
+			onLabelChange={label => alert('onLabelChange ' + label)}
+			labelError="hey"
+		/>
+	</ModalBox>
+));
 
 const theme = storiesOf('Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
 theme.addWithJSX('SelfkeyDarkTheme', () => (
-<SelfkeyDarkTheme>
-	<Card>
-		<CardContent>
-			<Typography variant="h1" color="error" gutterBottom>
-				Colors
-			</Typography>
-			<ColorStories />
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
+				<Typography variant="h1" color="error" gutterBottom>
+					Colors
+				</Typography>
+				<ColorStories />
 
-			<Typography variant="h1" color="error" gutterBottom>
-				Typography
-			</Typography>
-			<TypographyStories />
-			<ListStories />
+				<Typography variant="h1" color="error" gutterBottom>
+					Typography
+				</Typography>
+				<TypographyStories />
+				<ListStories />
 
-			<Typography variant="h1" color="error" gutterBottom>
-				Forms
-			</Typography>
-			<InputStories />
-			<ButtonStories />
+				<Typography variant="h1" color="error" gutterBottom>
+					Forms
+				</Typography>
+				<InputStories />
+				<ButtonStories />
 
-			<Typography variant="h1" color="error" gutterBottom>
-                Tables
-            </Typography>
-			<TableStories />
+				<Typography variant="h1" color="error" gutterBottom>
+					Tables
+				</Typography>
+				<TableStories />
 
-			<Typography variant="h1" color="error" gutterBottom>
-                UI Elements
-            </Typography>
-			<TabStories />
-			<AccordionStories />
-			<SliderStory />
-			<PaginationStories />
-			<br/>
-			<FileUploadInProgressStory />
-			<FileUploadStory />
+				<Typography variant="h1" color="error" gutterBottom>
+					UI Elements
+				</Typography>
+				<TabStories />
+				<AccordionStories />
+				<SliderStory />
+				<PaginationStories />
+				<br />
+				<FileUploadInProgressStory />
+				<FileUploadStory />
 
-			<br/>
-			<Typography variant="h1" color="error" gutterBottom>
-                Modals
-            </Typography>
-			<ModalStories />
+				<br />
+				<Typography variant="h1" color="error" gutterBottom>
+					Modals
+				</Typography>
+				<ModalStories />
 
-			<br/>
-			<Typography variant="h1" color="error" gutterBottom>
-                Date Picker
-            </Typography>
-			<DatePickerStories />
-						
-		</CardContent>
-	</Card>
-</SelfkeyDarkTheme>));
-marketplaceStory.addWithJSX('ItemDetails Pending', () => (
-	<ItemDetails
-		item={{
-			name: 'Gatecoin',
-			logo: [
-				{
-					filename: 'full_GatecoinLogo.png',
-					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
-				},
-			],
-			status: 'pending',
-			integration: 'PENDING KEY DEPOSIT',
-			description:
-				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
-			location: 'Hong Kong',
-			year_launched: 2013,
-			coin_pairs: '72',
-			maker_fee: '0.25%',
-			taker_fee: '0.35%',
-			fiat_payments: 'Bank trasnfer',
-			fiat_supported: ['EUR', 'USD', 'HKD'],
-			margin_trading: 'no',
-			kyc_aml: 'yes',
-			excluded_residents: ['United States'],
-			url: 'http://www.gatecoin.com',
-			email: 'support@gatecoin.com',
-			kyc_template: [
-				{ name: 'First Name', type: 'metadata', isEntered: true },
-				{ name: 'Last Name', type: 'metadata', isEntered: true },
-				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
-				{ name: 'National ID', type: 'document', isEntered: false },
-				{ name: 'National ID Self', type: 'document', isEntered: false },
-			],
-		}}
-		hasBalance={false}
-	/>
-));
-
-marketplaceStory.addWithJSX('ItemDetails Locked', () => (
-	<ItemDetails
-		item={{
-			name: 'Gatecoin',
-			logo: [
-				{
-					filename: 'full_GatecoinLogo.png',
-					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
-				},
-			],
-			status: 'locked',
-			integration: 'KEY DEPOSIT',
-			releaseDate: Date.now() + 2 * 24 * 60 * 60 * 1000,
-			description:
-				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
-			location: 'Hong Kong',
-			year_launched: 2013,
-			coin_pairs: '72',
-			maker_fee: '0.25%',
-			taker_fee: '0.35%',
-			fiat_payments: 'Bank trasnfer',
-			fiat_supported: ['EUR', 'USD', 'HKD'],
-			margin_trading: 'no',
-			kyc_aml: 'yes',
-			excluded_residents: ['United States'],
-			url: 'http://www.gatecoin.com',
-			email: 'support@gatecoin.com',
-			kyc_template: [
-				{ name: 'First Name', type: 'metadata', isEntered: true },
-				{ name: 'Last Name', type: 'metadata', isEntered: true },
-				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
-				{ name: 'National ID', type: 'document', isEntered: false },
-				{ name: 'National ID Self', type: 'document', isEntered: false },
-			],
-		}}
-		hasBalance={false}
-	/>
-));
-
-marketplaceStory.addWithJSX('ItemDetails unlocked', () => (
-	<ItemDetails
-		item={{
-			name: 'Gatecoin',
-			logo: [
-				{
-					filename: 'full_GatecoinLogo.png',
-					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
-				},
-			],
-			status: 'unlocked',
-			integration: 'Unlock Marketplace',
-			description:
-				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
-			location: 'Hong Kong',
-			year_launched: 2013,
-			coin_pairs: '72',
-			maker_fee: '0.25%',
-			taker_fee: '0.35%',
-			fiat_payments: 'Bank trasnfer',
-			fiat_supported: ['EUR', 'USD', 'HKD'],
-			margin_trading: 'no',
-			kyc_aml: 'yes',
-			excluded_residents: ['United States'],
-			url: 'http://www.gatecoin.com',
-			email: 'support@gatecoin.com',
-			kyc_template: [
-				{ name: 'First Name', type: 'metadata', isEntered: true },
-				{ name: 'Last Name', type: 'metadata', isEntered: true },
-				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
-				{ name: 'National ID', type: 'document', isEntered: false },
-				{ name: 'National ID Self', type: 'document', isEntered: false },
-			],
-		}}
-		hasBalance={false}
-	/>
-));
-
-marketplaceStory.addWithJSX('ItemDetails inactive', () => (
-	<ItemDetails
-		item={{
-			name: 'Gatecoin',
-			logo: [
-				{
-					filename: 'full_GatecoinLogo.png',
-					url: 'https://dl.airtable.com/yCvftEABT2qwcCDlAma2_full_GatecoinLogo.png',
-				},
-			],
-			status: 'Inactive',
-			integration: 'Coming Soon',
-			description:
-				'Founded in 2013 by investment bankers, Gatecoin is a bitcoin and ethereum token exchange designed for both professional traders and retail investors. Through our intuitive trading platform, we enable individuals and institutions around the world to trade and invest in a wide variety of cryptocurrencies and blockchain assets. fiodfdsoifdsiofn fisdhfposdinfps fidhfid ifdhif fisdhofisd iovdsioew[few. vdsivdsioevcs iovdsiovds vsdiobvsio',
-			location: 'Hong Kong',
-			year_launched: 2013,
-			coin_pairs: '72',
-			maker_fee: '0.25%',
-			taker_fee: '0.35%',
-			fiat_payments: 'Bank trasnfer',
-			fiat_supported: ['EUR', 'USD', 'HKD'],
-			margin_trading: 'no',
-			kyc_aml: 'yes',
-			excluded_residents: ['United States'],
-			url: 'http://www.gatecoin.com',
-			email: 'support@gatecoin.com',
-			kyc_template: [
-				{ name: 'First Name', type: 'metadata', isEntered: true },
-				{ name: 'Last Name', type: 'metadata', isEntered: true },
-				{ name: 'Country Of Residence', type: 'metadata', isEntered: true },
-				{ name: 'National ID', type: 'document', isEntered: false },
-				{ name: 'National ID Self', type: 'document', isEntered: false },
-			],
-		}}
-		hasBalance={false}
-	/>
-));
-
-marketplaceStory.addWithJSX('WithoutBalanceModal', () => (
-	<UnlockBox>
-		<WithoutBalance
-			exchanges={[
-				{
-					name: 'Gatecoin',
-					url: 'https://gatecoin.com/',
-				},
-				{
-					name: 'WandX',
-					url: 'https://www.wandx.co/',
-				},
-				{
-					name: 'Kyber Network',
-					url: 'https://kyber.network/',
-				},
-				{
-					name: 'TagCash',
-					url: 'https://tagcash.com/',
-				},
-				{
-					name: 'Gatecoin',
-					url: 'https://gatecoin.com/',
-				},
-				{
-					name: 'WandX',
-					url: 'https://www.wandx.co/',
-				},
-				{
-					name: 'Kyber Network',
-					url: 'https://kyber.network/',
-				},
-				{
-					name: 'TagCash',
-					url: 'https://tagcash.com/',
-				},
-			]}
-		/>
-	</UnlockBox>
-));
-
-marketplaceStory.addWithJSX('UnlockModal', () => (
-	<UnlockBox>
-		<Unlock
-			minGasPrice={11800000000}
-			maxGasPrice={13000000000}
-			gasLimit={45000}
-			fiat="USD"
-			fiatRate={217.73}
-			onTransactionFeeChange={(value: number) => console.log(value)}
-			onConfirm={(value: number) => alert(value)}
-			onCancel={() => alert('Canceled')}
-		/>
-	</UnlockBox>
-));
-
-marketplaceStory.addWithJSX('ReturnModal', () => (
-	<UnlockBox text="Return KEY Deposit">
-		<Return
-			minGasPrice={11800000000}
-			maxGasPrice={13000000000}
-			gasLimit={45000}
-			fiat="USD"
-			fiatRate={217.73}
-			onTransactionFeeChange={(value: number) => console.log(value)}
-			onConfirm={(value: number) => alert(value)}
-			onCancel={() => alert('Canceled')}
-		/>
-	</UnlockBox>
-));
-
-marketplaceStory.addWithJSX('UnlockProgress', () => (
-	<UnlockBox>
-		<UnlockProgress />
-	</UnlockBox>
+				<br />
+				<Typography variant="h1" color="error" gutterBottom>
+					Date Picker
+				</Typography>
+				<DatePickerStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
 ));

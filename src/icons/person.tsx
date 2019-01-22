@@ -3,7 +3,7 @@ import * as React from 'react';
 export default function PersonIcon () {
     return (
         <svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="4.-Style-Guide---Tables" transform="translate(-1217.000000, -249.000000)">
                     <g id="Multi-Line-Table" transform="translate(1193.000000, 124.000000)">
                         <g id="Table-multi-line" transform="translate(0.000000, 61.000000)">
