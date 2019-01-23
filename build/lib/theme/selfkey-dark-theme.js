@@ -62,6 +62,7 @@ var theme = core_1.createMuiTheme({
         MuiCard: {
             root: {
                 backgroundColor: colors_1.base,
+                boxShadow: 'none',
                 height: '100%',
             },
         },
