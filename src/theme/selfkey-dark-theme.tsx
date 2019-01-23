@@ -65,7 +65,20 @@ const theme = createMuiTheme({
       MuiCard: { 
         root: { 
           backgroundColor: base,
-          height: '100%',
+            height: '100%',
+        },
+      },
+      MuiCardHeader: {
+        title: {
+          color: white,
+          fontSize: '18px',
+          fontWeight: 600,
+          lineHeight: '22px',
+        },
+        subheader: {
+          color: white,
+          fontSize: '16px',
+          fontWeight: 600,
         },
       },
       MuiCardContent: {
