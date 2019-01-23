@@ -597,6 +597,12 @@ var theme = core_1.createMuiTheme({
                     color: colors_1.white,
                 },
             },
+            textColorInherit: {
+                color: colors_1.typography,
+            },
+            selected: {
+                color: colors_1.white,
+            },
         },
         MuiExpansionPanel: {
             root: {

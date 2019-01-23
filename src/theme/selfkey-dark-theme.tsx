@@ -602,6 +602,12 @@ const theme = createMuiTheme({
             color: white,
           },
         },
+        textColorInherit: {
+          color: typography,
+        },
+        selected: {
+          color: white,
+        },
       },
       MuiExpansionPanel: {
         root: {
