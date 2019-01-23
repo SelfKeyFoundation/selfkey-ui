@@ -29,6 +29,8 @@ export * from '../icons/selfkeyLogo';
 export * from '../icons/structure';
 export * from '../icons/file-pdf';
 export * from '../icons/file-image';
+export * from '../icons/book';
+export * from '../icons/id-card';
 
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
