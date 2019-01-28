@@ -86,6 +86,7 @@ export { FileImageIcon } from './icons/file-image';
 export { TickIcon } from './icons/tick';
 export { UnlockIcon } from './icons/unlock';
 export { ReturnIcon } from './icons/return';
+export { ReturnLargeIcon } from './icons/return-large';
 export { CalendarIcon } from './icons/calendar';
 export { DocumentIcon } from './icons/document';
 export { ExchangeIcon as ExchangeLargeIcon } from './icons/exchange-large';
