@@ -29,6 +29,8 @@ export * from '../icons/selfkeyLogo';
 export * from '../icons/structure';
 export * from '../icons/file-pdf';
 export * from '../icons/file-image';
+export * from '../icons/book';
+export * from '../icons/id-card';
 
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
@@ -65,7 +67,21 @@ const theme = createMuiTheme({
       MuiCard: { 
         root: { 
           backgroundColor: base,
+          boxShadow: 'none',
           height: '100%',
+        },
+      },
+      MuiCardHeader: {
+        title: {
+          color: white,
+          fontSize: '18px',
+          fontWeight: 600,
+          lineHeight: '22px',
+        },
+        subheader: {
+          color: white,
+          fontSize: '16px',
+          fontWeight: 600,
         },
       },
       MuiCardContent: {
@@ -586,6 +602,12 @@ const theme = createMuiTheme({
             boxSizing: 'border-box',
             color: white,
           },
+        },
+        textColorInherit: {
+          color: typography,
+        },
+        selected: {
+          color: white,
         },
       },
       MuiExpansionPanel: {

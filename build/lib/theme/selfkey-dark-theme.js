@@ -24,6 +24,8 @@ __export(require("../icons/selfkeyLogo"));
 __export(require("../icons/structure"));
 __export(require("../icons/file-pdf"));
 __export(require("../icons/file-image"));
+__export(require("../icons/book"));
+__export(require("../icons/id-card"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muidelete_1 = require("../icons/muidelete");
@@ -60,7 +62,21 @@ var theme = core_1.createMuiTheme({
         MuiCard: {
             root: {
                 backgroundColor: colors_1.base,
+                boxShadow: 'none',
                 height: '100%',
+            },
+        },
+        MuiCardHeader: {
+            title: {
+                color: colors_1.white,
+                fontSize: '18px',
+                fontWeight: 600,
+                lineHeight: '22px',
+            },
+            subheader: {
+                color: colors_1.white,
+                fontSize: '16px',
+                fontWeight: 600,
             },
         },
         MuiCardContent: {
@@ -581,6 +597,12 @@ var theme = core_1.createMuiTheme({
                     boxSizing: 'border-box',
                     color: colors_1.white,
                 },
+            },
+            textColorInherit: {
+                color: colors_1.typography,
+            },
+            selected: {
+                color: colors_1.white,
             },
         },
         MuiExpansionPanel: {
