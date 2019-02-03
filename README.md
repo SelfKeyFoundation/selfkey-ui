@@ -10,7 +10,7 @@ Components hot-reload during development and stories are automatically loaded fr
 
 ```bash
 yarn
-yarn install -g @storybook/cli
+yarn global add @storybook/cli
 yarn start
 ```
 

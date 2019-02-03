@@ -176,4 +176,6 @@ var exchange_large_1 = require("./icons/exchange-large");
 exports.ExchangeLargeIcon = exchange_large_1.ExchangeIcon;
 var exchange_1 = require("./icons/exchange");
 exports.ExchangeSmallIcon = exchange_1.ExchangeIcon;
+var transfer_1 = require("./icons/transfer");
+exports.TransferIcon = transfer_1.TransferIcon;
 //# sourceMappingURL=index.js.map
