@@ -734,7 +734,7 @@ var theme = core_1.createMuiTheme({
             paperAnchorRight: {
                 backgroundColor: '#222B34',
                 borderLeft: '1px solid #29333D',
-                boxShadow: 0,
+                boxShadow: 'none',
             },
         },
     },
