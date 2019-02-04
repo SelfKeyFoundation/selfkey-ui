@@ -730,6 +730,13 @@ var theme = core_1.createMuiTheme({
                 width: '18px',
             },
         },
+        MuiDrawer: {
+            paperAnchorRight: {
+                backgroundColor: '#222B34',
+                borderLeft: '1px solid #29333D',
+                boxShadow: 0,
+            },
+        },
     },
 });
 exports.SelfkeyDarkTheme = function (_a) {
