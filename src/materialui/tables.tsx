@@ -1,5 +1,5 @@
 import { withStyles, TableRow, TableCell } from '@material-ui/core';
-import { warning } from 'colors';
+import { warning } from '../colors';
 
 export const LargeTableHeadRow = withStyles({
   root: {

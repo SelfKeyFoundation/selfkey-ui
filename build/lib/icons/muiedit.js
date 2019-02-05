@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@material-ui/core");
 var icons_1 = require("@material-ui/icons");
-var colors_1 = require("colors");
+var colors_1 = require("../colors");
 exports.MuiEditIcon = core_1.withStyles({
     root: {
         fill: colors_1.grey,
