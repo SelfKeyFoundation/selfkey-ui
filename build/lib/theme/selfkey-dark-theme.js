@@ -738,6 +738,12 @@ var theme = core_1.createMuiTheme({
                 width: '300px',
             },
         },
+        MuiAvatar: {
+            fontSize: '12px',
+            height: '26px',
+            marginTop: '16px',
+            width: '26px',
+        },
     },
 });
 exports.SelfkeyDarkTheme = function (_a) {
