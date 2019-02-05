@@ -739,10 +739,15 @@ var theme = core_1.createMuiTheme({
             },
         },
         MuiAvatar: {
-            fontSize: '12px',
-            height: '26px',
-            marginTop: '16px',
-            width: '26px',
+            root: {
+                fontSize: '12px',
+                height: '26px',
+                marginTop: '16px',
+                width: '26px',
+            },
+            colorDefault: {
+                backgroundColor: colors_1.baseLight,
+            }
         },
     },
 });

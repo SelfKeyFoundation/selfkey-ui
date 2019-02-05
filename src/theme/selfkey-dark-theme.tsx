@@ -10,6 +10,7 @@ import {
   grey,
   base,
   baseDark,
+  baseLight,
 } from '../colors';
 export * from '../colors';
 export * from '../materialui/colorPresentation';
@@ -745,10 +746,15 @@ const theme = createMuiTheme({
         },
       },
       MuiAvatar: {
-        fontSize: '12px',
-        height: '26px',
-        marginTop: '16px',
-        width: '26px',
+        root: {
+          fontSize: '12px',
+          height: '26px',
+          marginTop: '16px',
+          width: '26px',
+        },
+        colorDefault: {
+          backgroundColor: baseLight,
+        }
       },
     },
 });
