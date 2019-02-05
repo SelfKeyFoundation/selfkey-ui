@@ -3,7 +3,7 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import { grey, white } from 'colors';
+import { grey, white } from '../colors';
 
 const styles: StyleSheet = {
   root: {

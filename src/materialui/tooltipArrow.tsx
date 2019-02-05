@@ -3,7 +3,7 @@ import { withStyles, Tooltip } from '@material-ui/core';
 import { 
     // base, 
     warning, 
-} from 'colors';
+} from '../colors';
 
 const style = {
     fontSize: 7,

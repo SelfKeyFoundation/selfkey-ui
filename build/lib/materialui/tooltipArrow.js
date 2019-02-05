@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var colors_1 = require("colors");
+var colors_1 = require("../colors");
 var style = {
     fontSize: 7,
     height: '3em',

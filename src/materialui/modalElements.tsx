@@ -3,7 +3,7 @@ import {
     Button, 
     withStyles,
 } from '@material-ui/core';
-import { base } from 'colors';
+import { base } from '../colors';
 
 export const ModalWrap = withStyles({
 	root: {

@@ -11,7 +11,7 @@ import { ModalBody2 } from "./modalElements";
 import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
 import HardDriveIcon from "../icons/hard-drive";
-import { base } from "colors";
+import { base } from "../colors";
 
 export const ModalWrap = withStyles({
 	root: {
