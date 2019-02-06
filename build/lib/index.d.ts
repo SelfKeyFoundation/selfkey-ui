@@ -50,6 +50,7 @@ export { QuitIcon } from './icons/quit';
 export { ModalCloseIcon } from './icons/modal-close';
 export { CloseButtonIcon } from './icons/close-button';
 export { WarningShieldIcon } from './icons/warning-shield';
+export { TrezorBridgeIcon } from './icons/trezor-bridge';
 export { IncorporationsIcon } from './icons/incorporations';
 export { PasswordIcon } from './icons/password';
 export { DownloadIcon2 } from './icons/download-2';
