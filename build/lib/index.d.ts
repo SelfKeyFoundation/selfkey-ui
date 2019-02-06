@@ -68,6 +68,7 @@ export { CopyIcon } from './icons/copy';
 export { FailedIcon } from './icons/failed';
 export { ReceiveIcon } from './icons/receive';
 export { SentIcon } from './icons/sent';
+export { SentBlueIcon } from './icons/sent-blue';
 export { ExistingAddressIcon } from './icons/existing-address';
 export { NewAddressIcon } from './icons/new-address';
 export { KeyIcon } from './icons/key';
