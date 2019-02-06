@@ -21,7 +21,7 @@ var modalElements_1 = require("./modalElements");
 var incorporations_1 = require("../icons/incorporations");
 var inputs_1 = require("./inputs");
 var hard_drive_1 = require("../icons/hard-drive");
-var colors_1 = require("colors");
+var colors_1 = require("../colors");
 exports.ModalWrap = core_1.withStyles({
     root: {
         backgroundColor: 'transparent',
