@@ -45,6 +45,7 @@ export { EditTransparentIcon } from './icons/edit-transparent';
 export { DeleteIcon } from './icons/delete';
 export { ViewIcon } from './icons/view';
 export { SelfkeyLogo } from './icons/selfkeyLogo';
+export { SelfkeyLogoTemp } from './icons/selfkeyLogoTemp';
 export { HelpIcon } from './icons/help';
 export { QuitIcon } from './icons/quit';
 export { ModalCloseIcon } from './icons/modal-close';

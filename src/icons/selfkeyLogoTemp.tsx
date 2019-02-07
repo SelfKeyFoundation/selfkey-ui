@@ -11,7 +11,7 @@ const styles: StyleSheet = {
   }
 };
 
-export const SelfkeyLogo2 = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const SelfkeyLogoTemp = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 177 119'>
     <defs>
         <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="linearGradient-1">
@@ -37,4 +37,4 @@ export const SelfkeyLogo2 = injectSheet(styles)<SvgIconProps>((props: SvgIconPro
   </SvgIcon>
 ));
 
-export default SelfkeyLogo2;
+export default SelfkeyLogoTemp;
