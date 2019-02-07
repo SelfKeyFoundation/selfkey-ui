@@ -184,4 +184,6 @@ var exchange_1 = require("./icons/exchange");
 exports.ExchangeSmallIcon = exchange_1.ExchangeIcon;
 var clear_1 = require("./icons/clear");
 exports.ClearIcon = clear_1.ClearIcon;
+var address_book_2 = require("./icons/address-book");
+exports.AddressBookIcon = address_book_2.AddressBookIcon;
 //# sourceMappingURL=index.js.map
