@@ -178,4 +178,6 @@ var exchange_1 = require("./icons/exchange");
 exports.ExchangeSmallIcon = exchange_1.ExchangeIcon;
 var transfer_1 = require("./icons/transfer");
 exports.TransferIcon = transfer_1.TransferIcon;
+var gear_1 = require("./icons/gear");
+exports.GearIcon = gear_1.GearIcon;
 //# sourceMappingURL=index.js.map
