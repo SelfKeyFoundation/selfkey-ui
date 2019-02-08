@@ -90,6 +90,8 @@ __export(require("./theme/selfkey-dark-theme"));
 // Icons
 var green_tick_1 = require("./icons/green-tick");
 exports.GreenTickIcon = green_tick_1.GreenTickIcon;
+var okay_1 = require("./icons/okay");
+exports.OkayIcon = okay_1.OkayIcon;
 var edit_transparent_1 = require("./icons/edit-transparent");
 exports.EditTransparentIcon = edit_transparent_1.EditTransparentIcon;
 var delete_1 = require("./icons/delete");
