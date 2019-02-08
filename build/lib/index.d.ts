@@ -94,3 +94,5 @@ export { ExchangeIcon as ExchangeLargeIcon } from './icons/exchange-large';
 export { ExchangeIcon as ExchangeSmallIcon } from './icons/exchange';
 export { ClearIcon } from './icons/clear';
 export { AddressBookIcon } from './icons/address-book';
+export { TransferIcon } from './icons/transfer';
+export { GearIcon } from './icons/gear';
