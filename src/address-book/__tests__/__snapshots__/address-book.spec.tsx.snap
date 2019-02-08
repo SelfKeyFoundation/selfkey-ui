@@ -91,7 +91,7 @@ exports[`Address Book should show Address Book 1`] = `
     className="MuiGrid-item-2"
   >
     <button
-      className="MuiButtonBase-root-168 MuiButton-root-142 MuiButton-text-144 MuiButton-flat-147 Component-button-0-1-2"
+      className="MuiButtonBase-root-169 MuiButton-root-143 MuiButton-text-145 MuiButton-flat-148 Component-button-0-1-2"
       disabled={false}
       id="addAddressButton"
       onBlur={[Function]}
@@ -110,12 +110,12 @@ exports[`Address Book should show Address Book 1`] = `
       type="button"
     >
       <span
-        className="MuiButton-label-143"
+        className="MuiButton-label-144"
       >
         ADD ADDRESS
       </span>
       <span
-        className="MuiTouchRipple-root-197"
+        className="MuiTouchRipple-root-198"
       />
     </button>
   </div>
@@ -123,31 +123,31 @@ exports[`Address Book should show Address Book 1`] = `
     className="MuiGrid-item-2"
   >
     <table
-      className="MuiTable-root-171 Component-table-0-1-4"
+      className="MuiTable-root-172 Component-table-0-1-4"
     >
       <thead
-        className="MuiTableHead-root-172"
+        className="MuiTableHead-root-173"
       >
         <tr
-          className="MuiTableRow-root-173 MuiTableRow-head-176 Component-headerTableRow-0-1-5"
+          className="MuiTableRow-root-174 MuiTableRow-head-177 Component-headerTableRow-0-1-5"
         >
           <th
             aria-sort={null}
-            className="MuiTableCell-root-178 MuiTableCell-head-179"
+            className="MuiTableCell-root-179 MuiTableCell-head-180"
             scope="col"
           >
             LABEL
           </th>
           <th
             aria-sort={null}
-            className="MuiTableCell-root-178 MuiTableCell-head-179"
+            className="MuiTableCell-root-179 MuiTableCell-head-180"
             scope="col"
           >
             ETH ADDRESS
           </th>
           <th
             aria-sort={null}
-            className="MuiTableCell-root-178 MuiTableCell-head-179 MuiTableCell-numeric-182"
+            className="MuiTableCell-root-179 MuiTableCell-head-180 MuiTableCell-numeric-183"
             scope="col"
           >
             ACTIONS
@@ -155,27 +155,27 @@ exports[`Address Book should show Address Book 1`] = `
         </tr>
       </thead>
       <tbody
-        className="MuiTableBody-root-190"
+        className="MuiTableBody-root-191"
       >
         <tr
-          className="MuiTableRow-root-173 Component-bodyTableRow-0-1-6"
+          className="MuiTableRow-root-174 Component-bodyTableRow-0-1-6"
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-178 MuiTableCell-body-180"
+            className="MuiTableCell-root-179 MuiTableCell-body-181"
             id="John"
           >
             John
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-178 MuiTableCell-body-180"
+            className="MuiTableCell-root-179 MuiTableCell-body-181"
           >
             0x4184288c556524df9cb9e58b73265ee66dca4efe
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-178 MuiTableCell-body-180"
+            className="MuiTableCell-root-179 MuiTableCell-body-181"
           >
             <div
               className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9"
@@ -184,7 +184,7 @@ exports[`Address Book should show Address Book 1`] = `
                 className="MuiGrid-item-2"
               >
                 <button
-                  className="MuiButtonBase-root-168 MuiIconButton-root-191"
+                  className="MuiButtonBase-root-169 MuiIconButton-root-192"
                   disabled={false}
                   onBlur={[Function]}
                   onContextMenu={[Function]}
@@ -201,7 +201,7 @@ exports[`Address Book should show Address Book 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-196"
+                    className="MuiIconButton-label-197"
                   >
                     <svg
                       aria-hidden="true"
@@ -264,7 +264,7 @@ exports[`Address Book should show Address Book 1`] = `
                     </svg>
                   </span>
                   <span
-                    className="MuiTouchRipple-root-197"
+                    className="MuiTouchRipple-root-198"
                   />
                 </button>
               </div>
@@ -272,7 +272,7 @@ exports[`Address Book should show Address Book 1`] = `
                 className="MuiGrid-item-2"
               >
                 <button
-                  className="MuiButtonBase-root-168 MuiIconButton-root-191"
+                  className="MuiButtonBase-root-169 MuiIconButton-root-192"
                   disabled={false}
                   id="editButton"
                   onBlur={[Function]}
@@ -291,7 +291,7 @@ exports[`Address Book should show Address Book 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-196"
+                    className="MuiIconButton-label-197"
                   >
                     <svg
                       aria-hidden="true"
@@ -348,7 +348,7 @@ exports[`Address Book should show Address Book 1`] = `
                     </svg>
                   </span>
                   <span
-                    className="MuiTouchRipple-root-197"
+                    className="MuiTouchRipple-root-198"
                   />
                 </button>
               </div>
@@ -356,7 +356,7 @@ exports[`Address Book should show Address Book 1`] = `
                 className="MuiGrid-item-2"
               >
                 <button
-                  className="MuiButtonBase-root-168 MuiIconButton-root-191"
+                  className="MuiButtonBase-root-169 MuiIconButton-root-192"
                   disabled={false}
                   id="deleteButton"
                   onBlur={[Function]}
@@ -375,7 +375,7 @@ exports[`Address Book should show Address Book 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-196"
+                    className="MuiIconButton-label-197"
                   >
                     <svg
                       aria-hidden="true"
@@ -423,7 +423,7 @@ exports[`Address Book should show Address Book 1`] = `
                     </svg>
                   </span>
                   <span
-                    className="MuiTouchRipple-root-197"
+                    className="MuiTouchRipple-root-198"
                   />
                 </button>
               </div>

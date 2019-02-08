@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var colors_1 = require("colors");
+var colors_1 = require("../colors");
 var styles = {
     root: {
         fill: colors_1.grey,
