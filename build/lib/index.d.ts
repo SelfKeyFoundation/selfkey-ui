@@ -91,5 +91,7 @@ export { CalendarIcon } from './icons/calendar';
 export { DocumentIcon } from './icons/document';
 export { ExchangeIcon as ExchangeLargeIcon } from './icons/exchange-large';
 export { ExchangeIcon as ExchangeSmallIcon } from './icons/exchange';
+export { TransferIcon } from './icons/transfer';
+export { GearIcon } from './icons/gear';
 export { ClearIcon } from './icons/clear';
 export { AddressBookIcon } from './icons/address-book';
