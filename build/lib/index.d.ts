@@ -96,3 +96,4 @@ export { ClearIcon } from './icons/clear';
 export { AddressBookIcon } from './icons/address-book';
 export { TransferIcon } from './icons/transfer';
 export { GearIcon } from './icons/gear';
+export { MyCryptoLargeIcon } from './icons/my-crypto-large';

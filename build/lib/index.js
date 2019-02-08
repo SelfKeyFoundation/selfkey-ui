@@ -200,4 +200,6 @@ var transfer_1 = require("./icons/transfer");
 exports.TransferIcon = transfer_1.TransferIcon;
 var gear_1 = require("./icons/gear");
 exports.GearIcon = gear_1.GearIcon;
+var my_crypto_large_1 = require("./icons/my-crypto-large");
+exports.MyCryptoLargeIcon = my_crypto_large_1.MyCryptoLargeIcon;
 //# sourceMappingURL=index.js.map
