@@ -742,7 +742,6 @@ const theme = createMuiTheme({
           backgroundColor: '#222B34',
           borderLeft: '1px solid #29333D',
           boxShadow: 'none',
-          width: '300px',
         },
       },
       MuiAvatar: {
