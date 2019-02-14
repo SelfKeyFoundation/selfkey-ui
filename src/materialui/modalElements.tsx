@@ -41,7 +41,7 @@ export const ModalBody = withStyles({
         boxShadow: '0 50px 70px -50px black',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '28px 30px',
+        padding: '28px 30px 50px',
         width: '100%',
     },
 })(Paper);
