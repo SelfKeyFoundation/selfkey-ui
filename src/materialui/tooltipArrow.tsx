@@ -26,7 +26,7 @@ export const TooltipArrow = (() => (
 
 export const KeyTooltip = withStyles({
 	popper: {
-        backgroundColor: warning,
+        backgroundColor: 'transparent',
         '&[x-placement*="bottom"] $arrowArrow': {
             height: '1em',
             left: 0,

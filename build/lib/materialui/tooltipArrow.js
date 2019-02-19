@@ -20,7 +20,7 @@ var style = {
 exports.TooltipArrow = (function () { return (React.createElement("span", { className: "arrowClass", style: style })); });
 exports.KeyTooltip = core_1.withStyles({
     popper: {
-        backgroundColor: colors_1.warning,
+        backgroundColor: 'transparent',
         '&[x-placement*="bottom"] $arrowArrow': {
             height: '1em',
             left: 0,
