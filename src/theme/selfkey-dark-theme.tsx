@@ -37,6 +37,7 @@ export * from '../icons/payment';
 
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
+export { MuiVisibilityIcon } from '../icons/muivisibility';
 
 const theme = createMuiTheme({
     palette: {
