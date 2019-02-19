@@ -20,6 +20,7 @@ export * from '../materialui/lists';
 export * from '../materialui/modalElements';
 export * from '../materialui/pagination';
 export * from '../materialui/tables';
+export * from '../materialui/tooltipArrow';
 export * from '../materialui/typography';
 export * from '../icons/corporate';
 export * from '../icons/incorporations';
@@ -32,6 +33,7 @@ export * from '../icons/file-pdf';
 export * from '../icons/file-image';
 export * from '../icons/book';
 export * from '../icons/id-card';
+export * from '../icons/payment';
 
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
