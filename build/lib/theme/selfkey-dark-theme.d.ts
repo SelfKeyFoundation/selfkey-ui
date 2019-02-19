@@ -23,5 +23,6 @@ export * from '../icons/id-card';
 export * from '../icons/payment';
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
+export { MuiVisibilityIcon } from '../icons/muivisibility';
 export declare const SelfkeyDarkTheme: React.SFC<{}>;
 export default SelfkeyDarkTheme;

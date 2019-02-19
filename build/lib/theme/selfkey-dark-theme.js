@@ -32,6 +32,8 @@ var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muidelete_1 = require("../icons/muidelete");
 exports.MuiDeleteIcon = muidelete_1.MuiDeleteIcon;
+var muivisibility_1 = require("../icons/muivisibility");
+exports.MuiVisibilityIcon = muivisibility_1.MuiVisibilityIcon;
 var theme = core_1.createMuiTheme({
     palette: {
         primary: {
