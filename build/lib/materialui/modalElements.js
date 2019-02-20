@@ -13,6 +13,7 @@ exports.ModalWrap = core_1.withStyles({
         position: 'absolute',
         top: '100px',
         width: '780px',
+        marginBottom: '50px',
     },
 })(core_1.Paper);
 exports.ModalHeader = core_1.withStyles({
