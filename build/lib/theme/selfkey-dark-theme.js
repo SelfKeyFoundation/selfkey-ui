@@ -29,6 +29,7 @@ __export(require("../icons/book"));
 __export(require("../icons/id-card"));
 __export(require("../icons/payment"));
 __export(require("../icons/sk-id"));
+__export(require("../icons/upload"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muidelete_1 = require("../icons/muidelete");
