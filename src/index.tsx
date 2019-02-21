@@ -106,3 +106,5 @@ export { TransferIcon } from './icons/transfer';
 export { GearIcon } from './icons/gear';
 export { ClearIcon } from './icons/clear';
 export { AddressBookIcon } from './icons/address-book';
+export { SKIDIcon } from './icons/sk-id';
+export { SKUploadIcon } from './icons/upload';
