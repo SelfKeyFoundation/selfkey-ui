@@ -21,6 +21,7 @@ export * from '../icons/file-image';
 export * from '../icons/book';
 export * from '../icons/id-card';
 export * from '../icons/payment';
+export * from '../icons/sk-id';
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
 export { MuiVisibilityIcon } from '../icons/muivisibility';
