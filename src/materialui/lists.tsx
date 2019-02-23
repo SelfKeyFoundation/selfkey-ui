@@ -139,3 +139,25 @@ export const CheckedIcon = ((item: any ) => (
     </SvgIcon>
 ));
 
+const emptyStyle = {
+    color: 'white',
+    fontSize: '14px', 
+    fontWeight: 600
+};
+
+export const EmptyIcon = ((step: any) => (
+    <SvgIcon width="30px" height="44px" viewBox="0 0 30 44" style={ checkedStyle }>
+        <title>item</title>
+        <g id="empty1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <g id="group">
+                <g id="empty">
+                    <rect id="base" stroke="#F5A623" fill="#F5A623" x="0.5" y="0.5" width="29" height="27" rx="13.5"></rect>
+                    <text x="11" y="19" fill="white" style={ emptyStyle }>
+                        {step.step}
+                    </text>
+                </g>
+                <polygon id="Line2" fill="#364357" opacity="0.800000012" points="15 28 16 28 16 44 15 44"></polygon>
+            </g>
+        </g>
+    </SvgIcon>
+));
