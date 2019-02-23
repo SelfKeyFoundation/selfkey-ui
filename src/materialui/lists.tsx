@@ -145,7 +145,7 @@ const emptyStyle = {
     fontWeight: 600
 };
 
-export const EmptyIcon = ((step: any) => (
+export const StepIcon = ((step: any) => (
     <SvgIcon width="30px" height="44px" viewBox="0 0 30 44" style={ checkedStyle }>
         <title>item</title>
         <g id="empty1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

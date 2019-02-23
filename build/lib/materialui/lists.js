@@ -83,7 +83,7 @@ var emptyStyle = {
     fontSize: '14px',
     fontWeight: 600
 };
-exports.EmptyIcon = (function (step) { return (React.createElement(core_1.SvgIcon, { width: "30px", height: "44px", viewBox: "0 0 30 44", style: checkedStyle },
+exports.StepIcon = (function (step) { return (React.createElement(core_1.SvgIcon, { width: "30px", height: "44px", viewBox: "0 0 30 44", style: checkedStyle },
     React.createElement("title", null, "item"),
     React.createElement("g", { id: "empty1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "group" },
