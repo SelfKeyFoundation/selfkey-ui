@@ -509,6 +509,7 @@ var theme = core_1.createMuiTheme({
                 },
                 '&$disabled': {
                     color: colors_1.primary,
+                    border: '2px solid #1CA9BA'
                 },
             },
             outlinedSecondary: {
