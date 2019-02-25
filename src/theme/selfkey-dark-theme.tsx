@@ -514,6 +514,7 @@ const theme = createMuiTheme({
           },
           '&$disabled': {
             color: primary,
+            border: '2px solid #1CA9BA'
           },
         },
         outlinedSecondary: {
