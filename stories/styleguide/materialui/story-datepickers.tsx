@@ -3,20 +3,24 @@ import { Typography } from '@material-ui/core';
 import KeyPicker from '../../../src/materialui/datepicker';
 
 const underlineStyle = {
-    textDecoration: 'underline',
-}
+	textDecoration: 'underline',
+};
 
-export default function DatePickerStories () {
-    return (
-        <div>
-            <Typography variant="h3" style={underlineStyle} gutterBottom>
-                Date Picker
-            </Typography>
+export default function DatePickerStories() {
+	return (
+		<div>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Date Time Picker
+			</Typography>
 
-            <KeyPicker />
+			<KeyPicker includeTime />
 
-            <p style={{ marginBottom: '400px' }}>&nbsp;</p>
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Date Picker
+			</Typography>
 
-        </div>
-    )
+			<KeyPicker />
+			<p style={{ marginBottom: '400px' }}>&nbsp;</p>
+		</div>
+	);
 }

@@ -3,338 +3,343 @@ import injectSheet, { StyleSheet } from 'react-jss';
 import * as Datetime from 'react-datetime';
 
 const styles: StyleSheet = {
-    datepickerWrap: {
-        fontFamily: 'Lato, arial, sans-serif',
+	datepickerWrap: {
+		fontFamily: 'Lato, arial, sans-serif',
 
-        '& .rdt': {
+		'& .rdt': {
 			'& input::placeholder': {
 				color: 'rgba(147, 176, 193, 0.42)',
 			},
 		},
 
-        '& .rdtOpen': {
-            display: 'table',
-            position: 'relative',
-    
-            '& .rdtPicker': {
-                display: 'block',
-                position: 'absolute'
-            },
-        },
+		'& .rdtOpen': {
+			display: 'table',
+			position: 'relative',
 
-        '& .rdtPicker': {
-            backgroundColor: '#1E262E',
-            border: '1px solid #313D49',
-            borderRadius: '3px',
-            color: 'white',
-            cursor: 'pointer',
-            display: 'none',
-            fontWeight: 600,
-            minHeight: '325px',
-            minWidth: '263px',
-            padding: '5px 25px 15px 25px',
-            textAlign: 'center',
-    
-            '& th ': {
-                borderBottom: 'none',
-            }
-        },    
+			'& .rdtPicker': {
+				display: 'block',
+				position: 'absolute',
+			},
+		},
 
-        '& .form-control': {
-            backgroundColor: '#1E262E',
-            borderRadius: '4px',
-            border: '1px solid #384656',
-            color: '#93B0C1',
-            fontSize: '14px',
-            height: '44px',
-            lineHeight: '21px',
-            outline: 'none',
-            paddingLeft: '16px',
-            paddingRight: '16px',
-    
-            '&:focus': {
-                border: '1px solid #00C0D9',
-                boxShadow: '0 0 3px 1px #00C0D9'
-            },
-    
-            '&:placeholder': {
-                color: '#404B55'
-            }
-        },
+		'& .rdtPicker': {
+			backgroundColor: '#1E262E',
+			border: '1px solid #313D49',
+			borderRadius: '3px',
+			color: 'white',
+			cursor: 'pointer',
+			display: 'none',
+			fontWeight: 600,
+			minHeight: '325px',
+			minWidth: '263px',
+			padding: '5px 25px 15px 25px',
+			textAlign: 'center',
 
-        '& .rdtSwitch': {
-            color: '#93B0C1',
+			'& th ': {
+				borderBottom: 'none',
+			},
+		},
 
-            '&:hover': {
-                color: 'white',
-            },
-        },
-    
-        '& .dow': {
-            color: '#93B0C1',
-            fontWeight: 600,
-            paddingBottom: '10px',
-            paddingTop: '25px',
-        },
-    
-        '& .rdtTimeToggle:hover': {
-            color: 'white',
-        },
+		'& .form-control': {
+			backgroundColor: '#1E262E',
+			borderRadius: '4px',
+			border: '1px solid #384656',
+			color: '#93B0C1',
+			fontSize: '14px',
+			height: '44px',
+			lineHeight: '21px',
+			outline: 'none',
+			paddingLeft: '16px',
+			paddingRight: '16px',
 
-        '& .rdtNext': {
-            color: '#697C95',
-            verticalAlign: 'sub',
-            userSelect: 'none',
-            width: '40px',
+			'&:focus': {
+				border: '1px solid #00C0D9',
+				boxShadow: '0 0 3px 1px #00C0D9',
+			},
 
-            '&:hover': {
-                color: 'white',
-            },
+			'&:placeholder': {
+				color: '#404B55',
+			},
+		},
 
-            '& span': {
-                fontSize: '2.2em',
-                verticalAlign: 'sub',
-            },
-        },
-    
-        '& .rdtPrev': {
-            color: '#697C95',
-            verticalAlign: 'sub',
-            userSelect: 'none',
-            width: '40px',
+		'& .rdtSwitch': {
+			color: '#93B0C1',
 
-            '&:hover': {
-                color: 'white',
-            },
+			'&:hover': {
+				color: 'white',
+			},
+		},
 
-            '& span': {
-                fontSize: '2.2em',
-                verticalAlign: 'sub',
-            },
-        },
-    
-        '& tbody': {
-            fontSize: '14px',
-            fontWeight: 600,
-        },
-    
-        '& thead': {
-            '& tr:first-child': {
-                '&:after': {
-                    borderBottom: '1px solid #313D49',
-                    content: '""',
-                    left: 0,
-                    position: 'absolute',
-                    top: '60px',
-                    width: '100%',
-                },
+		'& .dow': {
+			color: '#93B0C1',
+			fontWeight: 600,
+			paddingBottom: '10px',
+			paddingTop: '25px',
+		},
 
-                '& th': {
-                    cursor: 'pointer',
-                    paddingBottom: '10px',
-                    paddingTop: 0,
-                },
-            },
+		'& .rdtTimeToggle:hover': {
+			color: 'white',
+		},
 
-            '& tr:nth-child(2)': {
-                fontSize: '14px',
-                textTransform: 'uppercase',
-            },
-        },
+		'& .rdtNext': {
+			color: '#697C95',
+			verticalAlign: 'sub',
+			userSelect: 'none',
+			width: '40px',
 
-        '& tfoot': {
-            '& td': {
-                color: '#93B0C1',
-                cursor: 'pointer',
-                fontSize: '12px',
-                paddingTop: '30px',
-                textAlign: 'center'
-            },
+			'&:hover': {
+				color: 'white',
+			},
 
-            '&:before': {
-                borderTop: '1px solid #313D49',
-                content: '""',
-                left: 0,
-                marginTop: '10px',
-                position: 'absolute',
-                width: '100%'
-            },
-        },
-    
-        '& .rdtDay': {
-            color: 'white',
-            cursor: 'pointer',
-            fontWeight: 600,
-            padding: '8px 10px',
-            textAlign: 'center',
+			'& span': {
+				fontSize: '2.2em',
+				verticalAlign: 'sub',
+			},
+		},
 
-            '&:hover': {
-                backgroundColor: '#00C0D9 !important',
-                borderRadius: '3px',
-            },
-        },
+		'& .rdtPrev': {
+			color: '#697C95',
+			verticalAlign: 'sub',
+			userSelect: 'none',
+			width: '40px',
 
-        '& .rdtNew': {
-            color: '#404B55',
-        },
+			'&:hover': {
+				color: 'white',
+			},
 
-        '& .rdtOld': {
-            color: '#404B55',
-        },
-    
-        '& .rdtMonth': {
-            cursor: 'pointer',
-            fontWeight: 600,
-            padding: '8px 10px',
-            textAlign: 'center',
+			'& span': {
+				fontSize: '2.2em',
+				verticalAlign: 'sub',
+			},
+		},
 
-            '&:hover': {
-                backgroundColor: '#00C0D9',
-                borderRadius: '3px'
-            },
-        },
+		'& tbody': {
+			fontSize: '14px',
+			fontWeight: 600,
+		},
 
-        '& .rdtMonths': {
-            '& table': {
-                width: '100%',
-            },
-            '& table:nth-child(2)': {
-                display: 'flex',
+		'& thead': {
+			'& tr:first-child': {
+				'&:after': {
+					borderBottom: '1px solid #313D49',
+					content: '""',
+					left: 0,
+					position: 'absolute',
+					top: '60px',
+					width: '100%',
+				},
 
-                '& tbody': {
-                    marginTop: '65px',
-                    textAlign: 'center',
-                    width: 'inherit',
+				'& th': {
+					cursor: 'pointer',
+					paddingBottom: '10px',
+					paddingTop: 0,
+				},
+			},
 
-                    '& tr': {
-                        display: 'flex',
-                        justifyContent: 'space-around',
-                        margin: '10px 0',
-                    },
-                },
-            },
-        },
-    
-        '& .rdtYear': {
-            cursor: 'pointer',
-            fontWeight: 600,
-            padding: '8px 10px',
-            textAlign: 'center',
+			'& tr:nth-child(2)': {
+				fontSize: '14px',
+				textTransform: 'uppercase',
+			},
+		},
 
-            '&:hover': {
-                backgroundColor: '#00C0D9',
-                borderRadius: '3px',
-            },
-        },
+		'& tfoot': {
+			'& td': {
+				color: '#93B0C1',
+				cursor: 'pointer',
+				fontSize: '12px',
+				paddingTop: '30px',
+				textAlign: 'center',
+			},
 
-        '& .rdtYears': {
-            '& table': {
-                width: '100%',
-            },
+			'&:before': {
+				borderTop: '1px solid #313D49',
+				content: '""',
+				left: 0,
+				marginTop: '10px',
+				position: 'absolute',
+				width: '100%',
+			},
+		},
 
-            '& table:nth-child(2)': {
-                display: 'flex',
+		'& .rdtDay': {
+			color: 'white',
+			cursor: 'pointer',
+			fontWeight: 600,
+			padding: '8px 10px',
+			textAlign: 'center',
 
-                '& tbody': {
-                    marginTop: '65px',
-                    textAlign: 'center',
-                    width: 'inherit',
+			'&:hover': {
+				backgroundColor: '#00C0D9 !important',
+				borderRadius: '3px',
+			},
+		},
 
-                    '& tr': {
-                        display: 'flex',
-                        justifyContent: 'space-around',
-                        margin: '10px 0',
-                    },
-                },
-            },
-        },
+		'& .rdtNew': {
+			color: '#404B55',
+		},
 
-        '& .rdtTime': {
-            '& table': {
-                width: '100%',
+		'& .rdtOld': {
+			color: '#404B55',
+		},
 
-                '& tbody': {
-                    display: 'inherit',
-                    marginTop: '85px',
-                    textAlign: 'center',
-                    width: 'inherit',
-                },
-            },
+		'& .rdtMonth': {
+			cursor: 'pointer',
+			fontWeight: 600,
+			padding: '8px 10px',
+			textAlign: 'center',
 
-            '& .rdtSwitch': {
-                fontWeight: '400',
-                paddingBottom: '18px',
-                paddingTop: '14px',
-            },
-        },
-    
-        '& .rdtPicker td.rdtActive': {
-            backgroundColor: '#00C0D9',
-            borderRadius: '3px',
-        },
-    
-        '& .rdtPicker td.rdtToday:before': {
-            display: 'none',
-        },
+			'&:hover': {
+				backgroundColor: '#00C0D9',
+				borderRadius: '3px',
+			},
+		},
 
-        '& .rdtCounters': {
-            display: 'flex',
-            justifyContent: 'space-around',
-        },
+		'& .rdtMonths': {
+			'& table': {
+				width: '100%',
+			},
+			'& table:nth-child(2)': {
+				display: 'flex',
 
-        '& .rdtCounter': {
-            '&:first-child:before': {
-                color: '#93B0C1',
-                content: '"Hours"',
-                marginLeft: '-14px',
-                marginTop: '-35px',
-                position: 'absolute',
-            },
+				'& tbody': {
+					marginTop: '65px',
+					textAlign: 'center',
+					width: 'inherit',
 
-            '&:nth-child(3):before': {
-                color: '#93B0C1',
-                content: '"Minutes"',
-                marginLeft: '-21px',
-                marginTop: '-35px',
-                position: 'absolute',
-            },
-        },
+					'& tr': {
+						display: 'flex',
+						justifyContent: 'space-around',
+						margin: '10px 0',
+					},
+				},
+			},
+		},
 
-        '& .rdtCount': {
-            border: '1px solid #384656',
-            borderRadius: '4px',
-            color: '#93B0C1',
-            fontWeight: 'normal',
-            margin: '15px 0',
-            padding: '15px 17px',
-            width: '25px',
-        },
+		'& .rdtYear': {
+			cursor: 'pointer',
+			fontWeight: 600,
+			padding: '8px 10px',
+			textAlign: 'center',
 
-        '& .rdtBtn': {
-            color: '#697C95',
-            userSelect: 'none',
+			'&:hover': {
+				backgroundColor: '#00C0D9',
+				borderRadius: '3px',
+			},
+		},
 
-            '&:hover': {
-                color: 'white',
-            },
-        },
+		'& .rdtYears': {
+			'& table': {
+				width: '100%',
+			},
 
-        '& .rdtCounterSeparator': {
-            display: 'none',
-        },
-    },
+			'& table:nth-child(2)': {
+				display: 'flex',
+
+				'& tbody': {
+					marginTop: '65px',
+					textAlign: 'center',
+					width: 'inherit',
+
+					'& tr': {
+						display: 'flex',
+						justifyContent: 'space-around',
+						margin: '10px 0',
+					},
+				},
+			},
+		},
+
+		'& .rdtTime': {
+			'& table': {
+				width: '100%',
+
+				'& tbody': {
+					display: 'inherit',
+					marginTop: '85px',
+					textAlign: 'center',
+					width: 'inherit',
+				},
+			},
+
+			'& .rdtSwitch': {
+				fontWeight: '400',
+				paddingBottom: '18px',
+				paddingTop: '14px',
+			},
+		},
+
+		'& .rdtPicker td.rdtActive': {
+			backgroundColor: '#00C0D9',
+			borderRadius: '3px',
+		},
+
+		'& .rdtPicker td.rdtToday:before': {
+			display: 'none',
+		},
+
+		'& .rdtCounters': {
+			display: 'flex',
+			justifyContent: 'space-around',
+		},
+
+		'& .rdtCounter': {
+			'&:first-child:before': {
+				color: '#93B0C1',
+				content: '"Hours"',
+				marginLeft: '-14px',
+				marginTop: '-35px',
+				position: 'absolute',
+			},
+
+			'&:nth-child(3):before': {
+				color: '#93B0C1',
+				content: '"Minutes"',
+				marginLeft: '-21px',
+				marginTop: '-35px',
+				position: 'absolute',
+			},
+		},
+
+		'& .rdtCount': {
+			border: '1px solid #384656',
+			borderRadius: '4px',
+			color: '#93B0C1',
+			fontWeight: 'normal',
+			margin: '15px 0',
+			padding: '15px 17px',
+			width: '25px',
+		},
+
+		'& .rdtBtn': {
+			color: '#697C95',
+			userSelect: 'none',
+
+			'&:hover': {
+				color: 'white',
+			},
+		},
+
+		'& .rdtCounterSeparator': {
+			display: 'none',
+		},
+	},
 };
 
-  
+export type KeyPickerProps = any;
 
-export const KeyPicker = injectSheet(styles)(({classes}) => (
-    <div className={classes.datepickerWrap} >
-        <Datetime 
-            dateFormat="DD MMM YYYY"
-            inputProps={{ placeholder: '19 Dec 2018 11:23 AM' }}
-            closeOnSelect={true}
-        />
-    </div>
-));
+export const KeyPicker = injectSheet(styles)<KeyPickerProps>(({ classes, includeTime, ...props }) => {
+	const placeholder = includeTime ? '19 Dec 2018 11:23 AM' : '19 Dec 2018';
+	return (
+		<div className={classes.datepickerWrap}>
+			<Datetime
+				dateFormat="DD MMM YYYY"
+				timeFormat={!!includeTime}
+				inputProps={{ placeholder }}
+				closeOnSelect={true}
+				{...props}
+			/>
+		</div>
+	);
+});
 
 export default KeyPicker;
