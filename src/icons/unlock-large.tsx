@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const UnlockLargeIcon = ((props: SvgIconProps) => (
-        <SvgIcon width="18px" height="25px" {...props} viewBox="0 0 18 25">
+        <SvgIcon width="66px" height="66px" {...props} viewBox="0 0 66 66">
             <title>A78F4887-B411-47CC-B76A-D52EF9B384A3</title>
             <desc>Created with sketchtool.</desc>
             <defs>

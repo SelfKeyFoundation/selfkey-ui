@@ -13,7 +13,7 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.UnlockLargeIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "18px", height: "25px" }, props, { viewBox: "0 0 18 25" }),
+exports.UnlockLargeIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "66px", height: "66px" }, props, { viewBox: "0 0 66 66" }),
     React.createElement("title", null, "A78F4887-B411-47CC-B76A-D52EF9B384A3"),
     React.createElement("desc", null, "Created with sketchtool."),
     React.createElement("defs", null,
