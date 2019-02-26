@@ -210,4 +210,6 @@ var sk_id_1 = require("./icons/sk-id");
 exports.SKIDIcon = sk_id_1.SKIDIcon;
 var upload_1 = require("./icons/upload");
 exports.SKUploadIcon = upload_1.SKUploadIcon;
+var unlock_large_1 = require("./icons/unlock-large");
+exports.UnlockLargeIcon = unlock_large_1.UnlockLargeIcon;
 //# sourceMappingURL=index.js.map
