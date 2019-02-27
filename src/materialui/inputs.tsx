@@ -42,12 +42,18 @@ const fileUploadStyles: StyleSheet = {
 		backgroundColor: baseDark,
 		border: '1px solid #384656',
 		paddingLeft: '15px',
+		boxSizing: 'border-box',
 	},
 	button: {
-		width: '100%',
+		width: '129px',
+		minWidth: '129px',
+	},
+	fileInput: {
+		display: 'none',
 	},
 	fileItem: {
 		padding: '0 20px',
+		boxSizing: 'border-box',
 	},
 };
 
@@ -87,9 +93,15 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 								</Typography>
 							</Grid>
 							<Grid item>
-								<Button variant="contained" size="large" component="label">
+								<Button variant="contained" size="large" component="label" className={classes.button}>
 									Upload
-									<FileUploadInput id={id} type="file" {...props} {...eventHandlers} />
+									<input
+										id={id}
+										type="file"
+										{...props}
+										{...eventHandlers}
+										className={classes.fileInput}
+									/>
 								</Button>
 							</Grid>
 						</Grid>

@@ -58,12 +58,18 @@ var fileUploadStyles = {
         backgroundColor: colors_1.baseDark,
         border: '1px solid #384656',
         paddingLeft: '15px',
+        boxSizing: 'border-box',
     },
     button: {
-        width: '100%',
+        width: '129px',
+        minWidth: '129px',
+    },
+    fileInput: {
+        display: 'none',
     },
     fileItem: {
         padding: '0 20px',
+        boxSizing: 'border-box',
     },
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
@@ -95,9 +101,9 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.Typography, { color: "secondary", variant: "caption" }, "Test")),
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label" },
+                        React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label", className: classes.button },
                             "Upload",
-                            React.createElement(exports.FileUploadInput, __assign({ id: id, type: "file" }, props, eventHandlers))))))),
+                            React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.fileItem },
                 React.createElement(core_1.Grid, { item: true },

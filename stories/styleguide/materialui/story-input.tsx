@@ -94,6 +94,7 @@ export default class InputStories extends React.Component {
 				<FileUploadWidget
 					file={this.state.file}
 					onChange={this.handleFileChange}
+					accept="image/*,.pdf"
 					onClearForm={() => {
 						this.setState({ file: null });
 					}}
