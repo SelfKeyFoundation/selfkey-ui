@@ -89,7 +89,7 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 						<Grid container direction="row" justify="space-between" alignItems="center">
 							<Grid item>
 								<Typography color="secondary" variant="caption">
-									Test
+									{props.placeholder} || 'Please upload a document'
 								</Typography>
 							</Grid>
 							<Grid item>
