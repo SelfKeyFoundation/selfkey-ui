@@ -327,19 +327,39 @@ const styles: StyleSheet = {
 
 export type KeyPickerProps = any;
 
-export const KeyPicker = injectSheet(styles)<KeyPickerProps>(({ classes, includeTime, ...props }) => {
-	const placeholder = includeTime ? '19 Dec 2018 11:23 AM' : '19 Dec 2018';
-	return (
-		<div className={classes.datepickerWrap}>
-			<Datetime
-				dateFormat="DD MMM YYYY"
-				timeFormat={!!includeTime}
-				inputProps={{ placeholder }}
-				closeOnSelect={true}
-				{...props}
-			/>
-		</div>
-	);
-});
+export const KeyPicker = injectSheet(styles)<KeyPickerProps>(
+	({ classes, includeTime, onChange, onBlur, onFocus, ...props }) => {
+		const eventHandlers: any = {};
+		if (onChange) {
+			eventHandlers.onChange = (date: any) =>
+				onChange({
+					target: { value: date ? date.format(`YYYY-MM-DD${includeTime ? ' h:mm:ss a' : ''}`) : null },
+				});
+		}
+		if (onBlur) {
+			eventHandlers.onBlur = () => {
+				onBlur({ target: { value: null } });
+			};
+		}
+		if (onFocus) {
+			eventHandlers.onFocus = () => {
+				onFocus({ target: { value: null } });
+			};
+		}
+		const placeholder = includeTime ? '19 Dec 2018 11:23 AM' : '19 Dec 2018';
+		return (
+			<div className={classes.datepickerWrap}>
+				<Datetime
+					dateFormat="DD MMM YYYY"
+					timeFormat={!!includeTime}
+					inputProps={{ placeholder }}
+					closeOnSelect={true}
+                    {...props}
+                    {...eventHandlers}
+				/>
+			</div>
+		);
+	}
+);
 
 export default KeyPicker;

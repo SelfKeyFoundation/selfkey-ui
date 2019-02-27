@@ -295,10 +295,28 @@ var styles = {
     },
 };
 exports.KeyPicker = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, includeTime = _a.includeTime, props = __rest(_a, ["classes", "includeTime"]);
+    var classes = _a.classes, includeTime = _a.includeTime, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "includeTime", "onChange", "onBlur", "onFocus"]);
+    var eventHandlers = {};
+    if (onChange) {
+        eventHandlers.onChange = function (date) {
+            return onChange({
+                target: { value: date ? date.format("YYYY-MM-DD" + (includeTime ? ' h:mm:ss a' : '')) : null },
+            });
+        };
+    }
+    if (onBlur) {
+        eventHandlers.onBlur = function () {
+            onBlur({ target: { value: null } });
+        };
+    }
+    if (onFocus) {
+        eventHandlers.onFocus = function () {
+            onFocus({ target: { value: null } });
+        };
+    }
     var placeholder = includeTime ? '19 Dec 2018 11:23 AM' : '19 Dec 2018';
     return (React.createElement("div", { className: classes.datepickerWrap },
-        React.createElement(Datetime, __assign({ dateFormat: "DD MMM YYYY", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props))));
+        React.createElement(Datetime, __assign({ dateFormat: "DD MMM YYYY", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers))));
 });
 exports.default = exports.KeyPicker;
 //# sourceMappingURL=datepicker.js.map

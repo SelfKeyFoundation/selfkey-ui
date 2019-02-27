@@ -13,7 +13,12 @@ export default function DatePickerStories() {
 				Date Time Picker
 			</Typography>
 
-			<KeyPicker includeTime />
+			<KeyPicker
+				includeTime
+				onChange={(data: any) => console.log(data)}
+				onFocus={(evt: any) => console.log(evt)}
+				onBlur={(evt: any) => console.log(evt)}
+			/>
 
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
 				Date Picker
