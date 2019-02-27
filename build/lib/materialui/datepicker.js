@@ -23,10 +23,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var Datetime = require("react-datetime");
+var calendarIcon = require('../assets/icon-calendar.svg');
 var styles = {
     datepickerWrap: {
         fontFamily: 'Lato, arial, sans-serif',
         '& .rdt': {
+            width: '100%',
+            '& input': {
+                boxSizing: 'border-box',
+                width: '100%',
+                background: "url(" + calendarIcon + ") no-repeat right 10px center",
+                paddingRight: '35px',
+            },
             '& input::placeholder': {
                 color: 'rgba(147, 176, 193, 0.42)',
             },
@@ -301,7 +309,13 @@ exports.KeyPicker = react_jss_1.default(styles)(function (_a) {
     if (onChange) {
         eventHandlers.onChange = function (date) {
             return onChange({
-                target: { value: date ? date.format("YYYY-MM-DD" + (includeTime ? ' h:mm:ss a' : '')) : null },
+                target: {
+                    value: date
+                        ? date.format
+                            ? date.format("YYYY-MM-DD" + (includeTime ? ' h:mm:ss a' : ''))
+                            : date
+                        : null,
+                },
             });
         };
     }
@@ -315,9 +329,9 @@ exports.KeyPicker = react_jss_1.default(styles)(function (_a) {
             onFocus({ target: { value: null } });
         };
     }
-    var placeholder = includeTime ? '19 Dec 2018 11:23 AM' : '19 Dec 2018';
+    var placeholder = includeTime ? 'DD/MM/YYYY h:mm:ss a' : 'DD/MM/YYYY';
     return (React.createElement("div", { className: classes.datepickerWrap },
-        React.createElement(Datetime, __assign({ dateFormat: "DD MMM YYYY", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers))));
+        React.createElement(Datetime, __assign({ dateFormat: "DD/MM/YYYY", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers))));
 });
 exports.default = exports.KeyPicker;
 //# sourceMappingURL=datepicker.js.map

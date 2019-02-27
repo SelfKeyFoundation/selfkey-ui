@@ -2,11 +2,20 @@ import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
 import * as Datetime from 'react-datetime';
 
+const calendarIcon = require('../assets/icon-calendar.svg');
+
 const styles: StyleSheet = {
 	datepickerWrap: {
 		fontFamily: 'Lato, arial, sans-serif',
 
 		'& .rdt': {
+			width: '100%',
+			'& input': {
+				boxSizing: 'border-box',
+				width: '100%',
+				background: `url(${calendarIcon}) no-repeat right 10px center`,
+				paddingRight: '35px',
+			},
 			'& input::placeholder': {
 				color: 'rgba(147, 176, 193, 0.42)',
 			},
@@ -334,7 +343,13 @@ export const KeyPicker = injectSheet(styles)<KeyPickerProps>(
 		if (onChange) {
 			eventHandlers.onChange = (date: any) =>
 				onChange({
-					target: { value: date ? date.format(`YYYY-MM-DD${includeTime ? ' h:mm:ss a' : ''}`) : null },
+					target: {
+						value: date
+							? date.format
+								? date.format(`YYYY-MM-DD${includeTime ? ' h:mm:ss a' : ''}`)
+								: date
+							: null,
+					},
 				});
 		}
 		if (onBlur) {
@@ -347,11 +362,11 @@ export const KeyPicker = injectSheet(styles)<KeyPickerProps>(
 				onFocus({ target: { value: null } });
 			};
 		}
-		const placeholder = includeTime ? '19 Dec 2018 11:23 AM' : '19 Dec 2018';
+		const placeholder = includeTime ? 'DD/MM/YYYY h:mm:ss a' : 'DD/MM/YYYY';
 		return (
 			<div className={classes.datepickerWrap}>
 				<Datetime
-					dateFormat="DD MMM YYYY"
+					dateFormat="DD/MM/YYYY"
 					timeFormat={!!includeTime}
 					inputProps={{ placeholder }}
 					closeOnSelect={true}
