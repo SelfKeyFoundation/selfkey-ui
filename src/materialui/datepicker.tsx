@@ -19,6 +19,7 @@ const styles: StyleSheet = {
 			'& .rdtPicker': {
 				display: 'block',
 				position: 'absolute',
+				zIndex: 100,
 			},
 		},
 
@@ -354,8 +355,8 @@ export const KeyPicker = injectSheet(styles)<KeyPickerProps>(
 					timeFormat={!!includeTime}
 					inputProps={{ placeholder }}
 					closeOnSelect={true}
-                    {...props}
-                    {...eventHandlers}
+					{...props}
+					{...eventHandlers}
 				/>
 			</div>
 		);

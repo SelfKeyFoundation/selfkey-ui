@@ -37,6 +37,7 @@ var styles = {
             '& .rdtPicker': {
                 display: 'block',
                 position: 'absolute',
+                zIndex: 100,
             },
         },
         '& .rdtPicker': {
