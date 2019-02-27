@@ -54,12 +54,12 @@
     "reset-jss": "1.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "4.1.2",
-    "@storybook/addon-backgrounds": "4.1.2",
-    "@storybook/addon-info": "4.1.2",
-    "@storybook/addon-links": "4.1.2",
-    "@storybook/addons": "4.1.2",
-    "@storybook/react": "4.1.2",
+    "@storybook/addon-actions": "4.1.13",
+    "@storybook/addon-backgrounds": "4.1.13",
+    "@storybook/addon-info": "4.1.13",
+    "@storybook/addon-links": "4.1.13",
+    "@storybook/addons": "4.1.13",
+    "@storybook/react": "4.1.13",
     "@storybook/storybook-deployer": "2.8.1",
     "@types/jest": "23.3.10",
     "@types/lodash": "4.14.119",
@@ -70,18 +70,21 @@
     "@types/storybook__react": "4.0.0",
     "awesome-typescript-loader": "5.2.1",
     "babel-core": "6.26.3",
+    "babel-loader": "^8.0.5",
     "babel-runtime": "6.26.0",
     "cpx": "1.5.0",
     "cz-conventional-changelog": "2.1.0",
     "cz-jira-smart-commit": "3.0.0",
     "jest": "23.6.0",
     "react-docgen-typescript-webpack-plugin": "1.1.0",
+    "react-scripts": "2.1.1",
     "react-test-renderer": "16.6.3",
     "storybook-addon-jsx": "6.0.0",
     "storybook-host": "5.0.3",
     "ts-jest": "23.10.5",
     "tslint": "5.12.0",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "webpack-cli": "^3.2.3"
   },
   "jest": {
     "transform": {

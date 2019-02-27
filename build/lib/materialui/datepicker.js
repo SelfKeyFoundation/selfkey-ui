@@ -1,12 +1,40 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var Datetime = require("react-datetime");
+var calendarIcon = require('../assets/icon-calendar.svg');
 var styles = {
     datepickerWrap: {
         fontFamily: 'Lato, arial, sans-serif',
         '& .rdt': {
+            width: '100%',
+            '& input': {
+                boxSizing: 'border-box',
+                width: '100%',
+                background: "url(" + calendarIcon + ") no-repeat right 10px center",
+                paddingRight: '35px',
+            },
             '& input::placeholder': {
                 color: 'rgba(147, 176, 193, 0.42)',
             },
@@ -16,7 +44,8 @@ var styles = {
             position: 'relative',
             '& .rdtPicker': {
                 display: 'block',
-                position: 'absolute'
+                position: 'absolute',
+                zIndex: 100,
             },
         },
         '& .rdtPicker': {
@@ -33,7 +62,7 @@ var styles = {
             textAlign: 'center',
             '& th ': {
                 borderBottom: 'none',
-            }
+            },
         },
         '& .form-control': {
             backgroundColor: '#1E262E',
@@ -48,11 +77,11 @@ var styles = {
             paddingRight: '16px',
             '&:focus': {
                 border: '1px solid #00C0D9',
-                boxShadow: '0 0 3px 1px #00C0D9'
+                boxShadow: '0 0 3px 1px #00C0D9',
             },
             '&:placeholder': {
-                color: '#404B55'
-            }
+                color: '#404B55',
+            },
         },
         '& .rdtSwitch': {
             color: '#93B0C1',
@@ -126,7 +155,7 @@ var styles = {
                 cursor: 'pointer',
                 fontSize: '12px',
                 paddingTop: '30px',
-                textAlign: 'center'
+                textAlign: 'center',
             },
             '&:before': {
                 borderTop: '1px solid #313D49',
@@ -134,7 +163,7 @@ var styles = {
                 left: 0,
                 marginTop: '10px',
                 position: 'absolute',
-                width: '100%'
+                width: '100%',
             },
         },
         '& .rdtDay': {
@@ -161,7 +190,7 @@ var styles = {
             textAlign: 'center',
             '&:hover': {
                 backgroundColor: '#00C0D9',
-                borderRadius: '3px'
+                borderRadius: '3px',
             },
         },
         '& .rdtMonths': {
@@ -275,9 +304,34 @@ var styles = {
     },
 };
 exports.KeyPicker = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes;
+    var classes = _a.classes, includeTime = _a.includeTime, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "includeTime", "onChange", "onBlur", "onFocus"]);
+    var eventHandlers = {};
+    if (onChange) {
+        eventHandlers.onChange = function (date) {
+            return onChange({
+                target: {
+                    value: date
+                        ? date.format
+                            ? date.format("YYYY-MM-DD" + (includeTime ? ' h:mm:ss a' : ''))
+                            : date
+                        : null,
+                },
+            });
+        };
+    }
+    if (onBlur) {
+        eventHandlers.onBlur = function () {
+            onBlur({ target: { value: null } });
+        };
+    }
+    if (onFocus) {
+        eventHandlers.onFocus = function () {
+            onFocus({ target: { value: null } });
+        };
+    }
+    var placeholder = includeTime ? 'DD/MM/YYYY h:mm:ss a' : 'DD/MM/YYYY';
     return (React.createElement("div", { className: classes.datepickerWrap },
-        React.createElement(Datetime, { dateFormat: "DD MMM YYYY", inputProps: { placeholder: '19 Dec 2018 11:23 AM' }, closeOnSelect: true })));
+        React.createElement(Datetime, __assign({ dateFormat: "DD/MM/YYYY", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers))));
 });
 exports.default = exports.KeyPicker;
 //# sourceMappingURL=datepicker.js.map
