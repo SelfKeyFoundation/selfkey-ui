@@ -9,7 +9,7 @@ import {
 	Input,
 	TextField,
 } from '@material-ui/core';
-import { DecimalInput, FileUploadWidget } from '../../../src/theme/selfkey-dark-theme';
+import { DecimalInput, FileUploadWidget, ArrayFileUploadWidget } from '../../../src/theme/selfkey-dark-theme';
 
 import DropdownStories from './story-dropdowns';
 
@@ -19,29 +19,42 @@ const underlineStyle = {
 
 export default class InputStories extends React.Component {
 	state: any = {
-		file: null,
+		files: null,
 	};
-	handleFileChange: any = (event: any) => {
-		const files: any = event.target.files;
-		const f: any = files[0];
-		if (!f) {
-			return this.setState({ file: null });
-		}
-		const url: any = URL.createObjectURL(f);
-		const data: any = {
-			mimeType: f.type,
-			name: f.name,
-			size: f.size,
-			url,
-		};
+	handleFileChange: any = async (files: any, multiple: boolean) => {
+		let filesData = await Promise.all(
+			files.map((f: any) => {
+				if (!f) {
+					return null;
+				}
+				const url: any = URL.createObjectURL(f);
+				const data: any = {
+					mimeType: f.type,
+					name: f.name,
+					size: f.size,
+					url,
+				};
 
-		// eslint-disable-next-line
-		const reader: any = new FileReader();
-		reader.readAsDataURL(f);
-		reader.onload = () => {
-			data.content = reader.result;
-			this.setState({ file: data });
-		};
+				// eslint-disable-next-line
+				const reader: any = new FileReader();
+				reader.readAsDataURL(f);
+				return new Promise((resolve, reject) => {
+					reader.onload = () => {
+						data.content = reader.result;
+						resolve(data);
+					};
+					reader.onerror = () => {
+						reject(null);
+					};
+				});
+			})
+		);
+
+		const filteredData: any = filesData.filter((f: any) => !!f);
+
+		const mergedData = multiple ? [...(this.state.files || []), ...filteredData] : filteredData;
+
+		this.setState({ files: mergedData });
 	};
 	render() {
 		return (
@@ -92,11 +105,28 @@ export default class InputStories extends React.Component {
 				</Typography>
 
 				<FileUploadWidget
-					file={this.state.file}
+					file={this.state.files && this.state.files.length ? this.state.files[0] : null}
 					onChange={this.handleFileChange}
 					accept="image/*,.pdf"
 					onClearForm={() => {
-						this.setState({ file: null });
+						this.setState({ files: null });
+					}}
+				/>
+				<Typography variant="h3" style={underlineStyle} gutterBottom>
+					Array File upload
+				</Typography>
+
+				<ArrayFileUploadWidget
+					files={this.state.files}
+					onChange={this.handleFileChange}
+					accept="image/*,.pdf"
+					onClearForm={(file: any) => {
+						let { files } = this.state;
+						if (files) {
+							files = files.filter((f: any) => f !== file);
+						}
+
+						this.setState({ files });
 					}}
 				/>
 
