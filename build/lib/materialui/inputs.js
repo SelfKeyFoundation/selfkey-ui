@@ -107,7 +107,7 @@ var fileUploadStyles = {
     },
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
-    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus"]);
+    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required"]);
     var eventHandlers = {};
     if (onChange) {
         eventHandlers.onChange = function (evt) {
@@ -148,6 +148,8 @@ exports.FileUploadGrid = core_1.withStyles({
         height: '400px',
         minWidth: '500px',
         width: '100%',
+        marginTop: '10px',
+        marginButtom: '10px',
     },
 })(core_1.Grid);
 var fileUploadWidgetStyles = function (theme) {
@@ -161,7 +163,10 @@ var fileUploadWidgetStyles = function (theme) {
             border: '1px solid transparent',
         },
         highlite: {
-            border: "1px solid " + colors_1.warning,
+            border: "1px solid " + colors_1.primary,
+        },
+        formError: {
+            border: "1px solid " + colors_1.error,
         },
     });
 };
@@ -225,7 +230,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
         this.formRef.removeEventListener('drop', this.handleDrop);
     };
     ArrayFileUploadWidgetComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus"]);
+        var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, isError = _a.isError, required = _a.required, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus", "isError", "required"]);
         var eventHandlers = {};
         eventHandlers.onChange = this.handleFormFileChange;
         if (onBlur) {
@@ -242,7 +247,14 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
             onClearForm = function () { };
         }
         id = id || 'key-upload';
-        var formClassNames = classnames_1.default(classes.dropArea, this.state.dragging ? classes.highlite : null);
+        var additionalClass = null;
+        if (isError) {
+            additionalClass = classes.formError;
+        }
+        if (this.state.dragging) {
+            additionalClass = classes.highlite;
+        }
+        var formClassNames = classnames_1.default(classes.dropArea, additionalClass);
         return (React.createElement(core_1.Grid, { container: true, direction: "column", spacing: 24 },
             React.createElement(exports.FileUploadGrid, { container: true, direction: "column", alignItems: "center", justify: "center" },
                 React.createElement("div", { ref: this.setFormRef, className: formClassNames },

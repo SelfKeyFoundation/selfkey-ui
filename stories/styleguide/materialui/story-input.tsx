@@ -120,6 +120,7 @@ export default class InputStories extends React.Component {
 					files={this.state.files}
 					onChange={this.handleFileChange}
 					accept="image/*,.pdf"
+					isError={true}
 					onClearForm={(file: any) => {
 						let { files } = this.state;
 						if (files) {

@@ -15,7 +15,7 @@ import { DeleteIcon } from '../icons/delete';
 import classNames from 'classnames';
 import { HardDriveIcon } from '../icons/hard-drive';
 import { FileDefaultIcon } from '../icons/file-default';
-import { primary, baseDark, base, warning } from '../colors';
+import { primary, baseDark, base, error } from '../colors';
 
 export const FileUploadLabel = withStyles({
 	root: {
@@ -100,7 +100,7 @@ const fileUploadStyles: StyleSheet = {
 };
 
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
-	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, ...props }) => {
+	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, required, ...props }) => {
 		const eventHandlers: any = {};
 		if (onChange) {
 			eventHandlers.onChange = (evt: any) => {
@@ -162,6 +162,8 @@ export const FileUploadGrid = withStyles({
 		height: '400px',
 		minWidth: '500px',
 		width: '100%',
+		marginTop: '10px',
+		marginButtom: '10px',
 	},
 })(Grid);
 
@@ -178,7 +180,10 @@ const fileUploadWidgetStyles = (theme: Theme) =>
 			border: '1px solid transparent',
 		},
 		highlite: {
-			border: `1px solid ${warning}`,
+			border: `1px solid ${primary}`,
+		},
+		formError: {
+			border: `1px solid ${error}`,
 		},
 	});
 class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidgetProps> {
@@ -205,10 +210,10 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 	};
 	componentDidMount() {
 		this.attachDropZoneEvents();
-    }
-    componentWillUnmount(){
-        this.detachDropZoneEvents();
-    }
+	}
+	componentWillUnmount() {
+		this.detachDropZoneEvents();
+	}
 	attachDropZoneEvents() {
 		['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
 			this.formRef.addEventListener(eventName, this.preventDefaults, false);
@@ -234,7 +239,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 		this.formRef.removeEventListener('drop', this.handleDrop);
 	}
 	render() {
-		let { classes, id, files, onClearForm, onBlur, onFocus, ...props } = this.props;
+		let { classes, id, files, onClearForm, onBlur, onFocus, isError, required, ...props } = this.props;
 		const eventHandlers: any = {};
 		eventHandlers.onChange = this.handleFormFileChange;
 		if (onBlur) {
@@ -254,7 +259,17 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 
 		id = id || 'key-upload';
 
-		const formClassNames = classNames(classes.dropArea, this.state.dragging ? classes.highlite : null);
+		let additionalClass = null;
+
+		if (isError) {
+			additionalClass = classes.formError;
+		}
+
+		if (this.state.dragging) {
+			additionalClass = classes.highlite;
+		}
+
+		const formClassNames = classNames(classes.dropArea, additionalClass);
 		return (
 			<Grid container direction="column" spacing={24}>
 				<FileUploadGrid container direction="column" alignItems="center" justify="center">
