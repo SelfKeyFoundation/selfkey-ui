@@ -195,7 +195,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
     ArrayFileUploadWidgetComponent.prototype.componentDidMount = function () {
         this.attachDropZoneEvents();
     };
-    ArrayFileUploadWidgetComponent.prototype.componentDidUnmount = function () {
+    ArrayFileUploadWidgetComponent.prototype.componentWillUnmount = function () {
         this.detachDropZoneEvents();
     };
     ArrayFileUploadWidgetComponent.prototype.attachDropZoneEvents = function () {
@@ -245,7 +245,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
         var formClassNames = classnames_1.default(classes.dropArea, this.state.dragging ? classes.highlite : null);
         return (React.createElement(core_1.Grid, { container: true, direction: "column", spacing: 24 },
             React.createElement(exports.FileUploadGrid, { container: true, direction: "column", alignItems: "center", justify: "center" },
-                React.createElement("form", { ref: this.setFormRef, className: formClassNames },
+                React.createElement("div", { ref: this.setFormRef, className: formClassNames },
                     React.createElement(core_1.Grid, { container: true, justify: "center", alignItems: "center", direction: "column" },
                         React.createElement(exports.FileUploadLabel, { htmlFor: "key-upload" },
                             React.createElement(core_1.Grid, { item: true },

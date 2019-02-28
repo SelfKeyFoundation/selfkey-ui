@@ -206,7 +206,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 	componentDidMount() {
 		this.attachDropZoneEvents();
     }
-    componentDidUnmount(){
+    componentWillUnmount(){
         this.detachDropZoneEvents();
     }
 	attachDropZoneEvents() {
@@ -258,7 +258,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 		return (
 			<Grid container direction="column" spacing={24}>
 				<FileUploadGrid container direction="column" alignItems="center" justify="center">
-					<form ref={this.setFormRef} className={formClassNames}>
+					<div ref={this.setFormRef} className={formClassNames}>
 						<Grid container justify="center" alignItems="center" direction="column">
 							<FileUploadLabel htmlFor="key-upload">
 								<Grid item>
@@ -288,7 +288,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 							</FileUploadLabel>
 							<FileUploadInput id="key-upload" type="file" />
 						</Grid>
-					</form>
+					</div>
 				</FileUploadGrid>
 				{(files || []).map((f: any, ind: number) => (
 					<FileView key={ind} file={f} onClearForm={onClearForm} />
