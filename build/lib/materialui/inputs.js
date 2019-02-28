@@ -214,15 +214,15 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
     ArrayFileUploadWidgetComponent.prototype.detachDropZoneEvents = function () {
         var _this = this;
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
-            _this.formRef.removeEventListiner(eventName, _this.preventDefaults);
+            _this.formRef.removeEventListener(eventName, _this.preventDefaults);
         });
         ['dragenter', 'dragover'].forEach(function (eventName) {
-            _this.formRef.removeEventListiner(eventName, _this.handleDragStart);
+            _this.formRef.removeEventListener(eventName, _this.handleDragStart);
         });
         ['dragleave', 'drop'].forEach(function (eventName) {
-            _this.formRef.removeEventListiner(eventName, _this.handleDragEnd);
+            _this.formRef.removeEventListener(eventName, _this.handleDragEnd);
         });
-        this.formRef.removeEventListiner('drop', this.handleDrop);
+        this.formRef.removeEventListener('drop', this.handleDrop);
     };
     ArrayFileUploadWidgetComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus"]);

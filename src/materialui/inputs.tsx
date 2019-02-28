@@ -223,15 +223,15 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 	}
 	detachDropZoneEvents() {
 		['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-			this.formRef.removeEventListiner(eventName, this.preventDefaults);
+			this.formRef.removeEventListener(eventName, this.preventDefaults);
 		});
 		['dragenter', 'dragover'].forEach(eventName => {
-			this.formRef.removeEventListiner(eventName, this.handleDragStart);
+			this.formRef.removeEventListener(eventName, this.handleDragStart);
 		});
 		['dragleave', 'drop'].forEach(eventName => {
-			this.formRef.removeEventListiner(eventName, this.handleDragEnd);
+			this.formRef.removeEventListener(eventName, this.handleDragEnd);
 		});
-		this.formRef.removeEventListiner('drop', this.handleDrop);
+		this.formRef.removeEventListener('drop', this.handleDrop);
 	}
 	render() {
 		let { classes, id, files, onClearForm, onBlur, onFocus, ...props } = this.props;
