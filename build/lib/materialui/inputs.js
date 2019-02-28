@@ -107,7 +107,7 @@ var fileUploadStyles = {
     },
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
-    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus"]);
+    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required"]);
     var eventHandlers = {};
     if (onChange) {
         eventHandlers.onChange = function (evt) {
@@ -230,7 +230,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
         this.formRef.removeEventListener('drop', this.handleDrop);
     };
     ArrayFileUploadWidgetComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, isError = _a.isError, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus", "isError"]);
+        var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, isError = _a.isError, required = _a.required, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus", "isError", "required"]);
         var eventHandlers = {};
         eventHandlers.onChange = this.handleFormFileChange;
         if (onBlur) {

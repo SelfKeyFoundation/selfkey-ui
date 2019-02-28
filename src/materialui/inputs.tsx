@@ -100,7 +100,7 @@ const fileUploadStyles: StyleSheet = {
 };
 
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
-	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, ...props }) => {
+	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, required, ...props }) => {
 		const eventHandlers: any = {};
 		if (onChange) {
 			eventHandlers.onChange = (evt: any) => {
@@ -239,7 +239,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 		this.formRef.removeEventListener('drop', this.handleDrop);
 	}
 	render() {
-		let { classes, id, files, onClearForm, onBlur, onFocus, isError, ...props } = this.props;
+		let { classes, id, files, onClearForm, onBlur, onFocus, isError, required, ...props } = this.props;
 		const eventHandlers: any = {};
 		eventHandlers.onChange = this.handleFormFileChange;
 		if (onBlur) {
@@ -261,18 +261,15 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 
 		let additionalClass = null;
 
-		if (isError){
+		if (isError) {
 			additionalClass = classes.formError;
 		}
 
-		if (this.state.dragging){
+		if (this.state.dragging) {
 			additionalClass = classes.highlite;
 		}
 
-		const formClassNames = classNames(
-			classes.dropArea,
-			additionalClass
-		);
+		const formClassNames = classNames(classes.dropArea, additionalClass);
 		return (
 			<Grid container direction="column" spacing={24}>
 				<FileUploadGrid container direction="column" alignItems="center" justify="center">
