@@ -56,6 +56,7 @@ export { WarningIcon } from './icons/warning';
 export { TrezorBridgeIcon } from './icons/trezor-bridge';
 export { IncorporationsIcon } from './icons/incorporations';
 export { PasswordIcon } from './icons/password';
+export { PasswordConfirmIcon } from './icons/password-confirm';
 export { DownloadIcon2 } from './icons/download-2';
 export { VisibilityOffIcon } from './icons/visibility-off';
 export { VisibilityOnIcon } from './icons/visibility-on';

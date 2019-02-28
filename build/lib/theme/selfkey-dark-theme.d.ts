@@ -21,6 +21,7 @@ export * from '../icons/file-image';
 export * from '../icons/book';
 export * from '../icons/id-card';
 export * from '../icons/payment';
+export * from '../icons/password-confirm';
 export * from '../icons/sk-id';
 export * from '../icons/upload';
 export { MuiEditIcon } from '../icons/muiedit';
