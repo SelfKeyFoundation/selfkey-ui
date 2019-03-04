@@ -214,4 +214,6 @@ var upload_1 = require("./icons/upload");
 exports.SKUploadIcon = upload_1.SKUploadIcon;
 var unlock_large_1 = require("./icons/unlock-large");
 exports.UnlockLargeIcon = unlock_large_1.UnlockLargeIcon;
+var certificate_1 = require("./icons/certificate");
+exports.CertificateIcon = certificate_1.CertificateIcon;
 //# sourceMappingURL=index.js.map
