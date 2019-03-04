@@ -417,8 +417,8 @@ var theme = core_1.createMuiTheme({
                 boxShadow: "0 0 3px 1px " + colors_1.primary,
                 marginLeft: '-17px',
                 marginTop: '-6px',
-                maxHeight: '131px',
-                overflow: 'scroll',
+                maxHeight: '300px',
+                overflowY: 'scroll',
             },
         },
         MuiPaper: {
