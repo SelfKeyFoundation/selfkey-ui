@@ -31,6 +31,7 @@ __export(require("../icons/payment"));
 __export(require("../icons/password-confirm"));
 __export(require("../icons/sk-id"));
 __export(require("../icons/upload"));
+__export(require("../icons/attribute-alert"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muidelete_1 = require("../icons/muidelete");
