@@ -423,7 +423,7 @@ const theme = createMuiTheme({
           marginLeft: '-17px',
           marginTop: '-6px',
           maxHeight: '300px',
-          overflowY: 'scroll',
+          overflowY: 'auto',
         },
       },
       MuiPaper: {
