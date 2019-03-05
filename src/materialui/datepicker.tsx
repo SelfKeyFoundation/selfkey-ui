@@ -363,11 +363,11 @@ export const KeyPicker = injectSheet(styles)<KeyPickerProps>(
 				onFocus({ target: { value: null } });
 			};
 		}
-		const placeholder = includeTime ? 'DD/MM/YYYY h:mm:ss a' : 'DD/MM/YYYY';
+		const placeholder = includeTime ? 'YYYY-MM-DD h:mm:ss a' : 'YYYY-MM-DD';
 		return (
 			<div className={classes.datepickerWrap}>
 				<Datetime
-					dateFormat="DD/MM/YYYY"
+					dateFormat="YYYY-MM-DD"
 					timeFormat={!!includeTime}
 					inputProps={{ placeholder }}
 					closeOnSelect={true}
