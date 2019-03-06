@@ -25,6 +25,7 @@ export * from '../icons/password-confirm';
 export * from '../icons/sk-id';
 export * from '../icons/upload';
 export * from '../icons/attribute-alert';
+export * from '../icons/certificate';
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
 export { MuiVisibilityIcon } from '../icons/muivisibility';

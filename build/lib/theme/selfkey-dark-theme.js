@@ -32,6 +32,7 @@ __export(require("../icons/password-confirm"));
 __export(require("../icons/sk-id"));
 __export(require("../icons/upload"));
 __export(require("../icons/attribute-alert"));
+__export(require("../icons/certificate"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muidelete_1 = require("../icons/muidelete");
@@ -418,8 +419,8 @@ var theme = core_1.createMuiTheme({
                 boxShadow: "0 0 3px 1px " + colors_1.primary,
                 marginLeft: '-17px',
                 marginTop: '-6px',
-                maxHeight: '131px',
-                overflow: 'scroll',
+                maxHeight: '300px',
+                overflowY: 'auto',
             },
         },
         MuiPaper: {
