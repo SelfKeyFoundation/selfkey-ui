@@ -682,16 +682,18 @@ const theme = createMuiTheme({
           top: '6px',
         },
       },
-      // MuiModal: {
-      //   root: {
+      MuiModal: {
+        root: {
+          height: '100%',
+		      overflow: 'auto'
       //     backgroundColor: white,
       //     border: '1px solid #303C49',
       //     borderRadius: '4px',
       //     boxSizing: 'border-box',
       //     margin: 'auto',
       //     width: '780px',
-      //   },
-      // },
+        },
+      },
       MuiBackdrop: {
         root: {
           backgroundColor: base,
