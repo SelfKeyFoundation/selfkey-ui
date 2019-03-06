@@ -61,14 +61,8 @@ const fileViewStyles = (theme: Theme) =>
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
-	<Grid item>
-		<Grid
-			container
-			direction="row"
-			justify="space-between"
-			alignItems="center"
-			className={classNames(classes.fileItem, errors && errors.length && classes.fileItemError)}
-		>
+	<Grid item className={classNames(classes.fileItem, errors && errors.length && classes.fileItemError)}>
+		<Grid container direction="row" justify="space-between" alignItems="center">
 			<Grid item>
 				<Grid container direction="row" alignItems="center" spacing={16}>
 					<Grid item>
@@ -81,25 +75,23 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 					</Grid>
 				</Grid>
 			</Grid>
-			{errors && errors.length ? (
-				<Grid item>
-					<Grid container direction="column">
-						{errors.map((err: string) => (
-							<Grid item>
-								<Typography variant="body1" color="error">
-									{err}
-								</Typography>
-							</Grid>
-						))}
-					</Grid>
-				</Grid>
-			) : null}
 			<Grid item>
 				<IconButton onClick={() => onClearForm(file)}>
 					<DeleteIcon />
 				</IconButton>
 			</Grid>
 		</Grid>
+		{errors && errors.length ? (
+			<Grid container direction="column">
+				{errors.map((err: string) => (
+					<Grid item>
+						<Typography variant="body1" color="error">
+							{err}
+						</Typography>
+					</Grid>
+				))}
+			</Grid>
+		) : null}
 	</Grid>
 ));
 
