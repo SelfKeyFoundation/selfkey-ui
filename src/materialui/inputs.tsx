@@ -301,8 +301,8 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 
 		const formClassNames = classNames(classes.dropArea, additionalClass);
 		return (
-			<Grid container direction="column" spacing={24}>
-				<FileUploadGrid container direction="column" alignItems="center" justify="center">
+			<Grid container direction="column">
+				<FileUploadGrid container direction="column" alignItems="center" justify="center" style={{ marginBottom: '10px' }}>
 					<div ref={this.setFormRef} className={formClassNames}>
 						<Grid container justify="center" alignItems="center" direction="column">
 							<FileUploadLabel htmlFor="key-upload">
