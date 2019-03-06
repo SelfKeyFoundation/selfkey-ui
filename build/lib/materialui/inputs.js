@@ -69,7 +69,7 @@ exports.DecimalInput = core_1.withStyles({
 var fileViewStyles = function (theme) {
     return core_1.createStyles({
         fileItem: {
-            padding: '0 20px',
+            padding: '5px 20px',
             boxSizing: 'border-box',
             border: "1px solid transparent",
         },

@@ -50,7 +50,7 @@ export type FileViewProps = any;
 const fileViewStyles = (theme: Theme) =>
 	createStyles({
 		fileItem: {
-			padding: '0 20px',
+			padding: '5px 20px',
 			boxSizing: 'border-box',
 			border: `1px solid transparent`,
 		},
