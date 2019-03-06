@@ -156,7 +156,7 @@ exports.FileUploadGrid = core_1.withStyles({
         minWidth: '500px',
         width: '100%',
         marginTop: '10px',
-        marginButtom: '10px',
+        marginBottom: '10px',
     },
 })(core_1.Grid);
 var fileUploadWidgetStyles = function (theme) {
@@ -264,7 +264,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
             additionalClass = classes.highlite;
         }
         var formClassNames = classnames_1.default(classes.dropArea, additionalClass);
-        return (React.createElement(core_1.Grid, { container: true, direction: "column", spacing: 24 },
+        return (React.createElement(core_1.Grid, { container: true, direction: "column" },
             React.createElement(exports.FileUploadGrid, { container: true, direction: "column", alignItems: "center", justify: "center" },
                 React.createElement("div", { ref: this.setFormRef, className: formClassNames },
                     React.createElement(core_1.Grid, { container: true, justify: "center", alignItems: "center", direction: "column" },

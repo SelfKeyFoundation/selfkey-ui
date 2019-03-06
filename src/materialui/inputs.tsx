@@ -179,7 +179,7 @@ export const FileUploadGrid = withStyles({
 		minWidth: '500px',
 		width: '100%',
 		marginTop: '10px',
-		marginButtom: '10px',
+		marginBottom: '10px',
 	},
 })(Grid);
 
@@ -302,7 +302,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 		const formClassNames = classNames(classes.dropArea, additionalClass);
 		return (
 			<Grid container direction="column">
-				<FileUploadGrid container direction="column" alignItems="center" justify="center" style={{ marginBottom: '10px' }}>
+				<FileUploadGrid container direction="column" alignItems="center" justify="center">
 					<div ref={this.setFormRef} className={formClassNames}>
 						<Grid container justify="center" alignItems="center" direction="column">
 							<FileUploadLabel htmlFor="key-upload">
