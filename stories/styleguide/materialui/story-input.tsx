@@ -119,8 +119,9 @@ export default class InputStories extends React.Component {
 				<ArrayFileUploadWidget
 					files={this.state.files}
 					onChange={this.handleFileChange}
-					accept="image/*,.pdf"
+					mimeTypes={["image/jpeg", "image/png"]}
 					isError={true}
+					errorFiles={{1: ['super file error 1', 'super file error 2']}}
 					onClearForm={(file: any) => {
 						let { files } = this.state;
 						if (files) {
