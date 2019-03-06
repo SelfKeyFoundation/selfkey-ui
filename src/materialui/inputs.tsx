@@ -58,6 +58,9 @@ const fileViewStyles = (theme: Theme) =>
 			border: `1px solid ${error}`,
 			borderRadius: '5px',
 		},
+		noDecoration: {
+			textDecoration: 'none'
+		}
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -69,7 +72,7 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 						<FileDefaultIcon />
 					</Grid>
 					<Grid item>
-						<a href={file.url}>
+						<a href={file.url} className={classes.noDecoration}>
 							<Typography variant="body2">{file.name}</Typography>
 						</a>
 					</Grid>

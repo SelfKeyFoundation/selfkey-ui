@@ -77,6 +77,9 @@ var fileViewStyles = function (theme) {
             border: "1px solid " + colors_1.error,
             borderRadius: '5px',
         },
+        noDecoration: {
+            textDecoration: 'none'
+        }
     });
 };
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
@@ -88,7 +91,7 @@ exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(file_default_1.FileDefaultIcon, null)),
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement("a", { href: file.url },
+                        React.createElement("a", { href: file.url, className: classes.noDecoration },
                             React.createElement(core_1.Typography, { variant: "body2" }, file.name))))),
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
