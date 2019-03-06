@@ -676,16 +676,12 @@ var theme = core_1.createMuiTheme({
                 top: '6px',
             },
         },
-        // MuiModal: {
-        //   root: {
-        //     backgroundColor: white,
-        //     border: '1px solid #303C49',
-        //     borderRadius: '4px',
-        //     boxSizing: 'border-box',
-        //     margin: 'auto',
-        //     width: '780px',
-        //   },
-        // },
+        MuiModal: {
+            root: {
+                height: '100%',
+                overflow: 'auto'
+            },
+        },
         MuiBackdrop: {
             root: {
                 backgroundColor: colors_1.base,
