@@ -58,6 +58,9 @@ const fileViewStyles = (theme: Theme) =>
 			border: `1px solid ${error}`,
 			borderRadius: '5px',
 		},
+		noDecoration: {
+			textDecoration: 'none'
+		}
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -69,7 +72,7 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 						<FileDefaultIcon />
 					</Grid>
 					<Grid item>
-						<a href={file.url}>
+						<a href={file.url} className={classes.noDecoration}>
 							<Typography variant="body2">{file.name}</Typography>
 						</a>
 					</Grid>
@@ -179,7 +182,7 @@ export const FileUploadGrid = withStyles({
 		minWidth: '500px',
 		width: '100%',
 		marginTop: '10px',
-		marginButtom: '10px',
+		marginBottom: '10px',
 	},
 })(Grid);
 
@@ -301,7 +304,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 
 		const formClassNames = classNames(classes.dropArea, additionalClass);
 		return (
-			<Grid container direction="column" spacing={24}>
+			<Grid container direction="column">
 				<FileUploadGrid container direction="column" alignItems="center" justify="center">
 					<div ref={this.setFormRef} className={formClassNames}>
 						<Grid container justify="center" alignItems="center" direction="column">
