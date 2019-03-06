@@ -81,8 +81,8 @@ var fileViewStyles = function (theme) {
 };
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
     var classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
-    return (React.createElement(core_1.Grid, { item: true },
-        React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classnames_1.default(classes.fileItem, errors && errors.length && classes.fileItemError) },
+    return (React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.fileItem, errors && errors.length && classes.fileItemError) },
+        React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center" },
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16 },
                     React.createElement(core_1.Grid, { item: true },
@@ -90,12 +90,11 @@ exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement("a", { href: file.url },
                             React.createElement(core_1.Typography, { variant: "body2" }, file.name))))),
-            errors && errors.length ? (React.createElement(core_1.Grid, { item: true },
-                React.createElement(core_1.Grid, { container: true, direction: "column" }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); })))) : null,
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
-                    React.createElement(delete_1.DeleteIcon, null))))));
+                    React.createElement(delete_1.DeleteIcon, null)))),
+        errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column" }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
+            React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null));
 });
 var fileUploadStyles = {
     form: {
