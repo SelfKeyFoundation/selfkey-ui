@@ -50,14 +50,25 @@ export type FileViewProps = any;
 const fileViewStyles = (theme: Theme) =>
 	createStyles({
 		fileItem: {
-			padding: '0 20px',
+			padding: '5px 20px',
 			boxSizing: 'border-box',
+			border: `1px solid transparent`,
+		},
+		fileItemError: {
+			border: `1px solid ${error}`,
+			borderRadius: '5px',
 		},
 	});
 
-export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm }: FileViewProps) => (
+export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
 	<Grid item>
-		<Grid container direction="row" justify="space-between" alignItems="center" className={classes.fileItem}>
+		<Grid
+			container
+			direction="row"
+			justify="space-between"
+			alignItems="center"
+			className={classNames(classes.fileItem, errors && errors.length && classes.fileItemError)}
+		>
 			<Grid item>
 				<Grid container direction="row" alignItems="center" spacing={16}>
 					<Grid item>
@@ -70,6 +81,19 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 					</Grid>
 				</Grid>
 			</Grid>
+			{errors && errors.length ? (
+				<Grid item>
+					<Grid container direction="column">
+						{errors.map((err: string) => (
+							<Grid item>
+								<Typography variant="body1" color="error">
+									{err}
+								</Typography>
+							</Grid>
+						))}
+					</Grid>
+				</Grid>
+			) : null}
 			<Grid item>
 				<IconButton onClick={() => onClearForm(file)}>
 					<DeleteIcon />
@@ -206,6 +230,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 		this.setState({ dragging: false });
 	};
 	handleDrop = (event: any) => {
+		console.log(Array.from(event.dataTransfer.files));
 		this.props.onChange && this.props.onChange(Array.from(event.dataTransfer.files), true);
 	};
 	componentDidMount() {
@@ -239,8 +264,21 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 		this.formRef.removeEventListener('drop', this.handleDrop);
 	}
 	render() {
-		let { classes, id, files, onClearForm, onBlur, onFocus, isError, required, ...props } = this.props;
+		let {
+			classes,
+			id,
+			files,
+			onClearForm,
+			onBlur,
+			onFocus,
+			isError,
+			required,
+			mimeTypes,
+			errorFiles,
+			...props
+		} = this.props;
 		const eventHandlers: any = {};
+		const accept: string = (mimeTypes || []).join(',');
 		eventHandlers.onChange = this.handleFormFileChange;
 		if (onBlur) {
 			eventHandlers.onBlur = (evt: any) => {
@@ -294,6 +332,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 											id={id}
 											type="file"
 											multiple
+											accept={accept}
 											{...props}
 											{...eventHandlers}
 											className={classes.fileInput}
@@ -306,7 +345,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 					</div>
 				</FileUploadGrid>
 				{(files || []).map((f: any, ind: number) => (
-					<FileView key={ind} file={f} onClearForm={onClearForm} />
+					<FileView key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
 				))}
 			</Grid>
 		);
