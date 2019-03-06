@@ -110,5 +110,6 @@ export { AddressBookIcon } from './icons/address-book';
 export { SKIDIcon } from './icons/sk-id';
 export { SKUploadIcon } from './icons/upload';
 export { UnlockLargeIcon } from './icons/unlock-large';
+export { AttributeAlertIcon } from './icons/attribute-alert';
 export { CertificateIcon } from './icons/certificate';
 
