@@ -196,7 +196,8 @@ const fileUploadWidgetStyles = (theme: Theme) =>
 		dropArea: {
 			width: '100%',
 			height: '100%',
-			border: '1px solid transparent',
+			border: '1px dashed #303C49',
+			backgroundColor: '#1E262E'
 		},
 		highlite: {
 			border: `1px solid ${primary}`,
@@ -204,6 +205,9 @@ const fileUploadWidgetStyles = (theme: Theme) =>
 		formError: {
 			border: `1px solid ${error}`,
 		},
+		bottomSpace: {
+			marginBottom: '10px'
+		}
 	});
 class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidgetProps> {
 	state: any = { dragging: false };
@@ -309,14 +313,14 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 					<div ref={this.setFormRef} className={formClassNames}>
 						<Grid container justify="center" alignItems="center" direction="column">
 							<FileUploadLabel htmlFor="key-upload">
-								<Grid item>
+								<Grid item className={classes.bottomSpace}>
 									<HardDriveIcon />
 								</Grid>
 								<Grid item>
-									<Typography variant="subtitle1" gutterBottom>
+									<Typography variant="subtitle1" className={classes.bottomSpace}>
 										Drag & drop files here
 									</Typography>
-									<Typography variant="subtitle2" color="secondary" gutterBottom>
+									<Typography variant="subtitle2" color="secondary" className={classes.bottomSpace}>
 										- OR -
 									</Typography>
 								</Grid>
