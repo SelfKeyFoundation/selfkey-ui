@@ -122,10 +122,17 @@ const fileUploadStyles: StyleSheet = {
 	fileInput: {
 		display: 'none',
 	},
+	errorState: {
+		border: `1px solid ${error}`,
+		backgroundColor: 'rgba(255, 46, 99, 0.09)',
+		color: error,
+		marginBottom: '6px',
+	}
 };
 
+
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
-	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, required, ...props }) => {
+	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, required, errors = [], ...props }) => {
 		const eventHandlers: any = {};
 		if (onChange) {
 			eventHandlers.onChange = (evt: any) => {
@@ -148,13 +155,15 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 
 		id = id || 'key-upload';
 
+		let isError = errors && errors.length ? true : false;
+
 		return (
 			<Grid container direction="column" spacing={24}>
 				<Grid item>
-					<div className={classes.form}>
+					<div className={`${classes.form} ${isError ? classes.errorState : ''}`}>
 						<Grid container direction="row" justify="space-between" alignItems="center">
 							<Grid item>
-								<Typography color="secondary" variant="caption">
+								<Typography variant="subtitle2" color={isError ? 'error' : 'secondary'} >
 									{props.placeholder || 'Please upload a document'}
 								</Typography>
 							</Grid>

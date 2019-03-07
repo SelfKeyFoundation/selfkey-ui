@@ -121,9 +121,15 @@ var fileUploadStyles = {
     fileInput: {
         display: 'none',
     },
+    errorState: {
+        border: "1px solid " + colors_1.error,
+        backgroundColor: 'rgba(255, 46, 99, 0.09)',
+        color: colors_1.error,
+        marginBottom: '6px',
+    }
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
-    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required"]);
+    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, _b = _a.errors, errors = _b === void 0 ? [] : _b, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required", "errors"]);
     var eventHandlers = {};
     if (onChange) {
         eventHandlers.onChange = function (evt) {
@@ -144,12 +150,13 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
         onClearForm = function () { };
     }
     id = id || 'key-upload';
+    var isError = errors && errors.length ? true : false;
     return (React.createElement(core_1.Grid, { container: true, direction: "column", spacing: 24 },
         React.createElement(core_1.Grid, { item: true },
-            React.createElement("div", { className: classes.form },
+            React.createElement("div", { className: classes.form + " " + (isError ? classes.errorState : '') },
                 React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center" },
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement(core_1.Typography, { color: "secondary", variant: "caption" }, props.placeholder || 'Please upload a document')),
+                        React.createElement(core_1.Typography, { variant: "subtitle2", color: isError ? 'error' : 'secondary' }, props.placeholder || 'Please upload a document')),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label", className: classes.button },
                             "Upload",
