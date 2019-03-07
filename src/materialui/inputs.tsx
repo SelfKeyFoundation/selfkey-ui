@@ -130,7 +130,7 @@ const fileUploadStyles: StyleSheet = {
 };
 
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
-	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, required, errors = [], ...props }) => {
+	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, required, isError, ...props }) => {
 		const eventHandlers: any = {};
 		if (onChange) {
 			eventHandlers.onChange = (evt: any) => {
@@ -152,8 +152,6 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 		}
 
 		id = id || 'key-upload';
-
-		let isError = errors && errors.length ? true : false;
 
 		return (
 			<Grid container direction="column" spacing={24}>
