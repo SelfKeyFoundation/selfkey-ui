@@ -79,18 +79,21 @@ var fileViewStyles = function (theme) {
         },
         noDecoration: {
             textDecoration: 'none'
+        },
+        breakAll: {
+            wordBreak: 'break-all'
         }
     });
 };
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
     var classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
     return (React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.fileItem, errors && errors.length && classes.fileItemError) },
-        React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center" },
+        React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
             React.createElement(core_1.Grid, { item: true },
-                React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16 },
+                React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16, wrap: "nowrap" },
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(file_default_1.FileDefaultIcon, null)),
-                    React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
                         React.createElement("a", { href: file.url, className: classes.noDecoration },
                             React.createElement(core_1.Typography, { variant: "body2" }, file.name))))),
             React.createElement(core_1.Grid, { item: true },

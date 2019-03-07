@@ -60,18 +60,21 @@ const fileViewStyles = (theme: Theme) =>
 		},
 		noDecoration: {
 			textDecoration: 'none'
+		},
+		breakAll: {
+			wordBreak: 'break-all'
 		}
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
 	<Grid item className={classNames(classes.fileItem, errors && errors.length && classes.fileItemError)}>
-		<Grid container direction="row" justify="space-between" alignItems="center">
+		<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
 			<Grid item>
-				<Grid container direction="row" alignItems="center" spacing={16}>
+				<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
 					<Grid item>
 						<FileDefaultIcon />
 					</Grid>
-					<Grid item>
+					<Grid item className={classes.breakAll}>
 						<a href={file.url} className={classes.noDecoration}>
 							<Typography variant="body2">{file.name}</Typography>
 						</a>
