@@ -71,14 +71,13 @@ var fileViewStyles = function (theme) {
         fileItem: {
             padding: '5px 20px',
             boxSizing: 'border-box',
-            border: "1px solid transparent",
         },
-        fileItemError: {
-            border: "1px solid " + colors_1.error,
-            borderRadius: '5px',
-        },
+        fileItemError: {},
         noDecoration: {
             textDecoration: 'none',
+        },
+        fileErrorContainer: {
+            marginLeft: '45px',
         },
     });
 };
@@ -96,7 +95,7 @@ exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
                     React.createElement(delete_1.DeleteIcon, null)))),
-        errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column" }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
+        errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null));
 });
 var fileUploadStyles = {

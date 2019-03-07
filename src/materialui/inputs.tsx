@@ -52,14 +52,13 @@ const fileViewStyles = (theme: Theme) =>
 		fileItem: {
 			padding: '5px 20px',
 			boxSizing: 'border-box',
-			border: `1px solid transparent`,
 		},
-		fileItemError: {
-			border: `1px solid ${error}`,
-			borderRadius: '5px',
-		},
+		fileItemError: {},
 		noDecoration: {
 			textDecoration: 'none',
+		},
+		fileErrorContainer: {
+			marginLeft: '45px',
 		},
 	});
 
@@ -85,7 +84,7 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 			</Grid>
 		</Grid>
 		{errors && errors.length ? (
-			<Grid container direction="column">
+			<Grid container direction="column" className={classes.fileErrorContainer}>
 				{errors.map((err: string) => (
 					<Grid item>
 						<Typography variant="body1" color="error">
