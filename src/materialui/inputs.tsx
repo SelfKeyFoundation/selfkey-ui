@@ -120,12 +120,6 @@ const fileUploadStyles: StyleSheet = {
 	},
 	fileInput: {
 		display: 'none',
-	},
-	errorState: {
-		border: `1px solid ${error}`,
-		backgroundColor: 'rgba(255, 46, 99, 0.09)',
-		color: error,
-		marginBottom: '6px',
 	}
 };
 

@@ -119,12 +119,6 @@ var fileUploadStyles = {
     },
     fileInput: {
         display: 'none',
-    },
-    errorState: {
-        border: "1px solid " + colors_1.error,
-        backgroundColor: 'rgba(255, 46, 99, 0.09)',
-        color: colors_1.error,
-        marginBottom: '6px',
     }
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
