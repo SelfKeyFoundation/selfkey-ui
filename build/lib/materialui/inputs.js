@@ -108,10 +108,13 @@ var fileUploadStyles = {
         height: '46px',
         backgroundColor: colors_1.baseDark,
         border: '1px solid #384656',
+        borderRadius: '4px',
         paddingLeft: '15px',
         boxSizing: 'border-box',
     },
     button: {
+        borderRadius: '0 3px 3px 0',
+        boxShadow: 'none',
         width: '129px',
         minWidth: '129px',
     },
