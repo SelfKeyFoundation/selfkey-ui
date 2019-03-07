@@ -52,15 +52,14 @@ const fileViewStyles = (theme: Theme) =>
 		fileItem: {
 			padding: '5px 20px',
 			boxSizing: 'border-box',
-			border: `1px solid transparent`,
 		},
-		fileItemError: {
-			border: `1px solid ${error}`,
-			borderRadius: '5px',
-		},
+		fileItemError: {},
 		noDecoration: {
-			textDecoration: 'none'
-		}
+			textDecoration: 'none',
+		},
+		fileErrorContainer: {
+			marginLeft: '45px',
+		},
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -85,7 +84,7 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 			</Grid>
 		</Grid>
 		{errors && errors.length ? (
-			<Grid container direction="column">
+			<Grid container direction="column" className={classes.fileErrorContainer}>
 				{errors.map((err: string) => (
 					<Grid item>
 						<Typography variant="body1" color="error">
@@ -197,7 +196,7 @@ const fileUploadWidgetStyles = (theme: Theme) =>
 			width: '100%',
 			height: '100%',
 			border: '1px dashed #303C49',
-			backgroundColor: '#1E262E'
+			backgroundColor: '#1E262E',
 		},
 		highlite: {
 			border: `1px solid ${primary}`,
@@ -206,8 +205,8 @@ const fileUploadWidgetStyles = (theme: Theme) =>
 			border: `1px solid ${error}`,
 		},
 		bottomSpace: {
-			marginBottom: '10px'
-		}
+			marginBottom: '10px',
+		},
 	});
 class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidgetProps> {
 	state: any = { dragging: false };
@@ -274,6 +273,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 			required,
 			mimeTypes,
 			errorFiles,
+			uploadError,
 			...props
 		} = this.props;
 		const eventHandlers: any = {};
@@ -325,7 +325,12 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 									</Typography>
 								</Grid>
 								<Grid item>
-									<Button variant="outlined" color="secondary" component="label">
+									<Button
+										variant="outlined"
+										color="secondary"
+										component="label"
+										className={classes.bottomSpace}
+									>
 										Browse Files
 										<input
 											id={id}
@@ -338,6 +343,13 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 										/>
 									</Button>
 								</Grid>
+								{uploadError ? (
+									<Grid item>
+										<Typography variant="subtitle1" color="error">
+											{uploadError}
+										</Typography>
+									</Grid>
+								) : null}
 							</FileUploadLabel>
 							<FileUploadInput id="key-upload" type="file" />
 						</Grid>
