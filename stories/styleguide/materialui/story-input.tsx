@@ -121,6 +121,7 @@ export default class InputStories extends React.Component {
 					onChange={this.handleFileChange}
 					mimeTypes={["image/jpeg", "image/png"]}
 					isError={true}
+					uploadError="Super upload error, ignore, for testing only"
 					errorFiles={{1: ['super file error 1', 'super file error 2']}}
 					onClearForm={(file: any) => {
 						let { files } = this.state;
