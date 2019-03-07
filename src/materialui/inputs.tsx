@@ -55,7 +55,10 @@ const fileViewStyles = (theme: Theme) =>
 		},
 		fileItemError: {},
 		noDecoration: {
-			textDecoration: 'none',
+			textDecoration: 'none'
+		},
+		breakAll: {
+			wordBreak: 'break-all'
 		},
 		fileErrorContainer: {
 			marginLeft: '45px',
@@ -64,13 +67,13 @@ const fileViewStyles = (theme: Theme) =>
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
 	<Grid item className={classNames(classes.fileItem, errors && errors.length && classes.fileItemError)}>
-		<Grid container direction="row" justify="space-between" alignItems="center">
+		<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
 			<Grid item>
-				<Grid container direction="row" alignItems="center" spacing={16}>
+				<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
 					<Grid item>
 						<FileDefaultIcon />
 					</Grid>
-					<Grid item>
+					<Grid item className={classes.breakAll}>
 						<a href={file.url} className={classes.noDecoration}>
 							<Typography variant="body2">{file.name}</Typography>
 						</a>
@@ -105,16 +108,19 @@ const fileUploadStyles: StyleSheet = {
 		height: '46px',
 		backgroundColor: baseDark,
 		border: '1px solid #384656',
+		borderRadius: '4px',
 		paddingLeft: '15px',
 		boxSizing: 'border-box',
 	},
 	button: {
+		borderRadius: '0 3px 3px 0',
+		boxShadow: 'none',
 		width: '129px',
 		minWidth: '129px',
 	},
 	fileInput: {
 		display: 'none',
-	},
+	}
 };
 
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
@@ -147,7 +153,7 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 					<div className={classes.form}>
 						<Grid container direction="row" justify="space-between" alignItems="center">
 							<Grid item>
-								<Typography color="secondary" variant="caption">
+								<Typography variant="subtitle2" color="secondary">
 									{props.placeholder || 'Please upload a document'}
 								</Typography>
 							</Grid>

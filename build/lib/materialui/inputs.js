@@ -74,7 +74,10 @@ var fileViewStyles = function (theme) {
         },
         fileItemError: {},
         noDecoration: {
-            textDecoration: 'none',
+            textDecoration: 'none'
+        },
+        breakAll: {
+            wordBreak: 'break-all'
         },
         fileErrorContainer: {
             marginLeft: '45px',
@@ -84,12 +87,12 @@ var fileViewStyles = function (theme) {
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
     var classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
     return (React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.fileItem, errors && errors.length && classes.fileItemError) },
-        React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center" },
+        React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
             React.createElement(core_1.Grid, { item: true },
-                React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16 },
+                React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16, wrap: "nowrap" },
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(file_default_1.FileDefaultIcon, null)),
-                    React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
                         React.createElement("a", { href: file.url, className: classes.noDecoration },
                             React.createElement(core_1.Typography, { variant: "body2" }, file.name))))),
             React.createElement(core_1.Grid, { item: true },
@@ -104,16 +107,19 @@ var fileUploadStyles = {
         height: '46px',
         backgroundColor: colors_1.baseDark,
         border: '1px solid #384656',
+        borderRadius: '4px',
         paddingLeft: '15px',
         boxSizing: 'border-box',
     },
     button: {
+        borderRadius: '0 3px 3px 0',
+        boxShadow: 'none',
         width: '129px',
         minWidth: '129px',
     },
     fileInput: {
         display: 'none',
-    },
+    }
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
     var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required"]);
@@ -142,7 +148,7 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
             React.createElement("div", { className: classes.form },
                 React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center" },
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement(core_1.Typography, { color: "secondary", variant: "caption" }, props.placeholder || 'Please upload a document')),
+                        React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, props.placeholder || 'Please upload a document')),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label", className: classes.button },
                             "Upload",
