@@ -170,7 +170,8 @@ var fileUploadWidgetStyles = function (theme) {
         dropArea: {
             width: '100%',
             height: '100%',
-            border: '1px solid transparent',
+            border: '1px dashed #303C49',
+            backgroundColor: '#1E262E'
         },
         highlite: {
             border: "1px solid " + colors_1.primary,
@@ -178,6 +179,9 @@ var fileUploadWidgetStyles = function (theme) {
         formError: {
             border: "1px solid " + colors_1.error,
         },
+        bottomSpace: {
+            marginBottom: '10px'
+        }
     });
 };
 var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
@@ -272,11 +276,11 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
                 React.createElement("div", { ref: this.setFormRef, className: formClassNames },
                     React.createElement(core_1.Grid, { container: true, justify: "center", alignItems: "center", direction: "column" },
                         React.createElement(exports.FileUploadLabel, { htmlFor: "key-upload" },
-                            React.createElement(core_1.Grid, { item: true },
+                            React.createElement(core_1.Grid, { item: true, className: classes.bottomSpace },
                                 React.createElement(hard_drive_1.HardDriveIcon, null)),
                             React.createElement(core_1.Grid, { item: true },
-                                React.createElement(core_1.Typography, { variant: "subtitle1", gutterBottom: true }, "Drag & drop files here"),
-                                React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary", gutterBottom: true }, "- OR -")),
+                                React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.bottomSpace }, "Drag & drop files here"),
+                                React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary", className: classes.bottomSpace }, "- OR -")),
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Button, { variant: "outlined", color: "secondary", component: "label" },
                                     "Browse Files",
