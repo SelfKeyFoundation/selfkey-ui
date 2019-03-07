@@ -14,7 +14,7 @@ const styles: StyleSheet = {
 			'& input': {
 				boxSizing: 'border-box',
 				width: '100%',
-				background: `url(${calendarIcon}) no-repeat right 10px center`,
+				background: `url(${calendarIcon}) #1E262E no-repeat right 10px center`,
 				paddingRight: '35px',
 			},
 			'& input::placeholder': {
