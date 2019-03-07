@@ -488,6 +488,7 @@ var theme = core_1.createMuiTheme({
             contained: {
                 background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
                 border: '1px solid #0FB8D0',
+                boxShadow: 'none',
                 color: colors_1.white,
                 '&:hover': {
                     background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
