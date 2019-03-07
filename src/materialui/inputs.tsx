@@ -59,8 +59,6 @@ const fileViewStyles = (theme: Theme) =>
 		},
 		breakAll: {
 			wordBreak: 'break-all'
-		}
-			textDecoration: 'none',
 		},
 		fileErrorContainer: {
 			marginLeft: '45px',

@@ -78,8 +78,6 @@ var fileViewStyles = function (theme) {
         },
         breakAll: {
             wordBreak: 'break-all'
-        }
-            textDecoration: 'none',
         },
         fileErrorContainer: {
             marginLeft: '45px',
@@ -130,7 +128,7 @@ var fileUploadStyles = {
     }
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
-    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required"]);
+    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, _b = _a.errors, errors = _b === void 0 ? [] : _b, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required", "errors"]);
     var eventHandlers = {};
     if (onChange) {
         eventHandlers.onChange = function (evt) {
