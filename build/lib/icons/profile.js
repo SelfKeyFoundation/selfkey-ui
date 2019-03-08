@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.ProfileIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 42 37' }),
-    React.createElement("title", null, "icn-profile"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "1.-Select-Wallet-Modal", transform: "translate(-509.000000, -463.000000)", stroke: "#23E6FE", strokeWidth: "0.833333333" },

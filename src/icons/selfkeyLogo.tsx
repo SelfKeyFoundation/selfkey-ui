@@ -5,11 +5,11 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 export const SelfkeyLogo = ((props: SvgIconProps) => (
         <SvgIcon width="18px" height="20px" {...props} viewBox="0 0 18 20">
             <defs>
-                <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="linearGradient-1">
+                <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="selfkey-logo-linearGradient-1">
                     <stop stopColor="#08BCCD" offset="0%"></stop>
                     <stop stopColor="#2DA1F8" offset="100%"></stop>
                 </linearGradient>
-                <linearGradient x1="50%" y1="97.784%" x2="4git 1.849%" y2="-16.397%" id="linearGradient-2">
+                <linearGradient x1="50%" y1="97.784%" x2="4git 1.849%" y2="-16.397%" id="selfkey-logo-linearGradient-2">
                     <stop stopColor="#08BCCD" offset="0%"></stop>
                     <stop stopColor="#2DA1F8" offset="100%"></stop>
                 </linearGradient>

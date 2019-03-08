@@ -8,12 +8,6 @@ exports[`Warning  Icon should show Warning Icon 1`] = `
   role="presentation"
   viewBox="0 0 20 18"
 >
-  <title>
-    icon-warning
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"

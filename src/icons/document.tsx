@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const DocumentIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 19 24'>
-    <title>Upload Copy@2x</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="502-Exchange-Details-+-Coming-Soon" transform="translate(-823.000000, -1018.000000)" fill="#93B0C1">

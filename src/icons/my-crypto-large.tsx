@@ -14,7 +14,7 @@ const styles: StyleSheet = {
 export const MyCryptoLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon viewBox="0 0 66 64" {...props}>
 		<defs>
-			<linearGradient x1="36.0705566%" y1="100%" x2="36.0705554%" y2="0%" id="linearGradient-1">
+			<linearGradient x1="36.0705566%" y1="100%" x2="36.0705554%" y2="0%" id="my-crypto-large-linearGradient-1">
 				<stop stopColor="#09A8BA" offset="0%" />
 				<stop stopColor="#0ABBD0" offset="100%" />
 			</linearGradient>
@@ -23,7 +23,7 @@ export const MyCryptoLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIc
 			<g
 				id="304-Manage-My-Tokens"
 				transform="translate(-687.000000, -146.000000)"
-				fill="url(#linearGradient-1)"
+				fill="url(#my-crypto-large-linearGradient-1)"
 				fill-rule="nonzero"
 				stroke="#0FB8D0"
 			>

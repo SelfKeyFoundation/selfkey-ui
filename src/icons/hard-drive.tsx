@@ -18,8 +18,6 @@ const styles: StyleSheet = {
 
 export const HardDriveIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
     <SvgIcon  {...props} viewBox="0 0 44 44" version="1.1">
-        <title>Shape</title>
-        <desc>Created with Sketch.</desc>
         <g stroke="none" strokeWidth="1"  fillRule="evenodd">
             <g id="5.-Style-Guide---UI-Elements" transform="translate(-1026.000000, -785.000000)" fill="inherit" fillRule="nonzero">
                 <g id="File-upload" transform="translate(930.000000, 124.000000)">

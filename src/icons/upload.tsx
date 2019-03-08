@@ -13,15 +13,14 @@ const styles: StyleSheet = {
 
 export const SKUploadIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 36 32'>
-    <title>icon-upload-large</title>
     <defs>
-        <linearGradient x1="17.1575805%" y1="68.33943%" x2="38.2444302%" y2="0%" id="linearGradient-1">
-            <stop stop-color="#09A8BA" offset="0%"></stop>
-            <stop stop-color="#0ABBD0" offset="100%"></stop>
+        <linearGradient x1="17.1575805%" y1="68.33943%" x2="38.2444302%" y2="0%" id="upload-linearGradient-1">
+            <stop stopColor="#09A8BA" offset="0%"></stop>
+            <stop stopColor="#0ABBD0" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="👨🏼‍💻-ID-Registration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="200-Create-SelfKey-ID-or-Import-KYC" transform="translate(-437.000000, -568.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+    <g id="👨🏼‍💻-ID-Registration" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="200-Create-SelfKey-ID-or-Import-KYC" transform="translate(-437.000000, -568.000000)" fill="url(#upload-linearGradient-1)" fillRule="nonzero">
             <g id="Box" transform="translate(395.000000, 282.000000)">
                 <g id="line2" transform="translate(42.000000, 284.000000)">
                     <g id="icon-upload-large" transform="translate(0.000000, 2.000000)">

@@ -14,8 +14,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.AddressBookMenuIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "15px", height: "16px" }, props, { viewBox: "0 0 15 16" }),
-    React.createElement("title", null, "icon-menu-address"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300-Navigation", transform: "translate(-1172.000000, -351.000000)", fill: "#93A4AF", fillRule: "nonzero" },

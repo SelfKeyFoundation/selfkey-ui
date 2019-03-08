@@ -21,13 +21,12 @@ var styles = {
     }
 };
 exports.SKIDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 36 44' }),
-    React.createElement("title", null, "icon-id-large"),
     React.createElement("defs", null,
-        React.createElement("linearGradient", { x1: "11.0842631%", y1: "62.5905801%", x2: "36.0705554%", y2: "15.6734694%", id: "linearGradient-1" },
-            React.createElement("stop", { "stop-color": "#09A8BA", offset: "0%" }),
-            React.createElement("stop", { "stop-color": "#0ABBD0", offset: "100%" }))),
-    React.createElement("g", { id: "\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBB-ID-Registration", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "200-Create-SelfKey-ID-or-Import-KYC", transform: "translate(-431.000000, -329.000000)", fill: "url(#linearGradient-1)", "fill-rule": "nonzero" },
+        React.createElement("linearGradient", { x1: "11.0842631%", y1: "62.5905801%", x2: "36.0705554%", y2: "15.6734694%", id: "sk-id-linearGradient-1" },
+            React.createElement("stop", { stopColor: "#09A8BA", offset: "0%" }),
+            React.createElement("stop", { stopColor: "#0ABBD0", offset: "100%" }))),
+    React.createElement("g", { id: "\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBB-ID-Registration", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "200-Create-SelfKey-ID-or-Import-KYC", transform: "translate(-431.000000, -329.000000)", fill: "url(#sk-id-linearGradient-1)", fillRule: "nonzero" },
             React.createElement("g", { id: "Box", transform: "translate(395.000000, 282.000000)" },
                 React.createElement("g", { id: "Line1", transform: "translate(36.000000, 40.000000)" },
                     React.createElement("g", { id: "icon-id-large", transform: "translate(0.000000, 7.000000)" },

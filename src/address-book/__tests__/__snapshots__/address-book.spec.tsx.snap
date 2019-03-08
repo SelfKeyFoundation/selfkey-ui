@@ -14,15 +14,9 @@ exports[`Address Book should show Address Book 1`] = `
       role="presentation"
       viewBox="0 0 54 62"
     >
-      <title>
-        icon-address-book-large
-      </title>
-      <desc>
-        Created with Sketch.
-      </desc>
       <defs>
         <linearGradient
-          id="linearGradient-1"
+          id="addressBook-linearGradient-1"
           x1="11.0842631%"
           x2="36.0705554%"
           y1="68.33943%"
@@ -46,7 +40,7 @@ exports[`Address Book should show Address Book 1`] = `
         strokeWidth="1"
       >
         <g
-          fill="url(#linearGradient-1)"
+          fill="url(#addressBook-linearGradient-1)"
           fillRule="nonzero"
           id="3000---Address-Book-Full-State"
           transform="translate(-693.000000, -146.000000)"
@@ -300,13 +294,6 @@ exports[`Address Book should show Address Book 1`] = `
                       role="presentation"
                       viewBox="0 0 16 16"
                     >
-                      <title>
-                        icon-edit
-                      </title>
-                      <desc>
-                        Created with Sketch.
-                      </desc>
-                      <defs />
                       <g
                         fill="none"
                         fillRule="evenodd"
@@ -385,12 +372,6 @@ exports[`Address Book should show Address Book 1`] = `
                       version="1.1"
                       viewBox="0 0 16 16"
                     >
-                      <title>
-                        icon-delete
-                      </title>
-                      <desc>
-                        Created with Sketch.
-                      </desc>
                       <defs />
                       <g
                         fill="none"

@@ -22,12 +22,6 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
         role="presentation"
         viewBox="0 0 38 38"
       >
-        <title>
-          Close
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs />
         <g
           fill="none"
@@ -82,15 +76,9 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
         version="1.1"
         viewBox="0 0 68 74"
       >
-        <title>
-          icon-warning-large
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs>
           <linearGradient
-            id="linearGradient-1"
+            id="warning-large-linearGradient-1"
             x1="50%"
             x2="50%"
             y1="0%"
@@ -114,7 +102,7 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
           strokeWidth="1"
         >
           <g
-            fill="url(#linearGradient-1)"
+            fill="url(#warning-large-linearGradient-1)"
             fillRule="nonzero"
             id="96---Warnings-&-Messages"
             transform="translate(-686.000000, -490.000000)"
@@ -200,12 +188,6 @@ exports[`Transaction Error Box should show transaction error generic screen with
         role="presentation"
         viewBox="0 0 38 38"
       >
-        <title>
-          Close
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs />
         <g
           fill="none"
@@ -260,15 +242,9 @@ exports[`Transaction Error Box should show transaction error generic screen with
         version="1.1"
         viewBox="0 0 68 74"
       >
-        <title>
-          icon-warning-large
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs>
           <linearGradient
-            id="linearGradient-1"
+            id="warning-large-linearGradient-1"
             x1="50%"
             x2="50%"
             y1="0%"
@@ -292,7 +268,7 @@ exports[`Transaction Error Box should show transaction error generic screen with
           strokeWidth="1"
         >
           <g
-            fill="url(#linearGradient-1)"
+            fill="url(#warning-large-linearGradient-1)"
             fillRule="nonzero"
             id="96---Warnings-&-Messages"
             transform="translate(-686.000000, -490.000000)"

@@ -16,13 +16,13 @@ export const IDIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & S
     <title>icon-id</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="id-linearGradient-1">
             <stop stopColor="#1CA9BA" offset="0%"></stop>
             <stop stopColor="#23E6FE" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="1.-Select-Wallet-Modal" transform="translate(-683.000000, -277.000000)" fill="url(#linearGradient-1)" fillRule="nonzero">
+        <g id="1.-Select-Wallet-Modal" transform="translate(-683.000000, -277.000000)" fill="url(#id-linearGradient-1)" fillRule="nonzero">
             <g id="Modal-content" transform="translate(420.000000, 100.000000)">
                 <g id="Text" transform="translate(147.000000, 177.000000)">
                     <g id="icon-id" transform="translate(116.000000, 0.000000)">

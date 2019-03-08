@@ -8,12 +8,6 @@ exports[`Stick  Icon should show Stick Icon 1`] = `
   role="presentation"
   viewBox="0 0 42 39"
 >
-  <title>
-    icn-stick
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"

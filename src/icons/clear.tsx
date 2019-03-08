@@ -4,8 +4,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const ClearIcon = ((props: SvgIconProps) => (
         <SvgIcon width="34px" height="20px" {...props} viewBox="0 0 34 20">
-            <title>icon-del-arrow</title>
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="🛠-Wallet-Setup" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="118---Trezor---Enter-PIN" transform="translate(-810.000000, -640.000000)" fill="#93B0C1">

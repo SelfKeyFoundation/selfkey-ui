@@ -16,7 +16,7 @@ exports[`Id Icon should show Id Icon 1`] = `
   </desc>
   <defs>
     <linearGradient
-      id="linearGradient-1"
+      id="id-linearGradient-1"
       x1="50%"
       x2="50%"
       y1="100%"
@@ -40,7 +40,7 @@ exports[`Id Icon should show Id Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#linearGradient-1)"
+      fill="url(#id-linearGradient-1)"
       fillRule="nonzero"
       id="1.-Select-Wallet-Modal"
       transform="translate(-683.000000, -277.000000)"

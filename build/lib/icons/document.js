@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.DocumentIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 19 24' }),
-    React.createElement("title", null, "Upload Copy@2x"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "502-Exchange-Details-+-Coming-Soon", transform: "translate(-823.000000, -1018.000000)", fill: "#93B0C1" },

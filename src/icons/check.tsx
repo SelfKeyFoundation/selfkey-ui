@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const CheckIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 18 18'>
-    <title>icon-check</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="1.3.-Required-Information---missing-info" transform="translate(-490.000000, -340.000000)" fill="#1CBA7D">

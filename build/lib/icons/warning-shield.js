@@ -21,10 +21,8 @@ var styles = {
     }
 };
 exports.WarningShieldIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 68 74' }),
-    React.createElement("title", null, "icon-warning-large"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null,
-        React.createElement("linearGradient", { x1: "50%", y1: "0%", x2: "50%", y2: "100%", id: "linearGradient-1" },
+        React.createElement("linearGradient", { x1: "50%", y1: "0%", x2: "50%", y2: "100%", id: "warning-shield-linearGradient-1" },
             React.createElement("stop", { stopColor: "#DB7400", offset: "0%" }),
             React.createElement("stop", { stopColor: "#B44000", offset: "100%" }))),
     React.createElement("g", { id: "Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },

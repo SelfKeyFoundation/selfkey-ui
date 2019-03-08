@@ -20,7 +20,7 @@ exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] =
       </desc>
       <defs>
         <linearGradient
-          id="linearGradient-1"
+          id="download-linearGradient-1"
           x1="50%"
           x2="50%"
           y1="100%"
@@ -44,7 +44,7 @@ exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] =
         strokeWidth="1"
       >
         <g
-          fill="url(#linearGradient-1)"
+          fill="url(#download-linearGradient-1)"
           fillRule="nonzero"
           id="2.3-Error---No-Plugin"
           transform="translate(-683.000000, -277.000000)"

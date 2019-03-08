@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const FilePdfIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 29 36'>
-    <title>icon-file-pdf</title>
-    <desc>Created with Sketch.</desc>
     <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="406---Delete-Attribute" transform="translate(-392.000000, -1401.000000)" fill="#697C95" fillRule="nonzero">
             <g id="Area-box-3" transform="translate(150.000000, 1262.000000)">

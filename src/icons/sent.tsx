@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const SentIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
     <SvgIcon {...props} viewBox="0 0 26 26" version="1.1">
-        <title>icon-sent</title>
-        <desc>Created with Sketch.</desc>
         <defs></defs>
         <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="302-Dashboard-Full-State-Expanded" transform="translate(-183.000000, -1721.000000)" fill="#1CBA7D" fillRule="nonzero">

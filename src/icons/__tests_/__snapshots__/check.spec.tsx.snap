@@ -8,12 +8,6 @@ exports[`Check Icon should show Check Icon 1`] = `
   role="presentation"
   viewBox="0 0 18 18"
 >
-  <title>
-    icon-check
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"

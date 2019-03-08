@@ -14,8 +14,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.ExistingAddressIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "28px", height: "25px" }, props, { viewBox: "0 0 28 25" }),
-    React.createElement("title", null, "icon-existing"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDEE0-Wallet-Setup", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "111---Import-Keystore-File-(UTC)", transform: "translate(-346.000000, -399.000000)", fill: "#23E6FE", fillRule: "nonzero" },

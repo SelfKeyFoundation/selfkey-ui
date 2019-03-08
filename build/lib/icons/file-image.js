@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.FileImageIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 29 36' }),
-    React.createElement("title", null, "icon-file-image"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "406---Delete-Attribute", transform: "translate(-392.000000, -1475.000000)", fill: "#697C95", fillRule: "nonzero" },
             React.createElement("g", { id: "Area-box-3", transform: "translate(150.000000, 1262.000000)" },

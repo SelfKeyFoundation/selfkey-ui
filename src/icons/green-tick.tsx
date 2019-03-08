@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const GreenTickIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 16 16'>
-    <title>icon-attr-check</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="403---Identity-Summary" transform="translate(-321.000000, -347.000000)">

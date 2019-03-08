@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const WarningIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 20 18'>
-    <title>icon-warning</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="1.3.-Required-Information---missing-info" transform="translate(-490.000000, -502.000000)" fill="#FFA700">

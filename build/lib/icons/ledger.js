@@ -14,8 +14,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.LedgerIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "25px", height: "25px" }, props, { viewBox: "0 0 25 25" }),
-    React.createElement("title", null, "icon-ledger"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDEE0-Wallet-Setup", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "111---Import-Keystore-File-(UTC)", transform: "translate(-888.000000, -399.000000)", fill: "#23E6FE", fillRule: "nonzero" },

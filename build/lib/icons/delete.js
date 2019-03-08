@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.DeleteIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 16 16", version: "1.1" }),
-    React.createElement("title", null, "icon-delete"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "304-Manage-My-Tokens", transform: "translate(-1244.000000, -597.000000)", fill: "#697C95" },

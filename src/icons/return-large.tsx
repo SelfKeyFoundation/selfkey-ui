@@ -14,7 +14,7 @@ const styles: StyleSheet = {
 export const ReturnLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 66 66">
 		<defs>
-			<linearGradient x1="11.0842631%" y1="68.33943%" x2="36.0705554%" y2="0%" id="linearGradient-1">
+			<linearGradient x1="11.0842631%" y1="68.33943%" x2="36.0705554%" y2="0%" id="return-large-linearGradient-1">
 				<stop stopColor="#09A8BA" offset="0%" />
 				<stop stopColor="#0ABBD0" offset="100%" />
 			</linearGradient>
@@ -23,7 +23,7 @@ export const ReturnLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIcon
 			<g
 				id="507---Exchange-Details-+-Reclaim-Stake-+-Generate-Transaction"
 				transform="translate(-375.000000, -273.000000)"
-				fill="url(#linearGradient-1)"
+				fill="url(#return-large-linearGradient-1)"
 				fillRule="nonzero"
 			>
 				<g id="Modal" transform="translate(330.000000, 159.000000)">

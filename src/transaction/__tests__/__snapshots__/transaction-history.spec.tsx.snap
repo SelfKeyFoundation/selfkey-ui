@@ -26,12 +26,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             role="presentation"
             viewBox="0 0 26 26"
           >
-            <title>
-              icon-failed
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
             <defs />
             <g
               fill="none"
@@ -188,12 +182,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             version="1.1"
             viewBox="0 0 22 16"
           >
-            <title>
-              icon-view
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
             <defs />
             <g
               fill="none"
@@ -280,12 +268,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             version="1.1"
             viewBox="0 0 32 26"
           >
-            <title>
-              icon-receive
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
             <defs />
             <g
               fill="none"
@@ -437,12 +419,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             version="1.1"
             viewBox="0 0 22 16"
           >
-            <title>
-              icon-view
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
             <defs />
             <g
               fill="none"
@@ -534,12 +510,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             }
             viewBox="0 0 20 26"
           >
-            <title>
-              icon-hourglass
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
+            &gt;
             <defs />
             <g
               fill="none"
@@ -686,12 +657,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             version="1.1"
             viewBox="0 0 22 16"
           >
-            <title>
-              icon-view
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
             <defs />
             <g
               fill="none"
@@ -778,12 +743,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             version="1.1"
             viewBox="0 0 26 26"
           >
-            <title>
-              icon-sent
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
             <defs />
             <g
               fill="none"
@@ -935,12 +894,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             version="1.1"
             viewBox="0 0 22 16"
           >
-            <title>
-              icon-view
-            </title>
-            <desc>
-              Created with Sketch.
-            </desc>
             <defs />
             <g
               fill="none"

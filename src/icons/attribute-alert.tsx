@@ -13,7 +13,6 @@ const styles: StyleSheet = {
 
 export const AttributeAlertIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 18 20" version="1.1">
-        <title>icon-attribute-alert</title>
         <g id="💹-Marketplace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="703.1---Incorporation-+-Submit-+-Errors" transform="translate(-385.000000, -635.000000)" fill="#E98548">
                 <g id="Modal1" transform="translate(330.000000, 159.000000)">

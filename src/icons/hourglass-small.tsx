@@ -12,9 +12,7 @@ export const HourGlassSmallIcon = injectSheet(styles)<SvgIconProps>((props: SvgI
 	let fill = props.fill || '#697C95';
 
 	return (
-		<SvgIcon {...props} style={{ width, height }} viewBox="0 0 20 26">
-			<title>icon-hourglass</title>
-			<desc>Created with Sketch.</desc>
+		<SvgIcon {...props} style={{ width, height }} viewBox="0 0 20 26">>
 			<defs />
 			<g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g

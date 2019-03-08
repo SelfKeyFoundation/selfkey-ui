@@ -4,9 +4,8 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const ClipboardIcon = ((props: SvgIconProps) => (
         <SvgIcon width="30px" height="36px" {...props} viewBox="0 0 30 36">
-            <title>icon-copy-clipboard</title>
-            <g id="🖥-Main-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="351-Receive-KEY" transform="translate(-608.000000, -687.000000)" fill="#93B0C1" fill-rule="nonzero">
+            <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <g id="351-Receive-KEY" transform="translate(-608.000000, -687.000000)" fill="#93B0C1" fillRule="nonzero">
                     <g id="Modal" transform="translate(341.000000, 235.000000)">
                         <g id="icons" transform="translate(267.000000, 452.000000)">
                             <g id="icon-copy-clipboard">

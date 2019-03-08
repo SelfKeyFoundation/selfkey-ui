@@ -4,8 +4,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const LedgerIcon = ((props: SvgIconProps) => (
         <SvgIcon width="25px" height="25px" {...props} viewBox="0 0 25 25">
-            <title>icon-ledger</title>
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="🛠-Wallet-Setup" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="111---Import-Keystore-File-(UTC)" transform="translate(-888.000000, -399.000000)" fill="#23E6FE" fillRule="nonzero">

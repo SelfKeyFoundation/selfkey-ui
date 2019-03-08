@@ -8,12 +8,6 @@ exports[`Profile  Icon should show Profile Icon 1`] = `
   role="presentation"
   viewBox="0 0 42 37"
 >
-  <title>
-    icn-profile
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"

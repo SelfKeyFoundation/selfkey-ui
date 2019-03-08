@@ -13,15 +13,14 @@ const styles: StyleSheet = {
 
 export const PasswordConfirmIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 66 68'>
-    <title>icon-password-confirm</title>
     <defs>
-        <linearGradient x1="12.3706444%" y1="68.33943%" x2="36.531001%" y2="0%" id="linearGradient-1">
-            <stop stop-color="#09A8BA" offset="0%"></stop>
-            <stop stop-color="#0ABBD0" offset="100%"></stop>
+        <linearGradient x1="12.3706444%" y1="68.33943%" x2="36.531001%" y2="0%" id="password-confirm-linearGradient-1">
+            <stop stopColor="#09A8BA" offset="0%"></stop>
+            <stop stopColor="#0ABBD0" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="🛠-Vault-Setup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="107-Confirm-Password" transform="translate(-375.000000, -386.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+    <g id="🛠-Vault-Setup" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="107-Confirm-Password" transform="translate(-375.000000, -386.000000)" fill="url(#password-confirm-linearGradient-1)" fillRule="nonzero">
             <g id="Modal" transform="translate(330.000000, 291.000000)">
                 <g id="Content" transform="translate(45.000000, 94.000000)">
                     <g id="icon-password-confirm" transform="translate(0.000000, 1.000000)">

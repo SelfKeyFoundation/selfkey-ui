@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const FileDefaultIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 29 36">
-		<title>icon-default-file</title>
-		<desc>Created with Sketch.</desc>
 		<g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				id="406---Delete-Attribute"

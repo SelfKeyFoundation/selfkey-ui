@@ -22,12 +22,6 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
         role="presentation"
         viewBox="0 0 38 38"
       >
-        <title>
-          Close
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs />
         <g
           fill="none"
@@ -82,15 +76,9 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
         version="1.1"
         viewBox="0 0 68 74"
       >
-        <title>
-          icon-warning-large
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs>
           <linearGradient
-            id="linearGradient-1"
+            id="warning-large-linearGradient-1"
             x1="50%"
             x2="50%"
             y1="0%"
@@ -114,7 +102,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#linearGradient-1)"
+            fill="url(#warning-large-linearGradient-1)"
             fillRule="nonzero"
             id="96---Warnings-&-Messages"
             transform="translate(-686.000000, -490.000000)"
@@ -222,12 +210,6 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
         role="presentation"
         viewBox="0 0 38 38"
       >
-        <title>
-          Close
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs />
         <g
           fill="none"
@@ -282,15 +264,9 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
         version="1.1"
         viewBox="0 0 68 74"
       >
-        <title>
-          icon-warning-large
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs>
           <linearGradient
-            id="linearGradient-1"
+            id="warning-large-linearGradient-1"
             x1="50%"
             x2="50%"
             y1="0%"
@@ -314,7 +290,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#linearGradient-1)"
+            fill="url(#warning-large-linearGradient-1)"
             fillRule="nonzero"
             id="96---Warnings-&-Messages"
             transform="translate(-686.000000, -490.000000)"
@@ -422,12 +398,6 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
         role="presentation"
         viewBox="0 0 38 38"
       >
-        <title>
-          Close
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs />
         <g
           fill="none"
@@ -482,15 +452,9 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
         version="1.1"
         viewBox="0 0 68 74"
       >
-        <title>
-          icon-warning-large
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs>
           <linearGradient
-            id="linearGradient-1"
+            id="warning-large-linearGradient-1"
             x1="50%"
             x2="50%"
             y1="0%"
@@ -514,7 +478,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#linearGradient-1)"
+            fill="url(#warning-large-linearGradient-1)"
             fillRule="nonzero"
             id="96---Warnings-&-Messages"
             transform="translate(-686.000000, -490.000000)"
@@ -622,12 +586,6 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
         role="presentation"
         viewBox="0 0 38 38"
       >
-        <title>
-          Close
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs />
         <g
           fill="none"
@@ -682,15 +640,9 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
         version="1.1"
         viewBox="0 0 68 74"
       >
-        <title>
-          icon-warning-large
-        </title>
-        <desc>
-          Created with Sketch.
-        </desc>
         <defs>
           <linearGradient
-            id="linearGradient-1"
+            id="warning-large-linearGradient-1"
             x1="50%"
             x2="50%"
             y1="0%"
@@ -714,7 +666,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#linearGradient-1)"
+            fill="url(#warning-large-linearGradient-1)"
             fillRule="nonzero"
             id="96---Warnings-&-Messages"
             transform="translate(-686.000000, -490.000000)"

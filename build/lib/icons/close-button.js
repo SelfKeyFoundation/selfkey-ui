@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.CloseButtonIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 38 38' }),
-    React.createElement("title", null, "Close"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "Close-button", transform: "translate(1.000000, 1.000000)" },
