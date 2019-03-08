@@ -14,9 +14,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.PrintSmallIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "34px", height: "36px" }, props, { viewBox: "0 0 34 36" }),
-    React.createElement("title", null, "icon-print"),
-    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-733.000000, -687.000000)", fill: "#93B0C1", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-733.000000, -687.000000)", fill: "#93B0C1", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(341.000000, 235.000000)" },
                 React.createElement("g", { id: "icons", transform: "translate(267.000000, 452.000000)" },
                     React.createElement("g", { id: "icon-print", transform: "translate(125.000000, 0.000000)" },

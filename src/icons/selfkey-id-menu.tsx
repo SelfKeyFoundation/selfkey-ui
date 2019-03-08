@@ -4,8 +4,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const SelfkeyIDMenuIcon = ((props: SvgIconProps) => (
         <SvgIcon width="14px" height="20px" {...props} viewBox="0 0 14 20">
-            <title>icon-menu-profile</title>
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="300-Navigation" transform="translate(-1172.000000, -289.000000)" fill="#93A4AF" fillRule="nonzero">

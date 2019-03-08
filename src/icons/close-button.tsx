@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const CloseButtonIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 38 38'>
-    <title>Close</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="Close-button" transform="translate(1.000000, 1.000000)">

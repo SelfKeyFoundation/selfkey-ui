@@ -13,9 +13,8 @@ const styles: StyleSheet = {
 
 export const SentBlueIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
     <SvgIcon {...props} viewBox="0 0 24 24" version="1.1">
-        <title>icon-sent-blue</title>
-        <g id="🖥-Main-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="350-Send-KEY-Dashboard" transform="translate(-615.000000, -475.000000)" fill="#00C0D9" fill-rule="nonzero">
+        <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <g id="350-Send-KEY-Dashboard" transform="translate(-615.000000, -475.000000)" fill="#00C0D9" fillRule="nonzero">
                 <g id="modal-top" transform="translate(341.000000, 119.000000)">
                     <g id="content" transform="translate(30.000000, 47.000000)">
                         <g id="buttons" transform="translate(1.000000, 297.000000)">

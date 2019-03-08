@@ -14,10 +14,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.MailIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "35px", height: "27px" }, props, { viewBox: "0 0 35 27" }),
-    React.createElement("title", null, "icon-mail"),
-    React.createElement("desc", null, "Created with Sketch."),
-    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-668.000000, -691.000000)", fill: "#93B0C1", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-668.000000, -691.000000)", fill: "#93B0C1", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(341.000000, 235.000000)" },
                 React.createElement("g", { id: "icons", transform: "translate(267.000000, 452.000000)" },
                     React.createElement("g", { id: "icon-mail", transform: "translate(60.000000, 4.000000)" },

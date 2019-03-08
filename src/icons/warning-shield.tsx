@@ -13,10 +13,8 @@ const styles: StyleSheet = {
 
 export const WarningShieldIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 68 74'>
-    <title>icon-warning-large</title>
-    <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="warning-shield-linearGradient-1">
             <stop stopColor="#DB7400" offset="0%"></stop>
             <stop stopColor="#B44000" offset="100%"></stop>
         </linearGradient>

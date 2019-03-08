@@ -14,10 +14,8 @@ const styles: StyleSheet = {
 export const GearIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 
   <SvgIcon {...props} viewBox="0 0 24 24" version="1.1">
-    <title>icon-settings</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" stroke-linejoin="round">
+    <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
       <g id="301-Dashboard-+-Null-State" transform="translate(-1236.000000, -505.000000)" stroke="#768FA9">
         <g id="My-Crypto" transform="translate(150.000000, 478.000000)">
           <g id="Area-header" transform="translate(30.000000, 21.000000)">

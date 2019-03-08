@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const ReceiveIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
 <SvgIcon { ...props } viewBox="0 0 32 26" version="1.1">
-    <title>icon-receive</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="302-Dashboard-Full-State-Expanded" transform="translate(-180.000000, -1796.000000)" fill="#1CBA7D" fillRule="nonzero">

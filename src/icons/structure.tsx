@@ -3,7 +3,6 @@ import * as React from 'react';
 export const StructureIcon = () => {
     return (
         <svg width="27px" height="24px" viewBox="0 0 27 24" version="1.1">
-            <title>icon-structure</title>
             <g id="🌈-UI-Guidelines" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="3.-Style-Guide---Forms" transform="translate(-1042.000000, -859.000000)" fill="inherit">
                     <g id="Line-3-Buttons" transform="translate(39.000000, 559.000000)">

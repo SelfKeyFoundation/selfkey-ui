@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const ProfileIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 42 37'>
-    <title>icn-profile</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
         <g id="1.-Select-Wallet-Modal" transform="translate(-509.000000, -463.000000)" stroke="#23E6FE" strokeWidth="0.833333333">

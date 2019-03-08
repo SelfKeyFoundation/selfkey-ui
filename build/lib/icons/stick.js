@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.StickIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 42 39' }),
-    React.createElement("title", null, "icn-stick"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "1.-Select-Wallet-Modal", transform: "translate(-754.000000, -461.000000)", stroke: "#23E6FE", strokeWidth: "0.833333333" },

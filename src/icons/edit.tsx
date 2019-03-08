@@ -13,8 +13,6 @@ const styles: StyleSheet = {
 
 export const EditIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 20 20'>
-    <title>icon-edit</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="1.3.-Required-Information---missing-info" transform="translate(-930.000000, -501.000000)" fill="#93B0C1">

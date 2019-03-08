@@ -4,8 +4,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const MarketplaceMenuIcon = ((props: SvgIconProps) => (
         <SvgIcon width="15px" height="16px" {...props} viewBox="0 0 15 16">
-            <title>icon-menu-marketplace</title>
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="300-Navigation" transform="translate(-1172.000000, -231.000000)" fill="#93A4AF" fillRule="nonzero">

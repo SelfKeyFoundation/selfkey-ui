@@ -13,9 +13,8 @@ const styles: StyleSheet = {
 
 export const CertificateIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 16 20" version="1.1">
-        <title>icon-certificate</title>
-        <g id="💹-Marketplace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="701.1---Incorporation-Taxes-View" transform="translate(-925.000000, -277.000000)" fill="#FFFFFF" fill-rule="nonzero">
+        <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <g id="701.1---Incorporation-Taxes-View" transform="translate(-925.000000, -277.000000)" fill="#FFFFFF" fillRule="nonzero">
                 <g id="Modal" transform="translate(240.000000, 146.000000)">
                     <g id="Area-Body" transform="translate(0.000000, 71.000000)">
                         <g id="Row-1" transform="translate(29.000000, 48.000000)">

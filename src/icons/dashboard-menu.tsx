@@ -4,8 +4,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const DashboardMenuIcon = ((props: SvgIconProps) => (
         <SvgIcon width="16px" height="16px" {...props} viewBox="0 0 16 16">
-            <title>icon-menu-dashboard</title>
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="300-Navigation" transform="translate(-1171.000000, -171.000000)" stroke="#93A4AF">

@@ -21,9 +21,8 @@ var styles = {
     },
 };
 exports.CertificateIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 16 20", version: "1.1" }),
-    React.createElement("title", null, "icon-certificate"),
-    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "701.1---Incorporation-Taxes-View", transform: "translate(-925.000000, -277.000000)", fill: "#FFFFFF", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "701.1---Incorporation-Taxes-View", transform: "translate(-925.000000, -277.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },
                 React.createElement("g", { id: "Area-Body", transform: "translate(0.000000, 71.000000)" },
                     React.createElement("g", { id: "Row-1", transform: "translate(29.000000, 48.000000)" },

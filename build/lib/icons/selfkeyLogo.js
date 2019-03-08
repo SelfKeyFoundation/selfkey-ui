@@ -15,10 +15,10 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.SelfkeyLogo = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "18px", height: "20px" }, props, { viewBox: "0 0 18 20" }),
     React.createElement("defs", null,
-        React.createElement("linearGradient", { x1: "50%", y1: "97.784%", x2: "50%", y2: "1.559%", id: "linearGradient-1" },
+        React.createElement("linearGradient", { x1: "50%", y1: "97.784%", x2: "50%", y2: "1.559%", id: "selfkey-logo-linearGradient-1" },
             React.createElement("stop", { stopColor: "#08BCCD", offset: "0%" }),
             React.createElement("stop", { stopColor: "#2DA1F8", offset: "100%" })),
-        React.createElement("linearGradient", { x1: "50%", y1: "97.784%", x2: "4git 1.849%", y2: "-16.397%", id: "linearGradient-2" },
+        React.createElement("linearGradient", { x1: "50%", y1: "97.784%", x2: "4git 1.849%", y2: "-16.397%", id: "selfkey-logo-linearGradient-2" },
             React.createElement("stop", { stopColor: "#08BCCD", offset: "0%" }),
             React.createElement("stop", { stopColor: "#2DA1F8", offset: "100%" }))),
     React.createElement("g", { id: "\uD83C\uDF08-UI-Guidelines", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },

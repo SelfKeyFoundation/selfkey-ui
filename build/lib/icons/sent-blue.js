@@ -21,9 +21,8 @@ var styles = {
     }
 };
 exports.SentBlueIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 24 24", version: "1.1" }),
-    React.createElement("title", null, "icon-sent-blue"),
-    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "350-Send-KEY-Dashboard", transform: "translate(-615.000000, -475.000000)", fill: "#00C0D9", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "350-Send-KEY-Dashboard", transform: "translate(-615.000000, -475.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "modal-top", transform: "translate(341.000000, 119.000000)" },
                 React.createElement("g", { id: "content", transform: "translate(30.000000, 47.000000)" },
                     React.createElement("g", { id: "buttons", transform: "translate(1.000000, 297.000000)" },

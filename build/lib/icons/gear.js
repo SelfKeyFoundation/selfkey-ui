@@ -21,10 +21,8 @@ var styles = {
     }
 };
 exports.GearIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 24 24", version: "1.1" }),
-    React.createElement("title", null, "icon-settings"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
-    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", "stroke-linejoin": "round" },
+    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "301-Dashboard-+-Null-State", transform: "translate(-1236.000000, -505.000000)", stroke: "#768FA9" },
             React.createElement("g", { id: "My-Crypto", transform: "translate(150.000000, 478.000000)" },
                 React.createElement("g", { id: "Area-header", transform: "translate(30.000000, 21.000000)" },

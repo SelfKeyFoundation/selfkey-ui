@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.SentIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 26 26", version: "1.1" }),
-    React.createElement("title", null, "icon-sent"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-183.000000, -1721.000000)", fill: "#1CBA7D", fillRule: "nonzero" },

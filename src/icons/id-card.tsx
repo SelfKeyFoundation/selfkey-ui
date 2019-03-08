@@ -13,16 +13,14 @@ const styles: StyleSheet = {
 
 export const IdCardIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 41 60'>
-    <title>icon-id-card</title>
-    <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="50%" y1="97.783801%" x2="41.8489583%" y2="-16.3970588%" id="linearGradient-1">
-            <stop stop-color="#08BCCD" offset="0%"></stop>
-            <stop stop-color="#2DA1F8" offset="100%"></stop>
+        <linearGradient x1="50%" y1="97.783801%" x2="41.8489583%" y2="-16.3970588%" id="id-card-linearGradient-1">
+            <stop stopColor="#08BCCD" offset="0%"></stop>
+            <stop stopColor="#2DA1F8" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="💻-ID-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="403---Identity-Summary" transform="translate(-253.000000, -581.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="403---Identity-Summary" transform="translate(-253.000000, -581.000000)" fill="url(#id-card-linearGradient-1)" fillRule="nonzero">
             <g id="Area-box-2" transform="translate(150.000000, 462.000000)">
                 <g id="Basic" transform="translate(14.000000, 14.000000)">
                     <g id="Explanatory" transform="translate(10.000000, 105.000000)">

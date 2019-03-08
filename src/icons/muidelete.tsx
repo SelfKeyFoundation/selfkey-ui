@@ -18,8 +18,6 @@ const styles: StyleSheet = {
 
 export const MuiDeleteIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
 <SvgIcon {...props} viewBox="0 0 16 16" version="1.1">
-    <title>icon-delete</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
         <g id="304-Manage-My-Tokens" transform="translate(-1244.000000, -597.000000)" fill="inherit">

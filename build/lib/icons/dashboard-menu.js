@@ -14,8 +14,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.DashboardMenuIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "16px", height: "16px" }, props, { viewBox: "0 0 16 16" }),
-    React.createElement("title", null, "icon-menu-dashboard"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300-Navigation", transform: "translate(-1171.000000, -171.000000)", stroke: "#93A4AF" },

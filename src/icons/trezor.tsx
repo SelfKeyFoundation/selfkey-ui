@@ -4,8 +4,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const TrezorIcon = ((props: SvgIconProps) => (
         <SvgIcon width="18px" height="25px" {...props} viewBox="0 0 18 25">
-            <title>icon-trezor</title>
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="🛠-Wallet-Setup" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="111---Import-Keystore-File-(UTC)" transform="translate(-1071.000000, -399.000000)" fill="#23E6FE" fillRule="nonzero">

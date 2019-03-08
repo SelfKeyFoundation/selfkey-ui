@@ -13,15 +13,14 @@ const styles: StyleSheet = {
 
 export const SKIDIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 36 44'>
-    <title>icon-id-large</title>
     <defs>
-        <linearGradient x1="11.0842631%" y1="62.5905801%" x2="36.0705554%" y2="15.6734694%" id="linearGradient-1">
-            <stop stop-color="#09A8BA" offset="0%"></stop>
-            <stop stop-color="#0ABBD0" offset="100%"></stop>
+        <linearGradient x1="11.0842631%" y1="62.5905801%" x2="36.0705554%" y2="15.6734694%" id="sk-id-linearGradient-1">
+            <stop stopColor="#09A8BA" offset="0%"></stop>
+            <stop stopColor="#0ABBD0" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="👨🏼‍💻-ID-Registration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="200-Create-SelfKey-ID-or-Import-KYC" transform="translate(-431.000000, -329.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+    <g id="👨🏼‍💻-ID-Registration" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="200-Create-SelfKey-ID-or-Import-KYC" transform="translate(-431.000000, -329.000000)" fill="url(#sk-id-linearGradient-1)" fillRule="nonzero">
             <g id="Box" transform="translate(395.000000, 282.000000)">
                 <g id="Line1" transform="translate(36.000000, 40.000000)">
                     <g id="icon-id-large" transform="translate(0.000000, 7.000000)">
