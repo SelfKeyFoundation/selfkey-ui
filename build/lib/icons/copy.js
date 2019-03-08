@@ -21,8 +21,6 @@ var styles = {
     }
 };
 exports.CopyIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 14 16", version: "1.1" }),
-    React.createElement("title", null, "icon-copy"),
-    React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-1125.000000, -2025.000000)", fill: "#93B0C1" },
