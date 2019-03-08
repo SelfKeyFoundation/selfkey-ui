@@ -8,12 +8,6 @@ exports[`Check Empty Icon should show CheckEmpty Icon 1`] = `
   role="presentation"
   viewBox="0 0 18 18"
 >
-  <title>
-    icon-check-empty
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"

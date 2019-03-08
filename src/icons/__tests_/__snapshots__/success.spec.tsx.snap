@@ -16,7 +16,7 @@ exports[`Success  Icon should show Success Icon 1`] = `
   </desc>
   <defs>
     <linearGradient
-      id="linearGradient-1"
+      id="success-linearGradient-1"
       x1="50%"
       x2="50%"
       y1="100%"
@@ -40,7 +40,7 @@ exports[`Success  Icon should show Success Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#linearGradient-1)"
+      fill="url(#success-linearGradient-1)"
       fillRule="nonzero"
       id="1.6.-Success"
       transform="translate(-686.000000, -277.000000)"

@@ -8,12 +8,6 @@ exports[`Close Button Icon should show Close Button Icon 1`] = `
   role="presentation"
   viewBox="0 0 38 38"
 >
-  <title>
-    Close
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"

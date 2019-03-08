@@ -20,7 +20,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
       </desc>
       <defs>
         <linearGradient
-          id="linearGradient-1"
+          id="id-linearGradient-1"
           x1="50%"
           x2="50%"
           y1="100%"
@@ -44,7 +44,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         strokeWidth="1"
       >
         <g
-          fill="url(#linearGradient-1)"
+          fill="url(#id-linearGradient-1)"
           fillRule="nonzero"
           id="1.-Select-Wallet-Modal"
           transform="translate(-683.000000, -277.000000)"
@@ -94,12 +94,6 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
           role="presentation"
           viewBox="0 0 42 37"
         >
-          <title>
-            icn-profile
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs />
           <g
             fill="none"
@@ -200,12 +194,6 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
           role="presentation"
           viewBox="0 0 42 39"
         >
-          <title>
-            icn-stick
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs />
           <g
             fill="none"

@@ -9,20 +9,14 @@ exports[`Gear Icon should show Gear Icon 1`] = `
   version="1.1"
   viewBox="0 0 24 24"
 >
-  <title>
-    icon-settings
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"
     fillRule="evenodd"
     id="🖥-Main-Dashboard"
     stroke="none"
-    stroke-linejoin="round"
     strokeLinecap="round"
+    strokeLinejoin="round"
     strokeWidth="1"
   >
     <g

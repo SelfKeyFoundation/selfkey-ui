@@ -8,12 +8,6 @@ exports[`Edit Icon should show Edit Icon 1`] = `
   role="presentation"
   viewBox="0 0 20 20"
 >
-  <title>
-    icon-edit
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs />
   <g
     fill="none"

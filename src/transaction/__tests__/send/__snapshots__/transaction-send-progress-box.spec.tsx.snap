@@ -77,15 +77,9 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
           version="1.1"
           viewBox="0 0 66 66"
         >
-          <title>
-            icon-check-large
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs>
             <linearGradient
-              id="linearGradient-1"
+              id="okey-linearGradient-1"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -109,7 +103,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#linearGradient-1)"
+              fill="url(#okey-linearGradient-1)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -311,15 +305,9 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
           version="1.1"
           viewBox="0 0 66 66"
         >
-          <title>
-            icon-check-large
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs>
             <linearGradient
-              id="linearGradient-1"
+              id="okey-linearGradient-1"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -343,7 +331,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#linearGradient-1)"
+              fill="url(#okey-linearGradient-1)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -545,15 +533,9 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
           version="1.1"
           viewBox="0 0 66 66"
         >
-          <title>
-            icon-check-large
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs>
             <linearGradient
-              id="linearGradient-1"
+              id="okey-linearGradient-1"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -577,7 +559,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#linearGradient-1)"
+              fill="url(#okey-linearGradient-1)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -779,15 +761,9 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
           version="1.1"
           viewBox="0 0 66 66"
         >
-          <title>
-            icon-check-large
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs>
             <linearGradient
-              id="linearGradient-1"
+              id="okey-linearGradient-1"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -811,7 +787,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#linearGradient-1)"
+              fill="url(#okey-linearGradient-1)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -1012,15 +988,9 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
           role="presentation"
           viewBox="0 0 66 66"
         >
-          <title>
-            icon-hourglass-large
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs>
             <linearGradient
-              id="linearGradient-1"
+              id="hourglass-large-linearGradient-1"
               x1="50%"
               x2="41.8489583%"
               y1="97.783801%"
@@ -1044,7 +1014,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#linearGradient-1)"
+              fill="url(#hourglass-large-linearGradient-1)"
               fillRule="nonzero"
               id="116.1---Nano---Connecting-+-Messages"
               transform="translate(-375.000000, -214.000000)"
@@ -1246,15 +1216,9 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
           version="1.1"
           viewBox="0 0 66 66"
         >
-          <title>
-            icon-check-large
-          </title>
-          <desc>
-            Created with Sketch.
-          </desc>
           <defs>
             <linearGradient
-              id="linearGradient-1"
+              id="okey-linearGradient-1"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -1278,7 +1242,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#linearGradient-1)"
+              fill="url(#okey-linearGradient-1)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"

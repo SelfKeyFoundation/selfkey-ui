@@ -10,7 +10,7 @@ exports[`Return Large Icon should show Return Large Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="linearGradient-1"
+      id="return-large-linearGradient-1"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -34,7 +34,7 @@ exports[`Return Large Icon should show Return Large Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#linearGradient-1)"
+      fill="url(#return-large-linearGradient-1)"
       fillRule="nonzero"
       id="507---Exchange-Details-+-Reclaim-Stake-+-Generate-Transaction"
       transform="translate(-375.000000, -273.000000)"

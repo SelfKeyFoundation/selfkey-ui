@@ -32,20 +32,14 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -334,20 +328,14 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -636,20 +624,14 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -938,20 +920,14 @@ exports[`Crypto Chart Box should call toggle function with false 1`] = `
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -1608,20 +1584,14 @@ exports[`Crypto Chart Box should call toggle function with false 2`] = `
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -2278,20 +2248,14 @@ exports[`Crypto Chart Box should call toggle function with true 1`] = `
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -2948,20 +2912,14 @@ exports[`Crypto Chart Box should call toggle function with true 2`] = `
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -3618,20 +3576,14 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -4288,20 +4240,14 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -4958,20 +4904,14 @@ exports[`Crypto Chart Box should show Chart with all 1`] = `
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -5628,20 +5568,14 @@ exports[`Crypto Chart Box should show Chart with less than 5 items 1`] = `
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
@@ -5930,20 +5864,14 @@ exports[`Crypto Chart Box should show chart with Others 1`] = `
               version="1.1"
               viewBox="0 0 24 24"
             >
-              <title>
-                icon-settings
-              </title>
-              <desc>
-                Created with Sketch.
-              </desc>
               <defs />
               <g
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
                 stroke="none"
-                stroke-linejoin="round"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g

@@ -8,15 +8,9 @@ exports[`Wallet  Icon should show Wallet Icon 1`] = `
   role="presentation"
   viewBox="0 0 74 73"
 >
-  <title>
-    icon-wallet
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
   <defs>
     <linearGradient
-      id="linearGradient-1"
+      id="wallet-linearGradient-1"
       x1="50%"
       x2="50%"
       y1="0%"
@@ -40,7 +34,7 @@ exports[`Wallet  Icon should show Wallet Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#linearGradient-1)"
+      fill="url(#wallet-linearGradient-1)"
       fillRule="nonzero"
       id="2-Error---Connection-to-wallet"
       transform="translate(-686.000000, -277.000000)"
