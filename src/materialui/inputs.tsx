@@ -9,6 +9,7 @@ import {
 	IconButton,
 	Theme,
 	createStyles,
+	Modal,
 } from '@material-ui/core';
 import injectSheet, { StyleSheet } from 'react-jss';
 import { DeleteIcon } from '../icons/delete';
@@ -16,6 +17,8 @@ import classNames from 'classnames';
 import { HardDriveIcon } from '../icons/hard-drive';
 import { FileDefaultIcon } from '../icons/file-default';
 import { primary, baseDark, base, error } from '../colors';
+import { ModalWrap } from './modalWithBackButton';
+import { ModalBody2 } from './modalElements';
 
 export const FileUploadLabel = withStyles({
 	root: {
@@ -100,7 +103,84 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 	</Grid>
 ));
 
+class FileView2 extends React.Component<FileViewProps> {
+	state = {
+        open: false
+    };
+
+    handleOpen = () => {
+        this.setState({ open: true });
+    };
+
+    handleClose = () => {
+        this.setState({ open: false });
+    };
+
+    handleState = () => {
+        if (this.state.open === true) {
+            this.setState({ open: false });
+        }
+	};
+	
+	render() {
+		console.log(this.props);
+		const { classes, file, onClearForm, errors = [] } = this.props;
+		return (
+			<div>
+				<Grid item>
+					<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
+						<Grid item>
+							<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
+								<Grid item>
+									<FileDefaultIcon />
+								</Grid>
+								<Grid item className={classes.breakAll}>
+									<a className={classes.noDecoration} onClick={this.handleOpen}>
+										<Typography variant="body2">sdfsd - {file.name}</Typography>
+									</a>
+								</Grid>
+							</Grid>
+						</Grid>
+						<Grid item>
+							<IconButton onClick={() => onClearForm(file)}>
+								<DeleteIcon />
+							</IconButton>
+						</Grid>
+					</Grid>
+					{errors && errors.length ? (
+						<Grid container direction="column" className={classes.fileErrorContainer}>
+							{errors.map((err: string) => (
+								<Grid item>
+									<Typography variant="body1" color="error">
+										{err}
+									</Typography>
+								</Grid>
+							))}
+						</Grid>
+					) : null}
+				</Grid>
+
+				<Modal
+                    open={this.state.open}
+                    onClose={this.handleClose}
+                >
+                    <ModalWrap>
+                        <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
+                        <ModalBody2>
+							<img src={file.url} alt={file.name}/>
+                        </ModalBody2>
+                    </ModalWrap>
+                </Modal>
+			</div>
+		)
+	}
+}
+
+export const FileView3 = withStyles(fileViewStyles)(FileView2);
+
+
 export type FileUploadWidgetProps = any;
+
 
 const fileUploadStyles: StyleSheet = {
 	form: {
@@ -172,7 +252,7 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 						</Grid>
 					</div>
 				</Grid>
-				{file ? <FileView file={file} onClearForm={onClearForm} /> : null}
+				{file ? <FileView3 file={file} onClearForm={onClearForm} /> : null}
 			</Grid>
 		);
 	}
@@ -362,7 +442,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 					</div>
 				</FileUploadGrid>
 				{(files || []).map((f: any, ind: number) => (
-					<FileView key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
+					<FileView3 key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
 				))}
 			</Grid>
 		);

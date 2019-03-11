@@ -41,6 +41,8 @@ var classnames_1 = require("classnames");
 var hard_drive_1 = require("../icons/hard-drive");
 var file_default_1 = require("../icons/file-default");
 var colors_1 = require("../colors");
+var modalWithBackButton_1 = require("./modalWithBackButton");
+var modalElements_1 = require("./modalElements");
 exports.FileUploadLabel = core_1.withStyles({
     root: {
         alignItems: 'center',
@@ -101,6 +103,55 @@ exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
         errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null));
 });
+var FileView2 = /** @class */ (function (_super) {
+    __extends(FileView2, _super);
+    function FileView2() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
+            open: false
+        };
+        _this.handleOpen = function () {
+            _this.setState({ open: true });
+        };
+        _this.handleClose = function () {
+            _this.setState({ open: false });
+        };
+        _this.handleState = function () {
+            if (_this.state.open === true) {
+                _this.setState({ open: false });
+            }
+        };
+        return _this;
+    }
+    FileView2.prototype.render = function () {
+        console.log(this.props);
+        var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
+        return (React.createElement("div", null,
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
+                    React.createElement(core_1.Grid, { item: true },
+                        React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16, wrap: "nowrap" },
+                            React.createElement(core_1.Grid, { item: true },
+                                React.createElement(file_default_1.FileDefaultIcon, null)),
+                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
+                                React.createElement("a", { className: classes.noDecoration, onClick: this.handleOpen },
+                                    React.createElement(core_1.Typography, { variant: "body2" },
+                                        "sdfsd - ",
+                                        file.name))))),
+                    React.createElement(core_1.Grid, { item: true },
+                        React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
+                            React.createElement(delete_1.DeleteIcon, null)))),
+                errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null),
+            React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
+                React.createElement(modalWithBackButton_1.ModalWrap, null,
+                    React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
+                    React.createElement(modalElements_1.ModalBody2, null,
+                        React.createElement("img", { src: file.url, alt: file.name }))))));
+    };
+    return FileView2;
+}(React.Component));
+exports.FileView3 = core_1.withStyles(fileViewStyles)(FileView2);
 var fileUploadStyles = {
     form: {
         width: '100%',
@@ -153,7 +204,7 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
                         React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label", className: classes.button },
                             "Upload",
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
-        file ? React.createElement(exports.FileView, { file: file, onClearForm: onClearForm }) : null));
+        file ? React.createElement(exports.FileView3, { file: file, onClearForm: onClearForm }) : null));
 });
 exports.FileUploadGrid = core_1.withStyles({
     container: {
@@ -293,7 +344,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
                             uploadError ? (React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Typography, { variant: "subtitle1", color: "error" }, uploadError))) : null),
                         React.createElement(exports.FileUploadInput, { id: "key-upload", type: "file" })))),
-            (files || []).map(function (f, ind) { return (React.createElement(exports.FileView, { key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind] })); })));
+            (files || []).map(function (f, ind) { return (React.createElement(exports.FileView3, { key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind] })); })));
     };
     return ArrayFileUploadWidgetComponent;
 }(React.Component));
