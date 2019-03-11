@@ -61,7 +61,12 @@ const fileViewStyles = (theme: Theme) =>
 			textDecoration: 'none'
 		},
 		link: {
-			cursor: 'pointer'
+			cursor: 'pointer',
+		},
+		fileName: {
+			'&:hover': {
+				color: primary
+			}
 		},
 		breakAll: {
 			wordBreak: 'break-all'
@@ -69,6 +74,12 @@ const fileViewStyles = (theme: Theme) =>
 		fileErrorContainer: {
 			marginLeft: '45px',
 		},
+		fullWidth: {
+			width: '100%'
+		},
+		topSpacing: {
+			marginTop: '20px'
+		}
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -126,8 +137,22 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 	};
 	
 	render() {
-		console.log(this.props);
 		const { classes, file, onClearForm, errors = [] } = this.props;
+		const DefaultImageComp = () => {
+			return (
+				<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
+					<Typography variant="body2" className={classes.fileName}>{file.name}</Typography>
+				</a>
+			)
+		};
+		const ImageComp = () => {
+			return (
+				<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
+					<Typography variant="body2" className={classes.fileName}>{file.name}</Typography>
+				</a>
+			)
+		};
+		const isImage = file.mimeType.substr(0, 5) === "image" ? true : false;
 		return (
 			<Grid item>
 				<Grid item>
@@ -138,9 +163,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 									<FileDefaultIcon />
 								</Grid>
 								<Grid item className={classes.breakAll}>
-									<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
-										<Typography variant="body2">{file.name}</Typography>
-									</a>
+									{ isImage ? ImageComp() : DefaultImageComp() }
 								</Grid>
 							</Grid>
 						</Grid>
@@ -169,8 +192,8 @@ class FileViewWithModal extends React.Component<FileViewProps> {
                 >
                     <ModalWrap>
                         <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
-                        <ModalBody2>
-							<img src={file.url} alt={file.name}/>
+                        <ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
+							<img src={file.url} alt={file.name} className={classes.fullWidth} />
                         </ModalBody2>
                     </ModalWrap>
                 </Modal>

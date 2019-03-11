@@ -79,7 +79,12 @@ var fileViewStyles = function (theme) {
             textDecoration: 'none'
         },
         link: {
-            cursor: 'pointer'
+            cursor: 'pointer',
+        },
+        fileName: {
+            '&:hover': {
+                color: colors_1.primary
+            }
         },
         breakAll: {
             wordBreak: 'break-all'
@@ -87,6 +92,12 @@ var fileViewStyles = function (theme) {
         fileErrorContainer: {
             marginLeft: '45px',
         },
+        fullWidth: {
+            width: '100%'
+        },
+        topSpacing: {
+            marginTop: '20px'
+        }
     });
 };
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
@@ -127,8 +138,17 @@ var FileViewWithModal = /** @class */ (function (_super) {
         return _this;
     }
     FileViewWithModal.prototype.render = function () {
-        console.log(this.props);
+        var _this = this;
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
+        var DefaultImageComp = function () {
+            return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url },
+                React.createElement(core_1.Typography, { variant: "body2", className: classes.fileName }, file.name)));
+        };
+        var ImageComp = function () {
+            return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
+                React.createElement(core_1.Typography, { variant: "body2", className: classes.fileName }, file.name)));
+        };
+        var isImage = file.mimeType.substr(0, 5) === "image" ? true : false;
         return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
@@ -136,9 +156,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                         React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16, wrap: "nowrap" },
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(file_default_1.FileDefaultIcon, null)),
-                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
-                                React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: this.handleOpen },
-                                    React.createElement(core_1.Typography, { variant: "body2" }, file.name))))),
+                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll }, isImage ? ImageComp() : DefaultImageComp()))),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
                             React.createElement(delete_1.DeleteIcon, null)))),
@@ -147,8 +165,8 @@ var FileViewWithModal = /** @class */ (function (_super) {
             React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
                 React.createElement(modalWithBackButton_1.ModalWrap, null,
                     React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
-                    React.createElement(modalElements_1.ModalBody2, null,
-                        React.createElement("img", { src: file.url, alt: file.name }))))));
+                    React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
+                        React.createElement("img", { src: file.url, alt: file.name, className: classes.fullWidth }))))));
     };
     return FileViewWithModal;
 }(React.Component));
