@@ -152,9 +152,6 @@ var FileViewWithModal = /** @class */ (function (_super) {
                 React.createElement(core_1.Typography, { variant: "body2", className: classes.fileName }, file.name)));
         };
         var isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg" || file.mimeType === "image/gif" || file.mimeType === "image/svg+xml") ? true : false;
-        console.log(isImage);
-        console.log(file);
-        console.log(file.mimeType);
         return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
