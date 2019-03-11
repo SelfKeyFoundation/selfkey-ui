@@ -60,6 +60,9 @@ const fileViewStyles = (theme: Theme) =>
 		noDecoration: {
 			textDecoration: 'none'
 		},
+		link: {
+			cursor: 'pointer'
+		},
 		breakAll: {
 			wordBreak: 'break-all'
 		},
@@ -103,7 +106,7 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 	</Grid>
 ));
 
-class FileView2 extends React.Component<FileViewProps> {
+class FileViewWithModal extends React.Component<FileViewProps> {
 	state = {
         open: false
     };
@@ -126,7 +129,7 @@ class FileView2 extends React.Component<FileViewProps> {
 		console.log(this.props);
 		const { classes, file, onClearForm, errors = [] } = this.props;
 		return (
-			<div>
+			<Grid item>
 				<Grid item>
 					<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
 						<Grid item>
@@ -135,8 +138,8 @@ class FileView2 extends React.Component<FileViewProps> {
 									<FileDefaultIcon />
 								</Grid>
 								<Grid item className={classes.breakAll}>
-									<a className={classes.noDecoration} onClick={this.handleOpen}>
-										<Typography variant="body2">sdfsd - {file.name}</Typography>
+									<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
+										<Typography variant="body2">{file.name}</Typography>
 									</a>
 								</Grid>
 							</Grid>
@@ -171,12 +174,12 @@ class FileView2 extends React.Component<FileViewProps> {
                         </ModalBody2>
                     </ModalWrap>
                 </Modal>
-			</div>
+			</Grid>
 		)
 	}
 }
 
-export const FileView3 = withStyles(fileViewStyles)(FileView2);
+export const FileViewWithModalComponent = withStyles(fileViewStyles)(FileViewWithModal);
 
 
 export type FileUploadWidgetProps = any;
@@ -252,7 +255,7 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 						</Grid>
 					</div>
 				</Grid>
-				{file ? <FileView3 file={file} onClearForm={onClearForm} /> : null}
+				{file ? <FileViewWithModalComponent file={file} onClearForm={onClearForm} /> : null}
 			</Grid>
 		);
 	}
@@ -442,7 +445,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 					</div>
 				</FileUploadGrid>
 				{(files || []).map((f: any, ind: number) => (
-					<FileView3 key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
+					<FileViewWithModalComponent key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
 				))}
 			</Grid>
 		);
