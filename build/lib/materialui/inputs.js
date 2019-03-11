@@ -95,6 +95,9 @@ var fileViewStyles = function (theme) {
         fullWidth: {
             width: '100%'
         },
+        imageWidth: {
+            maxWidth: '100%'
+        },
         topSpacing: {
             marginTop: '20px'
         }
@@ -166,7 +169,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                 React.createElement(modalWithBackButton_1.ModalWrap, null,
                     React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
                     React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
-                        React.createElement("img", { src: file.url, alt: file.name, className: classes.fullWidth }))))));
+                        React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth }))))));
     };
     return FileViewWithModal;
 }(React.Component));

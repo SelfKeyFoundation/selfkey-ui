@@ -77,6 +77,9 @@ const fileViewStyles = (theme: Theme) =>
 		fullWidth: {
 			width: '100%'
 		},
+		imageWidth: {
+			maxWidth: '100%'
+		},
 		topSpacing: {
 			marginTop: '20px'
 		}
@@ -193,7 +196,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
                     <ModalWrap>
                         <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
                         <ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
-							<img src={file.url} alt={file.name} className={classes.fullWidth} />
+							<img src={file.url} alt={file.name} className={classes.imageWidth} />
                         </ModalBody2>
                     </ModalWrap>
                 </Modal>
