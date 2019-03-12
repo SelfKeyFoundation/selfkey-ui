@@ -147,24 +147,22 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 	
 	render() {
 		const { classes, file, onClearForm, errors = [] } = this.props;
-		const DefaultImageComp = () => {
+		const DefaultComp = () => {
 			return (
 				<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
 					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
 				</a>
 			)
 		};
-		const ImageComp = () => {
+		const ModalPreview = () => {
 			return (
 				<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
 					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
 				</a>
 			)
 		};
-
-		console.log(file);
 		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg") ? true : false;
-		console.log(isImage);
+		const isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
 		return (
 			<Grid item>
 				<Grid item>
@@ -175,7 +173,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 									<FileDefaultIcon />
 								</Grid>
 								<Grid item className={classes.breakAll}>
-									{ isImage ? ImageComp() : DefaultImageComp() }
+									{ isImage || isAudio ? ModalPreview() : DefaultComp() }
 								</Grid>
 							</Grid>
 						</Grid>
@@ -205,7 +203,10 @@ class FileViewWithModal extends React.Component<FileViewProps> {
                     <ModalWrap>
                         <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
                         <ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
-							<img src={file.url} alt={file.name} className={classes.imageWidth} />
+							{ 
+								isAudio ? <audio ref={file.name} src={file.url} controls /> 
+										: <img src={file.url} alt={file.name} className={classes.imageWidth} /> 
+							}
                         </ModalBody2>
                     </ModalWrap>
                 </Modal>
