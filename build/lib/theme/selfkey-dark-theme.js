@@ -403,6 +403,7 @@ var theme = core_1.createMuiTheme({
             root: {
                 backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
+                lineHeight: 'initial',
             },
             icon: {
                 color: 'rgba(147, 176, 193, 0.5)',

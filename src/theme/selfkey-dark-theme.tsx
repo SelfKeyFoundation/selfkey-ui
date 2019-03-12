@@ -408,6 +408,7 @@ const theme = createMuiTheme({
         root: {
           backgroundColor: baseDark,
           borderRadius: '4px',
+          lineHeight: 'initial',
         },
         icon: {
           color: 'rgba(147, 176, 193, 0.5)',
