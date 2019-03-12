@@ -175,7 +175,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
             React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
                 React.createElement(modalWithBackButton_1.ModalWrap, null,
                     React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
-                    React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing }, isAudio ? React.createElement("audio", { ref: file.name, src: file.url, controls: true })
+                    React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing }, isAudio ? React.createElement("audio", { src: file.url, controls: true })
                         : React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth }))))));
     };
     return FileViewWithModal;

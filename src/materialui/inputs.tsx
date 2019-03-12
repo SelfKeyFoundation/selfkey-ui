@@ -204,7 +204,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
                         <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
                         <ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
 							{ 
-								isAudio ? <audio ref={file.name} src={file.url} controls /> 
+								isAudio ? <audio src={file.url} controls /> 
 										: <img src={file.url} alt={file.name} className={classes.imageWidth} /> 
 							}
                         </ModalBody2>
