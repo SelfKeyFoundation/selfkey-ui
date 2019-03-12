@@ -9,6 +9,7 @@ import {
 	IconButton,
 	Theme,
 	createStyles,
+	Modal,
 } from '@material-ui/core';
 import injectSheet, { StyleSheet } from 'react-jss';
 import { DeleteIcon } from '../icons/delete';
@@ -16,6 +17,8 @@ import classNames from 'classnames';
 import { HardDriveIcon } from '../icons/hard-drive';
 import { FileDefaultIcon } from '../icons/file-default';
 import { primary, baseDark, base, error } from '../colors';
+import { ModalWrap } from './modalWithBackButton';
+import { ModalBody2 } from './modalElements';
 
 export const FileUploadLabel = withStyles({
 	root: {
@@ -57,12 +60,35 @@ const fileViewStyles = (theme: Theme) =>
 		noDecoration: {
 			textDecoration: 'none'
 		},
+		link: {
+			cursor: 'pointer',
+		},
+		fileName: {
+			'&:hover': {
+				color: primary
+			}
+		},
 		breakAll: {
 			wordBreak: 'break-all'
 		},
 		fileErrorContainer: {
 			marginLeft: '45px',
 		},
+		fullWidth: {
+			width: '100%'
+		},
+		imageWidth: {
+			maxWidth: '100%'
+		},
+		topSpacing: {
+			marginTop: '20px'
+		},
+		padding: {
+			padding: '0 15px'
+		},
+		bottomSpace: {
+			marginBottom: '20px'
+		}
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -100,7 +126,100 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 	</Grid>
 ));
 
+class FileViewWithModal extends React.Component<FileViewProps> {
+	state = {
+        open: false
+    };
+
+    handleOpen = () => {
+        this.setState({ open: true });
+    };
+
+    handleClose = () => {
+        this.setState({ open: false });
+    };
+
+    handleState = () => {
+        if (this.state.open === true) {
+            this.setState({ open: false });
+        }
+	};
+	
+	render() {
+		const { classes, file, onClearForm, errors = [] } = this.props;
+		const DefaultComp = () => {
+			return (
+				<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
+					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
+				</a>
+			)
+		};
+		const ModalPreview = () => {
+			return (
+				<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
+					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
+				</a>
+			)
+		};
+		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpeg") ? true : false;
+		const isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
+		return (
+			<Grid item>
+				<Grid item>
+					<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap" className={classes.bottomSpace}>
+						<Grid item className={classes.padding}>
+							<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
+								<Grid item>
+									<FileDefaultIcon />
+								</Grid>
+								<Grid item className={classes.breakAll}>
+									{ isImage || isAudio ? ModalPreview() : DefaultComp() }
+								</Grid>
+							</Grid>
+						</Grid>
+						<Grid item>
+							<IconButton onClick={() => onClearForm(file)}>
+								<DeleteIcon />
+							</IconButton>
+						</Grid>
+					</Grid>
+					{errors && errors.length ? (
+						<Grid container direction="column" className={classes.fileErrorContainer}>
+							{errors.map((err: string) => (
+								<Grid item>
+									<Typography variant="body1" color="error">
+										{err}
+									</Typography>
+								</Grid>
+							))}
+						</Grid>
+					) : null}
+				</Grid>
+
+				<Modal
+                    open={this.state.open}
+                    onClose={this.handleClose}
+                >
+                    <ModalWrap>
+                        <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
+                        <ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
+							{ 
+								isAudio ? <audio ref={file.name} src={file.url} controls /> 
+										: <img src={file.url} alt={file.name} className={classes.imageWidth} /> 
+							}
+                        </ModalBody2>
+                    </ModalWrap>
+                </Modal>
+			</Grid>
+		)
+	}
+}
+
+export const FileViewWithModalComponent = withStyles(fileViewStyles)(FileViewWithModal);
+
+
 export type FileUploadWidgetProps = any;
+
 
 const fileUploadStyles: StyleSheet = {
 	form: {
@@ -172,7 +291,7 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 						</Grid>
 					</div>
 				</Grid>
-				{file ? <FileView file={file} onClearForm={onClearForm} /> : null}
+				{file ? <FileViewWithModalComponent file={file} onClearForm={onClearForm} /> : null}
 			</Grid>
 		);
 	}
@@ -362,7 +481,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 					</div>
 				</FileUploadGrid>
 				{(files || []).map((f: any, ind: number) => (
-					<FileView key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
+					<FileViewWithModalComponent key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
 				))}
 			</Grid>
 		);
