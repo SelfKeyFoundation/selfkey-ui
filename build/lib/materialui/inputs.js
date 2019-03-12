@@ -157,7 +157,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
             return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
                 React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
         };
-        var isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg") ? true : false;
+        var isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpeg") ? true : false;
         var isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
         return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { item: true },

@@ -161,7 +161,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 				</a>
 			)
 		};
-		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg") ? true : false;
+		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpeg") ? true : false;
 		const isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
 		return (
 			<Grid item>
