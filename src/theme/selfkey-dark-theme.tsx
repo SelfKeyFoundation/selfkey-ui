@@ -248,6 +248,12 @@ const theme = createMuiTheme({
         },
       },
       MuiInputBase: {
+        input: {
+          '&::placeholder': {
+            color: grey,
+            opacity: 1,
+          }
+        },
         inputType: {
           height: '22px',
         },
@@ -414,7 +420,7 @@ const theme = createMuiTheme({
           color: 'rgba(147, 176, 193, 0.5)',
         },
         selectMenu: {
-          color: typography,
+          color: white,
           fontSize: '14px',
           lineHeight: '21px',
         },

@@ -243,6 +243,12 @@ var theme = core_1.createMuiTheme({
             },
         },
         MuiInputBase: {
+            input: {
+                '&::placeholder': {
+                    color: colors_1.grey,
+                    opacity: 1,
+                }
+            },
             inputType: {
                 height: '22px',
             },
@@ -409,7 +415,7 @@ var theme = core_1.createMuiTheme({
                 color: 'rgba(147, 176, 193, 0.5)',
             },
             selectMenu: {
-                color: colors_1.typography,
+                color: colors_1.white,
                 fontSize: '14px',
                 lineHeight: '21px',
             },
