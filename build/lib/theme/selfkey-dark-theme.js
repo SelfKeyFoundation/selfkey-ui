@@ -199,7 +199,7 @@ var theme = core_1.createMuiTheme({
                 borderRadius: '4px',
                 border: '1px solid #384656',
                 boxSizing: 'border-box',
-                color: colors_1.typography,
+                color: colors_1.white,
                 fontSize: '14px',
                 height: '44px',
                 lineHeight: '21px',

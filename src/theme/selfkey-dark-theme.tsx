@@ -204,7 +204,7 @@ const theme = createMuiTheme({
           borderRadius: '4px',
           border: '1px solid #384656',
           boxSizing: 'border-box',
-          color: typography,
+          color: white,
           fontSize: '14px',
           height: '44px',
           lineHeight: '21px',
