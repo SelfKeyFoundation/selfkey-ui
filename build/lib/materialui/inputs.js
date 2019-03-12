@@ -100,6 +100,12 @@ var fileViewStyles = function (theme) {
         },
         topSpacing: {
             marginTop: '20px'
+        },
+        padding: {
+            padding: '0 15px'
+        },
+        bottomSpace: {
+            marginBottom: '20px'
         }
     });
 };
@@ -145,17 +151,19 @@ var FileViewWithModal = /** @class */ (function (_super) {
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
         var DefaultImageComp = function () {
             return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url },
-                React.createElement(core_1.Typography, { variant: "body2", className: classes.fileName }, file.name)));
+                React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
         };
         var ImageComp = function () {
             return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
-                React.createElement(core_1.Typography, { variant: "body2", className: classes.fileName }, file.name)));
+                React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
         };
-        var isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg" || file.mimeType === "image/gif" || file.mimeType === "image/svg+xml") ? true : false;
+        console.log(file);
+        var isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg") ? true : false;
+        console.log(isImage);
         return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { item: true },
-                React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
-                    React.createElement(core_1.Grid, { item: true },
+                React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap", className: classes.bottomSpace },
+                    React.createElement(core_1.Grid, { item: true, className: classes.padding },
                         React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16, wrap: "nowrap" },
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(file_default_1.FileDefaultIcon, null)),

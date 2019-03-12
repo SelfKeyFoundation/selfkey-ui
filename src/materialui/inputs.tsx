@@ -82,6 +82,12 @@ const fileViewStyles = (theme: Theme) =>
 		},
 		topSpacing: {
 			marginTop: '20px'
+		},
+		padding: {
+			padding: '0 15px'
+		},
+		bottomSpace: {
+			marginBottom: '20px'
 		}
 	});
 
@@ -144,23 +150,26 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 		const DefaultImageComp = () => {
 			return (
 				<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
-					<Typography variant="body2" className={classes.fileName}>{file.name}</Typography>
+					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
 				</a>
 			)
 		};
 		const ImageComp = () => {
 			return (
 				<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
-					<Typography variant="body2" className={classes.fileName}>{file.name}</Typography>
+					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
 				</a>
 			)
 		};
-		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg" || file.mimeType === "image/gif" || file.mimeType === "image/svg+xml") ? true : false;
+
+		console.log(file);
+		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpg" || file.mimeType === "image/jpeg") ? true : false;
+		console.log(isImage);
 		return (
 			<Grid item>
 				<Grid item>
-					<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
-						<Grid item>
+					<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap" className={classes.bottomSpace}>
+						<Grid item className={classes.padding}>
 							<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
 								<Grid item>
 									<FileDefaultIcon />
