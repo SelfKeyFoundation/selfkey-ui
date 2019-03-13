@@ -13,6 +13,7 @@ const styles: StyleSheet = {
 			width: '100%',
 			'& input': {
 				boxSizing: 'border-box',
+				color: 'white',
 				width: '100%',
 				background: `url(${calendarIcon}) #1E262E no-repeat right 10px center`,
 				paddingRight: '35px',

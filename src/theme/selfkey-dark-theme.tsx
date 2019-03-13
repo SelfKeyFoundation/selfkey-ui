@@ -204,7 +204,7 @@ const theme = createMuiTheme({
           borderRadius: '4px',
           border: '1px solid #384656',
           boxSizing: 'border-box',
-          color: typography,
+          color: white,
           fontSize: '14px',
           height: '44px',
           lineHeight: '21px',
@@ -248,6 +248,12 @@ const theme = createMuiTheme({
         },
       },
       MuiInputBase: {
+        input: {
+          '&::placeholder': {
+            color: grey,
+            opacity: 1,
+          }
+        },
         inputType: {
           height: '22px',
         },
@@ -408,12 +414,13 @@ const theme = createMuiTheme({
         root: {
           backgroundColor: baseDark,
           borderRadius: '4px',
+          lineHeight: 'initial',
         },
         icon: {
           color: 'rgba(147, 176, 193, 0.5)',
         },
         selectMenu: {
-          color: typography,
+          color: white,
           fontSize: '14px',
           lineHeight: '21px',
         },

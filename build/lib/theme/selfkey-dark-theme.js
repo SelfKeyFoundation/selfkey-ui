@@ -199,7 +199,7 @@ var theme = core_1.createMuiTheme({
                 borderRadius: '4px',
                 border: '1px solid #384656',
                 boxSizing: 'border-box',
-                color: colors_1.typography,
+                color: colors_1.white,
                 fontSize: '14px',
                 height: '44px',
                 lineHeight: '21px',
@@ -243,6 +243,12 @@ var theme = core_1.createMuiTheme({
             },
         },
         MuiInputBase: {
+            input: {
+                '&::placeholder': {
+                    color: colors_1.grey,
+                    opacity: 1,
+                }
+            },
             inputType: {
                 height: '22px',
             },
@@ -403,12 +409,13 @@ var theme = core_1.createMuiTheme({
             root: {
                 backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
+                lineHeight: 'initial',
             },
             icon: {
                 color: 'rgba(147, 176, 193, 0.5)',
             },
             selectMenu: {
-                color: colors_1.typography,
+                color: colors_1.white,
                 fontSize: '14px',
                 lineHeight: '21px',
             },
