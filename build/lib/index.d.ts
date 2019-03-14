@@ -87,6 +87,8 @@ export { HourGlassSmallIcon } from './icons/hourglass-small';
 export { FilePdfIcon } from './icons/file-pdf';
 export { FileImageIcon } from './icons/file-image';
 export { FileDefaultIcon } from './icons/file-default';
+export { FileAudioIcon } from './icons/file-audio';
+export { FileVideoIcon } from './icons/file-video';
 export { TickIcon } from './icons/tick';
 export { UnlockIcon } from './icons/unlock';
 export { ReturnIcon } from './icons/return';
