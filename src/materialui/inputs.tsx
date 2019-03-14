@@ -19,6 +19,9 @@ import { FileDefaultIcon } from '../icons/file-default';
 import { primary, baseDark, base, error } from '../colors';
 import { ModalWrap } from './modalWithBackButton';
 import { ModalBody2 } from './modalElements';
+import { FileImageIcon } from '../icons/file-image';
+import { FilePdfIcon } from '../icons/file-pdf';
+import { FileAudioIcon } from '../icons/file-audio';
 
 export const FileUploadLabel = withStyles({
 	root: {
@@ -147,22 +150,59 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 	
 	render() {
 		const { classes, file, onClearForm, errors = [] } = this.props;
-		const DefaultComp = () => {
-			return (
-				<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
-					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
-				</a>
-			)
+
+		const UploadedFile = (fileType: any) => {
+			console.log(fileType);
+			const type = fileType.fileType;
+			if (type === "image/png"|| type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
+				return (
+					<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
+						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
+					</a>
+				)
+			} else {
+				return (
+					<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
+						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
+					</a>
+				)
+			}
 		};
-		const ModalPreview = () => {
-			return (
-				<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
-					<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
-				</a>
-			)
+
+		const FileTypeIcon = (fileType: any) => {
+			const type = fileType.fileType;
+			if (type === "image/png" || type === "image/jpeg") {
+				return (
+					<FileImageIcon />
+				)
+			} else if (type === "application/pdf") {
+				return (
+					<FilePdfIcon />
+				)
+			} else if (type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
+				return (
+					<FileAudioIcon />
+				)
+			} else {
+				return (
+					<FileDefaultIcon />
+				)
+			}
 		};
-		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpeg") ? true : false;
-		const isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
+
+		const PreviewType = (fileType: any) => {
+			const type = fileType.fileType;
+			if (type === "image/png" || type === "image/jpeg") {
+				return (
+					<img src={file.url} alt={file.name} className={classes.imageWidth} />
+				)
+			} else {
+				return (
+					<audio src={file.url} controls />
+				)
+			}
+		};
+
 		return (
 			<Grid item>
 				<Grid item>
@@ -170,10 +210,10 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 						<Grid item className={classes.padding}>
 							<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
 								<Grid item>
-									<FileDefaultIcon />
+									<FileTypeIcon fileType={file.mimeType} />
 								</Grid>
 								<Grid item className={classes.breakAll}>
-									{ isImage || isAudio ? ModalPreview() : DefaultComp() }
+									<UploadedFile fileType={file.mimeType} />
 								</Grid>
 							</Grid>
 						</Grid>
@@ -203,10 +243,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
                     <ModalWrap>
                         <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
                         <ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
-							{ 
-								isAudio ? <audio src={file.url} controls /> 
-										: <img src={file.url} alt={file.name} className={classes.imageWidth} /> 
-							}
+							<PreviewType fileType={file.mimeType} />
                         </ModalBody2>
                     </ModalWrap>
                 </Modal>

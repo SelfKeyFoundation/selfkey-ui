@@ -302,6 +302,8 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 					Colors
 				</Typography>
 				<ColorStories />
+				<br/>
+				<br/>
 
 				<Typography variant="h1" color="error" gutterBottom>
 					Typography
