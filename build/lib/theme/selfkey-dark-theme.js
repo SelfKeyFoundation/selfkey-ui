@@ -38,6 +38,8 @@ __export(require("../icons/attribute-alert"));
 __export(require("../icons/certificate"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
+var muiadd_1 = require("../icons/muiadd");
+exports.MuiAddIcon = muiadd_1.MuiAddIcon;
 var muidelete_1 = require("../icons/muidelete");
 exports.MuiDeleteIcon = muidelete_1.MuiDeleteIcon;
 var muivisibility_1 = require("../icons/muivisibility");

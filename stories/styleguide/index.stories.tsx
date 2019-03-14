@@ -80,7 +80,11 @@ const commonStory = storiesOf('Common', module).addDecorator(lightOnDark) as Sto
 
 commonStory.addWithJSX('Slider', () => {});
 
-commonStory.addWithJSX('Icons', () => <IconsStory />);
+commonStory.addWithJSX('Icons', () => (
+	<SelfkeyDarkTheme>
+		<IconsStory />
+	</SelfkeyDarkTheme>
+));
 
 const tStory = storiesOf('Typography', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
@@ -305,8 +309,8 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 					Colors
 				</Typography>
 				<ColorStories />
-				<br/>
-				<br/>
+				<br />
+				<br />
 
 				<Typography variant="h1" color="error" gutterBottom>
 					Typography
