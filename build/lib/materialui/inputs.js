@@ -43,6 +43,9 @@ var file_default_1 = require("../icons/file-default");
 var colors_1 = require("../colors");
 var modalWithBackButton_1 = require("./modalWithBackButton");
 var modalElements_1 = require("./modalElements");
+var file_image_1 = require("../icons/file-image");
+var file_pdf_1 = require("../icons/file-pdf");
+var file_audio_1 = require("../icons/file-audio");
 exports.FileUploadLabel = core_1.withStyles({
     root: {
         alignItems: 'center',
@@ -159,14 +162,29 @@ var FileViewWithModal = /** @class */ (function (_super) {
         };
         var isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpeg") ? true : false;
         var isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
+        var isPdf = file.mimeType === "application/pdf" ? true : false;
+        var FileTypeIcon = function () {
+            if (isImage) {
+                return (React.createElement(file_image_1.FileImageIcon, null));
+            }
+            else if (isPdf) {
+                return (React.createElement(file_pdf_1.FilePdfIcon, null));
+            }
+            else if (isAudio) {
+                return (React.createElement(file_audio_1.FileAudioIcon, null));
+            }
+            else {
+                return (React.createElement(file_default_1.FileDefaultIcon, null));
+            }
+        };
         return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap", className: classes.bottomSpace },
                     React.createElement(core_1.Grid, { item: true, className: classes.padding },
                         React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16, wrap: "nowrap" },
                             React.createElement(core_1.Grid, { item: true },
-                                React.createElement(file_default_1.FileDefaultIcon, null)),
-                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll }, isImage || isAudio ? ModalPreview() : DefaultComp()))),
+                                React.createElement(FileTypeIcon, null)),
+                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll }, isImage || isAudio ? React.createElement(ModalPreview, null) : React.createElement(DefaultComp, null)))),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
                             React.createElement(delete_1.DeleteIcon, null)))),

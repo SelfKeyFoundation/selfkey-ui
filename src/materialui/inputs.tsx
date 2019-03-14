@@ -19,6 +19,9 @@ import { FileDefaultIcon } from '../icons/file-default';
 import { primary, baseDark, base, error } from '../colors';
 import { ModalWrap } from './modalWithBackButton';
 import { ModalBody2 } from './modalElements';
+import { FileImageIcon } from '../icons/file-image';
+import { FilePdfIcon } from '../icons/file-pdf';
+import { FileAudioIcon } from '../icons/file-audio';
 
 export const FileUploadLabel = withStyles({
 	root: {
@@ -163,6 +166,27 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 		};
 		const isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpeg") ? true : false;
 		const isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
+		const isPdf = file.mimeType === "application/pdf" ? true : false;
+		const FileTypeIcon = () => {
+			if (isImage) {
+				return (
+					<FileImageIcon />
+				)
+			} else if (isPdf) {
+				return (
+					<FilePdfIcon />
+				)
+			} else if (isAudio) {
+				return (
+					<FileAudioIcon />
+				)
+			} else {
+				return (
+					<FileDefaultIcon />
+				)
+			}
+
+		};
 		return (
 			<Grid item>
 				<Grid item>
@@ -170,10 +194,10 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 						<Grid item className={classes.padding}>
 							<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
 								<Grid item>
-									<FileDefaultIcon />
+									<FileTypeIcon />
 								</Grid>
 								<Grid item className={classes.breakAll}>
-									{ isImage || isAudio ? ModalPreview() : DefaultComp() }
+									{ isImage || isAudio ? <ModalPreview /> : <DefaultComp /> }
 								</Grid>
 							</Grid>
 						</Grid>
