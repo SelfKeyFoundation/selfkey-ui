@@ -152,29 +152,40 @@ var FileViewWithModal = /** @class */ (function (_super) {
     FileViewWithModal.prototype.render = function () {
         var _this = this;
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
-        var DefaultComp = function () {
-            return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url },
-                React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
+        var UploadedFile = function (fileType) {
+            console.log(fileType);
+            var type = fileType.fileType;
+            if (type === "image/png" || type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
+                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
+                    React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
+            }
+            else {
+                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url },
+                    React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
+            }
         };
-        var ModalPreview = function () {
-            return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
-                React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
-        };
-        var isImage = (file.mimeType === "image/png" || file.mimeType === "image/jpeg") ? true : false;
-        var isAudio = (file.mimeType === "audio/ogg" || file.mimeType === "audio/mp3" || file.mimeType === "audio/m4a" || file.mimeType === "audio/x-wav");
-        var isPdf = file.mimeType === "application/pdf" ? true : false;
-        var FileTypeIcon = function () {
-            if (isImage) {
+        var FileTypeIcon = function (fileType) {
+            var type = fileType.fileType;
+            if (type === "image/png" || type === "image/jpeg") {
                 return (React.createElement(file_image_1.FileImageIcon, null));
             }
-            else if (isPdf) {
+            else if (type === "application/pdf") {
                 return (React.createElement(file_pdf_1.FilePdfIcon, null));
             }
-            else if (isAudio) {
+            else if (type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
                 return (React.createElement(file_audio_1.FileAudioIcon, null));
             }
             else {
                 return (React.createElement(file_default_1.FileDefaultIcon, null));
+            }
+        };
+        var PreviewType = function (fileType) {
+            var type = fileType.fileType;
+            if (type === "image/png" || type === "image/jpeg") {
+                return (React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth }));
+            }
+            else {
+                return (React.createElement("audio", { src: file.url, controls: true }));
             }
         };
         return (React.createElement(core_1.Grid, { item: true },
@@ -183,8 +194,9 @@ var FileViewWithModal = /** @class */ (function (_super) {
                     React.createElement(core_1.Grid, { item: true, className: classes.padding },
                         React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 16, wrap: "nowrap" },
                             React.createElement(core_1.Grid, { item: true },
-                                React.createElement(FileTypeIcon, null)),
-                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll }, isImage || isAudio ? React.createElement(ModalPreview, null) : React.createElement(DefaultComp, null)))),
+                                React.createElement(FileTypeIcon, { fileType: file.mimeType })),
+                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
+                                React.createElement(UploadedFile, { fileType: file.mimeType })))),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
                             React.createElement(delete_1.DeleteIcon, null)))),
@@ -193,8 +205,8 @@ var FileViewWithModal = /** @class */ (function (_super) {
             React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
                 React.createElement(modalWithBackButton_1.ModalWrap, null,
                     React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
-                    React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing }, isAudio ? React.createElement("audio", { src: file.url, controls: true })
-                        : React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth }))))));
+                    React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
+                        React.createElement(PreviewType, { fileType: file.mimeType }))))));
     };
     return FileViewWithModal;
 }(React.Component));
