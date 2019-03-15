@@ -222,4 +222,6 @@ var attribute_alert_1 = require("./icons/attribute-alert");
 exports.AttributeAlertIcon = attribute_alert_1.AttributeAlertIcon;
 var certificate_1 = require("./icons/certificate");
 exports.CertificateIcon = certificate_1.CertificateIcon;
+var hourglass_simple_1 = require("./icons/hourglass-simple");
+exports.SimpleHourglassIcon = hourglass_simple_1.SimpleHourglassIcon;
 //# sourceMappingURL=index.js.map

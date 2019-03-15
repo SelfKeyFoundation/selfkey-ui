@@ -19,6 +19,7 @@ export * from '../materialui/inputs';
 export * from '../materialui/lists';
 export * from '../materialui/modalElements';
 export * from '../materialui/pagination';
+export * from '../materialui/statuses';
 export * from '../materialui/tables';
 export * from '../materialui/tooltipArrow';
 export * from '../materialui/typography';
@@ -42,6 +43,7 @@ export * from '../icons/sk-id';
 export * from '../icons/upload';
 export * from '../icons/attribute-alert';
 export * from '../icons/certificate';
+export * from '../icons/hourglass-simple';
 
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiDeleteIcon } from '../icons/muidelete';
