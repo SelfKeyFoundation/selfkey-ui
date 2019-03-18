@@ -56,6 +56,7 @@ import FileUploadStory from './materialui/story-fileUpload';
 import ModalStories from './materialui/story-modals';
 import DatePickerStories from './materialui/story-datepickers';
 import SliderStory from './materialui/story-sliders';
+import { IconsStory } from './icons';
 
 setup();
 
@@ -78,6 +79,12 @@ const transferModal = host({
 const commonStory = storiesOf('Common', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
 commonStory.addWithJSX('Slider', () => {});
+
+commonStory.addWithJSX('Icons', () => (
+	<SelfkeyDarkTheme>
+		<IconsStory />
+	</SelfkeyDarkTheme>
+));
 
 const tStory = storiesOf('Typography', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
@@ -302,8 +309,8 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 					Colors
 				</Typography>
 				<ColorStories />
-				<br/>
-				<br/>
+				<br />
+				<br />
 
 				<Typography variant="h1" color="error" gutterBottom>
 					Typography
