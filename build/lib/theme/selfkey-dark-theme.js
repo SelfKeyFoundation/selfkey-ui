@@ -28,6 +28,7 @@ __export(require("../icons/file-image"));
 __export(require("../icons/file-default"));
 __export(require("../icons/file-audio"));
 __export(require("../icons/file-video"));
+__export(require("../icons/file-multiple"));
 __export(require("../icons/book"));
 __export(require("../icons/id-card"));
 __export(require("../icons/payment"));
