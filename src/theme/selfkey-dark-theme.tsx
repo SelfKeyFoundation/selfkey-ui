@@ -34,6 +34,7 @@ export * from '../icons/file-image';
 export * from '../icons/file-default';
 export * from '../icons/file-audio';
 export * from '../icons/file-video';
+export * from '../icons/file-multiple';
 export * from '../icons/book';
 export * from '../icons/id-card';
 export * from '../icons/payment';
