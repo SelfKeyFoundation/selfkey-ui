@@ -89,6 +89,87 @@ class DropdownStories extends React.Component {
 						))}
 					</Select>
 				</FormControl>
+
+				<br />
+				<br />
+				<br />
+
+				<FormControl variant="filled">
+					<Select
+						value={this.state.country}
+						onChange={this.handleChange}
+						native
+						displayEmpty
+						name="country"
+						disableUnderline
+						IconComponent={KeyboardArrowDown}
+						input={<Input disableUnderline />}
+					>
+						<option value="">
+							Choose...
+						</option>
+						{[
+							'Andorra',
+							'Malta',
+							'Russia',
+							'Spain',
+							'Uruguay',
+							'Uganda',
+							'Vatican',
+							'Venezuela',
+							'Zimbabwe',
+							'Andorra',
+							'Malta',
+							'Russia',
+							'Spain',
+							'Uruguay',
+							'Uganda',
+							'Vatican',
+							'Venezuela',
+							'Zimbabwe',
+							'Andorra',
+							'Malta',
+							'Russia',
+							'Spain',
+							'Uruguay',
+							'Uganda',
+							'Vatican',
+							'Venezuela',
+							'Zimbabwe',
+							'Andorra',
+							'Malta',
+							'Russia',
+							'Spain',
+							'Uruguay',
+							'Uganda',
+							'Vatican',
+							'Venezuela',
+							'Zimbabwe',
+							'Andorra',
+							'Malta',
+							'Russia',
+							'Spain',
+							'Uruguay',
+							'Uganda',
+							'Vatican',
+							'Venezuela',
+							'Zimbabwe',
+							'Andorra',
+							'Malta',
+							'Russia',
+							'Spain',
+							'Uruguay',
+							'Uganda',
+							'Vatican',
+							'Venezuela',
+							'Zimbabwe',
+						].map(item => (
+							<option key={item} value={item}>
+								{item}
+							</option>
+						))}
+					</Select>
+				</FormControl>
 			</form>
 		);
 	}
