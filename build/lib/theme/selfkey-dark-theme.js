@@ -413,7 +413,9 @@ var theme = core_1.createMuiTheme({
                 borderRadius: '4px',
                 lineHeight: 'initial',
                 '& option': {
-                    background: colors_1.baseDark,
+                    backgroundColor: colors_1.baseDark + " !important",
+                    border: "1px solid " + colors_1.baseDark + " !important",
+                    color: "#FFFFFF !important"
                 },
             },
             icon: {
