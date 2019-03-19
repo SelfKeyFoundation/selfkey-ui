@@ -61,15 +61,11 @@ var theme = core_1.createMuiTheme({
             primary: colors_1.white,
             secondary: colors_1.grey,
             disabled: colors_1.grey,
-            hint: "rgba(0, 0, 0, 0.38)",
-        }
+            hint: 'rgba(0, 0, 0, 0.38)',
+        },
     },
     typography: {
-        fontFamily: [
-            'Lato',
-            'arial',
-            'sans-serif'
-        ].join(','),
+        fontFamily: ['Lato', 'arial', 'sans-serif'].join(','),
         fontSize: 16,
         useNextVariants: true,
     },
@@ -189,7 +185,7 @@ var theme = core_1.createMuiTheme({
             },
             button: {
                 margin: '0',
-                "&:hover": {
+                '&:hover': {
                     backgroundColor: '#394553',
                 },
             },
@@ -211,7 +207,7 @@ var theme = core_1.createMuiTheme({
                 lineHeight: '21px',
                 paddingLeft: '16px',
                 '&$focused': {
-                    "&$focused:not($error):not($disabled)": {
+                    '&$focused:not($error):not($disabled)': {
                         border: "1px solid " + colors_1.primary,
                         boxShadow: "0 0 3px 1px " + colors_1.primary,
                     },
@@ -253,7 +249,7 @@ var theme = core_1.createMuiTheme({
                 '&::placeholder': {
                     color: colors_1.grey,
                     opacity: 1,
-                }
+                },
             },
             inputType: {
                 height: '22px',
@@ -271,7 +267,7 @@ var theme = core_1.createMuiTheme({
             positionEnd: {
                 marginLeft: '151px',
                 position: 'absolute',
-            }
+            },
         },
         MuiSvgIcon: {
             root: {
@@ -416,6 +412,9 @@ var theme = core_1.createMuiTheme({
                 backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
                 lineHeight: 'initial',
+                '& option': {
+                    background: colors_1.baseDark,
+                },
             },
             icon: {
                 color: 'rgba(147, 176, 193, 0.5)',
@@ -526,7 +525,7 @@ var theme = core_1.createMuiTheme({
                 },
                 '&$disabled': {
                     color: colors_1.primary,
-                    border: '2px solid #1CA9BA'
+                    border: '2px solid #1CA9BA',
                 },
             },
             outlinedSecondary: {
@@ -693,7 +692,7 @@ var theme = core_1.createMuiTheme({
         MuiModal: {
             root: {
                 height: '100%',
-                overflow: 'auto'
+                overflow: 'auto',
             },
         },
         MuiBackdrop: {
@@ -766,13 +765,13 @@ var theme = core_1.createMuiTheme({
             },
             colorDefault: {
                 backgroundColor: colors_1.baseLight,
-            }
+            },
         },
     },
 });
 exports.SelfkeyDarkTheme = function (_a) {
     var children = _a.children;
-    return (React.createElement(core_1.MuiThemeProvider, { theme: theme }, children));
+    return React.createElement(core_1.MuiThemeProvider, { theme: theme }, children);
 };
 exports.default = exports.SelfkeyDarkTheme;
 //# sourceMappingURL=selfkey-dark-theme.js.map
