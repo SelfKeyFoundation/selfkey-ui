@@ -162,7 +162,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 				)
 			} else {
 				return (
-					<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
+					<a className={`${classes.noDecoration} ${classes.link}`} href={file.url} target="_blank">
 						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
 					</a>
 				)

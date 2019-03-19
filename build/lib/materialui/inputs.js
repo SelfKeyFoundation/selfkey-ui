@@ -160,7 +160,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
             }
             else {
-                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url },
+                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url, target: "_blank" },
                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
             }
         };
