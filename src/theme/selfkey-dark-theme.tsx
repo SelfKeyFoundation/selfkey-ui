@@ -406,7 +406,9 @@ const theme = createMuiTheme({
 				borderRadius: '4px',
 				lineHeight: 'initial',
 				'& option': {
-					background: baseDark,
+					backgroundColor: `${baseDark} !important`,
+					border: `1px solid ${baseDark} !important`,
+					color: `#FFFFFF !important`
 				},
 			},
 			icon: {
