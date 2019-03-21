@@ -140,7 +140,12 @@ var FileViewWithModal = /** @class */ (function (_super) {
             _this.setState({ open: true });
         };
         _this.handleOpenExternal = function (file) {
-            window.open(file.url);
+            if (window.electron) {
+                window.open(file.content);
+            }
+            else {
+                window.open(file.url);
+            }
         };
         _this.handleClose = function () {
             _this.setState({ open: false });

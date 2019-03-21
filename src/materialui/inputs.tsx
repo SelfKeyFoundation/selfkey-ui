@@ -23,6 +23,11 @@ import { FileImageIcon } from '../icons/file-image';
 import { FilePdfIcon } from '../icons/file-pdf';
 import { FileAudioIcon } from '../icons/file-audio';
 
+
+declare global {
+    interface Window { electron: any; }
+}
+
 export const FileUploadLabel = withStyles({
 	root: {
 		alignItems: 'center',
@@ -139,7 +144,11 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 	};
 	
 	handleOpenExternal = (file: any) => {
-		window.open(file.url);
+		if(window.electron) {
+			window.open(file.content);
+		} else {
+			window.open(file.url);
+		}
 	};
 
     handleClose = () => {
