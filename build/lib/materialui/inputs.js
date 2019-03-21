@@ -141,7 +141,9 @@ var FileViewWithModal = /** @class */ (function (_super) {
         };
         _this.handleOpenExternal = function (file) {
             if (window.isElectron) {
-                window.open(file.content);
+                var pdfWindow = window.open('');
+                if (pdfWindow)
+                    pdfWindow.document.write("<iframe width='100%' height='100%' src='" + file.content + "'></iframe>");
             }
             else {
                 window.open(file.url);

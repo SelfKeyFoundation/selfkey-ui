@@ -145,7 +145,8 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 	
 	handleOpenExternal = (file: any) => {
 		if(window.isElectron) {
-			window.open(file.content);
+			const pdfWindow = window.open('');
+			if (pdfWindow) pdfWindow.document.write(`<iframe width='100%' height='100%' src='${file.content}'></iframe>`);
 		} else {
 			window.open(file.url);
 		}
