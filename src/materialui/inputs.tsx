@@ -23,11 +23,6 @@ import { FileImageIcon } from '../icons/file-image';
 import { FilePdfIcon } from '../icons/file-pdf';
 import { FileAudioIcon } from '../icons/file-audio';
 
-
-declare global {
-    interface Window { isElectron: any; }
-}
-
 export const FileUploadLabel = withStyles({
 	root: {
 		alignItems: 'center',
@@ -96,6 +91,17 @@ const fileViewStyles = (theme: Theme) =>
 		},
 		bottomSpace: {
 			marginBottom: '20px'
+		},
+		pdfWrapper: {
+			position:'relative',
+			paddingTop: '100%'
+		},
+		pdfFrame: {
+			position: 'absolute',
+			top: 0,
+			left: 0,
+			width: '100%',
+			height: '100%'
 		}
 	});
 
@@ -206,7 +212,9 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 				)
 			} else if (type === "application/pdf") {
 				return (
-					<iframe width='100%' height='100%' src={file.content}></iframe>
+					<div className={classes.pdfWrapper}>
+						<iframe src={file.content} className={classes.pdfFrame}></iframe>
+					</div>
 				)
 			} else {
 				return <></>;

@@ -109,6 +109,17 @@ var fileViewStyles = function (theme) {
         },
         bottomSpace: {
             marginBottom: '20px'
+        },
+        pdfWrapper: {
+            position: 'relative',
+            paddingTop: '100%'
+        },
+        pdfFrame: {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%'
         }
     });
 };
@@ -187,7 +198,8 @@ var FileViewWithModal = /** @class */ (function (_super) {
                 return (React.createElement("audio", { src: file.url, controls: true }));
             }
             else if (type === "application/pdf") {
-                return (React.createElement("iframe", { width: '100%', height: '100%', src: file.content }));
+                return (React.createElement("div", { className: classes.pdfWrapper },
+                    React.createElement("iframe", { src: file.content, className: classes.pdfFrame })));
             }
             else {
                 return React.createElement(React.Fragment, null);
