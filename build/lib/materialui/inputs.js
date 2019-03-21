@@ -139,16 +139,6 @@ var FileViewWithModal = /** @class */ (function (_super) {
         _this.handleOpen = function () {
             _this.setState({ open: true });
         };
-        _this.handleOpenExternal = function (file) {
-            if (window.isElectron) {
-                var pdfWindow = window.open('', 'pdfModal');
-                if (pdfWindow)
-                    pdfWindow.document.write("<iframe width='100%' height='100%' src='" + file.content + "'></iframe>");
-            }
-            else {
-                window.open(file.url);
-            }
-        };
         _this.handleClose = function () {
             _this.setState({ open: false });
         };
@@ -164,12 +154,12 @@ var FileViewWithModal = /** @class */ (function (_super) {
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
         var UploadedFile = function (fileType) {
             var type = fileType.fileType;
-            if (type === "image/png" || type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
+            if (type === "image/png" || type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav" || type === "application/pdf") {
                 return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
             }
             else {
-                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: function () { return _this.handleOpenExternal(file); } },
+                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url },
                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
             }
         };
@@ -193,8 +183,14 @@ var FileViewWithModal = /** @class */ (function (_super) {
             if (type === "image/png" || type === "image/jpeg") {
                 return (React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth }));
             }
-            else {
+            else if (type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
                 return (React.createElement("audio", { src: file.url, controls: true }));
+            }
+            else if (type === "application/pdf") {
+                return (React.createElement("iframe", { width: '100%', height: '100%', src: file.content }));
+            }
+            else {
+                return React.createElement(React.Fragment, null);
             }
         };
         return (React.createElement(core_1.Grid, { item: true },

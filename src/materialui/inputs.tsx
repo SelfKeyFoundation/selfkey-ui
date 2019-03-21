@@ -142,15 +142,6 @@ class FileViewWithModal extends React.Component<FileViewProps> {
     handleOpen = () => {
         this.setState({ open: true });
 	};
-	
-	handleOpenExternal = (file: any) => {
-		if(window.isElectron) {
-			const pdfWindow = window.open('', 'pdfModal');
-			if (pdfWindow) pdfWindow.document.write(`<iframe width='100%' height='100%' src='${file.content}'></iframe>`);
-		} else {
-			window.open(file.url);
-		}
-	};
 
     handleClose = () => {
         this.setState({ open: false });
@@ -167,7 +158,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 
 		const UploadedFile = (fileType: any) => {
 			const type = fileType.fileType;
-			if (type === "image/png"|| type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
+			if (type === "image/png"|| type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav" || type === "application/pdf") {
 				return (
 					<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
 						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
@@ -175,7 +166,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 				)
 			} else {
 				return (
-					<a className={`${classes.noDecoration} ${classes.link}`} onClick={() => this.handleOpenExternal(file)}>
+					<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
 						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
 					</a>
 				)
@@ -209,10 +200,16 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 				return (
 					<img src={file.url} alt={file.name} className={classes.imageWidth} />
 				)
-			} else {
+			} else if (type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
 				return (
 					<audio src={file.url} controls />
 				)
+			} else if (type === "application/pdf") {
+				return (
+					<iframe width='100%' height='100%' src={file.content}></iframe>
+				)
+			} else {
+				return <></>;
 			}
 		};
 
