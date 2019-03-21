@@ -139,6 +139,9 @@ var FileViewWithModal = /** @class */ (function (_super) {
         _this.handleOpen = function () {
             _this.setState({ open: true });
         };
+        _this.handleOpenExternal = function (file) {
+            window.open(file.url);
+        };
         _this.handleClose = function () {
             _this.setState({ open: false });
         };
@@ -153,14 +156,13 @@ var FileViewWithModal = /** @class */ (function (_super) {
         var _this = this;
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
         var UploadedFile = function (fileType) {
-            console.log(fileType);
             var type = fileType.fileType;
             if (type === "image/png" || type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
                 return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
             }
             else {
-                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url, target: "_blank" },
+                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: function () { return _this.handleOpenExternal(file); } },
                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
             }
         };

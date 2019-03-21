@@ -136,7 +136,11 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 
     handleOpen = () => {
         this.setState({ open: true });
-    };
+	};
+	
+	handleOpenExternal = (file: any) => {
+		window.open(file.url);
+	};
 
     handleClose = () => {
         this.setState({ open: false });
@@ -152,7 +156,6 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 		const { classes, file, onClearForm, errors = [] } = this.props;
 
 		const UploadedFile = (fileType: any) => {
-			console.log(fileType);
 			const type = fileType.fileType;
 			if (type === "image/png"|| type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
 				return (
@@ -162,7 +165,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 				)
 			} else {
 				return (
-					<a className={`${classes.noDecoration} ${classes.link}`} href={file.url} target="_blank">
+					<a className={`${classes.noDecoration} ${classes.link}`} onClick={() => this.handleOpenExternal(file)}>
 						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
 					</a>
 				)
