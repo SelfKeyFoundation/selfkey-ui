@@ -25,7 +25,7 @@ import { FileAudioIcon } from '../icons/file-audio';
 
 
 declare global {
-    interface Window { electron: any; }
+    interface Window { isElectron: any; }
 }
 
 export const FileUploadLabel = withStyles({
@@ -144,7 +144,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 	};
 	
 	handleOpenExternal = (file: any) => {
-		if(window.electron) {
+		if(window.isElectron) {
 			window.open(file.content);
 		} else {
 			window.open(file.url);
