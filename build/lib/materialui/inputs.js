@@ -219,7 +219,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                             React.createElement(delete_1.DeleteIcon, null)))),
                 errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null),
-            React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
+            React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose, disableEnforceFocus: true },
                 React.createElement(modalWithBackButton_1.ModalWrap, null,
                     React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
                     React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },

@@ -256,7 +256,8 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 
 				<Modal
                     open={this.state.open}
-                    onClose={this.handleClose}
+					onClose={this.handleClose}
+					disableEnforceFocus={true}
                 >
                     <ModalWrap>
                         <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
