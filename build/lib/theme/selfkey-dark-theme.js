@@ -17,29 +17,107 @@ __export(require("../materialui/statuses"));
 __export(require("../materialui/tables"));
 __export(require("../materialui/tooltipArrow"));
 __export(require("../materialui/typography"));
+__export(require("../icons/address-book-menu"));
+__export(require("../icons/address-book"));
+__export(require("../icons/animated-loading"));
+__export(require("../icons/attribute-alert"));
+__export(require("../icons/book"));
+__export(require("../icons/calendar"));
+__export(require("../icons/certificate"));
+__export(require("../icons/check-empty"));
+__export(require("../icons/check"));
+__export(require("../icons/clear"));
+__export(require("../icons/clipboard"));
+__export(require("../icons/close-button"));
+__export(require("../icons/close-dialog"));
+__export(require("../icons/copy"));
 __export(require("../icons/corporate"));
+__export(require("../icons/custom"));
+__export(require("../icons/dashboard-menu"));
+__export(require("../icons/delete"));
+__export(require("../icons/document"));
+__export(require("../icons/download-2"));
+__export(require("../icons/download"));
+__export(require("../icons/edit-transparent"));
+__export(require("../icons/edit"));
+__export(require("../icons/ethereum"));
+__export(require("../icons/exchange-large"));
+// export * from '../icons/exchange';
+__export(require("../icons/existing-address"));
+__export(require("../icons/failed"));
+__export(require("../icons/file-audio"));
+__export(require("../icons/file-default"));
+__export(require("../icons/file-image"));
+__export(require("../icons/file-multiple"));
+__export(require("../icons/file-pdf"));
+__export(require("../icons/file-video"));
+__export(require("../icons/gear"));
+__export(require("../icons/green-tick"));
+__export(require("../icons/hard-drive"));
+__export(require("../icons/help"));
+__export(require("../icons/hourglass-large"));
+__export(require("../icons/hourglass-small"));
+__export(require("../icons/id-card"));
 __export(require("../icons/incorporations"));
 __export(require("../icons/info"));
+__export(require("../icons/key"));
+__export(require("../icons/ledger"));
 __export(require("../icons/list"));
-__export(require("../icons/person"));
-__export(require("../icons/selfkeyLogo"));
-__export(require("../icons/structure"));
-__export(require("../icons/file-pdf"));
-__export(require("../icons/file-image"));
-__export(require("../icons/file-default"));
-__export(require("../icons/file-audio"));
-__export(require("../icons/file-video"));
-__export(require("../icons/book"));
-__export(require("../icons/id-card"));
-__export(require("../icons/payment"));
+__export(require("../icons/lws-selfkey"));
+__export(require("../icons/mail"));
+__export(require("../icons/marketplace-menu"));
+__export(require("../icons/marketplace"));
+__export(require("../icons/menu-button"));
+__export(require("../icons/modal-close"));
+__export(require("../icons/muiadd"));
+__export(require("../icons/muidelete"));
+__export(require("../icons/muiedit"));
+__export(require("../icons/muivisibility"));
+__export(require("../icons/my-crypto-large"));
+__export(require("../icons/new-address"));
+__export(require("../icons/okay"));
 __export(require("../icons/password-confirm"));
+__export(require("../icons/password"));
+__export(require("../icons/payment"));
+__export(require("../icons/person"));
+__export(require("../icons/print-small"));
+__export(require("../icons/print"));
+__export(require("../icons/profile"));
+__export(require("../icons/quit"));
+__export(require("../icons/receive"));
+__export(require("../icons/refresh"));
+__export(require("../icons/return-large"));
+__export(require("../icons/return"));
+__export(require("../icons/selfkey-id-menu"));
+__export(require("../icons/selfkey"));
+__export(require("../icons/selfkeyLogo"));
+__export(require("../icons/selfkeyLogoTemp"));
+__export(require("../icons/sent-blue"));
+__export(require("../icons/sent"));
+__export(require("../icons/share"));
+__export(require("../icons/shield"));
 __export(require("../icons/sk-id"));
+__export(require("../icons/stick"));
+__export(require("../icons/structure"));
+__export(require("../icons/success"));
+__export(require("../icons/tick"));
+__export(require("../icons/transfer"));
+__export(require("../icons/trezor-bridge"));
+__export(require("../icons/trezor"));
+__export(require("../icons/unlock-large"));
+__export(require("../icons/unlock"));
 __export(require("../icons/upload"));
-__export(require("../icons/attribute-alert"));
-__export(require("../icons/certificate"));
-__export(require("../icons/hourglass-simple"));
+__export(require("../icons/view"));
+__export(require("../icons/visibility-off"));
+__export(require("../icons/visibility-on"));
+__export(require("../icons/wallet"));
+__export(require("../icons/warning-large"));
+__export(require("../icons/warning-shield"));
+__export(require("../icons/warning"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
+var muiadd_1 = require("../icons/muiadd");
+exports.MuiAddIcon = muiadd_1.MuiAddIcon;
 var muidelete_1 = require("../icons/muidelete");
 exports.MuiDeleteIcon = muidelete_1.MuiDeleteIcon;
 var muivisibility_1 = require("../icons/muivisibility");
@@ -60,15 +138,11 @@ var theme = core_1.createMuiTheme({
             primary: colors_1.white,
             secondary: colors_1.grey,
             disabled: colors_1.grey,
-            hint: "rgba(0, 0, 0, 0.38)",
-        }
+            hint: 'rgba(0, 0, 0, 0.38)',
+        },
     },
     typography: {
-        fontFamily: [
-            'Lato',
-            'arial',
-            'sans-serif'
-        ].join(','),
+        fontFamily: ['Lato', 'arial', 'sans-serif'].join(','),
         fontSize: 16,
         useNextVariants: true,
     },
@@ -188,7 +262,7 @@ var theme = core_1.createMuiTheme({
             },
             button: {
                 margin: '0',
-                "&:hover": {
+                '&:hover': {
                     backgroundColor: '#394553',
                 },
             },
@@ -210,7 +284,7 @@ var theme = core_1.createMuiTheme({
                 lineHeight: '21px',
                 paddingLeft: '16px',
                 '&$focused': {
-                    "&$focused:not($error):not($disabled)": {
+                    '&$focused:not($error):not($disabled)': {
                         border: "1px solid " + colors_1.primary,
                         boxShadow: "0 0 3px 1px " + colors_1.primary,
                     },
@@ -252,7 +326,7 @@ var theme = core_1.createMuiTheme({
                 '&::placeholder': {
                     color: colors_1.grey,
                     opacity: 1,
-                }
+                },
             },
             inputType: {
                 height: '22px',
@@ -270,7 +344,7 @@ var theme = core_1.createMuiTheme({
             positionEnd: {
                 marginLeft: '151px',
                 position: 'absolute',
-            }
+            },
         },
         MuiSvgIcon: {
             root: {
@@ -415,6 +489,11 @@ var theme = core_1.createMuiTheme({
                 backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
                 lineHeight: 'initial',
+                '& option': {
+                    backgroundColor: colors_1.baseDark + " !important",
+                    border: "1px solid " + colors_1.baseDark + " !important",
+                    color: "#FFFFFF !important"
+                },
             },
             icon: {
                 color: 'rgba(147, 176, 193, 0.5)',
@@ -525,7 +604,7 @@ var theme = core_1.createMuiTheme({
                 },
                 '&$disabled': {
                     color: colors_1.primary,
-                    border: '2px solid #1CA9BA'
+                    border: '2px solid #1CA9BA',
                 },
             },
             outlinedSecondary: {
@@ -692,7 +771,7 @@ var theme = core_1.createMuiTheme({
         MuiModal: {
             root: {
                 height: '100%',
-                overflow: 'auto'
+                overflow: 'auto',
             },
         },
         MuiBackdrop: {
@@ -765,13 +844,13 @@ var theme = core_1.createMuiTheme({
             },
             colorDefault: {
                 backgroundColor: colors_1.baseLight,
-            }
+            },
         },
     },
 });
 exports.SelfkeyDarkTheme = function (_a) {
     var children = _a.children;
-    return (React.createElement(core_1.MuiThemeProvider, { theme: theme }, children));
+    return React.createElement(core_1.MuiThemeProvider, { theme: theme }, children);
 };
 exports.default = exports.SelfkeyDarkTheme;
 //# sourceMappingURL=selfkey-dark-theme.js.map
