@@ -78,7 +78,7 @@ const transferModal = host({
 
 const commonStory = storiesOf('Common', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
-commonStory.addWithJSX('Slider', () => {});
+// commonStory.addWithJSX('Slider', () => {});
 
 commonStory.addWithJSX('Icons', () => (
 	<SelfkeyDarkTheme>
