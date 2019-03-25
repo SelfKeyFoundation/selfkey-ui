@@ -5,8 +5,10 @@ import {
 	AddressBookIcon,
 	AddressBookMenuIcon,
 	AnimatedLoadingIcon,
+	AttributeAlertIcon,
 	BookIcon,
 	CalendarIcon,
+	CertificateIcon,
 	CheckEmptyIcon,
 	CheckIcon,
 	ClearIcon,
@@ -144,6 +146,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<AttributeAlertIcon />`}</code>
+			</pre>
+			<AttributeAlertIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<BookIcon />`}</code>
 			</pre>
 			<BookIcon />
@@ -154,6 +163,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<CalendarIcon />`}</code>
 			</pre>
 			<CalendarIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<CertificateIcon />`}</code>
+			</pre>
+			<CertificateIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
