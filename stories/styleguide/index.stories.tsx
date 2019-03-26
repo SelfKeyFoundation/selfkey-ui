@@ -57,6 +57,7 @@ import ModalStories from './materialui/story-modals';
 import DatePickerStories from './materialui/story-datepickers';
 import SliderStory from './materialui/story-sliders';
 import { IconsStory } from './icons';
+import StatusStories from './materialui/story-statuses';
 
 setup();
 
@@ -301,7 +302,7 @@ addressBook.addWithJSX('AddressBookEdit', () => (
 
 const theme = storiesOf('Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
-theme.addWithJSX('SelfkeyDarkTheme', () => (
+theme.addWithJSX('Selfkey Dark Theme - General', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
@@ -355,3 +356,10 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 		</Card>
 	</SelfkeyDarkTheme>
 ));
+
+theme.addWithJSX('Statuses', () => (
+	<SelfkeyDarkTheme>
+		<StatusStories />
+	</SelfkeyDarkTheme>
+));
+
