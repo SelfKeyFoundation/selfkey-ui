@@ -102,6 +102,8 @@ export * from '../icons/sent-blue';
 export * from '../icons/sent';
 export * from '../icons/share';
 export * from '../icons/shield';
+export * from '../icons/simple-check';
+export * from '../icons/simple-denied';
 export * from '../icons/sk-id';
 export * from '../icons/stick';
 export * from '../icons/structure';

@@ -96,6 +96,8 @@ __export(require("../icons/sent-blue"));
 __export(require("../icons/sent"));
 __export(require("../icons/share"));
 __export(require("../icons/shield"));
+__export(require("../icons/simple-check"));
+__export(require("../icons/simple-denied"));
 __export(require("../icons/sk-id"));
 __export(require("../icons/stick"));
 __export(require("../icons/structure"));
