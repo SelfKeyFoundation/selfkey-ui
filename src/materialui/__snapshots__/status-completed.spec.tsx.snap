@@ -76,7 +76,7 @@ exports[`Status Completed should show Status Completed 1`] = `
       <div
         className="MuiGrid-item-8"
       >
-        
+        <span />
       </div>
     </div>
   </div>

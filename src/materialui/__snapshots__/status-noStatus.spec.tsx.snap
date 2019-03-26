@@ -76,7 +76,7 @@ exports[`No Status should show No Status 1`] = `
       <div
         className="MuiGrid-item-8"
       >
-        
+        <span />
       </div>
     </div>
   </div>

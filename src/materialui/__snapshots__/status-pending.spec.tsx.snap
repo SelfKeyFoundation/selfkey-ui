@@ -74,7 +74,7 @@ exports[`Status Pending should show Status Pending 1`] = `
       <div
         className="MuiGrid-item-8"
       >
-        
+        <span />
       </div>
     </div>
   </div>
