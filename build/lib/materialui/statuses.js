@@ -38,18 +38,21 @@ var statusInfoStyle = function (theme) {
             },
             '& .pending': {
                 border: "1px solid " + selfkey_dark_theme_1.typography
+            },
+            '& .noStatus': {
+                display: 'none'
             }
         },
     });
 };
 var StatusIcon = function (status) {
-    if (status.status === "missing") {
+    if (status.status === 'missing') {
         return (React.createElement(selfkey_dark_theme_1.AttributeAlertLargeIcon, null));
     }
-    else if (status.status === "pending") {
+    else if (status.status === 'pending') {
         return (React.createElement(selfkey_dark_theme_1.SimpleHourglassIcon, null));
     }
-    else if (status.status === "completed") {
+    else if (status.status === 'completed') {
         return (React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, null));
     }
     else {
@@ -57,32 +60,41 @@ var StatusIcon = function (status) {
     }
 };
 var StatusMessage = function (status) {
-    if (status.status === "missing") {
-        return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application started. Missing required documents."));
+    if (status.status === 'missing') {
+        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application started. Missing required documents."));
     }
-    else if (status.status === "pending") {
-        return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application started. Documents submitted. Please check your email for further instructions."));
+    else if (status.status === 'pending') {
+        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application started. Documents submitted. Please check your email for further instructions."));
     }
-    else if (status.status === "completed") {
-        return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application completed. Please check your email to recieve relevant documents and information."));
+    else if (status.status === 'completed') {
+        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application completed. Please check your email to recieve relevant documents and information."));
     }
-    else if (status.status === "denied") {
-        return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application denied.  Please check your email to for the rejection reason."));
+    else if (status.status === 'denied') {
+        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application denied.  Please check your email to for the rejection reason."));
     }
     else {
-        return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "No status"));
+        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "No status"));
+    }
+};
+var StatusButton = function (status) {
+    if (status.status === 'missing') {
+        return (React.createElement(core_1.Button, { variant: 'contained', size: 'large' }, "Add Documents"));
+    }
+    else {
+        return (React.createElement("span", null));
     }
 };
 exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
-    var classes = _a.classes, status = _a.status;
+    var classes = _a.classes, _b = _a.status, status = _b === void 0 ? 'noStatus' : _b;
     return (React.createElement("div", { className: classes.statusWrap },
         React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.defaultStatus, classes.pending, status) },
-            React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
+            React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-between', alignItems: 'center', wrap: 'nowrap' },
                 React.createElement(core_1.Grid, { item: true, className: classes.iconContainer },
                     React.createElement(StatusIcon, { status: status, className: classes.statusIcon })),
                 React.createElement(core_1.Grid, { item: true, className: classes.grow },
-                    React.createElement(core_1.Typography, { variant: "h2" }, "Status"),
+                    React.createElement(core_1.Typography, { variant: 'h2' }, "Status"),
                     React.createElement(StatusMessage, { status: status })),
-                React.createElement(core_1.Grid, { item: true }, status === 'missing' ? React.createElement(core_1.Button, { variant: 'contained', size: "large" }, "Add Documents") : '')))));
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement(StatusButton, { status: status }))))));
 });
 //# sourceMappingURL=statuses.js.map

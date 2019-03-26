@@ -63,15 +63,15 @@ const statusInfoStyle = (theme: Theme) =>
     });
 
 const StatusIcon = (status: StatusProps) => {
-    if (status.status === "missing") {
+    if (status.status === 'missing') {
         return (
             <AttributeAlertLargeIcon />
         )
-    } else if (status.status === "pending") {
+    } else if (status.status === 'pending') {
         return (
             <SimpleHourglassIcon />
         )
-    } else if (status.status === "completed") {
+    } else if (status.status === 'completed') {
         return (
             <SimpleCheckIcon />
         )
@@ -83,35 +83,47 @@ const StatusIcon = (status: StatusProps) => {
 };
 
 const StatusMessage = (status: StatusProps) => {
-    if (status.status === "missing") {
+    if (status.status === 'missing') {
         return (
-            <Typography variant="subtitle2" color="secondary">
+            <Typography variant='subtitle2' color='secondary'>
                 Application started. Missing required documents.
             </Typography>
         )
-    } else if (status.status === "pending") {
+    } else if (status.status === 'pending') {
         return (
-            <Typography variant="subtitle2" color="secondary">
+            <Typography variant='subtitle2' color='secondary'>
                 Application started. Documents submitted. Please check your email for further instructions.
             </Typography>
         )
-    } else if (status.status === "completed") {
+    } else if (status.status === 'completed') {
         return (
-            <Typography variant="subtitle2" color="secondary">
+            <Typography variant='subtitle2' color='secondary'>
                 Application completed. Please check your email to recieve relevant documents and information.
             </Typography>
         )
-    } else if (status.status === "denied") {
+    } else if (status.status === 'denied') {
         return (
-            <Typography variant="subtitle2" color="secondary">
+            <Typography variant='subtitle2' color='secondary'>
                 Application denied.  Please check your email to for the rejection reason.
             </Typography>
         )
     } else {
         return (
-            <Typography variant="subtitle2" color="secondary">
+            <Typography variant='subtitle2' color='secondary'>
                 No status
             </Typography>
+        )
+    }
+};
+
+const StatusButton = (status: StatusProps) => {
+    if (status.status === 'missing') {
+        return (
+            <Button variant='contained' size='large'>Add Documents</Button>
+        )
+    } else {
+        return (
+            <span></span>
         )
     }
 };
@@ -119,18 +131,16 @@ const StatusMessage = (status: StatusProps) => {
 export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status = 'noStatus' }: StatusProps) => (
     <div className={classes.statusWrap}>
         <Grid item className={classNames(classes.defaultStatus, classes.pending, status)}>
-            <Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
+            <Grid container direction='row' justify='space-between' alignItems='center' wrap='nowrap'>
                 <Grid item className={classes.iconContainer}>
                     <StatusIcon status={status} className={classes.statusIcon} />
                 </Grid>
                 <Grid item className={classes.grow}>
-                    <Typography variant="h2">Status</Typography>
+                    <Typography variant='h2'>Status</Typography>
                     <StatusMessage status={status} />
                 </Grid>
                 <Grid item>
-                    {
-                        status === 'missing' ? <Button variant='contained' size="large">Add Documents</Button> : ''
-                    }
+                    <StatusButton status={status} />
                 </Grid>
             </Grid>
         </Grid>
