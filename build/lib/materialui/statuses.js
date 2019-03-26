@@ -4,8 +4,7 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var classnames_1 = require("classnames");
 var hourglass_simple_1 = require("../icons/hourglass-simple");
-var file_pdf_1 = require("../icons/file-pdf");
-var file_default_1 = require("../icons/file-default");
+var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var fileViewStyles = function (theme) {
     return core_1.createStyles({
         status: {
@@ -25,22 +24,25 @@ var fileViewStyles = function (theme) {
     });
 };
 var StatusIcon = function (status) {
-    if (status.status === "pending") {
+    if (status.status === "missing") {
+        return (React.createElement(selfkey_dark_theme_1.AttributeAlertIcon, null));
+    }
+    else if (status.status === "pending") {
         return (React.createElement(hourglass_simple_1.SimpleHourglassIcon, null));
     }
-    else if (status.status === "missing") {
-        return (React.createElement(file_pdf_1.FilePdfIcon, null));
+    else if (status.status === "completed") {
+        return (React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, null));
     }
     else {
-        return (React.createElement(file_default_1.FileDefaultIcon, null));
+        return (React.createElement(selfkey_dark_theme_1.SimpleDeniedIcon, null));
     }
 };
 var StatusMessage = function (status) {
-    if (status.status === "pending") {
-        return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application started. Documents submitted. Please check your email for further instructions."));
-    }
-    else if (status.status === "missing") {
+    if (status.status === "missing") {
         return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application started. Missing required documents."));
+    }
+    else if (status.status === "pending") {
+        return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application started. Documents submitted. Please check your email for further instructions."));
     }
     else if (status.status === "completed") {
         return (React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "Application completed. Please check your email to recieve relevant documents and information."));

@@ -8,8 +8,7 @@ import {
 } from '@material-ui/core';
 import classNames from 'classnames';
 import { SimpleHourglassIcon } from '../icons/hourglass-simple';
-import { FilePdfIcon } from '../icons/file-pdf';
-import { FileDefaultIcon } from '../icons/file-default';
+import { AttributeAlertIcon, SimpleCheckIcon, SimpleDeniedIcon } from '../theme/selfkey-dark-theme';
 
 export type StatusProps = any;
 
@@ -32,32 +31,36 @@ const fileViewStyles = (theme: Theme) =>
     });
     
 const StatusIcon = (status: any) => {
-    if (status.status === "pending") {
+    if (status.status === "missing") {
+        return (
+            <AttributeAlertIcon />
+        )
+    } else if (status.status === "pending") {
         return (
             <SimpleHourglassIcon />
         )
-    } else if (status.status === "missing") {
+    } else if (status.status === "completed") {
         return (
-            <FilePdfIcon />
+            <SimpleCheckIcon />
         )
     } else {
         return (
-            <FileDefaultIcon />
+            <SimpleDeniedIcon />
         )
     }
 };
 
 const StatusMessage = (status: any) => {
-    if (status.status === "pending") {
-        return (
-            <Typography variant="subtitle2" color="secondary">
-                Application started. Documents submitted. Please check your email for further instructions.
-            </Typography>
-        )
-    } else if (status.status === "missing") {
+    if (status.status === "missing") {
         return (
             <Typography variant="subtitle2" color="secondary">
                 Application started. Missing required documents.
+            </Typography>
+        )
+    } else if (status.status === "pending") {
+        return (
+            <Typography variant="subtitle2" color="secondary">
+                Application started. Documents submitted. Please check your email for further instructions.
             </Typography>
         )
     } else if (status.status === "completed") {
