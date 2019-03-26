@@ -5,7 +5,7 @@ exports[`No Status should show No Status 1`] = `
   className="Component-statusWrap-6"
 >
   <div
-    className="MuiGrid-item-8 Component-defaultStatus-1 default"
+    className="MuiGrid-item-8 Component-defaultStatus-1 noStatus"
   >
     <div
       className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
