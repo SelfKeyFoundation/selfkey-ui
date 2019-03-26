@@ -55,6 +55,9 @@ const statusInfoStyle = (theme: Theme) =>
             },
             '& .pending': {
                 border: `1px solid ${typography}`
+            },
+            '& .noStatus': {
+                display: 'none'
             }
         },
     });
@@ -113,7 +116,7 @@ const StatusMessage = (status: StatusProps) => {
     }
 };
 
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status }: StatusProps) => (
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status = 'noStatus' }: StatusProps) => (
     <div className={classes.statusWrap}>
         <Grid item className={classNames(classes.defaultStatus, classes.pending, status)}>
             <Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
@@ -121,9 +124,7 @@ export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status }: Stat
                     <StatusIcon status={status} className={classes.statusIcon} />
                 </Grid>
                 <Grid item className={classes.grow}>
-                    <Typography variant="h2">
-                        Status
-                    </Typography>
+                    <Typography variant="h2">Status</Typography>
                     <StatusMessage status={status} />
                 </Grid>
                 <Grid item>

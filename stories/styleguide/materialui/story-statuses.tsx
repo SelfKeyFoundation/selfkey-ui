@@ -19,6 +19,8 @@ export default function StatusStories () {
 			<StatusInfo status="completed" />
 			<br/><br/>
 			<StatusInfo status="denied" />
+			<br/><br/>
+			<StatusInfo />
 
         </div>
     )
