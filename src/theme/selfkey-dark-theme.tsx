@@ -63,6 +63,7 @@ export * from '../icons/green-tick';
 export * from '../icons/hard-drive';
 export * from '../icons/help';
 export * from '../icons/hourglass-large';
+export * from '../icons/hourglass-simple';
 export * from '../icons/hourglass-small';
 export * from '../icons/id-card';
 export * from '../icons/incorporations';

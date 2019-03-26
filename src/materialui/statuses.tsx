@@ -1,39 +1,68 @@
 import * as React from 'react';
-import {
-	withStyles,
-	Typography,
-	Grid,
-	Theme,
-	createStyles,
-} from '@material-ui/core';
 import classNames from 'classnames';
-import { SimpleHourglassIcon } from '../icons/hourglass-simple';
-import { AttributeAlertIcon, SimpleCheckIcon, SimpleDeniedIcon } from '../theme/selfkey-dark-theme';
+import {
+    withStyles,
+    Typography,
+    Grid,
+    Theme,
+    createStyles,
+    Button,
+} from '@material-ui/core';
+import { 
+    AttributeAlertLargeIcon,
+    SimpleCheckIcon,
+    SimpleDeniedIcon,
+    SimpleHourglassIcon,
+    error,
+    success,
+    typography,
+    warning
+} from '../theme/selfkey-dark-theme';
 
 export type StatusProps = any;
 
-const fileViewStyles = (theme: Theme) =>
-	createStyles({
-		status: {
+const statusInfoStyle = (theme: Theme) =>
+    createStyles({
+        defaultStatus: {
             borderRadius: '4px',
-			boxSizing: 'border-box',
-			padding: '25px 30px',
-        },
-        missingStatus: {
-            border: '1px solid #E98548',
+            boxSizing: 'border-box',
+            padding: '25px 30px',
         },
         grow: {
             flexGrow: 1
         },
         statusIcon: {
             marginRight: '25px'
-        }
+        },
+        iconContainer: {
+            marginRight: '25px',
+            textAlign: 'center',
+            width: '38px'
+        },
+        attribute: {
+            height: '45px',
+            width: '38px'
+        },
+        statusWrap: {
+            '& .completed': {
+                border: `1px solid ${success}`,
+            },
+            '& .missing': {
+                border: `1px solid ${warning}`,
+            },
+            '& .denied': {
+                border: `1px solid ${error}`
+            },
+            '& .pending': {
+                border: `1px solid ${typography}`
+            }
+        },
     });
-    
-const StatusIcon = (status: any) => {
+
+const StatusIcon = (status: StatusProps) => {
     if (status.status === "missing") {
         return (
-            <AttributeAlertIcon />
+            <AttributeAlertLargeIcon />
         )
     } else if (status.status === "pending") {
         return (
@@ -50,7 +79,7 @@ const StatusIcon = (status: any) => {
     }
 };
 
-const StatusMessage = (status: any) => {
+const StatusMessage = (status: StatusProps) => {
     if (status.status === "missing") {
         return (
             <Typography variant="subtitle2" color="secondary">
@@ -84,20 +113,25 @@ const StatusMessage = (status: any) => {
     }
 };
 
-export const StatusInfo = withStyles(fileViewStyles)(({ classes, status }: StatusProps) => (
-	<Grid item className={classNames(classes.status, classes.missingStatus)} data-status={status}>
-		<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
-			<Grid item>
-                <StatusIcon status={status} className={classes.statusIcon} />
-			</Grid>
-			<Grid item className={classes.grow}>
-                <Typography variant="h2">
-                    Status
-                </Typography>
-                <StatusMessage status={status} />
-			</Grid>
-			<Grid item>
-			</Grid>
-		</Grid>
-	</Grid>
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status }: StatusProps) => (
+    <div className={classes.statusWrap}>
+        <Grid item className={classNames(classes.defaultStatus, classes.pending, status)}>
+            <Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
+                <Grid item className={classes.iconContainer}>
+                    <StatusIcon status={status} className={classes.statusIcon} />
+                </Grid>
+                <Grid item className={classes.grow}>
+                    <Typography variant="h2">
+                        Status
+                    </Typography>
+                    <StatusMessage status={status} />
+                </Grid>
+                <Grid item>
+                    {
+                        status === 'missing' ? <Button variant='contained' size="large">Add Documents</Button> : ''
+                    }
+                </Grid>
+            </Grid>
+        </Grid>
+    </div>
 ));

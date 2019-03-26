@@ -57,6 +57,7 @@ __export(require("../icons/green-tick"));
 __export(require("../icons/hard-drive"));
 __export(require("../icons/help"));
 __export(require("../icons/hourglass-large"));
+__export(require("../icons/hourglass-simple"));
 __export(require("../icons/hourglass-small"));
 __export(require("../icons/id-card"));
 __export(require("../icons/incorporations"));
