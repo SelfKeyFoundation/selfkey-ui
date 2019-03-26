@@ -27,6 +27,7 @@ export * from '../icons/address-book-menu';
 export * from '../icons/address-book';
 export * from '../icons/animated-loading';
 export * from '../icons/attribute-alert';
+export * from '../icons/attribute-alert-large';
 export * from '../icons/book';
 export * from '../icons/calendar';
 export * from '../icons/certificate';

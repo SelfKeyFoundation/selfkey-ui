@@ -21,6 +21,7 @@ __export(require("../icons/address-book-menu"));
 __export(require("../icons/address-book"));
 __export(require("../icons/animated-loading"));
 __export(require("../icons/attribute-alert"));
+__export(require("../icons/attribute-alert-large"));
 __export(require("../icons/book"));
 __export(require("../icons/calendar"));
 __export(require("../icons/certificate"));
