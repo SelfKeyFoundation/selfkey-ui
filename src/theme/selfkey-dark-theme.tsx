@@ -32,7 +32,6 @@ export * from '../icons/document';
 export * from '../icons/download-2';
 export * from '../icons/download';
 export * from '../icons/edit-transparent';
-export * from '../icons/edit';
 export * from '../icons/ethereum';
 export * from '../icons/exchange-large';
 // export * from '../icons/exchange';

@@ -21,7 +21,6 @@ import {
 	DocumentIcon,
 	DownloadIcon,
 	DownloadIcon2,
-	EditIcon,
 	EditTransparentIcon,
 	EthereumIcon,
 	ExchangeIcon,
@@ -266,13 +265,6 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<EditTransparentIcon />`}</code>
 			</pre>
 			<EditTransparentIcon />
-		</Grid>
-
-		<Grid item className={classes.gridItem}>
-			<pre className={classes.pre}>
-				<code className={classes.code}>{`<EditIcon />`}</code>
-			</pre>
-			<EditIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

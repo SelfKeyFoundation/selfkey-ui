@@ -37,7 +37,6 @@ __export(require("../icons/document"));
 __export(require("../icons/download-2"));
 __export(require("../icons/download"));
 __export(require("../icons/edit-transparent"));
-__export(require("../icons/edit"));
 __export(require("../icons/ethereum"));
 __export(require("../icons/exchange-large"));
 // export * from '../icons/exchange';
