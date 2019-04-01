@@ -7,38 +7,71 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
   <div
     className="Component-closeDialogIconWrapper-0-1-19"
   >
-    <svg
-      aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-21"
-      focusable="false"
-      role="presentation"
-      viewBox="\\"0 0 38 38"
+    <div
+      style={
+        Object {
+          "cursor": "pointer",
+          "height": "38px",
+          "marginLeft": "779px",
+          "marginTop": "-20px",
+          "position": "absolute",
+          "width": "38px",
+        }
+      }
     >
-      <g
-        fill="none"
-        fillRule="evenodd"
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        focusable="false"
+        height="38px"
+        role="presentation"
+        viewBox="0 0 38 38"
+        width="38px"
       >
-        <circle
-          cx="18"
-          cy="18"
-          fill="#262F39"
-          r="18"
-          stroke="#303C49"
-        />
-        <path
-          d="M10.815 9.64L9.64 10.814 16.824 18l-7.185 7.185 1.176 1.176L18 19.176l7.185 7.185 1.176-1.176L19.176 18l7.185-7.185-1.176-1.176L18 16.824z"
-          fill="#3B4A5A"
-          fillRule="nonzero"
-        />
-      </g>
-    </svg>
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Symbols"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            id="Close-button"
+            transform="translate(1.000000, 1.000000)"
+          >
+            <g
+              id="icon-close-modal"
+            >
+              <circle
+                cx="18"
+                cy="18"
+                fill="#262F39"
+                id="Oval-2"
+                r="18"
+                stroke="#1D505F"
+              />
+              <g
+                fill="#23E6FE"
+                fillRule="nonzero"
+                id="Shape"
+                transform="translate(9.000000, 9.000000)"
+              >
+                <polygon
+                  points="1.81534091 0.639204545 0.639204545 1.81534091 7.82386364 9 0.639204545 16.1846591 1.81534091 17.3607955 9 10.1761364 16.1846591 17.3607955 17.3607955 16.1846591 10.1761364 9 17.3607955 1.81534091 16.1846591 0.639204545 9 7.82386364"
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
   </div>
   <div
     className="Component-iconWrapper-0-1-17"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-22 Component-icon-0-1-18"
+      className="MuiSvgIcon-root-1 Component-root-0-1-21 Component-icon-0-1-18"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -138,7 +171,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-11"
           >
             <span
-              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-24"
+              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-23"
             >
                Network Transaction Fee: 
             </span>
@@ -147,7 +180,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-11"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-42"
+              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-41"
             >
               <div
                 className="MuiGrid-item-11"
@@ -199,14 +232,14 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-25"
+        className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-24"
         onClick={[Function]}
       >
         <span>
            Advanced 
         </span>
         <i
-          className="TransactionFeeBoxComponent-icon-0-1-26  TransactionFeeBoxComponent-rightIcon-0-1-27"
+          className="TransactionFeeBoxComponent-icon-0-1-25  TransactionFeeBoxComponent-rightIcon-0-1-26"
         >
            
         </i>
