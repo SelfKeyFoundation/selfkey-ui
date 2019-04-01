@@ -105,7 +105,6 @@ export * from '../icons/view';
 export * from '../icons/visibility-off';
 export * from '../icons/visibility-on';
 export * from '../icons/wallet';
-export * from '../icons/warning-large';
 export * from '../icons/warning-shield';
 export * from '../icons/warning';
 
