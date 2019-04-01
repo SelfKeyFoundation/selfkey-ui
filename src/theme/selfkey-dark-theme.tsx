@@ -55,7 +55,6 @@ export * from '../icons/info';
 export * from '../icons/key';
 export * from '../icons/ledger';
 export * from '../icons/list';
-export * from '../icons/lws-selfkey';
 export * from '../icons/mail';
 export * from '../icons/marketplace-menu';
 export * from '../icons/marketplace';

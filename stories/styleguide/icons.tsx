@@ -45,7 +45,6 @@ import {
 	KeyIcon,
 	LedgerIcon,
 	ListIcon,
-	LWSSelfkeyIcon,
 	MailIcon,
 	MarketplaceIcon,
 	MarketplaceMenuIcon,
@@ -388,13 +387,6 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
-				<code className={classes.code}>{`<HourGlassIcon />`}</code>
-			</pre>
-			<HourGlassIcon />
-		</Grid>
-
-		<Grid item className={classes.gridItem}>
-			<pre className={classes.pre}>
 				<code className={classes.code}>{`<IdCardIcon />`}</code>
 			</pre>
 			<IdCardIcon />
@@ -433,13 +425,6 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ListIcon />`}</code>
 			</pre>
 			<ListIcon />
-		</Grid>
-
-		<Grid item className={classes.gridItem}>
-			<pre className={classes.pre}>
-				<code className={classes.code}>{`<LWSSelfkeyIcon />`}</code>
-			</pre>
-			<LWSSelfkeyIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

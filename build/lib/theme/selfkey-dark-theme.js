@@ -60,7 +60,6 @@ __export(require("../icons/info"));
 __export(require("../icons/key"));
 __export(require("../icons/ledger"));
 __export(require("../icons/list"));
-__export(require("../icons/lws-selfkey"));
 __export(require("../icons/mail"));
 __export(require("../icons/marketplace-menu"));
 __export(require("../icons/marketplace"));
