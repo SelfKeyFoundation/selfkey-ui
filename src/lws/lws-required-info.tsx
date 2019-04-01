@@ -5,9 +5,9 @@ import CommonStyle from '../common/common-style';
 import { CheckIcon } from '../icons/check';
 import { CheckEmptyIcon } from '../icons/check-empty';
 import { WarningIcon } from '../icons/warning';
-import { EditIcon } from '../icons/edit';
 import { LWSButton } from './lws-button';
 import { Website } from './lws-common';
+import { EditTransparentIcon } from '../theme/selfkey-dark-theme';
 
 const styles: StyleSheet = {
 	form: CommonStyle.form,
@@ -165,7 +165,7 @@ const renderAttributes = (
 							{editAction ? (
 								<dd>
 									<a onClick={editAction} className={classes.edit}>
-										<EditIcon />
+										<EditTransparentIcon />
 									</a>
 								</dd>
 							) : null}
