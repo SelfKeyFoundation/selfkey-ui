@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
-var lws_selfkey_1 = require("../icons/lws-selfkey");
 var headings_1 = require("../typography/headings");
 var close_button_1 = require("../icons/close-button");
+var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var styles = {
     root: {
         position: 'relative',
@@ -31,7 +31,7 @@ var styles = {
 exports.LWSModalHeader = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, closeAction = _a.closeAction;
     return (React.createElement("div", { className: classes.root },
-        React.createElement(lws_selfkey_1.LWSSelfkeyIcon, null),
+        React.createElement(selfkey_dark_theme_1.SelfkeyLogo, { style: { width: '50px', height: '43px' } }),
         React.createElement(headings_1.H1, { className: classes.title }, "Login with SelfKey"),
         React.createElement("a", { className: classes.closeButton, onClick: closeAction },
             React.createElement(close_button_1.CloseButtonIcon, null))));

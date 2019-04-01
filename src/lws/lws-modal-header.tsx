@@ -1,9 +1,9 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
 
-import { LWSSelfkeyIcon } from '../icons/lws-selfkey';
 import { H1 } from '../typography/headings';
 import { CloseButtonIcon } from '../icons/close-button';
+import { SelfkeyLogo } from '../theme/selfkey-dark-theme';
 
 const styles: StyleSheet = {
   root: {
@@ -38,7 +38,7 @@ export type LWSModalHeaderProps = {
 
 export const LWSModalHeader = injectSheet(styles)<LWSModalHeaderProps>(({classes, children, closeAction}) => (
   <div className={classes.root}>
-    <LWSSelfkeyIcon/>
+    <SelfkeyLogo style={{ width: '50px', height: '43px' }} />
     <H1 className={classes.title}>Login with SelfKey</H1>
     <a className={classes.closeButton} onClick={closeAction}><CloseButtonIcon/></a>
   </div>
