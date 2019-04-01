@@ -3,7 +3,7 @@ import injectSheet, { StyleSheet } from 'react-jss';
 
 
 import CloseButtonIcon from '../icons/close-button';
-import WarningLargeIcon from '../icons/warning-large';
+import WarningShieldIcon from '../icons/warning-shield';
 
 import { Grid } from '@material-ui/core';
 import Copy from '../common/copy';
@@ -91,7 +91,7 @@ export const TransactionErrorBox = injectSheet(styles)<TransactionErrorBoxProps>
     </div>
     <Grid container className={classes.bodyContainer} direction='row' justify='flex-start' alignItems='flex-start'>
       <Grid item xs={2}>
-        <WarningLargeIcon />
+        <WarningShieldIcon />
       </Grid>
       <Grid item xs={10}>
         <Grid container direction='column' justify='flex-start' alignItems='flex-start'>
