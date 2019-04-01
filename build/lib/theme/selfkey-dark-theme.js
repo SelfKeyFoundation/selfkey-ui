@@ -28,7 +28,6 @@ __export(require("../icons/check"));
 __export(require("../icons/clear"));
 __export(require("../icons/clipboard"));
 __export(require("../icons/close-button"));
-__export(require("../icons/close-dialog"));
 __export(require("../icons/copy"));
 __export(require("../icons/corporate"));
 __export(require("../icons/custom"));

@@ -23,7 +23,6 @@ export * from '../icons/check';
 export * from '../icons/clear';
 export * from '../icons/clipboard';
 export * from '../icons/close-button';
-export * from '../icons/close-dialog';
 export * from '../icons/copy';
 export * from '../icons/corporate';
 export * from '../icons/custom';
