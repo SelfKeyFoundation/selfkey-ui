@@ -3,8 +3,8 @@ import injectSheet, { StyleSheet, ClassNameMap } from 'react-jss';
 
 import EthereumIcon from '../icons/ethereum';
 import SelfkeyIcon from '../icons/selfkey';
+import { ModalCloseIcon } from '../theme/selfkey-dark-theme';
 
-import CloseDialogIcon from '../icons/close-dialog'
 
 const styles: StyleSheet = {
     transactionBox: {
@@ -30,8 +30,8 @@ const styles: StyleSheet = {
 
     closeDialogIconWrapper: {
       position: 'absolute',
-      right: '-18px',
-      top: '-18px',
+      left: '-100px',
+      top: 0,
       cursor: 'pointer'
     },
 
@@ -68,7 +68,7 @@ const renderIcon = (shortName: string, classes: Partial<ClassNameMap<string>>) =
 export const TransactionBox = injectSheet(styles)<TransactionBoxProps>(({classes, children, cryptoCurrency, closeAction}) => (
   <div className={classes.transactionBox}>
     <div className={classes.closeDialogIconWrapper} onClick={closeAction}>
-      <CloseDialogIcon />
+      <ModalCloseIcon />
     </div>
     <div className={classes.iconWrapper}>
       {renderIcon(cryptoCurrency, classes)}

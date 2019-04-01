@@ -2,11 +2,11 @@ import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
 
 
-import CloseButtonIcon from '../icons/close-button';
 import WarningShieldIcon from '../icons/warning-shield';
 
 import { Grid } from '@material-ui/core';
 import Copy from '../common/copy';
+import ModalCloseIcon from '../icons/modal-close';
 
 const styles: StyleSheet = {
   boxWrapper: {
@@ -70,8 +70,8 @@ const styles: StyleSheet = {
   },
   closeDialogIconWrapper: {
     position: 'absolute',
-    right: '-18px',
-    top: '-18px',
+    left: '-15px',
+    top: 0,
     cursor: 'pointer'
   }
 };
@@ -86,7 +86,7 @@ export const TransactionErrorBox = injectSheet(styles)<TransactionErrorBoxProps>
     <div className={classes.header}>
       <span className={classes.headerTitle}> Transaction Confirmation </span>
       <div className={classes.closeDialogIconWrapper} onClick={closeAction}>
-        <CloseButtonIcon />
+        <ModalCloseIcon />
       </div>
     </div>
     <Grid container className={classes.bodyContainer} direction='row' justify='flex-start' alignItems='flex-start'>
