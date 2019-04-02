@@ -100,7 +100,6 @@ export * from '../icons/visibility-off';
 export * from '../icons/visibility-on';
 export * from '../icons/wallet';
 export * from '../icons/warning-shield';
-export * from '../icons/warning';
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiAddIcon } from '../icons/muiadd';
 export { MuiDeleteIcon } from '../icons/muidelete';
