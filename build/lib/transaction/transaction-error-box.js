@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
-var close_button_1 = require("../icons/close-button");
-var warning_large_1 = require("../icons/warning-large");
+var warning_shield_1 = require("../icons/warning-shield");
 var core_1 = require("@material-ui/core");
 var copy_1 = require("../common/copy");
+var modal_close_1 = require("../icons/modal-close");
 var styles = {
     boxWrapper: {
         position: 'relative',
@@ -66,8 +66,8 @@ var styles = {
     },
     closeDialogIconWrapper: {
         position: 'absolute',
-        right: '-18px',
-        top: '-18px',
+        left: '-15px',
+        top: 0,
         cursor: 'pointer'
     }
 };
@@ -77,10 +77,10 @@ exports.TransactionErrorBox = react_jss_1.default(styles)(function (_a) {
         React.createElement("div", { className: classes.header },
             React.createElement("span", { className: classes.headerTitle }, " Transaction Confirmation "),
             React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },
-                React.createElement(close_button_1.default, null))),
+                React.createElement(modal_close_1.default, null))),
         React.createElement(core_1.Grid, { container: true, className: classes.bodyContainer, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
             React.createElement(core_1.Grid, { item: true, xs: 2 },
-                React.createElement(warning_large_1.default, null)),
+                React.createElement(warning_shield_1.default, null)),
             React.createElement(core_1.Grid, { item: true, xs: 10 },
                 React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
                     React.createElement("div", { className: classes.txFailedText }, "Transaction Failed "),

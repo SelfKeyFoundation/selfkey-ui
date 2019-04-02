@@ -4,7 +4,7 @@ var React = require("react");
 var react_jss_1 = require("react-jss");
 var ethereum_1 = require("../icons/ethereum");
 var selfkey_1 = require("../icons/selfkey");
-var close_dialog_1 = require("../icons/close-dialog");
+var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var styles = {
     transactionBox: {
         padding: '90px 30px 40px 30px',
@@ -26,8 +26,8 @@ var styles = {
     },
     closeDialogIconWrapper: {
         position: 'absolute',
-        right: '-18px',
-        top: '-18px',
+        left: '-100px',
+        top: 0,
         cursor: 'pointer'
     },
     custom: {
@@ -57,7 +57,7 @@ exports.TransactionBox = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction;
     return (React.createElement("div", { className: classes.transactionBox },
         React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },
-            React.createElement(close_dialog_1.default, null)),
+            React.createElement(selfkey_dark_theme_1.ModalCloseIcon, null)),
         React.createElement("div", { className: classes.iconWrapper }, renderIcon(cryptoCurrency, classes)),
         React.createElement("div", null, children)));
 });
