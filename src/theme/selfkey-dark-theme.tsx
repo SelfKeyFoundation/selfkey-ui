@@ -686,12 +686,12 @@ const theme = createMuiTheme({
 					boxSizing: 'border-box',
 					color: white,
 				},
+				'&$selected': {
+					color: white
+				},
 			},
 			textColorInherit: {
 				color: typography,
-			},
-			selected: {
-				color: white,
 			},
 		},
 		MuiExpansionPanel: {
