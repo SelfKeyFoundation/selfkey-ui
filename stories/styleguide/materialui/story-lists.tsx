@@ -19,7 +19,7 @@ export default function InputStories () {
     return (
         <div>
             <Grid container spacing={24}>
-				<Grid item xs>
+				<Grid item>
 					<Typography variant="h3" style={underlineStyle} gutterBottom>
 						Lists
 					</Typography>
@@ -36,7 +36,7 @@ export default function InputStories () {
 					</List> <br/>
 				</Grid>
 
-				<Grid item xs>
+				<Grid item>
 					<Typography variant="h3" style={underlineStyle} gutterBottom>
 						Definition Lists
 					</Typography>
@@ -55,7 +55,7 @@ export default function InputStories () {
 					</List> <br/>
 				</Grid>
 
-				<Grid item xs>
+				<Grid item>
 					<Typography variant="h3" style={underlineStyle} gutterBottom>
 						Check Lists
 					</Typography>

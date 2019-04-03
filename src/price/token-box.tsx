@@ -84,14 +84,14 @@ export type TokenBoxProps = {
 export const TokenBox = injectSheet(styles)<TokenBoxProps>(({classes, children, cryptoCurrencyShort, cryptoCurrencyName, CryptoCurrencyIconComponent, publicKey, transferAction }) => (
    <div className={classes.tokenBox}>
     <Grid container>
-      <Grid item xs={6} sm={2}>
+      <Grid container direction="column" xs={6} sm={2}>
         <CryptoCurrencyIconComponent/>
       </Grid>
-      <Grid item xs={12} sm={9}>
+      <Grid container direction="column" xs={12} sm={9}>
         <div className={classes.cryptoCurrencyName}>{cryptoCurrencyName}</div>
         <div className={classes.cryptoCurrencyShort} >{cryptoCurrencyShort}</div>
       </Grid>
-      <Grid item xs={6} sm={1}>
+      <Grid container direction="column" xs={6} sm={1}>
         <button className={classes.transferButton} onClick={transferAction}>
           <TransferIcon/>
         </button>
@@ -104,12 +104,12 @@ export const TokenBox = injectSheet(styles)<TokenBoxProps>(({classes, children, 
         <div className={classes.horizontalDivider}></div>
     </Grid>
     <Grid container className={classes.addressBox}>
-      <Grid item xs={12} sm={10}>
+      <Grid container direction="column" xs={12} sm={10}>
         <span className={classes.publicKey}>
           {publicKey}
         </span>
       </Grid>
-      <Grid item xs={12} sm={2}>
+      <Grid container direction="column" xs={12} sm={2}>
 
         <Copy text={publicKey}>
         </Copy>

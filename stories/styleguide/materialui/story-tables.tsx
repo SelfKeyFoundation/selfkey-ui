@@ -303,10 +303,10 @@ export default function TableStories () {
                             </TableCell>
                             <TableCell>
                                 <Grid container>
-                                    <Grid item xs={3}>
+                                    <Grid container xs={3}>
                                         { row.type === 'Person' ? <FilePdfIcon /> : <FileImageIcon /> }
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid container xs={6}>
                                         <Typography variant="h6" gutterBottom>{row.name}</Typography>
                                         <Typography variant="subtitle1" color="secondary" gutterBottom>{row.role}</Typography>
                                     </Grid>

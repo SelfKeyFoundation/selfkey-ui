@@ -106,10 +106,10 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
 		return (
 			<TransactionBox cryptoCurrency={cryptoCurrency} closeAction={closeAction}>
 				<Grid container direction='row' justify='flex-start' alignItems='flex-start'>
-          <Grid item xs={2}>
+          <Grid container xs={2}>
             {renderIcon(status)}
           </Grid>
-          <Grid item xs={10}>
+          <Grid container xs={10}>
             <Grid container direction='column' justify='flex-start' alignItems='flex-start'>
               <Grid item id='header'>
                 <H2 className={classes.headerText}>{status}</H2>

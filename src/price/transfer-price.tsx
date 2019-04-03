@@ -32,10 +32,10 @@ export type TransferPriceProps = {
 export const TransferPrice = injectSheet(styles)<TransferPriceProps>(({classes, children, cryptoCurrencyShort, cryptoCurrencyName, CryptoCurrencyIconComponent}) => (
    <div>
     <Grid container>
-      <Grid item xs={1}>
+      <Grid container direction="column" xs={1}>
         <CryptoCurrencyIconComponent/>
       </Grid>
-      <Grid item xs={11}>
+      <Grid container direction="column" xs={11}>
         <div className={classes.cryptoCurrencyName}>{cryptoCurrencyName}</div>
         <div className={classes.cryptoCurrencyShort} >{cryptoCurrencyShort}</div>
       </Grid>
