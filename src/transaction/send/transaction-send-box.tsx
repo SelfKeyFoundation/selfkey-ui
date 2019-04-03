@@ -252,9 +252,9 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     renderSelectTokenItems() {
         const { tokens, classes } = this.props;
 
-        return tokens.map(token => {
+        return tokens.map((token, index) => {
             return (
-                <option value={token.symbol} className={classes.selectItem}>{`${token.name} - ${token.balance} ${token.symbol}`}</option>
+                <option key={index} value={token.symbol} className={classes.selectItem}>{`${token.name} - ${token.balance} ${token.symbol}`}</option>
             );
         });
     }
