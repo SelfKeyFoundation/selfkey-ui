@@ -100,7 +100,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
       className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
       >
         <svg
           aria-hidden="true"
@@ -155,7 +155,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
       >
         <div
           className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -361,7 +361,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
       className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
       >
         <svg
           aria-hidden="true"
@@ -416,7 +416,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
       >
         <div
           className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -622,7 +622,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
       className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
       >
         <svg
           aria-hidden="true"
@@ -677,7 +677,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
       >
         <div
           className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -883,7 +883,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
       className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
       >
         <svg
           aria-hidden="true"
@@ -938,7 +938,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
       >
         <div
           className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -1144,7 +1144,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
       className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
       >
         <svg
           aria-hidden="true"
@@ -1198,7 +1198,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
       >
         <div
           className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -1404,7 +1404,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
       className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
       >
         <svg
           aria-hidden="true"
@@ -1459,7 +1459,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
       >
         <div
           className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -1665,10 +1665,10 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
       className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
       />
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
       >
         <div
           className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"

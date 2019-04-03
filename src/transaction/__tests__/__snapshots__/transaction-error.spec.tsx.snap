@@ -79,7 +79,7 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
     className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-5"
   >
     <div
-      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+      className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
@@ -133,7 +133,7 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+      className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
     >
       <div
         className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"

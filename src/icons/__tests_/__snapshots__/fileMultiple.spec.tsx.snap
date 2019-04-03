@@ -10,15 +10,15 @@ exports[`Filed Multiple Icon should show Filed Multiple Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="💻-ID-Dashboard-multiple-files"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       id="multiple-files"
       stroke="#697C95"
-      stroke-width="1.71428571"
+      strokeWidth="1.71428571"
       transform="translate(-392.000000, -1692.000000)"
     >
       <g

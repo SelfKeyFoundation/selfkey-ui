@@ -37,10 +37,10 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
         >
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             id="💹-Marketplace"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
           >
             <g
               fill="#E98548"
@@ -95,10 +95,10 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
         >
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             id="💹-Marketplace"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
           >
             <g
               fill="#E98548"
