@@ -86,8 +86,8 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, amount = _a.amount, address = _a.address, openLink = _a.openLink, locale = _a.locale, status = _a.status, transactionHash = _a.transactionHash;
     return (React.createElement(transaction_box_1.TransactionBox, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
         React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
-            React.createElement(core_1.Grid, { container: true, xs: 2 }, renderIcon(status)),
-            React.createElement(core_1.Grid, { container: true, xs: 10 },
+            React.createElement(core_1.Grid, { item: true, xs: 2 }, renderIcon(status)),
+            React.createElement(core_1.Grid, { item: true, xs: 10 },
                 React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
                     React.createElement(core_1.Grid, { item: true, id: 'header' },
                         React.createElement(headings_1.H2, { className: classes.headerText }, status)),

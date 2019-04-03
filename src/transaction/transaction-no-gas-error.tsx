@@ -6,6 +6,7 @@ import TransactionErrorBox from './transaction-error-box';
 
 const styles: StyleSheet = {
 	bodyText: {
+		paddingRight: '40px',
 		textAlign: 'justify',
 	},
 	learnMoreText: {

@@ -90,22 +90,22 @@ export const TransactionErrorBox = injectSheet(styles)<TransactionErrorBoxProps>
       </div>
     </div>
     <Grid container className={classes.bodyContainer} direction='row' justify='flex-start' alignItems='flex-start'>
-      <Grid container xs={2}>
+      <Grid item xs={2}>
         <WarningShieldIcon />
       </Grid>
-      <Grid container xs={10}>
+      <Grid item xs={10}>
         <Grid container direction='column' justify='flex-start' alignItems='flex-start'>
           <div className={classes.txFailedText}>Transaction Failed </div>
           {children}
           <span className={classes.divider}> </span>
           <div>
             <span className={classes.yourAddressTitle}> Your Address: </span>
-            <div>
+            <Grid container>
               <span className={classes.publicKey}>
                 {publicKey}
               </span>
               <Copy text={publicKey} />
-            </div>
+            </Grid>
           </div>
         </Grid>
       </Grid>

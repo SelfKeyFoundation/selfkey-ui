@@ -79,7 +79,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
     className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
@@ -133,7 +133,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
         className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -176,7 +176,9 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >
@@ -279,7 +281,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
     className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
@@ -333,7 +335,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
         className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -376,7 +378,9 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >
@@ -479,7 +483,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
     className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
@@ -533,7 +537,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
         className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -576,7 +580,9 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >
@@ -679,7 +685,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
     className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-7"
   >
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-2-40"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
     >
       <svg
         aria-hidden="true"
@@ -733,7 +739,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-container-10 MuiGrid-grid-xs-10-48"
+      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
     >
       <div
         className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
@@ -776,7 +782,9 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >

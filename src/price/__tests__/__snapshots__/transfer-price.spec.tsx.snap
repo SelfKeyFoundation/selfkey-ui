@@ -6,7 +6,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
     className="MuiGrid-container-1"
   >
     <div
-      className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-grid-xs-1-30"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-1-30"
     >
       <svg
         aria-hidden="true"
@@ -35,7 +35,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-grid-xs-11-40"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-11-40"
     >
       <div
         className="Component-cryptoCurrencyName-0-1-1"

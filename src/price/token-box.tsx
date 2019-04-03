@@ -107,12 +107,12 @@ export const TokenBox = injectSheet(styles)<TokenBoxProps>(({classes, children, 
         <div className={classes.horizontalDivider}></div>
     </Grid>
     <Grid container className={classes.addressBox}>
-      <Grid container direction="column" xs={10}>
+      <Grid item xs={10}>
         <span className={classes.publicKey}>
           {publicKey}
         </span>
       </Grid>
-      <Grid container direction="column" xs={2}>
+      <Grid item xs={2}>
 
         <Copy text={publicKey}>
         </Copy>

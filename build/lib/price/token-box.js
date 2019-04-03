@@ -80,9 +80,9 @@ exports.TokenBox = react_jss_1.default(styles)(function (_a) {
         React.createElement(core_1.Grid, { className: classes.tokenBoxFooter },
             React.createElement("div", { className: classes.horizontalDivider })),
         React.createElement(core_1.Grid, { container: true, className: classes.addressBox },
-            React.createElement(core_1.Grid, { container: true, direction: "column", xs: 10 },
+            React.createElement(core_1.Grid, { item: true, xs: 10 },
                 React.createElement("span", { className: classes.publicKey }, publicKey)),
-            React.createElement(core_1.Grid, { container: true, direction: "column", xs: 2 },
+            React.createElement(core_1.Grid, { item: true, xs: 2 },
                 React.createElement(copy_1.Copy, { text: publicKey })))));
 });
 exports.default = exports.TokenBox;

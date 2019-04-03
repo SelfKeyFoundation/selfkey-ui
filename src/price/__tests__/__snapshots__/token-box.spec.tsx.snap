@@ -108,7 +108,7 @@ exports[`Token Box should show Token Box for key 1`] = `
     className="MuiGrid-container-1 Component-addressBox-0-1-5"
   >
     <div
-      className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-grid-xs-10-39"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39"
     >
       <span
         className="Component-publicKey-0-1-6"
@@ -117,7 +117,7 @@ exports[`Token Box should show Token Box for key 1`] = `
       </span>
     </div>
     <div
-      className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-grid-xs-2-31"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-2-31"
     >
       <button
         className="CopyComponent-copyButton-0-1-12"
