@@ -140,7 +140,7 @@ export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addr
                     <TableRow className={classes.headerTableRow}>
                         <TableCell>LABEL</TableCell>
                         <TableCell>ETH ADDRESS</TableCell>
-                        <TableCell numeric>ACTIONS</TableCell>
+                        <TableCell align="right">ACTIONS</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>{renderAddresses(addresses, classes, onEdit, onDelete)}</TableBody>

@@ -105,7 +105,7 @@ exports.AddressBook = react_jss_1.default(styles)(function (_a) {
                     React.createElement(core_1.TableRow, { className: classes.headerTableRow },
                         React.createElement(core_1.TableCell, null, "LABEL"),
                         React.createElement(core_1.TableCell, null, "ETH ADDRESS"),
-                        React.createElement(core_1.TableCell, { numeric: true }, "ACTIONS"))),
+                        React.createElement(core_1.TableCell, { align: "right" }, "ACTIONS"))),
                 React.createElement(core_1.TableBody, null, renderAddresses(addresses, classes, onEdit, onDelete))))));
 });
 exports.default = exports.AddressBook;
