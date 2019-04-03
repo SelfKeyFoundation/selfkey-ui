@@ -17,12 +17,12 @@ export const BookIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps &
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="97.783801%" x2="41.8489583%" y2="-16.3970588%" id="book-linearGradient-1">
-            <stop stop-color="#08BCCD" offset="0%"></stop>
-            <stop stop-color="#2DA1F8" offset="100%"></stop>
+            <stop stopColor="#08BCCD" offset="0%"></stop>
+            <stop stopColor="#2DA1F8" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="💻-ID-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="403---Identity-Summary" transform="translate(-240.000000, -958.000000)" fill="url(#book-linearGradient-1)" fill-rule="nonzero">
+    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="403---Identity-Summary" transform="translate(-240.000000, -958.000000)" fill="url(#book-linearGradient-1)" fillRule="nonzero">
             <g id="Area-box-2" transform="translate(150.000000, 462.000000)">
                 <g id="Additional" transform="translate(14.000000, 390.000000)">
                     <g id="Explanatory" transform="translate(10.000000, 106.000000)">
