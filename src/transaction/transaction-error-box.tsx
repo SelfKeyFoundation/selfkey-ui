@@ -100,12 +100,12 @@ export const TransactionErrorBox = injectSheet(styles)<TransactionErrorBoxProps>
           <span className={classes.divider}> </span>
           <div>
             <span className={classes.yourAddressTitle}> Your Address: </span>
-            <div>
+            <Grid container>
               <span className={classes.publicKey}>
                 {publicKey}
               </span>
               <Copy text={publicKey} />
-            </div>
+            </Grid>
           </div>
         </Grid>
       </Grid>

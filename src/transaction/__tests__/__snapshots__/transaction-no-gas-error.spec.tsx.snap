@@ -176,7 +176,9 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >
@@ -376,7 +378,9 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >
@@ -576,7 +580,9 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >
@@ -776,7 +782,9 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-10"
             >

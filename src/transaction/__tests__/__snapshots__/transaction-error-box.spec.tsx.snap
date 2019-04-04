@@ -154,7 +154,9 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-7"
             >
@@ -335,7 +337,9 @@ exports[`Transaction Error Box should show transaction error generic screen with
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-7"
             >

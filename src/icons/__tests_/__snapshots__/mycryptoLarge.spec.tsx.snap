@@ -35,7 +35,7 @@ exports[`My Crypto Large Icon should show My Crypto Large Icon 1`] = `
   >
     <g
       fill="url(#my-crypto-large-linearGradient-1)"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="304-Manage-My-Tokens"
       stroke="#0FB8D0"
       transform="translate(-687.000000, -146.000000)"

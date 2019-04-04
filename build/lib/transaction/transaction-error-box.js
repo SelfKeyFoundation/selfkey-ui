@@ -88,7 +88,7 @@ exports.TransactionErrorBox = react_jss_1.default(styles)(function (_a) {
                     React.createElement("span", { className: classes.divider }, " "),
                     React.createElement("div", null,
                         React.createElement("span", { className: classes.yourAddressTitle }, " Your Address: "),
-                        React.createElement("div", null,
+                        React.createElement(core_1.Grid, { container: true },
                             React.createElement("span", { className: classes.publicKey }, publicKey),
                             React.createElement(copy_1.default, { text: publicKey }))))))));
 });

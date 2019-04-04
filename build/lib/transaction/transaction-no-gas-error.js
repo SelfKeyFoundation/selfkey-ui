@@ -6,6 +6,7 @@ var paragraph_1 = require("../typography/paragraph");
 var transaction_error_box_1 = require("./transaction-error-box");
 var styles = {
     bodyText: {
+        paddingRight: '40px',
         textAlign: 'justify',
     },
     learnMoreText: {

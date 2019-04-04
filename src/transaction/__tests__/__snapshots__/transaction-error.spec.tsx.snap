@@ -159,7 +159,9 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
           >
              Your Address: 
           </span>
-          <div>
+          <div
+            className="MuiGrid-container-10"
+          >
             <span
               className="Component-publicKey-0-1-8"
             >

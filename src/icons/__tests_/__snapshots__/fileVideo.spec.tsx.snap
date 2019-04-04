@@ -10,14 +10,14 @@ exports[`Filed Video Icon should show Filed Video Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Page-video-file"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#697C95"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="Video-File-595b40b85ba036ed117db797"
     >
       <path

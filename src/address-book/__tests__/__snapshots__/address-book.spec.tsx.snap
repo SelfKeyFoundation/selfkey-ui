@@ -141,7 +141,7 @@ exports[`Address Book should show Address Book 1`] = `
           </th>
           <th
             aria-sort={null}
-            className="MuiTableCell-root-179 MuiTableCell-head-180 MuiTableCell-numeric-183"
+            className="MuiTableCell-root-179 MuiTableCell-head-180 MuiTableCell-alignRight-189"
             scope="col"
           >
             ACTIONS

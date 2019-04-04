@@ -693,12 +693,12 @@ var theme = core_1.createMuiTheme({
                     boxSizing: 'border-box',
                     color: colors_1.white,
                 },
+                '&$selected': {
+                    color: colors_1.white
+                },
             },
             textColorInherit: {
                 color: colors_1.typography,
-            },
-            selected: {
-                color: colors_1.white,
             },
         },
         MuiExpansionPanel: {
