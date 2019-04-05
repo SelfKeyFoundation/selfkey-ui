@@ -299,9 +299,9 @@ addressBook.addWithJSX('AddressBookEdit', () => (
 	</ModalBox>
 ));
 
-const theme = storiesOf('Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+const theme = storiesOf('Selfkey Dark Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
-theme.addWithJSX('SelfkeyDarkTheme', () => (
+theme.addWithJSX('Colors', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
@@ -309,26 +309,56 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 					Colors
 				</Typography>
 				<ColorStories />
-				<br />
-				<br />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
+theme.addWithJSX('Typography', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<Typography variant="h1" color="error" gutterBottom>
 					Typography
 				</Typography>
 				<TypographyStories />
 				<ListStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
+theme.addWithJSX('Forms', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<Typography variant="h1" color="error" gutterBottom>
 					Forms
 				</Typography>
 				<InputStories />
 				<ButtonStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
+theme.addWithJSX('Tables', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<Typography variant="h1" color="error" gutterBottom>
 					Tables
 				</Typography>
 				<TableStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
+theme.addWithJSX('UI Elements', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<Typography variant="h1" color="error" gutterBottom>
 					UI Elements
 				</Typography>
@@ -339,14 +369,28 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 				<br />
 				<FileUploadInProgressStory />
 				<FileUploadStory />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<br />
+theme.addWithJSX('Modals', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<Typography variant="h1" color="error" gutterBottom>
 					Modals
 				</Typography>
 				<ModalStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<br />
+theme.addWithJSX('Date Picker', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<Typography variant="h1" color="error" gutterBottom>
 					Date Picker
 				</Typography>
