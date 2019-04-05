@@ -35,8 +35,6 @@ import { ModalBox } from '../../src/common/modal-box';
 import {
 	Card,
 	CardContent,
-	Typography,
-	// TablePagination,
 } from '@material-ui/core';
 import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
 import TableStories from './materialui/story-tables';
@@ -286,9 +284,6 @@ theme.addWithJSX('Colors', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					Colors
-				</Typography>
 				<ColorStories />
 			</CardContent>
 		</Card>
@@ -299,9 +294,6 @@ theme.addWithJSX('Typography', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					Typography
-				</Typography>
 				<TypographyStories />
 				<ListStories />
 			</CardContent>
@@ -313,9 +305,6 @@ theme.addWithJSX('Forms', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					Forms
-				</Typography>
 				<InputStories />
 				<ButtonStories />
 			</CardContent>
@@ -327,9 +316,6 @@ theme.addWithJSX('Tables', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					Tables
-				</Typography>
 				<TableStories />
 			</CardContent>
 		</Card>
@@ -340,9 +326,6 @@ theme.addWithJSX('UI Elements', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					UI Elements
-				</Typography>
 				<TabStories />
 				<AccordionStories />
 				<SliderStory />
@@ -359,9 +342,6 @@ theme.addWithJSX('Modals', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					Modals
-				</Typography>
 				<ModalStories />
 			</CardContent>
 		</Card>
@@ -372,9 +352,6 @@ theme.addWithJSX('Date Picker', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					Date Picker
-				</Typography>
 				<DatePickerStories />
 			</CardContent>
 		</Card>
