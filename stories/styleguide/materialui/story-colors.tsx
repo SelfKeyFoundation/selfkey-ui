@@ -2,8 +2,10 @@ import * as React from 'react';
 import { 
     Typography, 
     Grid, 
-    CardContent } from '@material-ui/core';
-import { PrimaryCard, 
+	CardContent 
+} from '@material-ui/core';
+import { 
+	PrimaryCard, 
     PrimaryTintCard, 
     TypographyCard, 
     WhiteCard, 
@@ -20,8 +22,8 @@ from '../../../src/theme/selfkey-dark-theme';
 export default function ColorStories () {
     return (
         <div>
-            <Grid container spacing={24}>
-				<Grid item >
+            <Grid container spacing={24} style={{ marginBottom: '30px' }}>
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Primary
 					</Typography>
@@ -31,7 +33,7 @@ export default function ColorStories () {
 					</PrimaryCard>
 				</Grid>
 
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Primary Tint
 					</Typography>
@@ -41,7 +43,7 @@ export default function ColorStories () {
 					</PrimaryTintCard>
 				</Grid>
 
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Typography
 					</Typography>
@@ -51,7 +53,7 @@ export default function ColorStories () {
 					</TypographyCard>
 				</Grid>
 
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						White
 					</Typography>
@@ -62,8 +64,8 @@ export default function ColorStories () {
 				</Grid> 
 			</Grid>
 
-			<Grid container spacing={24}>
-				<Grid item >
+			<Grid container spacing={24} style={{ marginBottom: '30px' }}>
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Grey
 					</Typography>
@@ -73,7 +75,7 @@ export default function ColorStories () {
 					</GreyCard>
 				</Grid>
 
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Base Light
 					</Typography>
@@ -83,7 +85,7 @@ export default function ColorStories () {
 					</BaseLightCard>
 				</Grid>
 				
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Base Dark
 					</Typography>
@@ -93,7 +95,7 @@ export default function ColorStories () {
 					</BaseDarkCard>
 				</Grid>
 
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Base
 					</Typography>
@@ -104,8 +106,8 @@ export default function ColorStories () {
 				</Grid>
 			</Grid>
 
-			<Grid container spacing={24} justify="flex-start">
-				<Grid item >
+			<Grid container spacing={24} justify="flex-start" style={{ marginBottom: '30px' }}>
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Success
 					</Typography>
@@ -115,7 +117,7 @@ export default function ColorStories () {
 					</SuccessCard>
 				</Grid>
 
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Warning
 					</Typography>
@@ -125,7 +127,7 @@ export default function ColorStories () {
 					</WarningCard>
 				</Grid>
 
-				<Grid item >
+				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Error
 					</Typography>

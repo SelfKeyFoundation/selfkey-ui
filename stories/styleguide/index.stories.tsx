@@ -5,9 +5,6 @@ import { host } from 'storybook-host';
 import JSXAddon from 'storybook-addon-jsx';
 // import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
-import { H1 } from '../../src/typography/headings';
-import { P } from '../../src/typography/paragraph';
-import { Logo } from '../../src/images/logo';
 import { CryptoPriceList } from './crypto-price-list';
 import { TokenList } from './token-list';
 import { CryptoChartBox } from '../../src/price/crypto-chart-box';
@@ -38,8 +35,6 @@ import { ModalBox } from '../../src/common/modal-box';
 import {
 	Card,
 	CardContent,
-	Typography,
-	// TablePagination,
 } from '@material-ui/core';
 import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
 import TableStories from './materialui/story-tables';
@@ -85,22 +80,6 @@ commonStory.addWithJSX('Icons', () => (
 		<IconsStory />
 	</SelfkeyDarkTheme>
 ));
-
-const tStory = storiesOf('Typography', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
-
-tStory.addWithJSX('Primary Heading (H1)', () => <H1>Primary Heading</H1>);
-
-tStory.addWithJSX('Paragraph', () => (
-	<P>
-		Create a new SelfKey ID to start building your identity profile. If you were previously whitelisted for the KEY
-		token sale, simply import the zip file we provided as your SelfKey ID. This data is stored locally on your
-		device, not in a server or on the blockchain.
-	</P>
-));
-
-const iStory = storiesOf('Images', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
-
-iStory.addWithJSX('SelfKey Logo', () => <Logo />);
 
 const priceStory = storiesOf('Prices', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
@@ -299,39 +278,54 @@ addressBook.addWithJSX('AddressBookEdit', () => (
 	</ModalBox>
 ));
 
-const theme = storiesOf('Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+const theme = storiesOf('Selfkey Dark Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
-theme.addWithJSX('SelfkeyDarkTheme', () => (
+theme.addWithJSX('Colors', () => (
 	<SelfkeyDarkTheme>
 		<Card>
 			<CardContent>
-				<Typography variant="h1" color="error" gutterBottom>
-					Colors
-				</Typography>
 				<ColorStories />
-				<br />
-				<br />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<Typography variant="h1" color="error" gutterBottom>
-					Typography
-				</Typography>
+theme.addWithJSX('Typography', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<TypographyStories />
 				<ListStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<Typography variant="h1" color="error" gutterBottom>
-					Forms
-				</Typography>
+theme.addWithJSX('Forms', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<InputStories />
 				<ButtonStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<Typography variant="h1" color="error" gutterBottom>
-					Tables
-				</Typography>
+theme.addWithJSX('Tables', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<TableStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<Typography variant="h1" color="error" gutterBottom>
-					UI Elements
-				</Typography>
+theme.addWithJSX('UI Elements', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<TabStories />
 				<AccordionStories />
 				<SliderStory />
@@ -339,17 +333,25 @@ theme.addWithJSX('SelfkeyDarkTheme', () => (
 				<br />
 				<FileUploadInProgressStory />
 				<FileUploadStory />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<br />
-				<Typography variant="h1" color="error" gutterBottom>
-					Modals
-				</Typography>
+theme.addWithJSX('Modals', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<ModalStories />
+			</CardContent>
+		</Card>
+	</SelfkeyDarkTheme>
+));
 
-				<br />
-				<Typography variant="h1" color="error" gutterBottom>
-					Date Picker
-				</Typography>
+theme.addWithJSX('Date Picker', () => (
+	<SelfkeyDarkTheme>
+		<Card>
+			<CardContent>
 				<DatePickerStories />
 			</CardContent>
 		</Card>
