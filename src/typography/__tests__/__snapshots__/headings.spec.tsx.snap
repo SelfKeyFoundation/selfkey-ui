@@ -15,3 +15,11 @@ exports[`Headings should show Heading 2 1`] = `
   TEST
 </h2>
 `;
+
+exports[`Headings should show Heading 3 1`] = `
+<h3
+  className="Component-base-0-1-9 Component-h3-0-1-12 undefined"
+>
+  TEST
+</h3>
+`;
