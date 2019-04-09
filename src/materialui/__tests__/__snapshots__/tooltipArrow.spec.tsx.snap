@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Arrow should show Tooltip Arrow 1`] = `
+<span
+  className="arrowClass"
+  style={
+    Object {
+      "&::before": Object {
+        "borderStyle": "solid",
+        "content": "\\"\\"",
+        "display": "block",
+        "height": 0,
+        "margin": "auto",
+        "width": 0,
+      },
+      "fontSize": 7,
+      "height": "3em",
+      "width": "3em",
+    }
+  }
+/>
+`;
