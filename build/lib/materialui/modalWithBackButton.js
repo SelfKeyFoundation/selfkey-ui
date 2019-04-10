@@ -84,7 +84,7 @@ var ModalWithBackButton = /** @class */ (function (_super) {
                 React.createElement("br", null),
                 React.createElement(core_1.Button, { variant: 'outlined', size: "large", onClick: this.handleOpen }, "Add Token")),
             React.createElement("br", null),
-            React.createElement(Modal_1.default, { open: this.state.open, onClose: this.handleClose },
+            React.createElement(Modal_1.default, { open: this.state.open, onClose: this.handleClose, className: "test" },
                 React.createElement(exports.ModalWrap, null,
                     React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
                     React.createElement(modalElements_1.ModalBody2, null,

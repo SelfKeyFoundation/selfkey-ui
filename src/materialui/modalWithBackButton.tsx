@@ -88,6 +88,7 @@ class ModalWithBackButton extends React.Component {
                 <Modal
                     open={this.state.open}
                     onClose={this.handleClose}
+                    className="test"
                 >
                     <ModalWrap>
                         <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
