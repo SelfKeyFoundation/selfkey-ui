@@ -14,7 +14,6 @@ describe('Address Book', () => {
           }
         ]
       }
-      
       onEdit={id => alert('onEdit' + id)}
       onDelete={id =>alert('onDelete' + id)}
       onAdd={() =>alert('onAdd')}
@@ -24,8 +23,3 @@ describe('Address Book', () => {
     expect(tree).toMatchSnapshot();
   });
 });
-
-
-
-
-

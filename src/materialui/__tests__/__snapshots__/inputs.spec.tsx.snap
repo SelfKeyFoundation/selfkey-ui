@@ -1,0 +1,517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File Upload Widget should show File Upload Widget 1`] = `
+<div
+  className="MuiGrid-container-13 MuiGrid-spacing-xs-24-37 MuiGrid-direction-xs-column-16"
+>
+  <div
+    className="MuiGrid-item-14"
+  >
+    <div
+      className="Component-form-0-2-3"
+    >
+      <div
+        className="MuiGrid-container-13 MuiGrid-align-items-xs-center-21 MuiGrid-justify-xs-space-between-32"
+      >
+        <div
+          className="MuiGrid-item-14"
+        >
+          <h6
+            className="MuiTypography-root-119 MuiTypography-subtitle2-138 MuiTypography-colorSecondary-150"
+          >
+            Please upload a document
+          </h6>
+        </div>
+        <div
+          className="MuiGrid-item-14"
+        >
+          <label
+            className="MuiButtonBase-root-161 MuiButton-root-171 MuiButton-contained-182 MuiButton-raised-185 MuiButton-sizeLarge-195 Component-button-0-2-4"
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <span
+              className="MuiButton-label-172"
+            >
+              Upload
+              <input
+                accept="image/*,.pdf"
+                className="Component-fileInput-0-2-5"
+                id="key-upload"
+                onChange={[Function]}
+                type="file"
+              />
+            </span>
+            <span
+              className="MuiTouchRipple-root-164"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-item-14"
+  >
+    <div
+      className="MuiGrid-item-14"
+    >
+      <div
+        className="MuiGrid-container-13 MuiGrid-wrap-xs-nowrap-19 MuiGrid-align-items-xs-center-21 MuiGrid-justify-xs-space-between-32 FileViewWithModal-bottomSpace-208"
+      >
+        <div
+          className="MuiGrid-item-14 FileViewWithModal-padding-207"
+        >
+          <div
+            className="MuiGrid-container-13 MuiGrid-spacing-xs-16-36 MuiGrid-wrap-xs-nowrap-19 MuiGrid-align-items-xs-center-21"
+          >
+            <div
+              className="MuiGrid-item-14"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-110 Component-root-0-2-1"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 29 36"
+              >
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  id="💻-ID-Dashboard"
+                  stroke="none"
+                  strokeWidth="1"
+                >
+                  <g
+                    fill="#697C95"
+                    fillRule="nonzero"
+                    id="406---Delete-Attribute"
+                    transform="translate(-392.000000, -1549.000000)"
+                  >
+                    <g
+                      id="Area-box-3"
+                      transform="translate(150.000000, 1262.000000)"
+                    >
+                      <g
+                        id="Table"
+                        transform="translate(14.000000, 80.000000)"
+                      >
+                        <g
+                          id="Col2"
+                          transform="translate(228.000000, 11.000000)"
+                        >
+                          <g
+                            id="line"
+                            transform="translate(0.000000, 194.000000)"
+                          >
+                            <path
+                              d="M0,2 L0,2.7826087 L0,37.2173913 L0,38 L0.782608696,38 L27.3913043,38 L28.173913,38 L28.173913,37.2173913 L28.173913,12.173913 L28.173913,11.8559783 L27.9538043,11.611413 L18.5625,2.2201087 L18.3179348,2 L18,2 L0.782608696,2 L0,2 Z M1.56521739,3.56521739 L17.2173913,3.56521739 L17.2173913,12.173913 L17.2173913,12.9565217 L18,12.9565217 L26.6086957,12.9565217 L26.6086957,36.4347826 L1.56521739,36.4347826 L1.56521739,3.56521739 Z M18.7826087,4.69021739 L25.4836957,11.3913043 L18.7826087,11.3913043 L18.7826087,4.69021739 Z"
+                              id="icon-default-file"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div
+              className="MuiGrid-item-14 FileViewWithModal-breakAll-202"
+            >
+              <a
+                className="FileViewWithModal-noDecoration-199 FileViewWithModal-link-200"
+              >
+                <h6
+                  className="MuiTypography-root-119 MuiTypography-subtitle1-137 FileViewWithModal-fileName-201"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-item-14"
+        >
+          <button
+            className="MuiButtonBase-root-161 MuiIconButton-root-155"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-160"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-110 Component-root-0-2-2"
+                focusable="false"
+                role="presentation"
+                version="1.1"
+                viewBox="0 0 16 16"
+              >
+                <defs />
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  id="-Main-Dashboard"
+                  stroke="none"
+                  strokeWidth="1"
+                >
+                  <g
+                    fill="#697C95"
+                    id="304-Manage-My-Tokens"
+                    transform="translate(-1244.000000, -597.000000)"
+                  >
+                    <g
+                      id="Table"
+                      transform="translate(150.000000, 442.000000)"
+                    >
+                      <g
+                        id="Col7"
+                        transform="translate(1094.000000, 155.000000)"
+                      >
+                        <path
+                          d="M9.13137085,8 L10.8284271,9.69705627 L9.69705627,10.8284271 L8,9.13137085 L6.30294373,10.8284271 L5.17157288,9.69705627 L6.86862915,8 L5.17157288,6.30294373 L6.30294373,5.17157288 L8,6.86862915 L9.69705627,5.17157288 L10.8284271,6.30294373 L9.13137085,8 Z M8,14.4 C4.4712,14.4 1.6,11.5288 1.6,8 C1.6,4.4712 4.4712,1.6 8,1.6 C11.5288,1.6 14.4,4.4712 14.4,8 C14.4,11.5288 11.5288,14.4 8,14.4 L8,14.4 Z M8,0 C3.5816,0 0,3.5816 0,8 C0,12.4184 3.5816,16 8,16 C12.4184,16 16,12.4184 16,8 C16,3.5816 12.4184,0 8,0 L8,0 Z"
+                          id="icon-delete"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-164"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File View With Modal should show File View With Modal 1`] = `
+<div
+  className="MuiGrid-item-14"
+>
+  <div
+    className="MuiGrid-item-14"
+  >
+    <div
+      className="MuiGrid-container-13 MuiGrid-wrap-xs-nowrap-19 MuiGrid-align-items-xs-center-21 MuiGrid-justify-xs-space-between-32 FileViewWithModal-bottomSpace-208"
+    >
+      <div
+        className="MuiGrid-item-14 FileViewWithModal-padding-207"
+      >
+        <div
+          className="MuiGrid-container-13 MuiGrid-spacing-xs-16-36 MuiGrid-wrap-xs-nowrap-19 MuiGrid-align-items-xs-center-21"
+        >
+          <div
+            className="MuiGrid-item-14"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-110 Component-root-0-2-1"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 29 36"
+            >
+              <g
+                fill="none"
+                fillRule="evenodd"
+                id="💻-ID-Dashboard"
+                stroke="none"
+                strokeWidth="1"
+              >
+                <g
+                  fill="#697C95"
+                  fillRule="nonzero"
+                  id="406---Delete-Attribute"
+                  transform="translate(-392.000000, -1549.000000)"
+                >
+                  <g
+                    id="Area-box-3"
+                    transform="translate(150.000000, 1262.000000)"
+                  >
+                    <g
+                      id="Table"
+                      transform="translate(14.000000, 80.000000)"
+                    >
+                      <g
+                        id="Col2"
+                        transform="translate(228.000000, 11.000000)"
+                      >
+                        <g
+                          id="line"
+                          transform="translate(0.000000, 194.000000)"
+                        >
+                          <path
+                            d="M0,2 L0,2.7826087 L0,37.2173913 L0,38 L0.782608696,38 L27.3913043,38 L28.173913,38 L28.173913,37.2173913 L28.173913,12.173913 L28.173913,11.8559783 L27.9538043,11.611413 L18.5625,2.2201087 L18.3179348,2 L18,2 L0.782608696,2 L0,2 Z M1.56521739,3.56521739 L17.2173913,3.56521739 L17.2173913,12.173913 L17.2173913,12.9565217 L18,12.9565217 L26.6086957,12.9565217 L26.6086957,36.4347826 L1.56521739,36.4347826 L1.56521739,3.56521739 Z M18.7826087,4.69021739 L25.4836957,11.3913043 L18.7826087,11.3913043 L18.7826087,4.69021739 Z"
+                            id="icon-default-file"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div
+            className="MuiGrid-item-14 FileViewWithModal-breakAll-202"
+          >
+            <a
+              className="FileViewWithModal-noDecoration-199 FileViewWithModal-link-200"
+            >
+              <h6
+                className="MuiTypography-root-119 MuiTypography-subtitle1-137 FileViewWithModal-fileName-201"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-item-14"
+      >
+        <button
+          className="MuiButtonBase-root-161 MuiIconButton-root-155"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label-160"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-110 Component-root-0-2-2"
+              focusable="false"
+              role="presentation"
+              version="1.1"
+              viewBox="0 0 16 16"
+            >
+              <defs />
+              <g
+                fill="none"
+                fillRule="evenodd"
+                id="-Main-Dashboard"
+                stroke="none"
+                strokeWidth="1"
+              >
+                <g
+                  fill="#697C95"
+                  id="304-Manage-My-Tokens"
+                  transform="translate(-1244.000000, -597.000000)"
+                >
+                  <g
+                    id="Table"
+                    transform="translate(150.000000, 442.000000)"
+                  >
+                    <g
+                      id="Col7"
+                      transform="translate(1094.000000, 155.000000)"
+                    >
+                      <path
+                        d="M9.13137085,8 L10.8284271,9.69705627 L9.69705627,10.8284271 L8,9.13137085 L6.30294373,10.8284271 L5.17157288,9.69705627 L6.86862915,8 L5.17157288,6.30294373 L6.30294373,5.17157288 L8,6.86862915 L9.69705627,5.17157288 L10.8284271,6.30294373 L9.13137085,8 Z M8,14.4 C4.4712,14.4 1.6,11.5288 1.6,8 C1.6,4.4712 4.4712,1.6 8,1.6 C11.5288,1.6 14.4,4.4712 14.4,8 C14.4,11.5288 11.5288,14.4 8,14.4 L8,14.4 Z M8,0 C3.5816,0 0,3.5816 0,8 C0,12.4184 3.5816,16 8,16 C12.4184,16 16,12.4184 16,8 C16,3.5816 12.4184,0 8,0 L8,0 Z"
+                        id="icon-delete"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root-164"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File View should show File View 1`] = `
+<div
+  className="MuiGrid-item-14 Component-fileItem-1"
+>
+  <div
+    className="MuiGrid-container-13 MuiGrid-wrap-xs-nowrap-19 MuiGrid-align-items-xs-center-21 MuiGrid-justify-xs-space-between-32"
+  >
+    <div
+      className="MuiGrid-item-14"
+    >
+      <div
+        className="MuiGrid-container-13 MuiGrid-spacing-xs-16-36 MuiGrid-wrap-xs-nowrap-19 MuiGrid-align-items-xs-center-21"
+      >
+        <div
+          className="MuiGrid-item-14"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-110 Component-root-0-2-1"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 29 36"
+          >
+            <g
+              fill="none"
+              fillRule="evenodd"
+              id="💻-ID-Dashboard"
+              stroke="none"
+              strokeWidth="1"
+            >
+              <g
+                fill="#697C95"
+                fillRule="nonzero"
+                id="406---Delete-Attribute"
+                transform="translate(-392.000000, -1549.000000)"
+              >
+                <g
+                  id="Area-box-3"
+                  transform="translate(150.000000, 1262.000000)"
+                >
+                  <g
+                    id="Table"
+                    transform="translate(14.000000, 80.000000)"
+                  >
+                    <g
+                      id="Col2"
+                      transform="translate(228.000000, 11.000000)"
+                    >
+                      <g
+                        id="line"
+                        transform="translate(0.000000, 194.000000)"
+                      >
+                        <path
+                          d="M0,2 L0,2.7826087 L0,37.2173913 L0,38 L0.782608696,38 L27.3913043,38 L28.173913,38 L28.173913,37.2173913 L28.173913,12.173913 L28.173913,11.8559783 L27.9538043,11.611413 L18.5625,2.2201087 L18.3179348,2 L18,2 L0.782608696,2 L0,2 Z M1.56521739,3.56521739 L17.2173913,3.56521739 L17.2173913,12.173913 L17.2173913,12.9565217 L18,12.9565217 L26.6086957,12.9565217 L26.6086957,36.4347826 L1.56521739,36.4347826 L1.56521739,3.56521739 Z M18.7826087,4.69021739 L25.4836957,11.3913043 L18.7826087,11.3913043 L18.7826087,4.69021739 Z"
+                          id="icon-default-file"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div
+          className="MuiGrid-item-14 Component-breakAll-6"
+        >
+          <a
+            className="Component-noDecoration-3"
+          >
+            <p
+              className="MuiTypography-root-119 MuiTypography-body2-127"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-14"
+    >
+      <button
+        className="MuiButtonBase-root-161 MuiIconButton-root-155"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-160"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-110 Component-root-0-2-2"
+            focusable="false"
+            role="presentation"
+            version="1.1"
+            viewBox="0 0 16 16"
+          >
+            <defs />
+            <g
+              fill="none"
+              fillRule="evenodd"
+              id="-Main-Dashboard"
+              stroke="none"
+              strokeWidth="1"
+            >
+              <g
+                fill="#697C95"
+                id="304-Manage-My-Tokens"
+                transform="translate(-1244.000000, -597.000000)"
+              >
+                <g
+                  id="Table"
+                  transform="translate(150.000000, 442.000000)"
+                >
+                  <g
+                    id="Col7"
+                    transform="translate(1094.000000, 155.000000)"
+                  >
+                    <path
+                      d="M9.13137085,8 L10.8284271,9.69705627 L9.69705627,10.8284271 L8,9.13137085 L6.30294373,10.8284271 L5.17157288,9.69705627 L6.86862915,8 L5.17157288,6.30294373 L6.30294373,5.17157288 L8,6.86862915 L9.69705627,5.17157288 L10.8284271,6.30294373 L9.13137085,8 Z M8,14.4 C4.4712,14.4 1.6,11.5288 1.6,8 C1.6,4.4712 4.4712,1.6 8,1.6 C11.5288,1.6 14.4,4.4712 14.4,8 C14.4,11.5288 11.5288,14.4 8,14.4 L8,14.4 Z M8,0 C3.5816,0 0,3.5816 0,8 C0,12.4184 3.5816,16 8,16 C12.4184,16 16,12.4184 16,8 C16,3.5816 12.4184,0 8,0 L8,0 Z"
+                      id="icon-delete"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-164"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
