@@ -106,6 +106,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!**/node_modules/**",
+      "!src/index.tsx",
       "!src/jss-setup.tsx"
     ],
     "coveragePathIgnorePatterns": [
