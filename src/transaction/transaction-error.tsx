@@ -1,7 +1,7 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
-import { P } from '../typography/paragraph';
 import TransactionErrorBox from './transaction-error-box';
+import { Typography } from '@material-ui/core';
 
 const styles: StyleSheet = {
 	bodyText: {
@@ -19,7 +19,7 @@ export const TransactionError = injectSheet(styles)<TransactionNoGasErrorProps>(
 	({ classes, message, publicKey, closeAction }) => {
 		return (
 			<TransactionErrorBox publicKey={publicKey} closeAction={closeAction}>
-				<P className={classes.bodyText}>{message}</P>
+				<Typography variant="body2" className={classes.bodyText}>{message}</Typography>
 			</TransactionErrorBox>
 		);
 	}

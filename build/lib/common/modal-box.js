@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var headings_1 = require("../typography/headings");
 var close_button_1 = require("../icons/close-button");
 var styles = {
     root: {
@@ -46,7 +45,7 @@ exports.ModalBox = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, headerText = _a.headerText, children = _a.children, closeAction = _a.closeAction;
     return (React.createElement(core_1.Grid, { container: true, className: classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
         React.createElement(core_1.Grid, { item: true, id: 'header', className: classes.header },
-            React.createElement(headings_1.H2, null, headerText),
+            React.createElement(core_1.Typography, { variant: "h2" }, headerText),
             React.createElement("a", { className: classes.closeButton, onClick: closeAction },
                 React.createElement(close_button_1.CloseButtonIcon, null))),
         React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body }, children)));

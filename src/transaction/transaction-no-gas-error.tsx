@@ -1,8 +1,7 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
-
-import { P } from '../typography/paragraph';
 import TransactionErrorBox from './transaction-error-box';
+import { Typography } from '@material-ui/core';
 
 const styles: StyleSheet = {
 	bodyText: {
@@ -40,10 +39,10 @@ export const TransactionNoGasError = injectSheet(styles)<TransactionNoGasErrorPr
 		return (
 			<TransactionErrorBox publicKey={publicKey} closeAction={closeAction}>
 				<div className={classes.bodyText}>
-					<P>
+					<Typography variant="body1">
 						You don't have enough Ethereum (ETH) to pay for the network transaction fee.
 						Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
-					</P>
+					</Typography>
 					<div className={classes.learnMoreText}>
 						To learn more about transaction fees, click {' '}
 						<a className={`${classes.learnMoreText}  ${classes.learnMoreLink}`} href={gasExplanationUrl} onClick={handleLinkClick}>
