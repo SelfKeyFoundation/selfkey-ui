@@ -6,102 +6,93 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-1 Component-root-0-1-4"
+    className="MuiSvgIcon-root-1"
     focusable="false"
+    height="20px"
     role="presentation"
-    viewBox="0 0 53 60"
+    style={
+      Object {
+        "height": "43px",
+        "width": "50px",
+      }
+    }
+    viewBox="0 0 18 20"
+    width="18px"
   >
     <defs>
-      <path
-        d="M70.1818182,34.4995823 L48.5909091,22 L27,34.4995823 L27,59.5004177 L48.5909091,72 L70.1818182,59.5004177 L70.1818182,34.4995823 Z M55.4868898,32.8086884 C55.4841926,33.5992931 54.8562499,34.2395224 54.0808177,34.2422723 L48.8514749,34.2422723 L48.8514749,37.3299916 L52.7091599,37.3299916 C53.4857121,37.3299917 54.115232,37.9718291 54.115232,38.7635756 C54.115232,39.5553221 53.4857121,40.1971595 52.7091599,40.1971596 L48.8514749,40.1971596 L48.8514749,51.1896408 C48.8539896,51.2402906 48.8539896,51.2910377 48.8514749,51.3416876 C51.5800796,52.0741359 53.3548884,54.7535311 53.0020618,57.6077498 C52.6492352,60.4619686 50.2778561,62.6085761 47.4563291,62.6278292 C44.6348022,62.6470823 42.235455,60.5330285 41.84519,57.6838804 C41.4549251,54.8347322 43.1944,52.1313568 45.9131447,51.3617377 C45.9068271,51.3062722 45.9035445,51.250491 45.9033121,51.1946533 L45.9033121,32.8822055 C45.9033121,32.0517021 46.5636476,31.3784461 47.3782129,31.3784461 C47.5015447,31.3788325 47.6243339,31.395113 47.7436605,31.4269006 C47.859651,31.3951689 47.9791829,31.378882 48.0992755,31.3784461 L54.085734,31.3784461 C54.8611662,31.3811961 55.4891089,32.0214254 55.4918061,32.8120301 L55.4868898,32.8086884 Z"
-        id="lws-selfkey-path-1"
-      />
-      <filter
-        filterUnits="objectBoundingBox"
-        height="128.6%"
-        id="lws-selfkey-filter-2"
-        width="132.4%"
-        x="-16.2%"
-        y="-14.3%"
+      <linearGradient
+        id="selfkey-logo-linearGradient-1"
+        x1="50%"
+        x2="50%"
+        y1="97.784%"
+        y2="1.559%"
       >
-        <feMorphology
-          in="SourceAlpha"
-          operator="dilate"
-          radius="1.5"
-          result="shadowSpreadOuter1"
+        <stop
+          offset="0%"
+          stopColor="#08BCCD"
         />
-        <feOffset
-          dx="0"
-          dy="0"
-          in="shadowSpreadOuter1"
-          result="shadowOffsetOuter1"
+        <stop
+          offset="100%"
+          stopColor="#2DA1F8"
         />
-        <feMorphology
-          in="SourceAlpha"
-          operator="erode"
-          radius="1.5"
-          result="shadowInner"
+      </linearGradient>
+      <linearGradient
+        id="selfkey-logo-linearGradient-2"
+        x1="50%"
+        x2="4git 1.849%"
+        y1="97.784%"
+        y2="-16.397%"
+      >
+        <stop
+          offset="0%"
+          stopColor="#08BCCD"
         />
-        <feOffset
-          dx="0"
-          dy="0"
-          in="shadowInner"
-          result="shadowInner"
+        <stop
+          offset="100%"
+          stopColor="#2DA1F8"
         />
-        <feComposite
-          in="shadowOffsetOuter1"
-          in2="shadowInner"
-          operator="out"
-          result="shadowOffsetOuter1"
-        />
-        <feGaussianBlur
-          in="shadowOffsetOuter1"
-          result="shadowBlurOuter1"
-          stdDeviation="1.5"
-        />
-        <feColorMatrix
-          in="shadowBlurOuter1"
-          type="matrix"
-          values="0 0 0 0 0.0274509804   0 0 0 0 0.62745098   0 0 0 0 0.694117647  0 0 0 1 0"
-        />
-      </filter>
+      </linearGradient>
     </defs>
     <g
       fill="none"
       fillRule="evenodd"
-      id="Modal---Dark"
+      id="🌈-UI-Guidelines"
       stroke="none"
       strokeWidth="1"
     >
       <g
         fillRule="nonzero"
-        id="1.-Select-Wallet-Modal"
-        transform="translate(-442.000000, -135.000000)"
+        id="4.-Style-Guide---Tables"
+        transform="translate(-1002.000000, -744.000000)"
       >
         <g
-          id="Modal-content"
-          transform="translate(420.000000, 100.000000)"
+          id="Small-table"
+          transform="translate(39.000000, 588.000000)"
         >
           <g
-            id="Modal-Title"
-            transform="translate(0.000000, 18.000000)"
+            id="Table-small"
+            transform="translate(0.000000, 66.000000)"
           >
             <g
-              id="title"
+              id="Col8"
+              transform="translate(963.000000, 4.000000)"
             >
               <g
-                id="sk-logo"
+                id="selfkey"
+                transform="translate(0.000000, 86.000000)"
               >
-                <use
-                  fill="black"
-                  fillOpacity="1"
-                  filter="url(#lws-selfkey-filter-2)"
-                  xlinkHref="#lws-selfkey-path-1"
+                <ellipse
+                  cx="8.30153846"
+                  cy="14"
+                  fill="url(#selfkey-logo-linearGradient-1)"
+                  id="Oval"
+                  rx="1.28615385"
+                  ry="1.29415385"
                 />
                 <path
-                  d="M48.5909091,21.4222549 L70.6818182,34.2113012 L70.6818182,59.7886988 L48.5909091,72.5777451 L26.5,59.7886988 L26.5,34.2113012 L48.5909091,21.4222549 Z M54.9871835,32.721751 C54.9901385,32.752 54.9917031,32.7826839 54.991809,32.8137358 L55.4918061,32.8120301 L55.7728794,32.3985113 L54.9901014,31.8664484 L54.9871835,32.721751 Z"
-                  stroke="#03BED3"
-                  strokeWidth="1"
+                  d="M17.5384615,5 L8.76923077,0 L0,5 L0,15 L8.76923077,20 L17.5384615,15 L17.5384615,5 Z M11.5701538,4.32307692 C11.5698201,4.63873552 11.3147312,4.89492393 10.9990769,4.89661538 L8.87507692,4.89661538 L8.87507692,6.13169231 L10.4418462,6.13169231 C10.5936317,6.13201838 10.7390709,6.19262785 10.8461687,6.30018725 C10.9532665,6.40774665 11.0132498,6.55344523 11.0129231,6.70523077 C11.0134334,7.02118782 10.7578029,7.27778247 10.4418462,7.27846154 L8.87507692,7.27846154 L8.87507692,11.6753846 C8.876,11.6956923 8.876,11.716 8.87507692,11.7363077 C9.98338462,12.0292308 10.704,13.1012308 10.5609231,14.2427692 C10.4175385,15.3843077 9.45446154,16.2430769 8.30861538,16.2507692 C7.16246154,16.2584615 6.188,15.4129231 6.02953846,14.2732308 C5.87107692,13.1335385 6.57723077,12.0523077 7.68184615,11.7443077 C7.67917769,11.722148 7.67773958,11.6998574 7.67753846,11.6775385 L7.67753846,4.35292308 C7.67712997,4.19368662 7.74003701,4.04081873 7.85240347,3.92799057 C7.96476994,3.8151624 8.11737859,3.75162907 8.27661538,3.75138462 C8.32676923,3.75138462 8.37661538,3.75815385 8.42523077,3.77076923 C8.47229165,3.75808939 8.52079967,3.75157339 8.56953846,3.75138462 L11.0009231,3.75138462 C11.3165773,3.75307607 11.5716662,4.00926448 11.572,4.32492308 L11.5701538,4.32338462 L11.5701538,4.32307692 Z"
+                  fill="url(#selfkey-logo-linearGradient-2)"
+                  id="Shape"
                 />
               </g>
             </g>
@@ -111,7 +102,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
     </g>
   </svg>
   <h1
-    className="Component-base-0-1-5 Component-h1-0-1-6 Component-title-0-1-3"
+    className="Component-base-0-1-4 Component-h1-0-1-5 Component-title-0-1-3"
   >
     Login with SelfKey
   </h1>
@@ -120,7 +111,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-9"
+      className="MuiSvgIcon-root-1 Component-root-0-1-8"
       focusable="false"
       role="presentation"
       viewBox="0 0 38 38"

@@ -2,6 +2,82 @@ import * as React from 'react';
 import { FormControl, MenuItem, Select, Input } from '@material-ui/core';
 import { KeyboardArrowDown } from '@material-ui/icons';
 
+const DropdownItems = ({ value, handleChange }: any) => (
+	<Select
+		value={value}
+		onChange={handleChange}
+		displayEmpty
+		name="country"
+		disableUnderline
+		IconComponent={KeyboardArrowDown}
+		input={<Input disableUnderline />}
+	>
+		<MenuItem value="">
+			<em>Choose...</em>
+		</MenuItem>
+		{[
+			'Andorra',
+			'Malta',
+			'Russia',
+			'Spain',
+			'Uruguay',
+			'Uganda',
+			'Vatican',
+			'Venezuela',
+			'Zimbabwe',
+			'Andorra2',
+			'Malta2',
+			'Russia2',
+			'Spain2',
+			'Uruguay2',
+			'Uganda2',
+			'Vatican2',
+			'Venezuela2',
+			'Zimbabwe2',
+			'Andorra3',
+			'Malta3',
+			'Russia3',
+			'Spain3',
+			'Uruguay3',
+			'Uganda3',
+			'Vatican3',
+			'Venezuela3',
+			'Zimbabwe3',
+			'Andorra4',
+			'Malta4',
+			'Russia4',
+			'Spain4',
+			'Uruguay4',
+			'Uganda4',
+			'Vatican4',
+			'Venezuela4',
+			'Zimbabwe4',
+			'Andorra5',
+			'Malta5',
+			'Russia5',
+			'Spain5',
+			'Uruguay5',
+			'Uganda5',
+			'Vatican5',
+			'Venezuela5',
+			'Zimbabwe5',
+			'Andorra6',
+			'Malta6',
+			'Russia6',
+			'Spain6',
+			'Uruguay6',
+			'Uganda6',
+			'Vatican6',
+			'Venezuela6',
+			'Zimbabwe6',
+		].map(item => (
+			<MenuItem key={item} value={item}>
+				{item}
+			</MenuItem>
+		))}
+	</Select>
+);
+
 class DropdownStories extends React.Component {
 	state = {
 		country: '',
@@ -15,160 +91,7 @@ class DropdownStories extends React.Component {
 		return (
 			<form autoComplete="off">
 				<FormControl variant="filled">
-					<Select
-						value={this.state.country}
-						onChange={this.handleChange}
-						displayEmpty
-						name="country"
-						disableUnderline
-						IconComponent={KeyboardArrowDown}
-						input={<Input disableUnderline />}
-					>
-						<MenuItem value="">
-							<em>Choose...</em>
-						</MenuItem>
-						{[
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-						].map(item => (
-							<MenuItem key={item} value={item}>
-								{item}
-							</MenuItem>
-						))}
-					</Select>
-				</FormControl>
-
-				<br />
-				<br />
-				<br />
-
-				<FormControl variant="filled">
-					<Select
-						value={this.state.country}
-						onChange={this.handleChange}
-						native
-						displayEmpty
-						name="country"
-						disableUnderline
-						IconComponent={KeyboardArrowDown}
-						input={<Input disableUnderline />}
-					>
-						<option value="">
-							Choose...
-						</option>
-						{[
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-							'Andorra',
-							'Malta',
-							'Russia',
-							'Spain',
-							'Uruguay',
-							'Uganda',
-							'Vatican',
-							'Venezuela',
-							'Zimbabwe',
-						].map(item => (
-							<option key={item} value={item}>
-								{item}
-							</option>
-						))}
-					</Select>
+					<DropdownItems value={this.state.country} handleChange={this.handleChange} />
 				</FormControl>
 			</form>
 		);

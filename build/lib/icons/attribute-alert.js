@@ -21,7 +21,7 @@ var styles = {
     },
 };
 exports.AttributeAlertIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 18 20", version: "1.1" }),
-    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "703.1---Incorporation-+-Submit-+-Errors", transform: "translate(-385.000000, -635.000000)", fill: "#E98548" },
             React.createElement("g", { id: "Modal1", transform: "translate(330.000000, 159.000000)" },
                 React.createElement("g", { id: "Table", transform: "translate(40.000000, 264.000000)" },

@@ -17,9 +17,9 @@ var react_jss_1 = require("react-jss");
 var common_style_1 = require("../common/common-style");
 var check_1 = require("../icons/check");
 var check_empty_1 = require("../icons/check-empty");
-var warning_1 = require("../icons/warning");
-var edit_1 = require("../icons/edit");
+var attribute_alert_1 = require("../icons/attribute-alert");
 var lws_button_1 = require("./lws-button");
+var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var styles = {
     form: common_style_1.default.form,
     buttonPrimary: __assign({}, common_style_1.default.buttonPrimary, { fontWeight: 700 }),
@@ -132,12 +132,12 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
         else {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
-                    React.createElement(warning_1.WarningIcon, null),
+                    React.createElement(attribute_alert_1.AttributeAlertIcon, null),
                     React.createElement("dl", null,
                         React.createElement("dt", null, attribute.label),
                         editAction ? (React.createElement("dd", null,
                             React.createElement("a", { onClick: editAction, className: classes.edit },
-                                React.createElement(edit_1.EditIcon, null)))) : null)),
+                                React.createElement(selfkey_dark_theme_1.EditTransparentIcon, null)))) : null)),
                 React.createElement("div", { className: classes.waringMessage }, "Please update your missing details.")));
         }
     });

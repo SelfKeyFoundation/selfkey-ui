@@ -8,7 +8,7 @@ exports[`Token Box should show Token Box for key 1`] = `
     className="MuiGrid-container-1"
   >
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-6-35 MuiGrid-grid-sm-2-45"
+      className="MuiGrid-item-2 MuiGrid-grid-sm-2-45"
     >
       <svg
         aria-hidden="true"
@@ -37,7 +37,7 @@ exports[`Token Box should show Token Box for key 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-9-52"
+      className="MuiGrid-item-2 MuiGrid-grid-sm-8-51"
     >
       <div
         className="Component-cryptoCurrencyName-0-1-8"
@@ -51,7 +51,7 @@ exports[`Token Box should show Token Box for key 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-6-35 MuiGrid-grid-sm-1-44"
+      className="MuiGrid-item-2 MuiGrid-grid-sm-2-45"
     >
       <button
         className="Component-transferButton-0-1-7"
@@ -108,7 +108,7 @@ exports[`Token Box should show Token Box for key 1`] = `
     className="MuiGrid-container-1 Component-addressBox-0-1-5"
   >
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-10-53"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39"
     >
       <span
         className="Component-publicKey-0-1-6"
@@ -117,7 +117,7 @@ exports[`Token Box should show Token Box for key 1`] = `
       </span>
     </div>
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-2-45"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-2-31"
     >
       <button
         className="CopyComponent-copyButton-0-1-12"

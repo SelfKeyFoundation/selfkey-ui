@@ -122,7 +122,7 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 			<TableRow key={index} className={classes.bodyTableRow}>
 				<TableCell>{token.name}</TableCell>
 				<TableCell>{token.symbol}</TableCell>
-				<TableCell numeric>
+				<TableCell align="right">
 					<PriceSummary
 						className={classes.test}
 						locale={locale}
@@ -131,10 +131,10 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 						value={token.balance}
 					/>
 				</TableCell>
-				<TableCell numeric>
+				<TableCell align="right">
 					<PriceSummary locale={locale} style="currency" currency={fiatCurrency} value={token.price} />
 				</TableCell>
-				<TableCell numeric>
+				<TableCell align="right">
 					<PriceSummary
 						locale={locale}
 						style="currency"
@@ -159,11 +159,11 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 					<TableHead>
 						<TableRow className={classes.headerTableRow}>
 							<TableCell>NAME</TableCell>
-							<TableCell numeric>TOKEN SYMBOL</TableCell>
-							<TableCell numeric>BALANCE</TableCell>
-							<TableCell numeric>LAST PRICE</TableCell>
-							<TableCell numeric>TOTAL VALUE</TableCell>
-							<TableCell numeric>TOKEN CONTRACT ADDRESS</TableCell>
+							<TableCell align="right">TOKEN SYMBOL</TableCell>
+							<TableCell align="right">BALANCE</TableCell>
+							<TableCell align="right">LAST PRICE</TableCell>
+							<TableCell align="right">TOTAL VALUE</TableCell>
+							<TableCell align="right">TOKEN CONTRACT ADDRESS</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>{tokenRows}</TableBody>

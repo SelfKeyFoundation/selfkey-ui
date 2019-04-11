@@ -24,7 +24,7 @@ export const MyCryptoLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIc
 				id="304-Manage-My-Tokens"
 				transform="translate(-687.000000, -146.000000)"
 				fill="url(#my-crypto-large-linearGradient-1)"
-				fill-rule="nonzero"
+				fillRule="nonzero"
 				stroke="#0FB8D0"
 			>
 				<g id="Page-header" transform="translate(409.000000, 146.000000)">

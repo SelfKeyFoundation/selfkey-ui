@@ -30,7 +30,6 @@ __export(require("../icons/check"));
 __export(require("../icons/clear"));
 __export(require("../icons/clipboard"));
 __export(require("../icons/close-button"));
-__export(require("../icons/close-dialog"));
 __export(require("../icons/copy"));
 __export(require("../icons/corporate"));
 __export(require("../icons/custom"));
@@ -40,7 +39,6 @@ __export(require("../icons/document"));
 __export(require("../icons/download-2"));
 __export(require("../icons/download"));
 __export(require("../icons/edit-transparent"));
-__export(require("../icons/edit"));
 __export(require("../icons/ethereum"));
 __export(require("../icons/exchange-large"));
 // export * from '../icons/exchange';
@@ -65,7 +63,6 @@ __export(require("../icons/info"));
 __export(require("../icons/key"));
 __export(require("../icons/ledger"));
 __export(require("../icons/list"));
-__export(require("../icons/lws-selfkey"));
 __export(require("../icons/mail"));
 __export(require("../icons/marketplace-menu"));
 __export(require("../icons/marketplace"));
@@ -115,9 +112,7 @@ __export(require("../icons/view"));
 __export(require("../icons/visibility-off"));
 __export(require("../icons/visibility-on"));
 __export(require("../icons/wallet"));
-__export(require("../icons/warning-large"));
 __export(require("../icons/warning-shield"));
-__export(require("../icons/warning"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muiadd_1 = require("../icons/muiadd");
@@ -703,12 +698,12 @@ var theme = core_1.createMuiTheme({
                     boxSizing: 'border-box',
                     color: colors_1.white,
                 },
+                '&$selected': {
+                    color: colors_1.white
+                },
             },
             textColorInherit: {
                 color: colors_1.typography,
-            },
-            selected: {
-                color: colors_1.white,
             },
         },
         MuiExpansionPanel: {

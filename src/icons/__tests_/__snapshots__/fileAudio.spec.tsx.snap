@@ -10,14 +10,14 @@ exports[`Filed Audio Icon should show Filed Audio Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Page-audio-file"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#697C95"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="Audio-File-595b40b75ba036ed117d54ba"
     >
       <path

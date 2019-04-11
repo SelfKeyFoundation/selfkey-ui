@@ -102,11 +102,11 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
         return (React.createElement(core_1.TableRow, { key: index, className: classes.bodyTableRow },
             React.createElement(core_1.TableCell, null, token.name),
             React.createElement(core_1.TableCell, null, token.symbol),
-            React.createElement(core_1.TableCell, { numeric: true },
+            React.createElement(core_1.TableCell, { align: "right" },
                 React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, style: "decimal", currency: token.symbol, value: token.balance })),
-            React.createElement(core_1.TableCell, { numeric: true },
+            React.createElement(core_1.TableCell, { align: "right" },
                 React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.price })),
-            React.createElement(core_1.TableCell, { numeric: true },
+            React.createElement(core_1.TableCell, { align: "right" },
                 React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.balanceInFiat })),
             React.createElement(core_1.TableCell, null, token.address),
             React.createElement(core_1.TableCell, null, visibilityButton)));
@@ -119,11 +119,11 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
                 React.createElement(core_1.TableHead, null,
                     React.createElement(core_1.TableRow, { className: classes.headerTableRow },
                         React.createElement(core_1.TableCell, null, "NAME"),
-                        React.createElement(core_1.TableCell, { numeric: true }, "TOKEN SYMBOL"),
-                        React.createElement(core_1.TableCell, { numeric: true }, "BALANCE"),
-                        React.createElement(core_1.TableCell, { numeric: true }, "LAST PRICE"),
-                        React.createElement(core_1.TableCell, { numeric: true }, "TOTAL VALUE"),
-                        React.createElement(core_1.TableCell, { numeric: true }, "TOKEN CONTRACT ADDRESS"))),
+                        React.createElement(core_1.TableCell, { align: "right" }, "TOKEN SYMBOL"),
+                        React.createElement(core_1.TableCell, { align: "right" }, "BALANCE"),
+                        React.createElement(core_1.TableCell, { align: "right" }, "LAST PRICE"),
+                        React.createElement(core_1.TableCell, { align: "right" }, "TOTAL VALUE"),
+                        React.createElement(core_1.TableCell, { align: "right" }, "TOKEN CONTRACT ADDRESS"))),
                 React.createElement(core_1.TableBody, null, tokenRows))));
     };
     return CryptoPriceTableComponent;

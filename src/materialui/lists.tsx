@@ -73,10 +73,10 @@ export const DeniedTick = (() => (
                                     <g id="icon-denied" transform="translate(0.000000, 3.000000)">
                                         <rect id="Base" fill="#FE4B61" x="0" y="0" width="16" height="16" rx="4"></rect>
                                         <g id="Group-9" transform="translate(4.444444, 4.444444)">
-                                            <path d="M7.11111111,0 L0,7.11111111" id="Fill-1" fill-opacity="0" fill="#000000"></path>
-                                            <path d="M7.11111111,0 L0,7.11111111" id="Stroke-3" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="square"></path>
-                                            <path d="M7.11111111,7.11111111 L0,0" id="Fill-4" fill-opacity="0" fill="#000000"></path>
-                                            <path d="M7.11111111,7.11111111 L0,0" id="Stroke-5" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="square"></path>
+                                            <path d="M7.11111111,0 L0,7.11111111" id="Fill-1" fillOpacity="0" fill="#000000"></path>
+                                            <path d="M7.11111111,0 L0,7.11111111" id="Stroke-3" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="square"></path>
+                                            <path d="M7.11111111,7.11111111 L0,0" id="Fill-4" fillOpacity="0" fill="#000000"></path>
+                                            <path d="M7.11111111,7.11111111 L0,0" id="Stroke-5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="square"></path>
                                         </g>
                                     </g>
                                 </g>

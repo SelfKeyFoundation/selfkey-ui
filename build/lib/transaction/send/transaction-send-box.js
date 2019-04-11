@@ -204,8 +204,8 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.renderSelectTokenItems = function () {
         var _a = this.props, tokens = _a.tokens, classes = _a.classes;
-        return tokens.map(function (token) {
-            return (React.createElement("option", { value: token.symbol, className: classes.selectItem }, token.name + " - " + token.balance + " " + token.symbol));
+        return tokens.map(function (token, index) {
+            return (React.createElement("option", { key: index, value: token.symbol, className: classes.selectItem }, token.name + " - " + token.balance + " " + token.symbol));
         });
     };
     TransactionSendBoxComponent.prototype.renderButtons = function () {
