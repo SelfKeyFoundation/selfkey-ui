@@ -1,18 +1,27 @@
 import * as React from 'react';
-import { create } from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import ModalWithBackButton from '../modalWithBackButton';
 
 describe('Modal With Back Button', () => {
-  it('should show Modal With Back Button', () => {
-    const component = create(
-        <ModalWithBackButton />
-    );
+  it('should close ModalWithBackButton with handleClose method', () => {
+    const wrapper = shallow(<ModalWithBackButton />);
+    wrapper.find('#handleClose').simulate('click');
+    expect(wrapper.state('open')).toBeFalsy();
+  });
 
-    const root = component.root;
-    const modalBackBtn = root.find(element => element.props.className === 'test');
-    modalBackBtn.props.onClose();
+  it('should open ModalWithBackButton with handleOpen method', () => {
+    const wrapper = shallow(<ModalWithBackButton />);
+    wrapper.find('#handleOpen').simulate('click');
+    expect(wrapper.state('open')).toBeTruthy();
+  });
 
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  it('test Handle State', () => {
+    const wrapper = shallow(<ModalWithBackButton />);
+    wrapper.find('#handleState').simulate('click');
+    expect(wrapper.state('open')).toBeFalsy();
+    wrapper.setState({ open: true });
+    expect(wrapper.state('open')).toBeTruthy();
+    wrapper.find('#handleState').simulate('click');
+    expect(wrapper.state('open')).toBeFalsy();
   });
 });

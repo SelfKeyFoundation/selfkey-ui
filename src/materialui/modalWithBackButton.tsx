@@ -80,18 +80,18 @@ class ModalWithBackButton extends React.Component {
                         Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard. 
                     </Typography>
                     <br/>
-                    <Button variant='outlined' size="large" onClick={this.handleOpen}>Add Token</Button>
+                    <Button id="handleOpen" variant='outlined' size="large" onClick={this.handleOpen}>Add Token</Button>
                 </Grid>
                 <br />
 
 
                 <Modal
                     open={this.state.open}
-                    onClose={this.handleClose}
-                    className="test"
+                    onClick={this.handleClose}
+                    id="handleClose"
                 >
                     <ModalWrap>
-                        <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
+                        <Button id="handleState" variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
                         <ModalBody2>
                             <Typography variant="h2">
                                 Add Attribute
