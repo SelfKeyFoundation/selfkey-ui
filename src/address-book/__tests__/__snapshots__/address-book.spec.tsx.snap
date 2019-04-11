@@ -66,11 +66,11 @@ exports[`Address Book should show Address Book 1`] = `
   <div
     className="MuiGrid-item-2"
   >
-    <h2
-      className="Component-base-0-1-8 Component-h2-0-1-10 undefined"
+    <h1
+      className="MuiTypography-root-107 MuiTypography-h1-119"
     >
       Address Book
-    </h2>
+    </h1>
   </div>
   <div
     className="MuiGrid-item-2"
@@ -199,7 +199,7 @@ exports[`Address Book should show Address Book 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-98 Component-root-0-1-12"
+                      className="MuiSvgIcon-root-98 Component-root-0-1-8"
                       focusable="false"
                       onClick={[Function]}
                       role="presentation"
@@ -283,7 +283,7 @@ exports[`Address Book should show Address Book 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-98 Component-root-0-1-13"
+                      className="MuiSvgIcon-root-98 Component-root-0-1-9"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 16 16"
@@ -360,7 +360,7 @@ exports[`Address Book should show Address Book 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-98 Component-root-0-1-14"
+                      className="MuiSvgIcon-root-98 Component-root-0-1-10"
                       focusable="false"
                       role="presentation"
                       version="1.1"

@@ -104,7 +104,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-19"
+          className="MuiSvgIcon-root-1 Component-root-0-1-15"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -165,7 +165,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
             id="header"
           >
             <h2
-              className="Component-base-0-1-15 Component-h2-0-1-17 undefined"
+              className="MuiTypography-root-107 MuiTypography-h2-120"
             >
               Sent!
             </h2>
@@ -365,7 +365,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-19"
+          className="MuiSvgIcon-root-1 Component-root-0-1-15"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -426,7 +426,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
             id="header"
           >
             <h2
-              className="Component-base-0-1-15 Component-h2-0-1-17 undefined"
+              className="MuiTypography-root-107 MuiTypography-h2-120"
             >
               Sent!
             </h2>
@@ -626,7 +626,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-19"
+          className="MuiSvgIcon-root-1 Component-root-0-1-15"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -687,7 +687,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
             id="header"
           >
             <h2
-              className="Component-base-0-1-15 Component-h2-0-1-17 undefined"
+              className="MuiTypography-root-107 MuiTypography-h2-120"
             >
               Sent!
             </h2>
@@ -887,7 +887,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-19"
+          className="MuiSvgIcon-root-1 Component-root-0-1-15"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -948,7 +948,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
             id="header"
           >
             <h2
-              className="Component-base-0-1-15 Component-h2-0-1-17 undefined"
+              className="MuiTypography-root-107 MuiTypography-h2-120"
             >
               Sent!
             </h2>
@@ -1208,7 +1208,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
             id="header"
           >
             <h2
-              className="Component-base-0-1-15 Component-h2-0-1-17 undefined"
+              className="MuiTypography-root-107 MuiTypography-h2-120"
             >
               Pending
             </h2>
@@ -1408,7 +1408,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-19"
+          className="MuiSvgIcon-root-1 Component-root-0-1-15"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -1469,7 +1469,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
             id="header"
           >
             <h2
-              className="Component-base-0-1-15 Component-h2-0-1-17 undefined"
+              className="MuiTypography-root-107 MuiTypography-h2-120"
             >
               Sent!
             </h2>
@@ -1678,7 +1678,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
             id="header"
           >
             <h2
-              className="Component-base-0-1-15 Component-h2-0-1-17 undefined"
+              className="MuiTypography-root-107 MuiTypography-h2-120"
             >
               hey!
             </h2>
