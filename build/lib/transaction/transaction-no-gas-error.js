@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
-var paragraph_1 = require("../typography/paragraph");
 var transaction_error_box_1 = require("./transaction-error-box");
+var core_1 = require("@material-ui/core");
 var styles = {
     bodyText: {
         paddingRight: '40px',
@@ -32,7 +32,7 @@ exports.TransactionNoGasError = react_jss_1.default(styles)(function (_a) {
     };
     return (React.createElement(transaction_error_box_1.default, { publicKey: publicKey, closeAction: closeAction },
         React.createElement("div", { className: classes.bodyText },
-            React.createElement(paragraph_1.P, null, "You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below."),
+            React.createElement(core_1.Typography, { variant: "body1" }, "You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below."),
             React.createElement("div", { className: classes.learnMoreText },
                 "To learn more about transaction fees, click ",
                 ' ',

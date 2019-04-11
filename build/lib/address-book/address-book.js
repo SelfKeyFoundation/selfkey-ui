@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var headings_1 = require("../typography/headings");
 var address_book_1 = require("../icons/address-book");
 var copy_1 = require("../icons/copy");
 var delete_1 = require("../icons/delete");
@@ -94,7 +93,7 @@ exports.AddressBook = react_jss_1.default(styles)(function (_a) {
         React.createElement(core_1.Grid, { item: true },
             React.createElement(address_book_1.default, null)),
         React.createElement(core_1.Grid, { item: true },
-            React.createElement(headings_1.H2, null, "Address Book")),
+            React.createElement(core_1.Typography, { variant: "h1" }, "Address Book")),
         React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
         React.createElement(core_1.Grid, { item: true },

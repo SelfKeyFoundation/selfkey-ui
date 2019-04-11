@@ -72,7 +72,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
       </g>
     </svg>
     <h2
-      className="Component-base-0-1-17 Component-h2-0-1-19 LWSSelectWalletComponent-title-0-1-2"
+      className="MuiTypography-root-10 MuiTypography-h2-23 LWSSelectWalletComponent-title-0-1-2"
     >
       Verify Ownership Of Your SelfKey ID
     </h2>
@@ -89,7 +89,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-21"
+          className="MuiSvgIcon-root-1 Component-root-0-1-17"
           focusable="false"
           role="presentation"
           viewBox="0 0 42 37"
@@ -189,7 +189,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-22"
+          className="MuiSvgIcon-root-1 Component-root-0-1-18"
           focusable="false"
           role="presentation"
           viewBox="0 0 42 39"
@@ -306,7 +306,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         className="LWSSelectWalletComponent-formSubmitRow-0-1-8"
       >
         <button
-          className="Component-root-0-1-23 LWSSelectWalletComponent-buttonPrimary-0-1-10"
+          className="Component-root-0-1-19 LWSSelectWalletComponent-buttonPrimary-0-1-10"
           onClick={[Function]}
         >
           Log in

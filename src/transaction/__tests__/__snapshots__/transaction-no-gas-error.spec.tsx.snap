@@ -147,7 +147,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           className="Component-bodyText-0-1-1"
         >
           <p
-            className="undefined Component-p-0-1-14 undefined"
+            className="MuiTypography-root-107 MuiTypography-body1-116"
           >
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
@@ -185,11 +185,11 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-15"
+              className="CopyComponent-copyButton-0-1-14"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-16"
+                className="CopyComponent-copyButtonSpan-0-1-15"
               >
                 COPY
               </span>
@@ -349,7 +349,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           className="Component-bodyText-0-1-1"
         >
           <p
-            className="undefined Component-p-0-1-14 undefined"
+            className="MuiTypography-root-107 MuiTypography-body1-116"
           >
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
@@ -387,11 +387,11 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-15"
+              className="CopyComponent-copyButton-0-1-14"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-16"
+                className="CopyComponent-copyButtonSpan-0-1-15"
               >
                 COPY
               </span>
@@ -551,7 +551,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           className="Component-bodyText-0-1-1"
         >
           <p
-            className="undefined Component-p-0-1-14 undefined"
+            className="MuiTypography-root-107 MuiTypography-body1-116"
           >
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
@@ -589,11 +589,11 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-15"
+              className="CopyComponent-copyButton-0-1-14"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-16"
+                className="CopyComponent-copyButtonSpan-0-1-15"
               >
                 COPY
               </span>
@@ -753,7 +753,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           className="Component-bodyText-0-1-1"
         >
           <p
-            className="undefined Component-p-0-1-14 undefined"
+            className="MuiTypography-root-107 MuiTypography-body1-116"
           >
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
@@ -791,11 +791,11 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-15"
+              className="CopyComponent-copyButton-0-1-14"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-16"
+                className="CopyComponent-copyButtonSpan-0-1-15"
               >
                 COPY
               </span>

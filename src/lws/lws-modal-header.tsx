@@ -1,9 +1,8 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
-
-import { H1 } from '../typography/headings';
 import { CloseButtonIcon } from '../icons/close-button';
 import { SelfkeyLogo } from '../theme/selfkey-dark-theme';
+import { Typography } from '@material-ui/core';
 
 const styles: StyleSheet = {
   root: {
@@ -24,8 +23,6 @@ const styles: StyleSheet = {
 
   title: {
     color: '#C5DCE9',
-    fontSize: '24px',	
-    fontWeight: 'normal',
     margin: '0',
     padding: '0 0 0 25px'
   }  
@@ -39,7 +36,7 @@ export type LWSModalHeaderProps = {
 export const LWSModalHeader = injectSheet(styles)<LWSModalHeaderProps>(({classes, children, closeAction}) => (
   <div className={classes.root}>
     <SelfkeyLogo style={{ width: '50px', height: '43px' }} />
-    <H1 className={classes.title}>Login with SelfKey</H1>
+    <Typography variant="h1" className={classes.title}>Login with SelfKey</Typography>
     <a className={classes.closeButton} onClick={closeAction}><CloseButtonIcon/></a>
   </div>
 ));

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
-import { Grid } from '@material-ui/core';
-import { H2 } from '../typography/headings';
+import { Grid, Typography } from '@material-ui/core';
 import { CloseButtonIcon } from '../icons/close-button';
 
 const styles: StyleSheet = { 
@@ -53,7 +52,7 @@ export type ModalBoxProps = {
 export const ModalBox = injectSheet(styles)<ModalBoxProps>(({classes, headerText, children, closeAction}) => (
   <Grid container className={classes.root} direction='column' justify='flex-start' alignItems='flex-start'>
     <Grid item id='header' className={classes.header}>
-      <H2>{headerText}</H2>
+      <Typography variant="h2">{headerText}</Typography>
       <a className={classes.closeButton} onClick={closeAction}><CloseButtonIcon/></a>
     </Grid>
     <Grid item id='body' className={classes.body}>
