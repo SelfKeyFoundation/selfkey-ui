@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Status Missing should show Status Missing 1`] = `
+<div
+  className="Component-statusWrap-6"
+>
+  <div
+    className="MuiGrid-item-8 Component-defaultStatus-1 missing"
+  >
+    <div
+      className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
+    >
+      <div
+        className="MuiGrid-item-8 Component-iconContainer-4"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-104 Component-root-0-2-1"
+          focusable="false"
+          role="presentation"
+          version="1.1"
+          viewBox="0 0 38 44"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+            id="💻-ID-Dashboard-attribute-large-icon"
+            stroke="none"
+            stroke-width="1"
+          >
+            <g
+              fill="#E98548"
+              id="410.1-Marketplace-Applications-Statuses"
+              transform="translate(-195.000000, -379.000000)"
+            >
+              <g
+                id="Content"
+                transform="translate(150.000000, 264.000000)"
+              >
+                <g
+                  id="Collapse-box-1"
+                >
+                  <g
+                    id="Status-box-1"
+                    transform="translate(15.000000, 90.000000)"
+                  >
+                    <path
+                      d="M67.91,31.27 C67.9698291,31.5087207 68.0000562,31.7538962 68,32 L68,45.3 C67.9841317,53.5919031 63.5062321,61.23337 56.28,65.3 L50.47,68.57 C49.5571638,69.0831103 48.4428362,69.0831103 47.53,68.57 L41.72,65.3 C34.4937679,61.23337 30.0158683,53.5919031 30,45.3 L30,32 C30,31.32 30.27,29.02 33.66,27.32 C36.73,25.78 41.89,25 49,25 C64.09,25 67.32,28.93 67.91,31.27 Z M65,45.27 L65,32 C65,32 64,28 49,28 C33,28 33,32 33,32 L33,45.3 C32.9995752,52.5239266 36.8947728,59.186664 43.19,62.73 L49,66 L54.81,62.7 C61.1052272,59.156664 65.0004248,52.4939266 65,45.27 Z M48.5,59 C47.6715729,59 47,58.3284271 47,57.5 C47,56.6715729 47.6715729,56 48.5,56 C49.3284271,56 50,56.6715729 50,57.5 C50,58.3284271 49.3284271,59 48.5,59 Z M48.5,33.5 C49.3284271,33.5 50,34.1715729 50,35 L50,51 C50,51.8284271 49.3284271,52.5 48.5,52.5 C47.6715729,52.5 47,51.8284271 47,51 L47,35 C47,34.1715729 47.6715729,33.5 48.5,33.5 Z"
+                      id="attribute-large-icon"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="MuiGrid-item-8 Component-grow-2"
+      >
+        <h2
+          className="MuiTypography-root-113 MuiTypography-h2-126"
+        >
+          Status
+        </h2>
+        <h6
+          className="MuiTypography-root-113 MuiTypography-subtitle2-132 MuiTypography-colorSecondary-144"
+        >
+          Application started. Missing required documents.
+        </h6>
+      </div>
+      <div
+        className="MuiGrid-item-8"
+      >
+        <button
+          className="MuiButtonBase-root-175 MuiButton-root-149 MuiButton-contained-160 MuiButton-raised-163 MuiButton-sizeLarge-173"
+          disabled={false}
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiButton-label-150"
+          >
+            Add Documents
+          </span>
+          <span
+            className="MuiTouchRipple-root-178"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

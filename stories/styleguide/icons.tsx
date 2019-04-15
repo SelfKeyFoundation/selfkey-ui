@@ -75,6 +75,8 @@ import {
 	SentIcon,
 	ShareIcon,
 	ShieldIcon,
+	SimpleCheckIcon,
+	SimpleDeniedIcon,
 	SKIDIcon,
 	SKUploadIcon,
 	StickIcon,
@@ -648,6 +650,20 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ShieldIcon />`}</code>
 			</pre>
 			<ShieldIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SimpleCheckIcon />`}</code>
+			</pre>
+			<SimpleCheckIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SimpleDeniedIcon />`}</code>
+			</pre>
+			<SimpleDeniedIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

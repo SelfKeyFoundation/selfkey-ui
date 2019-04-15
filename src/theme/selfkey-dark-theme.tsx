@@ -1,6 +1,17 @@
 import * as React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
-import { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight } from '../colors';
+import {
+  primary,
+  typography,
+  error,
+  primaryTint,
+  warning,
+  white,
+  grey,
+  base,
+  baseDark,
+  baseLight,
+} from '../colors';
 export * from '../colors';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
@@ -8,6 +19,7 @@ export * from '../materialui/inputs';
 export * from '../materialui/lists';
 export * from '../materialui/modalElements';
 export * from '../materialui/pagination';
+export * from '../materialui/statuses';
 export * from '../materialui/tables';
 export * from '../materialui/tooltipArrow';
 export * from '../materialui/typography';
@@ -15,6 +27,7 @@ export * from '../icons/address-book-menu';
 export * from '../icons/address-book';
 export * from '../icons/animated-loading';
 export * from '../icons/attribute-alert';
+export * from '../icons/attribute-alert-large';
 export * from '../icons/book';
 export * from '../icons/calendar';
 export * from '../icons/certificate';
@@ -48,6 +61,7 @@ export * from '../icons/green-tick';
 export * from '../icons/hard-drive';
 export * from '../icons/help';
 export * from '../icons/hourglass-large';
+export * from '../icons/hourglass-simple';
 export * from '../icons/hourglass-small';
 export * from '../icons/id-card';
 export * from '../icons/incorporations';
@@ -87,6 +101,8 @@ export * from '../icons/sent-blue';
 export * from '../icons/sent';
 export * from '../icons/share';
 export * from '../icons/shield';
+export * from '../icons/simple-check';
+export * from '../icons/simple-denied';
 export * from '../icons/sk-id';
 export * from '../icons/stick';
 export * from '../icons/structure';

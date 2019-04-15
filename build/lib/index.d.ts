@@ -104,4 +104,8 @@ export { SKIDIcon } from './icons/sk-id';
 export { SKUploadIcon } from './icons/upload';
 export { UnlockLargeIcon } from './icons/unlock-large';
 export { AttributeAlertIcon } from './icons/attribute-alert';
+export { AttributeAlertLargeIcon } from './icons/attribute-alert-large';
 export { CertificateIcon } from './icons/certificate';
+export { SimpleHourglassIcon } from './icons/hourglass-simple';
+export { SimpleCheckIcon } from './icons/simple-check';
+export { SimpleDeniedIcon } from './icons/simple-denied';

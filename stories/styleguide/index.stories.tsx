@@ -52,6 +52,7 @@ import ModalStories from './materialui/story-modals';
 import DatePickerStories from './materialui/story-datepickers';
 import SliderStory from './materialui/story-sliders';
 import { IconsStory } from './icons';
+import StatusStories from './materialui/story-statuses';
 
 setup();
 
@@ -359,3 +360,10 @@ theme.addWithJSX('Date Picker', () => (
 		</Card>
 	</SelfkeyDarkTheme>
 ));
+
+theme.addWithJSX('Statuses', () => (
+	<SelfkeyDarkTheme>
+		<StatusStories />
+	</SelfkeyDarkTheme>
+));
+
