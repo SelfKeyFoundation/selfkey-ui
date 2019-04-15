@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as _ from 'lodash';
 import injectSheet, { StyleSheet, WithStyles } from 'react-jss';
-import { H2 } from '../typography/headings';
 import { IDIcon } from '../icons/id';
 import { ProfileIcon } from '../icons/profile';
 import { StickIcon } from '../icons/stick';
@@ -9,6 +8,7 @@ import { LWSButton } from './lws-button';
 import { Wallet } from './lws-common';
 
 import CommonStyle from '../common/common-style';
+import { Typography } from '@material-ui/core';
 
 export const styles: StyleSheet = {
 	areaTitle: {
@@ -288,7 +288,7 @@ export class LWSSelectWalletComponent extends React.Component<StyledProps, LWSSe
 			<div>
 				<div className={classes.areaTitle}>
 					<IDIcon />
-					<H2 className={classes.title}>Verify Ownership Of Your SelfKey ID</H2>
+					<Typography variant="h2" className={classes.title}>Verify Ownership Of Your SelfKey ID</Typography>
 				</div>
 				<div className={classes.form}>
 					<div className={`${classes.formGroup} ${classes.radioReplace}`}>

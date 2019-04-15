@@ -144,7 +144,7 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
           Transaction Failed 
         </div>
         <p
-          className="undefined Component-p-0-1-12 Component-bodyText-0-1-1"
+          className="MuiTypography-root-107 MuiTypography-body2-115 Component-bodyText-0-1-1"
         >
           Some error message
         </p>
@@ -168,11 +168,11 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-13"
+              className="CopyComponent-copyButton-0-1-12"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-14"
+                className="CopyComponent-copyButtonSpan-0-1-13"
               >
                 COPY
               </span>

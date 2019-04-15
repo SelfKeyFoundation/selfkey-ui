@@ -7,7 +7,6 @@ import { Grid, Typography } from '@material-ui/core';
 import { HourGlassLargeIcon } from '../../icons/hourglass-large';
 import { OkayIcon } from '../../icons/okay';
 
-import { H2 } from '../../typography/headings';
 import { NumberFormat } from '../../price/number-format';
 
 
@@ -112,7 +111,7 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
           <Grid item xs={10}>
             <Grid container direction='column' justify='flex-start' alignItems='flex-start'>
               <Grid item id='header'>
-                <H2 className={classes.headerText}>{status}</H2>
+                <Typography variant="h2">{status}</Typography>
               </Grid>
               <Grid item id='body' className={classes.body}>
                 <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>

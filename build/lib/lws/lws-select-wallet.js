@@ -27,12 +27,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var _ = require("lodash");
 var react_jss_1 = require("react-jss");
-var headings_1 = require("../typography/headings");
 var id_1 = require("../icons/id");
 var profile_1 = require("../icons/profile");
 var stick_1 = require("../icons/stick");
 var lws_button_1 = require("./lws-button");
 var common_style_1 = require("../common/common-style");
+var core_1 = require("@material-ui/core");
 exports.styles = {
     areaTitle: {
         textAlign: 'center',
@@ -243,7 +243,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         return (React.createElement("div", null,
             React.createElement("div", { className: classes.areaTitle },
                 React.createElement(id_1.IDIcon, null),
-                React.createElement(headings_1.H2, { className: classes.title }, "Verify Ownership Of Your SelfKey ID")),
+                React.createElement(core_1.Typography, { variant: "h2", className: classes.title }, "Verify Ownership Of Your SelfKey ID")),
             React.createElement("div", { className: classes.form },
                 React.createElement("div", { className: classes.formGroup + " " + classes.radioReplace },
                     React.createElement("button", { className: classes.buttonTertiary + " " + (!isHardwareWallet ? classes.selected : ''), onClick: function () { return _this.toggleIsHardwallet(false); } },
