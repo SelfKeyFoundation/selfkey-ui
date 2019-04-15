@@ -479,7 +479,7 @@ const theme = createMuiTheme({
 				'& option': {
 					backgroundColor: `${baseDark} !important`,
 					border: `1px solid ${baseDark} !important`,
-					color: `#FFFFFF !important`
+					color: `#FFFFFF !important`,
 				},
 			},
 			icon: {
@@ -687,7 +687,7 @@ const theme = createMuiTheme({
 					color: white,
 				},
 				'&$selected': {
-					color: white
+					color: white,
 				},
 			},
 			textColorInherit: {

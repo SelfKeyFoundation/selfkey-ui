@@ -486,7 +486,7 @@ var theme = core_1.createMuiTheme({
                 '& option': {
                     backgroundColor: colors_1.baseDark + " !important",
                     border: "1px solid " + colors_1.baseDark + " !important",
-                    color: "#FFFFFF !important"
+                    color: "#FFFFFF !important",
                 },
             },
             icon: {
@@ -694,7 +694,7 @@ var theme = core_1.createMuiTheme({
                     color: colors_1.white,
                 },
                 '&$selected': {
-                    color: colors_1.white
+                    color: colors_1.white,
                 },
             },
             textColorInherit: {

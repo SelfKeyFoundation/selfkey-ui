@@ -9,7 +9,12 @@ import {
 	Input,
 	TextField,
 } from '@material-ui/core';
-import { DecimalInput, FileUploadWidget, ArrayFileUploadWidget } from '../../../src/theme/selfkey-dark-theme';
+import {
+	DecimalInput,
+	FileUploadWidget,
+	ArrayFileUploadWidget,
+	MultilineSelect,
+} from '../../../src/theme/selfkey-dark-theme';
 
 import DropdownStories from './story-dropdowns';
 
@@ -20,6 +25,10 @@ const underlineStyle = {
 export default class InputStories extends React.Component {
 	state: any = {
 		files: null,
+		multilineSelect: {
+			items: [],
+			selected: [],
+		},
 	};
 	handleFileChange: any = async (files: any, multiple: boolean) => {
 		let filesData = await Promise.all(
@@ -119,10 +128,10 @@ export default class InputStories extends React.Component {
 				<ArrayFileUploadWidget
 					files={this.state.files}
 					onChange={this.handleFileChange}
-					mimeTypes={["image/jpeg", "image/png"]}
+					mimeTypes={['image/jpeg', 'image/png']}
 					isError={true}
 					uploadError="Super upload error, ignore, for testing only"
-					errorFiles={{1: ['super file error 1', 'super file error 2']}}
+					errorFiles={{ 1: ['super file error 1', 'super file error 2'] }}
 					onClearForm={(file: any) => {
 						let { files } = this.state;
 						if (files) {
@@ -142,6 +151,28 @@ export default class InputStories extends React.Component {
 					Normal/Selection
 				</Typography>
 				<DropdownStories />
+				<br />
+				<br />
+				<Typography variant="h3" style={underlineStyle} gutterBottom>
+					Multiline Select
+				</Typography>
+				<MultilineSelect
+					items={this.state.multilineSelect.items}
+					selected={this.state.multilineSelect.selected}
+					multiselect
+					onAdd={() => {
+						const newItem = Math.random();
+						this.setState({
+							multilineSelect: {
+								...this.state.multilineSelect,
+								items: [...this.state.multilineSelect.items, { key: newItem, value: newItem }],
+							},
+						});
+					}}
+					onSelectUpdated={(selected: any) =>
+						this.setState({ multilineSelect: { ...this.state.multilineSelect, selected: selected } })
+					}
+				/>
 				<br />
 				<br />
 

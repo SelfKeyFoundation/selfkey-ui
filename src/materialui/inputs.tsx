@@ -10,18 +10,104 @@ import {
 	Theme,
 	createStyles,
 	Modal,
+	List,
+	ListItem,
+	ListItemText,
+	Divider,
 } from '@material-ui/core';
 import injectSheet, { StyleSheet } from 'react-jss';
 import { DeleteIcon } from '../icons/delete';
 import classNames from 'classnames';
 import { HardDriveIcon } from '../icons/hard-drive';
 import { FileDefaultIcon } from '../icons/file-default';
-import { primary, baseDark, base, error } from '../colors';
+import { primary, baseDark, base, error, white } from '../colors';
 import { ModalWrap } from './modalWithBackButton';
 import { ModalBody2 } from './modalElements';
 import { FileImageIcon } from '../icons/file-image';
 import { FilePdfIcon } from '../icons/file-pdf';
 import { FileAudioIcon } from '../icons/file-audio';
+
+const multilineSelectStyles = (theme: Theme) =>
+	createStyles({
+		root: {
+			backgroundColor: baseDark,
+			borderRadius: '4px',
+			border: '1px solid #384656',
+			boxSizing: 'border-box',
+			maxWidth: '360px',
+			color: white,
+			fontSize: '14px',
+			overflow: 'auto',
+			lineHeight: '21px',
+			'&$focused': {
+				'&$focused:not($error):not($disabled)': {
+					border: `1px solid ${primary}`,
+					boxShadow: `0 0 3px 1px ${primary}`,
+				},
+			},
+		},
+		item: {
+			borderRadius: '4px',
+			fontSize: '14px',
+			lineHeight: '21px',
+			cursor: 'pointer',
+		},
+		itemAdd: {
+			background: 'none',
+			color: primary,
+			cursor: 'pointer',
+			lineHeight: '21px',
+			padding: '10px 16px',
+			marginBottom: 0
+		},
+	});
+
+export type MultilineSelectType = any;
+
+export const MultilineSelect = withStyles(multilineSelectStyles)((props: MultilineSelectType) => {
+	const { classes, multiselect, selected = [], items = [], onSelectUpdated, onAdd } = props;
+	const isSelected = (item: any) => selected.includes(item.key);
+	const handleItemClick = (item: any) => {
+		return (evt: React.SyntheticEvent) => {
+			if (evt) {
+				evt.preventDefault();
+			}
+			if (!onSelectUpdated) return;
+			if (!multiselect) {
+				if (isSelected(item)) {
+					return onSelectUpdated([]);
+				}
+				return onSelectUpdated([item.key]);
+			}
+			if (isSelected(item)) {
+				return onSelectUpdated(selected.filter((x: any) => x != item.key));
+			}
+			return onSelectUpdated([...selected, item.key]);
+		};
+	};
+	return (
+		<div>
+			<List className={props.classes.root}>
+				{items.map((item: any) => (
+					<ListItem
+						key={item.key}
+						className={classes.item}
+						selected={isSelected(item)}
+						onClick={handleItemClick(item)}
+					>
+						<ListItemText>{item.value}</ListItemText>
+					</ListItem>
+				))}
+				{onAdd && items.length > 0 ? <Divider /> : null}
+				{onAdd ? (
+					<ListItem className={classes.itemAdd} onClick={onAdd}>
+						+Add Option
+					</ListItem>
+				) : null}
+			</List>
+		</div>
+	);
+});
 
 export const FileUploadLabel = withStyles({
 	root: {
@@ -61,37 +147,37 @@ const fileViewStyles = (theme: Theme) =>
 		},
 		fileItemError: {},
 		noDecoration: {
-			textDecoration: 'none'
+			textDecoration: 'none',
 		},
 		link: {
 			cursor: 'pointer',
 		},
 		fileName: {
 			'&:hover': {
-				color: primary
-			}
+				color: primary,
+			},
 		},
 		breakAll: {
-			wordBreak: 'break-all'
+			wordBreak: 'break-all',
 		},
 		fileErrorContainer: {
 			marginLeft: '45px',
 		},
 		fullWidth: {
-			width: '100%'
+			width: '100%',
 		},
 		imageWidth: {
-			maxWidth: '100%'
+			maxWidth: '100%',
 		},
 		topSpacing: {
-			marginTop: '20px'
+			marginTop: '20px',
 		},
 		padding: {
-			padding: '0 15px'
+			padding: '0 15px',
 		},
 		bottomSpace: {
-			marginBottom: '20px'
-		}
+			marginBottom: '20px',
+		},
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -131,82 +217,88 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 
 class FileViewWithModal extends React.Component<FileViewProps> {
 	state = {
-        open: false
-    };
-
-    handleOpen = () => {
-        this.setState({ open: true });
-    };
-
-    handleClose = () => {
-        this.setState({ open: false });
-    };
-
-    handleState = () => {
-        if (this.state.open === true) {
-            this.setState({ open: false });
-        }
+		open: false,
 	};
-	
+
+	handleOpen = () => {
+		this.setState({ open: true });
+	};
+
+	handleClose = () => {
+		this.setState({ open: false });
+	};
+
+	handleState = () => {
+		if (this.state.open === true) {
+			this.setState({ open: false });
+		}
+	};
+
 	render() {
 		const { classes, file, onClearForm, errors = [] } = this.props;
 
 		const UploadedFile = (fileType: any) => {
 			console.log(fileType);
 			const type = fileType.fileType;
-			if (type === "image/png"|| type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
+			if (
+				type === 'image/png' ||
+				type === 'image/jpeg' ||
+				type === 'audio/ogg' ||
+				type === 'audio/mp3' ||
+				type === 'audio/m4a' ||
+				type === 'audio/x-wav'
+			) {
 				return (
 					<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
-						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
+						<Typography variant="subtitle1" className={classes.fileName}>
+							{file.name}
+						</Typography>
 					</a>
-				)
+				);
 			} else {
 				return (
 					<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
-						<Typography variant="subtitle1" className={classes.fileName}>{file.name}</Typography>
+						<Typography variant="subtitle1" className={classes.fileName}>
+							{file.name}
+						</Typography>
 					</a>
-				)
+				);
 			}
 		};
 
 		const FileTypeIcon = (fileType: any) => {
 			const type = fileType.fileType;
-			if (type === "image/png" || type === "image/jpeg") {
-				return (
-					<FileImageIcon />
-				)
-			} else if (type === "application/pdf") {
-				return (
-					<FilePdfIcon />
-				)
-			} else if (type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
-				return (
-					<FileAudioIcon />
-				)
+			if (type === 'image/png' || type === 'image/jpeg') {
+				return <FileImageIcon />;
+			} else if (type === 'application/pdf') {
+				return <FilePdfIcon />;
+			} else if (type === 'audio/ogg' || type === 'audio/mp3' || type === 'audio/m4a' || type === 'audio/x-wav') {
+				return <FileAudioIcon />;
 			} else {
-				return (
-					<FileDefaultIcon />
-				)
+				return <FileDefaultIcon />;
 			}
 		};
 
 		const PreviewType = (fileType: any) => {
 			const type = fileType.fileType;
-			if (type === "image/png" || type === "image/jpeg") {
-				return (
-					<img src={file.url} alt={file.name} className={classes.imageWidth} />
-				)
+			if (type === 'image/png' || type === 'image/jpeg') {
+				return <img src={file.url} alt={file.name} className={classes.imageWidth} />;
 			} else {
-				return (
-					<audio src={file.url} controls />
-				)
+				return <audio src={file.url} controls />;
 			}
 		};
 
 		return (
 			<Grid item>
 				<Grid item>
-					<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap" className={classes.bottomSpace}>
+					<Grid
+						container
+						direction="row"
+						justify="space-between"
+						alignItems="center"
+						wrap="nowrap"
+						className={classes.bottomSpace}
+					>
 						<Grid item className={classes.padding}>
 							<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
 								<Grid item>
@@ -236,27 +328,24 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 					) : null}
 				</Grid>
 
-				<Modal
-                    open={this.state.open}
-                    onClose={this.handleClose}
-                >
-                    <ModalWrap>
-                        <Button variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
-                        <ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
+				<Modal open={this.state.open} onClose={this.handleClose}>
+					<ModalWrap>
+						<Button variant="outlined" color="secondary" size="small" onClick={this.handleState}>
+							‹ Back
+						</Button>
+						<ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
 							<PreviewType fileType={file.mimeType} />
-                        </ModalBody2>
-                    </ModalWrap>
-                </Modal>
+						</ModalBody2>
+					</ModalWrap>
+				</Modal>
 			</Grid>
-		)
+		);
 	}
 }
 
 export const FileViewWithModalComponent = withStyles(fileViewStyles)(FileViewWithModal);
 
-
 export type FileUploadWidgetProps = any;
-
 
 const fileUploadStyles: StyleSheet = {
 	form: {
@@ -276,7 +365,7 @@ const fileUploadStyles: StyleSheet = {
 	},
 	fileInput: {
 		display: 'none',
-	}
+	},
 };
 
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
@@ -518,7 +607,12 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 					</div>
 				</FileUploadGrid>
 				{(files || []).map((f: any, ind: number) => (
-					<FileViewWithModalComponent key={ind} file={f} onClearForm={onClearForm} errors={errorFiles && errorFiles[ind]} />
+					<FileViewWithModalComponent
+						key={ind}
+						file={f}
+						onClearForm={onClearForm}
+						errors={errorFiles && errorFiles[ind]}
+					/>
 				))}
 			</Grid>
 		);
