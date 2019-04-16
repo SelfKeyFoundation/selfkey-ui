@@ -52,13 +52,16 @@ const multilineSelectStyles = (theme: Theme) =>
 			lineHeight: '21px',
 			cursor: 'pointer',
 		},
+		itemText: {
+			'& span': { fontSize: '14px', lineHeight: '17px', padding: '5px 0' },
+		},
 		itemAdd: {
 			background: 'none',
 			color: primary,
 			cursor: 'pointer',
 			lineHeight: '21px',
 			padding: '10px 16px',
-			marginBottom: 0
+			marginBottom: 0,
 		},
 	});
 
@@ -87,7 +90,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props: Multili
 	};
 	return (
 		<div>
-			<List className={props.classes.root}>
+			<List className={classes.root}>
 				{items.map((item: any) => (
 					<ListItem
 						key={item.key}
@@ -95,7 +98,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props: Multili
 						selected={isSelected(item)}
 						onClick={handleItemClick(item)}
 					>
-						<ListItemText>{item.value}</ListItemText>
+						<ListItemText className={classes.itemText}>{item.value}</ListItemText>
 					</ListItem>
 				))}
 				{onAdd && items.length > 0 ? <Divider /> : null}

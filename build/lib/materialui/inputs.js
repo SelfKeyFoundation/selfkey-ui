@@ -71,13 +71,16 @@ var multilineSelectStyles = function (theme) {
             lineHeight: '21px',
             cursor: 'pointer',
         },
+        itemText: {
+            '& span': { fontSize: '14px', lineHeight: '17px', padding: '5px 0' },
+        },
         itemAdd: {
             background: 'none',
             color: colors_1.primary,
             cursor: 'pointer',
             lineHeight: '21px',
             padding: '10px 16px',
-            marginBottom: 0
+            marginBottom: 0,
         },
     });
 };
@@ -104,9 +107,9 @@ exports.MultilineSelect = core_1.withStyles(multilineSelectStyles)(function (pro
         };
     };
     return (React.createElement("div", null,
-        React.createElement(core_1.List, { className: props.classes.root },
+        React.createElement(core_1.List, { className: classes.root },
             items.map(function (item) { return (React.createElement(core_1.ListItem, { key: item.key, className: classes.item, selected: isSelected(item), onClick: handleItemClick(item) },
-                React.createElement(core_1.ListItemText, null, item.value))); }),
+                React.createElement(core_1.ListItemText, { className: classes.itemText }, item.value))); }),
             onAdd && items.length > 0 ? React.createElement(core_1.Divider, null) : null,
             onAdd ? (React.createElement(core_1.ListItem, { className: classes.itemAdd, onClick: onAdd }, "+Add Option")) : null)));
 });
