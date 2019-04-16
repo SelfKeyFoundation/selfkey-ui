@@ -21,7 +21,7 @@ describe('Status Completed', () => {
 
   it('should show Status Missing', () => {
     const component = create(
-      <StatusInfo status="DocumentsRequired" />
+      <StatusInfo status="Documents Required" />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('Status Completed', () => {
 
   it('should show Status Pending', () => {
     const component = create(
-      <StatusInfo status="DocumentsSubmitted" />
+      <StatusInfo status="Documents Submitted" />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

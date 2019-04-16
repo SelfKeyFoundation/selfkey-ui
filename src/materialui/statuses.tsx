@@ -45,93 +45,62 @@ const statusInfoStyle = (theme: Theme) =>
             width: '38px'
         },
         statusWrap: {
-            '& .DocumentsRequired': {
+            '& .required': {
                 border: `1px solid ${warning}`,
             },
-            '& .DocumentsSubmitted': {
+            '& .submitted': {
                 border: `1px solid ${typography}`
             },
-            '& .Denied': {
+            '& .denied': {
                 border: `1px solid ${error}`
             }
         },
     });
 
-const StatusIcon = (status: StatusProps) => {
-    if (status.status === 'DocumentsRequired') {
-        return (
-            <AttributeAlertLargeIcon />
-        )
-    } else if (status.status === 'DocumentsSubmitted') {
-        return (
-            <SimpleHourglassIcon />
-        )
-    } else if (status.status === 'Denied') {
-        return (
-            <SimpleDeniedIcon />
-        )
-    } else {
-        return (
-            <SimpleCheckIcon />
-        )
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status }: StatusProps) => {
+    let icon, message, statusStyle, button = null;
+    switch (status) {
+		case 'Documents Required':
+			icon = <AttributeAlertLargeIcon className={classes.statusIcon} />;
+            message = 'Application started. Missing required documents.';
+            button = <Button variant='contained' size='large'>Add Documents</Button>;
+            statusStyle = 'required';
+			break;
+        case 'Documents Submitted':
+			icon = <SimpleHourglassIcon className={classes.statusIcon} />;
+			message =
+                'Application started. Documents submitted. Please check your email for further instructions.';
+            statusStyle = 'submitted';
+			break;
+		case 'Denied':
+			icon = <SimpleDeniedIcon className={classes.statusIcon} />;
+            message = 'Application denied. Please check your email for the reject reason.';
+            statusStyle = 'denied';
+			break;
+		default:
+			icon = <SimpleCheckIcon className={classes.statusIcon} />;
+			message =
+				'Application completed. Please check your email to receive relevant documents and information.';
     }
-};
 
-const StatusMessage = (status: StatusProps) => {
-    if (status.status === 'DocumentsRequired') {
-        return (
-            <Typography variant='subtitle2' color='secondary'>
-                Application started. Missing required documents.
-            </Typography>
-        )
-    } else if (status.status === 'DocumentsSubmitted') {
-        return (
-            <Typography variant='subtitle2' color='secondary'>
-                Application started. Documents submitted. Please check your email for further instructions.
-            </Typography>
-        )
-    } else if (status.status === 'Denied') {
-        return (
-            <Typography variant='subtitle2' color='secondary'>
-                Application denied.  Please check your email to for the rejection reason.
-            </Typography>
-        )
-    } else {
-        return (
-            <Typography variant='subtitle2' color='secondary'>
-                Application completed. Please check your email to recieve relevant documents and information.
-            </Typography>
-        )
-    }
-};
-
-const StatusButton = (status: StatusProps) => {
-    if (status.status === 'DocumentsRequired') {
-        return (
-            <Button variant='contained' size='large'>Add Documents</Button>
-        )
-    } else {
-        return (
-            <span></span>
-        )
-    }
-};
-
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status }: StatusProps) => (
-    <div className={classes.statusWrap}>
-        <Grid item className={classNames(classes.defaultStatus, classes.pending, status)}>
-            <Grid container direction='row' justify='space-between' alignItems='center' wrap='nowrap'>
-                <Grid item className={classes.iconContainer}>
-                    <StatusIcon status={status} className={classes.statusIcon} />
-                </Grid>
-                <Grid item className={classes.grow}>
-                    <Typography variant='h2'>Status</Typography>
-                    <StatusMessage status={status} />
-                </Grid>
-                <Grid item>
-                    <StatusButton status={status} />
+    return (
+        <div className={classes.statusWrap}>
+            <Grid item className={classNames(classes.defaultStatus, status, statusStyle)}>
+                <Grid container direction='row' justify='space-between' alignItems='center' wrap='nowrap'>
+                    <Grid item className={classes.iconContainer}>
+                        {icon}
+                    </Grid>
+                    <Grid item className={classes.grow}>
+                        <Typography variant='h2'>Status</Typography>
+                        <Typography variant='subtitle2' color='secondary'>
+                            {message}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        {button ? button : <span></span>}
+                    </Grid>
                 </Grid>
             </Grid>
-        </Grid>
-    </div>
-));
+        </div>
+    )
+});

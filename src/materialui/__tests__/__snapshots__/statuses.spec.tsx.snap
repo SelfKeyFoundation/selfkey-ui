@@ -15,7 +15,7 @@ exports[`Status Completed should show Status Completed 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-104 Component-root-0-2-1"
+          className="MuiSvgIcon-root-104 Component-root-0-2-1 Component-statusIcon-3"
           focusable="false"
           height="45px"
           role="presentation"
@@ -27,10 +27,10 @@ exports[`Status Completed should show Status Completed 1`] = `
           </title>
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             id="💻-ID-Dashboard-simple-check"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
           >
             <g
               fill="#1CBA7D"
@@ -70,7 +70,7 @@ exports[`Status Completed should show Status Completed 1`] = `
         <h6
           className="MuiTypography-root-113 MuiTypography-subtitle2-132 MuiTypography-colorSecondary-144"
         >
-          Application completed. Please check your email to recieve relevant documents and information.
+          Application completed. Please check your email to receive relevant documents and information.
         </h6>
       </div>
       <div
@@ -88,7 +88,7 @@ exports[`Status Completed should show Status Denied 1`] = `
   className="Component-statusWrap-6"
 >
   <div
-    className="MuiGrid-item-8 Component-defaultStatus-1 Denied"
+    className="MuiGrid-item-8 Component-defaultStatus-1 Denied denied"
   >
     <div
       className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
@@ -98,7 +98,7 @@ exports[`Status Completed should show Status Denied 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-104 Component-root-0-2-2"
+          className="MuiSvgIcon-root-104 Component-root-0-2-2 Component-statusIcon-3"
           focusable="false"
           height="45px"
           role="presentation"
@@ -110,10 +110,10 @@ exports[`Status Completed should show Status Denied 1`] = `
           </title>
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             id="💻-ID-Dashboard-simple-denied"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
           >
             <g
               fill="#FE4B61"
@@ -153,7 +153,7 @@ exports[`Status Completed should show Status Denied 1`] = `
         <h6
           className="MuiTypography-root-113 MuiTypography-subtitle2-132 MuiTypography-colorSecondary-144"
         >
-          Application denied.  Please check your email to for the rejection reason.
+          Application denied. Please check your email for the reject reason.
         </h6>
       </div>
       <div
@@ -171,7 +171,7 @@ exports[`Status Completed should show Status Missing 1`] = `
   className="Component-statusWrap-6"
 >
   <div
-    className="MuiGrid-item-8 Component-defaultStatus-1 DocumentsRequired"
+    className="MuiGrid-item-8 Component-defaultStatus-1 Documents Required required"
   >
     <div
       className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
@@ -181,7 +181,7 @@ exports[`Status Completed should show Status Missing 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-104 Component-root-0-2-3"
+          className="MuiSvgIcon-root-104 Component-root-0-2-3 Component-statusIcon-3"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -189,10 +189,10 @@ exports[`Status Completed should show Status Missing 1`] = `
         >
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             id="💻-ID-Dashboard-attribute-large-icon"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
           >
             <g
               fill="#E98548"
@@ -275,7 +275,7 @@ exports[`Status Completed should show Status Pending 1`] = `
   className="Component-statusWrap-6"
 >
   <div
-    className="MuiGrid-item-8 Component-defaultStatus-1 DocumentsSubmitted"
+    className="MuiGrid-item-8 Component-defaultStatus-1 Documents Submitted submitted"
   >
     <div
       className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
@@ -285,7 +285,7 @@ exports[`Status Completed should show Status Pending 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-104 Component-root-0-2-4"
+          className="MuiSvgIcon-root-104 Component-root-0-2-4 Component-statusIcon-3"
           focusable="false"
           role="presentation"
           viewBox="0 0 27 45"
@@ -295,10 +295,10 @@ exports[`Status Completed should show Status Pending 1`] = `
           </title>
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             id="💻-ID-Dashboard-simle-hourglass-icon"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
           >
             <g
               fill="#93B0C1"
