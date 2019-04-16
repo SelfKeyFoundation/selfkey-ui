@@ -42,13 +42,13 @@ var statusInfoStyle = function (theme) {
     });
 };
 exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
-    var classes = _a.classes, status = _a.status;
+    var classes = _a.classes, status = _a.status, onClick = _a.onClick;
     var icon, message, statusStyle, button = null;
     switch (status) {
         case 'Documents Required':
             icon = React.createElement(selfkey_dark_theme_1.AttributeAlertLargeIcon, { className: classes.statusIcon });
             message = 'Application started. Missing required documents.';
-            button = React.createElement(core_1.Button, { variant: 'contained', size: 'large' }, "Add Documents");
+            button = React.createElement(core_1.Button, { variant: 'contained', size: 'large', onClick: onClick }, "Add Documents");
             statusStyle = 'required';
             break;
         case 'Documents Submitted':

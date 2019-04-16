@@ -58,13 +58,13 @@ const statusInfoStyle = (theme: Theme) =>
         },
     });
 
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status }: StatusProps) => {
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick }: StatusProps) => {
     let icon, message, statusStyle, button = null;
     switch (status) {
 		case 'Documents Required':
 			icon = <AttributeAlertLargeIcon className={classes.statusIcon} />;
             message = 'Application started. Missing required documents.';
-            button = <Button variant='contained' size='large'>Add Documents</Button>;
+            button = <Button variant='contained' size='large' onClick={onClick}>Add Documents</Button>;
             statusStyle = 'required';
 			break;
         case 'Documents Submitted':

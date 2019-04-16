@@ -6,20 +6,32 @@ const underlineStyle = {
     textDecoration: 'underline',
 }
 
-export default function StatusStories () {
-    return (
-        <div>
-            <Typography variant="h3" style={underlineStyle} gutterBottom>
-				Statuses
-			</Typography>
-			<StatusInfo status="Documents Required" />
-			<br/><br/>
-			<StatusInfo status="Documents Submitted" />
-			<br/><br/>
-			<StatusInfo status="Denied" />
-			<br/><br/>
-			<StatusInfo />
+class StatusStories extends React.Component {
+    state = {
+        empty: ''
+    };
 
-        </div>
-    )
+	handleClick = () => {
+		alert('Clicked!');
+	};
+
+    render() {
+        return (
+			<div>
+				<Typography variant="h3" style={underlineStyle} gutterBottom>
+					Statuses
+				</Typography>
+				<StatusInfo status="Documents Required" onClick={this.handleClick} />
+				<br/><br/>
+				<StatusInfo status="Documents Submitted" />
+				<br/><br/>
+				<StatusInfo status="Denied" />
+				<br/><br/>
+				<StatusInfo />
+
+			</div>
+		)
+	}
 }
+
+export default StatusStories;
