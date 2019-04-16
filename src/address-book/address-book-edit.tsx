@@ -91,7 +91,7 @@ export class AddressBookEditComponent extends React.Component<StyledProps, Addre
     const hasLabelError = (labelError !== '' && labelError !== undefined)
     const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
     return (
-        <form className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+        <form id="formwrap" className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
             <Grid container direction='column' spacing={32}>
                 <Grid item>
                     <Grid container direction='column' spacing={8}>

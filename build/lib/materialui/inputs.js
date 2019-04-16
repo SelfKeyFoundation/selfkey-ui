@@ -388,7 +388,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
         var formClassNames = classnames_1.default(classes.dropArea, additionalClass);
         return (React.createElement(core_1.Grid, { container: true, direction: "column" },
             React.createElement(exports.FileUploadGrid, { container: true, direction: "column", alignItems: "center", justify: "center" },
-                React.createElement("div", { ref: this.setFormRef, className: formClassNames },
+                React.createElement("div", { id: "dragging", ref: this.setFormRef, className: formClassNames },
                     React.createElement(core_1.Grid, { container: true, justify: "center", alignItems: "center", direction: "column" },
                         React.createElement(exports.FileUploadLabel, { htmlFor: "key-upload" },
                             React.createElement(core_1.Grid, { item: true, className: classes.bottomSpace },
@@ -403,7 +403,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
                             uploadError ? (React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Typography, { variant: "subtitle1", color: "error" }, uploadError))) : null),
                         React.createElement(exports.FileUploadInput, { id: "key-upload", type: "file" })))),
-            (files || []).map(function (f, ind) { return (React.createElement(exports.FileViewWithModalComponent, { key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind] })); })));
+            (files || []).map(function (f, ind) { return (React.createElement(exports.FileViewWithModalComponent, { id: "fileViewWithModal", key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind] })); })));
     };
     return ArrayFileUploadWidgetComponent;
 }(React.Component));

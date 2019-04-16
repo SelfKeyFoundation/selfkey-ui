@@ -92,7 +92,7 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
         var _a = this.props, classes = _a.classes, labelError = _a.labelError, onCancel = _a.onCancel;
         var hasLabelError = (labelError !== '' && labelError !== undefined);
         var labelInputClass = classes.input + " " + (hasLabelError ? classes.errorColor : '');
-        return (React.createElement("form", { className: classes.container, noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
+        return (React.createElement("form", { id: "formwrap", className: classes.container, noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
             React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 32 },
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 8 },
