@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { StatusInfo } from './statuses';
+import { DeniedIcon } from '../denied';
 
-
-describe('No Status', () => {
-  it('should show No Status', () => {
+describe('Denied Icon', () => {
+  it('should show Denied Icon', () => {
     const component = create(
-      <StatusInfo />
+      <DeniedIcon/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

@@ -14,7 +14,7 @@ const styles: StyleSheet = {
 export const SimpleHourglassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
     <SvgIcon {...props} viewBox='0 0 27 45'>
         <title>icon-simple-hourglass</title>
-        <g id="💻-ID-Dashboard-simle-hourglass-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="💻-ID-Dashboard-simle-hourglass-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="410.1-Marketplace-Applications-Statuses-simple-hourglass-icon" transform="translate(-202.000000, -502.000000)" fill="#93B0C1">
                 <g id="Content" transform="translate(150.000000, 264.000000)">
                     <g id="Collapse-box-1">

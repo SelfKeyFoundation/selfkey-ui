@@ -21,7 +21,7 @@ var styles = {
     },
 };
 exports.AttributeAlertLargeIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 38 44", version: "1.1" }),
-    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-attribute-large-icon", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-attribute-large-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-195.000000, -379.000000)", fill: "#E98548" },
             React.createElement("g", { id: "Content", transform: "translate(150.000000, 264.000000)" },
                 React.createElement("g", { id: "Collapse-box-1" },

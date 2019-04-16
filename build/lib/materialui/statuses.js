@@ -7,6 +7,7 @@ var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var statusInfoStyle = function (theme) {
     return core_1.createStyles({
         defaultStatus: {
+            border: "1px solid " + selfkey_dark_theme_1.success,
             borderRadius: '4px',
             boxSizing: 'border-box',
             padding: '25px 30px',
@@ -27,74 +28,52 @@ var statusInfoStyle = function (theme) {
             width: '38px'
         },
         statusWrap: {
-            '& .completed': {
-                border: "1px solid " + selfkey_dark_theme_1.success,
-            },
-            '& .missing': {
+            width: '100%',
+            '& .required': {
                 border: "1px solid " + selfkey_dark_theme_1.warning,
+            },
+            '& .submitted': {
+                border: "1px solid " + selfkey_dark_theme_1.typography
             },
             '& .denied': {
                 border: "1px solid " + selfkey_dark_theme_1.error
-            },
-            '& .pending': {
-                border: "1px solid " + selfkey_dark_theme_1.typography
-            },
-            '& .noStatus': {
-                display: 'none'
             }
         },
     });
 };
-var StatusIcon = function (status) {
-    if (status.status === 'missing') {
-        return (React.createElement(selfkey_dark_theme_1.AttributeAlertLargeIcon, null));
-    }
-    else if (status.status === 'pending') {
-        return (React.createElement(selfkey_dark_theme_1.SimpleHourglassIcon, null));
-    }
-    else if (status.status === 'completed') {
-        return (React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, null));
-    }
-    else {
-        return (React.createElement(selfkey_dark_theme_1.SimpleDeniedIcon, null));
-    }
-};
-var StatusMessage = function (status) {
-    if (status.status === 'missing') {
-        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application started. Missing required documents."));
-    }
-    else if (status.status === 'pending') {
-        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application started. Documents submitted. Please check your email for further instructions."));
-    }
-    else if (status.status === 'completed') {
-        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application completed. Please check your email to recieve relevant documents and information."));
-    }
-    else if (status.status === 'denied') {
-        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application denied.  Please check your email to for the rejection reason."));
-    }
-    else {
-        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "No status"));
-    }
-};
-var StatusButton = function (status) {
-    if (status.status === 'missing') {
-        return (React.createElement(core_1.Button, { variant: 'contained', size: 'large' }, "Add Documents"));
-    }
-    else {
-        return (React.createElement("span", null));
-    }
-};
 exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
-    var classes = _a.classes, _b = _a.status, status = _b === void 0 ? 'noStatus' : _b;
+    var classes = _a.classes, status = _a.status;
+    var icon, message, statusStyle, button = null;
+    switch (status) {
+        case 'Documents Required':
+            icon = React.createElement(selfkey_dark_theme_1.AttributeAlertLargeIcon, { className: classes.statusIcon });
+            message = 'Application started. Missing required documents.';
+            button = React.createElement(core_1.Button, { variant: 'contained', size: 'large' }, "Add Documents");
+            statusStyle = 'required';
+            break;
+        case 'Documents Submitted':
+            icon = React.createElement(selfkey_dark_theme_1.SimpleHourglassIcon, { className: classes.statusIcon });
+            message =
+                'Application started. Documents submitted. Please check your email for further instructions.';
+            statusStyle = 'submitted';
+            break;
+        case 'Denied':
+            icon = React.createElement(selfkey_dark_theme_1.SimpleDeniedIcon, { className: classes.statusIcon });
+            message = 'Application denied. Please check your email for the reject reason.';
+            statusStyle = 'denied';
+            break;
+        default:
+            icon = React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, { className: classes.statusIcon });
+            message =
+                'Application completed. Please check your email to receive relevant documents and information.';
+    }
     return (React.createElement("div", { className: classes.statusWrap },
-        React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.defaultStatus, classes.pending, status) },
+        React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.defaultStatus, status, statusStyle) },
             React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-between', alignItems: 'center', wrap: 'nowrap' },
-                React.createElement(core_1.Grid, { item: true, className: classes.iconContainer },
-                    React.createElement(StatusIcon, { status: status, className: classes.statusIcon })),
+                React.createElement(core_1.Grid, { item: true, className: classes.iconContainer }, icon),
                 React.createElement(core_1.Grid, { item: true, className: classes.grow },
                     React.createElement(core_1.Typography, { variant: 'h2' }, "Status"),
-                    React.createElement(StatusMessage, { status: status })),
-                React.createElement(core_1.Grid, { item: true },
-                    React.createElement(StatusButton, { status: status }))))));
+                    React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, message)),
+                React.createElement(core_1.Grid, { item: true }, button ? button : React.createElement("span", null))))));
 });
 //# sourceMappingURL=statuses.js.map

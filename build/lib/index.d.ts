@@ -109,3 +109,5 @@ export { CertificateIcon } from './icons/certificate';
 export { SimpleHourglassIcon } from './icons/hourglass-simple';
 export { SimpleCheckIcon } from './icons/simple-check';
 export { SimpleDeniedIcon } from './icons/simple-denied';
+export { DeniedIcon } from './icons/denied';
+export { CheckMaIcon } from './icons/check-ma';

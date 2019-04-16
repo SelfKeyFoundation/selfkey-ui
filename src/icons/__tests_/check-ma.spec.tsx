@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { StatusInfo } from './statuses';
+import { CheckMaIcon } from '../check-ma';
 
-
-describe('Status Missing', () => {
-  it('should show Status Missing', () => {
+describe('CheckMa Icon', () => {
+  it('should show CheckMa Icon', () => {
     const component = create(
-      <StatusInfo status="missing" />
+      <CheckMaIcon/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
