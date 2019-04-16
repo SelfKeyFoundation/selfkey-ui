@@ -28,6 +28,7 @@ var statusInfoStyle = function (theme) {
             width: '38px'
         },
         statusWrap: {
+            width: '100%',
             '& .required': {
                 border: "1px solid " + selfkey_dark_theme_1.warning,
             },

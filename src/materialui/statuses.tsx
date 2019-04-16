@@ -45,6 +45,7 @@ const statusInfoStyle = (theme: Theme) =>
             width: '38px'
         },
         statusWrap: {
+            width: '100%',
             '& .required': {
                 border: `1px solid ${warning}`,
             },
