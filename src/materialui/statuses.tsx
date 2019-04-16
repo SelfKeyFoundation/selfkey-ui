@@ -24,6 +24,7 @@ export type StatusProps = any;
 const statusInfoStyle = (theme: Theme) =>
     createStyles({
         defaultStatus: {
+            border: `1px solid ${success}`,
             borderRadius: '4px',
             boxSizing: 'border-box',
             padding: '25px 30px',
@@ -44,64 +45,52 @@ const statusInfoStyle = (theme: Theme) =>
             width: '38px'
         },
         statusWrap: {
-            '& .completed': {
-                border: `1px solid ${success}`,
-            },
-            '& .missing': {
+            '& .DocumentsRequired': {
                 border: `1px solid ${warning}`,
             },
-            '& .denied': {
-                border: `1px solid ${error}`
-            },
-            '& .pending': {
+            '& .DocumentsSubmitted': {
                 border: `1px solid ${typography}`
             },
-            '& .noStatus': {
-                display: 'none'
+            '& .Denied': {
+                border: `1px solid ${error}`
             }
         },
     });
 
 const StatusIcon = (status: StatusProps) => {
-    if (status.status === 'missing') {
+    if (status.status === 'DocumentsRequired') {
         return (
             <AttributeAlertLargeIcon />
         )
-    } else if (status.status === 'pending') {
+    } else if (status.status === 'DocumentsSubmitted') {
         return (
             <SimpleHourglassIcon />
         )
-    } else if (status.status === 'completed') {
+    } else if (status.status === 'Denied') {
         return (
-            <SimpleCheckIcon />
+            <SimpleDeniedIcon />
         )
     } else {
         return (
-            <SimpleDeniedIcon />
+            <SimpleCheckIcon />
         )
     }
 };
 
 const StatusMessage = (status: StatusProps) => {
-    if (status.status === 'missing') {
+    if (status.status === 'DocumentsRequired') {
         return (
             <Typography variant='subtitle2' color='secondary'>
                 Application started. Missing required documents.
             </Typography>
         )
-    } else if (status.status === 'pending') {
+    } else if (status.status === 'DocumentsSubmitted') {
         return (
             <Typography variant='subtitle2' color='secondary'>
                 Application started. Documents submitted. Please check your email for further instructions.
             </Typography>
         )
-    } else if (status.status === 'completed') {
-        return (
-            <Typography variant='subtitle2' color='secondary'>
-                Application completed. Please check your email to recieve relevant documents and information.
-            </Typography>
-        )
-    } else if (status.status === 'denied') {
+    } else if (status.status === 'Denied') {
         return (
             <Typography variant='subtitle2' color='secondary'>
                 Application denied.  Please check your email to for the rejection reason.
@@ -110,14 +99,14 @@ const StatusMessage = (status: StatusProps) => {
     } else {
         return (
             <Typography variant='subtitle2' color='secondary'>
-                No status
+                Application completed. Please check your email to recieve relevant documents and information.
             </Typography>
         )
     }
 };
 
 const StatusButton = (status: StatusProps) => {
-    if (status.status === 'missing') {
+    if (status.status === 'DocumentsRequired') {
         return (
             <Button variant='contained' size='large'>Add Documents</Button>
         )
@@ -128,7 +117,7 @@ const StatusButton = (status: StatusProps) => {
     }
 };
 
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status = 'noStatus' }: StatusProps) => (
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status }: StatusProps) => (
     <div className={classes.statusWrap}>
         <Grid item className={classNames(classes.defaultStatus, classes.pending, status)}>
             <Grid container direction='row' justify='space-between' alignItems='center' wrap='nowrap'>

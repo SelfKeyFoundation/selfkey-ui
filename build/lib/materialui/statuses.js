@@ -7,6 +7,7 @@ var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var statusInfoStyle = function (theme) {
     return core_1.createStyles({
         defaultStatus: {
+            border: "1px solid " + selfkey_dark_theme_1.success,
             borderRadius: '4px',
             boxSizing: 'border-box',
             padding: '25px 30px',
@@ -27,57 +28,48 @@ var statusInfoStyle = function (theme) {
             width: '38px'
         },
         statusWrap: {
-            '& .completed': {
-                border: "1px solid " + selfkey_dark_theme_1.success,
-            },
-            '& .missing': {
+            '& .DocumentsRequired': {
                 border: "1px solid " + selfkey_dark_theme_1.warning,
             },
-            '& .denied': {
-                border: "1px solid " + selfkey_dark_theme_1.error
-            },
-            '& .pending': {
+            '& .DocumentsSubmitted': {
                 border: "1px solid " + selfkey_dark_theme_1.typography
             },
-            '& .noStatus': {
-                display: 'none'
+            '& .Denied': {
+                border: "1px solid " + selfkey_dark_theme_1.error
             }
         },
     });
 };
 var StatusIcon = function (status) {
-    if (status.status === 'missing') {
+    if (status.status === 'DocumentsRequired') {
         return (React.createElement(selfkey_dark_theme_1.AttributeAlertLargeIcon, null));
     }
-    else if (status.status === 'pending') {
+    else if (status.status === 'DocumentsSubmitted') {
         return (React.createElement(selfkey_dark_theme_1.SimpleHourglassIcon, null));
     }
-    else if (status.status === 'completed') {
-        return (React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, null));
+    else if (status.status === 'Denied') {
+        return (React.createElement(selfkey_dark_theme_1.SimpleDeniedIcon, null));
     }
     else {
-        return (React.createElement(selfkey_dark_theme_1.SimpleDeniedIcon, null));
+        return (React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, null));
     }
 };
 var StatusMessage = function (status) {
-    if (status.status === 'missing') {
+    if (status.status === 'DocumentsRequired') {
         return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application started. Missing required documents."));
     }
-    else if (status.status === 'pending') {
+    else if (status.status === 'DocumentsSubmitted') {
         return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application started. Documents submitted. Please check your email for further instructions."));
     }
-    else if (status.status === 'completed') {
-        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application completed. Please check your email to recieve relevant documents and information."));
-    }
-    else if (status.status === 'denied') {
+    else if (status.status === 'Denied') {
         return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application denied.  Please check your email to for the rejection reason."));
     }
     else {
-        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "No status"));
+        return (React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, "Application completed. Please check your email to recieve relevant documents and information."));
     }
 };
 var StatusButton = function (status) {
-    if (status.status === 'missing') {
+    if (status.status === 'DocumentsRequired') {
         return (React.createElement(core_1.Button, { variant: 'contained', size: 'large' }, "Add Documents"));
     }
     else {
@@ -85,7 +77,7 @@ var StatusButton = function (status) {
     }
 };
 exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
-    var classes = _a.classes, _b = _a.status, status = _b === void 0 ? 'noStatus' : _b;
+    var classes = _a.classes, status = _a.status;
     return (React.createElement("div", { className: classes.statusWrap },
         React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.defaultStatus, classes.pending, status) },
             React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-between', alignItems: 'center', wrap: 'nowrap' },
