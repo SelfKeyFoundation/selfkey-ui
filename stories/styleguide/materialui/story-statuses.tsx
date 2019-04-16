@@ -12,13 +12,11 @@ export default function StatusStories () {
             <Typography variant="h3" style={underlineStyle} gutterBottom>
 				Statuses
 			</Typography>
-			<StatusInfo status="missing" />
+			<StatusInfo status="DocumentsRequired" />
 			<br/><br/>
-			<StatusInfo status="pending" />
+			<StatusInfo status="DocumentsSubmitted" />
 			<br/><br/>
-			<StatusInfo status="completed" />
-			<br/><br/>
-			<StatusInfo status="denied" />
+			<StatusInfo status="Denied" />
 			<br/><br/>
 			<StatusInfo />
 
