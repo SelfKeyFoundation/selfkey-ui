@@ -9,7 +9,7 @@ exports[`Modal Box should show Modal Box 1`] = `
     id="header"
   >
     <h2
-      className="Component-base-0-1-5 Component-h2-0-1-7 undefined"
+      className="MuiTypography-root-98 MuiTypography-h2-111"
     >
       Modal boc
     </h2>
@@ -18,7 +18,7 @@ exports[`Modal Box should show Modal Box 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-98 Component-root-0-1-9"
+        className="MuiSvgIcon-root-134 Component-root-0-1-5"
         focusable="false"
         role="presentation"
         viewBox="0 0 38 38"

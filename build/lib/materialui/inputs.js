@@ -46,6 +46,73 @@ var modalElements_1 = require("./modalElements");
 var file_image_1 = require("../icons/file-image");
 var file_pdf_1 = require("../icons/file-pdf");
 var file_audio_1 = require("../icons/file-audio");
+var multilineSelectStyles = function (theme) {
+    return core_1.createStyles({
+        root: {
+            backgroundColor: colors_1.baseDark,
+            borderRadius: '4px',
+            border: '1px solid #384656',
+            boxSizing: 'border-box',
+            maxWidth: '360px',
+            color: colors_1.white,
+            fontSize: '14px',
+            overflow: 'auto',
+            lineHeight: '21px',
+            '&$focused': {
+                '&$focused:not($error):not($disabled)': {
+                    border: "1px solid " + colors_1.primary,
+                    boxShadow: "0 0 3px 1px " + colors_1.primary,
+                },
+            },
+        },
+        item: {
+            borderRadius: '4px',
+            fontSize: '14px',
+            lineHeight: '21px',
+            cursor: 'pointer',
+        },
+        itemText: {
+            '& span': { fontSize: '14px', lineHeight: '17px', padding: '5px 0' },
+        },
+        itemAdd: {
+            background: 'none',
+            color: colors_1.primary,
+            cursor: 'pointer',
+            lineHeight: '21px',
+            padding: '10px 16px',
+            marginBottom: 0,
+        },
+    });
+};
+exports.MultilineSelect = core_1.withStyles(multilineSelectStyles)(function (props) {
+    var classes = props.classes, multiselect = props.multiselect, _a = props.selected, selected = _a === void 0 ? [] : _a, _b = props.items, items = _b === void 0 ? [] : _b, onSelectUpdated = props.onSelectUpdated, onAdd = props.onAdd;
+    var isSelected = function (item) { return selected.includes(item.key); };
+    var handleItemClick = function (item) {
+        return function (evt) {
+            if (evt) {
+                evt.preventDefault();
+            }
+            if (!onSelectUpdated)
+                return;
+            if (!multiselect) {
+                if (isSelected(item)) {
+                    return onSelectUpdated([]);
+                }
+                return onSelectUpdated([item.key]);
+            }
+            if (isSelected(item)) {
+                return onSelectUpdated(selected.filter(function (x) { return x != item.key; }));
+            }
+            return onSelectUpdated(selected.concat([item.key]));
+        };
+    };
+    return (React.createElement("div", null,
+        React.createElement(core_1.List, { className: classes.root },
+            items.map(function (item) { return (React.createElement(core_1.ListItem, { key: item.key, className: classes.item, selected: isSelected(item), onClick: handleItemClick(item) },
+                React.createElement(core_1.ListItemText, { className: classes.itemText }, item.value))); }),
+            onAdd && items.length > 0 ? React.createElement(core_1.Divider, null) : null,
+            onAdd ? (React.createElement(core_1.ListItem, { className: classes.itemAdd, onClick: onAdd }, "+Add Option")) : null)));
+});
 exports.FileUploadLabel = core_1.withStyles({
     root: {
         alignItems: 'center',
@@ -79,37 +146,37 @@ var fileViewStyles = function (theme) {
         },
         fileItemError: {},
         noDecoration: {
-            textDecoration: 'none'
+            textDecoration: 'none',
         },
         link: {
             cursor: 'pointer',
         },
         fileName: {
             '&:hover': {
-                color: colors_1.primary
-            }
+                color: colors_1.primary,
+            },
         },
         breakAll: {
-            wordBreak: 'break-all'
+            wordBreak: 'break-all',
         },
         fileErrorContainer: {
             marginLeft: '45px',
         },
         fullWidth: {
-            width: '100%'
+            width: '100%',
         },
         imageWidth: {
-            maxWidth: '100%'
+            maxWidth: '100%',
         },
         topSpacing: {
-            marginTop: '20px'
+            marginTop: '20px',
         },
         padding: {
-            padding: '0 15px'
+            padding: '0 15px',
         },
         bottomSpace: {
-            marginBottom: '20px'
-        }
+            marginBottom: '20px',
+        },
     });
 };
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
@@ -134,7 +201,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
     function FileViewWithModal() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
-            open: false
+            open: false,
         };
         _this.handleOpen = function () {
             _this.setState({ open: true });
@@ -155,7 +222,12 @@ var FileViewWithModal = /** @class */ (function (_super) {
         var UploadedFile = function (fileType) {
             console.log(fileType);
             var type = fileType.fileType;
-            if (type === "image/png" || type === "image/jpeg" || type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
+            if (type === 'image/png' ||
+                type === 'image/jpeg' ||
+                type === 'audio/ogg' ||
+                type === 'audio/mp3' ||
+                type === 'audio/m4a' ||
+                type === 'audio/x-wav') {
                 return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
             }
@@ -166,26 +238,26 @@ var FileViewWithModal = /** @class */ (function (_super) {
         };
         var FileTypeIcon = function (fileType) {
             var type = fileType.fileType;
-            if (type === "image/png" || type === "image/jpeg") {
-                return (React.createElement(file_image_1.FileImageIcon, null));
+            if (type === 'image/png' || type === 'image/jpeg') {
+                return React.createElement(file_image_1.FileImageIcon, null);
             }
-            else if (type === "application/pdf") {
-                return (React.createElement(file_pdf_1.FilePdfIcon, null));
+            else if (type === 'application/pdf') {
+                return React.createElement(file_pdf_1.FilePdfIcon, null);
             }
-            else if (type === "audio/ogg" || type === "audio/mp3" || type === "audio/m4a" || type === "audio/x-wav") {
-                return (React.createElement(file_audio_1.FileAudioIcon, null));
+            else if (type === 'audio/ogg' || type === 'audio/mp3' || type === 'audio/m4a' || type === 'audio/x-wav') {
+                return React.createElement(file_audio_1.FileAudioIcon, null);
             }
             else {
-                return (React.createElement(file_default_1.FileDefaultIcon, null));
+                return React.createElement(file_default_1.FileDefaultIcon, null);
             }
         };
         var PreviewType = function (fileType) {
             var type = fileType.fileType;
-            if (type === "image/png" || type === "image/jpeg") {
-                return (React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth }));
+            if (type === 'image/png' || type === 'image/jpeg') {
+                return React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth });
             }
             else {
-                return (React.createElement("audio", { src: file.url, controls: true }));
+                return React.createElement("audio", { src: file.url, controls: true });
             }
         };
         return (React.createElement(core_1.Grid, { item: true },
@@ -204,7 +276,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                     React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null),
             React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
                 React.createElement(modalWithBackButton_1.ModalWrap, null,
-                    React.createElement(core_1.Button, { variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
+                    React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: this.handleState }, "\u2039 Back"),
                     React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
                         React.createElement(PreviewType, { fileType: file.mimeType }))))));
     };
@@ -229,7 +301,7 @@ var fileUploadStyles = {
     },
     fileInput: {
         display: 'none',
-    }
+    },
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
     var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required"]);

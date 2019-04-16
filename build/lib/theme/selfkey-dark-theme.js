@@ -13,6 +13,7 @@ __export(require("../materialui/inputs"));
 __export(require("../materialui/lists"));
 __export(require("../materialui/modalElements"));
 __export(require("../materialui/pagination"));
+__export(require("../materialui/statuses"));
 __export(require("../materialui/tables"));
 __export(require("../materialui/tooltipArrow"));
 __export(require("../materialui/typography"));
@@ -20,11 +21,13 @@ __export(require("../icons/address-book-menu"));
 __export(require("../icons/address-book"));
 __export(require("../icons/animated-loading"));
 __export(require("../icons/attribute-alert"));
+__export(require("../icons/attribute-alert-large"));
 __export(require("../icons/book"));
 __export(require("../icons/calendar"));
 __export(require("../icons/certificate"));
 __export(require("../icons/check-empty"));
 __export(require("../icons/check"));
+__export(require("../icons/check-ma"));
 __export(require("../icons/clear"));
 __export(require("../icons/clipboard"));
 __export(require("../icons/close-button"));
@@ -33,6 +36,7 @@ __export(require("../icons/corporate"));
 __export(require("../icons/custom"));
 __export(require("../icons/dashboard-menu"));
 __export(require("../icons/delete"));
+__export(require("../icons/denied"));
 __export(require("../icons/document"));
 __export(require("../icons/download-2"));
 __export(require("../icons/download"));
@@ -53,6 +57,7 @@ __export(require("../icons/green-tick"));
 __export(require("../icons/hard-drive"));
 __export(require("../icons/help"));
 __export(require("../icons/hourglass-large"));
+__export(require("../icons/hourglass-simple"));
 __export(require("../icons/hourglass-small"));
 __export(require("../icons/id-card"));
 __export(require("../icons/incorporations"));
@@ -92,6 +97,8 @@ __export(require("../icons/sent-blue"));
 __export(require("../icons/sent"));
 __export(require("../icons/share"));
 __export(require("../icons/shield"));
+__export(require("../icons/simple-check"));
+__export(require("../icons/simple-denied"));
 __export(require("../icons/sk-id"));
 __export(require("../icons/stick"));
 __export(require("../icons/structure"));
@@ -486,7 +493,7 @@ var theme = core_1.createMuiTheme({
                 '& option': {
                     backgroundColor: colors_1.baseDark + " !important",
                     border: "1px solid " + colors_1.baseDark + " !important",
-                    color: "#FFFFFF !important"
+                    color: "#FFFFFF !important",
                 },
             },
             icon: {
@@ -694,7 +701,7 @@ var theme = core_1.createMuiTheme({
                     color: colors_1.white,
                 },
                 '&$selected': {
-                    color: colors_1.white
+                    color: colors_1.white,
                 },
             },
             textColorInherit: {

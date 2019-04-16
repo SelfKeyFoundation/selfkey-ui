@@ -1,7 +1,6 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet } from 'react-jss';
-import { Grid, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, IconButton } from '@material-ui/core'
-import { H2 } from '../typography/headings';
+import { Grid, Button, Table, TableHead, TableRow, TableCell, TableBody, IconButton, Typography } from '@material-ui/core';
 import AddressBookIcon from '../icons/address-book';
 import CopyIcon from '../icons/copy';
 import DeleteIcon from '../icons/delete';
@@ -126,7 +125,7 @@ export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addr
             <AddressBookIcon/>
         </Grid>
         <Grid item>
-            <H2>Address Book</H2>
+            <Typography variant="h1">Address Book</Typography>
         </Grid>
         <Grid item>
             <Typography variant='body1' className={classes.descriptionText}>Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.</Typography>

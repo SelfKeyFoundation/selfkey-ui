@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { A } from '../link';
+import { SimpleCheckIcon } from '../../theme/selfkey-dark-theme';
 
-
-describe('Link', () => {
-  it('should show Link', () => {
+describe('Simple Check', () => {
+  it('should show Simple Check', () => {
     const component = create(
-      <A href="http://test" onClick={(event)=>{}}>TEST</A>,
+      <SimpleCheckIcon />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

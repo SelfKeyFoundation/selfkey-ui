@@ -102,7 +102,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
     </g>
   </svg>
   <h1
-    className="Component-base-0-1-4 Component-h1-0-1-5 Component-title-0-1-3"
+    className="MuiTypography-root-10 MuiTypography-h1-22 Component-title-0-1-3"
   >
     Login with SelfKey
   </h1>
@@ -111,7 +111,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-8"
+      className="MuiSvgIcon-root-1 Component-root-0-1-4"
       focusable="false"
       role="presentation"
       viewBox="0 0 38 38"

@@ -7,7 +7,6 @@ var transaction_box_1 = require("../transaction-box");
 var core_1 = require("@material-ui/core");
 var hourglass_large_1 = require("../../icons/hourglass-large");
 var okay_1 = require("../../icons/okay");
-var headings_1 = require("../../typography/headings");
 var number_format_1 = require("../../price/number-format");
 var styles = {
     button: {
@@ -90,7 +89,7 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
             React.createElement(core_1.Grid, { item: true, xs: 10 },
                 React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
                     React.createElement(core_1.Grid, { item: true, id: 'header' },
-                        React.createElement(headings_1.H2, { className: classes.headerText }, status)),
+                        React.createElement(core_1.Typography, { variant: "h2" }, status)),
                     React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body },
                         React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start', spacing: 16 },
                             React.createElement(core_1.Grid, { item: true },

@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Status Completed should show Status Completed 1`] = `
+<div
+  className="Component-statusWrap-6"
+>
+  <div
+    className="MuiGrid-item-8 Component-defaultStatus-1"
+  >
+    <div
+      className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
+    >
+      <div
+        className="MuiGrid-item-8 Component-iconContainer-4"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-104 Component-root-0-2-1 Component-statusIcon-3"
+          focusable="false"
+          height="45px"
+          role="presentation"
+          viewBox="0 0 39 45"
+          width="39px"
+        >
+          <title>
+            icon-simple-check
+          </title>
+          <g
+            fill="none"
+            fillRule="evenodd"
+            id="💻-ID-Dashboard-simple-check"
+            stroke="none"
+            strokeWidth="1"
+          >
+            <g
+              fill="#1CBA7D"
+              id="Statuses-simple-check"
+              transform="translate(-195.000000, -625.000000)"
+            >
+              <g
+                id="Content"
+                transform="translate(150.000000, 264.000000)"
+              >
+                <g
+                  id="Collapse-box-1"
+                >
+                  <g
+                    id="Status-box-3"
+                    transform="translate(15.000000, 336.000000)"
+                  >
+                    <path
+                      d="M49.72,28.4 C33.72,28.4 33.72,32.4 33.72,32.4 L33.72,45.7 C33.7195752,52.9239266 37.6147728,59.586664 43.91,63.13 L49.72,66.4 L55.53,63.13 C61.8252272,59.586664 65.7204248,52.9239266 65.72,45.7 L65.72,32.4 C65.72,32.4 64.72,28.4 49.72,28.4 Z M49.72,25.4 C64.81,25.4 68.04,29.33 68.63,31.67 C68.6898291,31.9087207 68.7200562,32.1538962 68.72,32.4 L68.72,45.7 C68.7041317,53.9919031 64.2262321,61.63337 57,65.7 L51.19,68.97 C50.2771638,69.4831103 49.1628362,69.4831103 48.25,68.97 L42.44,65.7 C35.2137679,61.63337 30.7358683,53.9919031 30.72,45.7 L30.72,32.4 C30.72,31.72 30.99,29.42 34.38,27.72 C37.45,26.18 42.61,25.4 49.72,25.4 Z M48.72,52.9 C48.3223093,52.8996499 47.9410347,52.741385 47.66,52.46 L40.66,45.46 C40.1092823,44.8689805 40.1255322,43.9479806 40.6967564,43.3767564 C41.2679806,42.8055322 42.1889805,42.7892823 42.78,43.34 L48.72,49.28 L58.66,39.34 C59.2510195,38.7892823 60.1720194,38.8055322 60.7432436,39.3767564 C61.3144678,39.9479806 61.3307177,40.8689805 60.78,41.46 L49.78,52.46 C49.4989653,52.741385 49.1176907,52.8996499 48.72,52.9 Z"
+                      id="icon-simple-check"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="MuiGrid-item-8 Component-grow-2"
+      >
+        <h2
+          className="MuiTypography-root-113 MuiTypography-h2-126"
+        >
+          Status
+        </h2>
+        <h6
+          className="MuiTypography-root-113 MuiTypography-subtitle2-132 MuiTypography-colorSecondary-144"
+        >
+          Application completed. Please check your email to receive relevant documents and information.
+        </h6>
+      </div>
+      <div
+        className="MuiGrid-item-8"
+      >
+        <span />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Status Completed should show Status Denied 1`] = `
+<div
+  className="Component-statusWrap-6"
+>
+  <div
+    className="MuiGrid-item-8 Component-defaultStatus-1 Denied denied"
+  >
+    <div
+      className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
+    >
+      <div
+        className="MuiGrid-item-8 Component-iconContainer-4"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-104 Component-root-0-2-2 Component-statusIcon-3"
+          focusable="false"
+          height="45px"
+          role="presentation"
+          viewBox="0 0 39 45"
+          width="39px"
+        >
+          <title>
+            icon-simple-denied
+          </title>
+          <g
+            fill="none"
+            fillRule="evenodd"
+            id="💻-ID-Dashboard-simple-denied"
+            stroke="none"
+            strokeWidth="1"
+          >
+            <g
+              fill="#FE4B61"
+              id="Statuses-denied"
+              transform="translate(-195.000000, -748.000000)"
+            >
+              <g
+                id="Content"
+                transform="translate(150.000000, 264.000000)"
+              >
+                <g
+                  id="Collapse-box-1"
+                >
+                  <g
+                    id="Status-box-4"
+                    transform="translate(15.000000, 459.000000)"
+                  >
+                    <path
+                      d="M68.63,31.67 C68.6898291,31.9087207 68.7200562,32.1538962 68.72,32.4 L68.72,45.7 C68.7041317,53.9919031 64.2262321,61.63337 57,65.7 L51.19,68.97 C50.2771638,69.4831103 49.1628362,69.4831103 48.25,68.97 L42.44,65.7 C35.2137679,61.63337 30.7358683,53.9919031 30.72,45.7 L30.72,32.4 C30.72,31.72 30.99,29.42 34.38,27.72 C37.45,26.18 42.61,25.4 49.72,25.4 C64.81,25.4 68.04,29.33 68.63,31.67 Z M65.72,45.67 L65.72,32.4 C65.72,32.4 64.72,28.4 49.72,28.4 C33.72,28.4 33.72,32.4 33.72,32.4 L33.72,45.7 C33.7195752,52.9239266 37.6147728,59.586664 43.91,63.13 L49.72,66.4 L55.53,63.1 C61.8252272,59.556664 65.7204248,52.8939266 65.72,45.67 Z M57.78,38.34 C58.3649068,38.9256351 58.3649068,39.8743649 57.78,40.46 L51.84,46.4 L57.78,52.34 C58.1813064,52.7139412 58.3464984,53.2771111 58.2107711,53.8085778 C58.0750438,54.3400446 57.6600446,54.7550438 57.1285778,54.8907711 C56.5971111,55.0264984 56.0339412,54.8613064 55.66,54.46 L49.72,48.52 L43.78,54.46 C43.4060588,54.8613064 42.8428889,55.0264984 42.3114222,54.8907711 C41.7799554,54.7550438 41.3649562,54.3400446 41.2292289,53.8085778 C41.0935016,53.2771111 41.2586936,52.7139412 41.66,52.34 L47.6,46.4 L41.66,40.46 C41.1092823,39.8689805 41.1255322,38.9479806 41.6967564,38.3767564 C42.2679806,37.8055322 43.1889805,37.7892823 43.78,38.34 L49.72,44.28 L55.66,38.34 C56.2456351,37.7550932 57.1943649,37.7550932 57.78,38.34 Z"
+                      id="icon-simple-denied"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="MuiGrid-item-8 Component-grow-2"
+      >
+        <h2
+          className="MuiTypography-root-113 MuiTypography-h2-126"
+        >
+          Status
+        </h2>
+        <h6
+          className="MuiTypography-root-113 MuiTypography-subtitle2-132 MuiTypography-colorSecondary-144"
+        >
+          Application denied. Please check your email for the reject reason.
+        </h6>
+      </div>
+      <div
+        className="MuiGrid-item-8"
+      >
+        <span />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Status Completed should show Status Missing 1`] = `
+<div
+  className="Component-statusWrap-6"
+>
+  <div
+    className="MuiGrid-item-8 Component-defaultStatus-1 Documents Required required"
+  >
+    <div
+      className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
+    >
+      <div
+        className="MuiGrid-item-8 Component-iconContainer-4"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-104 Component-root-0-2-3 Component-statusIcon-3"
+          focusable="false"
+          role="presentation"
+          version="1.1"
+          viewBox="0 0 38 44"
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+            id="💻-ID-Dashboard-attribute-large-icon"
+            stroke="none"
+            strokeWidth="1"
+          >
+            <g
+              fill="#E98548"
+              id="410.1-Marketplace-Applications-Statuses"
+              transform="translate(-195.000000, -379.000000)"
+            >
+              <g
+                id="Content"
+                transform="translate(150.000000, 264.000000)"
+              >
+                <g
+                  id="Collapse-box-1"
+                >
+                  <g
+                    id="Status-box-1"
+                    transform="translate(15.000000, 90.000000)"
+                  >
+                    <path
+                      d="M67.91,31.27 C67.9698291,31.5087207 68.0000562,31.7538962 68,32 L68,45.3 C67.9841317,53.5919031 63.5062321,61.23337 56.28,65.3 L50.47,68.57 C49.5571638,69.0831103 48.4428362,69.0831103 47.53,68.57 L41.72,65.3 C34.4937679,61.23337 30.0158683,53.5919031 30,45.3 L30,32 C30,31.32 30.27,29.02 33.66,27.32 C36.73,25.78 41.89,25 49,25 C64.09,25 67.32,28.93 67.91,31.27 Z M65,45.27 L65,32 C65,32 64,28 49,28 C33,28 33,32 33,32 L33,45.3 C32.9995752,52.5239266 36.8947728,59.186664 43.19,62.73 L49,66 L54.81,62.7 C61.1052272,59.156664 65.0004248,52.4939266 65,45.27 Z M48.5,59 C47.6715729,59 47,58.3284271 47,57.5 C47,56.6715729 47.6715729,56 48.5,56 C49.3284271,56 50,56.6715729 50,57.5 C50,58.3284271 49.3284271,59 48.5,59 Z M48.5,33.5 C49.3284271,33.5 50,34.1715729 50,35 L50,51 C50,51.8284271 49.3284271,52.5 48.5,52.5 C47.6715729,52.5 47,51.8284271 47,51 L47,35 C47,34.1715729 47.6715729,33.5 48.5,33.5 Z"
+                      id="attribute-large-icon"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="MuiGrid-item-8 Component-grow-2"
+      >
+        <h2
+          className="MuiTypography-root-113 MuiTypography-h2-126"
+        >
+          Status
+        </h2>
+        <h6
+          className="MuiTypography-root-113 MuiTypography-subtitle2-132 MuiTypography-colorSecondary-144"
+        >
+          Application started. Missing required documents.
+        </h6>
+      </div>
+      <div
+        className="MuiGrid-item-8"
+      >
+        <button
+          className="MuiButtonBase-root-175 MuiButton-root-149 MuiButton-contained-160 MuiButton-raised-163 MuiButton-sizeLarge-173"
+          disabled={false}
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiButton-label-150"
+          >
+            Add Documents
+          </span>
+          <span
+            className="MuiTouchRipple-root-178"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Status Completed should show Status Pending 1`] = `
+<div
+  className="Component-statusWrap-6"
+>
+  <div
+    className="MuiGrid-item-8 Component-defaultStatus-1 Documents Submitted submitted"
+  >
+    <div
+      className="MuiGrid-container-7 MuiGrid-wrap-xs-nowrap-13 MuiGrid-align-items-xs-center-15 MuiGrid-justify-xs-space-between-26"
+    >
+      <div
+        className="MuiGrid-item-8 Component-iconContainer-4"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-104 Component-root-0-2-4 Component-statusIcon-3"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 27 45"
+        >
+          <title>
+            icon-simple-hourglass
+          </title>
+          <g
+            fill="none"
+            fillRule="evenodd"
+            id="💻-ID-Dashboard-simle-hourglass-icon"
+            stroke="none"
+            strokeWidth="1"
+          >
+            <g
+              fill="#93B0C1"
+              id="410.1-Marketplace-Applications-Statuses-simple-hourglass-icon"
+              transform="translate(-202.000000, -502.000000)"
+            >
+              <g
+                id="Content"
+                transform="translate(150.000000, 264.000000)"
+              >
+                <g
+                  id="Collapse-box-1"
+                >
+                  <g
+                    id="Status-box-2"
+                    transform="translate(15.000000, 213.000000)"
+                  >
+                    <path
+                      d="M63.72,37.4 L63.72,28.4 C63.72,26.7431458 62.3768542,25.4 60.72,25.4 L40.72,25.4 C39.0631458,25.4 37.72,26.7431458 37.72,28.4 L37.72,37.4 C37.721724,38.2515717 38.0852731,39.0622861 38.72,39.63 L47.35,47.4 L38.72,55.17 C38.0852731,55.7377139 37.721724,56.5484283 37.72,57.4 L37.72,66.4 C37.72,68.0568542 39.0631458,69.4 40.72,69.4 L60.72,69.4 C62.3768542,69.4 63.72,68.0568542 63.72,66.4 L63.72,57.4 C63.718276,56.5484283 63.3547269,55.7377139 62.72,55.17 L54.09,47.4 L62.72,39.63 C63.3547269,39.0622861 63.718276,38.2515717 63.72,37.4 L63.72,37.4 Z M60.72,66.4 L40.72,66.4 L40.72,65.4 L60.72,65.4 L60.72,66.4 Z M60.72,62.4 L40.72,62.4 L40.72,57.4 L49.78,49.24 C50.3854601,49.4511014 51.0445399,49.4511014 51.65,49.24 L60.72,57.4 L60.72,62.4 Z M60.72,37.4 L51.66,45.56 C51.0545399,45.3488986 50.3954601,45.3488986 49.79,45.56 L40.72,37.4 L40.72,28.4 L60.72,28.4 L60.72,37.4 Z"
+                      id="icon-simple-hourglass"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="MuiGrid-item-8 Component-grow-2"
+      >
+        <h2
+          className="MuiTypography-root-113 MuiTypography-h2-126"
+        >
+          Status
+        </h2>
+        <h6
+          className="MuiTypography-root-113 MuiTypography-subtitle2-132 MuiTypography-colorSecondary-144"
+        >
+          Application started. Documents submitted. Please check your email for further instructions.
+        </h6>
+      </div>
+      <div
+        className="MuiGrid-item-8"
+      >
+        <span />
+      </div>
+    </div>
+  </div>
+</div>
+`;

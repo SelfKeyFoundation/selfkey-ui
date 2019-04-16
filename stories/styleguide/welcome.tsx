@@ -1,11 +1,9 @@
 import * as React from 'react';
-
-import { H1 } from '../../src/typography/headings';
-import { P } from '../../src/typography/paragraph';
+import { Typography } from '@material-ui/core';
 
 export const Welcome = () => (
     <div>
-        <H1>SelfKey UI Style Guide</H1>
-        <P>What is this?</P>
+        <Typography variant="h1">SelfKey UI Style Guide</Typography>
+        <Typography variant="body1">What is this?</Typography>
     </div>
 );

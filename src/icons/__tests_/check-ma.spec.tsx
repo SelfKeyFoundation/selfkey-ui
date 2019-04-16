@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { P } from '../paragraph';
+import { CheckMaIcon } from '../check-ma';
 
-
-describe('Paragraph', () => {
-  it('should show Paragraph', () => {
+describe('CheckMa Icon', () => {
+  it('should show CheckMa Icon', () => {
     const component = create(
-      <P>TEST</P>,
+      <CheckMaIcon/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

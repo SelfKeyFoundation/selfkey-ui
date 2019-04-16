@@ -11,6 +11,7 @@ import {
 	CertificateIcon,
 	CheckEmptyIcon,
 	CheckIcon,
+	CheckMaIcon,
 	ClearIcon,
 	ClipboardIcon,
 	CloseButtonIcon,
@@ -18,6 +19,7 @@ import {
 	CustomIcon,
 	DashboardMenuIcon,
 	DeleteIcon,
+	DeniedIcon,
 	DocumentIcon,
 	DownloadIcon,
 	DownloadIcon2,
@@ -75,6 +77,8 @@ import {
 	SentIcon,
 	ShareIcon,
 	ShieldIcon,
+	SimpleCheckIcon,
+	SimpleDeniedIcon,
 	SKIDIcon,
 	SKUploadIcon,
 	StickIcon,
@@ -183,6 +187,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<CheckMaIcon />`}</code>
+			</pre>
+			<CheckMaIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<ClearIcon />`}</code>
 			</pre>
 			<ClearIcon />
@@ -235,6 +246,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<DeleteIcon />`}</code>
 			</pre>
 			<DeleteIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<DeniedIcon />`}</code>
+			</pre>
+			<DeniedIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -648,6 +666,20 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ShieldIcon />`}</code>
 			</pre>
 			<ShieldIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SimpleCheckIcon />`}</code>
+			</pre>
+			<SimpleCheckIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SimpleDeniedIcon />`}</code>
+			</pre>
+			<SimpleDeniedIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
