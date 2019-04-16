@@ -13,7 +13,7 @@ const styles: StyleSheet = {
 export const SimpleDeniedIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps) => (
     <SvgIcon width="39px" height="45px" {...props} viewBox="0 0 39 45">
         <title>icon-simple-denied</title>
-        <g id="💻-ID-Dashboard-simple-denied" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="💻-ID-Dashboard-simple-denied" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="Statuses-denied" transform="translate(-195.000000, -748.000000)" fill="#FE4B61">
                 <g id="Content" transform="translate(150.000000, 264.000000)">
                     <g id="Collapse-box-1">

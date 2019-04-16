@@ -22,7 +22,7 @@ var styles = {
 };
 exports.SimpleCheckIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "39px", height: "45px" }, props, { viewBox: "0 0 39 45" }),
     React.createElement("title", null, "icon-simple-check"),
-    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-simple-check", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-simple-check", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "Statuses-simple-check", transform: "translate(-195.000000, -625.000000)", fill: "#1CBA7D" },
             React.createElement("g", { id: "Content", transform: "translate(150.000000, 264.000000)" },
                 React.createElement("g", { id: "Collapse-box-1" },

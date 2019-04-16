@@ -13,7 +13,7 @@ const styles: StyleSheet = {
 export const SimpleCheckIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps) => (
         <SvgIcon width="39px" height="45px" {...props} viewBox="0 0 39 45">
             <title>icon-simple-check</title>
-            <g id="💻-ID-Dashboard-simple-check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="💻-ID-Dashboard-simple-check" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="Statuses-simple-check" transform="translate(-195.000000, -625.000000)" fill="#1CBA7D">
                     <g id="Content" transform="translate(150.000000, 264.000000)">
                         <g id="Collapse-box-1">

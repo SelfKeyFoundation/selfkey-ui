@@ -13,7 +13,7 @@ const styles: StyleSheet = {
 
 export const AttributeAlertLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 38 44" version="1.1">
-        <g id="💻-ID-Dashboard-attribute-large-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="💻-ID-Dashboard-attribute-large-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="410.1-Marketplace-Applications-Statuses" transform="translate(-195.000000, -379.000000)" fill="#E98548">
                 <g id="Content" transform="translate(150.000000, 264.000000)">
                     <g id="Collapse-box-1">
