@@ -203,8 +203,21 @@ var FileViewWithModal = /** @class */ (function (_super) {
         _this.state = {
             open: false,
         };
-        _this.handleOpen = function () {
-            _this.setState({ open: true });
+        _this.handleOpen = function (evt) {
+            var type = _this.props.file.mimeType;
+            if (type === 'image/png' ||
+                type === 'image/jpeg' ||
+                type === 'audio/ogg' ||
+                type === 'audio/mp3' ||
+                type === 'audio/m4a' ||
+                type === 'audio/x-wav') {
+                evt && evt.preventDefault();
+                return _this.setState({ open: true });
+            }
+            if (type === 'application/pdf' && _this.props.onPDFOpen) {
+                evt && evt.preventDefault();
+                return _this.props.onPDFOpen(_this.props.file);
+            }
         };
         _this.handleClose = function () {
             _this.setState({ open: false });
@@ -217,25 +230,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
         return _this;
     }
     FileViewWithModal.prototype.render = function () {
-        var _this = this;
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
-        var UploadedFile = function (fileType) {
-            console.log(fileType);
-            var type = fileType.fileType;
-            if (type === 'image/png' ||
-                type === 'image/jpeg' ||
-                type === 'audio/ogg' ||
-                type === 'audio/mp3' ||
-                type === 'audio/m4a' ||
-                type === 'audio/x-wav') {
-                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: _this.handleOpen },
-                    React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
-            }
-            else {
-                return (React.createElement("a", { className: classes.noDecoration + " " + classes.link, href: file.url },
-                    React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)));
-            }
-        };
         var FileTypeIcon = function (fileType) {
             var type = fileType.fileType;
             if (type === 'image/png' || type === 'image/jpeg') {
@@ -268,7 +263,8 @@ var FileViewWithModal = /** @class */ (function (_super) {
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(FileTypeIcon, { fileType: file.mimeType })),
                             React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
-                                React.createElement(UploadedFile, { fileType: file.mimeType })))),
+                                React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: this.handleOpen, href: file.url, target: "_blank" },
+                                    React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name))))),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
                             React.createElement(delete_1.DeleteIcon, null)))),
@@ -304,7 +300,7 @@ var fileUploadStyles = {
     },
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
-    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "required"]);
+    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, onPDFOpen = _a.onPDFOpen, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "onPDFOpen", "required"]);
     var eventHandlers = {};
     if (onChange) {
         eventHandlers.onChange = function (evt) {
@@ -335,7 +331,7 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
                         React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label", className: classes.button },
                             "Upload",
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
-        file ? React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm }) : null));
+        file ? React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen }) : null));
 });
 exports.FileUploadGrid = core_1.withStyles({
     container: {
@@ -432,7 +428,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
         this.formRef.removeEventListener('drop', this.handleDrop);
     };
     ArrayFileUploadWidgetComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, isError = _a.isError, required = _a.required, mimeTypes = _a.mimeTypes, errorFiles = _a.errorFiles, uploadError = _a.uploadError, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus", "isError", "required", "mimeTypes", "errorFiles", "uploadError"]);
+        var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, isError = _a.isError, required = _a.required, mimeTypes = _a.mimeTypes, errorFiles = _a.errorFiles, uploadError = _a.uploadError, onPDFOpen = _a.onPDFOpen, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus", "isError", "required", "mimeTypes", "errorFiles", "uploadError", "onPDFOpen"]);
         var eventHandlers = {};
         var accept = (mimeTypes || []).join(',');
         eventHandlers.onChange = this.handleFormFileChange;
@@ -475,7 +471,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
                             uploadError ? (React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Typography, { variant: "subtitle1", color: "error" }, uploadError))) : null),
                         React.createElement(exports.FileUploadInput, { id: "key-upload", type: "file" })))),
-            (files || []).map(function (f, ind) { return (React.createElement(exports.FileViewWithModalComponent, { key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind] })); })));
+            (files || []).map(function (f, ind) { return (React.createElement(exports.FileViewWithModalComponent, { key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind], onPDFOpen: onPDFOpen })); })));
     };
     return ArrayFileUploadWidgetComponent;
 }(React.Component));

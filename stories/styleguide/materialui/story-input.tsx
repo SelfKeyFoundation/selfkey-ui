@@ -30,6 +30,10 @@ export default class InputStories extends React.Component {
 			selected: [],
 		},
 	};
+	handlePDFOpen: any = (file: any) => {
+		console.log('XXX', file);
+		window.open(file.url);
+	};
 	handleFileChange: any = async (files: any, multiple: boolean) => {
 		let filesData = await Promise.all(
 			files.map((f: any) => {
@@ -128,10 +132,11 @@ export default class InputStories extends React.Component {
 				<ArrayFileUploadWidget
 					files={this.state.files}
 					onChange={this.handleFileChange}
-					mimeTypes={['image/jpeg', 'image/png']}
+					mimeTypes={['image/jpeg', 'image/png', 'application/pdf']}
 					isError={true}
 					uploadError="Super upload error, ignore, for testing only"
 					errorFiles={{ 1: ['super file error 1', 'super file error 2'] }}
+					onPDFOpen={this.handlePDFOpen}
 					onClearForm={(file: any) => {
 						let { files } = this.state;
 						if (files) {
