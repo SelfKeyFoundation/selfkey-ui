@@ -113,7 +113,14 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!**/node_modules/**",
       "!src/index.tsx",
-      "!src/jss-setup.tsx"
+      "!src/jss-setup.tsx",
+      "!src/transaction/transaction-history.tsx",
+      "!src/transaction/send/transaction-send.tsx",
+      "!src/transaction/send/fee/transaction-fee-box.tsx",
+      "!src/price/crypto-chart-box.tsx",
+      "!src/price/crypto-price-table.tsx",
+      "!src/lws/lws-required-info.tsx",
+      "!src/lws/lws-select-wallet.tsx"
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
