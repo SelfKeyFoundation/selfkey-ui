@@ -16,7 +16,10 @@ import {
     error,
     success,
     typography,
-    warning
+    warning,
+    NewRefreshIcon,
+    KeyTooltip,
+    TooltipArrow
 } from '../theme/selfkey-dark-theme';
 
 export type StatusProps = any;
@@ -56,9 +59,13 @@ const statusInfoStyle = (theme: Theme) =>
                 border: `1px solid ${error}`
             }
         },
+        refresh: {
+            cursor: 'pointer',
+            marginLeft: '30px'
+        }
     });
 
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick }: StatusProps) => {
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick, handleRefresh, tooltip }: StatusProps) => {
     let icon, message, statusStyle, button = null;
     switch (status) {
 		case 'Documents Required':
@@ -99,6 +106,18 @@ export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClic
                     </Grid>
                     <Grid item>
                         {button ? button : <span></span>}
+                    </Grid>
+                    <Grid item style={{ height: '23px' }}>
+                        <KeyTooltip interactive placement="top-start" 
+                            title={
+                                <React.Fragment>
+                                    <span>{tooltip}</span>
+                                    <TooltipArrow />
+                                </React.Fragment>
+                            }
+                        >
+                            <span className={classes.refresh} onClick={handleRefresh}><NewRefreshIcon /></span>
+                        </KeyTooltip>
                     </Grid>
                 </Grid>
             </Grid>
