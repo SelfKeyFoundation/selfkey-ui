@@ -8,7 +8,8 @@ const underlineStyle = {
 
 class StatusStories extends React.Component {
     state = {
-        empty: ''
+		empty: '',
+		tooltip: 'Test Tooltip message'
     };
 
 	handleClick = () => {
@@ -25,13 +26,13 @@ class StatusStories extends React.Component {
 				<Typography variant="h3" style={underlineStyle} gutterBottom>
 					Statuses
 				</Typography>
-				<StatusInfo status="Documents Required" onClick={this.handleClick} handleRefresh={this.handleRefresh} />
+				<StatusInfo status="Documents Required" onClick={this.handleClick} handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
 				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} status="Documents Submitted" />
+				<StatusInfo handleRefresh={this.handleRefresh} status="Documents Submitted" tooltip={this.state.tooltip} />
 				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} status="Denied" />
+				<StatusInfo handleRefresh={this.handleRefresh} status="Denied" tooltip={this.state.tooltip} />
 				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} />
+				<StatusInfo handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
 
 			</div>
 		)

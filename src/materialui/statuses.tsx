@@ -17,7 +17,9 @@ import {
     success,
     typography,
     warning,
-    NewRefreshIcon
+    NewRefreshIcon,
+    KeyTooltip,
+    TooltipArrow
 } from '../theme/selfkey-dark-theme';
 
 export type StatusProps = any;
@@ -63,7 +65,7 @@ const statusInfoStyle = (theme: Theme) =>
         }
     });
 
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick, handleRefresh }: StatusProps) => {
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick, handleRefresh, tooltip }: StatusProps) => {
     let icon, message, statusStyle, button = null;
     switch (status) {
 		case 'Documents Required':
@@ -106,7 +108,16 @@ export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClic
                         {button ? button : <span></span>}
                     </Grid>
                     <Grid item style={{ height: '23px' }}>
-                        <span className={classes.refresh} onClick={handleRefresh}><NewRefreshIcon /></span>
+                        <KeyTooltip interactive placement="top-start" 
+                            title={
+                                <React.Fragment>
+                                    <span>{tooltip}</span>
+                                    <TooltipArrow />
+                                </React.Fragment>
+                            }
+                        >
+                            <span className={classes.refresh} onClick={handleRefresh}><NewRefreshIcon /></span>
+                        </KeyTooltip>
                     </Grid>
                 </Grid>
             </Grid>
