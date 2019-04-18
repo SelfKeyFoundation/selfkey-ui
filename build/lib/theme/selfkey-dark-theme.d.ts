@@ -79,6 +79,7 @@ export * from '../icons/profile';
 export * from '../icons/quit';
 export * from '../icons/receive';
 export * from '../icons/refresh';
+export * from '../icons/refresh2';
 export * from '../icons/return-large';
 export * from '../icons/return';
 export * from '../icons/selfkey-id-menu';

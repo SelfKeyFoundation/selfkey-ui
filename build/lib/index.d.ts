@@ -69,6 +69,7 @@ export { MarketplaceIcon } from './icons/marketplace';
 export { SelfkeyIDMenuIcon } from './icons/selfkey-id-menu';
 export { AddressBookMenuIcon } from './icons/address-book-menu';
 export { RefreshIcon } from './icons/refresh';
+export { NewRefreshIcon } from './icons/refresh2';
 export { CopyIcon } from './icons/copy';
 export { FailedIcon } from './icons/failed';
 export { ReceiveIcon } from './icons/receive';

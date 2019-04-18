@@ -39,10 +39,14 @@ var statusInfoStyle = function (theme) {
                 border: "1px solid " + selfkey_dark_theme_1.error
             }
         },
+        refresh: {
+            cursor: 'pointer',
+            marginLeft: '30px'
+        }
     });
 };
 exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
-    var classes = _a.classes, status = _a.status, onClick = _a.onClick;
+    var classes = _a.classes, status = _a.status, onClick = _a.onClick, handleRefresh = _a.handleRefresh, tooltip = _a.tooltip;
     var icon, message, statusStyle, button = null;
     switch (status) {
         case 'Documents Required':
@@ -74,6 +78,12 @@ exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
                 React.createElement(core_1.Grid, { item: true, className: classes.grow },
                     React.createElement(core_1.Typography, { variant: 'h2' }, "Status"),
                     React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, message)),
-                React.createElement(core_1.Grid, { item: true }, button ? button : React.createElement("span", null))))));
+                React.createElement(core_1.Grid, { item: true }, button ? button : React.createElement("span", null)),
+                React.createElement(core_1.Grid, { item: true, style: { height: '23px' } },
+                    React.createElement(selfkey_dark_theme_1.KeyTooltip, { interactive: true, placement: "top-start", title: React.createElement(React.Fragment, null,
+                            React.createElement("span", null, tooltip),
+                            React.createElement(selfkey_dark_theme_1.TooltipArrow, null)) },
+                        React.createElement("span", { className: classes.refresh, onClick: handleRefresh },
+                            React.createElement(selfkey_dark_theme_1.NewRefreshIcon, null))))))));
 });
 //# sourceMappingURL=statuses.js.map

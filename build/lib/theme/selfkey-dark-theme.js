@@ -87,6 +87,7 @@ __export(require("../icons/profile"));
 __export(require("../icons/quit"));
 __export(require("../icons/receive"));
 __export(require("../icons/refresh"));
+__export(require("../icons/refresh2"));
 __export(require("../icons/return-large"));
 __export(require("../icons/return"));
 __export(require("../icons/selfkey-id-menu"));

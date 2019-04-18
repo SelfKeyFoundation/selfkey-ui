@@ -223,8 +223,24 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 		open: false,
 	};
 
-	handleOpen = () => {
-		this.setState({ open: true });
+	handleOpen = (evt: any) => {
+		const type = this.props.file.mimeType;
+		if (
+			type === 'image/png' ||
+			type === 'image/jpeg' ||
+			type === 'audio/ogg' ||
+			type === 'audio/mp3' ||
+			type === 'audio/m4a' ||
+			type === 'audio/x-wav'
+		) {
+			evt && evt.preventDefault();
+			return this.setState({ open: true });
+		}
+
+		if (type === 'application/pdf' && this.props.onPDFOpen) {
+			evt && evt.preventDefault();
+			return this.props.onPDFOpen(this.props.file);
+		}
 	};
 
 	handleClose = () => {
@@ -239,35 +255,6 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 
 	render() {
 		const { classes, file, onClearForm, errors = [] } = this.props;
-
-		const UploadedFile = (fileType: any) => {
-			console.log(fileType);
-			const type = fileType.fileType;
-			if (
-				type === 'image/png' ||
-				type === 'image/jpeg' ||
-				type === 'audio/ogg' ||
-				type === 'audio/mp3' ||
-				type === 'audio/m4a' ||
-				type === 'audio/x-wav'
-			) {
-				return (
-					<a className={`${classes.noDecoration} ${classes.link}`} onClick={this.handleOpen}>
-						<Typography variant="subtitle1" className={classes.fileName}>
-							{file.name}
-						</Typography>
-					</a>
-				);
-			} else {
-				return (
-					<a className={`${classes.noDecoration} ${classes.link}`} href={file.url}>
-						<Typography variant="subtitle1" className={classes.fileName}>
-							{file.name}
-						</Typography>
-					</a>
-				);
-			}
-		};
 
 		const FileTypeIcon = (fileType: any) => {
 			const type = fileType.fileType;
@@ -308,7 +295,16 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 									<FileTypeIcon fileType={file.mimeType} />
 								</Grid>
 								<Grid item className={classes.breakAll}>
-									<UploadedFile fileType={file.mimeType} />
+									<a
+										className={`${classes.noDecoration} ${classes.link}`}
+										onClick={this.handleOpen}
+										href={file.url}
+										target="_blank"
+									>
+										<Typography variant="subtitle1" className={classes.fileName}>
+											{file.name}
+										</Typography>
+									</a>
 								</Grid>
 							</Grid>
 						</Grid>
@@ -372,7 +368,7 @@ const fileUploadStyles: StyleSheet = {
 };
 
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
-	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, required, ...props }) => {
+	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, onPDFOpen, required, ...props }) => {
 		const eventHandlers: any = {};
 		if (onChange) {
 			eventHandlers.onChange = (evt: any) => {
@@ -420,7 +416,7 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 						</Grid>
 					</div>
 				</Grid>
-				{file ? <FileViewWithModalComponent file={file} onClearForm={onClearForm} /> : null}
+				{file ? <FileViewWithModalComponent file={file} onClearForm={onClearForm} onPDFOpen={onPDFOpen} /> : null}
 			</Grid>
 		);
 	}
@@ -528,6 +524,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 			mimeTypes,
 			errorFiles,
 			uploadError,
+			onPDFOpen,
 			...props
 		} = this.props;
 		const eventHandlers: any = {};
@@ -615,6 +612,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
 						file={f}
 						onClearForm={onClearForm}
 						errors={errorFiles && errorFiles[ind]}
+						onPDFOpen={onPDFOpen}
 					/>
 				))}
 			</Grid>
