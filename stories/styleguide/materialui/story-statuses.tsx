@@ -15,19 +15,23 @@ class StatusStories extends React.Component {
 		alert('Clicked!');
 	};
 
+	handleRefresh = () => {
+		alert('Status refreshed!');
+	};
+
     render() {
         return (
 			<div>
 				<Typography variant="h3" style={underlineStyle} gutterBottom>
 					Statuses
 				</Typography>
-				<StatusInfo status="Documents Required" onClick={this.handleClick} />
+				<StatusInfo status="Documents Required" onClick={this.handleClick} handleRefresh={this.handleRefresh} />
 				<br/><br/>
-				<StatusInfo status="Documents Submitted" />
+				<StatusInfo handleRefresh={this.handleRefresh} status="Documents Submitted" />
 				<br/><br/>
-				<StatusInfo status="Denied" />
+				<StatusInfo handleRefresh={this.handleRefresh} status="Denied" />
 				<br/><br/>
-				<StatusInfo />
+				<StatusInfo handleRefresh={this.handleRefresh} />
 
 			</div>
 		)

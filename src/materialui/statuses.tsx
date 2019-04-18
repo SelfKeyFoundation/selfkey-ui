@@ -16,7 +16,8 @@ import {
     error,
     success,
     typography,
-    warning
+    warning,
+    NewRefreshIcon
 } from '../theme/selfkey-dark-theme';
 
 export type StatusProps = any;
@@ -56,9 +57,13 @@ const statusInfoStyle = (theme: Theme) =>
                 border: `1px solid ${error}`
             }
         },
+        refresh: {
+            cursor: 'pointer',
+            marginLeft: '30px'
+        }
     });
 
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick }: StatusProps) => {
+export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick, handleRefresh }: StatusProps) => {
     let icon, message, statusStyle, button = null;
     switch (status) {
 		case 'Documents Required':
@@ -99,6 +104,9 @@ export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClic
                     </Grid>
                     <Grid item>
                         {button ? button : <span></span>}
+                    </Grid>
+                    <Grid item style={{ height: '23px' }}>
+                        <span className={classes.refresh} onClick={handleRefresh}><NewRefreshIcon /></span>
                     </Grid>
                 </Grid>
             </Grid>
