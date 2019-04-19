@@ -13,7 +13,7 @@ describe('Pagination', () => {
   });
 
   it('should defined onChangePage method on Pagination', () => {
-    const wrapper = shallow(<Pagination />);
-    expect(wrapper.simulate('changePage')).toBeDefined();
+    const component = shallow(<Pagination />);
+    expect(component.simulate('changePage')).toBeDefined();
   });
 });

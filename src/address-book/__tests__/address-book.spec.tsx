@@ -4,7 +4,7 @@ import { AddressBook } from '../address-book';
 
 describe('Address Book', () => {
   it('should show Address Book', () => {
-    const wrapper = mount(
+    const component = mount(
       <AddressBook addresses={
           [
             {
@@ -19,11 +19,11 @@ describe('Address Book', () => {
         onAdd={() =>console.log('onAdd')}
       />
     );
-    expect(wrapper).toBeDefined();
+    expect(component).toBeDefined();
   });
 
   it('should trigger onEdit', () => {
-    const wrapper = mount(
+    const component = mount(
       <AddressBook addresses={
           [
             {
@@ -38,11 +38,11 @@ describe('Address Book', () => {
         onAdd={() =>console.log('onAdd')}
       />
     );
-    expect(wrapper.find('#editButton').first().simulate('click')).toBeDefined();
+    expect(component.find('#editButton').first().simulate('click')).toBeDefined();
   });
 
   it('should trigger onDelete', () => {
-    const wrapper = mount(
+    const component = mount(
       <AddressBook addresses={
           [
             {
@@ -57,6 +57,6 @@ describe('Address Book', () => {
         onAdd={() =>console.log('onAdd')}
       />
     );
-    expect(wrapper.find('#deleteButton').first().simulate('click')).toBeDefined();
+    expect(component.find('#deleteButton').first().simulate('click')).toBeDefined();
   });
 });

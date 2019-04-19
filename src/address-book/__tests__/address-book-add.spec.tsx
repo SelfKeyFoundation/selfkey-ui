@@ -19,7 +19,7 @@ describe('Address Book Add', () => {
   });
 
   it('should defined onChange', () => {
-    const wrapper = mount(
+    const component = mount(
       <AddressBookAdd 
         onSave={(label, address) => console.log('onEdit' + label +  address)}
         onCancel={() => console.log('onCancel')}
@@ -27,10 +27,10 @@ describe('Address Book Add', () => {
         onAddressChange={address => console.log('onAddressChange ' + address)}
         labelError='hey'
       />);
-      wrapper.find('#labelInput').simulate('change', { target: { value: '' }});
-      wrapper.find('#formwrap').simulate('submit');
+      component.find('#labelInput').simulate('change', { target: { value: '' }});
+      component.find('#formwrap').simulate('submit');
       
-      wrapper.find('#addressInput').simulate('change', { target: { value: '' }});
+      component.find('#addressInput').simulate('change', { target: { value: '' }});
   });
 });
 

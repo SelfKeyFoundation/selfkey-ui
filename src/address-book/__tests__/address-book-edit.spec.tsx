@@ -4,7 +4,7 @@ import { AddressBookEdit } from '../address-book-edit';
 
 describe('Address Book Add', () => {
   it('should show Address Book Add', () => {
-    const wrapper = mount(
+    const component = mount(
       <AddressBookEdit
         label='Test'
         onSave={(label) => alert('onEdit' + label)}
@@ -13,12 +13,12 @@ describe('Address Book Add', () => {
         labelError='hey'
       />
     );
-    expect(wrapper).toBeDefined();
+    expect(component).toBeDefined();
   });
 
   it('should trigger onChange', () => {
     const onLabelChangeMock = jest.fn();
-    const wrapper = mount(
+    const component = mount(
       <AddressBookEdit
         label='Test'
         onSave={() => console.log('onEdit')}
@@ -26,16 +26,16 @@ describe('Address Book Add', () => {
         onLabelChange={onLabelChangeMock}
         labelError='hey'
       />);
-      wrapper.find('#labelInput').simulate('change', { target: { value: 'x' }});
-      // expect(wrapper.find('#labelInput').prop('value')).toEqual('x');
+      component.find('#labelInput').simulate('change', { target: { value: 'x' }});
+      // expect(component.find('#labelInput').prop('value')).toEqual('x');
       expect(onLabelChangeMock).toBeCalled();
 
-      wrapper.setState({label: wrapper.find('#labelInput').prop('value')});
-      expect(wrapper.find('#formwrap').simulate('submit')).toBeDefined();
+      component.setState({label: component.find('#labelInput').prop('value')});
+      expect(component.find('#formwrap').simulate('submit')).toBeDefined();
   });
 
   it('should trigger Submit', () => {
-    const wrapper = mount(
+    const component = mount(
       <AddressBookEdit
         label='Test'
         onSave={() => console.log('onEdit')}
@@ -43,8 +43,8 @@ describe('Address Book Add', () => {
         onLabelChange={() => console.log('onLabelChange')}
         labelError='hey'
       />);
-      wrapper.setState({label: wrapper.find('#labelInput').prop('value')});
-      expect(wrapper.find('#formwrap').simulate('submit')).toBeDefined();
+      component.setState({label: component.find('#labelInput').prop('value')});
+      expect(component.find('#formwrap').simulate('submit')).toBeDefined();
   });
 });
 
