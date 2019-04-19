@@ -52,6 +52,8 @@ describe('Array File Upload Widget', () => {
             errorFiles={[]}
             files={['filename1.jpg', 'filename2.pdf']}
             onChange={() => {}}
+            onFocus={() => {}}
+            onBlur={() => {}}
             mimeTypes={['image/jpeg', 'image/png']}
             isError={false}
             uploadError='upload error'
@@ -61,10 +63,21 @@ describe('Array File Upload Widget', () => {
     );
     expect(component).toBeDefined();
     component.setState({ dragging: true });
-    console.log(component.state('dragging'));
-    component.update();
-    console.log(component.find('#dragging').prop('className'));
-    console.log(component.find('#dragging').hasClass('ArrayFileUploadWidgetComponent-dropArea-1912'));
-    console.log(component.find('#dragging').hasClass('ArrayFileUploadWidgetComponent-highlite-1913'));
+  });
+
+  it('should show Array File with isError true', () => {
+    const component = mount(
+        <ArrayFileUploadWidget
+            errorFiles={[]}
+            files={['filename1.jpg', 'filename2.pdf']}
+            onChange={() => {}}
+            mimeTypes={['image/jpeg', 'image/png']}
+            isError={true}
+            uploadError='upload error'
+            placeholder='placeholder'
+            onClearForm={() => {}}
+				/>
+    );
+    expect(component).toBeDefined();
   });
 });
