@@ -277,7 +277,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
             return (
                 <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer}>
                     <Grid item>
-                        <button disabled={!sendBtnIsEnabled} className={classes.button} onClick={onSendAction}> SEND </button>
+                        <button id='sendAction' disabled={!sendBtnIsEnabled} className={classes.button} onClick={onSendAction}> SEND </button>
                     </Grid>
                 </Grid>
             );
@@ -294,7 +294,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         let cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
         return (
             <TransactionBox cryptoCurrency={cryptoCurrencyText} closeAction={closeAction}>
-                <input type='text' onChange={e => this.handleAddressChange(e)} value={this.state.address} className={addressInputClass} placeholder="Send to Address" />
+                <input id='sendToAddress' type='text' onChange={e => this.handleAddressChange(e)} value={this.state.address} className={addressInputClass} placeholder="Send to Address" />
                 {addressError &&
                     <span className={classes.addressErrorText}>Invalid address. Please check and try again.</span>
                 }
@@ -302,10 +302,10 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                     <Grid item>
                         <Grid container direction='row' justify='flex-start' alignItems="center" spacing={16}>
                                 <Grid item>
-                                    <button onClick={() => this.handleAllAmountClick()} className={classes.selectAllAmountBtn}> ALL </button>
+                                    <button id='allAmountButton' onClick={() => this.handleAllAmountClick()} className={classes.selectAllAmountBtn}> ALL </button>
                                 </Grid>
                                 <Grid item>
-                                    <input type='text' onChange={e => this.handleAmountChange(e)} value={this.state.amount} className={sendAmountClass} placeholder="0.00"/>
+                                    <input id='amountInput' type='text' onChange={e => this.handleAmountChange(e)} value={this.state.amount} className={sendAmountClass} placeholder="0.00"/>
                                 </Grid>
                         </Grid>
                     </Grid>
@@ -316,7 +316,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                                 onChange={e => this.handleCryptoCurrencyChange(e)}
                                 name="cryptoCurrency"
                                 className={classes.cryptoSelect}
-
+                                id='customToken'
                             >
                                 <option value="" disabled selected className={classes.selectItem}>
                                     Custom Token
