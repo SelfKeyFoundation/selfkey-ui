@@ -5,7 +5,7 @@ import { StatusInfo } from '../statuses';
 describe('Status Completed', () => {
   it('should show Status Completed', () => {
     const component = create(
-      <StatusInfo />
+      <StatusInfo status={2} />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -13,7 +13,7 @@ describe('Status Completed', () => {
 
   it('should show Status Denied', () => {
     const component = create(
-      <StatusInfo status="Denied" />
+      <StatusInfo status={3} />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('Status Completed', () => {
 
   it('should show Status Missing', () => {
     const component = create(
-      <StatusInfo status="Documents Required" />
+      <StatusInfo status={9} />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('Status Completed', () => {
 
   it('should show Status Pending', () => {
     const component = create(
-      <StatusInfo status="Documents Submitted" />
+      <StatusInfo />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

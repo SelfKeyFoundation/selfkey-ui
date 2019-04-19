@@ -68,27 +68,28 @@ const statusInfoStyle = (theme: Theme) =>
 export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick, handleRefresh, tooltip }: StatusProps) => {
     let icon, message, statusStyle, button = null;
     switch (status) {
-		case 'Documents Required':
-			icon = <AttributeAlertLargeIcon className={classes.statusIcon} />;
+        case 2:
+            icon = <SimpleCheckIcon className={classes.statusIcon} />;
+            message = 'Application completed. Please check your email to receive relevant documents and information.';
+            break;
+        case 3:
+        case 7:
+        case 8:
+            icon = <SimpleDeniedIcon className={classes.statusIcon} />;
+            message = 'Application denied. Please check your email for the reject reason.';
+            statusStyle = 'denied';
+            break;
+        case 9:
+            icon = <AttributeAlertLargeIcon className={classes.statusIcon} />;
             message = 'Application started. Missing required documents.';
             button = <Button variant='contained' size='large' onClick={onClick}>Add Documents</Button>;
             statusStyle = 'required';
-			break;
-        case 'Documents Submitted':
-			icon = <SimpleHourglassIcon className={classes.statusIcon} />;
-			message =
-                'Application started. Documents submitted. Please check your email for further instructions.';
+            break;
+        default:
+            icon = <SimpleHourglassIcon className={classes.statusIcon} />;
+            message = 'Application started. Documents submitted. Please check your email for further instructions.';
             statusStyle = 'submitted';
-			break;
-		case 'Denied':
-			icon = <SimpleDeniedIcon className={classes.statusIcon} />;
-            message = 'Application denied. Please check your email for the reject reason.';
-            statusStyle = 'denied';
-			break;
-		default:
-			icon = <SimpleCheckIcon className={classes.statusIcon} />;
-			message =
-				'Application completed. Please check your email to receive relevant documents and information.';
+            break;
     }
 
     return (

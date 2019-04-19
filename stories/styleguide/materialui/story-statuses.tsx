@@ -26,13 +26,13 @@ class StatusStories extends React.Component {
 				<Typography variant="h3" style={underlineStyle} gutterBottom>
 					Statuses
 				</Typography>
-				<StatusInfo status="Documents Required" onClick={this.handleClick} handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
-				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} status="Documents Submitted" tooltip={this.state.tooltip} />
-				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} status="Denied" tooltip={this.state.tooltip} />
+				<StatusInfo status={9} onClick={this.handleClick} handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
 				<br/><br/>
 				<StatusInfo handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
+				<br/><br/>
+				<StatusInfo status={3} handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
+				<br/><br/>
+				<StatusInfo status={2} handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
 
 			</div>
 		)

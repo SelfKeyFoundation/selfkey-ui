@@ -49,27 +49,28 @@ exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
     var classes = _a.classes, status = _a.status, onClick = _a.onClick, handleRefresh = _a.handleRefresh, tooltip = _a.tooltip;
     var icon, message, statusStyle, button = null;
     switch (status) {
-        case 'Documents Required':
+        case 2:
+            icon = React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, { className: classes.statusIcon });
+            message = 'Application completed. Please check your email to receive relevant documents and information.';
+            break;
+        case 3:
+        case 7:
+        case 8:
+            icon = React.createElement(selfkey_dark_theme_1.SimpleDeniedIcon, { className: classes.statusIcon });
+            message = 'Application denied. Please check your email for the reject reason.';
+            statusStyle = 'denied';
+            break;
+        case 9:
             icon = React.createElement(selfkey_dark_theme_1.AttributeAlertLargeIcon, { className: classes.statusIcon });
             message = 'Application started. Missing required documents.';
             button = React.createElement(core_1.Button, { variant: 'contained', size: 'large', onClick: onClick }, "Add Documents");
             statusStyle = 'required';
             break;
-        case 'Documents Submitted':
+        default:
             icon = React.createElement(selfkey_dark_theme_1.SimpleHourglassIcon, { className: classes.statusIcon });
-            message =
-                'Application started. Documents submitted. Please check your email for further instructions.';
+            message = 'Application started. Documents submitted. Please check your email for further instructions.';
             statusStyle = 'submitted';
             break;
-        case 'Denied':
-            icon = React.createElement(selfkey_dark_theme_1.SimpleDeniedIcon, { className: classes.statusIcon });
-            message = 'Application denied. Please check your email for the reject reason.';
-            statusStyle = 'denied';
-            break;
-        default:
-            icon = React.createElement(selfkey_dark_theme_1.SimpleCheckIcon, { className: classes.statusIcon });
-            message =
-                'Application completed. Please check your email to receive relevant documents and information.';
     }
     return (React.createElement("div", { className: classes.statusWrap },
         React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.defaultStatus, status, statusStyle) },
