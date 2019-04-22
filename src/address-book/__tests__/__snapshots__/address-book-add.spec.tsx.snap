@@ -3,6 +3,7 @@
 exports[`Address Book Add should show Address Book Add 1`] = `
 <form
   autoComplete="off"
+  id="formwrap"
   noValidate={true}
   onSubmit={[Function]}
 >

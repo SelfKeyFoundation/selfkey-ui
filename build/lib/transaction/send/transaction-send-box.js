@@ -221,7 +221,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         else {
             return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement("button", { disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction }, " SEND "))));
+                    React.createElement("button", { id: 'sendAction', disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction }, " SEND "))));
         }
     };
     TransactionSendBoxComponent.prototype.render = function () {
@@ -232,18 +232,18 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         var cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
         return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrencyText, closeAction: closeAction },
-            React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
+            React.createElement("input", { id: 'sendToAddress', type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
             React.createElement(core_1.Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 16 },
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement("button", { onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
+                            React.createElement("button", { id: 'allAmountButton', onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement("input", { type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
+                            React.createElement("input", { id: 'amountInput', type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
                 React.createElement(core_1.Grid, { item: true }, isSendCustomToken &&
-                    React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect },
+                    React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect, id: 'customToken' },
                         React.createElement("option", { value: "", disabled: true, selected: true, className: classes.selectItem }, "Custom Token"),
                         this.renderSelectTokenItems()))),
             React.createElement(core_1.Divider, { className: classes.divider }),

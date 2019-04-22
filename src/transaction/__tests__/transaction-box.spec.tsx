@@ -18,6 +18,14 @@ describe('Transaction Box', () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('should show Transaction Box with KI Icon', () => {
+    const component = create(
+      <TransactionBox cryptoCurrency='KI'>TEST</TransactionBox>,
+    );
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   
   it('should show Transaction Box with Custom text', () => {
     const component = create(

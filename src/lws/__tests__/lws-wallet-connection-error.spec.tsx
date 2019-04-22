@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { LWSSelfkeyIdError } from '../lws-selfkey-id-error';
+import LWSWalletConnectionError from '../lws-wallet-connection-error';
 
 
 describe('LWS Wallet Connection Error', () => {
   it('should show LWS Wallet Connection Error', () => {
     const component = create(
-      <LWSSelfkeyIdError/>
+      <LWSWalletConnectionError />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

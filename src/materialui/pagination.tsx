@@ -74,6 +74,7 @@ class TablePaginationActions extends React.Component<TablePaginationActionsProps
 
 class Pagination extends React.Component {
     state = {
+        page: 0,
         value: ''
     };
 

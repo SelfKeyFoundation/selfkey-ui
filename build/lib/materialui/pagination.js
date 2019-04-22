@@ -74,6 +74,7 @@ var Pagination = /** @class */ (function (_super) {
     function Pagination() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
+            page: 0,
             value: ''
         };
         _this.handleChangePage = function (event, page) {

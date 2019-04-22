@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transaction Fee Selector should show Transaction Fee Selector screen 1`] = `
+<div
+  className="TransactionFeeSelectorComponent-root-0-1-1"
+>
+  <div>
+    <span>
+      Network Transaction Fee:
+    </span>
+     
+    <span
+      className="TransactionFeeSelectorComponent-networkFeeValue-0-1-8"
+    >
+      3e-18
+       ETH / 
+      0.00
+       
+      USD
+    </span>
+  </div>
+  <div
+    aria-orientation="horizontal"
+    aria-valuemax={2}
+    aria-valuemin={1}
+    aria-valuenow={1.5}
+    className="MuiSlider-root-1 TransactionFeeSelectorComponent-sliderRoot-0-1-2"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onTouchMove={[Function]}
+    onTouchStartCapture={[Function]}
+    role="slider"
+  >
+    <div
+      className="MuiSlider-container-2"
+    >
+      <div
+        className="MuiSlider-track-3 MuiSlider-trackBefore-4 TransactionFeeSelectorComponent-trackBefore-0-1-4"
+        style={
+          Object {
+            "transform": "translateY(-50%) scaleX(0.5)",
+          }
+        }
+      />
+      <div
+        className="MuiSlider-thumbWrapper-6"
+        style={
+          Object {
+            "transform": "translateX(50%)",
+          }
+        }
+      >
+        <button
+          className="MuiButtonBase-root-15 MuiSlider-thumb-7 TransactionFeeSelectorComponent-thumb-0-1-5"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          onTouchStartCapture={[Function]}
+          tabIndex="0"
+          type="button"
+        />
+      </div>
+      <div
+        className="MuiSlider-track-3 MuiSlider-trackAfter-5 TransactionFeeSelectorComponent-trackAfter-0-1-3"
+        style={
+          Object {
+            "transform": "translateY(-50%) scaleX(0.5)",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="TransactionFeeSelectorComponent-sliderLabels-0-1-7"
+  >
+    <span>
+      Slow
+    </span>
+    <span>
+      Medium
+    </span>
+    <span>
+      Fast
+    </span>
+  </div>
+</div>
+`;

@@ -96,7 +96,7 @@ export class AddressBookAddComponent extends React.Component<StyledProps, Addres
     const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
     const addressInputClass = `${classes.input} ${hasAddressError ? classes.errorColor : ''}`;
     return (
-        <form className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+        <form className={classes.container} id="formwrap" noValidate autoComplete="off" onSubmit={this.handleSubmit}>
             <Grid container direction='column' spacing={32}>
                 <Grid item>
                     <Grid container direction='column' spacing={8}>
