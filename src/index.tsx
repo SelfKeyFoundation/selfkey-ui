@@ -119,4 +119,5 @@ export { SimpleCheckIcon } from './icons/simple-check';
 export { SimpleDeniedIcon } from './icons/simple-denied';
 export { DeniedIcon } from './icons/denied';
 export { CheckMaIcon } from './icons/check-ma';
+export { CalendarDepositIcon } from './icons/calendar-deposit';
 

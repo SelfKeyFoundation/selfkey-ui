@@ -30,6 +30,7 @@ export * from '../icons/attribute-alert';
 export * from '../icons/attribute-alert-large';
 export * from '../icons/book';
 export * from '../icons/calendar';
+export * from '../icons/calendar-deposit';
 export * from '../icons/certificate';
 export * from '../icons/check-empty';
 export * from '../icons/check';
