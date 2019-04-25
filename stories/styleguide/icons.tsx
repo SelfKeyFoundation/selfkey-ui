@@ -91,6 +91,7 @@ import {
 	TrezorIcon,
 	UnlockIcon,
 	UnlockLargeIcon,
+	UserPlusIcon,
 	ViewIcon,
 	VisibilityOffIcon,
 	VisibilityOnIcon,
@@ -708,6 +709,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SKUploadIcon />`}</code>
+			</pre>
+			<SKUploadIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<StickIcon />`}</code>
 			</pre>
 			<StickIcon />
@@ -771,9 +779,9 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
-				<code className={classes.code}>{`<SKUploadIcon />`}</code>
+				<code className={classes.code}>{`<UserPlusIcon />`}</code>
 			</pre>
-			<SKUploadIcon />
+			<UserPlusIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

@@ -118,6 +118,7 @@ export * from '../icons/trezor';
 export * from '../icons/unlock-large';
 export * from '../icons/unlock';
 export * from '../icons/upload';
+export * from '../icons/userplus';
 export * from '../icons/view';
 export * from '../icons/visibility-off';
 export * from '../icons/visibility-on';
