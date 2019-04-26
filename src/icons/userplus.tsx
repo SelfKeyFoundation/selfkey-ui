@@ -13,7 +13,7 @@ const styles: StyleSheet = {
 
 export const UserPlusIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 20 20'>
-    <g id="💹-Marketplace-user-plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+    <g id="💹-Marketplace-user-plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="502-Exchange-Details-+-Not-Unlocked" transform="translate(-929.000000, -275.000000)" fill="#FFFFFF">
             <g id="Modal" transform="translate(240.000000, 146.000000)">
                 <g id="Area-Body" transform="translate(0.000000, 71.000000)">
