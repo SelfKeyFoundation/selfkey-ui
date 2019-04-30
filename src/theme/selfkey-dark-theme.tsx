@@ -578,7 +578,9 @@ const theme = createMuiTheme({
 				fontSize: '13px',
 				fontWeight: 600,
 				height: '36px',
-				minWidth: '164px',
+				letterSpacing: '0.6px',
+				lineHeight: '16px',
+				minWidth: '120px',
 				'&$disabled': {
 					color: white,
 					opacity: 0.5,
@@ -634,12 +636,13 @@ const theme = createMuiTheme({
 			sizeLarge: {
 				fontSize: '16px',
 				height: '44px',
-				minWidth: '200px',
+				lineHeight: '19px',
 			},
 			sizeSmall: {
 				fontSize: '12px',
 				fontWeight: 400,
 				height: '26px',
+				lineHeight: '15px',
 				minHeight: '26px',
 				minWidth: '50px',
 				padding: '0 10px',
