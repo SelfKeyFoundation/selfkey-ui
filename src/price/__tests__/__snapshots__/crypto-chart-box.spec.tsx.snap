@@ -37,14 +37,12 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -333,14 +331,12 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -629,14 +625,12 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -925,14 +919,12 @@ exports[`Crypto Chart Box should call toggle function with false 1`] = `
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -1589,14 +1581,12 @@ exports[`Crypto Chart Box should call toggle function with false 2`] = `
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -2253,14 +2243,12 @@ exports[`Crypto Chart Box should call toggle function with true 1`] = `
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -2917,14 +2905,12 @@ exports[`Crypto Chart Box should call toggle function with true 2`] = `
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -3581,14 +3567,12 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -4245,14 +4229,12 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -4909,14 +4891,12 @@ exports[`Crypto Chart Box should show Chart with all 1`] = `
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -5573,14 +5553,12 @@ exports[`Crypto Chart Box should show Chart with less than 5 items 1`] = `
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g
@@ -5869,14 +5847,12 @@ exports[`Crypto Chart Box should show chart with Others 1`] = `
                 fill="none"
                 fillRule="evenodd"
                 id="🖥-Main-Dashboard"
-                stroke="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1"
               >
                 <g
                   id="301-Dashboard-+-Null-State"
-                  stroke="#768FA9"
                   transform="translate(-1236.000000, -505.000000)"
                 >
                   <g

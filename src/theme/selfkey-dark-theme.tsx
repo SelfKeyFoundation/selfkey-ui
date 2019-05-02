@@ -356,11 +356,10 @@ const theme = createMuiTheme({
 		},
 		MuiSvgIcon: {
 			root: {
-				color: 'inherit',
-				// fill: 'transparent',
-				// '&:hover': {
-				//   color: primary,
-				// },
+				color: '#93B0C1',
+				'&:hover': {
+				  	color: white,
+				},
 				'&:focus': {
 					color: primary,
 				},

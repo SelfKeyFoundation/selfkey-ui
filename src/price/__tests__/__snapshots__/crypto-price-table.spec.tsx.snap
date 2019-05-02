@@ -289,9 +289,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
               role="presentation"
               viewBox="0 0 24 24"
             >
-              <g
-                fill="#ffffff"
-              >
+              <g>
                 <path
                   d="M0 0h24v24H0z"
                   fill="none"
@@ -387,9 +385,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
               role="presentation"
               viewBox="0 0 24 24"
             >
-              <g
-                fill="#ffffff"
-              >
+              <g>
                 <path
                   d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z"
                   fill="none"
@@ -485,9 +481,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
               role="presentation"
               viewBox="0 0 24 24"
             >
-              <g
-                fill="#ffffff"
-              >
+              <g>
                 <path
                   d="M0 0h24v24H0z"
                   fill="none"

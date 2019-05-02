@@ -21,8 +21,8 @@ var styles = {
     }
 };
 exports.EditTransparentIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 16 16' }),
-    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
-        React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-835.000000, -645.000000)", fill: "#697C95" },
+    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
+        React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-835.000000, -645.000000)" },
             React.createElement("g", { id: "Area-box-2", transform: "translate(150.000000, 513.000000)" },
                 React.createElement("g", { id: "Table", transform: "translate(14.000000, 80.000000)" },
                     React.createElement("g", { id: "Col7", transform: "translate(661.000000, 12.000000)" },

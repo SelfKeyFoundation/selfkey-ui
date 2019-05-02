@@ -14,8 +14,8 @@ const styles: StyleSheet = {
 export const NewRefreshIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon {...props} viewBox="0 0 22 23" version="1.1">
         <title>icon-refresh-statuses</title>
-        <g id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="410.1-Marketplace-Applications-Statuses" transform="translate(-1223.000000, -389.000000)" fill="#697C95">
+        <g id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses" stroke="none" stroke-width="1" fill-rule="evenodd">
+            <g id="410.1-Marketplace-Applications-Statuses" transform="translate(-1223.000000, -389.000000)">
                 <g id="Content" transform="translate(150.000000, 264.000000)">
                     <g id="Collapse-box-1">
                         <g id="Status-box-1" transform="translate(15.000000, 90.000000)">

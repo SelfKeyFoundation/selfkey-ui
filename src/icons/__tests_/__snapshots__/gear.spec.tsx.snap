@@ -14,14 +14,12 @@ exports[`Gear Icon should show Gear Icon 1`] = `
     fill="none"
     fillRule="evenodd"
     id="🖥-Main-Dashboard"
-    stroke="none"
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth="1"
   >
     <g
       id="301-Dashboard-+-Null-State"
-      stroke="#768FA9"
       transform="translate(-1236.000000, -505.000000)"
     >
       <g

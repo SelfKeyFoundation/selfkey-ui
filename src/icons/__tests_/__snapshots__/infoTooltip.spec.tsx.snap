@@ -9,13 +9,11 @@ exports[`Info Tooltip Icon should show Info Tooltip Icon 1`] = `
   viewBox="0 0 16 16"
 >
   <g
-    fill="none"
     fillRule="evenodd"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#C5D0DE"
       fillRule="nonzero"
       id="3.-Style-Guide---Forms"
       transform="translate(-1539.000000, -931.000000)"

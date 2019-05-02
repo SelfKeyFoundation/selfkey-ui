@@ -352,11 +352,10 @@ var theme = core_1.createMuiTheme({
         },
         MuiSvgIcon: {
             root: {
-                color: 'inherit',
-                // fill: 'transparent',
-                // '&:hover': {
-                //   color: primary,
-                // },
+                color: '#93B0C1',
+                '&:hover': {
+                    color: colors_1.white,
+                },
                 '&:focus': {
                     color: colors_1.primary,
                 },

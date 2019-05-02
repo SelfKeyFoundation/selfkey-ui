@@ -7,15 +7,14 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 const styles: StyleSheet = {
   root: {
     width: '16px !important',
-    height: '16px !important'
+    height: '16px !important',
   }
 };
 
 export const CopyIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
 <SvgIcon {...props} viewBox="0 0 14 16" version="1.1">
-    <defs></defs>
-    <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="302-Dashboard-Full-State-Expanded" transform="translate(-1125.000000, -2025.000000)" fill="#93B0C1">
+    <g id="🖥-Main-Dashboard" fillRule="evenodd">
+        <g id="302-Dashboard-Full-State-Expanded" transform="translate(-1125.000000, -2025.000000)">
             <g id="Transactions" transform="translate(150.000000, 1616.000000)">
                 <g id="Table" transform="translate(29.000000, 105.000000)">
                     <g id="Col4" transform="translate(946.000000, 4.000000)">

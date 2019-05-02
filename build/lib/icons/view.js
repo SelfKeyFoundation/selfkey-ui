@@ -22,8 +22,8 @@ var styles = {
 };
 exports.ViewIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 22 16", version: "1.1" }),
     React.createElement("defs", null),
-    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
-        React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-1199.000000, -2026.000000)", fill: "#93B0C1" },
+    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
+        React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-1199.000000, -2026.000000)" },
             React.createElement("g", { id: "Transactions", transform: "translate(150.000000, 1616.000000)" },
                 React.createElement("g", { id: "Table", transform: "translate(29.000000, 105.000000)" },
                     React.createElement("g", { id: "Col4", transform: "translate(946.000000, 4.000000)" },

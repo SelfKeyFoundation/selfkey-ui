@@ -5,8 +5,8 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 export const RefreshIcon = ((props: SvgIconProps) => (
         <SvgIcon width="24px" height="26px" {...props} viewBox="0 0 24 26">
             <defs></defs>
-            <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <g id="301-Dashboard-+-Null-State" transform="translate(-1231.000000, -985.000000)" fill="#93B0C1">
+            <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
+                <g id="301-Dashboard-+-Null-State" transform="translate(-1231.000000, -985.000000)">
                     <g id="Transactions" transform="translate(150.000000, 960.000000)">
                         <g id="Title" transform="translate(30.000000, 20.000000)">
                             <g id="icon-refresh" transform="translate(1051.000000, 5.000000)">
