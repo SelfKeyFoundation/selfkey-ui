@@ -376,6 +376,12 @@ const theme = createMuiTheme({
 				marginRight: '10px',
 				padding: 0,
 				width: '18px',
+				'& svg': {
+					color: 'inherit',
+					'&:hover': {
+						color: 'inherit',
+					},
+				},
 				'&$checked:not($disabled):not($colorPrimary)': {
 					backgroundColor: `${primary} !important`,
 					border: `1px solid ${primary} !important`,
@@ -438,6 +444,12 @@ const theme = createMuiTheme({
 				marginRight: '10px',
 				padding: 0,
 				width: '18px',
+				'& svg': {
+					color: 'inherit',
+					'&:hover': {
+						color: 'inherit',
+					},
+				},
 				'&$checked:not($disabled):not($colorPrimary)': {
 					backgroundColor: `#1e262d !important`,
 					border: `1px solid ${primary} !important`,
