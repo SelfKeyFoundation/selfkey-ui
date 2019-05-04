@@ -120,7 +120,7 @@ exports[`Datepicker should show Datepicker 1`] = `
                 1
               </td>
               <td
-                className="rdtDay rdtToday"
+                className="rdtDay"
                 data-value={2}
                 onClick={[Function]}
               >
@@ -134,7 +134,7 @@ exports[`Datepicker should show Datepicker 1`] = `
                 3
               </td>
               <td
-                className="rdtDay"
+                className="rdtDay rdtToday"
                 data-value={4}
                 onClick={[Function]}
               >
@@ -535,7 +535,7 @@ exports[`Datepicker should show Datepicker onBlur 1`] = `
                 1
               </td>
               <td
-                className="rdtDay rdtToday"
+                className="rdtDay"
                 data-value={2}
                 onClick={[Function]}
               >
@@ -549,7 +549,7 @@ exports[`Datepicker should show Datepicker onBlur 1`] = `
                 3
               </td>
               <td
-                className="rdtDay"
+                className="rdtDay rdtToday"
                 data-value={4}
                 onClick={[Function]}
               >
@@ -950,7 +950,7 @@ exports[`Datepicker should show Datepicker onChange 1`] = `
                 1
               </td>
               <td
-                className="rdtDay rdtToday"
+                className="rdtDay"
                 data-value={2}
                 onClick={[Function]}
               >
@@ -964,7 +964,7 @@ exports[`Datepicker should show Datepicker onChange 1`] = `
                 3
               </td>
               <td
-                className="rdtDay"
+                className="rdtDay rdtToday"
                 data-value={4}
                 onClick={[Function]}
               >
@@ -1365,7 +1365,7 @@ exports[`Datepicker should show Datepicker onFocus 1`] = `
                 1
               </td>
               <td
-                className="rdtDay rdtToday"
+                className="rdtDay"
                 data-value={2}
                 onClick={[Function]}
               >
@@ -1379,7 +1379,7 @@ exports[`Datepicker should show Datepicker onFocus 1`] = `
                 3
               </td>
               <td
-                className="rdtDay"
+                className="rdtDay rdtToday"
                 data-value={4}
                 onClick={[Function]}
               >
