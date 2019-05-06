@@ -353,6 +353,7 @@ var theme = core_1.createMuiTheme({
         MuiSvgIcon: {
             root: {
                 color: '#93B0C1',
+                transition: 'all 0.2s ease-out',
                 '&:hover': {
                     color: colors_1.white,
                 },

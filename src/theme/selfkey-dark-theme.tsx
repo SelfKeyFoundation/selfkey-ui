@@ -357,6 +357,7 @@ const theme = createMuiTheme({
 		MuiSvgIcon: {
 			root: {
 				color: '#93B0C1',
+				transition: 'all 0.2s ease-out',
 				'&:hover': {
 				  	color: white,
 				},
