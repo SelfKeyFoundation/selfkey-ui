@@ -12,14 +12,12 @@ exports[`Clear Icon should show Clear Icon 1`] = `
 >
   <defs />
   <g
-    fill="none"
     fillRule="evenodd"
     id="🛠-Wallet-Setup"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#93B0C1"
       id="118---Trezor---Enter-PIN"
       transform="translate(-810.000000, -640.000000)"
     >

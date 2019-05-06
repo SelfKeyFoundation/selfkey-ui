@@ -352,11 +352,11 @@ var theme = core_1.createMuiTheme({
         },
         MuiSvgIcon: {
             root: {
-                color: 'inherit',
-                // fill: 'transparent',
-                // '&:hover': {
-                //   color: primary,
-                // },
+                color: '#93B0C1',
+                transition: 'all 0.2s ease-out',
+                '&:hover': {
+                    color: colors_1.white,
+                },
                 '&:focus': {
                     color: colors_1.primary,
                 },
@@ -373,6 +373,12 @@ var theme = core_1.createMuiTheme({
                 marginRight: '10px',
                 padding: 0,
                 width: '18px',
+                '& svg': {
+                    color: 'inherit',
+                    '&:hover': {
+                        color: 'inherit',
+                    },
+                },
                 '&$checked:not($disabled):not($colorPrimary)': {
                     backgroundColor: colors_1.primary + " !important",
                     border: "1px solid " + colors_1.primary + " !important",
@@ -435,6 +441,12 @@ var theme = core_1.createMuiTheme({
                 marginRight: '10px',
                 padding: 0,
                 width: '18px',
+                '& svg': {
+                    color: 'inherit',
+                    '&:hover': {
+                        color: 'inherit',
+                    },
+                },
                 '&$checked:not($disabled):not($colorPrimary)': {
                     backgroundColor: "#1e262d !important",
                     border: "1px solid " + colors_1.primary + " !important",

@@ -12,14 +12,12 @@ exports[`Refresh Icon should show Refresh Icon 1`] = `
 >
   <defs />
   <g
-    fill="none"
     fillRule="evenodd"
     id="🖥-Main-Dashboard"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#93B0C1"
       id="301-Dashboard-+-Null-State"
       transform="translate(-1231.000000, -985.000000)"
     >

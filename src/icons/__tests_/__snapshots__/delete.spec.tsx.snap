@@ -11,14 +11,12 @@ exports[`Delete Icon should show Delete Icon 1`] = `
 >
   <defs />
   <g
-    fill="none"
     fillRule="evenodd"
     id="-Main-Dashboard"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#697C95"
       id="304-Manage-My-Tokens"
       transform="translate(-1244.000000, -597.000000)"
     >

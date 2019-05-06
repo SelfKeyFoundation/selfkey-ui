@@ -11,14 +11,12 @@ exports[`View Icon should show View Icon 1`] = `
 >
   <defs />
   <g
-    fill="none"
     fillRule="evenodd"
     id="🖥-Main-Dashboard"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#93B0C1"
       id="302-Dashboard-Full-State-Expanded"
       transform="translate(-1199.000000, -2026.000000)"
     >

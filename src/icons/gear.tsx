@@ -7,7 +7,11 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 const styles: StyleSheet = {
   root: {
     width: '24px !important',
-    height: '24px !important'
+    height: '24px !important',
+    stroke: '#93B0C1',
+    '&:hover': {
+      stroke: 'white',
+    }
   }
 };
 
@@ -15,8 +19,8 @@ export const GearIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps &
 
   <SvgIcon {...props} viewBox="0 0 24 24" version="1.1">
     <defs></defs>
-    <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-      <g id="301-Dashboard-+-Null-State" transform="translate(-1236.000000, -505.000000)" stroke="#768FA9">
+    <g id="🖥-Main-Dashboard" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
+      <g id="301-Dashboard-+-Null-State" transform="translate(-1236.000000, -505.000000)">
         <g id="My-Crypto" transform="translate(150.000000, 478.000000)">
           <g id="Area-header" transform="translate(30.000000, 21.000000)">
             <g id="icon-settings" transform="translate(1056.000000, 6.000000)">

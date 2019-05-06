@@ -13,8 +13,8 @@ const styles: StyleSheet = {
 
 export const EditTransparentIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 16 16'>
-    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="403---Identity-Summary" transform="translate(-835.000000, -645.000000)" fill="#697C95">
+    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
+        <g id="403---Identity-Summary" transform="translate(-835.000000, -645.000000)">
             <g id="Area-box-2" transform="translate(150.000000, 513.000000)">
                 <g id="Table" transform="translate(14.000000, 80.000000)">
                     <g id="Col7" transform="translate(661.000000, 12.000000)">

@@ -120,7 +120,8 @@
       "!src/price/crypto-chart-box.tsx",
       "!src/price/crypto-price-table.tsx",
       "!src/lws/lws-required-info.tsx",
-      "!src/lws/lws-select-wallet.tsx"
+      "!src/lws/lws-select-wallet.tsx",
+      "!src/materialui/datepicker.tsx"
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",

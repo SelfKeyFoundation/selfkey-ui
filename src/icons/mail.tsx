@@ -4,8 +4,8 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const MailIcon = ((props: SvgIconProps) => (
         <SvgIcon width="35px" height="27px" {...props} viewBox="0 0 35 27">
-            <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <g id="351-Receive-KEY" transform="translate(-668.000000, -691.000000)" fill="#93B0C1" fillRule="nonzero">
+            <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
+                <g id="351-Receive-KEY" transform="translate(-668.000000, -691.000000)" fillRule="nonzero">
                     <g id="Modal" transform="translate(341.000000, 235.000000)">
                         <g id="icons" transform="translate(267.000000, 452.000000)">
                             <g id="icon-mail" transform="translate(60.000000, 4.000000)">

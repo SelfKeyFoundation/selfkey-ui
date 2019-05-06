@@ -11,14 +11,12 @@ exports[`Mail Icon should show Mail Icon 1`] = `
   width="35px"
 >
   <g
-    fill="none"
     fillRule="evenodd"
     id="🖥-Main-Dashboard"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#93B0C1"
       fillRule="nonzero"
       id="351-Receive-KEY"
       transform="translate(-668.000000, -691.000000)"

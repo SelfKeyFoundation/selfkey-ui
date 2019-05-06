@@ -9,14 +9,12 @@ exports[`Edit Transparent Icon should show Edit Transparent Icon 1`] = `
   viewBox="0 0 16 16"
 >
   <g
-    fill="none"
     fillRule="evenodd"
     id="💻-ID-Dashboard"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#697C95"
       id="403---Identity-Summary"
       transform="translate(-835.000000, -645.000000)"
     >
