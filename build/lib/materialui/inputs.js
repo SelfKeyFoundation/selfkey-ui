@@ -275,7 +275,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                     React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null),
             React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
                 React.createElement(modalWithBackButton_1.ModalWrap, null,
-                    React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: this.handleState, className: "" + classes.back }, "\u2039 Back."),
+                    React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: this.handleState, className: "" + classes.back }, "\u2039 Back"),
                     React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
                         React.createElement(PreviewType, { fileType: file.mimeType }))))));
     };
