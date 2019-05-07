@@ -38,6 +38,7 @@ __export(require("../icons/custom"));
 __export(require("../icons/dashboard-menu"));
 __export(require("../icons/delete"));
 __export(require("../icons/denied"));
+__export(require("../icons/did"));
 __export(require("../icons/document"));
 __export(require("../icons/download-2"));
 __export(require("../icons/download"));
@@ -70,6 +71,7 @@ __export(require("../icons/mail"));
 __export(require("../icons/marketplace-menu"));
 __export(require("../icons/marketplace"));
 __export(require("../icons/menu-button"));
+__export(require("../icons/merge"));
 __export(require("../icons/modal-close"));
 __export(require("../icons/muiadd"));
 __export(require("../icons/muidelete"));
@@ -352,11 +354,11 @@ var theme = core_1.createMuiTheme({
         },
         MuiSvgIcon: {
             root: {
-                color: 'inherit',
-                // fill: 'transparent',
-                // '&:hover': {
-                //   color: primary,
-                // },
+                color: '#93B0C1',
+                transition: 'all 0.2s ease-out',
+                '&:hover': {
+                    color: colors_1.white,
+                },
                 '&:focus': {
                     color: colors_1.primary,
                 },
@@ -373,6 +375,12 @@ var theme = core_1.createMuiTheme({
                 marginRight: '10px',
                 padding: 0,
                 width: '18px',
+                '& svg': {
+                    color: 'inherit',
+                    '&:hover': {
+                        color: 'inherit',
+                    },
+                },
                 '&$checked:not($disabled):not($colorPrimary)': {
                     backgroundColor: colors_1.primary + " !important",
                     border: "1px solid " + colors_1.primary + " !important",
@@ -435,6 +443,12 @@ var theme = core_1.createMuiTheme({
                 marginRight: '10px',
                 padding: 0,
                 width: '18px',
+                '& svg': {
+                    color: 'inherit',
+                    '&:hover': {
+                        color: 'inherit',
+                    },
+                },
                 '&$checked:not($disabled):not($colorPrimary)': {
                     backgroundColor: "#1e262d !important",
                     border: "1px solid " + colors_1.primary + " !important",

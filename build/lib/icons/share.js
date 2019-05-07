@@ -14,8 +14,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.ShareIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "36px", height: "36px" }, props, { viewBox: "0 0 36 36" }),
-    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
-        React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-797.000000, -687.000000)", fill: "#93B0C1", fillRule: "nonzero" },
+    React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
+        React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-797.000000, -687.000000)", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(341.000000, 235.000000)" },
                 React.createElement("g", { id: "icons", transform: "translate(267.000000, 452.000000)" },
                     React.createElement("g", { id: "icon-share", transform: "translate(189.000000, 0.000000)" },

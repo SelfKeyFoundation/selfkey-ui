@@ -109,14 +109,12 @@ exports[`Status Completed should show Status Completed 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill="none"
               fill-rule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
               stroke-width="1"
             >
               <g
-                fill="#697C95"
                 id="410.1-Marketplace-Applications-Statuses"
                 transform="translate(-1223.000000, -389.000000)"
               >
@@ -257,14 +255,12 @@ exports[`Status Completed should show Status Denied 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill="none"
               fill-rule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
               stroke-width="1"
             >
               <g
-                fill="#697C95"
                 id="410.1-Marketplace-Applications-Statuses"
                 transform="translate(-1223.000000, -389.000000)"
               >
@@ -426,14 +422,12 @@ exports[`Status Completed should show Status Missing 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill="none"
               fill-rule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
               stroke-width="1"
             >
               <g
-                fill="#697C95"
                 id="410.1-Marketplace-Applications-Statuses"
                 transform="translate(-1223.000000, -389.000000)"
               >
@@ -572,14 +566,12 @@ exports[`Status Completed should show Status Pending 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill="none"
               fill-rule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
               stroke-width="1"
             >
               <g
-                fill="#697C95"
                 id="410.1-Marketplace-Applications-Statuses"
                 transform="translate(-1223.000000, -389.000000)"
               >

@@ -44,6 +44,7 @@ export * from '../icons/custom';
 export * from '../icons/dashboard-menu';
 export * from '../icons/delete';
 export * from '../icons/denied';
+export * from '../icons/did';
 export * from '../icons/document';
 export * from '../icons/download-2';
 export * from '../icons/download';
@@ -76,6 +77,7 @@ export * from '../icons/mail';
 export * from '../icons/marketplace-menu';
 export * from '../icons/marketplace';
 export * from '../icons/menu-button';
+export * from '../icons/merge';
 export * from '../icons/modal-close';
 export * from '../icons/muiadd';
 export * from '../icons/muidelete';
@@ -356,11 +358,11 @@ const theme = createMuiTheme({
 		},
 		MuiSvgIcon: {
 			root: {
-				color: 'inherit',
-				// fill: 'transparent',
-				// '&:hover': {
-				//   color: primary,
-				// },
+				color: '#93B0C1',
+				transition: 'all 0.2s ease-out',
+				'&:hover': {
+				  	color: white,
+				},
 				'&:focus': {
 					color: primary,
 				},
@@ -377,6 +379,12 @@ const theme = createMuiTheme({
 				marginRight: '10px',
 				padding: 0,
 				width: '18px',
+				'& svg': {
+					color: 'inherit',
+					'&:hover': {
+						color: 'inherit',
+					},
+				},
 				'&$checked:not($disabled):not($colorPrimary)': {
 					backgroundColor: `${primary} !important`,
 					border: `1px solid ${primary} !important`,
@@ -439,6 +447,12 @@ const theme = createMuiTheme({
 				marginRight: '10px',
 				padding: 0,
 				width: '18px',
+				'& svg': {
+					color: 'inherit',
+					'&:hover': {
+						color: 'inherit',
+					},
+				},
 				'&$checked:not($disabled):not($colorPrimary)': {
 					backgroundColor: `#1e262d !important`,
 					border: `1px solid ${primary} !important`,

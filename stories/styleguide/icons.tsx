@@ -21,6 +21,7 @@ import {
 	DashboardMenuIcon,
 	DeleteIcon,
 	DeniedIcon,
+	DIDIcon,
 	DocumentIcon,
 	DownloadIcon,
 	DownloadIcon2,
@@ -52,6 +53,7 @@ import {
 	MarketplaceIcon,
 	MarketplaceMenuIcon,
 	MenuButtonIcon,
+	MergeIcon,
 	ModalCloseIcon,
 	MuiDeleteIcon,
 	MuiEditIcon,
@@ -264,6 +266,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<DeniedIcon />`}</code>
 			</pre>
 			<DeniedIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<DIDIcon />`}</code>
+			</pre>
+			<DIDIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -481,6 +490,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<MenuButtonIcon />`}</code>
 			</pre>
 			<MenuButtonIcon />
+		</Grid>
+		
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MergeIcon />`}</code>
+			</pre>
+			<MergeIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

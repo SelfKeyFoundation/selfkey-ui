@@ -12,14 +12,12 @@ exports[`AddressBookMenu Icon should show AddressBookMenu Icon 1`] = `
 >
   <defs />
   <g
-    fill="none"
     fillRule="evenodd"
     id="🖥-Main-Dashboard"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#93A4AF"
       fillRule="nonzero"
       id="300-Navigation"
       transform="translate(-1172.000000, -351.000000)"
