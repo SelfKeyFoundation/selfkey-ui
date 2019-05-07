@@ -83,7 +83,7 @@
     "jest-environment-enzyme": "^7.0.2",
     "jest-enzyme": "^7.0.2",
     "react-docgen-typescript-webpack-plugin": "1.1.0",
-    "react-scripts": "2.1.1",
+    "react-scripts": "^3.0.0",
     "react-test-renderer": "16.6.3",
     "storybook-addon-jsx": "6.0.0",
     "storybook-host": "5.0.3",

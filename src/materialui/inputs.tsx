@@ -181,6 +181,9 @@ const fileViewStyles = (theme: Theme) =>
 		bottomSpace: {
 			marginBottom: '20px',
 		},
+		back: {
+			zIndex: 1000
+		}
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -329,7 +332,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 
 				<Modal open={this.state.open} onClose={this.handleClose}>
 					<ModalWrap>
-						<Button variant="outlined" color="secondary" size="small" onClick={this.handleState}>
+						<Button variant="outlined" color="secondary" size="small" onClick={this.handleState} className={`${classes.back}`}>
 							‹ Back
 						</Button>
 						<ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
