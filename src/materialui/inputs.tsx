@@ -368,10 +368,14 @@ const fileUploadStyles: StyleSheet = {
 	fileInput: {
 		display: 'none',
 	},
+	formError: {
+		backgroundColor: 'rgba(255, 46, 99, 0.09)',
+		border: `1px solid ${error}`,
+	},
 };
 
 export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
-	({ classes, id, file, onClearForm, onChange, onBlur, onFocus, onPDFOpen, required, ...props }) => {
+	({ classes, id, file, isError, onClearForm, onChange, onBlur, onFocus, onPDFOpen, required, ...props }) => {
 		const eventHandlers: any = {};
 		if (onChange) {
 			eventHandlers.onChange = (evt: any) => {
@@ -392,12 +396,20 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 			onClearForm = () => {};
 		}
 
+		let additionalClass = null;
+
+		if (isError) {
+			additionalClass = classes.formError;
+		}
+
 		id = id || 'key-upload';
+
+		const formClassNames = classNames(additionalClass);
 
 		return (
 			<Grid container direction="column" spacing={24}>
 				<Grid item>
-					<div className={classes.form}>
+					<div className={`${classes.form} ${formClassNames}`}>
 						<Grid container direction="row" justify="space-between" alignItems="center">
 							<Grid item>
 								<Typography variant="subtitle2" color="secondary">
