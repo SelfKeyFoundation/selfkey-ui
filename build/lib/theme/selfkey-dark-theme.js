@@ -120,6 +120,7 @@ __export(require("../icons/visibility-off"));
 __export(require("../icons/visibility-on"));
 __export(require("../icons/wallet"));
 __export(require("../icons/warning-shield"));
+__export(require("../icons/id"));
 var muiedit_1 = require("../icons/muiedit");
 exports.MuiEditIcon = muiedit_1.MuiEditIcon;
 var muiadd_1 = require("../icons/muiadd");
