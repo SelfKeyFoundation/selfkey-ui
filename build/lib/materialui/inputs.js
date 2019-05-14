@@ -301,9 +301,13 @@ var fileUploadStyles = {
     fileInput: {
         display: 'none',
     },
+    formError: {
+        backgroundColor: 'rgba(255, 46, 99, 0.09)',
+        border: "1px solid " + colors_1.error,
+    },
 };
 exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
-    var classes = _a.classes, id = _a.id, file = _a.file, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, onPDFOpen = _a.onPDFOpen, required = _a.required, props = __rest(_a, ["classes", "id", "file", "onClearForm", "onChange", "onBlur", "onFocus", "onPDFOpen", "required"]);
+    var classes = _a.classes, id = _a.id, file = _a.file, isError = _a.isError, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, onPDFOpen = _a.onPDFOpen, required = _a.required, props = __rest(_a, ["classes", "id", "file", "isError", "onClearForm", "onChange", "onBlur", "onFocus", "onPDFOpen", "required"]);
     var eventHandlers = {};
     if (onChange) {
         eventHandlers.onChange = function (evt) {
@@ -323,10 +327,15 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
     if (!onClearForm) {
         onClearForm = function () { };
     }
+    var additionalClass = null;
+    if (isError) {
+        additionalClass = classes.formError;
+    }
     id = id || 'key-upload';
+    var formClassNames = classnames_1.default(additionalClass);
     return (React.createElement(core_1.Grid, { container: true, direction: "column", spacing: 24 },
         React.createElement(core_1.Grid, { item: true },
-            React.createElement("div", { className: classes.form },
+            React.createElement("div", { className: classes.form + " " + formClassNames },
                 React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center" },
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, props.placeholder || 'Please upload a document')),
