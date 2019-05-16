@@ -29,7 +29,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+          className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
           focusable="false"
           height="38px"
           role="presentation"
@@ -56,7 +56,6 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
                   fill="#262F39"
                   id="Oval-2"
                   r="18"
-                  stroke="#1D505F"
                 />
                 <g
                   fill="#23E6FE"
@@ -83,7 +82,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        className="MuiSvgIcon-root-1 Component-root-0-1-14"
         focusable="false"
         role="presentation"
         viewBox="0 0 68 74"
@@ -185,11 +184,11 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-14"
+              className="CopyComponent-copyButton-0-1-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-15"
+                className="CopyComponent-copyButtonSpan-0-1-16"
               >
                 COPY
               </span>
@@ -231,7 +230,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+          className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
           focusable="false"
           height="38px"
           role="presentation"
@@ -258,7 +257,6 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
                   fill="#262F39"
                   id="Oval-2"
                   r="18"
-                  stroke="#1D505F"
                 />
                 <g
                   fill="#23E6FE"
@@ -285,7 +283,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        className="MuiSvgIcon-root-1 Component-root-0-1-14"
         focusable="false"
         role="presentation"
         viewBox="0 0 68 74"
@@ -387,11 +385,11 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-14"
+              className="CopyComponent-copyButton-0-1-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-15"
+                className="CopyComponent-copyButtonSpan-0-1-16"
               >
                 COPY
               </span>
@@ -433,7 +431,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+          className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
           focusable="false"
           height="38px"
           role="presentation"
@@ -460,7 +458,6 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
                   fill="#262F39"
                   id="Oval-2"
                   r="18"
-                  stroke="#1D505F"
                 />
                 <g
                   fill="#23E6FE"
@@ -487,7 +484,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        className="MuiSvgIcon-root-1 Component-root-0-1-14"
         focusable="false"
         role="presentation"
         viewBox="0 0 68 74"
@@ -589,11 +586,11 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-14"
+              className="CopyComponent-copyButton-0-1-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-15"
+                className="CopyComponent-copyButtonSpan-0-1-16"
               >
                 COPY
               </span>
@@ -635,7 +632,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+          className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
           focusable="false"
           height="38px"
           role="presentation"
@@ -662,7 +659,6 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
                   fill="#262F39"
                   id="Oval-2"
                   r="18"
-                  stroke="#1D505F"
                 />
                 <g
                   fill="#23E6FE"
@@ -689,7 +685,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13"
+        className="MuiSvgIcon-root-1 Component-root-0-1-14"
         focusable="false"
         role="presentation"
         viewBox="0 0 68 74"
@@ -791,11 +787,11 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-14"
+              className="CopyComponent-copyButton-0-1-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-15"
+                className="CopyComponent-copyButtonSpan-0-1-16"
               >
                 COPY
               </span>

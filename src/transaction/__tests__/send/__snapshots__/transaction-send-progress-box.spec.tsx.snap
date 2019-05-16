@@ -21,7 +21,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -48,7 +48,6 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -71,7 +70,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-13 Component-icon-0-1-10"
+      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -104,7 +103,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-15"
+          className="MuiSvgIcon-root-1 Component-root-0-1-16"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -282,7 +281,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -309,7 +308,6 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -332,7 +330,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-13 Component-icon-0-1-10"
+      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -365,7 +363,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-15"
+          className="MuiSvgIcon-root-1 Component-root-0-1-16"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -543,7 +541,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -570,7 +568,6 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -593,7 +590,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-13 Component-icon-0-1-10"
+      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -626,7 +623,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-15"
+          className="MuiSvgIcon-root-1 Component-root-0-1-16"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -804,7 +801,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -831,7 +828,6 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -854,7 +850,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-13 Component-icon-0-1-10"
+      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -887,7 +883,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-15"
+          className="MuiSvgIcon-root-1 Component-root-0-1-16"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -1065,7 +1061,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -1092,7 +1088,6 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -1115,7 +1110,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-13 Component-icon-0-1-10"
+      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -1148,7 +1143,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-14"
+          className="MuiSvgIcon-root-1 Component-root-0-1-15"
           focusable="false"
           role="presentation"
           viewBox="0 0 66 66"
@@ -1325,7 +1320,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -1352,7 +1347,6 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -1375,7 +1369,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-13 Component-icon-0-1-10"
+      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -1408,7 +1402,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-15"
+          className="MuiSvgIcon-root-1 Component-root-0-1-16"
           focusable="false"
           role="presentation"
           version="1.1"
@@ -1586,7 +1580,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -1613,7 +1607,6 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -1636,7 +1629,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-13 Component-icon-0-1-10"
+      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"

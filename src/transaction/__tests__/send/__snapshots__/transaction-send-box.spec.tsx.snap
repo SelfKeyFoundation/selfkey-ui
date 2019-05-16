@@ -21,7 +21,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root-1 Component-root-0-1-21 MuiSvgIcon-fontSizeLarge-9"
         focusable="false"
         height="38px"
         role="presentation"
@@ -48,7 +48,6 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
@@ -71,7 +70,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-21 Component-icon-0-1-18"
+      className="MuiSvgIcon-root-1 Component-root-0-1-22 Component-icon-0-1-18"
       focusable="false"
       role="presentation"
       viewBox="0 0 44 44"
@@ -221,7 +220,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-11"
           >
             <span
-              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-23"
+              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-24"
             >
                Network Transaction Fee: 
             </span>
@@ -230,7 +229,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-11"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-41"
+              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-42"
             >
               <div
                 className="MuiGrid-item-11"
@@ -282,14 +281,14 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-24"
+        className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-25"
         onClick={[Function]}
       >
         <span>
            Advanced 
         </span>
         <i
-          className="TransactionFeeBoxComponent-icon-0-1-25  TransactionFeeBoxComponent-rightIcon-0-1-26"
+          className="TransactionFeeBoxComponent-icon-0-1-26  TransactionFeeBoxComponent-rightIcon-0-1-27"
         >
            
         </i>

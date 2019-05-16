@@ -29,7 +29,7 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeLarge-9"
+          className="MuiSvgIcon-root-1 Component-root-0-1-11 MuiSvgIcon-fontSizeLarge-9"
           focusable="false"
           height="38px"
           role="presentation"
@@ -56,7 +56,6 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
                   fill="#262F39"
                   id="Oval-2"
                   r="18"
-                  stroke="#1D505F"
                 />
                 <g
                   fill="#23E6FE"
@@ -83,7 +82,7 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-11"
+        className="MuiSvgIcon-root-1 Component-root-0-1-12"
         focusable="false"
         role="presentation"
         viewBox="0 0 68 74"
@@ -168,11 +167,11 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-12"
+              className="CopyComponent-copyButton-0-1-13"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-13"
+                className="CopyComponent-copyButtonSpan-0-1-14"
               >
                 COPY
               </span>
