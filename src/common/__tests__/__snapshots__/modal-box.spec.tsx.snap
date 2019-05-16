@@ -44,7 +44,6 @@ exports[`Modal Box should show Modal Box 1`] = `
                 fill="#262F39"
                 id="Oval-2"
                 r="18"
-                stroke="#1D505F"
               />
               <g
                 fill="#23E6FE"
