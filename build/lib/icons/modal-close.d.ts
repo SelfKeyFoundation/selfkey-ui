@@ -1,4 +1,5 @@
-/// <reference types="react" />
+import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-export declare const ModalCloseIcon: (props: SvgIconProps) => JSX.Element;
+export declare const ModalCloseIcon: React.ComponentType<SvgIconProps & StyledComponentProps<string>>;
 export default ModalCloseIcon;
