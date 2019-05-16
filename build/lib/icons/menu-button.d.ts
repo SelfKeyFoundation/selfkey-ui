@@ -1,4 +1,5 @@
-/// <reference types="react" />
+import * as React from 'react';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-export declare const MenuButtonIcon: (props: SvgIconProps) => JSX.Element;
+import { StyledComponentProps } from 'react-jss';
+export declare const MenuButtonIcon: React.ComponentType<SvgIconProps & StyledComponentProps<string>>;
 export default MenuButtonIcon;
