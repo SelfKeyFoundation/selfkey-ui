@@ -1,8 +1,17 @@
 import * as React from 'react';
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
+
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-export const ClipboardIcon = ((props: SvgIconProps) => (
+const styles: StyleSheet = {
+	root: {
+		width: '30px !important',
+		height: '36px !important',
+	},
+};
+
+export const ClipboardIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
         <SvgIcon width="30px" height="36px" {...props} viewBox="0 0 30 36">
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="351-Receive-KEY" transform="translate(-608.000000, -687.000000)" fillRule="nonzero">
