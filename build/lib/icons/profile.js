@@ -14,13 +14,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
-    root: {
-        width: '42px !important',
-        height: '37px !important'
-    }
-};
-exports.ProfileIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 42 37' }),
+var styles = {};
+exports.ProfileIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '42px', height: props.height || '37px' } }, props, { viewBox: "0 0 42 37" }),
     React.createElement("defs", null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "1.-Select-Wallet-Modal", transform: "translate(-509.000000, -463.000000)", stroke: "#23E6FE", strokeWidth: "0.833333333" },

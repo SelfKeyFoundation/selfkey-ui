@@ -3,9 +3,15 @@
 exports[`Profile  Icon should show Profile Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root-1"
   focusable="false"
   role="presentation"
+  style={
+    Object {
+      "height": "37px",
+      "width": "42px",
+    }
+  }
   viewBox="0 0 42 37"
 >
   <defs />

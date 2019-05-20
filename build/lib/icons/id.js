@@ -14,13 +14,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
-    root: {
-        width: '74px !important',
-        height: '74px !important'
-    }
-};
-exports.IDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 74 74' }),
+var styles = {};
+exports.IDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '74px', height: props.height || '74px' } }, props, { viewBox: "0 0 74 74" }),
     React.createElement("title", null, "icon-id"),
     React.createElement("desc", null, "Created with Sketch."),
     React.createElement("defs", null,

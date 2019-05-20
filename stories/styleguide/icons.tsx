@@ -99,7 +99,8 @@ import {
 	VisibilityOnIcon,
 	WalletIcon,
 	WarningShieldIcon, 
-	NewRefreshIcon
+	NewRefreshIcon,
+	IDIcon
 } from '../../src/theme/selfkey-dark-theme';
 import CorporateIcon from '../../src/icons/corporate';
 import PersonIcon from '../../src/icons/person';
@@ -833,6 +834,12 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<WarningShieldIcon />`}</code>
 			</pre>
 			<WarningShieldIcon />
+		</Grid>
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<IDIcon />`}</code>
+			</pre>
+			<IDIcon />
 		</Grid>
 	</Grid>
 ));
