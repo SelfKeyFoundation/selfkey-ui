@@ -3,9 +3,15 @@
 exports[`Id Icon should show Id Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root-1"
   focusable="false"
   role="presentation"
+  style={
+    Object {
+      "height": "74px",
+      "width": "74px",
+    }
+  }
   viewBox="0 0 74 74"
 >
   <title>
