@@ -5,10 +5,14 @@ exports[`Trezor Icon should show Trezor Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root-1"
   focusable="false"
-  height="25px"
   role="presentation"
+  style={
+    Object {
+      "height": "25px",
+      "width": "18px",
+    }
+  }
   viewBox="0 0 18 25"
-  width="18px"
 >
   <defs />
   <g

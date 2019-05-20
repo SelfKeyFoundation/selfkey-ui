@@ -11,6 +11,7 @@ import { CryptoChartBox } from '../../src/price/crypto-chart-box';
 import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
+import { TransactionFeeSelector } from '../../src/transaction/transaction-fee-selector';
 import { TransactionSendProgressBox } from '../../src/transaction/send/transaction-send-progress-box';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSLoading } from '../../src/lws/lws-loading';
@@ -32,10 +33,7 @@ import { AddressBook } from '../../src/address-book/address-book';
 import { AddressBookAdd } from '../../src/address-book/address-book-add';
 import { AddressBookEdit } from '../../src/address-book/address-book-edit';
 import { ModalBox } from '../../src/common/modal-box';
-import {
-	Card,
-	CardContent,
-} from '@material-ui/core';
+import { Card, CardContent } from '@material-ui/core';
 import { SelfkeyDarkTheme } from '../../src/theme/selfkey-dark-theme';
 import TableStories from './materialui/story-tables';
 import ButtonStories from './materialui/story-buttons';
@@ -163,9 +161,27 @@ const transactionrStory = storiesOf('Transaction', module).addDecorator(transfer
 	addWithJSX: Function;
 };
 
-transactionrStory.addWithJSX('TransferPrice', () => <SelfkeyDarkTheme><TransferPriceWrapper /></SelfkeyDarkTheme>);
+transactionrStory.addWithJSX('TransferPrice', () => (
+	<SelfkeyDarkTheme>
+		<TransferPriceWrapper />
+	</SelfkeyDarkTheme>
+));
 transactionrStory.addWithJSX('TransactionWithoutGasError', () => (
-	<SelfkeyDarkTheme><TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" /></SelfkeyDarkTheme>
+	<SelfkeyDarkTheme>
+		<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+	</SelfkeyDarkTheme>
+));
+transactionrStory.addWithJSX('TransactionFeeSelector', () => (
+	<SelfkeyDarkTheme>
+		<TransactionFeeSelector
+			minGasPrice={100000000000}
+			maxGasPrice={10000000000000}
+			gasLimit={100}
+			fiat={'USD'}
+			fiatRate={200}
+			onChange={x => console.log('feeSelector', x)}
+		/>
+	</SelfkeyDarkTheme>
 ));
 
 let txList = [
@@ -187,20 +203,30 @@ let txList = [
 	},
 ];
 
-transactionrStory.addWithJSX('History', () => <SelfkeyDarkTheme><TransactionHistory openLink={() => {}} list={txList} /></SelfkeyDarkTheme>);
+transactionrStory.addWithJSX('History', () => (
+	<SelfkeyDarkTheme>
+		<TransactionHistory openLink={() => {}} list={txList} />
+	</SelfkeyDarkTheme>
+));
 
 transactionrStory.addWithJSX('SendTransaction', () => <SendTransaction />);
 transactionrStory.addWithJSX('TransactionNoGasError', () => (
-	<SelfkeyDarkTheme><TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" /></SelfkeyDarkTheme>
+	<SelfkeyDarkTheme>
+		<TransactionNoGasError publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+	</SelfkeyDarkTheme>
 ));
 transactionrStory.addWithJSX('TransactionErrorBox', () => (
-	<SelfkeyDarkTheme><TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" /></SelfkeyDarkTheme>
+	<SelfkeyDarkTheme>
+		<TransactionErrorBox publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe" />
+	</SelfkeyDarkTheme>
 ));
 transactionrStory.addWithJSX('TransactionError', () => (
-	<SelfkeyDarkTheme><TransactionError
-		message="Returned error: intrinsic gas too low"
-		publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"
-	/></SelfkeyDarkTheme>
+	<SelfkeyDarkTheme>
+		<TransactionError
+			message="Returned error: intrinsic gas too low"
+			publicKey="0x4184288c556524df9cb9e58b73265ee66dca4efe"
+		/>
+	</SelfkeyDarkTheme>
 ));
 
 transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
@@ -215,28 +241,70 @@ transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
 ));
 
 transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
-	<SelfkeyDarkTheme><TransactionSendProgressBox
-		locale="en"
-		status="Pending"
-		cryptoCurrency="KEY"
-		address="0x4184288c556524df9cb9e58b73265ee66dca4efe"
-		transactionHash="0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd"
-		amount={0.00001}
-	/></SelfkeyDarkTheme>
+	<SelfkeyDarkTheme>
+		<TransactionSendProgressBox
+			locale="en"
+			status="Pending"
+			cryptoCurrency="KEY"
+			address="0x4184288c556524df9cb9e58b73265ee66dca4efe"
+			transactionHash="0x052170c7f12041cae71895d8ea37ae3ce8ac87f9448d3861ab6c4f5585d521fd"
+			amount={0.00001}
+		/>
+	</SelfkeyDarkTheme>
 ));
 
 const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
 
-lws.addWithJSX('LWSHeader', () => <SelfkeyDarkTheme><LWSModalHeader /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSSelectWallet', () => <SelfkeyDarkTheme><LWSSelectWalletWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSRequiredInfo', () => <SelfkeyDarkTheme><LWSRequiredInfoWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSWalletConnectionError', () => <SelfkeyDarkTheme><LWSWalletConnectionErrorWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSSelfkeyIdError', () => <SelfkeyDarkTheme><LWSSelfkeyIdErrorWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSExtensionError', () => <SelfkeyDarkTheme><LWSExtensionErrorWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSSuccess', () => <SelfkeyDarkTheme><LWSSuccessWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSWalletConnectionErrorModal', () => <SelfkeyDarkTheme><LWSWalletConnectionErrorWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSAuthError', () => <SelfkeyDarkTheme><LWSAuthErrorWrapper /></SelfkeyDarkTheme>);
-lws.addWithJSX('LWSLoading', () => <SelfkeyDarkTheme><LWSLoading /></SelfkeyDarkTheme>);
+lws.addWithJSX('LWSHeader', () => (
+	<SelfkeyDarkTheme>
+		<LWSModalHeader />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSSelectWallet', () => (
+	<SelfkeyDarkTheme>
+		<LWSSelectWalletWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSRequiredInfo', () => (
+	<SelfkeyDarkTheme>
+		<LWSRequiredInfoWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSWalletConnectionError', () => (
+	<SelfkeyDarkTheme>
+		<LWSWalletConnectionErrorWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSSelfkeyIdError', () => (
+	<SelfkeyDarkTheme>
+		<LWSSelfkeyIdErrorWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSExtensionError', () => (
+	<SelfkeyDarkTheme>
+		<LWSExtensionErrorWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSSuccess', () => (
+	<SelfkeyDarkTheme>
+		<LWSSuccessWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSWalletConnectionErrorModal', () => (
+	<SelfkeyDarkTheme>
+		<LWSWalletConnectionErrorWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSAuthError', () => (
+	<SelfkeyDarkTheme>
+		<LWSAuthErrorWrapper />
+	</SelfkeyDarkTheme>
+));
+lws.addWithJSX('LWSLoading', () => (
+	<SelfkeyDarkTheme>
+		<LWSLoading />
+	</SelfkeyDarkTheme>
+));
 
 const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
 
@@ -366,4 +434,3 @@ theme.addWithJSX('Statuses', () => (
 		<StatusStories />
 	</SelfkeyDarkTheme>
 ));
-
