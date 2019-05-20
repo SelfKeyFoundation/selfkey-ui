@@ -117,3 +117,5 @@ export { CalendarDepositIcon } from './icons/calendar-deposit';
 export { UserPlusIcon } from './icons/userplus';
 export { DIDIcon } from './icons/did';
 export { MergeIcon } from './icons/merge';
+export { BankIcon } from './icons/bank';
+export { MoneyIcon } from './icons/money';

@@ -6,6 +6,7 @@ import {
 	AddressBookMenuIcon,
 	AnimatedLoadingIcon,
 	AttributeAlertIcon,
+	BankIcon,
 	BookIcon,
 	CalendarIcon,
 	CalendarDepositIcon,
@@ -55,6 +56,7 @@ import {
 	MenuButtonIcon,
 	MergeIcon,
 	ModalCloseIcon,
+	MoneyIcon,
 	MuiDeleteIcon,
 	MuiEditIcon,
 	MuiVisibilityIcon,
@@ -155,6 +157,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<AttributeAlertIcon />`}</code>
 			</pre>
 			<AttributeAlertIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<BankIcon />`}</code>
+			</pre>
+			<BankIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -498,6 +507,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<MergeIcon />`}</code>
 			</pre>
 			<MergeIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MoneyIcon />`}</code>
+			</pre>
+			<MoneyIcon height="200" />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
