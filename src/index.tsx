@@ -40,6 +40,7 @@ export { AddressBookAdd } from './address-book/address-book-add';
 export { AddressBookEdit } from './address-book/address-book-edit';
 export { ModalBox } from './common/modal-box';
 export { Copy } from './common/copy';
+export { CopyWithIcon } from './common/copywithicon';
 export { StyledButton } from './common/styled-button';
 
 export * from './theme/selfkey-dark-theme';
