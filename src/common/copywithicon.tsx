@@ -3,17 +3,9 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 // @ts-ignore
 import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
 import ClipboardIcon from "../icons/clipboard";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 
 export const styles: StyleSheet = {
-    copyButtonSpan: {
-        fontSize: "11px",
-        lineHeight: "12px",
-        fontFamily: 'Lato, arial, sans-serif',
-        letterSpacing: "normal",
-        color: "#93b0c1"
-    },
-
     clipboard: {
         cursor: "pointer",
         '&:hover': {
@@ -25,6 +17,11 @@ export const styles: StyleSheet = {
 
     icon: {
       marginBottom: '10px'
+    },
+
+    copyText: {
+      minWidth: '50px',
+      textAlign: 'center'
     }
 };
 
@@ -40,8 +37,8 @@ export type StyledProps = WithStyles<keyof typeof styles> & CopyProps;
 
 
 export class CopyComponent extends React.Component<StyledProps, CopyState> {
-  copyText = "COPY";
-  copiedText = "COPIED";
+  copyText = "Copy";
+  copiedText = "Copied";
 
   state = {
     copyTextPlaceholder: this.copyText
@@ -67,9 +64,9 @@ export class CopyComponent extends React.Component<StyledProps, CopyState> {
       <CopyToClipboard text={text} onCopy={this.handleOnCopy()}>
         <Grid container alignItems="center" direction="column" className={classes.clipboard}>
           <ClipboardIcon className={classes.icon} />
-          <p className={classes.copyButtonSpan}>
+          <Typography variant="subtitle2" color="secondary" className={classes.copyText}>
             {this.state.copyTextPlaceholder}
-          </p>
+          </Typography>
         </Grid>
       </CopyToClipboard>
     );

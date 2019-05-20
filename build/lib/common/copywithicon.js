@@ -20,13 +20,6 @@ var react_jss_1 = require("react-jss");
 var clipboard_1 = require("../icons/clipboard");
 var core_1 = require("@material-ui/core");
 exports.styles = {
-    copyButtonSpan: {
-        fontSize: "11px",
-        lineHeight: "12px",
-        fontFamily: 'Lato, arial, sans-serif',
-        letterSpacing: "normal",
-        color: "#93b0c1"
-    },
     clipboard: {
         cursor: "pointer",
         '&:hover': {
@@ -37,14 +30,18 @@ exports.styles = {
     },
     icon: {
         marginBottom: '10px'
+    },
+    copyText: {
+        minWidth: '50px',
+        textAlign: 'center'
     }
 };
 var CopyComponent = /** @class */ (function (_super) {
     __extends(CopyComponent, _super);
     function CopyComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.copyText = "COPY";
-        _this.copiedText = "COPIED";
+        _this.copyText = "Copy";
+        _this.copiedText = "Copied";
         _this.state = {
             copyTextPlaceholder: _this.copyText
         };
@@ -65,7 +62,7 @@ var CopyComponent = /** @class */ (function (_super) {
         return (React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: text, onCopy: this.handleOnCopy() },
             React.createElement(core_1.Grid, { container: true, alignItems: "center", direction: "column", className: classes.clipboard },
                 React.createElement(clipboard_1.default, { className: classes.icon }),
-                React.createElement("p", { className: classes.copyButtonSpan }, this.state.copyTextPlaceholder))));
+                React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary", className: classes.copyText }, this.state.copyTextPlaceholder))));
     };
     return CopyComponent;
 }(React.Component));
