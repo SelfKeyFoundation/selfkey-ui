@@ -721,7 +721,9 @@ const theme = createMuiTheme({
 		},
 		MuiTab: {
 			root: {
+				borderBottom: `4px solid transparent`,
 				textTransform: 'initial',
+				minWidth: '0 !important',
 				'&:hover': {
 					borderBottom: `4px solid ${grey}`,
 					boxSizing: 'border-box',
@@ -734,6 +736,12 @@ const theme = createMuiTheme({
 			textColorInherit: {
 				color: typography,
 			},
+			wrapper: {
+				width: 'initial',
+			},
+			labelContainer: {
+				padding: '6px 15px !important'
+			}
 		},
 		MuiExpansionPanel: {
 			root: {

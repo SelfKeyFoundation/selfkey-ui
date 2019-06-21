@@ -717,7 +717,9 @@ var theme = core_1.createMuiTheme({
         },
         MuiTab: {
             root: {
+                borderBottom: "4px solid transparent",
                 textTransform: 'initial',
+                minWidth: '0 !important',
                 '&:hover': {
                     borderBottom: "4px solid " + colors_1.grey,
                     boxSizing: 'border-box',
@@ -730,6 +732,12 @@ var theme = core_1.createMuiTheme({
             textColorInherit: {
                 color: colors_1.typography,
             },
+            wrapper: {
+                width: 'initial',
+            },
+            labelContainer: {
+                padding: '6px 15px !important'
+            }
         },
         MuiExpansionPanel: {
             root: {
