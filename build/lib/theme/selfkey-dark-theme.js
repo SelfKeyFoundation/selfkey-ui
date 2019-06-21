@@ -713,11 +713,14 @@ var theme = core_1.createMuiTheme({
             indicator: {
                 backgroundColor: colors_1.primary,
                 height: '4px',
+                marginLeft: '-1px',
             },
         },
         MuiTab: {
             root: {
+                borderBottom: "4px solid transparent",
                 textTransform: 'initial',
+                minWidth: '0 !important',
                 '&:hover': {
                     borderBottom: "4px solid " + colors_1.grey,
                     boxSizing: 'border-box',
@@ -730,6 +733,16 @@ var theme = core_1.createMuiTheme({
             textColorInherit: {
                 color: colors_1.typography,
             },
+            wrapper: {
+                width: 'initial',
+            },
+            labelContainer: {
+                padding: '6px 15px !important'
+            },
+            label: {
+                fontSize: '16px',
+                lineHeight: '19px',
+            }
         },
         MuiExpansionPanel: {
             root: {
