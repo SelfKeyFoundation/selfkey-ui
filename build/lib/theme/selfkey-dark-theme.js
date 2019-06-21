@@ -713,6 +713,7 @@ var theme = core_1.createMuiTheme({
             indicator: {
                 backgroundColor: colors_1.primary,
                 height: '4px',
+                marginLeft: '-1px',
             },
         },
         MuiTab: {
@@ -737,6 +738,10 @@ var theme = core_1.createMuiTheme({
             },
             labelContainer: {
                 padding: '6px 15px !important'
+            },
+            label: {
+                fontSize: '16px',
+                lineHeight: '19px',
             }
         },
         MuiExpansionPanel: {
