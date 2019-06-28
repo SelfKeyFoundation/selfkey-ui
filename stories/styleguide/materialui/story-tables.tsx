@@ -38,12 +38,12 @@ export default function TableStories () {
             <Table>
                 <TableHead>
                     <LargeTableHeadRow>
-                        <TableCell><Typography variant="overline" gutterBottom>Name</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Type</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Role</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Residency/Domicile</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Shares</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Actions</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Name</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Type</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Role</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Residency/Domicile</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Shares</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Actions</Typography></TableCell>
                     </LargeTableHeadRow>
                 </TableHead>
 
@@ -77,22 +77,22 @@ export default function TableStories () {
                         return (
                         <TableRow key={row.name}>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.name}</Typography>
+                                <Typography variant="h6" >{row.name}</Typography>
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.type}</Typography>
+                                <Typography variant="h6" >{row.type}</Typography>
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.role}</Typography>
+                                <Typography variant="h6" >{row.role}</Typography>
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.residency}</Typography>
+                                <Typography variant="h6" >{row.residency}</Typography>
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.shares}</Typography>
+                                <Typography variant="h6" >{row.shares}</Typography>
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>
+                                <Typography variant="h6" >
                                     <IconButton aria-label="Edit">
                                         <MuiEditIcon/>
                                     </IconButton>
@@ -107,21 +107,21 @@ export default function TableStories () {
                 </TableBody>
             </Table><br/>
 
-            <Typography variant="h3" style={underlineStyle} gutterBottom>
+            <Typography variant="h3" style={underlineStyle} >
                 Small Table
             </Typography>
             <Table>
                 <TableHead>
                     <SmallTableHeadRow>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Type</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Role</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Name</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>E-Mail</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Citizensip / Incorporation</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Residency / Domicile</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Shares</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Selfkey User</Typography></SmallTableCell>
-                        <SmallTableCell><Typography variant="overline" gutterBottom>Actions</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Type</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Role</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Name</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >E-Mail</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Citizensip / Incorporation</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Residency / Domicile</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Shares</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Selfkey User</Typography></SmallTableCell>
+                        <SmallTableCell><Typography variant="overline" >Actions</Typography></SmallTableCell>
                     </SmallTableHeadRow>
                 </TableHead>
 
@@ -178,53 +178,53 @@ export default function TableStories () {
                             <SmallTableRow key={row.name}>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.type}</Typography> 
-                                        : <Typography variant="subtitle1" gutterBottom>{row.type}</Typography>
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.type}</Typography> 
+                                        : <Typography variant="subtitle1" >{row.type}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.role}</Typography> 
-                                        : <Typography variant="subtitle1" gutterBottom>{row.role}</Typography>
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.role}</Typography> 
+                                        : <Typography variant="subtitle1" >{row.role}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.name}</Typography> 
-                                        : <Typography variant="subtitle1" gutterBottom>{row.name}</Typography>
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.name}</Typography> 
+                                        : <Typography variant="subtitle1" >{row.name}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.email}</Typography> 
-                                        : <Typography variant="subtitle1" gutterBottom>{row.email}</Typography>
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.email}</Typography> 
+                                        : <Typography variant="subtitle1" >{row.email}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.citizensip}</Typography> 
-                                        : <Typography variant="subtitle1" gutterBottom>{row.citizensip}</Typography>
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.citizensip}</Typography> 
+                                        : <Typography variant="subtitle1" >{row.citizensip}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.residency}</Typography> 
-                                        : <Typography variant="subtitle1" gutterBottom>{row.residency}</Typography>
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.residency}</Typography> 
+                                        : <Typography variant="subtitle1" >{row.residency}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" gutterBottom>{row.shares}</Typography> 
-                                        : <Typography variant="subtitle1" gutterBottom>{row.shares}</Typography>
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.shares}</Typography> 
+                                        : <Typography variant="subtitle1" >{row.shares}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    <Typography variant="subtitle1" color="primary" gutterBottom>
+                                    <Typography variant="subtitle1" color="primary" >
                                         { row.user === 'logo' ? <SelfkeyLogo/> : row.user}
                                     </Typography>
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    <Typography variant="subtitle1" gutterBottom>
+                                    <Typography variant="subtitle1" >
                                         { row.disabled 
                                             ?  <IconButton aria-label="Edit" disabled>
                                                     <MuiEditIcon/>
@@ -250,18 +250,18 @@ export default function TableStories () {
                 </TableBody>
             </Table><br/>
 
-            <Typography variant="h3" style={underlineStyle} gutterBottom>
+            <Typography variant="h3" style={underlineStyle} >
                 Multi-Line Table
             </Typography>
             <Table>
                 <TableHead>
                     <LargeTableHeadRow>
-                        <TableCell><Typography variant="overline" gutterBottom></Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Name</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Type</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Good for</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Shares</Typography></TableCell>
-                        <TableCell><Typography variant="overline" gutterBottom>Actions</Typography></TableCell>
+                        <TableCell><Typography variant="overline" ></Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Name</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Type</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Good for</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Shares</Typography></TableCell>
+                        <TableCell><Typography variant="overline" >Actions</Typography></TableCell>
                     </LargeTableHeadRow>
                 </TableHead>
 
@@ -298,8 +298,8 @@ export default function TableStories () {
                                 { row.type === 'Person' ? <PersonIcon/> : <CorporateIcon/> }
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.name}</Typography>
-                                <Typography variant="subtitle1" color="secondary" gutterBottom>{row.role}</Typography>
+                                <Typography variant="h6" >{row.name}</Typography>
+                                <Typography variant="subtitle1" color="secondary" >{row.role}</Typography>
                             </TableCell>
                             <TableCell>
                                 <Grid container>
@@ -307,25 +307,27 @@ export default function TableStories () {
                                         { row.type === 'Person' ? <FilePdfIcon /> : <FileImageIcon /> }
                                     </Grid>
                                     <Grid item xs={6}>
-                                        <Typography variant="h6" gutterBottom>{row.name}</Typography>
-                                        <Typography variant="subtitle1" color="secondary" gutterBottom>{row.role}</Typography>
+                                        <Typography variant="h6" >{row.name}</Typography>
+                                        <Typography variant="subtitle1" color="secondary" >{row.role}</Typography>
                                     </Grid>
                                 </Grid>
                             </TableCell>
                             <TagTableCell>
-                                {
-                                    row.tags.map(tag => {
-                                        return (
-                                            <Tag key={tag}>{tag}</Tag>
-                                        )
-                                    })
-                                }
+                                <Grid container>
+                                    {
+                                        row.tags.map(tag => {
+                                            return (
+                                                <Tag key={tag}>{tag}</Tag>
+                                                )
+                                            })
+                                    }
+                                </Grid>
                             </TagTableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>{row.shares}</Typography>
+                                <Typography variant="h6" >{row.shares}</Typography>
                             </TableCell>
                             <TableCell>
-                                <Typography variant="h6" gutterBottom>
+                                <Typography variant="h6" >
                                     <IconButton aria-label="Edit">
                                         <MuiEditIcon/>
                                     </IconButton>
