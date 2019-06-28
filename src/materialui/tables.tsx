@@ -22,7 +22,6 @@ export const SmallTableRow = withStyles({
 export const SmallTableCell = withStyles({
   root: {
     height: '40px',
-    // maxWidth: '150px',
     padding: '0 15px',
   },
   footer: {
@@ -33,11 +32,6 @@ export const SmallTableCell = withStyles({
 
 export const TagTableCell = withStyles({
   root: {
-    // alignItems: 'center',
-    // display: 'flex',
-    // flexDirection: 'row',
-    // flexWrap: 'wrap',
-    // justifyContent: 'flex-start',
     verticalAlign: 'middle',
     maxWidth: '350px',
   },
