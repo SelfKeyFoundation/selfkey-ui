@@ -30,11 +30,12 @@ exports.SmallTableCell = core_1.withStyles({
 })(core_1.TableCell);
 exports.TagTableCell = core_1.withStyles({
     root: {
-        alignItems: 'center',
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'flex-start',
+        // alignItems: 'center',
+        // display: 'flex',
+        // flexDirection: 'row',
+        // flexWrap: 'wrap',
+        // justifyContent: 'flex-start',
+        verticalAlign: 'middle',
         maxWidth: '350px',
     },
 })(core_1.TableCell);

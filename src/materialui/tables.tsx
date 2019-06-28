@@ -33,11 +33,12 @@ export const SmallTableCell = withStyles({
 
 export const TagTableCell = withStyles({
   root: {
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-start',
+    // alignItems: 'center',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // flexWrap: 'wrap',
+    // justifyContent: 'flex-start',
+    verticalAlign: 'middle',
     maxWidth: '350px',
   },
 })(TableCell);

@@ -683,7 +683,7 @@ var theme = core_1.createMuiTheme({
         MuiTableCell: {
             root: {
                 borderBottom: 0,
-                padding: '0 30px',
+                padding: '15px 30px',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
@@ -693,7 +693,8 @@ var theme = core_1.createMuiTheme({
                 borderBottom: 0,
             },
             body: {
-                height: '74px',
+                boxSizing: 'border-box',
+                minHeight: '74px',
             },
             footer: {
                 color: colors_1.warning,

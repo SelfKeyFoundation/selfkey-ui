@@ -687,7 +687,7 @@ const theme = createMuiTheme({
 		MuiTableCell: {
 			root: {
 				borderBottom: 0,
-				padding: '0 30px',
+				padding: '15px 30px',
 				whiteSpace: 'nowrap',
 				overflow: 'hidden',
 				textOverflow: 'ellipsis',
@@ -697,7 +697,8 @@ const theme = createMuiTheme({
 				borderBottom: 0,
 			},
 			body: {
-				height: '74px',
+				boxSizing: 'border-box',
+				minHeight: '74px',
 			},
 			footer: {
 				color: warning,
