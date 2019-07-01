@@ -511,7 +511,6 @@ const theme = createMuiTheme({
 		},
 		MuiSelect: {
 			root: {
-				backgroundColor: baseDark,
 				borderRadius: '4px',
 				lineHeight: 'initial',
 				'& option': {
@@ -527,6 +526,12 @@ const theme = createMuiTheme({
 				color: white,
 				fontSize: '14px',
 				lineHeight: '21px',
+			},
+			error: {
+				backgroundColor: 'rgba(255, 46, 99, 0.09)',
+				border: `1px solid ${error}`,
+				color: error,
+				marginBottom: '6px',
 			},
 		},
 		MuiMenu: {

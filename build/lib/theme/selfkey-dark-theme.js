@@ -507,7 +507,6 @@ var theme = core_1.createMuiTheme({
         },
         MuiSelect: {
             root: {
-                backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
                 lineHeight: 'initial',
                 '& option': {
@@ -523,6 +522,12 @@ var theme = core_1.createMuiTheme({
                 color: colors_1.white,
                 fontSize: '14px',
                 lineHeight: '21px',
+            },
+            error: {
+                backgroundColor: 'rgba(255, 46, 99, 0.09)',
+                border: "1px solid " + colors_1.error,
+                color: colors_1.error,
+                marginBottom: '6px',
             },
         },
         MuiMenu: {
