@@ -365,7 +365,7 @@ exports[`Status Completed should show Status Missing 1`] = `
         className="MuiGrid-item-9"
       >
         <button
-          className="MuiButtonBase-root-185 MuiButton-root-159 MuiButton-contained-170 MuiButton-raised-173 MuiButton-sizeLarge-183"
+          className="MuiButtonBase-root-186 MuiButton-root-160 MuiButton-contained-171 MuiButton-raised-174 MuiButton-sizeLarge-184"
           disabled={false}
           onBlur={[Function]}
           onContextMenu={[Function]}
@@ -382,12 +382,12 @@ exports[`Status Completed should show Status Missing 1`] = `
           type="button"
         >
           <span
-            className="MuiButton-label-160"
+            className="MuiButton-label-161"
           >
             Add Documents
           </span>
           <span
-            className="MuiTouchRipple-root-188"
+            className="MuiTouchRipple-root-189"
           />
         </button>
       </div>
