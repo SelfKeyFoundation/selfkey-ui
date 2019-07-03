@@ -167,7 +167,7 @@ var theme = core_1.createMuiTheme({
             title: {
                 color: colors_1.white,
                 fontSize: '18px',
-                fontWeight: 600,
+                fontWeight: 400,
                 lineHeight: '22px',
             },
             subheader: {
@@ -244,6 +244,9 @@ var theme = core_1.createMuiTheme({
                 textTransform: 'uppercase',
                 whiteSpace: 'normal',
             },
+            gutterBottom: {
+                marginBottom: '1em'
+            }
         },
         MuiList: {
             root: {

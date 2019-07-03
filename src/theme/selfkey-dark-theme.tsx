@@ -171,7 +171,7 @@ const theme = createMuiTheme({
 			title: {
 				color: white,
 				fontSize: '18px',
-				fontWeight: 600,
+				fontWeight: 400,
 				lineHeight: '22px',
 			},
 			subheader: {
@@ -248,6 +248,9 @@ const theme = createMuiTheme({
 				textTransform: 'uppercase',
 				whiteSpace: 'normal',
 			},
+			gutterBottom: {
+				marginBottom: '1em'
+			}
 		},
 		MuiList: {
 			root: {
