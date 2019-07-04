@@ -8,24 +8,6 @@ exports[`ID Card Icon should show ID Card Icon 1`] = `
   role="presentation"
   viewBox="0 0 41 60"
 >
-  <defs>
-    <linearGradient
-      id="id-card-linearGradient-1"
-      x1="50%"
-      x2="41.8489583%"
-      y1="97.783801%"
-      y2="-16.3970588%"
-    >
-      <stop
-        offset="0%"
-        stopColor="#08BCCD"
-      />
-      <stop
-        offset="100%"
-        stopColor="#2DA1F8"
-      />
-    </linearGradient>
-  </defs>
   <g
     fill="none"
     fillRule="evenodd"
@@ -34,7 +16,7 @@ exports[`ID Card Icon should show ID Card Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#id-card-linearGradient-1)"
+      fill="#09A8BA"
       fillRule="nonzero"
       id="403---Identity-Summary"
       transform="translate(-253.000000, -581.000000)"
