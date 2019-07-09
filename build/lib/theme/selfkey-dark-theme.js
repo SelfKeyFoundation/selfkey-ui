@@ -825,6 +825,10 @@ var theme = core_1.createMuiTheme({
                 // backgroundColor: base,
                 background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
             },
+            invisible: {
+                background: 'transparent',
+                backgroundColor: 'transparent'
+            }
         },
         // @ts-ignore
         MuiToggleButtonGroup: {
