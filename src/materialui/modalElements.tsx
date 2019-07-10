@@ -10,7 +10,7 @@ export const ModalWrap = withStyles({
 		margin: '0 auto',
 		outline: 'none',
 		position: 'absolute',
-		top: '100px',
+		top: '150px',
 		width: '780px',
 		marginBottom: '50px',
 	},
