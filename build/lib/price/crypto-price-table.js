@@ -20,7 +20,6 @@ var react_jss_1 = require("react-jss");
 var price_summary_1 = require("./price-summary");
 var visibility_on_1 = require("../icons/visibility-on");
 var visibility_off_1 = require("../icons/visibility-off");
-/* eslint no-unused-expressions: [1, { "allowTernary": true }] */
 exports.styles = {
     cryptoPriceTable: {
         fontFamily: 'Lato, arial, sans-serif',
@@ -90,6 +89,7 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             icon = React.createElement(visibility_on_1.VisibilityOnIcon, { className: classes.iconSize });
         }
         return (React.createElement("div", { onClick: function (event) {
+                /* eslint no-unused-expressions: [1, { "allowTernary": true }] */
                 toggleAction
                     ? toggleAction(event, token)
                     : function () {
