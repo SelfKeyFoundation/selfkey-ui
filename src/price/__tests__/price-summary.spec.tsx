@@ -6,7 +6,7 @@ import { PriceSummary } from '../price-summary';
 describe('Price Summary', () => {
   it('should show Price Summary', () => {
     const component = create(
-      <PriceSummary locale='en' style='currency' currency='USD' value={0.0001}/>
+      <PriceSummary locale='en' priceStyle='currency' currency='USD' value={0.0001}/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -14,7 +14,7 @@ describe('Price Summary', () => {
 
   it('should show Price Summary with appendCurrency', () => {
     const component = create(
-      <PriceSummary locale='en' style='currency' currency='USD' value={0.0001} appendCurrency/>
+      <PriceSummary locale='en' priceStyle='currency' currency='USD' value={0.0001} appendCurrency/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('Price Summary', () => {
 
   it('should show Price Summary with prependCurrency', () => {
     const component = create(
-      <PriceSummary locale='en' style='currency' currency='USD' value={0.0001} prependCurrency/>
+      <PriceSummary locale='en' priceStyle='currency' currency='USD' value={0.0001} prependCurrency/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -30,7 +30,7 @@ describe('Price Summary', () => {
 
   it('should show Price Summary with currencyClass', () => {
     const component = create(
-      <PriceSummary locale='en' style='currency' currency='USD' value={0.0001} currencyClass='test'/>
+      <PriceSummary locale='en' priceStyle='currency' currency='USD' value={0.0001} currencyClass='test'/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
