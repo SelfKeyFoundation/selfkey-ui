@@ -1,6 +1,6 @@
 import jss from 'jss';
-import reset = require('reset-jss');
 import preset from 'jss-preset-default';
+import reset = require('reset-jss');
 
 export const setup = () => {
 	jss.setup(preset());

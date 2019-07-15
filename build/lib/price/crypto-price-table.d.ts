@@ -1,5 +1,6 @@
+/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
+import { WithStyles, StyleSheet } from 'react-jss';
 export declare const styles: StyleSheet;
 export declare type Token = {
     name: string;
@@ -26,5 +27,5 @@ export declare class CryptoPriceTableComponent extends React.Component<StyledPro
     renderRow(token: Token, index: number): JSX.Element;
     render(): JSX.Element;
 }
-export declare const CryptoPriceTable: React.ComponentType<CryptoPriceTableProps & StyledComponentProps<string>>;
+export declare const CryptoPriceTable: React.ComponentType<CryptoPriceTableProps & import("react-jss").StyledComponentProps<string>>;
 export default CryptoPriceTable;

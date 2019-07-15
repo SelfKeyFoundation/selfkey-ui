@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 // @ts-ignore
-import injectSheet, { WithStyles, StyleSheet, StyledComponentProps, ClassNameMap } from 'react-jss';
+import injectSheet, { WithStyles, StyleSheet } from 'react-jss';
 
 import { PriceSummary } from './price-summary';
 import { VisibilityOnIcon } from '../icons/visibility-on';
@@ -103,6 +103,7 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 		return (
 			<div
 				onClick={(event: React.MouseEvent<HTMLElement>) => {
+					/* eslint no-unused-expressions: [1, { "allowTernary": true }] */
 					toggleAction
 						? toggleAction(event, token)
 						: () => {
@@ -126,18 +127,18 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 					<PriceSummary
 						className={classes.test}
 						locale={locale}
-						style="decimal"
+						priceStyle="decimal"
 						currency={token.symbol}
 						value={token.balance}
 					/>
 				</TableCell>
 				<TableCell align="right">
-					<PriceSummary locale={locale} style="currency" currency={fiatCurrency} value={token.price} />
+					<PriceSummary locale={locale} priceStyle="currency" currency={fiatCurrency} value={token.price} />
 				</TableCell>
 				<TableCell align="right">
 					<PriceSummary
 						locale={locale}
-						style="currency"
+						priceStyle="currency"
 						currency={fiatCurrency}
 						value={token.balanceInFiat}
 					/>

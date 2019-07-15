@@ -1,6 +1,6 @@
 import * as React from 'react';
 // @ts-ignore
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
+import injectSheet, { StyleSheet } from 'react-jss';
 import CommonStyle from '../../../common/common-style';
 import { NumberFormat } from '../../../price/number-format';
 import { Grid } from '@material-ui/core';
@@ -25,7 +25,7 @@ export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeB
         <Grid item>
             <Grid container spacing={8}>
                 <Grid item>
-                    <NumberFormat locale={locale} style='decimal' currency='ETH' value={ethFee} fractionDigits={15}/>
+                    <NumberFormat locale={locale} priceStyle='decimal' currency='ETH' value={ethFee} fractionDigits={15}/>
                 </Grid>
                 <Grid item>
                     ETH
@@ -38,7 +38,7 @@ export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeB
         <Grid item>
             <Grid container spacing={8}>
                 <Grid item>
-                    <NumberFormat locale={locale} style='currency' currency={fiatCurrency} value={usdFee} fractionDigits={15}/>
+                    <NumberFormat locale={locale} priceStyle='currency' currency={fiatCurrency} value={usdFee} fractionDigits={15}/>
                 </Grid>
                 <Grid item>
                     {fiatCurrency}

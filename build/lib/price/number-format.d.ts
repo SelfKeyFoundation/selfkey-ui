@@ -1,7 +1,7 @@
 import { SFC } from "react";
 export declare type NumberFormatProps = {
     locale: string;
-    style: string;
+    priceStyle: string;
     currency?: string;
     value: number;
     fractionDigits?: number;

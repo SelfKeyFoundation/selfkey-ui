@@ -3,7 +3,7 @@ import { SFC } from "react";
 
 export type NumberFormatProps = {
   locale: string,
-  style: string,
+  priceStyle: string,
   currency?: string,
   value: number,
   fractionDigits?: number
@@ -21,21 +21,21 @@ export type OptionsType = {
 
 export const NumberFormat: SFC<NumberFormatProps> = ({
   locale,
-  style,
+  priceStyle,
   currency,
   value,
   fractionDigits
 }) => {
   fractionDigits = (fractionDigits)? fractionDigits : (Number(value) >= 1) ? 2 : 10;
-  const formatString = `${locale}:${style}:${currency}:${fractionDigits || "default"}`;
+  const formatString = `${locale}:${priceStyle}:${currency}:${fractionDigits || "default"}`;
 
   if (locale && !formatters[formatString]) {
     const options: OptionsType = {
-      style: style,
+      style: priceStyle,
       maximumFractionDigits: fractionDigits
     };
 
-    if (style === 'currency') {
+    if (priceStyle === 'currency') {
       options.currency = currency;
     }
 

@@ -1,5 +1,5 @@
+/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { StyledComponentProps } from 'react-jss';
 export declare type CryptoPriceBoxProps = {
     locale: string;
     cryptoCurrency: string;
@@ -7,5 +7,5 @@ export declare type CryptoPriceBoxProps = {
     toCurrency: string;
     toValue: number;
 };
-export declare const CryptoPriceBox: React.ComponentType<CryptoPriceBoxProps & StyledComponentProps<string>>;
+export declare const CryptoPriceBox: React.ComponentType<CryptoPriceBoxProps & import("react-jss").StyledComponentProps<string>>;
 export default CryptoPriceBox;

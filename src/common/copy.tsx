@@ -1,7 +1,7 @@
 import * as React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 // @ts-ignore
-import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
+import injectSheet, { WithStyles, StyleSheet } from 'react-jss';
 
 export const styles: StyleSheet = {
   copyButton: {

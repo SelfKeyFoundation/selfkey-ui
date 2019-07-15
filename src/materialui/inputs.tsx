@@ -83,7 +83,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props: Multili
 				return onSelectUpdated([item.key]);
 			}
 			if (isSelected(item)) {
-				return onSelectUpdated(selected.filter((x: any) => x != item.key));
+				return onSelectUpdated(selected.filter((x: any) => x !== item.key));
 			}
 			return onSelectUpdated([...selected, item.key]);
 		};

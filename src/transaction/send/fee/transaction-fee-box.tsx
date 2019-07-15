@@ -1,6 +1,6 @@
 import * as React from 'react';
 // @ts-ignore
-import injectSheet, { WithStyles, StyleSheet, StyledComponentProps, ClassNameMap } from 'react-jss';
+import injectSheet, { WithStyles, StyleSheet } from 'react-jss';
 import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
 import CommonStyle from '../../../common/common-style';
 import { Grid } from '@material-ui/core';

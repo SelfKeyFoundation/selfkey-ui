@@ -1,6 +1,6 @@
 import * as React from 'react';
 // @ts-ignore
-import injectSheet, { StyleSheet, StyledComponentProps, ClassNameMap, WithStyles } from 'react-jss';
+import injectSheet, { StyleSheet, ClassNameMap, WithStyles } from 'react-jss';
 
 import { Grid } from '@material-ui/core'
 import { ExpandMore, ExpandLess } from '@material-ui/icons';
@@ -295,10 +295,10 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
             <Grid item xs={4}>
               <Grid container alignItems='flex-start'>
                 <Grid item xs={12}>
-                  <PriceSummary locale={locale} style='decimal' currency={token.symbol} className={classes.prices} valueClass={classes.texts} value={token.balance} justify='flex-end'/>
+                  <PriceSummary locale={locale} priceStyle='decimal' currency={token.symbol} className={classes.prices} valueClass={classes.texts} value={token.balance} justify='flex-end'/>
                 </Grid>
                 <Grid item xs={12}>
-                  <PriceSummary locale={locale} style='currency' currency={fiatCurrency} className={classes.prices} valueClass={classes.texts} value={token.balanceInFiat} justify='flex-end'/>
+                  <PriceSummary locale={locale} priceStyle='currency' currency={fiatCurrency} className={classes.prices} valueClass={classes.texts} value={token.balanceInFiat} justify='flex-end'/>
                 </Grid>
               </Grid>
             </Grid>
@@ -453,7 +453,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
                 />
                 <div className={classes.chartCenterContainer}>
                   <div className={classes.totalPrice}>
-                    <NumberFormat locale={locale} currency={fiatCurrency} style='currency' value={this.getTotalBalanceInFiat(tokens)}/>
+                    <NumberFormat locale={locale} currency={fiatCurrency} priceStyle='currency' value={this.getTotalBalanceInFiat(tokens)}/>
                   </div>
                   <div className={classes.totalPriceText}>
                     Total Value {fiatCurrency}
