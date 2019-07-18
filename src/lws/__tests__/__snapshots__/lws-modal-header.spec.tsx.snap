@@ -106,7 +106,7 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
   >
     Login with SelfKey
   </h1>
-  <a
+  <button
     className="Component-closeButton-0-1-2"
   >
     <svg
@@ -153,6 +153,6 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
         </g>
       </g>
     </svg>
-  </a>
+  </button>
 </div>
 `;

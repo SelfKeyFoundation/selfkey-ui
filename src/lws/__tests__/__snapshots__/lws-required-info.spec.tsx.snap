@@ -10,6 +10,7 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
     <h4>
       <a
         href="http://www.pavezicoin.org"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <strong>
@@ -146,6 +147,7 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
        
       <a
         href="http://www.pavezicoin.org"
+        rel="noopener noreferrer"
         target="_blank"
       >
         PaveziCoin
@@ -155,6 +157,7 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
        
       <a
         href="http://www.pavezicoin.org/terms"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Terms of Service
@@ -164,6 +167,7 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
        
       <a
         href="http://www.pavezicoin.org/privacy"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Privacy Policy

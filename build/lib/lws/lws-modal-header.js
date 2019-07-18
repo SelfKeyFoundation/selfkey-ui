@@ -16,6 +16,11 @@ var styles = {
         alignItems: 'center'
     },
     closeButton: {
+        background: 'none',
+        border: 'none',
+        margin: 0,
+        outline: 'none',
+        padding: 0,
         position: 'absolute',
         top: '-18px',
         right: '-18px',
@@ -31,7 +36,7 @@ exports.LWSModalHeader = react_jss_1.default(styles)(function (_a) {
     return (React.createElement("div", { className: classes.root },
         React.createElement(selfkey_dark_theme_1.SelfkeyLogo, { style: { width: '50px', height: '43px' } }),
         React.createElement(core_1.Typography, { variant: "h1", className: classes.title }, "Login with SelfKey"),
-        React.createElement("a", { className: classes.closeButton, onClick: closeAction },
+        React.createElement("button", { className: classes.closeButton, onClick: closeAction },
             React.createElement(close_button_1.CloseButtonIcon, null))));
 });
 exports.default = exports.LWSModalHeader;

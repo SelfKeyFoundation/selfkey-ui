@@ -92,7 +92,12 @@ const styles: StyleSheet = {
 	},
 
 	edit: {
+		background: 'none',
+		border: 'none',
 		cursor: 'pointer',
+		margin: 0,
+		outline: 'none',
+		padding: 0,
 	},
 };
 
@@ -164,9 +169,9 @@ const renderAttributes = (
 							<dt>{attribute.label}</dt>
 							{editAction ? (
 								<dd>
-									<a onClick={editAction} className={classes.edit}>
+									<button onClick={editAction} className={classes.edit}>
 										<EditTransparentIcon />
-									</a>
+									</button>
 								</dd>
 							) : null}
 						</dl>
@@ -193,7 +198,7 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 		<div className={classes.requiredInfo}>
 			<div className={classes.areaTitle}>
 				<h4>
-					<a href={website.url} target="_blank">
+					<a href={website.url} target="_blank" rel="noopener noreferrer">
 						<strong>{website.name}</strong>
 					</a>{' '}
 					would like to access this information:
@@ -211,15 +216,15 @@ export const LWSRequiredInfo = injectSheet(styles)<LWSRequiredInfoProps>(
 
 				<div className={classes.tocMessage}>
 					By clicking "Allow", your information listed above will be used by{' '}
-					<a href={website.url} target="_blank">
+					<a href={website.url} target="_blank" rel="noopener noreferrer">
 						{website.name}
 					</a>{' '}
 					with respect to their{' '}
-					<a href={website.termsUrl} target="_blank">
+					<a href={website.termsUrl} target="_blank" rel="noopener noreferrer">
 						Terms of Service
 					</a>{' '}
 					and{' '}
-					<a href={website.policyUrl} target="_blank">
+					<a href={website.policyUrl} target="_blank" rel="noopener noreferrer">
 						Privacy Policy
 					</a>
 					.

@@ -303,6 +303,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 										onClick={this.handleOpen}
 										href={file.url}
 										target="_blank"
+										rel="noopener noreferrer"
 									>
 										<Typography variant="subtitle1" className={classes.fileName}>
 											{file.name}
