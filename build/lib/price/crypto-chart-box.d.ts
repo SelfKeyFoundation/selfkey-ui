@@ -1,6 +1,5 @@
-/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { StyleSheet, ClassNameMap, WithStyles } from 'react-jss';
+import { StyleSheet, ClassNameMap, WithStyles, StyledComponentProps } from 'react-jss';
 import { ChartEvent } from 'react-google-charts';
 declare const styles: StyleSheet;
 export declare type Token = {
@@ -66,5 +65,5 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     getViewAllSection(): "" | JSX.Element;
     render(): JSX.Element;
 }
-export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & import("react-jss").StyledComponentProps<string>>;
+export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & StyledComponentProps<string>>;
 export default CryptoChartBox;

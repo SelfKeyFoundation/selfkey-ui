@@ -1,6 +1,6 @@
 import * as React from 'react';
 // @ts-ignore
-import injectSheet, { WithStyles, StyleSheet } from 'react-jss';
+import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
 import CommonStyle from '../../common/common-style';
 import { TransactionFeeBox } from './fee/transaction-fee-box';
 import TransactionBox from '../transaction-box';

@@ -1,6 +1,5 @@
-/// <reference path="../../../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { WithStyles, StyleSheet } from 'react-jss';
+import { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
 export declare const styles: StyleSheet;
 export declare type EthGasStationInfo = {
     safeLow: string;
@@ -40,5 +39,5 @@ export declare class TransactionFeeBoxComponent extends React.Component<StyledPr
     renderAdvancedContent(): JSX.Element;
     render(): JSX.Element;
 }
-export declare const TransactionFeeBox: React.ComponentType<TransactionFeeBoxProps & import("react-jss").StyledComponentProps<string>>;
+export declare const TransactionFeeBox: React.ComponentType<TransactionFeeBoxProps & StyledComponentProps<string>>;
 export default TransactionFeeBox;

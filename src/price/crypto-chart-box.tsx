@@ -1,6 +1,6 @@
 import * as React from 'react';
 // @ts-ignore
-import injectSheet, { StyleSheet, ClassNameMap, WithStyles } from 'react-jss';
+import injectSheet, { StyleSheet, ClassNameMap, WithStyles, StyledComponentProps } from 'react-jss';
 
 import { Grid } from '@material-ui/core'
 import { ExpandMore, ExpandLess } from '@material-ui/icons';

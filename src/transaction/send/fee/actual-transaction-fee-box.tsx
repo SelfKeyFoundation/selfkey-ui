@@ -1,6 +1,6 @@
 import * as React from 'react';
 // @ts-ignore
-import injectSheet, { StyleSheet } from 'react-jss';
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 import CommonStyle from '../../../common/common-style';
 import { NumberFormat } from '../../../price/number-format';
 import { Grid } from '@material-ui/core';

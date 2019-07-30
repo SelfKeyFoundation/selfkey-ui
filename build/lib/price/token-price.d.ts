@@ -1,5 +1,5 @@
-/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
 export declare type TokenPriceProps = {
     locale: string;
     cryptoCurrency: string;
@@ -7,5 +7,5 @@ export declare type TokenPriceProps = {
     toCurrency: string;
     toValue: number;
 };
-export declare const TokenPrice: React.ComponentType<TokenPriceProps & import("react-jss").StyledComponentProps<string>>;
+export declare const TokenPrice: React.ComponentType<TokenPriceProps & StyledComponentProps<string>>;
 export default TokenPrice;

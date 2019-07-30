@@ -1,5 +1,5 @@
-/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
+import { StyledComponentProps } from 'react-jss';
 export declare type PriceSummaryProps = {
     className?: string;
     justify?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | undefined;
@@ -12,5 +12,5 @@ export declare type PriceSummaryProps = {
     appendCurrency?: boolean;
     prependCurrency?: boolean;
 };
-export declare const PriceSummary: React.ComponentType<PriceSummaryProps & import("react-jss").StyledComponentProps<string>>;
+export declare const PriceSummary: React.ComponentType<PriceSummaryProps & StyledComponentProps<string>>;
 export default PriceSummary;

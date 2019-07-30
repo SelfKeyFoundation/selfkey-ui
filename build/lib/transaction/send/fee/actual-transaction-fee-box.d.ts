@@ -1,6 +1,5 @@
-/// <reference path="../../../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { StyleSheet } from 'react-jss';
+import { StyleSheet, StyledComponentProps } from 'react-jss';
 export declare const styles: StyleSheet;
 export declare type ActualTransactionFeeBoxProps = {
     locale: string;
@@ -8,5 +7,5 @@ export declare type ActualTransactionFeeBoxProps = {
     usdFee: number;
     fiatCurrency: string;
 };
-export declare const ActualTransactionFeeBox: React.ComponentType<ActualTransactionFeeBoxProps & import("react-jss").StyledComponentProps<string>>;
+export declare const ActualTransactionFeeBox: React.ComponentType<ActualTransactionFeeBoxProps & StyledComponentProps<string>>;
 export default ActualTransactionFeeBox;
