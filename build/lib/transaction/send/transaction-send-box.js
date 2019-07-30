@@ -249,7 +249,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
             React.createElement(core_1.Divider, { className: classes.divider }),
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null,
-                    React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
+                    React.createElement(number_format_1.NumberFormat, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
                 React.createElement("span", null, " USD ")),
             this.renderFeeBox(),
             this.renderButtons()));

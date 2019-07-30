@@ -96,7 +96,7 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
                                 React.createElement(core_1.Typography, { variant: 'display2', className: classes.amountContainer },
                                     React.createElement(core_1.Grid, { container: true },
                                         React.createElement(core_1.Grid, { className: classes.amount, item: true },
-                                            React.createElement(number_format_1.NumberFormat, { locale: locale, style: 'decimal', currency: cryptoCurrency, value: amount, fractionDigits: 15 })),
+                                            React.createElement(number_format_1.NumberFormat, { locale: locale, priceStyle: 'decimal', currency: cryptoCurrency, value: amount, fractionDigits: 15 })),
                                         React.createElement(core_1.Grid, { item: true }, cryptoCurrency)))),
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Typography, { variant: "body2", className: classes.sentTo }, "Destination address")),

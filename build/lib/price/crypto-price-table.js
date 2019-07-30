@@ -89,6 +89,7 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             icon = React.createElement(visibility_on_1.VisibilityOnIcon, { className: classes.iconSize });
         }
         return (React.createElement("div", { onClick: function (event) {
+                /* eslint no-unused-expressions: [1, { "allowTernary": true }] */
                 toggleAction
                     ? toggleAction(event, token)
                     : function () {
@@ -103,11 +104,11 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             React.createElement(core_1.TableCell, null, token.name),
             React.createElement(core_1.TableCell, null, token.symbol),
             React.createElement(core_1.TableCell, { align: "right" },
-                React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, style: "decimal", currency: token.symbol, value: token.balance })),
+                React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, priceStyle: "decimal", currency: token.symbol, value: token.balance })),
             React.createElement(core_1.TableCell, { align: "right" },
-                React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.price })),
+                React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: fiatCurrency, value: token.price })),
             React.createElement(core_1.TableCell, { align: "right" },
-                React.createElement(price_summary_1.PriceSummary, { locale: locale, style: "currency", currency: fiatCurrency, value: token.balanceInFiat })),
+                React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: fiatCurrency, value: token.balanceInFiat })),
             React.createElement(core_1.TableCell, null, token.address),
             React.createElement(core_1.TableCell, null, visibilityButton)));
     };

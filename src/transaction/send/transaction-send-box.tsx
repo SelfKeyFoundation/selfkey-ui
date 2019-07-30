@@ -1,6 +1,6 @@
 import * as React from 'react';
 // @ts-ignore
-import injectSheet, { WithStyles, StyleSheet, StyledComponentProps, ClassNameMap } from 'react-jss';
+import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
 import CommonStyle from '../../common/common-style';
 import { TransactionFeeBox } from './fee/transaction-fee-box';
 import TransactionBox from '../transaction-box';
@@ -328,7 +328,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                 </Grid>
                 <Divider className={classes.divider}/>
                 <Grid container direction="row" justify="space-between" alignItems="center" className={classes.usdAmoutContainer}>
-                    <span><NumberFormat locale={locale} style='currency' currency={fiatCurrency} value={amountUsd} fractionDigits={15}/></span>
+                    <span><NumberFormat locale={locale} priceStyle='currency' currency={fiatCurrency} value={amountUsd} fractionDigits={15}/></span>
                     <span> USD </span>
                 </Grid>
                 {this.renderFeeBox()}

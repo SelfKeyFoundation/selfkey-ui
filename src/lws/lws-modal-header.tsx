@@ -16,6 +16,11 @@ const styles: StyleSheet = {
   },
 
   closeButton: {
+    background: 'none',
+    border: 'none',
+    margin: 0,
+    outline: 'none',
+    padding: 0,
     position: 'absolute',
     top: '-18px',
     right: '-18px',
@@ -37,7 +42,7 @@ export const LWSModalHeader = injectSheet(styles)<LWSModalHeaderProps>(({classes
   <div className={classes.root}>
     <SelfkeyLogo style={{ width: '50px', height: '43px' }} />
     <Typography variant="h1" className={classes.title}>Login with SelfKey</Typography>
-    <a className={classes.closeButton} onClick={closeAction}><CloseButtonIcon/></a>
+    <button className={classes.closeButton} onClick={closeAction}><CloseButtonIcon/></button>
   </div>
 ));
 

@@ -36,6 +36,11 @@ var styles = {
         padding: '30px 42px'
     },
     closeButton: {
+        background: 'none',
+        border: 'none',
+        margin: 0,
+        outline: 'none',
+        padding: 0,
         position: 'absolute',
         top: '-18px',
         right: '-18px',
@@ -46,7 +51,7 @@ exports.ModalBox = react_jss_1.default(styles)(function (_a) {
     return (React.createElement(core_1.Grid, { container: true, className: classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
         React.createElement(core_1.Grid, { item: true, id: 'header', className: classes.header },
             React.createElement(core_1.Typography, { variant: "h2" }, headerText),
-            React.createElement("a", { className: classes.closeButton, onClick: closeAction },
+            React.createElement("button", { className: classes.closeButton, onClick: closeAction },
                 React.createElement(close_button_1.CloseButtonIcon, null))),
         React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body }, children)));
 });

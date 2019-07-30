@@ -29,8 +29,8 @@ export type TokenPriceProps = {
 
 export const TokenPrice = injectSheet(styles)<TokenPriceProps>(({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
     <div>
-        <PriceSummary locale={locale} style='decimal' currency={cryptoCurrency} value={cryptoValue} valueClass={classes.cryptoCurrencyValue}/>
-        <PriceSummary locale={locale} style='currency' currency={toCurrency} currencyClass={classes.currency} value={toValue} valueClass={classes.currency} prependCurrency/>
+        <PriceSummary locale={locale} priceStyle='decimal' currency={cryptoCurrency} value={cryptoValue} valueClass={classes.cryptoCurrencyValue}/>
+        <PriceSummary locale={locale} priceStyle='currency' currency={toCurrency} currencyClass={classes.currency} value={toValue} valueClass={classes.currency} prependCurrency/>
     </div>
 ));
 

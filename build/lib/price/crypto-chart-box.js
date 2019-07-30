@@ -223,9 +223,9 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                     React.createElement(core_1.Grid, { item: true, xs: 4 },
                         React.createElement(core_1.Grid, { container: true, alignItems: 'flex-start' },
                             React.createElement(core_1.Grid, { item: true, xs: 12 },
-                                React.createElement(price_summary_1.PriceSummary, { locale: locale, style: 'decimal', currency: token.symbol, className: classes.prices, valueClass: classes.texts, value: token.balance, justify: 'flex-end' })),
+                                React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: 'decimal', currency: token.symbol, className: classes.prices, valueClass: classes.texts, value: token.balance, justify: 'flex-end' })),
                             React.createElement(core_1.Grid, { item: true, xs: 12 },
-                                React.createElement(price_summary_1.PriceSummary, { locale: locale, style: 'currency', currency: fiatCurrency, className: classes.prices, valueClass: classes.texts, value: token.balanceInFiat, justify: 'flex-end' })))))));
+                                React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, className: classes.prices, valueClass: classes.texts, value: token.balanceInFiat, justify: 'flex-end' })))))));
         });
     };
     ;
@@ -334,7 +334,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                                 }, graph_id: "PieChart", width: "100%", height: "300px", legend_toggle: true, chartEvents: this.getChartEvents(), ref: 'pieChart' }),
                             React.createElement("div", { className: classes.chartCenterContainer },
                                 React.createElement("div", { className: classes.totalPrice },
-                                    React.createElement(number_format_1.NumberFormat, { locale: locale, currency: fiatCurrency, style: 'currency', value: this.getTotalBalanceInFiat(tokens) })),
+                                    React.createElement(number_format_1.NumberFormat, { locale: locale, currency: fiatCurrency, priceStyle: 'currency', value: this.getTotalBalanceInFiat(tokens) })),
                                 React.createElement("div", { className: classes.totalPriceText },
                                     "Total Value ",
                                     fiatCurrency))),

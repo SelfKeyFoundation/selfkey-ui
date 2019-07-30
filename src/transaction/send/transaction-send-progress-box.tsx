@@ -119,7 +119,7 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
                     <Typography variant='display2' className={classes.amountContainer}>
                       <Grid container>
                         <Grid className={classes.amount} item>
-                            <NumberFormat locale={locale} style='decimal' currency={cryptoCurrency} value={amount} fractionDigits={15}/>
+                            <NumberFormat locale={locale} priceStyle='decimal' currency={cryptoCurrency} value={amount} fractionDigits={15}/>
                         </Grid>
                         <Grid item>
                           {cryptoCurrency}

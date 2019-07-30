@@ -83,7 +83,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props: Multili
 				return onSelectUpdated([item.key]);
 			}
 			if (isSelected(item)) {
-				return onSelectUpdated(selected.filter((x: any) => x != item.key));
+				return onSelectUpdated(selected.filter((x: any) => x !== item.key));
 			}
 			return onSelectUpdated([...selected, item.key]);
 		};
@@ -303,6 +303,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 										onClick={this.handleOpen}
 										href={file.url}
 										target="_blank"
+										rel="noopener noreferrer"
 									>
 										<Typography variant="subtitle1" className={classes.fileName}>
 											{file.name}

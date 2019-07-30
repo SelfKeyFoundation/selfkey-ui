@@ -33,20 +33,20 @@ export type PriceSummaryProps = {
     currencyClass?: string,
     valueClass?: string,
     locale: string,
-    style: string,
+    priceStyle: string,
     currency: string,
     value: number,
     appendCurrency?: boolean,
     prependCurrency?: boolean,
 };
 
-export const PriceSummary = injectSheet(styles)<PriceSummaryProps>(({ classes, children, className, justify, currencyClass, valueClass, locale, style, currency, value, appendCurrency, prependCurrency }) => (
+export const PriceSummary = injectSheet(styles)<PriceSummaryProps>(({ classes, children, className, justify, currencyClass, valueClass, locale, priceStyle, currency, value, appendCurrency, prependCurrency }) => (
     <Grid container className={className? className : classes.row} justify={justify} alignItems='center' spacing={8}>
         {appendCurrency &&
             <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>
         }
         <Grid item className={valueClass? valueClass : classes.value} >
-            <NumberFormat locale={locale} style={style} currency={currency} value={value}/>
+            <NumberFormat locale={locale} priceStyle={priceStyle} currency={currency} value={value}/>
         </Grid>
         {prependCurrency &&
             <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>

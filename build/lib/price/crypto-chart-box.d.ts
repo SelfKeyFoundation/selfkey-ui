@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, StyledComponentProps, ClassNameMap, WithStyles } from 'react-jss';
+import { StyleSheet, ClassNameMap, WithStyles, StyledComponentProps } from 'react-jss';
 import { ChartEvent } from 'react-google-charts';
 declare const styles: StyleSheet;
 export declare type Token = {

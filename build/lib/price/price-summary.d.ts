@@ -6,7 +6,7 @@ export declare type PriceSummaryProps = {
     currencyClass?: string;
     valueClass?: string;
     locale: string;
-    style: string;
+    priceStyle: string;
     currency: string;
     value: number;
     appendCurrency?: boolean;

@@ -101,7 +101,7 @@ exports.MultilineSelect = core_1.withStyles(multilineSelectStyles)(function (pro
                 return onSelectUpdated([item.key]);
             }
             if (isSelected(item)) {
-                return onSelectUpdated(selected.filter(function (x) { return x != item.key; }));
+                return onSelectUpdated(selected.filter(function (x) { return x !== item.key; }));
             }
             return onSelectUpdated(selected.concat([item.key]));
         };
@@ -266,7 +266,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(FileTypeIcon, { fileType: file.mimeType })),
                             React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
-                                React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: this.handleOpen, href: file.url, target: "_blank" },
+                                React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: this.handleOpen, href: file.url, target: "_blank", rel: "noopener noreferrer" },
                                     React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name))))),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },

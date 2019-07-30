@@ -38,6 +38,11 @@ const styles: StyleSheet = {
   },
 
   closeButton: {
+    background: 'none',
+    border: 'none',
+    margin: 0,
+    outline: 'none',
+    padding: 0,
     position: 'absolute',
     top: '-18px',
     right: '-18px',
@@ -53,7 +58,7 @@ export const ModalBox = injectSheet(styles)<ModalBoxProps>(({classes, headerText
   <Grid container className={classes.root} direction='column' justify='flex-start' alignItems='flex-start'>
     <Grid item id='header' className={classes.header}>
       <Typography variant="h2">{headerText}</Typography>
-      <a className={classes.closeButton} onClick={closeAction}><CloseButtonIcon/></a>
+      <button className={classes.closeButton} onClick={closeAction}><CloseButtonIcon/></button>
     </Grid>
     <Grid item id='body' className={classes.body}>
       {children}  

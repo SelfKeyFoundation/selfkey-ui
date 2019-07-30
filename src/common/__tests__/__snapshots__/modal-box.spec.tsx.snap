@@ -13,7 +13,7 @@ exports[`Modal Box should show Modal Box 1`] = `
     >
       Modal boc
     </h2>
-    <a
+    <button
       className="Component-closeButton-0-1-4"
     >
       <svg
@@ -60,7 +60,7 @@ exports[`Modal Box should show Modal Box 1`] = `
           </g>
         </g>
       </svg>
-    </a>
+    </button>
   </div>
   <div
     className="MuiGrid-item-2 Component-body-0-1-3"
