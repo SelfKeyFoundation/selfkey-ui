@@ -11,6 +11,7 @@ import {
 	CalendarIcon,
 	CalendarDepositIcon,
 	CertificateIcon,
+	ChartIcon,
 	CheckEmptyIcon,
 	CheckIcon,
 	CheckMaIcon,
@@ -194,6 +195,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<CertificateIcon />`}</code>
 			</pre>
 			<CertificateIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ChartIcon />`}</code>
+			</pre>
+			<ChartIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

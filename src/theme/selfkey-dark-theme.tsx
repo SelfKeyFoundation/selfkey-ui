@@ -33,6 +33,7 @@ export * from '../icons/book';
 export * from '../icons/calendar';
 export * from '../icons/calendar-deposit';
 export * from '../icons/certificate';
+export * from '../icons/chart';
 export * from '../icons/check-empty';
 export * from '../icons/check';
 export * from '../icons/check-ma';

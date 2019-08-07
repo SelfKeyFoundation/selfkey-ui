@@ -27,6 +27,7 @@ __export(require("../icons/book"));
 __export(require("../icons/calendar"));
 __export(require("../icons/calendar-deposit"));
 __export(require("../icons/certificate"));
+__export(require("../icons/chart"));
 __export(require("../icons/check-empty"));
 __export(require("../icons/check"));
 __export(require("../icons/check-ma"));

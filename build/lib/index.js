@@ -251,4 +251,6 @@ var director_1 = require("./icons/director");
 exports.DirectorIcon = director_1.DirectorIcon;
 var company_1 = require("./icons/company");
 exports.CompanyIcon = company_1.CompanyIcon;
+var chart_1 = require("./icons/chart");
+exports.ChartIcon = chart_1.ChartIcon;
 //# sourceMappingURL=index.js.map
