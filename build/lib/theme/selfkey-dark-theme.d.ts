@@ -33,6 +33,7 @@ export * from '../icons/dashboard-menu';
 export * from '../icons/delete';
 export * from '../icons/denied';
 export * from '../icons/did';
+export * from '../icons/director';
 export * from '../icons/document';
 export * from '../icons/download-2';
 export * from '../icons/download';

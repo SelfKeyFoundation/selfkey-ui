@@ -23,6 +23,7 @@ import {
 	DeleteIcon,
 	DeniedIcon,
 	DIDIcon,
+	DirectorIcon,
 	DocumentIcon,
 	DownloadIcon,
 	DownloadIcon2,
@@ -283,6 +284,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<DIDIcon />`}</code>
 			</pre>
 			<DIDIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<DirectorIcon />`}</code>
+			</pre>
+			<DirectorIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

@@ -247,4 +247,6 @@ var bank_1 = require("./icons/bank");
 exports.BankIcon = bank_1.BankIcon;
 var money_1 = require("./icons/money");
 exports.MoneyIcon = money_1.MoneyIcon;
+var director_1 = require("./icons/director");
+exports.DirectorIcon = director_1.DirectorIcon;
 //# sourceMappingURL=index.js.map

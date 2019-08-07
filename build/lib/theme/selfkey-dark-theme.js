@@ -40,6 +40,7 @@ __export(require("../icons/dashboard-menu"));
 __export(require("../icons/delete"));
 __export(require("../icons/denied"));
 __export(require("../icons/did"));
+__export(require("../icons/director"));
 __export(require("../icons/document"));
 __export(require("../icons/download-2"));
 __export(require("../icons/download"));
