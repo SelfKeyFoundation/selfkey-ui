@@ -11,18 +11,21 @@ import {
 	CalendarIcon,
 	CalendarDepositIcon,
 	CertificateIcon,
+	ChartIcon,
 	CheckEmptyIcon,
 	CheckIcon,
 	CheckMaIcon,
 	ClearIcon,
 	ClipboardIcon,
 	CloseButtonIcon,
+	CompanyIcon,
 	CopyIcon,
 	CustomIcon,
 	DashboardMenuIcon,
 	DeleteIcon,
 	DeniedIcon,
 	DIDIcon,
+	DirectorIcon,
 	DocumentIcon,
 	DownloadIcon,
 	DownloadIcon2,
@@ -196,6 +199,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ChartIcon />`}</code>
+			</pre>
+			<ChartIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<CheckEmptyIcon />`}</code>
 			</pre>
 			<CheckEmptyIcon />
@@ -234,6 +244,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<CloseButtonIcon />`}</code>
 			</pre>
 			<CloseButtonIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<CompanyIcon />`}</code>
+			</pre>
+			<CompanyIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -283,6 +300,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<DIDIcon />`}</code>
 			</pre>
 			<DIDIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<DirectorIcon />`}</code>
+			</pre>
+			<DirectorIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
