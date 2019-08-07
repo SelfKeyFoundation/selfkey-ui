@@ -33,6 +33,7 @@ __export(require("../icons/check-ma"));
 __export(require("../icons/clear"));
 __export(require("../icons/clipboard"));
 __export(require("../icons/close-button"));
+__export(require("../icons/company"));
 __export(require("../icons/copy"));
 __export(require("../icons/corporate"));
 __export(require("../icons/custom"));

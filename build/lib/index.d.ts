@@ -120,3 +120,4 @@ export { MergeIcon } from './icons/merge';
 export { BankIcon } from './icons/bank';
 export { MoneyIcon } from './icons/money';
 export { DirectorIcon } from './icons/director';
+export { CompanyIcon } from './icons/company';
