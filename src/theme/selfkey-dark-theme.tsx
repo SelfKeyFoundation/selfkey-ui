@@ -81,6 +81,7 @@ export * from '../icons/mail';
 export * from '../icons/marketplace-menu';
 export * from '../icons/marketplace';
 export * from '../icons/menu-button';
+export * from '../icons/menu-help';
 export * from '../icons/merge';
 export * from '../icons/modal-close';
 export * from '../icons/money';
@@ -95,6 +96,7 @@ export * from '../icons/password-confirm';
 export * from '../icons/password';
 export * from '../icons/payment';
 export * from '../icons/person';
+export * from '../icons/power';
 export * from '../icons/print-small';
 export * from '../icons/print';
 export * from '../icons/profile';
@@ -118,6 +120,7 @@ export * from '../icons/sk-id';
 export * from '../icons/stick';
 export * from '../icons/structure';
 export * from '../icons/success';
+export * from '../icons/switch-accounts';
 export * from '../icons/tick';
 export * from '../icons/transfer';
 export * from '../icons/trezor-bridge';
@@ -379,6 +382,9 @@ const theme = createMuiTheme({
 					color: primary,
 				},
 			},
+			fontSizeSmall: {
+				fontSize: 16
+			}
 		},
 		MuiCheckbox: {
 			root: {

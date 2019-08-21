@@ -75,6 +75,7 @@ __export(require("../icons/mail"));
 __export(require("../icons/marketplace-menu"));
 __export(require("../icons/marketplace"));
 __export(require("../icons/menu-button"));
+__export(require("../icons/menu-help"));
 __export(require("../icons/merge"));
 __export(require("../icons/modal-close"));
 __export(require("../icons/money"));
@@ -89,6 +90,7 @@ __export(require("../icons/password-confirm"));
 __export(require("../icons/password"));
 __export(require("../icons/payment"));
 __export(require("../icons/person"));
+__export(require("../icons/power"));
 __export(require("../icons/print-small"));
 __export(require("../icons/print"));
 __export(require("../icons/profile"));
@@ -112,6 +114,7 @@ __export(require("../icons/sk-id"));
 __export(require("../icons/stick"));
 __export(require("../icons/structure"));
 __export(require("../icons/success"));
+__export(require("../icons/switch-accounts"));
 __export(require("../icons/tick"));
 __export(require("../icons/transfer"));
 __export(require("../icons/trezor-bridge"));
@@ -375,6 +378,9 @@ var theme = core_1.createMuiTheme({
                     color: colors_1.primary,
                 },
             },
+            fontSizeSmall: {
+                fontSize: 16
+            }
         },
         MuiCheckbox: {
             root: {
