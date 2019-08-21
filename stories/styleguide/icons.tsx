@@ -278,7 +278,7 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 			<pre className={classes.pre}>
 				<code className={classes.code}>{`<DashboardMenuIcon />`}</code>
 			</pre>
-			<DashboardMenuIcon width='16px' height='16px' viewBox='0 0 16 16' />
+			<DashboardMenuIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
