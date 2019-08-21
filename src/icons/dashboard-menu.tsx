@@ -13,7 +13,7 @@ const styles: StyleSheet = {
 };
 
 export const DashboardMenuIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-        <SvgIcon width="16px" height="16px" {...props} viewBox="0 0 16 16">
+        <SvgIcon style={{ width: props.width || '24px', height: props.height || '24px' }} {...props} viewBox={props.viewBox || "0 0 36 36"}>
             <defs></defs>
             <g id="🖥-Main-Dashboard" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="300-Navigation" transform="translate(-1171.000000, -171.000000)">

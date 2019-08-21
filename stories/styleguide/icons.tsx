@@ -166,7 +166,7 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 			<pre className={classes.pre}>
 				<code className={classes.code}>{`<BankIcon />`}</code>
 			</pre>
-			<BankIcon />
+			<BankIcon width='18px' height='20px' />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -278,7 +278,7 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 			<pre className={classes.pre}>
 				<code className={classes.code}>{`<DashboardMenuIcon />`}</code>
 			</pre>
-			<DashboardMenuIcon />
+			<DashboardMenuIcon width='16px' height='16px' viewBox='0 0 16 16' />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
