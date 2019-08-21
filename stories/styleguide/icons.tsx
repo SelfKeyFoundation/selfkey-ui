@@ -57,6 +57,7 @@ import {
 	MarketplaceIcon,
 	MarketplaceMenuIcon,
 	MenuButtonIcon,
+	MenuHelpIcon,
 	MergeIcon,
 	ModalCloseIcon,
 	MoneyIcon,
@@ -69,6 +70,7 @@ import {
 	PasswordConfirmIcon,
 	PasswordIcon,
 	PaymentIcon,
+	PowerIcon,
 	PrintIcon,
 	PrintSmallIcon,
 	ProfileIcon,
@@ -92,6 +94,7 @@ import {
 	StickIcon,
 	StructureIcon,
 	SuccessIcon,
+	SwitchAccountsIcon,
 	TickIcon,
 	TransferIcon,
 	TrezorBridgeIcon,
@@ -278,7 +281,7 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 			<pre className={classes.pre}>
 				<code className={classes.code}>{`<DashboardMenuIcon />`}</code>
 			</pre>
-			<DashboardMenuIcon />
+			<DashboardMenuIcon width='16px' height='16px' viewBox='0 0 16 16' />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -525,6 +528,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 			</pre>
 			<MenuButtonIcon />
 		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MenuHelpIcon />`}</code>
+			</pre>
+			<MenuHelpIcon />
+		</Grid>
 		
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
@@ -629,6 +639,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<PersonIcon />`}</code>
 			</pre>
 			<PersonIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<PowerIcon />`}</code>
+			</pre>
+			<PowerIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -790,6 +807,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<SuccessIcon />`}</code>
 			</pre>
 			<SuccessIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SwitchAccountsIcon />`}</code>
+			</pre>
+			<SwitchAccountsIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
