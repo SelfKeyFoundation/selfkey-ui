@@ -76,6 +76,7 @@ __export(require("../icons/marketplace-menu"));
 __export(require("../icons/marketplace"));
 __export(require("../icons/menu-button"));
 __export(require("../icons/menu-help"));
+__export(require("../icons/menu-new"));
 __export(require("../icons/merge"));
 __export(require("../icons/modal-close"));
 __export(require("../icons/money"));

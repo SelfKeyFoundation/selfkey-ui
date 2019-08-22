@@ -58,6 +58,7 @@ import {
 	MarketplaceMenuIcon,
 	MenuButtonIcon,
 	MenuHelpIcon,
+	MenuNewIcon,
 	MergeIcon,
 	ModalCloseIcon,
 	MoneyIcon,
@@ -534,6 +535,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<MenuHelpIcon />`}</code>
 			</pre>
 			<MenuHelpIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MenuNewIcon />`}</code>
+			</pre>
+			<MenuNewIcon />
 		</Grid>
 		
 		<Grid item className={classes.gridItem}>

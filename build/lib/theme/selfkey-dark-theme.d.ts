@@ -68,6 +68,7 @@ export * from '../icons/marketplace-menu';
 export * from '../icons/marketplace';
 export * from '../icons/menu-button';
 export * from '../icons/menu-help';
+export * from '../icons/menu-new';
 export * from '../icons/merge';
 export * from '../icons/modal-close';
 export * from '../icons/money';
