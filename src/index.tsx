@@ -14,6 +14,8 @@ export { CustomIcon } from './icons/custom';
 export { MenuHelpIcon } from './icons/menu-help';
 export { SwitchAccountsIcon } from './icons/switch-accounts';
 export { PowerIcon } from './icons/power';
+export { MenuExportIcon } from './icons/menu-export';
+export { MenuAffiliateIcon } from './icons/menu-affiliate';
 export { CryptoChartBox } from './price/crypto-chart-box';
 export { CryptoPriceTable } from './price/crypto-price-table';
 export { LWSModalBody } from './lws/lws-modal-body';

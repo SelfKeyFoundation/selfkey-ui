@@ -56,8 +56,10 @@ import {
 	MailIcon,
 	MarketplaceIcon,
 	MarketplaceMenuIcon,
+	MenuAffiliateIcon,
 	MenuButtonIcon,
 	MenuHelpIcon,
+	MenuExportIcon,
 	MenuNewIcon,
 	MergeIcon,
 	ModalCloseIcon,
@@ -525,6 +527,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MenuAffiliateIcon />`}</code>
+			</pre>
+			<MenuAffiliateIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<MenuButtonIcon />`}</code>
 			</pre>
 			<MenuButtonIcon />
@@ -535,6 +544,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<MenuHelpIcon />`}</code>
 			</pre>
 			<MenuHelpIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MenuExportIcon />`}</code>
+			</pre>
+			<MenuExportIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
