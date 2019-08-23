@@ -3,7 +3,7 @@
 exports[`Power Icon should show Power Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root-1 Component-root-0-1-1"
   focusable="false"
   role="presentation"
   style={
@@ -16,15 +16,12 @@ exports[`Power Icon should show Power Icon 1`] = `
 >
   <defs />
   <g
-    fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="🖥-Main-Dashboard-pi"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
-      fill="#93A4AF"
-      fill-rule="nonzero"
       id="300.4-Navigation-collapsed-pi"
       transform="translate(-20.000000, -1366.000000)"
     >
