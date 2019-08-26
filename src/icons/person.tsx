@@ -1,9 +1,21 @@
 import * as React from 'react';
+import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
+import { SvgIcon } from '@material-ui/core';
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-export default function PersonIcon () {
-    return (
-        <svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1">
-            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+const styles: StyleSheet = {
+    root: {
+        fill: '#93A4AF',
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        }
+    }
+};
+
+export const PersonIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+        <SvgIcon style={{ width: props.width || '46px', height: props.height || '46px' }} {...props} viewBox={props.viewBox || "0 0 46 46"}>
+            <g id="ldsaj" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="4.-Style-Guide---Tables" transform="translate(-1217.000000, -249.000000)">
                     <g id="Multi-Line-Table" transform="translate(1193.000000, 124.000000)">
                         <g id="Table-multi-line" transform="translate(0.000000, 61.000000)">
@@ -17,6 +29,9 @@ export default function PersonIcon () {
                     </g>
                 </g>
             </g>
-        </svg>
+        </SvgIcon>
     )
-};
+);
+            
+export default PersonIcon;
+            

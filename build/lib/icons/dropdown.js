@@ -16,8 +16,7 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
-        // fill: '#93A4AF',
-        fill: '#93B0C1',
+        fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',

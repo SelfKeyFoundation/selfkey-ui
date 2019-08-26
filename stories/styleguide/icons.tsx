@@ -74,6 +74,7 @@ import {
 	PasswordConfirmIcon,
 	PasswordIcon,
 	PaymentIcon,
+	PersonIcon,
 	PowerIcon,
 	PrintIcon,
 	PrintSmallIcon,
@@ -115,7 +116,6 @@ import {
 	IDIcon
 } from '../../src/theme/selfkey-dark-theme';
 import CorporateIcon from '../../src/icons/corporate';
-import PersonIcon from '../../src/icons/person';
 
 const iconStoryStyles = (theme: Theme) =>
 	createStyles({
