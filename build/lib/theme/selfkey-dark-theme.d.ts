@@ -39,6 +39,7 @@ export * from '../icons/director';
 export * from '../icons/document';
 export * from '../icons/download-2';
 export * from '../icons/download';
+export * from '../icons/dropdown';
 export * from '../icons/edit-transparent';
 export * from '../icons/ethereum';
 export * from '../icons/exchange-large';
