@@ -13,6 +13,7 @@ import {
   baseLight,
 } from '../colors';
 export * from '../colors';
+export * from '../materialui/button';
 export * from '../materialui/colorPresentation';
 export * from '../materialui/datepicker';
 export * from '../materialui/inputs';

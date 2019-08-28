@@ -22,6 +22,7 @@ var incorporations_1 = require("../icons/incorporations");
 var inputs_1 = require("./inputs");
 var hard_drive_1 = require("../icons/hard-drive");
 var colors_1 = require("../colors");
+var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 exports.ModalWrap = core_1.withStyles({
     root: {
         backgroundColor: 'transparent',
@@ -86,7 +87,7 @@ var ModalWithBackButton = /** @class */ (function (_super) {
             React.createElement("br", null),
             React.createElement(Modal_1.default, { open: this.state.open, onClick: this.handleClose, id: "handleClose" },
                 React.createElement(exports.ModalWrap, null,
-                    React.createElement(core_1.Button, { id: "handleState", variant: 'outlined', color: 'secondary', size: 'small', onClick: this.handleState }, "\u2039 Back"),
+                    React.createElement(selfkey_dark_theme_1.BackButton, { id: "handleState", leftPosition: "25px", onClick: this.handleState }),
                     React.createElement(modalElements_1.ModalBody2, null,
                         React.createElement(Typography_1.default, { variant: "h2" }, "Add Attribute"),
                         React.createElement(Typography_1.default, { variant: "body1", color: "textSecondary", gutterBottom: true }, "Select the type of attribute you would like to add to your identity wallet."),
