@@ -11,6 +11,7 @@ import {
 	KeyTooltip,
 } from '../../../src/materialui/tooltipArrow';
 import ToggleButtonGroupStory from './story-buttonGroups';
+import { BackButton } from '../../../src/theme/selfkey-dark-theme';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -99,6 +100,13 @@ export default function ButtonStories () {
 						</Grid>
 					</Grid>
 					<br/><br/>
+					<Typography variant="overline" gutterBottom>
+						Back Button
+					</Typography>
+					<BackButton leftPosition='120px' />
+					<br /><br />
+					<br /><br />
+
 				</Grid>
 
 				<Grid item>

@@ -12,6 +12,7 @@ import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
 import HardDriveIcon from "../icons/hard-drive";
 import { base } from "../colors";
+import { BackButton } from "../theme/selfkey-dark-theme";
 
 export const ModalWrap = withStyles({
 	root: {
@@ -91,7 +92,7 @@ class ModalWithBackButton extends React.Component {
                     id="handleClose"
                 >
                     <ModalWrap>
-                        <Button id="handleState" variant='outlined' color='secondary' size='small' onClick={this.handleState}>‹ Back</Button>
+                        <BackButton id="handleState" leftPosition="25px"  onClick={this.handleState} />
                         <ModalBody2>
                             <Typography variant="h2">
                                 Add Attribute
