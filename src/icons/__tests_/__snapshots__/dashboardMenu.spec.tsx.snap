@@ -5,10 +5,14 @@ exports[`Dashboard Menu Icon should show Dashboard Menu Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
   focusable="false"
-  height="16px"
   role="presentation"
-  viewBox="0 0 16 16"
-  width="16px"
+  style={
+    Object {
+      "height": "24px",
+      "width": "24px",
+    }
+  }
+  viewBox="0 0 24 24"
 >
   <defs />
   <g

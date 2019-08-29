@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const SelfkeyIDMenuIcon = ((props: SvgIconProps) => (
-        <SvgIcon width="14px" height="20px" {...props} viewBox="0 0 14 20">
+        <SvgIcon style={{ width: props.width || '14px', height: props.height || '20px' }} {...props} viewBox={props.viewBox || "0 0 14 20"}>
             <defs></defs>
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="300-Navigation" transform="translate(-1172.000000, -289.000000)" fillRule="nonzero">

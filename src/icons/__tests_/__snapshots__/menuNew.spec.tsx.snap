@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu New Icon should show Menu New Icon 1`] = `
+<svg
+  aria-hidden="true"
+  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  focusable="false"
+  role="presentation"
+  style={
+    Object {
+      "height": "21px",
+      "width": "30px",
+    }
+  }
+  viewBox="0 0 30 21"
+>
+  <defs />
+  <g
+    id="🖥-Main-Dashboard-mn"
+    stroke="none"
+    stroke-width="1"
+  >
+    <g
+      fill="#00C0D9"
+      fill-rule="nonzero"
+      id="300.4-Navigation-collapsed-mn"
+      transform="translate(-76.000000, -27.000000)"
+    >
+      <path
+        d="M76,27 L76,28.96 L101,28.96 L101,27 L76,27 Z M76,36.52 L76,38.48 L106,38.48 L106,36.52 L76,36.52 Z M76,46.04 L76,48 L96,48 L96,46.04 L76,46.04 Z"
+        id="icon-menu-new-mn"
+      />
+    </g>
+  </g>
+</svg>
+`;

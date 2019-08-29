@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const AddressBookMenuIcon = ((props: SvgIconProps) => (
-        <SvgIcon width="15px" height="16px" {...props} viewBox="0 0 15 16">
+        <SvgIcon style={{ width: props.width || '15px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || "0 0 15 16"}>
             <defs></defs>
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="300-Navigation" transform="translate(-1172.000000, -351.000000)" fillRule="nonzero">

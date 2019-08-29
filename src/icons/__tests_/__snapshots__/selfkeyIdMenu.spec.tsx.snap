@@ -5,10 +5,14 @@ exports[`Selfkey ID Menu Icon should show Selfkey ID Menu Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root-1"
   focusable="false"
-  height="20px"
   role="presentation"
+  style={
+    Object {
+      "height": "20px",
+      "width": "14px",
+    }
+  }
   viewBox="0 0 14 20"
-  width="14px"
 >
   <defs />
   <g

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Power Icon should show Power Icon 1`] = `
+<svg
+  aria-hidden="true"
+  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  focusable="false"
+  role="presentation"
+  style={
+    Object {
+      "height": "16px",
+      "width": "16px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <defs />
+  <g
+    fillRule="evenodd"
+    id="🖥-Main-Dashboard-pi"
+    stroke="none"
+    strokeWidth="1"
+  >
+    <g
+      id="300.4-Navigation-collapsed-pi"
+      transform="translate(-20.000000, -1366.000000)"
+    >
+      <g
+        id="Menu"
+      >
+        <g
+          id="Bottom-menu"
+          transform="translate(20.000000, 1263.000000)"
+        >
+          <path
+            d="M8.88888889,103 L7.11111111,103 L7.11111111,111.888889 L8.88888889,111.888889 L8.88888889,103 Z M13.1822222,104.928889 L11.92,106.191111 C13.3244444,107.32 14.2222222,109.053333 14.2222222,111 C14.2222222,114.44 11.44,117.222222 8,117.222222 C4.56,117.222222 1.77777778,114.44 1.77777778,111 C1.77777778,109.053333 2.67555556,107.32 4.07111111,106.182222 L2.81777778,104.928889 C1.09333333,106.395556 0,108.564444 0,111 C0,115.417778 3.58222222,119 8,119 C12.4177778,119 16,115.417778 16,111 C16,108.564444 14.9066667,106.395556 13.1822222,104.928889 Z"
+            id="pi-m"
+          />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+`;
