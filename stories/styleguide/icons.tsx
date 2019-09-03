@@ -84,6 +84,8 @@ import {
 	RefreshIcon,
 	ReturnIcon,
 	ReturnLargeIcon,
+	RoundCompany,
+	RoundPerson,
 	SelfkeyIcon,
 	SelfkeyIDMenuIcon,
 	SelfkeyLogo,
@@ -734,6 +736,20 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ReturnIcon />`}</code>
 			</pre>
 			<ReturnIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<RoundCompany />`}</code>
+			</pre>
+			<RoundCompany />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<RoundPerson />`}</code>
+			</pre>
+			<RoundPerson />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

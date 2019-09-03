@@ -111,6 +111,8 @@ export * from '../icons/refresh';
 export * from '../icons/refresh2';
 export * from '../icons/return-large';
 export * from '../icons/return';
+export * from '../icons/round-company';
+export * from '../icons/round-person';
 export * from '../icons/selfkey-id-menu';
 export * from '../icons/selfkey';
 export * from '../icons/selfkeyLogo';
