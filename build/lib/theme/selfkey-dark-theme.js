@@ -105,6 +105,8 @@ __export(require("../icons/refresh"));
 __export(require("../icons/refresh2"));
 __export(require("../icons/return-large"));
 __export(require("../icons/return"));
+__export(require("../icons/round-company"));
+__export(require("../icons/round-person"));
 __export(require("../icons/selfkey-id-menu"));
 __export(require("../icons/selfkey"));
 __export(require("../icons/selfkeyLogo"));

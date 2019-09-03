@@ -111,6 +111,8 @@ export { ReceiveIcon } from './icons/receive';
 export { RefreshIcon } from './icons/refresh';
 export { ReturnIcon } from './icons/return';
 export { ReturnLargeIcon } from './icons/return-large';
+export { RoundCompany } from './icons/round-company';
+export { RoundPerson } from './icons/round-person';
 export { SelfkeyIcon } from './icons/selfkey';
 export { SelfkeyIDMenuIcon } from './icons/selfkey-id-menu';
 export { SelfkeyLogo } from './icons/selfkeyLogo';
