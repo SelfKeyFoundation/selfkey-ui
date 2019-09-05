@@ -28,6 +28,8 @@ exports[`Menu New Icon should show Menu New Icon 1`] = `
       <path
         d="M76,27 L76,28.96 L101,28.96 L101,27 L76,27 Z M76,36.52 L76,38.48 L106,38.48 L106,36.52 L76,36.52 Z M76,46.04 L76,48 L96,48 L96,46.04 L76,46.04 Z"
         id="icon-menu-new-mn"
+        stroke="transparent"
+        strokeWidth="10"
       />
       <polygon
         id="Path"
