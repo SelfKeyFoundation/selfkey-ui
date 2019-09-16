@@ -98,6 +98,8 @@ import {
 	SimpleDeniedIcon,
 	SKIDIcon,
 	SKUploadIcon,
+	SmallRoundCompany,
+	SmallRoundPerson,
 	StickIcon,
 	StructureIcon,
 	SuccessIcon,
@@ -747,9 +749,23 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SmallRoundCompany />`}</code>
+			</pre>
+			<SmallRoundCompany />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<RoundPerson />`}</code>
 			</pre>
 			<RoundPerson />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SmallRoundPerson />`}</code>
+			</pre>
+			<SmallRoundPerson />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
