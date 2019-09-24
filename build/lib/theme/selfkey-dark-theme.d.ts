@@ -68,6 +68,7 @@ export * from '../icons/list';
 export * from '../icons/mail';
 export * from '../icons/marketplace-menu';
 export * from '../icons/marketplace';
+export * from '../icons/marketplace-notaries';
 export * from '../icons/menu-affiliate';
 export * from '../icons/menu-button';
 export * from '../icons/menu-help';

@@ -90,6 +90,7 @@ export { LedgerIcon } from './icons/ledger';
 export { MailIcon } from './icons/mail';
 export { MarketplaceIcon } from './icons/marketplace';
 export { MarketplaceMenuIcon } from './icons/marketplace-menu';
+export { MarketplaceNotariesIcon } from './icons/marketplace-notaries';
 export { MenuAffiliateIcon } from './icons/menu-affiliate';
 export { MenuButtonIcon } from './icons/menu-button';
 export { MenuExportIcon } from './icons/menu-export';

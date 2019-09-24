@@ -76,6 +76,7 @@ __export(require("../icons/list"));
 __export(require("../icons/mail"));
 __export(require("../icons/marketplace-menu"));
 __export(require("../icons/marketplace"));
+__export(require("../icons/marketplace-notaries"));
 __export(require("../icons/menu-affiliate"));
 __export(require("../icons/menu-button"));
 __export(require("../icons/menu-help"));
