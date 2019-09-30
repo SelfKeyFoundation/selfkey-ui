@@ -8,7 +8,7 @@ const styles: StyleSheet = {
   root: {
     width: '22px !important',
     height: '19px !important',
-    fill: '#697C95',
+    fill: '#90acbd',
     '&:hover': {
         fill: 'white'
     }
