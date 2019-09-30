@@ -9,14 +9,12 @@ exports[`Reply Icon should show Reply Icon 1`] = `
   viewBox="0 0 22 19"
 >
   <g
-    fill="none"
     fillRule="evenodd"
     id="Certifiers-Dashboard-info-icon"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="#697C95"
       id="Certifier's-Messages-info-icon"
       transform="translate(-1241.000000, -428.000000)"
     >

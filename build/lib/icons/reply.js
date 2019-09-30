@@ -18,15 +18,15 @@ var styles = {
     root: {
         width: '22px !important',
         height: '19px !important',
-        fill: '#C5D0DE',
+        fill: '#697C95',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 };
 exports.ReplyIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 22 19' }),
-    React.createElement("g", { id: "Certifiers-Dashboard-info-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
-        React.createElement("g", { id: "Certifier's-Messages-info-icon", transform: "translate(-1241.000000, -428.000000)", fill: "#697C95" },
+    React.createElement("g", { id: "Certifiers-Dashboard-info-icon", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
+        React.createElement("g", { id: "Certifier's-Messages-info-icon", transform: "translate(-1241.000000, -428.000000)" },
             React.createElement("g", { id: "Recent-Commisions-info-icon", transform: "translate(150.000000, 264.000000)" },
                 React.createElement("g", { id: "Table", transform: "translate(15.000000, 97.000000)" },
                     React.createElement("g", { id: "Col8", transform: "translate(1044.000000, 11.000000)" },

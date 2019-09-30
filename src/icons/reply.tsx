@@ -8,17 +8,17 @@ const styles: StyleSheet = {
   root: {
     width: '22px !important',
     height: '19px !important',
-    fill: '#C5D0DE',
+    fill: '#697C95',
     '&:hover': {
-        fill: 'white',
+        fill: 'white'
     }
   }
 };
 
 export const ReplyIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
     <SvgIcon {...props} viewBox='0 0 22 19'>
-        <g id="Certifiers-Dashboard-info-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-            <g id="Certifier's-Messages-info-icon" transform="translate(-1241.000000, -428.000000)" fill="#697C95">
+        <g id="Certifiers-Dashboard-info-icon"  stroke="none" strokeWidth="1" fillRule="evenodd">
+            <g id="Certifier's-Messages-info-icon" transform="translate(-1241.000000, -428.000000)">
                 <g id="Recent-Commisions-info-icon" transform="translate(150.000000, 264.000000)">
                     <g id="Table" transform="translate(15.000000, 97.000000)">
                         <g id="Col8" transform="translate(1044.000000, 11.000000)">
