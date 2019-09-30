@@ -96,6 +96,7 @@ export * from '../icons/quit';
 export * from '../icons/receive';
 export * from '../icons/refresh';
 export * from '../icons/refresh2';
+export * from '../icons/reply';
 export * from '../icons/return-large';
 export * from '../icons/return';
 export * from '../icons/round-company';

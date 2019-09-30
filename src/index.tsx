@@ -110,6 +110,7 @@ export { PrintSmallIcon } from './icons/print-small';
 export { QuitIcon } from './icons/quit';
 export { ReceiveIcon } from './icons/receive';
 export { RefreshIcon } from './icons/refresh';
+export { ReplyIcon } from './icons/reply';
 export { ReturnIcon } from './icons/return';
 export { ReturnLargeIcon } from './icons/return-large';
 export { RoundCompany } from './icons/round-company';
