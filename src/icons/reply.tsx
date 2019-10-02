@@ -6,8 +6,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles: StyleSheet = {
   root: {
-    width: '22px !important',
-    height: '19px !important',
     fill: '#90acbd',
     '&:hover': {
         fill: 'white'
@@ -16,7 +14,7 @@ const styles: StyleSheet = {
 };
 
 export const ReplyIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-    <SvgIcon {...props} viewBox='0 0 22 19'>
+    <SvgIcon style={{ width: props.width || '22px', height: props.height || '19px' }} {...props} viewBox='0 0 22 19'>
         <g id="Certifiers-Dashboard-info-icon"  stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="Certifier's-Messages-info-icon" transform="translate(-1241.000000, -428.000000)">
                 <g id="Recent-Commisions-info-icon" transform="translate(150.000000, 264.000000)">

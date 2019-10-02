@@ -6,6 +6,12 @@ exports[`Reply Icon should show Reply Icon 1`] = `
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
   focusable="false"
   role="presentation"
+  style={
+    Object {
+      "height": "19px",
+      "width": "22px",
+    }
+  }
   viewBox="0 0 22 19"
 >
   <g
