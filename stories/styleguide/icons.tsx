@@ -83,6 +83,7 @@ import {
 	QuitIcon,
 	ReceiveIcon,
 	RefreshIcon,
+	ReplyIcon,
 	ReturnIcon,
 	ReturnLargeIcon,
 	RoundCompany,
@@ -732,6 +733,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<RefreshIcon />`}</code>
 			</pre>
 			<RefreshIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ReplyIcon />`}</code>
+			</pre>
+			<ReplyIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
