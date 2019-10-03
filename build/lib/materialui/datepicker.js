@@ -190,6 +190,7 @@ var styles = {
             fontWeight: 600,
             padding: '8px 10px',
             textAlign: 'center',
+            width: '35px',
             '&:hover': {
                 backgroundColor: '#00C0D9',
                 borderRadius: '3px',
