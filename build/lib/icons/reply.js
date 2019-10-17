@@ -16,8 +16,6 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
-        // width: '22px !important',
-        // height: '19px !important',
         fill: '#90acbd',
         '&:hover': {
             fill: 'white'
