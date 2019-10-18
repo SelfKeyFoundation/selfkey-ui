@@ -83,6 +83,7 @@ export * from '../icons/muiedit';
 export * from '../icons/muivisibility';
 export * from '../icons/my-crypto-large';
 export * from '../icons/new-address';
+export * from '../icons/notarize-document';
 export * from '../icons/okay';
 export * from '../icons/password-confirm';
 export * from '../icons/password';

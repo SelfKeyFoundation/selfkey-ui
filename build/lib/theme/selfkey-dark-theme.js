@@ -91,6 +91,7 @@ __export(require("../icons/muiedit"));
 __export(require("../icons/muivisibility"));
 __export(require("../icons/my-crypto-large"));
 __export(require("../icons/new-address"));
+__export(require("../icons/notarize-document"));
 __export(require("../icons/okay"));
 __export(require("../icons/password-confirm"));
 __export(require("../icons/password"));
