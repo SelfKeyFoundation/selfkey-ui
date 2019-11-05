@@ -58,6 +58,7 @@ import {
 	MarketplaceIcon,
 	MarketplaceMenuIcon,
 	MarketplaceNotariesIcon,
+	MemberIcon,
 	MenuAffiliateIcon,
 	MenuButtonIcon,
 	MenuHelpIcon,
@@ -545,6 +546,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<MarketplaceNotariesIcon />`}</code>
 			</pre>
 			<MarketplaceNotariesIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MemberIcon />`}</code>
+			</pre>
+			<MemberIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
