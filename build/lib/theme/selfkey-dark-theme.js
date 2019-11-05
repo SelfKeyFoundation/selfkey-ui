@@ -103,6 +103,7 @@ __export(require("../icons/power"));
 __export(require("../icons/print-small"));
 __export(require("../icons/print"));
 __export(require("../icons/profile"));
+__export(require("../icons/protection"));
 __export(require("../icons/quit"));
 __export(require("../icons/receive"));
 __export(require("../icons/refresh"));

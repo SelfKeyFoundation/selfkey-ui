@@ -95,6 +95,7 @@ export * from '../icons/power';
 export * from '../icons/print-small';
 export * from '../icons/print';
 export * from '../icons/profile';
+export * from '../icons/protection';
 export * from '../icons/quit';
 export * from '../icons/receive';
 export * from '../icons/refresh';

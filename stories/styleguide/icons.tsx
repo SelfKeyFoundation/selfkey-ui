@@ -83,6 +83,7 @@ import {
 	PrintIcon,
 	PrintSmallIcon,
 	ProfileIcon,
+	ProtectionIcon,
 	QuitIcon,
 	ReceiveIcon,
 	RefreshIcon,
@@ -736,6 +737,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ProfileIcon />`}</code>
 			</pre>
 			<ProfileIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ProtectionIcon />`}</code>
+			</pre>
+			<ProtectionIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

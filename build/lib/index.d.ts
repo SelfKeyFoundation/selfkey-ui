@@ -102,6 +102,7 @@ export { PasswordConfirmIcon } from './icons/password-confirm';
 export { PasswordIcon } from './icons/password';
 export { PowerIcon } from './icons/power';
 export { PrintIcon } from './icons/print';
+export { ProtectionIcon } from './icons/protection';
 export { PrintSmallIcon } from './icons/print-small';
 export { QuitIcon } from './icons/quit';
 export { ReceiveIcon } from './icons/receive';
