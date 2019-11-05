@@ -103,6 +103,7 @@ export { MyCryptoLargeIcon } from './icons/my-crypto-large';
 export { NewAddressIcon } from './icons/new-address';
 export { NewRefreshIcon } from './icons/refresh2';
 export { NotarizeDocumentIcon } from './icons/notarize-document';
+export { ObserverIcon } from './icons/observer';
 export { OkayIcon } from './icons/okay';
 export { PasswordConfirmIcon } from './icons/password-confirm';
 export { PasswordIcon } from './icons/password';

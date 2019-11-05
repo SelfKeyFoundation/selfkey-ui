@@ -73,6 +73,7 @@ import {
 	MyCryptoLargeIcon,
 	NewAddressIcon,
 	NotarizeDocumentIcon,
+	ObserverIcon,
 	OkayIcon,
 	PasswordConfirmIcon,
 	PasswordIcon,
@@ -665,6 +666,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<NotarizeDocumentIcon />`}</code>
 			</pre>
 			<NotarizeDocumentIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ObserverIcon />`}</code>
+			</pre>
+			<ObserverIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
