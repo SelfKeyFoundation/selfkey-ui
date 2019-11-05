@@ -115,6 +115,7 @@ export * from '../icons/sent-blue';
 export * from '../icons/sent';
 export * from '../icons/share';
 export * from '../icons/shield';
+export * from '../icons/signature';
 export * from '../icons/simple-check';
 export * from '../icons/simple-denied';
 export * from '../icons/sk-id';

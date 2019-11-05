@@ -100,6 +100,7 @@ import {
 	SentIcon,
 	ShareIcon,
 	ShieldIcon,
+	SignatureIcon,
 	SimpleCheckIcon,
 	SimpleDeniedIcon,
 	SKIDIcon,
@@ -870,6 +871,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ShieldIcon />`}</code>
 			</pre>
 			<ShieldIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SignatureIcon />`}</code>
+			</pre>
+			<SignatureIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

@@ -128,6 +128,7 @@ export { SelfkeyLogoTemp } from './icons/selfkeyLogoTemp';
 export { SentBlueIcon } from './icons/sent-blue';
 export { SentIcon } from './icons/sent';
 export { ShareIcon } from './icons/share';
+export { SignatureIcon } from './icons/signature';
 export { SimpleCheckIcon } from './icons/simple-check';
 export { SimpleDeniedIcon } from './icons/simple-denied';
 export { SimpleHourglassIcon } from './icons/hourglass-simple';
