@@ -58,6 +58,7 @@ import {
 	MarketplaceIcon,
 	MarketplaceMenuIcon,
 	MarketplaceNotariesIcon,
+	MemberIcon,
 	MenuAffiliateIcon,
 	MenuButtonIcon,
 	MenuHelpIcon,
@@ -72,6 +73,7 @@ import {
 	MyCryptoLargeIcon,
 	NewAddressIcon,
 	NotarizeDocumentIcon,
+	ObserverIcon,
 	OkayIcon,
 	PasswordConfirmIcon,
 	PasswordIcon,
@@ -81,6 +83,7 @@ import {
 	PrintIcon,
 	PrintSmallIcon,
 	ProfileIcon,
+	ProtectionIcon,
 	QuitIcon,
 	ReceiveIcon,
 	RefreshIcon,
@@ -97,6 +100,7 @@ import {
 	SentIcon,
 	ShareIcon,
 	ShieldIcon,
+	SignatureIcon,
 	SimpleCheckIcon,
 	SimpleDeniedIcon,
 	SKIDIcon,
@@ -549,6 +553,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<MemberIcon />`}</code>
+			</pre>
+			<MemberIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<MenuAffiliateIcon />`}</code>
 			</pre>
 			<MenuAffiliateIcon />
@@ -661,6 +672,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ObserverIcon />`}</code>
+			</pre>
+			<ObserverIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<OkayIcon />`}</code>
 			</pre>
 			<OkayIcon />
@@ -720,6 +738,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ProfileIcon />`}</code>
 			</pre>
 			<ProfileIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ProtectionIcon />`}</code>
+			</pre>
+			<ProtectionIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -846,6 +871,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ShieldIcon />`}</code>
 			</pre>
 			<ShieldIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SignatureIcon />`}</code>
+			</pre>
+			<SignatureIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
