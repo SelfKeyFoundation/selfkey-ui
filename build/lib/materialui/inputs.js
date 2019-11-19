@@ -178,8 +178,8 @@ var fileViewStyles = function (theme) {
             marginBottom: '20px',
         },
         back: {
-            zIndex: 1000
-        }
+            zIndex: 1000,
+        },
     });
 };
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
@@ -199,6 +199,24 @@ exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
         errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null));
 });
+var PreviewFileType = core_1.withStyles(fileViewStyles)(function (_a) {
+    var classes = _a.classes, file = _a.file;
+    var type = file.mimeType.fileTyp || file.mimeType;
+    if (type === 'image/png' || type === 'image/jpeg') {
+        return React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth });
+    }
+    else {
+        return React.createElement("audio", { src: file.url, controls: true });
+    }
+});
+exports.FilePreviewModalView = core_1.withStyles(fileViewStyles)(function (_a) {
+    var classes = _a.classes, open = _a.open, onClose = _a.onClose, onBack = _a.onBack, file = _a.file;
+    return (React.createElement(core_1.Modal, { open: open, onClose: onClose },
+        React.createElement(modalWithBackButton_1.ModalWrap, null,
+            React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: onBack, className: "" + classes.back }, "\u2039 Back"),
+            React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
+                React.createElement(PreviewFileType, { file: file })))));
+});
 var FileViewWithModal = /** @class */ (function (_super) {
     __extends(FileViewWithModal, _super);
     function FileViewWithModal() {
@@ -207,7 +225,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
             open: false,
         };
         _this.handleOpen = function (evt) {
-            var type = _this.props.file.mimeType;
+            var type = _this.props.file.mimeType.fileType || _this.props.file.mimeType;
             if (type === 'image/png' ||
                 type === 'image/jpeg' ||
                 type === 'audio/ogg' ||
@@ -235,7 +253,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
     FileViewWithModal.prototype.render = function () {
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
         var FileTypeIcon = function (fileType) {
-            var type = fileType.fileType;
+            var type = fileType.fileType || fileType;
             if (type === 'image/png' || type === 'image/jpeg') {
                 return React.createElement(file_image_1.FileImageIcon, null);
             }
@@ -247,15 +265,6 @@ var FileViewWithModal = /** @class */ (function (_super) {
             }
             else {
                 return React.createElement(file_default_1.FileDefaultIcon, null);
-            }
-        };
-        var PreviewType = function (fileType) {
-            var type = fileType.fileType;
-            if (type === 'image/png' || type === 'image/jpeg') {
-                return React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth });
-            }
-            else {
-                return React.createElement("audio", { src: file.url, controls: true });
             }
         };
         return (React.createElement(core_1.Grid, { item: true },
@@ -273,11 +282,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                             React.createElement(delete_1.DeleteIcon, null)))),
                 errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null),
-            React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
-                React.createElement(modalWithBackButton_1.ModalWrap, null,
-                    React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: this.handleState, className: "" + classes.back }, "\u2039 Back"),
-                    React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
-                        React.createElement(PreviewType, { fileType: file.mimeType }))))));
+            React.createElement(exports.FilePreviewModalView, { open: this.state.open, onClose: this.handleClose, file: file, onBack: this.handleState })));
     };
     return FileViewWithModal;
 }(React.Component));
@@ -343,7 +348,7 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
                         React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label", className: classes.button },
                             "Upload",
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
-        file ? React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen }) : null));
+        file ? (React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
 exports.FileUploadGrid = core_1.withStyles({
     container: {

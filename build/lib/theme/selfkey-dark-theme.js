@@ -267,8 +267,8 @@ var theme = core_1.createMuiTheme({
                 whiteSpace: 'normal',
             },
             gutterBottom: {
-                marginBottom: '1em'
-            }
+                marginBottom: '1em',
+            },
         },
         MuiList: {
             root: {
@@ -395,8 +395,8 @@ var theme = core_1.createMuiTheme({
                 },
             },
             fontSizeSmall: {
-                fontSize: 16
-            }
+                fontSize: 16,
+            },
         },
         MuiCheckbox: {
             root: {
@@ -771,12 +771,12 @@ var theme = core_1.createMuiTheme({
                 width: 'initial',
             },
             labelContainer: {
-                padding: '6px 15px !important'
+                padding: '6px 15px !important',
             },
             label: {
                 fontSize: '16px',
                 lineHeight: '19px',
-            }
+            },
         },
         MuiExpansionPanel: {
             root: {
@@ -848,12 +848,12 @@ var theme = core_1.createMuiTheme({
         MuiBackdrop: {
             root: {
                 background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
-                opacity: '0.7 !important'
+                opacity: '0.7 !important',
             },
             invisible: {
                 background: 'transparent',
-                backgroundColor: 'transparent'
-            }
+                backgroundColor: 'transparent',
+            },
         },
         // @ts-ignore
         MuiToggleButtonGroup: {

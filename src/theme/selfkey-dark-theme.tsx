@@ -1,17 +1,6 @@
 import * as React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
-import {
-  primary,
-  typography,
-  error,
-  primaryTint,
-  warning,
-  white,
-  grey,
-  base,
-  baseDark,
-  baseLight,
-} from '../colors';
+import { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight } from '../colors';
 export * from '../colors';
 export * from '../materialui/button';
 export * from '../materialui/colorPresentation';
@@ -271,8 +260,8 @@ const theme = createMuiTheme({
 				whiteSpace: 'normal',
 			},
 			gutterBottom: {
-				marginBottom: '1em'
-			}
+				marginBottom: '1em',
+			},
 		},
 		MuiList: {
 			root: {
@@ -389,7 +378,7 @@ const theme = createMuiTheme({
 				color: '#93B0C1',
 				transition: 'all 0.2s ease-out',
 				'&:hover': {
-				  	color: white,
+					color: white,
 				},
 				'&:focus': {
 					color: primary,
@@ -399,8 +388,8 @@ const theme = createMuiTheme({
 				},
 			},
 			fontSizeSmall: {
-				fontSize: 16
-			}
+				fontSize: 16,
+			},
 		},
 		MuiCheckbox: {
 			root: {
@@ -775,12 +764,12 @@ const theme = createMuiTheme({
 				width: 'initial',
 			},
 			labelContainer: {
-				padding: '6px 15px !important'
+				padding: '6px 15px !important',
 			},
 			label: {
 				fontSize: '16px',
 				lineHeight: '19px',
-			}
+			},
 		},
 		MuiExpansionPanel: {
 			root: {
@@ -852,12 +841,12 @@ const theme = createMuiTheme({
 		MuiBackdrop: {
 			root: {
 				background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
-				opacity: '0.7 !important'
+				opacity: '0.7 !important',
 			},
 			invisible: {
 				background: 'transparent',
-				backgroundColor: 'transparent'
-			}
+				backgroundColor: 'transparent',
+			},
 		},
 		// @ts-ignore
 		MuiToggleButtonGroup: {
