@@ -295,6 +295,17 @@ var FileLinkWithModalComponent = /** @class */ (function (_super) {
             URL.revokeObjectURL(url);
         }
     };
+    FileLinkWithModalComponent.prototype.componentDidUpdate = function (prevProps, prevState) {
+        if (this.props.file.name !== prevProps.file.name || this.props.file.contents !== prevProps.file.contents) {
+            var file = this.props.file;
+            var mime = file.mimeType.fileType || file.mimeType;
+            var state = { file: file, url: file.url, urlCreated: false, mime: mime };
+            this.setState(state);
+            if (prevState.urlCreated) {
+                URL.revokeObjectURL(prevState.url);
+            }
+        }
+    };
     FileLinkWithModalComponent.prototype.isSupportedFile = function (mime) {
         return isImageType(mime) || isAudioType(mime) || isPDFType(mime);
     };

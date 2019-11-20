@@ -298,8 +298,8 @@ class FileLinkWithModalComponent extends React.Component<FileViewProps, any> {
 	constructor(props: FileViewProps) {
 		super(props);
 
-		let { file } = props;
-		let url = file.url;
+		const { file } = props;
+		const { url } = file;
 		const mime = file.mimeType.fileType || file.mimeType;
 		this.state = { open: false, file, mime, url, urlCreated: false };
 	}
@@ -316,6 +316,18 @@ class FileLinkWithModalComponent extends React.Component<FileViewProps, any> {
 		const { url, urlCreated } = this.state;
 		if (urlCreated) {
 			URL.revokeObjectURL(url);
+		}
+	}
+
+	componentDidUpdate(prevProps: any, prevState: any) {
+		if (this.props.file.name !== prevProps.file.name || this.props.file.contents !== prevProps.file.contents) {
+			const { file } = this.props;
+			const mime: string = file.mimeType.fileType || file.mimeType;
+			const state: any = { file, url: file.url, urlCreated: false, mime };
+			this.setState(state);
+			if (prevState.urlCreated) {
+				URL.revokeObjectURL(prevState.url);
+			}
 		}
 	}
 
