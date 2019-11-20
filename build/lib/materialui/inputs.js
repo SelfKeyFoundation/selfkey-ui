@@ -217,12 +217,15 @@ exports.FilePreviewModalView = core_1.withStyles(fileViewStyles)(function (_a) {
             React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
                 React.createElement(PreviewFileType, { file: file })))));
 });
-var FileViewWithModal = /** @class */ (function (_super) {
-    __extends(FileViewWithModal, _super);
-    function FileViewWithModal() {
+var FileLinkWithModalComponent = /** @class */ (function (_super) {
+    __extends(FileLinkWithModalComponent, _super);
+    function FileLinkWithModalComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
             open: false,
+        };
+        _this.handleClose = function () {
+            _this.setState({ open: false });
         };
         _this.handleOpen = function (evt) {
             var type = _this.props.file.mimeType.fileType || _this.props.file.mimeType;
@@ -240,15 +243,23 @@ var FileViewWithModal = /** @class */ (function (_super) {
                 return _this.props.onPDFOpen(_this.props.file);
             }
         };
-        _this.handleClose = function () {
-            _this.setState({ open: false });
-        };
-        _this.handleState = function () {
-            if (_this.state.open === true) {
-                _this.setState({ open: false });
-            }
-        };
         return _this;
+    }
+    FileLinkWithModalComponent.prototype.render = function () {
+        var _a = this.props, classes = _a.classes, file = _a.file;
+        var open = this.state.open;
+        return (React.createElement(React.Fragment, null,
+            React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: this.handleOpen, href: file.url, target: "_blank", rel: "noopener noreferrer" },
+                React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name)),
+            React.createElement(exports.FilePreviewModalView, { open: open, onClose: this.handleClose, file: file, onBack: this.handleClose })));
+    };
+    return FileLinkWithModalComponent;
+}(React.Component));
+exports.FileLinkWithModal = core_1.withStyles(fileViewStyles)(FileLinkWithModalComponent);
+var FileViewWithModal = /** @class */ (function (_super) {
+    __extends(FileViewWithModal, _super);
+    function FileViewWithModal() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     FileViewWithModal.prototype.render = function () {
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
@@ -275,14 +286,12 @@ var FileViewWithModal = /** @class */ (function (_super) {
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(FileTypeIcon, { fileType: file.mimeType })),
                             React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
-                                React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: this.handleOpen, href: file.url, target: "_blank", rel: "noopener noreferrer" },
-                                    React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name))))),
+                                React.createElement(exports.FileLinkWithModal, { file: file, onPDFOpen: this.props.onPDFOpen })))),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
                             React.createElement(delete_1.DeleteIcon, null)))),
                 errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null),
-            React.createElement(exports.FilePreviewModalView, { open: this.state.open, onClose: this.handleClose, file: file, onBack: this.handleState })));
+                    React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null)));
     };
     return FileViewWithModal;
 }(React.Component));

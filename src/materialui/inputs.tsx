@@ -253,9 +253,13 @@ export const FilePreviewModalView = withStyles(fileViewStyles)(
 	)
 );
 
-class FileViewWithModal extends React.Component<FileViewProps> {
+class FileLinkWithModalComponent extends React.Component<FileViewProps> {
 	state = {
 		open: false,
+	};
+
+	handleClose = () => {
+		this.setState({ open: false });
 	};
 
 	handleOpen = (evt: any) => {
@@ -278,16 +282,31 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 		}
 	};
 
-	handleClose = () => {
-		this.setState({ open: false });
-	};
+	render() {
+		const { classes, file } = this.props;
+		const { open } = this.state;
+		return (
+			<React.Fragment>
+				<a
+					className={`${classes.noDecoration} ${classes.link}`}
+					onClick={this.handleOpen}
+					href={file.url}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Typography variant="subtitle1" className={classes.fileName}>
+						{file.name}
+					</Typography>
+				</a>
+				<FilePreviewModalView open={open} onClose={this.handleClose} file={file} onBack={this.handleClose} />
+			</React.Fragment>
+		);
+	}
+}
 
-	handleState = () => {
-		if (this.state.open === true) {
-			this.setState({ open: false });
-		}
-	};
+export const FileLinkWithModal = withStyles(fileViewStyles)(FileLinkWithModalComponent);
 
+class FileViewWithModal extends React.Component<FileViewProps> {
 	render() {
 		const { classes, file, onClearForm, errors = [] } = this.props;
 
@@ -321,17 +340,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 									<FileTypeIcon fileType={file.mimeType} />
 								</Grid>
 								<Grid item className={classes.breakAll}>
-									<a
-										className={`${classes.noDecoration} ${classes.link}`}
-										onClick={this.handleOpen}
-										href={file.url}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<Typography variant="subtitle1" className={classes.fileName}>
-											{file.name}
-										</Typography>
-									</a>
+									<FileLinkWithModal file={file} onPDFOpen={this.props.onPDFOpen} />
 								</Grid>
 							</Grid>
 						</Grid>
@@ -353,12 +362,6 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 						</Grid>
 					) : null}
 				</Grid>
-				<FilePreviewModalView
-					open={this.state.open}
-					onClose={this.handleClose}
-					file={file}
-					onBack={this.handleState}
-				/>
 			</Grid>
 		);
 	}

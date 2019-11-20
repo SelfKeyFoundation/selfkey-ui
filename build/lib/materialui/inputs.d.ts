@@ -12,6 +12,7 @@ export declare type FileViewProps = any;
 export declare const FileView: React.ComponentType<Pick<any, string | number | symbol> & import("@material-ui/core").StyledComponentProps<"link" | "padding" | "fullWidth" | "fileItem" | "fileItemError" | "noDecoration" | "fileName" | "breakAll" | "fileErrorContainer" | "imageWidth" | "topSpacing" | "bottomSpace" | "back">>;
 export declare type FilePreviewModalProps = any;
 export declare const FilePreviewModalView: React.ComponentType<Pick<any, string | number | symbol> & import("@material-ui/core").StyledComponentProps<"link" | "padding" | "fullWidth" | "fileItem" | "fileItemError" | "noDecoration" | "fileName" | "breakAll" | "fileErrorContainer" | "imageWidth" | "topSpacing" | "bottomSpace" | "back">>;
+export declare const FileLinkWithModal: React.ComponentType<Pick<any, string | number | symbol> & import("@material-ui/core").StyledComponentProps<"link" | "padding" | "fullWidth" | "fileItem" | "fileItemError" | "noDecoration" | "fileName" | "breakAll" | "fileErrorContainer" | "imageWidth" | "topSpacing" | "bottomSpace" | "back">>;
 export declare const FileViewWithModalComponent: React.ComponentType<Pick<any, string | number | symbol> & import("@material-ui/core").StyledComponentProps<"link" | "padding" | "fullWidth" | "fileItem" | "fileItemError" | "noDecoration" | "fileName" | "breakAll" | "fileErrorContainer" | "imageWidth" | "topSpacing" | "bottomSpace" | "back">>;
 export declare type FileUploadWidgetProps = any;
 export declare const FileUploadWidget: React.ComponentType<any>;
