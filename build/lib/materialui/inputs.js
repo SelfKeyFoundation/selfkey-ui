@@ -178,8 +178,14 @@ var fileViewStyles = function (theme) {
             marginBottom: '20px',
         },
         back: {
-            zIndex: 1000
-        }
+            zIndex: 1000,
+        },
+        ellipsis: {
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+            maxWidth: '222px',
+        },
     });
 };
 exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
@@ -199,63 +205,157 @@ exports.FileView = core_1.withStyles(fileViewStyles)(function (_a) {
         errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
             React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null));
 });
-var FileViewWithModal = /** @class */ (function (_super) {
-    __extends(FileViewWithModal, _super);
-    function FileViewWithModal() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.state = {
-            open: false,
-        };
-        _this.handleOpen = function (evt) {
-            var type = _this.props.file.mimeType;
-            if (type === 'image/png' ||
-                type === 'image/jpeg' ||
-                type === 'audio/ogg' ||
-                type === 'audio/mp3' ||
-                type === 'audio/m4a' ||
-                type === 'audio/x-wav') {
-                evt && evt.preventDefault();
-                return _this.setState({ open: true });
-            }
-            if (type === 'application/pdf' && _this.props.onPDFOpen) {
-                evt && evt.preventDefault();
-                return _this.props.onPDFOpen(_this.props.file);
-            }
-        };
+var isImageType = function (mime) { return ['image/png', 'image/jpeg'].includes(mime); };
+var isAudioType = function (mime) { return ['audio/ogg', 'audio/mp3', 'audio/m4a', 'audio/x-wav'].includes(mime); };
+var isPDFType = function (mime) { return ['application/pdf'].includes(mime); };
+var dataURItoBlob = function (dataURI) {
+    // Split metadata from data
+    var splitted = dataURI.split(',');
+    // Split params
+    var params = splitted[0].split(';');
+    // Get mime-type from params
+    var type = params[0].replace('data:', '');
+    // Filter the name property from params
+    var properties = params.filter(function (param) {
+        return param.split('=')[0] === 'name';
+    });
+    // Look for the name and use unknown if no name property.
+    var name;
+    if (properties.length !== 1) {
+        name = 'unknown';
+    }
+    else {
+        // Because we filtered out the other property,
+        // we only have the name case here.
+        name = properties[0].split('=')[1];
+    }
+    // Built the Uint8Array Blob parameter from the base64 string.
+    var binary = atob(splitted[1]);
+    var array = [];
+    for (var i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+    }
+    // Create the blob object
+    var blob = new window.Blob([new Uint8Array(array)], { type: type });
+    return { blob: blob, name: name };
+};
+var PreviewFileType = core_1.withStyles(fileViewStyles)(function (_a) {
+    var classes = _a.classes, file = _a.file, url = _a.url, mime = _a.mime;
+    if (isImageType(mime)) {
+        return React.createElement("img", { src: url, alt: file.name, className: classes.imageWidth });
+    }
+    else {
+        return React.createElement("audio", { src: url, controls: true });
+    }
+});
+exports.FilePreviewModalView = core_1.withStyles(fileViewStyles)(function (_a) {
+    var classes = _a.classes, open = _a.open, onClose = _a.onClose, onBack = _a.onBack, file = _a.file, url = _a.url, mime = _a.mime;
+    return (React.createElement(core_1.Modal, { open: open, onClose: onClose },
+        React.createElement(modalWithBackButton_1.ModalWrap, null,
+            React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: onBack, className: "" + classes.back }, "\u2039 Back"),
+            React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
+                React.createElement(PreviewFileType, { file: file, url: url, mime: mime })))));
+});
+var FileLinkWithModalComponent = /** @class */ (function (_super) {
+    __extends(FileLinkWithModalComponent, _super);
+    function FileLinkWithModalComponent(props) {
+        var _this = _super.call(this, props) || this;
         _this.handleClose = function () {
             _this.setState({ open: false });
         };
-        _this.handleState = function () {
-            if (_this.state.open === true) {
-                _this.setState({ open: false });
+        _this.handleOpen = function (evt) {
+            var _a = _this.state, url = _a.url, mime = _a.mime, file = _a.file;
+            if (!url && _this.isSupportedFile(mime)) {
+                url = _this.createFileUrl(file, mime);
+            }
+            if (isImageType(mime) || isAudioType(mime)) {
+                evt && evt.preventDefault();
+                return _this.setState({ open: true });
+            }
+            if (isPDFType(mime) && _this.props.onPDFOpen) {
+                evt && evt.preventDefault();
+                return _this.props.onPDFOpen(__assign({}, file, { url: url }));
             }
         };
+        var file = props.file;
+        var url = file.url;
+        var mime = file.mimeType.fileType || file.mimeType;
+        _this.state = { open: false, file: file, mime: mime, url: url, urlCreated: false };
         return _this;
+    }
+    FileLinkWithModalComponent.prototype.componentDidMount = function () {
+        var _a = this.state, file = _a.file, mime = _a.mime, url = _a.url;
+        if (!url && !this.isSupportedFile(mime)) {
+            this.createFileUrl(file, mime);
+        }
+    };
+    FileLinkWithModalComponent.prototype.componentWillUnmount = function () {
+        var _a = this.state, url = _a.url, urlCreated = _a.urlCreated;
+        if (urlCreated) {
+            URL.revokeObjectURL(url);
+        }
+    };
+    FileLinkWithModalComponent.prototype.componentDidUpdate = function (prevProps, prevState) {
+        if (this.props.file.name !== prevProps.file.name || this.props.file.contents !== prevProps.file.contents) {
+            var file = this.props.file;
+            var mime = file.mimeType.fileType || file.mimeType;
+            var state = { file: file, url: file.url, urlCreated: false, mime: mime };
+            this.setState(state);
+            if (prevState.urlCreated) {
+                URL.revokeObjectURL(prevState.url);
+            }
+        }
+    };
+    FileLinkWithModalComponent.prototype.isSupportedFile = function (mime) {
+        return isImageType(mime) || isAudioType(mime) || isPDFType(mime);
+    };
+    FileLinkWithModalComponent.prototype.createFileUrl = function (document, mime) {
+        var _a = dataURItoBlob(document.content), blob = _a.blob, name = _a.name;
+        var file = new File([blob], name, { type: mime });
+        var url = URL.createObjectURL(file);
+        this.setState({ url: url, urlCreated: true });
+        return url;
+    };
+    FileLinkWithModalComponent.prototype.render = function () {
+        var _a = this.props, classes = _a.classes, _b = _a.className, className = _b === void 0 ? '' : _b, _c = _a.small, small = _c === void 0 ? false : _c;
+        var _d = this.state, open = _d.open, file = _d.file, url = _d.url, mime = _d.mime;
+        var textProps = {
+            variant: 'subtitle1',
+            className: classes.fileName,
+        };
+        if (small) {
+            textProps.color = 'secondary';
+            textProps.className = textProps.className + " " + classes.ellipsis;
+            textProps.title = file.name;
+        }
+        return (React.createElement(React.Fragment, null,
+            React.createElement("a", { className: classes.noDecoration + " " + classes.link + " " + className, onClick: this.handleOpen, href: file.url, target: "_blank", rel: "noopener noreferrer" },
+                React.createElement(core_1.Typography, __assign({}, textProps), file.name)),
+            React.createElement(exports.FilePreviewModalView, { open: open, onClose: this.handleClose, file: file, url: url, mime: mime, onBack: this.handleClose })));
+    };
+    return FileLinkWithModalComponent;
+}(React.Component));
+exports.FileLinkWithModal = core_1.withStyles(fileViewStyles)(FileLinkWithModalComponent);
+var FileViewWithModal = /** @class */ (function (_super) {
+    __extends(FileViewWithModal, _super);
+    function FileViewWithModal() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     FileViewWithModal.prototype.render = function () {
         var _a = this.props, classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
         var FileTypeIcon = function (fileType) {
-            var type = fileType.fileType;
-            if (type === 'image/png' || type === 'image/jpeg') {
+            var type = fileType.fileType || fileType;
+            if (isImageType(type)) {
                 return React.createElement(file_image_1.FileImageIcon, null);
             }
-            else if (type === 'application/pdf') {
+            else if (isPDFType(type)) {
                 return React.createElement(file_pdf_1.FilePdfIcon, null);
             }
-            else if (type === 'audio/ogg' || type === 'audio/mp3' || type === 'audio/m4a' || type === 'audio/x-wav') {
+            else if (isAudioType(type)) {
                 return React.createElement(file_audio_1.FileAudioIcon, null);
             }
             else {
                 return React.createElement(file_default_1.FileDefaultIcon, null);
-            }
-        };
-        var PreviewType = function (fileType) {
-            var type = fileType.fileType;
-            if (type === 'image/png' || type === 'image/jpeg') {
-                return React.createElement("img", { src: file.url, alt: file.name, className: classes.imageWidth });
-            }
-            else {
-                return React.createElement("audio", { src: file.url, controls: true });
             }
         };
         return (React.createElement(core_1.Grid, { item: true },
@@ -266,18 +366,12 @@ var FileViewWithModal = /** @class */ (function (_super) {
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(FileTypeIcon, { fileType: file.mimeType })),
                             React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
-                                React.createElement("a", { className: classes.noDecoration + " " + classes.link, onClick: this.handleOpen, href: file.url, target: "_blank", rel: "noopener noreferrer" },
-                                    React.createElement(core_1.Typography, { variant: "subtitle1", className: classes.fileName }, file.name))))),
+                                React.createElement(exports.FileLinkWithModal, { file: file, onPDFOpen: this.props.onPDFOpen })))),
                     React.createElement(core_1.Grid, { item: true },
                         React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
                             React.createElement(delete_1.DeleteIcon, null)))),
                 errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null),
-            React.createElement(core_1.Modal, { open: this.state.open, onClose: this.handleClose },
-                React.createElement(modalWithBackButton_1.ModalWrap, null,
-                    React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: this.handleState, className: "" + classes.back }, "\u2039 Back"),
-                    React.createElement(modalElements_1.ModalBody2, { className: classes.fullWidth + " " + classes.topSpacing },
-                        React.createElement(PreviewType, { fileType: file.mimeType }))))));
+                    React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null)));
     };
     return FileViewWithModal;
 }(React.Component));
@@ -343,7 +437,7 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
                         React.createElement(core_1.Button, { variant: "contained", size: "large", component: "label", className: classes.button },
                             "Upload",
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
-        file ? React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen }) : null));
+        file ? (React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
 exports.FileUploadGrid = core_1.withStyles({
     container: {
