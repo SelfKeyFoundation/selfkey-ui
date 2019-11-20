@@ -184,6 +184,12 @@ const fileViewStyles = (theme: Theme) =>
 		back: {
 			zIndex: 1000,
 		},
+		ellipsis: {
+			overflow: 'hidden',
+			textOverflow: 'ellipsis',
+			whiteSpace: 'nowrap',
+			maxWidth: '222px',
+		},
 	});
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -221,19 +227,54 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 	</Grid>
 ));
 
+const isImageType = (mime: string) => ['image/png', 'image/jpeg'].includes(mime);
+const isAudioType = (mime: string) => ['audio/ogg', 'audio/mp3', 'audio/m4a', 'audio/x-wav'].includes(mime);
+const isPDFType = (mime: string) => ['application/pdf'].includes(mime);
+const dataURItoBlob = (dataURI: string) => {
+	// Split metadata from data
+	const splitted = dataURI.split(',');
+	// Split params
+	const params = splitted[0].split(';');
+	// Get mime-type from params
+	const type = params[0].replace('data:', '');
+	// Filter the name property from params
+	const properties = params.filter(param => {
+		return param.split('=')[0] === 'name';
+	});
+	// Look for the name and use unknown if no name property.
+	let name;
+	if (properties.length !== 1) {
+		name = 'unknown';
+	} else {
+		// Because we filtered out the other property,
+		// we only have the name case here.
+		name = properties[0].split('=')[1];
+	}
+
+	// Built the Uint8Array Blob parameter from the base64 string.
+	const binary = atob(splitted[1]);
+	const array = [];
+	for (let i = 0; i < binary.length; i++) {
+		array.push(binary.charCodeAt(i));
+	}
+	// Create the blob object
+	const blob = new window.Blob([new Uint8Array(array)], { type });
+
+	return { blob, name };
+};
+
 export type FilePreviewModalProps = any;
 
-const PreviewFileType = withStyles(fileViewStyles)(({ classes, file }: any) => {
-	const type = file.mimeType.fileTyp || file.mimeType;
-	if (type === 'image/png' || type === 'image/jpeg') {
-		return <img src={file.url} alt={file.name} className={classes.imageWidth} />;
+const PreviewFileType = withStyles(fileViewStyles)(({ classes, file, url, mime }: any) => {
+	if (isImageType(mime)) {
+		return <img src={url} alt={file.name} className={classes.imageWidth} />;
 	} else {
-		return <audio src={file.url} controls />;
+		return <audio src={url} controls />;
 	}
 });
 
 export const FilePreviewModalView = withStyles(fileViewStyles)(
-	({ classes, open, onClose, onBack, file }: FilePreviewModalProps) => (
+	({ classes, open, onClose, onBack, file, url, mime }: FilePreviewModalProps) => (
 		<Modal open={open} onClose={onClose}>
 			<ModalWrap>
 				<Button
@@ -246,59 +287,104 @@ export const FilePreviewModalView = withStyles(fileViewStyles)(
 					‹ Back
 				</Button>
 				<ModalBody2 className={`${classes.fullWidth} ${classes.topSpacing}`}>
-					<PreviewFileType file={file} />
+					<PreviewFileType file={file} url={url} mime={mime} />
 				</ModalBody2>
 			</ModalWrap>
 		</Modal>
 	)
 );
 
-class FileLinkWithModalComponent extends React.Component<FileViewProps> {
-	state = {
-		open: false,
-	};
+class FileLinkWithModalComponent extends React.Component<FileViewProps, any> {
+	constructor(props: FileViewProps) {
+		super(props);
+
+		let { file } = props;
+		let url = file.url;
+		const mime = file.mimeType.fileType || file.mimeType;
+		this.state = { open: false, file, mime, url, urlCreated: false };
+	}
+
+	componentDidMount() {
+		const { file, mime, url } = this.state;
+
+		if (!url && !this.isSupportedFile(mime)) {
+			this.createFileUrl(file, mime);
+		}
+	}
+
+	componentWillUnmount() {
+		const { url, urlCreated } = this.state;
+		if (urlCreated) {
+			URL.revokeObjectURL(url);
+		}
+	}
+
+	isSupportedFile(mime: string) {
+		return isImageType(mime) || isAudioType(mime) || isPDFType(mime);
+	}
+
+	createFileUrl(document: any, mime: string) {
+		const { blob, name } = dataURItoBlob(document.content);
+		const file = new File([blob], name, { type: mime });
+		const url = URL.createObjectURL(file);
+		this.setState({ url, urlCreated: true });
+		return url;
+	}
 
 	handleClose = () => {
 		this.setState({ open: false });
 	};
 
 	handleOpen = (evt: any) => {
-		const type = this.props.file.mimeType.fileType || this.props.file.mimeType;
-		if (
-			type === 'image/png' ||
-			type === 'image/jpeg' ||
-			type === 'audio/ogg' ||
-			type === 'audio/mp3' ||
-			type === 'audio/m4a' ||
-			type === 'audio/x-wav'
-		) {
+		let { url, mime, file } = this.state;
+		if (!url && this.isSupportedFile(mime)) {
+			url = this.createFileUrl(file, mime);
+		}
+		if (isImageType(mime) || isAudioType(mime)) {
 			evt && evt.preventDefault();
 			return this.setState({ open: true });
 		}
 
-		if (type === 'application/pdf' && this.props.onPDFOpen) {
+		if (isPDFType(mime) && this.props.onPDFOpen) {
 			evt && evt.preventDefault();
-			return this.props.onPDFOpen(this.props.file);
+			return this.props.onPDFOpen({ ...file, url });
 		}
 	};
 
 	render() {
-		const { classes, file } = this.props;
-		const { open } = this.state;
+		const { classes, className = '', small = false } = this.props;
+		const { open, file, url, mime } = this.state;
+
+		const textProps: any = {
+			variant: 'subtitle1',
+			className: classes.fileName,
+		};
+
+		if (small) {
+			textProps.color = 'secondary';
+			textProps.className = `${textProps.className} ${classes.ellipsis}`;
+			textProps.title = file.name;
+		}
+
 		return (
 			<React.Fragment>
 				<a
-					className={`${classes.noDecoration} ${classes.link}`}
+					className={`${classes.noDecoration} ${classes.link} ${className}`}
 					onClick={this.handleOpen}
 					href={file.url}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Typography variant="subtitle1" className={classes.fileName}>
-						{file.name}
-					</Typography>
+					<Typography {...textProps}>{file.name}</Typography>
 				</a>
-				<FilePreviewModalView open={open} onClose={this.handleClose} file={file} onBack={this.handleClose} />
+				<FilePreviewModalView
+					open={open}
+					onClose={this.handleClose}
+					file={file}
+					url={url}
+					mime={mime}
+					onBack={this.handleClose}
+				/>
 			</React.Fragment>
 		);
 	}
@@ -312,11 +398,11 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 
 		const FileTypeIcon = (fileType: any) => {
 			const type = fileType.fileType || fileType;
-			if (type === 'image/png' || type === 'image/jpeg') {
+			if (isImageType(type)) {
 				return <FileImageIcon />;
-			} else if (type === 'application/pdf') {
+			} else if (isPDFType(type)) {
 				return <FilePdfIcon />;
-			} else if (type === 'audio/ogg' || type === 'audio/mp3' || type === 'audio/m4a' || type === 'audio/x-wav') {
+			} else if (isAudioType(type)) {
 				return <FileAudioIcon />;
 			} else {
 				return <FileDefaultIcon />;
