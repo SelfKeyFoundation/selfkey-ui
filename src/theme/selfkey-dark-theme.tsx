@@ -841,7 +841,7 @@ const theme = createMuiTheme({
 		MuiBackdrop: {
 			root: {
 				background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
-				opacity: '0.7 !important',
+				opacity: '0.9 !important',
 			},
 			invisible: {
 				background: 'transparent',
