@@ -58,7 +58,7 @@ var styles = {
             cursor: 'pointer',
             display: 'none',
             fontWeight: 600,
-            minHeight: '325px',
+            minHeight: '293px',
             minWidth: '263px',
             padding: '5px 25px 15px 25px',
             textAlign: 'center',
