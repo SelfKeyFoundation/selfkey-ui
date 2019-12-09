@@ -690,7 +690,7 @@ const theme = createMuiTheme({
 		MuiIconButton: {
 			root: {
 				color: grey,
-				padding: '7px 0 7px 10px',
+				padding: '7px 5px',
 				'&:hover': {
 					backgroundColor: 'transparent',
 				},
