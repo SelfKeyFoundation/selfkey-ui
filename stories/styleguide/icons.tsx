@@ -41,6 +41,7 @@ import {
 	FileMultipleIcon,
 	FilePdfIcon,
 	FileVideoIcon,
+	FilterIcon,
 	GearIcon,
 	GreenTickIcon,
 	HardDriveIcon,
@@ -78,6 +79,7 @@ import {
 	PasswordConfirmIcon,
 	PasswordIcon,
 	PaymentIcon,
+	PendingNewIcon,
 	PersonIcon,
 	PowerIcon,
 	PrintIcon,
@@ -86,6 +88,7 @@ import {
 	ProtectionIcon,
 	QuitIcon,
 	ReceiveIcon,
+	ReceivedNewIcon,
 	RefreshIcon,
 	ReplyIcon,
 	ReturnIcon,
@@ -98,6 +101,7 @@ import {
 	SelfkeyLogoTemp,
 	SentBlueIcon,
 	SentIcon,
+	SentNewIcon,
 	ShareIcon,
 	ShieldIcon,
 	SignatureIcon,
@@ -434,6 +438,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<FilterIcon />`}</code>
+			</pre>
+			<FilterIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<GearIcon />`}</code>
 			</pre>
 			<GearIcon />
@@ -707,6 +718,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<PendingNewIcon />`}</code>
+			</pre>
+			<PendingNewIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<PersonIcon />`}</code>
 			</pre>
 			<PersonIcon />
@@ -759,6 +777,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<ReceiveIcon />`}</code>
 			</pre>
 			<ReceiveIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<ReceivedNewIcon />`}</code>
+			</pre>
+			<ReceivedNewIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
@@ -857,6 +882,20 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<SentIcon />`}</code>
 			</pre>
 			<SentIcon />
+		</Grid>
+		
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SentIcon />`}</code>
+			</pre>
+			<SentIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SentNewIcon />`}</code>
+			</pre>
+			<SentNewIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
