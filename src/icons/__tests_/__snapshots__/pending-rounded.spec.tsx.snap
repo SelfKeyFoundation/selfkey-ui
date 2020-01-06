@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pending New Icon should show Pending New Icon 1`] = `
+exports[`Pending Rounded Icon should show Pending Rounded Icon 1`] = `
 <svg
   aria-hidden="true"
   className="MuiSvgIcon-root-1 Component-root-0-1-1"

@@ -12,7 +12,7 @@ const styles: StyleSheet = {
     }
 };
 
-export const PendingNewIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+export const PendingRoundedIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
         <SvgIcon style={{ width: props.width || '34px', height: props.height || '34px' }} {...props} viewBox={props.viewBox || "0 0 34 34"}>
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="300.7-dashboard-alternate1---full-state" transform="translate(-1049.000000, -681.000000)">
@@ -32,4 +32,4 @@ export const PendingNewIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconP
     )
 );
 
-export default PendingNewIcon;
+export default PendingRoundedIcon;

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import SentNewIcon from '../sent-new';
+import SentRoundedIcon from '../sent-rounded';
 
-describe('Sent New Icon', () => {
-  it('should show Sent New Icon', () => {
+describe('Sent Rounded Icon', () => {
+  it('should show Sent Rounded Icon', () => {
     const component = create(
-      <SentNewIcon />
+      <SentRoundedIcon />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

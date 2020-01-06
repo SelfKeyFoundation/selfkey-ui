@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import PendingNewIcon from '../pending-new';
+import PendingRoundedIcon from '../pending-rounded';
 
-describe('Pending New Icon', () => {
-  it('should show Pending New Icon', () => {
+describe('Pending Rounded Icon', () => {
+  it('should show Pending Rounded Icon', () => {
     const component = create(
-      <PendingNewIcon />
+      <PendingRoundedIcon />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
