@@ -6,12 +6,18 @@ exports[`Marketplace Icon should show Marketplace Icon 1`] = `
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
   focusable="false"
   role="presentation"
-  version="1.1"
+  style={
+    Object {
+      "fill": "url(#dlg)",
+      "height": "30px",
+      "width": "36px",
+    }
+  }
   viewBox="0 0 36 30"
 >
   <defs>
     <linearGradient
-      id="marketplace-linearGradient-1"
+      id="dlg"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -28,14 +34,14 @@ exports[`Marketplace Icon should show Marketplace Icon 1`] = `
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
     id="💹-Marketplace"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="url(#marketplace-linearGradient-1)"
+      fill="inherit"
       fillRule="nonzero"
       id="500---SelfKey-Marketplace"
       transform="translate(-150.000000, -156.000000)"
