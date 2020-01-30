@@ -51,6 +51,7 @@ export { CheckMaIcon } from './icons/check-ma';
 export { ClearIcon } from './icons/clear';
 export { ClipboardIcon } from './icons/clipboard';
 export { CloseButtonIcon } from './icons/close-button';
+export { CoinsIcon } from './icons/coins';
 export { CompanyIcon } from './icons/company';
 export { CopyIcon } from './icons/copy';
 export { CustomIcon } from './icons/custom';

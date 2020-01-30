@@ -20,6 +20,7 @@ import {
 	ClearIcon,
 	ClipboardIcon,
 	CloseButtonIcon,
+	CoinsIcon,
 	CompanyIcon,
 	CopyIcon,
 	CustomIcon,
@@ -288,6 +289,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
+				<code className={classes.code}>{`<CoinsIcon />`}</code>
+			</pre>
+			<CoinsIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
 				<code className={classes.code}>{`<CompanyIcon />`}</code>
 			</pre>
 			<CompanyIcon />
@@ -521,7 +529,7 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 			<pre className={classes.pre}>
 				<code className={classes.code}>{`<IdCardIcon />`}</code>
 			</pre>
-			<IdCardIcon />
+			<IdCardIcon fill="" />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
