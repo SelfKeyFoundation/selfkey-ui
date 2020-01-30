@@ -11,6 +11,7 @@ export declare type PriceSummaryProps = {
     value: number;
     appendCurrency?: boolean;
     prependCurrency?: boolean;
+    showCurrency?: boolean;
 };
 export declare const PriceSummary: React.ComponentType<PriceSummaryProps & StyledComponentProps<string>>;
 export default PriceSummary;

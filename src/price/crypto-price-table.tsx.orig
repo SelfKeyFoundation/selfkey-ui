@@ -77,7 +77,10 @@ export type Token = {
 export type CryptoPriceTableProps = {
 	locale: string;
 	fiatCurrency: string;
+<<<<<<< Updated upstream
+=======
 	showCurrency?: boolean,
+>>>>>>> Stashed changes
 	tokens: Array<Token>;
 	toggleAction?: ((event: React.MouseEvent<HTMLElement>, token: Token) => void);
 	alwaysVisible?: Array<string>;
@@ -118,7 +121,11 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 	}
 
 	renderRow(token: Token, index: number) {
+<<<<<<< Updated upstream
+		const { locale, fiatCurrency, classes } = this.props;
+=======
 		const { locale, fiatCurrency, showCurrency, classes } = this.props;
+>>>>>>> Stashed changes
 		const visibilityButton = this.renderVisibilityButton(token);
 		return (
 			<TableRow key={index} className={classes.bodyTableRow}>
@@ -134,7 +141,11 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 					/>
 				</TableCell>
 				<TableCell align="right">
+<<<<<<< Updated upstream
+					<PriceSummary locale={locale} priceStyle="currency" currency={fiatCurrency} value={token.price} />
+=======
 					<PriceSummary locale={locale} priceStyle="currency" currency={fiatCurrency} value={token.price} showCurrency={showCurrency} />
+>>>>>>> Stashed changes
 				</TableCell>
 				<TableCell align="right">
 					<PriceSummary

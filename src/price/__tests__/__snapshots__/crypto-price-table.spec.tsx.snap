@@ -87,6 +87,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 30
+                 
               </div>
             </div>
           </div>
@@ -103,6 +104,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $0.01
+                 
               </div>
             </div>
           </div>
@@ -119,6 +121,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $0.42432
+                 
               </div>
             </div>
           </div>
@@ -161,6 +164,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 0.00548
+                 
               </div>
             </div>
           </div>
@@ -177,6 +181,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $400.00
+                 
               </div>
             </div>
           </div>
@@ -193,6 +198,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $20.52
+                 
               </div>
             </div>
           </div>
@@ -233,6 +239,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 0.00548
+                 
               </div>
             </div>
           </div>
@@ -249,6 +256,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $500.00
+                 
               </div>
             </div>
           </div>
@@ -265,6 +273,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $20.52
+                 
               </div>
             </div>
           </div>
@@ -329,6 +338,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 0.00548
+                 
               </div>
             </div>
           </div>
@@ -345,6 +355,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $400.00
+                 
               </div>
             </div>
           </div>
@@ -361,6 +372,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $20.52
+                 
               </div>
             </div>
           </div>
@@ -425,6 +437,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 0.00548
+                 
               </div>
             </div>
           </div>
@@ -441,6 +454,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $400.00
+                 
               </div>
             </div>
           </div>
@@ -457,6 +471,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
             >
               <div>
                 $20.52
+                 
               </div>
             </div>
           </div>

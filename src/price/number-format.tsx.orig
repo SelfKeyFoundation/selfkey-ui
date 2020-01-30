@@ -6,8 +6,12 @@ export type NumberFormatProps = {
   priceStyle: string,
   currency?: string,
   value: number,
+<<<<<<< Updated upstream
+  fractionDigits?: number
+=======
   fractionDigits?: number,
   showCurrency?: boolean,
+>>>>>>> Stashed changes
 };
 
 const formatters: {
@@ -25,8 +29,12 @@ export const NumberFormat: SFC<NumberFormatProps> = ({
   priceStyle,
   currency,
   value,
+<<<<<<< Updated upstream
+  fractionDigits
+=======
   fractionDigits,
   showCurrency,
+>>>>>>> Stashed changes
 }) => {
   fractionDigits = (fractionDigits)? fractionDigits : (Number(value) >= 1) ? 2 : 10;
   const formatString = `${locale}:${priceStyle}:${currency}:${fractionDigits || "default"}`;
@@ -45,6 +53,10 @@ export const NumberFormat: SFC<NumberFormatProps> = ({
   }
 
   return (
+<<<<<<< Updated upstream
+    <div>{formatters[formatString].format(Number(value))}</div>
+=======
   <div>{formatters[formatString].format(Number(value))} {showCurrency && currency}</div>
+>>>>>>> Stashed changes
   );
 };
