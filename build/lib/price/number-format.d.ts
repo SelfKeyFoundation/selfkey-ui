@@ -5,6 +5,7 @@ export declare type NumberFormatProps = {
     currency?: string;
     value: number;
     fractionDigits?: number;
+    showCurrency?: boolean;
 };
 export declare type OptionsType = {
     style: string;

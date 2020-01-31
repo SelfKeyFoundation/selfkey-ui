@@ -61,6 +61,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
         >
           <div>
             4
+             
           </div>
         </div>
       </div>
@@ -72,6 +73,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
         >
           <div>
             $0.0174857
+             
           </div>
         </div>
         <div

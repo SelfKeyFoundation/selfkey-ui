@@ -201,6 +201,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       <span>
         <div>
           $0.00
+           
         </div>
       </span>
       <span>
@@ -242,6 +243,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
                   >
                     <div>
                       0.000000000000151
+                       
                     </div>
                   </div>
                   <div
@@ -267,6 +269,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
                   >
                     <div>
                       $0.000000000037191
+                       
                     </div>
                   </div>
                   <div
