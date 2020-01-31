@@ -6,7 +6,8 @@ export type NumberFormatProps = {
   priceStyle: string,
   currency?: string,
   value: number,
-  fractionDigits?: number
+  fractionDigits?: number,
+  showCurrency?: boolean,
 };
 
 const formatters: {
@@ -24,7 +25,8 @@ export const NumberFormat: SFC<NumberFormatProps> = ({
   priceStyle,
   currency,
   value,
-  fractionDigits
+  fractionDigits,
+  showCurrency,
 }) => {
   fractionDigits = (fractionDigits)? fractionDigits : (Number(value) >= 1) ? 2 : 10;
   const formatString = `${locale}:${priceStyle}:${currency}:${fractionDigits || "default"}`;
@@ -43,6 +45,6 @@ export const NumberFormat: SFC<NumberFormatProps> = ({
   }
 
   return (
-    <div>{formatters[formatString].format(Number(value))}</div>
+  <div>{formatters[formatString].format(Number(value))} {showCurrency && currency}</div>
   );
 };

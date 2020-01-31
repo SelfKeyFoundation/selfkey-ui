@@ -36,6 +36,7 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
               >
                 <div>
                   0.000000000000151
+                   
                 </div>
               </div>
               <div
@@ -61,6 +62,7 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
               >
                 <div>
                   $0.000000000037191
+                   
                 </div>
               </div>
               <div
@@ -223,6 +225,7 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
               >
                 <div>
                   0.000000000000151
+                   
                 </div>
               </div>
               <div
@@ -248,6 +251,7 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
               >
                 <div>
                   $0.000000000037191
+                   
                 </div>
               </div>
               <div

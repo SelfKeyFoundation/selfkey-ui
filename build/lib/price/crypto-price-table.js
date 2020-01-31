@@ -98,7 +98,7 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             } }, icon));
     };
     CryptoPriceTableComponent.prototype.renderRow = function (token, index) {
-        var _a = this.props, locale = _a.locale, fiatCurrency = _a.fiatCurrency, classes = _a.classes;
+        var _a = this.props, locale = _a.locale, fiatCurrency = _a.fiatCurrency, showCurrency = _a.showCurrency, classes = _a.classes;
         var visibilityButton = this.renderVisibilityButton(token);
         return (React.createElement(core_1.TableRow, { key: index, className: classes.bodyTableRow },
             React.createElement(core_1.TableCell, null, token.name),
@@ -106,7 +106,7 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             React.createElement(core_1.TableCell, { align: "right" },
                 React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, priceStyle: "decimal", currency: token.symbol, value: token.balance })),
             React.createElement(core_1.TableCell, { align: "right" },
-                React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: fiatCurrency, value: token.price })),
+                React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: fiatCurrency, value: token.price, showCurrency: showCurrency })),
             React.createElement(core_1.TableCell, { align: "right" },
                 React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: fiatCurrency, value: token.balanceInFiat })),
             React.createElement(core_1.TableCell, null, token.address),

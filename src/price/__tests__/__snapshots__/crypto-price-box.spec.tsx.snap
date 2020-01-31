@@ -17,6 +17,7 @@ exports[`Crypto Price Box should show Crypto Price Box for Key 1`] = `
     >
       <div>
         4
+         
       </div>
     </div>
   </div>
@@ -33,6 +34,7 @@ exports[`Crypto Price Box should show Crypto Price Box for Key 1`] = `
     >
       <div>
         $0.0174857
+         
       </div>
     </div>
   </div>

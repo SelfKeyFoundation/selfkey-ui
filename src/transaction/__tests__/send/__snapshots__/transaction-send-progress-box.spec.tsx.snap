@@ -190,6 +190,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                     >
                       <div>
                         0.00001
+                         
                       </div>
                     </div>
                     <div
@@ -450,6 +451,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                     >
                       <div>
                         0.00001
+                         
                       </div>
                     </div>
                     <div
@@ -710,6 +712,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                     >
                       <div>
                         0.00001
+                         
                       </div>
                     </div>
                     <div
@@ -970,6 +973,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                     >
                       <div>
                         0.00001
+                         
                       </div>
                     </div>
                     <div
@@ -1229,6 +1233,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                     >
                       <div>
                         0.00001
+                         
                       </div>
                     </div>
                     <div
@@ -1489,6 +1494,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                     >
                       <div>
                         0.00001
+                         
                       </div>
                     </div>
                     <div
@@ -1697,6 +1703,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                     >
                       <div>
                         0.00001
+                         
                       </div>
                     </div>
                     <div

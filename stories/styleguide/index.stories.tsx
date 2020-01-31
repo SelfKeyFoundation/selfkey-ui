@@ -102,6 +102,7 @@ priceStory.addWithJSX('CryptoPriceTable', () => (
 	<CryptoPriceTable
 		locale="en"
 		fiatCurrency="USD"
+		showCurrency
 		alwaysVisible={['test', '']}
 		tokens={[
 			{

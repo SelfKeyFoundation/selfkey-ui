@@ -15,6 +15,7 @@ export declare type Token = {
 export declare type CryptoPriceTableProps = {
     locale: string;
     fiatCurrency: string;
+    showCurrency?: boolean;
     tokens: Array<Token>;
     toggleAction?: ((event: React.MouseEvent<HTMLElement>, token: Token) => void);
     alwaysVisible?: Array<string>;
