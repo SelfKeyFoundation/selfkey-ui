@@ -30,6 +30,7 @@ export * from '../icons/check-ma';
 export * from '../icons/clear';
 export * from '../icons/clipboard';
 export * from '../icons/close-button';
+export * from '../icons/coins';
 export * from '../icons/company';
 export * from '../icons/copy';
 export * from '../icons/corporate';

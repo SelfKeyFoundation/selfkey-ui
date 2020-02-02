@@ -3,18 +3,22 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import DefaultLinearGradient from './_defaultLinearGradient';
 
 const styles: StyleSheet = {
   root: {
-    width: '41px !important',
-    height: '60px !important'
+      transition: 'all 0.2s ease-out',
+      '&:hover': {
+          fill: 'white',
+      },
   }
 };
 
 export const IdCardIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon {...props} viewBox='0 0 41 60'>
-    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="403---Identity-Summary" transform="translate(-253.000000, -581.000000)" fill="#09A8BA" fillRule="nonzero">
+  <SvgIcon style={{ width: props.width || '41px', height: props.height || '60px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox={props.viewBox || "0 0 41 60"}>
+    <DefaultLinearGradient />
+    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
+        <g id="403---Identity-Summary" className="shapeColor" fill="inherit" transform="translate(-253.000000, -581.000000)" fillRule="nonzero">
             <g id="Area-box-2" transform="translate(150.000000, 462.000000)">
                 <g id="Basic" transform="translate(14.000000, 14.000000)">
                     <g id="Explanatory" transform="translate(10.000000, 105.000000)">

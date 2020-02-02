@@ -14,15 +14,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var _defaultLinearGradient_1 = require("./_defaultLinearGradient");
 var styles = {
     root: {
-        width: '41px !important',
-        height: '60px !important'
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        },
     }
 };
-exports.IdCardIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 41 60' }),
-    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
-        React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-253.000000, -581.000000)", fill: "#09A8BA", fillRule: "nonzero" },
+exports.IdCardIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '41px', height: props.height || '60px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: props.viewBox || "0 0 41 60" }),
+    React.createElement(_defaultLinearGradient_1.default, null),
+    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
+        React.createElement("g", { id: "403---Identity-Summary", className: "shapeColor", fill: "inherit", transform: "translate(-253.000000, -581.000000)", fillRule: "nonzero" },
             React.createElement("g", { id: "Area-box-2", transform: "translate(150.000000, 462.000000)" },
                 React.createElement("g", { id: "Basic", transform: "translate(14.000000, 14.000000)" },
                     React.createElement("g", { id: "Explanatory", transform: "translate(10.000000, 105.000000)" },
