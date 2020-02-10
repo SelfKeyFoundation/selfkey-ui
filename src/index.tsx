@@ -71,6 +71,7 @@ export { DocumentIcon } from './icons/document';
 export { DownloadIcon2 } from './icons/download-2';
 export { DropdownIcon } from './icons/dropdown';
 export { EditTransparentIcon } from './icons/edit-transparent';
+export { Erc20Icon } from './icons/erc20';
 export { EthereumIcon } from './icons/ethereum';
 export { ExchangeIcon as ExchangeLargeIcon } from './icons/exchange-large';
 export { ExchangeIcon as ExchangeSmallIcon } from './icons/exchange';
