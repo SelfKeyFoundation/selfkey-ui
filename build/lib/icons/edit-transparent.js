@@ -16,11 +16,15 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
-        width: '16px !important',
-        height: '16px !important'
+        fill: '#93A4AF',
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            cursor: 'pointer',
+            fill: 'white',
+        }
     }
 };
-exports.EditTransparentIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 16 16' }),
+exports.EditTransparentIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || "0 0 16 16" }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-835.000000, -645.000000)" },
             React.createElement("g", { id: "Area-box-2", transform: "translate(150.000000, 513.000000)" },

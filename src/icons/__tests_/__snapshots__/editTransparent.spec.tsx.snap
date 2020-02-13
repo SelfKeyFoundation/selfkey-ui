@@ -6,6 +6,12 @@ exports[`Edit Transparent Icon should show Edit Transparent Icon 1`] = `
   className="MuiSvgIcon-root-1 Component-root-0-1-1"
   focusable="false"
   role="presentation"
+  style={
+    Object {
+      "height": "16px",
+      "width": "16px",
+    }
+  }
   viewBox="0 0 16 16"
 >
   <g

@@ -6,13 +6,17 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles: StyleSheet = {
   root: {
-    width: '16px !important',
-    height: '16px !important'
+      fill: '#93A4AF',
+      transition: 'all 0.2s ease-out',
+      '&:hover': {
+          cursor: 'pointer',
+          fill: 'white',
+      }
   }
 };
 
 export const EditTransparentIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon {...props} viewBox='0 0 16 16'>
+  <SvgIcon style={{ width: props.width || '16px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || "0 0 16 16"}>
     <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
         <g id="403---Identity-Summary" transform="translate(-835.000000, -645.000000)">
             <g id="Area-box-2" transform="translate(150.000000, 513.000000)">
