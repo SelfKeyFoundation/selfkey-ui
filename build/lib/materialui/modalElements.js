@@ -37,7 +37,7 @@ exports.ModalBody = core_1.withStyles({
         boxShadow: '0 50px 70px -50px black',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '28px 30px 50px',
+        padding: '28px 30px 60px',
         width: '100%',
     },
 })(core_1.Paper);
