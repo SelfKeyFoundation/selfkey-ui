@@ -574,6 +574,7 @@ const theme = createMuiTheme({
 			root: {
 				backgroundColor: baseDark,
 				border: '1px solid #384656',
+				boxShadow: 'none',
 				boxSizing: 'border-box',
 				color: white,
 				minWidth: '200px',
