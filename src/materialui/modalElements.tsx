@@ -35,10 +35,10 @@ export const ModalBody = withStyles({
 		backgroundColor: '#262F39',
 		border: 'none',
 		borderRadius: '0 0 3px 3px',
-		boxShadow: '0 50px 70px -50px black',
+		boxShadow: '0 7px 15px 0 rgba(0, 0, 0, 0.2)',
 		boxSizing: 'border-box',
 		minHeight: '200px',
-		padding: '28px 30px 50px',
+		padding: '28px 30px 60px',
 		width: '100%',
 	},
 })(Paper);

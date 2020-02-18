@@ -582,6 +582,7 @@ var theme = core_1.createMuiTheme({
             root: {
                 backgroundColor: colors_1.baseDark,
                 border: '1px solid #384656',
+                boxShadow: 'none',
                 boxSizing: 'border-box',
                 color: colors_1.white,
                 minWidth: '200px',
