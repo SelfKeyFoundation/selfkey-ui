@@ -37,7 +37,6 @@ export * from '../icons/company';
 export * from '../icons/copy';
 export * from '../icons/corporate';
 export * from '../icons/custom';
-export * from '../icons/custom-full';
 export * from '../icons/dashboard-menu';
 export * from '../icons/delete';
 export * from '../icons/denied';

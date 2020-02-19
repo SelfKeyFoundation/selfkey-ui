@@ -42,7 +42,6 @@ __export(require("../icons/company"));
 __export(require("../icons/copy"));
 __export(require("../icons/corporate"));
 __export(require("../icons/custom"));
-__export(require("../icons/custom-full"));
 __export(require("../icons/dashboard-menu"));
 __export(require("../icons/delete"));
 __export(require("../icons/denied"));

@@ -62,7 +62,6 @@ export { CoinsIcon } from './icons/coins';
 export { CompanyIcon } from './icons/company';
 export { CopyIcon } from './icons/copy';
 export { CustomIcon } from './icons/custom';
-export { CustomFullIcon } from './icons/custom-full';
 export { DashboardMenuIcon } from './icons/dashboard-menu';
 export { DeleteIcon } from './icons/delete';
 export { DeniedIcon } from './icons/denied';
