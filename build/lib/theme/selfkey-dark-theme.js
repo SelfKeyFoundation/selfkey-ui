@@ -52,6 +52,7 @@ __export(require("../icons/download-2"));
 __export(require("../icons/download"));
 __export(require("../icons/dropdown"));
 __export(require("../icons/edit-transparent"));
+__export(require("../icons/erc20"));
 __export(require("../icons/ethereum"));
 __export(require("../icons/exchange-large"));
 __export(require("../icons/exchange-rounded"));
