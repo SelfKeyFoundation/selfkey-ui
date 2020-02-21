@@ -6,6 +6,7 @@ export declare type PriceSummaryProps = {
     currencyClass?: string;
     valueClass?: string;
     locale: string;
+    fractionDigits?: number;
     priceStyle: string;
     currency: string;
     value: number;
