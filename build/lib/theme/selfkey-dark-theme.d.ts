@@ -45,6 +45,7 @@ export * from '../icons/download-2';
 export * from '../icons/download';
 export * from '../icons/dropdown';
 export * from '../icons/edit-transparent';
+export * from '../icons/erc20';
 export * from '../icons/ethereum';
 export * from '../icons/exchange-large';
 export * from '../icons/exchange-rounded';

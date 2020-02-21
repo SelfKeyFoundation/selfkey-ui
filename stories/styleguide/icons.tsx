@@ -34,6 +34,7 @@ import {
 	DownloadIcon2,
 	DropdownIcon,
 	EditTransparentIcon,
+	Erc20Icon,
 	EthereumIcon,
 	ExchangeIcon,
 	ExchangeRoundedIcon,
@@ -390,6 +391,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<EditTransparentIcon />`}</code>
 			</pre>
 			<EditTransparentIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<Erc20Icon />`}</code>
+			</pre>
+			<Erc20Icon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
