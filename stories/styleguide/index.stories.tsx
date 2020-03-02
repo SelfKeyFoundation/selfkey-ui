@@ -12,6 +12,7 @@ import { CryptoPriceTable } from '../../src/price/crypto-price-table';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
 import { TransactionFeeSelector } from '../../src/transaction/transaction-fee-selector';
+import { TransactionFeeSliderSelector } from '../../src/transaction/transaction-fee-slider-selector';
 import { TransactionSendProgressBox } from '../../src/transaction/send/transaction-send-progress-box';
 import { LWSModalHeader } from '../../src/lws/lws-modal-header';
 import { LWSLoading } from '../../src/lws/lws-loading';
@@ -177,6 +178,22 @@ transactionrStory.addWithJSX('TransactionFeeSelector', () => (
 		<TransactionFeeSelector
 			minGasPrice={100000000000}
 			maxGasPrice={10000000000000}
+			gasLimit={100}
+			fiat={'USD'}
+			fiatRate={200}
+			onChange={x => console.log('feeSelector', x)}
+		/>
+	</SelfkeyDarkTheme>
+));
+
+transactionrStory.addWithJSX('TransactionFeeSelector - New', () => (
+	<SelfkeyDarkTheme>
+		<TransactionFeeSliderSelector
+			minGasPrice={100000000000}
+			maxGasPrice={10000000000000}
+			slowPrice={1000000000000}
+			mediumPrice={2300000000000}
+			fastPrice={10000000000000}
 			gasLimit={100}
 			fiat={'USD'}
 			fiatRate={200}

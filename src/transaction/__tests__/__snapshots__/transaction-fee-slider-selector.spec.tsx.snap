@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transaction Fee Slider Selector should show Transaction Fee Slider Selector screen 1`] = `
+<div
+  className="TransactionFeeSelectorComponent-root-0-1-1"
+>
+  <div>
+    <span>
+      Network Transaction Fee:
+    </span>
+     
+    <span
+      className="TransactionFeeSelectorComponent-networkFeeValue-0-1-8"
+    >
+      5.05e-8
+       ETH / 
+      0.00
+       
+      USD
+    </span>
+  </div>
+  <div
+    aria-orientation="horizontal"
+    aria-valuemax={100000000000}
+    aria-valuemin={1000000000}
+    aria-valuenow={50500000000}
+    className="MuiSlider-root-1 TransactionFeeSelectorComponent-sliderRoot-0-1-2"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onTouchMove={[Function]}
+    onTouchStartCapture={[Function]}
+    role="slider"
+  >
+    <div
+      className="MuiSlider-container-2"
+    >
+      <div
+        className="MuiSlider-track-3 MuiSlider-trackBefore-4 TransactionFeeSelectorComponent-trackBefore-0-1-4"
+        style={
+          Object {
+            "transform": "translateY(-50%) scaleX(0.5)",
+          }
+        }
+      />
+      <div
+        className="MuiSlider-thumbWrapper-6"
+        style={
+          Object {
+            "transform": "translateX(50%)",
+          }
+        }
+      >
+        <button
+          className="MuiButtonBase-root-15 MuiSlider-thumb-7 TransactionFeeSelectorComponent-thumb-0-1-5"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          onTouchStartCapture={[Function]}
+          tabIndex="0"
+          type="button"
+        />
+      </div>
+      <div
+        className="MuiSlider-track-3 MuiSlider-trackAfter-5 TransactionFeeSelectorComponent-trackAfter-0-1-3"
+        style={
+          Object {
+            "transform": "translateY(-50%) scaleX(0.5)",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="TransactionFeeSelectorComponent-sliderLabels-0-1-7"
+  >
+    <div>
+      <p
+        className="MuiTypography-root-18 MuiTypography-body1-27"
+      >
+        Slow
+      </p>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        1e-8
+         ETH/
+      </h6>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        $ 
+        0.00
+         
+        USD
+      </h6>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        5 - 30 min
+      </h6>
+    </div>
+    <div>
+      <p
+        className="MuiTypography-root-18 MuiTypography-body1-27"
+      >
+        Medium
+      </p>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        2.3e-8
+         ETH/
+      </h6>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        $ 
+        0.00
+         
+        USD
+      </h6>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        2 - 5 min
+      </h6>
+    </div>
+    <div
+      className="TransactionFeeSelectorComponent-rightAligned-0-1-9"
+    >
+      <p
+        className="MuiTypography-root-18 MuiTypography-body1-27"
+      >
+        Fast
+      </p>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        1e-7
+         ETH/
+      </h6>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        $ 
+        0.00
+         
+        USD
+      </h6>
+      <h6
+        className="MuiTypography-root-18 MuiTypography-subtitle2-37 MuiTypography-colorSecondary-49"
+      >
+        &lt; 2 min
+      </h6>
+    </div>
+  </div>
+</div>
+`;

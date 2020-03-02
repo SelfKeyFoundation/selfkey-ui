@@ -29,6 +29,7 @@ export { TransactionNoGasError } from './transaction/transaction-no-gas-error';
 export { ActualTransactionFeeBox } from './transaction/send/fee/actual-transaction-fee-box';
 export { TransactionFeeBox } from './transaction/send/fee/transaction-fee-box';
 export { TransactionFeeSelector } from './transaction/transaction-fee-selector';
+export { TransactionFeeSliderSelector } from './transaction/transaction-fee-slider-selector';
 export { TransactionSendBox } from './transaction/send/transaction-send-box';
 export { TransactionSendProgressBox } from './transaction/send/transaction-send-progress-box';
 export { TransactionError } from './transaction/transaction-error';
