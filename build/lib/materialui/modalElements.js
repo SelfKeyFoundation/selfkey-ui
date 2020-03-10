@@ -6,7 +6,7 @@ exports.ModalWrap = core_1.withStyles({
     root: {
         backgroundColor: colors_1.base,
         boxSizing: 'border-box',
-        boxShadow: 'none',
+        boxShadow: '0 7px 15px 0 rgba(0, 0, 0, 0.2)',
         left: 'calc(50% - 390px)',
         margin: '0 auto',
         outline: 'none',
