@@ -142,7 +142,8 @@ export const CheckedIcon = ((item: any ) => (
 const emptyStyle = {
     color: 'white',
     fontSize: '14px', 
-    fontWeight: 600
+    fontWeight: 600,
+    textAnchor: 'middle' as 'middle'
 };
 
 export const StepIcon = ((step: any) => (
@@ -152,7 +153,7 @@ export const StepIcon = ((step: any) => (
             <g id="group">
                 <g id="empty">
                     <rect id="base" stroke="#F5A623" fill="#F5A623" x="0.5" y="0.5" width="29" height="27" rx="13.5"></rect>
-                    <text x="11" y="19" fill="white" style={ emptyStyle }>
+                    <text x="50%" y="19" fill="white" style={ emptyStyle }>
                         {step.step}
                     </text>
                 </g>

@@ -81,7 +81,8 @@ exports.CheckedIcon = (function (item) { return (React.createElement(core_1.SvgI
 var emptyStyle = {
     color: 'white',
     fontSize: '14px',
-    fontWeight: 600
+    fontWeight: 600,
+    textAnchor: 'middle'
 };
 exports.StepIcon = (function (step) { return (React.createElement(core_1.SvgIcon, { width: "30px", height: "44px", viewBox: "0 0 30 44", style: checkedStyle },
     React.createElement("title", null, "item"),
@@ -89,6 +90,6 @@ exports.StepIcon = (function (step) { return (React.createElement(core_1.SvgIcon
         React.createElement("g", { id: "group" },
             React.createElement("g", { id: "empty" },
                 React.createElement("rect", { id: "base", stroke: "#F5A623", fill: "#F5A623", x: "0.5", y: "0.5", width: "29", height: "27", rx: "13.5" }),
-                React.createElement("text", { x: "11", y: "19", fill: "white", style: emptyStyle }, step.step)),
+                React.createElement("text", { x: "50%", y: "19", fill: "white", style: emptyStyle }, step.step)),
             React.createElement("polygon", { id: "Line2", fill: "#364357", opacity: "0.800000012", points: "15 28 16 28 16 44 15 44" }))))); });
 //# sourceMappingURL=lists.js.map

@@ -540,9 +540,10 @@ exports[`StepIcon should show StepIcon icon 1`] = `
               "color": "white",
               "fontSize": "14px",
               "fontWeight": 600,
+              "textAnchor": "middle",
             }
           }
-          x="11"
+          x="50%"
           y="19"
         />
       </g>
