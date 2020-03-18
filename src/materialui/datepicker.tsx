@@ -356,7 +356,7 @@ export const KeyPicker = injectSheet(styles)<KeyPickerProps>(
 					target: {
 						value: date
 							? date.format
-								? date.format(`YYYY-MM-DD${includeTime ? ' h:mm:ss a' : ''}`)
+								? date.format(`DD-MM-YYYY${includeTime ? ' h:mm:ss a' : ''}`)
 								: date
 							: null,
 					},
@@ -381,11 +381,11 @@ export const KeyPicker = injectSheet(styles)<KeyPickerProps>(
 			additionalClass = classes.formError;
 		}
 
-		const placeholder = includeTime ? 'YYYY-MM-DD h:mm:ss a' : 'YYYY-MM-DD';
+		const placeholder = includeTime ? 'DD-MM-YYYY h:mm:ss a' : 'DD-MM-YYYY';
 		return (
 			<div className={classes.datepickerWrap}>
 				<Datetime
-					dateFormat="YYYY-MM-DD"
+					dateFormat="DD-MM-YYYY"
 					timeFormat={!!includeTime}
 					inputProps={{ placeholder }}
 					closeOnSelect={true}
