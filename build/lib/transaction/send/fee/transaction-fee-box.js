@@ -238,7 +238,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
             React.createElement(core_1.Grid, { container: true, wrap: "nowrap" },
                 React.createElement(core_1.Grid, { container: true, direction: "row" },
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement("span", { className: classes.networkTransactionFeeTitle }, " Network Transaction Fee: ")),
+                        React.createElement("span", { className: classes.networkTransactionFeeTitle + " feeTitle" }, " Network Transaction Fee: ")),
                     React.createElement(core_1.Grid, { item: true }, this.renderActualTransactionFeeBox())),
                 React.createElement(core_1.Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
                     React.createElement("span", null, " Advanced "),

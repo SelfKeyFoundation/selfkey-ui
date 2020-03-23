@@ -221,7 +221,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-11"
           >
             <span
-              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-24"
+              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-24 feeTitle"
             >
                Network Transaction Fee: 
             </span>

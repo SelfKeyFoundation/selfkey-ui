@@ -253,7 +253,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
                 <Grid container wrap="nowrap">
                     <Grid container direction="row">
                         <Grid item>
-                            <span className={classes.networkTransactionFeeTitle}> Network Transaction Fee: </span>
+                            <span className={`${classes.networkTransactionFeeTitle} feeTitle`}> Network Transaction Fee: </span>
                         </Grid>
                         <Grid item>
                             {this.renderActualTransactionFeeBox()}
