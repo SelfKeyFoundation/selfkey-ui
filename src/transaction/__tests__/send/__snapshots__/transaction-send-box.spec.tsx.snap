@@ -212,16 +212,16 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       className="MuiGrid-container-10 MuiGrid-align-items-xs-center-18 MuiGrid-justify-xs-space-between-29 TransactionSendBoxComponent-container-0-1-1"
     >
       <div
-        className="MuiGrid-item-11"
+        className="MuiGrid-container-10 MuiGrid-wrap-xs-nowrap-16"
       >
         <div
           className="MuiGrid-container-10"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-item-11 TransactionFeeBoxComponent-bottomSpace-0-1-23"
           >
             <span
-              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-24"
+              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-25"
             >
                Network Transaction Fee: 
             </span>
@@ -230,7 +230,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-11"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-42"
+              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-43"
             >
               <div
                 className="MuiGrid-item-11"
@@ -282,19 +282,19 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-25"
-        onClick={[Function]}
-      >
-        <span>
-           Advanced 
-        </span>
-        <i
-          className="TransactionFeeBoxComponent-icon-0-1-26  TransactionFeeBoxComponent-rightIcon-0-1-27"
+        <div
+          className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-26"
+          onClick={[Function]}
         >
-           
-        </i>
+          <span>
+             Advanced 
+          </span>
+          <i
+            className="TransactionFeeBoxComponent-icon-0-1-27  TransactionFeeBoxComponent-rightIcon-0-1-28"
+          >
+             
+          </i>
+        </div>
       </div>
     </div>
     <div
