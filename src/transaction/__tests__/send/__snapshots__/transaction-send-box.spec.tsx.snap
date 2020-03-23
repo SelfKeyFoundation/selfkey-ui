@@ -218,10 +218,10 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
           className="MuiGrid-container-10"
         >
           <div
-            className="MuiGrid-item-11 TransactionFeeBoxComponent-bottomSpace-0-1-23"
+            className="MuiGrid-item-11"
           >
             <span
-              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-25"
+              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-24"
             >
                Network Transaction Fee: 
             </span>
@@ -230,7 +230,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-item-11"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-43"
+              className="MuiGrid-container-10 MuiGrid-spacing-xs-8-32 Component-root-0-1-42"
             >
               <div
                 className="MuiGrid-item-11"
@@ -283,14 +283,14 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
           </div>
         </div>
         <div
-          className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-26"
+          className="MuiGrid-item-11 TransactionFeeBoxComponent-showAdvancedContainer-0-1-25"
           onClick={[Function]}
         >
           <span>
              Advanced 
           </span>
           <i
-            className="TransactionFeeBoxComponent-icon-0-1-27  TransactionFeeBoxComponent-rightIcon-0-1-28"
+            className="TransactionFeeBoxComponent-icon-0-1-26  TransactionFeeBoxComponent-rightIcon-0-1-27"
           >
              
           </i>

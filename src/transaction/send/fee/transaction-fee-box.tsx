@@ -7,9 +7,6 @@ import { Grid } from '@material-ui/core';
 import { Loop as LoopIcon } from '@material-ui/icons';
 
 export const styles: StyleSheet = {
-    bottomSpace: {
-        marginBottom: '10px'
-    },
     container: {
         fontFamily: CommonStyle.fontFamily
     },
@@ -255,7 +252,7 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
             <Grid container direction="row" justify="space-between" alignItems="center" className={classes.container}>
                 <Grid container wrap="nowrap">
                     <Grid container direction="row">
-                        <Grid item className={classes.bottomSpace}>
+                        <Grid item>
                             <span className={classes.networkTransactionFeeTitle}> Network Transaction Fee: </span>
                         </Grid>
                         <Grid item>

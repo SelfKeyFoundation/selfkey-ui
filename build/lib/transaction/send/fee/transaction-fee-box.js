@@ -32,9 +32,6 @@ var common_style_1 = require("../../../common/common-style");
 var core_1 = require("@material-ui/core");
 var icons_1 = require("@material-ui/icons");
 exports.styles = {
-    bottomSpace: {
-        marginBottom: '10px'
-    },
     container: {
         fontFamily: common_style_1.default.fontFamily
     },
@@ -240,7 +237,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.container },
             React.createElement(core_1.Grid, { container: true, wrap: "nowrap" },
                 React.createElement(core_1.Grid, { container: true, direction: "row" },
-                    React.createElement(core_1.Grid, { item: true, className: classes.bottomSpace },
+                    React.createElement(core_1.Grid, { item: true },
                         React.createElement("span", { className: classes.networkTransactionFeeTitle }, " Network Transaction Fee: ")),
                     React.createElement(core_1.Grid, { item: true }, this.renderActualTransactionFeeBox())),
                 React.createElement(core_1.Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
