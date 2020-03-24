@@ -5,7 +5,7 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
   className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-space-between-20 TransactionFeeBoxComponent-container-0-1-1"
 >
   <div
-    className="MuiGrid-item-2"
+    className="MuiGrid-container-1 MuiGrid-wrap-xs-nowrap-7"
   >
     <div
       className="MuiGrid-container-1"
@@ -14,7 +14,7 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
         className="MuiGrid-item-2"
       >
         <span
-          className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-2"
+          className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-2 feeTitle"
         >
            Network Transaction Fee: 
         </span>
@@ -75,19 +75,19 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="MuiGrid-item-2 TransactionFeeBoxComponent-showAdvancedContainer-0-1-3"
-    onClick={[Function]}
-  >
-    <span>
-       Advanced 
-    </span>
-    <i
-      className="TransactionFeeBoxComponent-icon-0-1-4  TransactionFeeBoxComponent-downIcon-0-1-6"
+    <div
+      className="MuiGrid-item-2 TransactionFeeBoxComponent-showAdvancedContainer-0-1-3"
+      onClick={[Function]}
     >
-       
-    </i>
+      <span>
+         Advanced 
+      </span>
+      <i
+        className="TransactionFeeBoxComponent-icon-0-1-4  TransactionFeeBoxComponent-downIcon-0-1-6"
+      >
+         
+      </i>
+    </div>
   </div>
   <div
     className="TransactionFeeBoxComponent-fullWidth-0-1-9"
@@ -194,7 +194,7 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
   className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-space-between-20 TransactionFeeBoxComponent-container-0-1-1"
 >
   <div
-    className="MuiGrid-item-2"
+    className="MuiGrid-container-1 MuiGrid-wrap-xs-nowrap-7"
   >
     <div
       className="MuiGrid-container-1"
@@ -203,7 +203,7 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
         className="MuiGrid-item-2"
       >
         <span
-          className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-2"
+          className="TransactionFeeBoxComponent-networkTransactionFeeTitle-0-1-2 feeTitle"
         >
            Network Transaction Fee: 
         </span>
@@ -264,19 +264,19 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="MuiGrid-item-2 TransactionFeeBoxComponent-showAdvancedContainer-0-1-3"
-    onClick={[Function]}
-  >
-    <span>
-       Advanced 
-    </span>
-    <i
-      className="TransactionFeeBoxComponent-icon-0-1-4  TransactionFeeBoxComponent-rightIcon-0-1-5"
+    <div
+      className="MuiGrid-item-2 TransactionFeeBoxComponent-showAdvancedContainer-0-1-3"
+      onClick={[Function]}
     >
-       
-    </i>
+      <span>
+         Advanced 
+      </span>
+      <i
+        className="TransactionFeeBoxComponent-icon-0-1-4  TransactionFeeBoxComponent-rightIcon-0-1-5"
+      >
+         
+      </i>
+    </div>
   </div>
 </div>
 `;

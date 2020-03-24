@@ -11,16 +11,17 @@ export const styles: StyleSheet = {
         fontFamily: CommonStyle.fontFamily
     },
     networkTransactionFeeTitle: {
-        paddingRight: '5px',
         color: '#93B0C1',
-        fontSize: '16px'
+        fontSize: '16px',
+        paddingRight: '5px'
     },
     showAdvancedContainer: {
+        color: '#00C0D9',
         cursor: 'pointer',
         fontSize: '14px',
-        color: '#00C0D9'
+        minWidth: '85px',
+        textAlign: 'right'
     },
-
     icon: {
         border: 'solid #00C0D9',
         borderWidth: '0 2px 2px 0',
@@ -249,23 +250,23 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
         let { showAdvanced } = this.state;
         return (
             <Grid container direction="row" justify="space-between" alignItems="center" className={classes.container}>
-                <Grid item>
+                <Grid container wrap="nowrap">
                     <Grid container direction="row">
                         <Grid item>
-                            <span className={classes.networkTransactionFeeTitle}> Network Transaction Fee: </span>
+                            <span className={`${classes.networkTransactionFeeTitle} feeTitle`}> Network Transaction Fee: </span>
                         </Grid>
                         <Grid item>
                             {this.renderActualTransactionFeeBox()}
                         </Grid>
                     </Grid>
-                </Grid>
-                <Grid item className={classes.showAdvancedContainer} onClick={() => this.toggleShowAdvanced()}>
-                    <span> Advanced </span>
-                    {!showAdvanced ? (
-                        <i className={`${classes.icon}  ${classes.rightIcon}`}> </i>
-                    ) : (
-                            <i className={`${classes.icon}  ${classes.downIcon}`}> </i>
-                        )}
+                    <Grid item className={classes.showAdvancedContainer} onClick={() => this.toggleShowAdvanced()}>
+                        <span> Advanced </span>
+                        {!showAdvanced ? (
+                            <i className={`${classes.icon}  ${classes.rightIcon}`}> </i>
+                        ) : (
+                                <i className={`${classes.icon}  ${classes.downIcon}`}> </i>
+                            )}
+                    </Grid>
                 </Grid>
                 {showAdvanced && this.renderAdvancedContent()}
             </Grid>

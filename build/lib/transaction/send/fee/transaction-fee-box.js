@@ -36,14 +36,16 @@ exports.styles = {
         fontFamily: common_style_1.default.fontFamily
     },
     networkTransactionFeeTitle: {
-        paddingRight: '5px',
         color: '#93B0C1',
-        fontSize: '16px'
+        fontSize: '16px',
+        paddingRight: '5px'
     },
     showAdvancedContainer: {
+        color: '#00C0D9',
         cursor: 'pointer',
         fontSize: '14px',
-        color: '#00C0D9'
+        minWidth: '85px',
+        textAlign: 'right'
     },
     icon: {
         border: 'solid #00C0D9',
@@ -233,14 +235,14 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         var classes = this.props.classes;
         var showAdvanced = this.state.showAdvanced;
         return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.container },
-            React.createElement(core_1.Grid, { item: true },
+            React.createElement(core_1.Grid, { container: true, wrap: "nowrap" },
                 React.createElement(core_1.Grid, { container: true, direction: "row" },
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement("span", { className: classes.networkTransactionFeeTitle }, " Network Transaction Fee: ")),
-                    React.createElement(core_1.Grid, { item: true }, this.renderActualTransactionFeeBox()))),
-            React.createElement(core_1.Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
-                React.createElement("span", null, " Advanced "),
-                !showAdvanced ? (React.createElement("i", { className: classes.icon + "  " + classes.rightIcon }, " ")) : (React.createElement("i", { className: classes.icon + "  " + classes.downIcon }, " "))),
+                        React.createElement("span", { className: classes.networkTransactionFeeTitle + " feeTitle" }, " Network Transaction Fee: ")),
+                    React.createElement(core_1.Grid, { item: true }, this.renderActualTransactionFeeBox())),
+                React.createElement(core_1.Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
+                    React.createElement("span", null, " Advanced "),
+                    !showAdvanced ? (React.createElement("i", { className: classes.icon + "  " + classes.rightIcon }, " ")) : (React.createElement("i", { className: classes.icon + "  " + classes.downIcon }, " ")))),
             showAdvanced && this.renderAdvancedContent()));
     };
     return TransactionFeeBoxComponent;
