@@ -88,6 +88,7 @@ export { IncorporationsIcon } from './icons/incorporations';
 export { IncorporationsRoundedIcon } from './icons/incorporations-rounded';
 export { KeyIcon } from './icons/key';
 export { LedgerIcon } from './icons/ledger';
+export { LoanIcon } from './icons/marketplace-loan';
 export { MailIcon } from './icons/mail';
 export { MarketplaceIcon } from './icons/marketplace';
 export { MarketplaceMenuIcon } from './icons/marketplace-menu';
