@@ -321,7 +321,7 @@ exports.KeyPicker = react_jss_1.default(styles)(function (_a) {
                 target: {
                     value: date
                         ? date.format
-                            ? date.format("DD-MM-YYYY" + (includeTime ? ' h:mm:ss a' : ''))
+                            ? date.format("YYYY-MM-DD" + (includeTime ? ' h:mm:ss a' : ''))
                             : date
                         : null,
                 },
@@ -342,9 +342,9 @@ exports.KeyPicker = react_jss_1.default(styles)(function (_a) {
     if (isError) {
         additionalClass = classes.formError;
     }
-    var placeholder = includeTime ? 'DD-MM-YYYY h:mm:ss a' : 'DD-MM-YYYY';
+    var placeholder = includeTime ? 'YYYY-MM-DD h:mm:ss a' : 'YYYY-MM-DD';
     return (React.createElement("div", { className: classes.datepickerWrap },
-        React.createElement(Datetime, __assign({ dateFormat: "DD-MM-YYYY", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers, { className: additionalClass }))));
+        React.createElement(Datetime, __assign({ dateFormat: "YYYY-MM-DD", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers, { className: additionalClass }))));
 });
 exports.default = exports.KeyPicker;
 //# sourceMappingURL=datepicker.js.map
