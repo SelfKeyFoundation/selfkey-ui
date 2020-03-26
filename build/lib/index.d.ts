@@ -44,6 +44,7 @@ export { AttributeAlertLargeIcon } from './icons/attribute-alert-large';
 export { BankIcon } from './icons/bank';
 export { BankRoundedIcon } from './icons/bank-rounded';
 export { BuyRoundedIcon } from './icons/buy-rounded';
+export { CalculatorIcon } from './icons/calculator';
 export { CalendarDepositIcon } from './icons/calendar-deposit';
 export { CalendarIcon } from './icons/calendar';
 export { CertificateIcon } from './icons/certificate';

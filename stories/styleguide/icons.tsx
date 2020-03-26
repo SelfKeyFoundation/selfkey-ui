@@ -10,6 +10,7 @@ import {
 	BankRoundedIcon,
 	BookIcon,
 	BuyRoundedIcon,
+	CalculatorIcon,
 	CalendarIcon,
 	CalendarDepositIcon,
 	CertificateIcon,
@@ -217,6 +218,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<BuyRoundedIcon />`}</code>
 			</pre>
 			<BuyRoundedIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<CalculatorIcon />`}</code>
+			</pre>
+			<CalculatorIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
