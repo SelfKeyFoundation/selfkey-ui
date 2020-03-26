@@ -22,6 +22,7 @@ export * from '../icons/bank';
 export * from '../icons/bank-rounded';
 export * from '../icons/book';
 export * from '../icons/buy-rounded';
+export * from '../icons/calculator';
 export * from '../icons/calendar';
 export * from '../icons/calendar-deposit';
 export * from '../icons/certificate';

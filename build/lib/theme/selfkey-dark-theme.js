@@ -27,6 +27,7 @@ __export(require("../icons/bank"));
 __export(require("../icons/bank-rounded"));
 __export(require("../icons/book"));
 __export(require("../icons/buy-rounded"));
+__export(require("../icons/calculator"));
 __export(require("../icons/calendar"));
 __export(require("../icons/calendar-deposit"));
 __export(require("../icons/certificate"));
