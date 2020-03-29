@@ -135,11 +135,12 @@ export class TransactionFeeSelectorComponent extends React.Component<StyledProps
 					onChange={this.handleChange}
 					value={this.value}
 					classes={{
+						// active: classes.activated,
 						root: classes.sliderRoot,
-						trackAfter: classes.trackAfter,
-						trackBefore: classes.trackBefore,
+						// trackBefore: classes.trackBefore,
+						// trackAfter: classes.trackAfter,
 						thumb: classes.thumb,
-						activated: classes.activated,
+						// activated: classes.activated,
 					}}
 				/>
 				<div className={classes.sliderLabels}>
