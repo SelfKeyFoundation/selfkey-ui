@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { 
     Grid, 
+    Slider,
     Typography, 
 } from '@material-ui/core';
-import Slider from '@material-ui/lab/Slider';
 
 const underlineStyle = {
     textDecoration: 'underline',
