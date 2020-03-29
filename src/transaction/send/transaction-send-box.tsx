@@ -81,18 +81,16 @@ export const styles: StyleSheet = {
         fontWeight: 600
     },
     usdAmoutContainer: {
-        paddingBottom: '65px',
-        color: '#ffffff',
-        '&& span': {
-            '&:first-of-type': {
+        '& span &:first-of-type': {
                 fontSize: '40px',
                 fontWeight: 300,
-            },
-            '&:last-of-type': {
+        },
+        '& span &:last-of-type': {
                 fontSize: '20px',
                 fontWeight: 600,
-            }
-        }
+        },
+        color: '#ffffff',
+        paddingBottom: '65px',
     },
     amountInput: {
         width: 'calc(100% - 45px)',
