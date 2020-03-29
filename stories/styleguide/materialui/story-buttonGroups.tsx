@@ -2,8 +2,7 @@ import * as React from 'react';
 import StructureIcon from '../../../src/icons/structure';
 import ListIcon from '../../../src/icons/list';
 import { Typography } from '@material-ui/core';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import ToggleButton from '@material-ui/lab/ToggleButton';
+import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
 
 class ToggleButtonGroupStory extends React.Component {
     state = {

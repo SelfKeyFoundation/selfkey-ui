@@ -1,6 +1,6 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet, WithStyles } from 'react-jss';
-import { default as Slider } from '@material-ui/lab/Slider';
+import { Slider } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
 import BN from 'bignumber.js';
 
