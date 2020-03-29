@@ -22,7 +22,6 @@ export const styles: StyleSheet = {
 			background: '#262f39',
 		},
 	},
-
 	headerTableRow: {
 		height: '38px',
 		'& th': {
@@ -38,23 +37,22 @@ export const styles: StyleSheet = {
 			paddingLeft: '24px !important',
 		},
 	},
-
 	bodyTableRow: {
-		height: '74px',
-		cursor: 'pointer',
 		'& td': {
 			padding: '0px',
 			fontSize: '15px',
 			textAlign: 'left',
 			color: '#ffffff',
 			borderBottom: '0px',
-			'& svg g': {
-				fill: '#ffffff',
-			},
+		},
+		'& td & svg g': {
+			fill: '#ffffff',
 		},
 		'& td:first-child': {
 			paddingLeft: '24px !important',
 		},
+		cursor: 'pointer',
+		height: '74px',
 	},
 
 	iconSize: {
@@ -102,9 +100,7 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 			icon = <VisibilityOnIcon className={classes.iconSize} />;
 		}
 		return (
-			<div
-				onClick={(event: React.MouseEvent<HTMLElement>) => {
-					/* eslint no-unused-expressions: [1, { "allowTernary": true }] */
+			<div onClick={(event: React.MouseEvent<HTMLElement>) => {
 					toggleAction
 						? toggleAction(event, token)
 						: () => {
