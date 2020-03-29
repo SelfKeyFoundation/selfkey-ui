@@ -163,7 +163,7 @@ const iconStoryStyles = (theme: Theme) =>
 	});
 
 export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
-	<Grid container spacing={32}>
+	<Grid container spacing={10}>
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
 				<code className={classes.code}>{`<AddressBookMenuIcon />`}</code>

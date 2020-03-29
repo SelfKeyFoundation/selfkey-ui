@@ -76,7 +76,7 @@ export default class InputStories extends React.Component {
 					Text Input
 				</Typography>
 
-				<Grid container spacing={24}>
+				<Grid container spacing={8}>
 					<Grid item>
 						<Typography variant="overline" gutterBottom>
 							Normal / Focused
@@ -105,7 +105,7 @@ export default class InputStories extends React.Component {
 				<Typography variant="h3" style={underlineStyle} gutterBottom>
 					Text Field
 				</Typography>
-				<Grid container spacing={24}>
+				<Grid container spacing={8}>
 					<Grid item>
 						<Typography variant="overline" gutterBottom>
 							Multiline
@@ -184,7 +184,7 @@ export default class InputStories extends React.Component {
 				<Typography variant="h3" style={underlineStyle} gutterBottom>
 					Specific
 				</Typography>
-				<Grid container spacing={24}>
+				<Grid container spacing={8}>
 					<Grid item>
 						<Typography variant="overline" gutterBottom>
 							Decimal
@@ -229,7 +229,7 @@ export default class InputStories extends React.Component {
 					Checkboxes
 				</Typography>
 
-				<Grid container spacing={24} direction="column">
+				<Grid container spacing={8} direction="column">
 					<Grid item>
 						<FormControlLabel control={<Checkbox />} label="Default" />
 
@@ -254,7 +254,7 @@ export default class InputStories extends React.Component {
 					Radio buttons
 				</Typography>
 
-				<Grid container spacing={24} direction="column">
+				<Grid container spacing={8} direction="column">
 					<Grid item>
 						<FormControlLabel label="Default" value="end" labelPlacement="end" control={<Radio />} />
 

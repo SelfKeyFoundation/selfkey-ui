@@ -11,7 +11,7 @@ import { Grid } from '@material-ui/core'
 
 
 export const TokenList = () => (
-    <Grid container spacing={16}>
+    <Grid container spacing={1}>
         <Grid item>
           <TokenBox  cryptoCurrencyShort='KEY' cryptoCurrencyName='Selfkey' CryptoCurrencyIconComponent={SelfkeyIcon} publicKey='0x4184288c556524df9cb9e58b73265ee66dca4efe'>
             <TokenPrice locale='en' cryptoCurrency='KEY' cryptoValue={4} toCurrency='USD' toValue={0.0174857}></TokenPrice>

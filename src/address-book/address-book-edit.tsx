@@ -92,9 +92,9 @@ export class AddressBookEditComponent extends React.Component<StyledProps, Addre
     const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
     return (
         <form id="formwrap" className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
-            <Grid container direction='column' spacing={32}>
+            <Grid container direction='column' spacing={10}>
                 <Grid item>
-                    <Grid container direction='column' spacing={8}>
+                    <Grid container direction='column' spacing={1}>
                         <Grid item>
                             <label className={classes.label}>LABEL</label>
                         </Grid>
@@ -107,7 +107,7 @@ export class AddressBookEditComponent extends React.Component<StyledProps, Addre
                     </Grid>
                 </Grid>
                 <Grid item>
-                    <Grid container direction='row' spacing={24}>
+                    <Grid container direction='row' spacing={8}>
                         <Grid item>
                             <StyledButton id='saveButton' variant="contained" size="medium" type="submit" disabled={(!this.state.label || hasLabelError)}>
                                 Save

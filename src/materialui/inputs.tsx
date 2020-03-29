@@ -196,7 +196,7 @@ export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm
 	<Grid item className={classNames(classes.fileItem, errors && errors.length && classes.fileItemError)}>
 		<Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
 			<Grid item>
-				<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
+				<Grid container direction="row" alignItems="center" spacing={4} wrap="nowrap">
 					<Grid item>
 						<FileDefaultIcon />
 					</Grid>
@@ -433,7 +433,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
 						className={classes.bottomSpace}
 					>
 						<Grid item className={classes.padding}>
-							<Grid container direction="row" alignItems="center" spacing={16} wrap="nowrap">
+							<Grid container direction="row" alignItems="center" spacing={4} wrap="nowrap">
 								<Grid item>
 									<FileTypeIcon fileType={file.mimeType} />
 								</Grid>
@@ -527,7 +527,7 @@ export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetPr
 		const formClassNames = classNames(additionalClass);
 
 		return (
-			<Grid container direction="column" spacing={24}>
+			<Grid container direction="column" spacing={8}>
 				<Grid item>
 					<div className={`${classes.form} ${formClassNames}`}>
 						<Grid container direction="row" justify="space-between" alignItems="center">

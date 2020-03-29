@@ -18,7 +18,7 @@ const underlineStyle = {
 export default function InputStories () {
     return (
         <div>
-            <Grid container spacing={24}>
+            <Grid container spacing={8}>
 				<Grid item>
 					<Typography variant="h3" style={underlineStyle} gutterBottom>
 						Lists

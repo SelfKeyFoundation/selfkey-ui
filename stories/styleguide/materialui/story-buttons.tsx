@@ -24,13 +24,13 @@ export default function ButtonStories () {
 				Buttons
 			</Typography>
 
-			<Grid container spacing={24}>
+			<Grid container spacing={8}>
 				<Grid item>
 					<Typography variant="overline" gutterBottom>
 						Full Primary
 					</Typography>
 
-					<Grid container spacing={24}>
+					<Grid container spacing={8}>
 						<Grid item>
 							<Button variant='contained' size='large'>Large</Button>
 						</Grid>
@@ -55,7 +55,7 @@ export default function ButtonStories () {
 						Shell Primary
 					</Typography>
 
-					<Grid container spacing={24}>
+					<Grid container spacing={8}>
 						<Grid item>
 							<Button variant='outlined' size='large'>Large</Button>
 						</Grid>
@@ -80,7 +80,7 @@ export default function ButtonStories () {
 						Shell Secondary
 					</Typography>
 
-					<Grid container spacing={24}>
+					<Grid container spacing={8}>
 						<Grid item>
 							<Button variant='outlined' color='secondary' size='large'>Large</Button>
 						</Grid>
@@ -131,7 +131,7 @@ export default function ButtonStories () {
 			<Typography variant="overline" gutterBottom>
 				Button Groups
 			</Typography>
-			<Grid container spacing={24}>
+			<Grid container spacing={8}>
 				<Grid item>
 					<ToggleButtonGroupStory />
 				</Grid>

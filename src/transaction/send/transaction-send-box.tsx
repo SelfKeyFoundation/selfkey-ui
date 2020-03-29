@@ -264,7 +264,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         const sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
             return (
-                <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={24}>
+                <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={8}>
                     <Grid item>
                         <button className={classes.button} onClick={confirmAction}> CONFIRM </button>
                     </Grid>
@@ -300,7 +300,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                 }
                 <Grid container direction='row' className={classes.amountContainer} alignItems='center' justify='space-between'>
                     <Grid item>
-                        <Grid container direction='row' justify='flex-start' alignItems="center" spacing={16}>
+                        <Grid container direction='row' justify='flex-start' alignItems="center" spacing={4}>
                                 <Grid item>
                                     <button id='allAmountButton' onClick={() => this.handleAllAmountClick()} className={classes.selectAllAmountBtn}> ALL </button>
                                 </Grid>

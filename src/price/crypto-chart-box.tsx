@@ -406,7 +406,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
 
     return (
       <div className={classes.cryptoBox}>
-        <Grid container alignItems='center' spacing={16}>
+        <Grid container alignItems='center' spacing={4}>
           <Grid item xs={12}>
             <Grid container justify='space-between' alignItems='flex-end' className={classes.header}>
               <Grid item xs={11} className={classes.headerText}>
@@ -461,7 +461,7 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
                 </div>
               </Grid>
               <Grid item xs={8}>
-                  <Grid container spacing={16}>
+                  <Grid container spacing={4}>
                     {this.getTokensLegend(classes, tokens, locale, fiatCurrency)}
                   </Grid>
               </Grid>
