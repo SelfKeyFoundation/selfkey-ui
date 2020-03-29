@@ -3,18 +3,17 @@ import injectSheet, { StyleSheet } from 'react-jss';
 
 const styles: StyleSheet = {
   root: {
-    webkitTransition: 'background .5s ease',
-    transition: 'background .5s ease',
-    height: '60px',
-    boxSizing: 'border-box',
     borderRadius: '3px',
+    boxSizing: 'border-box',
+    cursor: 'pointer',
+    fontFamily: 'Lato, arial, sans-serif',
     fontSize: '16px',
+    fontWeight: 700,
+    height: '60px',
+    letterSpacing: '0.6px',
     padding: '16px',
     textTransform: 'uppercase',
-    fontWeight: 700,
-    fontFamily: 'Lato, arial, sans-serif',
-    letterSpacing: '0.6px',
-    cursor: 'pointer'
+    transition: 'background .5s ease',
   },
 };
 
