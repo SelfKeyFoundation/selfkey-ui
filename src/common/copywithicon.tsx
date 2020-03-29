@@ -7,12 +7,10 @@ import { Grid, Typography } from "@material-ui/core";
 
 export const styles: StyleSheet = {
     clipboard: {
-        cursor: "pointer",
-        '&:hover': {
-            '& svg': {
-                fill: '#FFFFFF'
-            }
-        }
+      '&:hover & svg': {
+        fill: '#FFFFFF'
+      },
+      cursor: 'pointer',
     },
 
     icon: {
