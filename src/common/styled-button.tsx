@@ -35,7 +35,7 @@ const styles: StyleSheet = {
 	},
 };
 
-export type Variant = 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
+export type Variant = 'text' | 'outlined' | 'contained';
 export type Color = 'primary' | 'secondary';
 
 export type ButtonProps = {
