@@ -180,7 +180,7 @@ const theme = createMuiTheme({
 	typography: {
 		fontFamily: ['Lato', 'arial', 'sans-serif'].join(','),
 		fontSize: 16,
-		useNextVariants: true,
+		// useNextVariants: true,
 	},
 	overrides: {
 		MuiCard: {
@@ -366,9 +366,6 @@ const theme = createMuiTheme({
 					color: grey,
 					opacity: 1,
 				},
-			},
-			inputType: {
-				height: '22px',
 			},
 			multiline: {
 				overflow: 'scroll',
@@ -556,12 +553,12 @@ const theme = createMuiTheme({
 				fontSize: '14px',
 				lineHeight: '21px',
 			},
-			error: {
-				backgroundColor: 'rgba(255, 46, 99, 0.09)',
-				border: `1px solid ${error}`,
-				color: error,
-				marginBottom: '6px',
-			},
+			// error: {
+			// 	backgroundColor: 'rgba(255, 46, 99, 0.09)',
+			// 	border: `1px solid ${error}`,
+			// 	color: error,
+			// 	marginBottom: '6px',
+			// },
 		},
 		MuiMenu: {
 			paper: {
@@ -757,6 +754,10 @@ const theme = createMuiTheme({
 			},
 		},
 		MuiTab: {
+			// label: {
+			// 	fontSize: '16px',
+			// 	lineHeight: '19px',
+			// },
 			root: {
 				borderBottom: `4px solid transparent`,
 				textTransform: 'initial',
@@ -776,13 +777,9 @@ const theme = createMuiTheme({
 			wrapper: {
 				width: 'initial',
 			},
-			labelContainer: {
-				padding: '6px 15px !important',
-			},
-			label: {
-				fontSize: '16px',
-				lineHeight: '19px',
-			},
+			// labelContainer: {
+			// 	padding: '6px 15px !important',
+			// },
 		},
 		MuiExpansionPanel: {
 			root: {
@@ -845,12 +842,6 @@ const theme = createMuiTheme({
 				top: '6px',
 			},
 		},
-		MuiModal: {
-			root: {
-				height: '100%',
-				overflow: 'auto',
-			},
-		},
 		MuiBackdrop: {
 			root: {
 				background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
@@ -862,6 +853,12 @@ const theme = createMuiTheme({
 			},
 		},
 		// @ts-ignore
+		MuiModal: {
+			root: {
+				height: '100%',
+				overflow: 'auto',
+			},
+		},
 		MuiToggleButtonGroup: {
 			root: {
 				boxShadow: 'none',
@@ -901,10 +898,10 @@ const theme = createMuiTheme({
 				borderRadius: '6px',
 				height: '10px',
 			},
-			trackAfter: {
-				backgroundColor: '#313D49',
-				opacity: 1,
-			},
+			// trackAfter: {
+			// 	backgroundColor: '#313D49',
+			// 	opacity: 1,
+			// },
 			thumb: {
 				height: '18px',
 				width: '18px',
