@@ -2,13 +2,12 @@
 
 exports[`LWS Loading should show LWS Loading 1`] = `
 <div
-  className="Component-loading-0-1-1"
+  className="Component-loading-0-2-1"
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-1 Component-root-0-1-2"
+    className="MuiSvgIcon-root Component-root-0-2-2"
     focusable="false"
-    role="presentation"
     viewBox="0 0 120 30"
   >
     <circle

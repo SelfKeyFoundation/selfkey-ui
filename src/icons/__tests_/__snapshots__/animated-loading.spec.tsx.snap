@@ -3,9 +3,8 @@
 exports[`Animated Loading Icon should show Animated Loading Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   viewBox="0 0 120 30"
 >
   <circle

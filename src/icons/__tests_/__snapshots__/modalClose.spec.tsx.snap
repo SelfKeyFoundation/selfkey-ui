@@ -15,10 +15,9 @@ exports[`Modal Close Icon should show Modal Close Icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-1 Component-root-0-1-1 MuiSvgIcon-fontSizeLarge-9"
+    className="MuiSvgIcon-root Component-root-0-2-1 MuiSvgIcon-fontSizeLarge"
     focusable="false"
     height="38px"
-    role="presentation"
     viewBox="0 0 38 38"
     width="38px"
   >

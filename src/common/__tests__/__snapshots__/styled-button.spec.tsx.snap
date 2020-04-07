@@ -2,10 +2,10 @@
 
 exports[`Styled Button should show Styled Button 1`] = `
 <button
-  className="MuiButtonBase-root-27 MuiButton-root-1 Component-root-0-1-1 MuiButton-contained-12 MuiButton-containedPrimary-13 Component-containedPrimary-0-1-2 MuiButton-raised-15 MuiButton-raisedPrimary-16"
+  className="MuiButtonBase-root MuiButton-root Component-root-0-2-1 MuiButton-contained MuiButton-containedPrimary Component-containedPrimary-0-2-2"
   disabled={false}
   onBlur={[Function]}
-  onContextMenu={[Function]}
+  onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
@@ -15,14 +15,11 @@ exports[`Styled Button should show Styled Button 1`] = `
   onTouchEnd={[Function]}
   onTouchMove={[Function]}
   onTouchStart={[Function]}
-  tabIndex="0"
+  tabIndex={0}
   type="button"
 >
   <span
-    className="MuiButton-label-2"
-  />
-  <span
-    className="MuiTouchRipple-root-30"
+    className="MuiButton-label"
   />
 </button>
 `;

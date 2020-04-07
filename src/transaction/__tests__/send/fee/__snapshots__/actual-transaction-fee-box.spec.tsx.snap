@@ -2,16 +2,16 @@
 
 exports[`Transaction Fee should show Transaction Fee screen 1`] = `
 <div
-  className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 Component-root-0-1-1"
+  className="MuiGrid-root Component-root-0-2-1 MuiGrid-container MuiGrid-spacing-xs-8"
 >
   <div
-    className="MuiGrid-item-2"
+    className="MuiGrid-root MuiGrid-item"
   >
     <div
-      className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23"
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
     >
       <div
-        className="MuiGrid-item-2"
+        className="MuiGrid-root MuiGrid-item"
       >
         <div>
           0.0001
@@ -19,25 +19,25 @@ exports[`Transaction Fee should show Transaction Fee screen 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-item-2"
+        className="MuiGrid-root MuiGrid-item"
       >
         ETH
       </div>
       <div
-        className="MuiGrid-item-2"
+        className="MuiGrid-root MuiGrid-item"
       >
         /
       </div>
     </div>
   </div>
   <div
-    className="MuiGrid-item-2"
+    className="MuiGrid-root MuiGrid-item"
   >
     <div
-      className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23"
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
     >
       <div
-        className="MuiGrid-item-2"
+        className="MuiGrid-root MuiGrid-item"
       >
         <div>
           $0.02
@@ -45,7 +45,7 @@ exports[`Transaction Fee should show Transaction Fee screen 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-item-2"
+        className="MuiGrid-root MuiGrid-item"
       >
         USD
       </div>

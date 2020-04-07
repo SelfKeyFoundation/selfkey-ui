@@ -3,10 +3,9 @@
 exports[`CheckedIcon should show CheckedIcon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="44px"
-  role="presentation"
   style={
     Object {
       "height": "44px",
@@ -67,10 +66,9 @@ exports[`CheckedIcon should show CheckedIcon 1`] = `
 exports[`CheckedIcon unverified should show CheckedIcon unverified 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="44px"
-  role="presentation"
   style={
     Object {
       "height": "44px",
@@ -131,10 +129,9 @@ exports[`CheckedIcon unverified should show CheckedIcon unverified 1`] = `
 exports[`CheckedIcon verified should show CheckedIcon verified 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="44px"
-  role="presentation"
   style={
     Object {
       "height": "44px",
@@ -195,9 +192,8 @@ exports[`CheckedIcon verified should show CheckedIcon verified 1`] = `
 exports[`Default Bullet should show Default Bullet icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "8px",
@@ -246,9 +242,8 @@ exports[`Default Bullet should show Default Bullet icon 1`] = `
 exports[`DeniedTick should show DeniedTick icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "16px",
@@ -346,9 +341,8 @@ exports[`DeniedTick should show DeniedTick icon 1`] = `
 exports[`GreenTick should show GreenTick icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "16px",
@@ -419,9 +413,8 @@ exports[`GreenTick should show GreenTick icon 1`] = `
 exports[`HourGlassIcon should show HourGlassIcon icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "16px",
@@ -491,10 +484,9 @@ exports[`Line should show Line 1`] = `
 exports[`StepIcon should show StepIcon icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="44px"
-  role="presentation"
   style={
     Object {
       "height": "44px",

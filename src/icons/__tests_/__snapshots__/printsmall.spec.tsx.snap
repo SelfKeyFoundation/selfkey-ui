@@ -3,10 +3,9 @@
 exports[`Print Small Icon should show Print Small Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="36px"
-  role="presentation"
   viewBox="0 0 34 36"
   width="34px"
 >

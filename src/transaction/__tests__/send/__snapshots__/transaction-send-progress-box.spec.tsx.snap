@@ -2,10 +2,10 @@
 
 exports[`Transaction Send Progress Box should not open transaction 1`] = `
 <div
-  className="Component-transactionBox-0-1-8"
+  className="Component-transactionBox-0-2-8"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-1-11"
+    className="Component-closeDialogIconWrapper-0-2-11"
   >
     <div
       style={
@@ -21,10 +21,9 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
-        role="presentation"
         viewBox="0 0 38 38"
         width="38px"
       >
@@ -66,13 +65,12 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
     </div>
   </div>
   <div
-    className="Component-iconWrapper-0-1-9"
+    className="Component-iconWrapper-0-2-9"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
+      className="MuiSvgIcon-root Component-root-0-2-14 Component-icon-0-2-10"
       focusable="false"
-      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -96,16 +94,15 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-16"
+          className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          role="presentation"
           version="1.1"
           viewBox="0 0 66 66"
         >
@@ -154,39 +151,39 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
       >
         <div
-          className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+          className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="header"
           >
             <h2
-              className="MuiTypography-root-107 MuiTypography-h2-120"
+              className="MuiTypography-root MuiTypography-h2"
             >
               Sent!
             </h2>
           </div>
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="body"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <h1
-                  className="MuiTypography-root-107 MuiTypography-display2-110 Component-amountContainer-0-1-4"
+                  className="MuiTypography-root Component-amountContainer-0-2-4 MuiTypography-h1"
                 >
                   <div
-                    className="MuiGrid-container-10"
+                    className="MuiGrid-root MuiGrid-container"
                   >
                     <div
-                      className="MuiGrid-item-11 Component-amount-0-1-5"
+                      className="MuiGrid-root Component-amount-0-2-5 MuiGrid-item"
                     >
                       <div>
                         0.00001
@@ -194,7 +191,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                       </div>
                     </div>
                     <div
-                      className="MuiGrid-item-11"
+                      className="MuiGrid-root MuiGrid-item"
                     >
                       KEY
                     </div>
@@ -202,40 +199,40 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                 </h1>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <p
-                  className="MuiTypography-root-107 MuiTypography-body2-115 Component-sentTo-0-1-7"
+                  className="MuiTypography-root Component-sentTo-0-2-7 MuiTypography-body2"
                 >
                   Destination address
                 </p>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
-                <h1
-                  className="MuiTypography-root-107 MuiTypography-headline-112 Component-address-0-1-6"
+                <p
+                  className="MuiTypography-root Component-address-0-2-6 MuiTypography-body1"
                 >
                   0x4184288c556524df9cb9e58b73265ee66dca4efe
-                </h1>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="MuiGrid-item-11"
+          className="MuiGrid-root MuiGrid-item"
         >
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-flex-start-19 Component-actionButtonsContainer-0-1-3"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button-0-1-1"
+                  className="Component-button-0-2-1"
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
@@ -243,10 +240,10 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                 </button>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button2-0-1-2"
+                  className="Component-button2-0-2-2"
                   onClick={[Function]}
                 >
                    COPY TRANSACTION ID 
@@ -263,10 +260,10 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
 
 exports[`Transaction Send Progress Box should not open transaction 2`] = `
 <div
-  className="Component-transactionBox-0-1-8"
+  className="Component-transactionBox-0-2-8"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-1-11"
+    className="Component-closeDialogIconWrapper-0-2-11"
   >
     <div
       style={
@@ -282,10 +279,9 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
-        role="presentation"
         viewBox="0 0 38 38"
         width="38px"
       >
@@ -327,13 +323,12 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
     </div>
   </div>
   <div
-    className="Component-iconWrapper-0-1-9"
+    className="Component-iconWrapper-0-2-9"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
+      className="MuiSvgIcon-root Component-root-0-2-14 Component-icon-0-2-10"
       focusable="false"
-      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -357,16 +352,15 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-16"
+          className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          role="presentation"
           version="1.1"
           viewBox="0 0 66 66"
         >
@@ -415,39 +409,39 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
       >
         <div
-          className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+          className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="header"
           >
             <h2
-              className="MuiTypography-root-107 MuiTypography-h2-120"
+              className="MuiTypography-root MuiTypography-h2"
             >
               Sent!
             </h2>
           </div>
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="body"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <h1
-                  className="MuiTypography-root-107 MuiTypography-display2-110 Component-amountContainer-0-1-4"
+                  className="MuiTypography-root Component-amountContainer-0-2-4 MuiTypography-h1"
                 >
                   <div
-                    className="MuiGrid-container-10"
+                    className="MuiGrid-root MuiGrid-container"
                   >
                     <div
-                      className="MuiGrid-item-11 Component-amount-0-1-5"
+                      className="MuiGrid-root Component-amount-0-2-5 MuiGrid-item"
                     >
                       <div>
                         0.00001
@@ -455,7 +449,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                       </div>
                     </div>
                     <div
-                      className="MuiGrid-item-11"
+                      className="MuiGrid-root MuiGrid-item"
                     >
                       KEY
                     </div>
@@ -463,40 +457,40 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                 </h1>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <p
-                  className="MuiTypography-root-107 MuiTypography-body2-115 Component-sentTo-0-1-7"
+                  className="MuiTypography-root Component-sentTo-0-2-7 MuiTypography-body2"
                 >
                   Destination address
                 </p>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
-                <h1
-                  className="MuiTypography-root-107 MuiTypography-headline-112 Component-address-0-1-6"
+                <p
+                  className="MuiTypography-root Component-address-0-2-6 MuiTypography-body1"
                 >
                   0x4184288c556524df9cb9e58b73265ee66dca4efe
-                </h1>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="MuiGrid-item-11"
+          className="MuiGrid-root MuiGrid-item"
         >
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-flex-start-19 Component-actionButtonsContainer-0-1-3"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button-0-1-1"
+                  className="Component-button-0-2-1"
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
@@ -504,10 +498,10 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                 </button>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button2-0-1-2"
+                  className="Component-button2-0-2-2"
                   onClick={[Function]}
                 >
                    COPY TRANSACTION ID 
@@ -524,10 +518,10 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
 
 exports[`Transaction Send Progress Box should open transaction 1`] = `
 <div
-  className="Component-transactionBox-0-1-8"
+  className="Component-transactionBox-0-2-8"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-1-11"
+    className="Component-closeDialogIconWrapper-0-2-11"
   >
     <div
       style={
@@ -543,10 +537,9 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
-        role="presentation"
         viewBox="0 0 38 38"
         width="38px"
       >
@@ -588,13 +581,12 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
     </div>
   </div>
   <div
-    className="Component-iconWrapper-0-1-9"
+    className="Component-iconWrapper-0-2-9"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
+      className="MuiSvgIcon-root Component-root-0-2-14 Component-icon-0-2-10"
       focusable="false"
-      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -618,16 +610,15 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-16"
+          className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          role="presentation"
           version="1.1"
           viewBox="0 0 66 66"
         >
@@ -676,39 +667,39 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
       >
         <div
-          className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+          className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="header"
           >
             <h2
-              className="MuiTypography-root-107 MuiTypography-h2-120"
+              className="MuiTypography-root MuiTypography-h2"
             >
               Sent!
             </h2>
           </div>
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="body"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <h1
-                  className="MuiTypography-root-107 MuiTypography-display2-110 Component-amountContainer-0-1-4"
+                  className="MuiTypography-root Component-amountContainer-0-2-4 MuiTypography-h1"
                 >
                   <div
-                    className="MuiGrid-container-10"
+                    className="MuiGrid-root MuiGrid-container"
                   >
                     <div
-                      className="MuiGrid-item-11 Component-amount-0-1-5"
+                      className="MuiGrid-root Component-amount-0-2-5 MuiGrid-item"
                     >
                       <div>
                         0.00001
@@ -716,7 +707,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                       </div>
                     </div>
                     <div
-                      className="MuiGrid-item-11"
+                      className="MuiGrid-root MuiGrid-item"
                     >
                       KEY
                     </div>
@@ -724,40 +715,40 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                 </h1>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <p
-                  className="MuiTypography-root-107 MuiTypography-body2-115 Component-sentTo-0-1-7"
+                  className="MuiTypography-root Component-sentTo-0-2-7 MuiTypography-body2"
                 >
                   Destination address
                 </p>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
-                <h1
-                  className="MuiTypography-root-107 MuiTypography-headline-112 Component-address-0-1-6"
+                <p
+                  className="MuiTypography-root Component-address-0-2-6 MuiTypography-body1"
                 >
                   0x4184288c556524df9cb9e58b73265ee66dca4efe
-                </h1>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="MuiGrid-item-11"
+          className="MuiGrid-root MuiGrid-item"
         >
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-flex-start-19 Component-actionButtonsContainer-0-1-3"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button-0-1-1"
+                  className="Component-button-0-2-1"
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
@@ -765,10 +756,10 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                 </button>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button2-0-1-2"
+                  className="Component-button2-0-2-2"
                   onClick={[Function]}
                 >
                    COPY TRANSACTION ID 
@@ -785,10 +776,10 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
 
 exports[`Transaction Send Progress Box should open transaction 2`] = `
 <div
-  className="Component-transactionBox-0-1-8"
+  className="Component-transactionBox-0-2-8"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-1-11"
+    className="Component-closeDialogIconWrapper-0-2-11"
   >
     <div
       style={
@@ -804,10 +795,9 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
-        role="presentation"
         viewBox="0 0 38 38"
         width="38px"
       >
@@ -849,13 +839,12 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
     </div>
   </div>
   <div
-    className="Component-iconWrapper-0-1-9"
+    className="Component-iconWrapper-0-2-9"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
+      className="MuiSvgIcon-root Component-root-0-2-14 Component-icon-0-2-10"
       focusable="false"
-      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -879,16 +868,15 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-16"
+          className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          role="presentation"
           version="1.1"
           viewBox="0 0 66 66"
         >
@@ -937,39 +925,39 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
       >
         <div
-          className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+          className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="header"
           >
             <h2
-              className="MuiTypography-root-107 MuiTypography-h2-120"
+              className="MuiTypography-root MuiTypography-h2"
             >
               Sent!
             </h2>
           </div>
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="body"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <h1
-                  className="MuiTypography-root-107 MuiTypography-display2-110 Component-amountContainer-0-1-4"
+                  className="MuiTypography-root Component-amountContainer-0-2-4 MuiTypography-h1"
                 >
                   <div
-                    className="MuiGrid-container-10"
+                    className="MuiGrid-root MuiGrid-container"
                   >
                     <div
-                      className="MuiGrid-item-11 Component-amount-0-1-5"
+                      className="MuiGrid-root Component-amount-0-2-5 MuiGrid-item"
                     >
                       <div>
                         0.00001
@@ -977,7 +965,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                       </div>
                     </div>
                     <div
-                      className="MuiGrid-item-11"
+                      className="MuiGrid-root MuiGrid-item"
                     >
                       KEY
                     </div>
@@ -985,40 +973,40 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                 </h1>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <p
-                  className="MuiTypography-root-107 MuiTypography-body2-115 Component-sentTo-0-1-7"
+                  className="MuiTypography-root Component-sentTo-0-2-7 MuiTypography-body2"
                 >
                   Destination address
                 </p>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
-                <h1
-                  className="MuiTypography-root-107 MuiTypography-headline-112 Component-address-0-1-6"
+                <p
+                  className="MuiTypography-root Component-address-0-2-6 MuiTypography-body1"
                 >
                   0x4184288c556524df9cb9e58b73265ee66dca4efe
-                </h1>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="MuiGrid-item-11"
+          className="MuiGrid-root MuiGrid-item"
         >
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-flex-start-19 Component-actionButtonsContainer-0-1-3"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button-0-1-1"
+                  className="Component-button-0-2-1"
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
@@ -1026,10 +1014,10 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                 </button>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button2-0-1-2"
+                  className="Component-button2-0-2-2"
                   onClick={[Function]}
                 >
                    COPY TRANSACTION ID 
@@ -1046,10 +1034,10 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
 
 exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
 <div
-  className="Component-transactionBox-0-1-8"
+  className="Component-transactionBox-0-2-8"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-1-11"
+    className="Component-closeDialogIconWrapper-0-2-11"
   >
     <div
       style={
@@ -1065,10 +1053,9 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
-        role="presentation"
         viewBox="0 0 38 38"
         width="38px"
       >
@@ -1110,13 +1097,12 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
     </div>
   </div>
   <div
-    className="Component-iconWrapper-0-1-9"
+    className="Component-iconWrapper-0-2-9"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
+      className="MuiSvgIcon-root Component-root-0-2-14 Component-icon-0-2-10"
       focusable="false"
-      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -1140,16 +1126,15 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-15"
+          className="MuiSvgIcon-root Component-root-0-2-15"
           focusable="false"
-          role="presentation"
           viewBox="0 0 66 66"
         >
           <defs>
@@ -1197,39 +1182,39 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
       >
         <div
-          className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+          className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="header"
           >
             <h2
-              className="MuiTypography-root-107 MuiTypography-h2-120"
+              className="MuiTypography-root MuiTypography-h2"
             >
               Pending
             </h2>
           </div>
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="body"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <h1
-                  className="MuiTypography-root-107 MuiTypography-display2-110 Component-amountContainer-0-1-4"
+                  className="MuiTypography-root Component-amountContainer-0-2-4 MuiTypography-h1"
                 >
                   <div
-                    className="MuiGrid-container-10"
+                    className="MuiGrid-root MuiGrid-container"
                   >
                     <div
-                      className="MuiGrid-item-11 Component-amount-0-1-5"
+                      className="MuiGrid-root Component-amount-0-2-5 MuiGrid-item"
                     >
                       <div>
                         0.00001
@@ -1237,7 +1222,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                       </div>
                     </div>
                     <div
-                      className="MuiGrid-item-11"
+                      className="MuiGrid-root MuiGrid-item"
                     >
                       KEY
                     </div>
@@ -1245,40 +1230,40 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                 </h1>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <p
-                  className="MuiTypography-root-107 MuiTypography-body2-115 Component-sentTo-0-1-7"
+                  className="MuiTypography-root Component-sentTo-0-2-7 MuiTypography-body2"
                 >
                   Destination address
                 </p>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
-                <h1
-                  className="MuiTypography-root-107 MuiTypography-headline-112 Component-address-0-1-6"
+                <p
+                  className="MuiTypography-root Component-address-0-2-6 MuiTypography-body1"
                 >
                   0x4184288c556524df9cb9e58b73265ee66dca4efe
-                </h1>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="MuiGrid-item-11"
+          className="MuiGrid-root MuiGrid-item"
         >
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-flex-start-19 Component-actionButtonsContainer-0-1-3"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button-0-1-1"
+                  className="Component-button-0-2-1"
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
@@ -1286,10 +1271,10 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                 </button>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button2-0-1-2"
+                  className="Component-button2-0-2-2"
                   onClick={[Function]}
                 >
                    COPY TRANSACTION ID 
@@ -1306,10 +1291,10 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
 
 exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
 <div
-  className="Component-transactionBox-0-1-8"
+  className="Component-transactionBox-0-2-8"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-1-11"
+    className="Component-closeDialogIconWrapper-0-2-11"
   >
     <div
       style={
@@ -1325,10 +1310,9 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
-        role="presentation"
         viewBox="0 0 38 38"
         width="38px"
       >
@@ -1370,13 +1354,12 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
     </div>
   </div>
   <div
-    className="Component-iconWrapper-0-1-9"
+    className="Component-iconWrapper-0-2-9"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
+      className="MuiSvgIcon-root Component-root-0-2-14 Component-icon-0-2-10"
       focusable="false"
-      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -1400,16 +1383,15 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-16"
+          className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          role="presentation"
           version="1.1"
           viewBox="0 0 66 66"
         >
@@ -1458,39 +1440,39 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
         </svg>
       </div>
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
       >
         <div
-          className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+          className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="header"
           >
             <h2
-              className="MuiTypography-root-107 MuiTypography-h2-120"
+              className="MuiTypography-root MuiTypography-h2"
             >
               Sent!
             </h2>
           </div>
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="body"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <h1
-                  className="MuiTypography-root-107 MuiTypography-display2-110 Component-amountContainer-0-1-4"
+                  className="MuiTypography-root Component-amountContainer-0-2-4 MuiTypography-h1"
                 >
                   <div
-                    className="MuiGrid-container-10"
+                    className="MuiGrid-root MuiGrid-container"
                   >
                     <div
-                      className="MuiGrid-item-11 Component-amount-0-1-5"
+                      className="MuiGrid-root Component-amount-0-2-5 MuiGrid-item"
                     >
                       <div>
                         0.00001
@@ -1498,7 +1480,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                       </div>
                     </div>
                     <div
-                      className="MuiGrid-item-11"
+                      className="MuiGrid-root MuiGrid-item"
                     >
                       KEY
                     </div>
@@ -1506,40 +1488,40 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                 </h1>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <p
-                  className="MuiTypography-root-107 MuiTypography-body2-115 Component-sentTo-0-1-7"
+                  className="MuiTypography-root Component-sentTo-0-2-7 MuiTypography-body2"
                 >
                   Destination address
                 </p>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
-                <h1
-                  className="MuiTypography-root-107 MuiTypography-headline-112 Component-address-0-1-6"
+                <p
+                  className="MuiTypography-root Component-address-0-2-6 MuiTypography-body1"
                 >
                   0x4184288c556524df9cb9e58b73265ee66dca4efe
-                </h1>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="MuiGrid-item-11"
+          className="MuiGrid-root MuiGrid-item"
         >
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-flex-start-19 Component-actionButtonsContainer-0-1-3"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button-0-1-1"
+                  className="Component-button-0-2-1"
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
@@ -1547,10 +1529,10 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                 </button>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button2-0-1-2"
+                  className="Component-button2-0-2-2"
                   onClick={[Function]}
                 >
                    COPY TRANSACTION ID 
@@ -1567,10 +1549,10 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
 
 exports[`Transaction Send Progress Box should show Transaction sstatus othing else 1`] = `
 <div
-  className="Component-transactionBox-0-1-8"
+  className="Component-transactionBox-0-2-8"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-1-11"
+    className="Component-closeDialogIconWrapper-0-2-11"
   >
     <div
       style={
@@ -1586,10 +1568,9 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-13 MuiSvgIcon-fontSizeLarge-9"
+        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
-        role="presentation"
         viewBox="0 0 38 38"
         width="38px"
       >
@@ -1631,13 +1612,12 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
     </div>
   </div>
   <div
-    className="Component-iconWrapper-0-1-9"
+    className="Component-iconWrapper-0-2-9"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1 Component-root-0-1-14 Component-icon-0-1-10"
+      className="MuiSvgIcon-root Component-root-0-2-14 Component-icon-0-2-10"
       focusable="false"
-      role="presentation"
       viewBox="0 0 44 44"
     >
       <g
@@ -1661,45 +1641,45 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
   </div>
   <div>
     <div
-      className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19"
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
     >
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
       />
       <div
-        className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
       >
         <div
-          className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+          className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
         >
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="header"
           >
             <h2
-              className="MuiTypography-root-107 MuiTypography-h2-120"
+              className="MuiTypography-root MuiTypography-h2"
             >
               hey!
             </h2>
           </div>
           <div
-            className="MuiGrid-item-11"
+            className="MuiGrid-root MuiGrid-item"
             id="body"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-16-33 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <h1
-                  className="MuiTypography-root-107 MuiTypography-display2-110 Component-amountContainer-0-1-4"
+                  className="MuiTypography-root Component-amountContainer-0-2-4 MuiTypography-h1"
                 >
                   <div
-                    className="MuiGrid-container-10"
+                    className="MuiGrid-root MuiGrid-container"
                   >
                     <div
-                      className="MuiGrid-item-11 Component-amount-0-1-5"
+                      className="MuiGrid-root Component-amount-0-2-5 MuiGrid-item"
                     >
                       <div>
                         0.00001
@@ -1707,7 +1687,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                       </div>
                     </div>
                     <div
-                      className="MuiGrid-item-11"
+                      className="MuiGrid-root MuiGrid-item"
                     >
                       KEY
                     </div>
@@ -1715,40 +1695,40 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                 </h1>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <p
-                  className="MuiTypography-root-107 MuiTypography-body2-115 Component-sentTo-0-1-7"
+                  className="MuiTypography-root Component-sentTo-0-2-7 MuiTypography-body2"
                 >
                   Destination address
                 </p>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
-                <h1
-                  className="MuiTypography-root-107 MuiTypography-headline-112 Component-address-0-1-6"
+                <p
+                  className="MuiTypography-root Component-address-0-2-6 MuiTypography-body1"
                 >
                   0x4184288c556524df9cb9e58b73265ee66dca4efe
-                </h1>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="MuiGrid-item-11"
+          className="MuiGrid-root MuiGrid-item"
         >
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-container-10 MuiGrid-spacing-xs-24-34 MuiGrid-align-items-xs-flex-start-19 Component-actionButtonsContainer-0-1-3"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
             >
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button-0-1-1"
+                  className="Component-button-0-2-1"
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
@@ -1756,10 +1736,10 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                 </button>
               </div>
               <div
-                className="MuiGrid-item-11"
+                className="MuiGrid-root MuiGrid-item"
               >
                 <button
-                  className="Component-button2-0-1-2"
+                  className="Component-button2-0-2-2"
                   onClick={[Function]}
                 >
                    COPY TRANSACTION ID 

@@ -2,18 +2,18 @@
 
 exports[`Transaction Error should show Transaction error screen 1`] = `
 <div
-  className="Component-boxWrapper-0-1-2"
+  className="Component-boxWrapper-0-2-2"
 >
   <div
-    className="Component-header-0-1-3"
+    className="Component-header-0-2-3"
   >
     <span
-      className="Component-headerTitle-0-1-4"
+      className="Component-headerTitle-0-2-4"
     >
        Transaction Confirmation 
     </span>
     <div
-      className="Component-closeDialogIconWrapper-0-1-10"
+      className="Component-closeDialogIconWrapper-0-2-10"
     >
       <div
         style={
@@ -29,10 +29,9 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-11 MuiSvgIcon-fontSizeLarge-9"
+          className="MuiSvgIcon-root Component-root-0-2-11 MuiSvgIcon-fontSizeLarge"
           focusable="false"
           height="38px"
-          role="presentation"
           viewBox="0 0 38 38"
           width="38px"
         >
@@ -75,16 +74,15 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-container-10 MuiGrid-align-items-xs-flex-start-19 Component-bodyContainer-0-1-5"
+    className="MuiGrid-root Component-bodyContainer-0-2-5 MuiGrid-container MuiGrid-align-items-xs-flex-start"
   >
     <div
-      className="MuiGrid-item-11 MuiGrid-grid-xs-2-40"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-1 Component-root-0-1-12"
+        className="MuiSvgIcon-root Component-root-0-2-12"
         focusable="false"
-        role="presentation"
         viewBox="0 0 68 74"
       >
         <defs>
@@ -132,46 +130,46 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-11 MuiGrid-grid-xs-10-48"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
     >
       <div
-        className="MuiGrid-container-10 MuiGrid-direction-xs-column-13 MuiGrid-align-items-xs-flex-start-19"
+        className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
       >
         <div
-          className="Component-txFailedText-0-1-6"
+          className="Component-txFailedText-0-2-6"
         >
           Transaction Failed 
         </div>
         <p
-          className="MuiTypography-root-107 MuiTypography-body2-115 Component-bodyText-0-1-1"
+          className="MuiTypography-root Component-bodyText-0-2-1 MuiTypography-body2"
         >
           Some error message
         </p>
         <span
-          className="Component-divider-0-1-9"
+          className="Component-divider-0-2-9"
         >
            
         </span>
         <div>
           <span
-            className="Component-yourAddressTitle-0-1-7"
+            className="Component-yourAddressTitle-0-2-7"
           >
              Your Address: 
           </span>
           <div
-            className="MuiGrid-container-10"
+            className="MuiGrid-root MuiGrid-container"
           >
             <span
-              className="Component-publicKey-0-1-8"
+              className="Component-publicKey-0-2-8"
             >
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-1-13"
+              className="CopyComponent-copyButton-0-2-13"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-1-14"
+                className="CopyComponent-copyButtonSpan-0-2-14"
               >
                 COPY
               </span>

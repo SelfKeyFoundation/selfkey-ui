@@ -3,10 +3,9 @@
 exports[`Download 2 Icon should show Download 2 Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="71px"
-  role="presentation"
   viewBox="0 0 66 71"
   width="66px"
 >

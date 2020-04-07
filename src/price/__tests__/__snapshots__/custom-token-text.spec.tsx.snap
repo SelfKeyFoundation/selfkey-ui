@@ -2,7 +2,7 @@
 
 exports[`Custom Token Text should show Custom Token Text 1`] = `
 <div
-  className="Component-customTokenText-0-1-1"
+  className="Component-customTokenText-0-2-1"
 >
   Send or receive any custom ERC-20 token.
 </div>

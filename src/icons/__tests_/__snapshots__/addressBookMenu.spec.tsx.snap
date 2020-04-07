@@ -3,9 +3,8 @@
 exports[`AddressBookMenu Icon should show AddressBookMenu Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "16px",

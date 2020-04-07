@@ -3,10 +3,9 @@
 exports[`Mail Icon should show Mail Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="27px"
-  role="presentation"
   viewBox="0 0 35 27"
   width="35px"
 >

@@ -3,9 +3,8 @@
 exports[`Small Round Person Icon should show Small Round Person Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "28px",

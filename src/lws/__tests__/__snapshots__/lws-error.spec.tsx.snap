@@ -2,10 +2,10 @@
 
 exports[`LWS Error Screen should show LWS Error Screen 1`] = `
 <div
-  className="Component-lwsError-0-1-2"
+  className="Component-lwsError-0-2-2"
 >
   <div
-    className="Component-areaTitle-0-1-5"
+    className="Component-areaTitle-0-2-5"
   >
     <span>
       icon
@@ -18,15 +18,15 @@ exports[`LWS Error Screen should show LWS Error Screen 1`] = `
     </h3>
   </div>
   <div
-    className="Component-form-0-1-1"
+    className="Component-form-0-2-1"
   >
     <p
-      className="Component-supportText-0-1-4"
+      className="Component-supportText-0-2-4"
     >
       test
     </p>
     <div
-      className="Component-formSubmitRow-0-1-3"
+      className="Component-formSubmitRow-0-2-3"
     >
       <button>
         retry

@@ -52,7 +52,7 @@ describe('Array File Upload Widget', () => {
 			/>
 		);
 		expect(component).toBeDefined();
-		component.setState({ dragging: true });
+		// component.setState({ dragging: true });
 	});
 
 	it('should show Array File with isError true', () => {

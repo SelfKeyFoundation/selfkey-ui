@@ -2,25 +2,24 @@
 
 exports[`Modal Box should show Modal Box 1`] = `
 <div
-  className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-align-items-xs-flex-start-10 Component-root-0-1-1"
+  className="MuiGrid-root Component-root-0-2-1 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
 >
   <div
-    className="MuiGrid-item-2 Component-header-0-1-2"
+    className="MuiGrid-root Component-header-0-2-2 MuiGrid-item"
     id="header"
   >
     <h2
-      className="MuiTypography-root-98 MuiTypography-h2-111"
+      className="MuiTypography-root MuiTypography-h2"
     >
       Modal boc
     </h2>
     <button
-      className="Component-closeButton-0-1-4"
+      className="Component-closeButton-0-2-4"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-134 Component-root-0-1-5"
+        className="MuiSvgIcon-root Component-root-0-2-5"
         focusable="false"
-        role="presentation"
         viewBox="0 0 38 38"
       >
         <defs />
@@ -63,7 +62,7 @@ exports[`Modal Box should show Modal Box 1`] = `
     </button>
   </div>
   <div
-    className="MuiGrid-item-2 Component-body-0-1-3"
+    className="MuiGrid-root Component-body-0-2-3 MuiGrid-item"
     id="body"
   />
 </div>
