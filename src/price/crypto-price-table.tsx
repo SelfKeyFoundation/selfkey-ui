@@ -86,9 +86,6 @@ export type CryptoPriceTableState = {};
 export type StyledProps = WithStyles<keyof typeof styles> & CryptoPriceTableProps;
 
 export class CryptoPriceTableComponent extends React.Component<StyledProps, CryptoPriceTableState> {
-	constructor(props: StyledProps) {
-		super(props);
-	}
 
 	renderVisibilityButton(token: Token) {
 		const { classes, toggleAction, alwaysVisible = [] } = this.props;
@@ -101,11 +98,9 @@ export class CryptoPriceTableComponent extends React.Component<StyledProps, Cryp
 		}
 		return (
 			<div onClick={(event: React.MouseEvent<HTMLElement>) => {
-					toggleAction
-						? toggleAction(event, token)
-						: () => {
-								return;
-						  };
+					if (toggleAction) {
+						toggleAction(event, token);
+					}
 				}}
 			>
 				{icon}

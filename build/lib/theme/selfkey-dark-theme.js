@@ -360,12 +360,14 @@ var theme = core_1.createMuiTheme({
                     borderBottom: '0',
                 },
             },
+            /*
             error: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
                 border: "1px solid " + colors_1.error,
                 color: colors_1.error,
                 marginBottom: '6px',
             },
+            */
         },
         MuiInputBase: {
             input: {

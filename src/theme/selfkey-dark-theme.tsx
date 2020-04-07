@@ -353,12 +353,13 @@ const theme = createMuiTheme({
 					borderBottom: '0',
 				},
 			},
-			error: {
-				backgroundColor: 'rgba(255, 46, 99, 0.09)',
-				border: `1px solid ${error}`,
-				color: error,
-				marginBottom: '6px',
-			},
+			// FIXME: uncomment to see errors on devconsole
+			// error: {
+			// 	backgroundColor: 'rgba(255, 46, 99, 0.09)',
+			// 	border: `1px solid ${error}`,
+			// 	color: error,
+			// 	marginBottom: '6px',
+			// },
 		},
 		MuiInputBase: {
 			input: {

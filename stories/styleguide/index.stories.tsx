@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { setup } from '../../src/jss-setup';
-import { setAddon, storiesOf, Story } from '@storybook/react';
+import { setAddon, storiesOf } from '@storybook/react';
 import { host } from 'storybook-host';
 import JSXAddon from 'storybook-addon-jsx';
 // import { action } from '@storybook/addon-actions';
@@ -71,7 +71,7 @@ const transferModal = host({
 	width: '700px',
 });
 
-const commonStory = storiesOf('Common', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+const commonStory = storiesOf('Common', module).addDecorator(lightOnDark) as any & { addWithJSX: Function };
 
 // commonStory.addWithJSX('Slider', () => {});
 
@@ -81,7 +81,7 @@ commonStory.addWithJSX('Icons', () => (
 	</SelfkeyDarkTheme>
 ));
 
-const priceStory = storiesOf('Prices', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+const priceStory = storiesOf('Prices', module).addDecorator(lightOnDark) as any & { addWithJSX: Function };
 
 priceStory.addWithJSX('PriceList', () => <CryptoPriceList />);
 priceStory.addWithJSX('TokenList', () => <TokenList />);
@@ -159,7 +159,7 @@ priceStory.addWithJSX('CryptoPriceTable', () => (
 	/>
 ));
 
-const transactionrStory = storiesOf('Transaction', module).addDecorator(transferModal) as Story & {
+const transactionrStory = storiesOf('Transaction', module).addDecorator(transferModal) as any & {
 	addWithJSX: Function;
 };
 
@@ -271,7 +271,7 @@ transactionrStory.addWithJSX('TransactionSendProgressBox', () => (
 	</SelfkeyDarkTheme>
 ));
 
-const lws = storiesOf('LWS', module).addDecorator(transferModal) as Story & { addWithJSX: Function };
+const lws = storiesOf('LWS', module).addDecorator(transferModal) as any & { addWithJSX: Function };
 
 lws.addWithJSX('LWSHeader', () => (
 	<SelfkeyDarkTheme>
@@ -324,7 +324,7 @@ lws.addWithJSX('LWSLoading', () => (
 	</SelfkeyDarkTheme>
 ));
 
-const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+const addressBook = storiesOf('AddressBook', module).addDecorator(lightOnDark) as any & { addWithJSX: Function };
 
 addressBook.addWithJSX('AddressBook', () => (
 	<SelfkeyDarkTheme>
@@ -367,7 +367,7 @@ addressBook.addWithJSX('AddressBookEdit', () => (
 	</ModalBox>
 ));
 
-const theme = storiesOf('Selfkey Dark Theme', module).addDecorator(lightOnDark) as Story & { addWithJSX: Function };
+const theme = storiesOf('Selfkey Dark Theme', module).addDecorator(lightOnDark) as any & { addWithJSX: Function };
 
 theme.addWithJSX('Colors', () => (
 	<SelfkeyDarkTheme>
