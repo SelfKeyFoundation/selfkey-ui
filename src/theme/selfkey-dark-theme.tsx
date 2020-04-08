@@ -589,7 +589,7 @@ const theme = createMuiTheme({
 			root: {
 				borderRadius: '4px',
 				fontSize: '14px',
-				lineHeight: '21px',
+				lineHeight: '14px',
 			},
 		},
 		MuiFormGroup: {
@@ -610,6 +610,8 @@ const theme = createMuiTheme({
 			},
 			label: {
 				color: typography,
+				fontSize: '16px',
+				lineHeight: '24px'
 			},
 		},
 		MuiFormLabel: {
@@ -863,7 +865,13 @@ const theme = createMuiTheme({
 			},
 		},
 		MuiToggleButtonGroup: {
+			grouped: {
+				'&:not(:first-child)': {
+					marginLeft: 0
+				}
+			},
 			root: {
+				backgroundColor: 'transparent',
 				boxShadow: 'none',
 				'&$selected': {
 					backgroundColor: 'transparent',
@@ -875,11 +883,14 @@ const theme = createMuiTheme({
 			root: {
 				backgroundColor: '#293743',
 				border: '1px solid #1D505F',
+				borderRadius: '2px',
 				boxSizing: 'border-box',
 				fill: typography,
 				height: '44px',
+				minWidth: '48px',
 				textTransform: 'initial',
 				'&:hover': {
+					backgroundColor: 'rgba(255, 255, 255, 0.12)',
 					border: `1px solid ${primaryTint}`,
 				},
 				'&$selected': {

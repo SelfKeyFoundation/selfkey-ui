@@ -589,7 +589,7 @@ var theme = core_1.createMuiTheme({
             root: {
                 borderRadius: '4px',
                 fontSize: '14px',
-                lineHeight: '21px',
+                lineHeight: '14px',
             },
         },
         MuiFormGroup: {
@@ -610,6 +610,8 @@ var theme = core_1.createMuiTheme({
             },
             label: {
                 color: colors_1.typography,
+                fontSize: '16px',
+                lineHeight: '24px'
             },
         },
         MuiFormLabel: {
@@ -860,7 +862,13 @@ var theme = core_1.createMuiTheme({
             },
         },
         MuiToggleButtonGroup: {
+            grouped: {
+                '&:not(:first-child)': {
+                    marginLeft: 0
+                }
+            },
             root: {
+                backgroundColor: 'transparent',
                 boxShadow: 'none',
                 '&$selected': {
                     backgroundColor: 'transparent',
@@ -872,11 +880,14 @@ var theme = core_1.createMuiTheme({
             root: {
                 backgroundColor: '#293743',
                 border: '1px solid #1D505F',
+                borderRadius: '2px',
                 boxSizing: 'border-box',
                 fill: colors_1.typography,
                 height: '44px',
+                minWidth: '48px',
                 textTransform: 'initial',
                 '&:hover': {
+                    backgroundColor: 'rgba(255, 255, 255, 0.12)',
                     border: "1px solid " + colors_1.primaryTint,
                 },
                 '&$selected': {
