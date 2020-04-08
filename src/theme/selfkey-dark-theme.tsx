@@ -322,6 +322,12 @@ const theme = createMuiTheme({
 				height: '44px',
 				lineHeight: '21px',
 				paddingLeft: '16px',
+				'&$error': {
+					backgroundColor: 'rgba(255, 46, 99, 0.09)',
+					border: `1px solid ${error}`,
+					color: error,
+					marginBottom: '6px',
+				},
 				'&$focused': {
 					'&$focused:not($error):not($disabled)': {
 						border: `1px solid ${primary}`,
@@ -353,13 +359,6 @@ const theme = createMuiTheme({
 					borderBottom: '0',
 				},
 			},
-			// FIXME: uncomment to see errors on devconsole
-			// error: {
-			// 	backgroundColor: 'rgba(255, 46, 99, 0.09)',
-			// 	border: `1px solid ${error}`,
-			// 	color: error,
-			// 	marginBottom: '6px',
-			// },
 		},
 		MuiInputBase: {
 			input: {

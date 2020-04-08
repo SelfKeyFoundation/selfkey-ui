@@ -328,6 +328,12 @@ var theme = core_1.createMuiTheme({
                 height: '44px',
                 lineHeight: '21px',
                 paddingLeft: '16px',
+                '&$error': {
+                    backgroundColor: 'rgba(255, 46, 99, 0.09)',
+                    border: "1px solid " + colors_1.error,
+                    color: colors_1.error,
+                    marginBottom: '6px',
+                },
                 '&$focused': {
                     '&$focused:not($error):not($disabled)': {
                         border: "1px solid " + colors_1.primary,
