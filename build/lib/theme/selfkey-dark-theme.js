@@ -280,7 +280,7 @@ var theme = core_1.createMuiTheme({
                 whiteSpace: 'normal',
             },
             gutterBottom: {
-                marginBottom: '1em',
+                marginBottom: '0.35em',
             },
         },
         MuiList: {
@@ -393,6 +393,7 @@ var theme = core_1.createMuiTheme({
         MuiSvgIcon: {
             root: {
                 color: '#93B0C1',
+                fontSize: '1.5rem',
                 transition: 'all 0.2s ease-out',
                 '&:hover': {
                     color: colors_1.white,

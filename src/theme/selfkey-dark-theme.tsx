@@ -274,7 +274,7 @@ const theme = createMuiTheme({
 				whiteSpace: 'normal',
 			},
 			gutterBottom: {
-				marginBottom: '1em',
+				marginBottom: '0.35em',
 			},
 		},
 		MuiList: {
@@ -387,6 +387,7 @@ const theme = createMuiTheme({
 		MuiSvgIcon: {
 			root: {
 				color: '#93B0C1',
+				fontSize: '1.5rem',
 				transition: 'all 0.2s ease-out',
 				'&:hover': {
 					color: white,
