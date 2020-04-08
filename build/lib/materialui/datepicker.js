@@ -33,21 +33,21 @@ var styles = {
         '& .rdt': {
             width: '100%',
         },
-        '& .rdt & input': {
+        '& .rdt input': {
             boxSizing: 'border-box',
             color: 'white',
             width: '100%',
             background: "url(" + calendarIcon + ") #1E262E no-repeat right 10px center",
             paddingRight: '35px',
         },
-        '& .rdt & input::placeholder': {
+        '& .rdt input::placeholder': {
             color: 'rgba(147, 176, 193, 0.42)',
         },
         '& .rdtOpen': {
             display: 'table',
             position: 'relative',
         },
-        '& .rdtOpen & .rdtPicker': {
+        '& .rdtOpen .rdtPicker': {
             display: 'block',
             position: 'absolute',
             zIndex: 100,
@@ -65,7 +65,7 @@ var styles = {
             padding: '5px 25px 15px 25px',
             textAlign: 'center',
         },
-        '& .rdtPicker & th ': {
+        '& .rdtPicker th ': {
             borderBottom: 'none',
         },
         '& .form-control': {
@@ -80,17 +80,17 @@ var styles = {
             paddingLeft: '16px',
             paddingRight: '16px',
         },
-        '& .form-control &:focus': {
+        '& .form-control:focus': {
             border: '1px solid #00C0D9',
             boxShadow: '0 0 3px 1px #00C0D9',
         },
-        '& .form-control &:placeholder': {
+        '& .form-control::placeholder': {
             color: '#404B55',
         },
         '& .rdtSwitch': {
             color: '#93B0C1',
         },
-        '& .rdtSwitch &:hover': {
+        '& .rdtSwitch:hover': {
             color: 'white',
         },
         '& .dow': {
@@ -108,10 +108,10 @@ var styles = {
             userSelect: 'none',
             width: '40px',
         },
-        '& .rdtNext &:hover': {
+        '& .rdtNext:hover': {
             color: 'white',
         },
-        '& .rdtNext & span': {
+        '& .rdtNext span': {
             fontSize: '2.2em',
             verticalAlign: 'sub',
         },
@@ -121,10 +121,10 @@ var styles = {
             userSelect: 'none',
             width: '40px',
         },
-        '& .rdtPrev &:hover': {
+        '& .rdtPrev:hover': {
             color: 'white',
         },
-        '& .rdtPrev & span': {
+        '& .rdtPrev span': {
             fontSize: '2.2em',
             verticalAlign: 'sub',
         },
@@ -132,7 +132,7 @@ var styles = {
             fontSize: '14px',
             fontWeight: 600,
         },
-        '& thead & tr:first-child &:after': {
+        '& thead tr:first-child:after': {
             borderBottom: '1px solid #313D49',
             content: '""',
             left: 0,
@@ -140,23 +140,23 @@ var styles = {
             top: '60px',
             width: '100%',
         },
-        '& thead & tr:first-child & th': {
+        '& thead tr:first-child th': {
             cursor: 'pointer',
             paddingBottom: '10px',
             paddingTop: 0,
         },
-        '& thead & tr:nth-child(2)': {
+        '& thead tr:nth-child(2)': {
             fontSize: '14px',
             textTransform: 'uppercase',
         },
-        '& tfoot & td': {
+        '& tfoot td': {
             color: '#93B0C1',
             cursor: 'pointer',
             fontSize: '12px',
             paddingTop: '30px',
             textAlign: 'center',
         },
-        '& tfoot & td &:before': {
+        '& tfoot:before': {
             borderTop: '1px solid #313D49',
             content: '""',
             left: 0,
@@ -171,7 +171,7 @@ var styles = {
             padding: '8px 10px',
             textAlign: 'center',
         },
-        '& .rdtDay &:hover': {
+        '& .rdtDay:hover': {
             backgroundColor: '#00C0D9 !important',
             borderRadius: '3px',
         },
@@ -188,22 +188,22 @@ var styles = {
             textAlign: 'center',
             width: '35px',
         },
-        '& .rdtMonth &:hover': {
+        '& .rdtMonth:hover': {
             backgroundColor: '#00C0D9',
             borderRadius: '3px',
         },
-        '& .rdtMonths & table': {
+        '& .rdtMonths table': {
             width: '100%',
         },
-        '& .rdtMonths & table & table:nth-child(2)': {
+        '& .rdtMonths table:nth-child(2)': {
             display: 'flex',
         },
-        '& .rdtMonths & table & table:nth-child(2) & tbody': {
+        '& .rdtMonths table:nth-child(2) tbody': {
             marginTop: '65px',
             textAlign: 'center',
             width: 'inherit',
         },
-        '& .rdtMonths & table & table:nth-child(2) & tbody & tr': {
+        '& .rdtMonths table:nth-child(2) tbody tr': {
             display: 'flex',
             justifyContent: 'space-around',
             margin: '10px 0',
@@ -214,36 +214,36 @@ var styles = {
             padding: '8px 10px',
             textAlign: 'center',
         },
-        '& .rdtYear &:hover': {
+        '& .rdtYear:hover': {
             backgroundColor: '#00C0D9',
             borderRadius: '3px',
         },
-        '& .rdtYears & table:nth-child(2)': {
+        '& .rdtYears table:nth-child(2)': {
             display: 'flex',
         },
-        '& .rdtYears & table:nth-child(2) & tbody': {
+        '& .rdtYears table:nth-child(2) tbody': {
             marginTop: '65px',
             textAlign: 'center',
             width: 'inherit',
         },
-        '& .rdtYears & table:nth-child(2) & tbody & tr': {
+        '& .rdtYears table:nth-child(2) tbody tr': {
             display: 'flex',
             justifyContent: 'space-around',
             margin: '10px 0',
         },
-        '& .rdtYears & table': {
+        '& .rdtYears table': {
             width: '100%',
         },
-        '& .rdtTime & table': {
+        '& .rdtTime table': {
             width: '100%',
         },
-        '& .rdtTime & table & tbody': {
+        '& .rdtTime table tbody': {
             display: 'inherit',
             marginTop: '85px',
             textAlign: 'center',
             width: 'inherit',
         },
-        '& .rdtTime & .rdtSwitch': {
+        '& .rdtTime .rdtSwitch': {
             fontWeight: 400,
             paddingBottom: '18px',
             paddingTop: '14px',
@@ -259,14 +259,14 @@ var styles = {
             display: 'flex',
             justifyContent: 'space-around',
         },
-        '& .rdtCounter &:first-child:before': {
+        '& .rdtCounter:first-child:before': {
             color: '#93B0C1',
             content: '"Hours"',
             marginLeft: '-14px',
             marginTop: '-35px',
             position: 'absolute',
         },
-        '& .rdtCounter &:nth-child(3):before': {
+        '& .rdtCounter:nth-child(3):before': {
             color: '#93B0C1',
             content: '"Minutes"',
             marginLeft: '-21px',
@@ -286,7 +286,7 @@ var styles = {
             color: '#697C95',
             userSelect: 'none',
         },
-        '& .rdtBtn &:hover': {
+        '& .rdtBtn:hover': {
             color: 'white',
         },
         '& .rdtCounterSeparator': {
@@ -331,7 +331,7 @@ exports.KeyPicker = react_jss_1.default(styles)(function (_a) {
         additionalClass = classes.formError;
     }
     var placeholder = includeTime ? 'YYYY-MM-DD h:mm:ss a' : 'YYYY-MM-DD';
-    return (React.createElement("div", { className: classes.datepickerWrap },
+    return (React.createElement("div", { className: classes.datepickerWrap + " lofasz" },
         React.createElement(Datetime, __assign({ dateFormat: "YYYY-MM-DD", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers, { className: additionalClass }))));
 });
 exports.default = exports.KeyPicker;
