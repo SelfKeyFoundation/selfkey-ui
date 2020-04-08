@@ -21,12 +21,10 @@ var clipboard_1 = require("../icons/clipboard");
 var core_1 = require("@material-ui/core");
 exports.styles = {
     clipboard: {
-        cursor: "pointer",
-        '&:hover': {
-            '& svg': {
-                fill: '#FFFFFF'
-            }
-        }
+        '&:hover & svg': {
+            fill: '#FFFFFF'
+        },
+        cursor: 'pointer',
     },
     icon: {
         marginBottom: '10px'

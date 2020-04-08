@@ -21,8 +21,8 @@ var styles = {
     }
 };
 exports.UnlockIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 14 18' }),
-    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-unlock-icon", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "501-Exchange-Marketplace", transform: "translate(-1051.000000, -159.000000)", fill: "#FFFFFF", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-unlock-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "501-Exchange-Marketplace", transform: "translate(-1051.000000, -159.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 147.000000)" },
                 React.createElement("g", { id: "Button/Full-Primary", transform: "translate(880.000000, 0.000000)" },
                     React.createElement("g", { id: "text", transform: "translate(21.000000, 11.000000)" },

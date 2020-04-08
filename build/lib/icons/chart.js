@@ -21,8 +21,8 @@ var styles = {
     }
 };
 exports.ChartIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 32 32' }),
-    React.createElement("g", { id: "Corporate-Vault-chart", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-759.000000, -345.000000)", fill: "#23E6FE", stroke: "#23E6FE", "stroke-width": "0.7" },
+    React.createElement("g", { id: "Corporate-Vault-chart", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-759.000000, -345.000000)", fill: "#23E6FE", stroke: "#23E6FE", strokeWidth: "0.7" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 142.000000)" },
                 React.createElement("g", { id: "Select-role", transform: "translate(185.000000, 127.000000)" },
                     React.createElement("g", { id: "Radio-button-replace", transform: "translate(0.000000, 52.000000)" },

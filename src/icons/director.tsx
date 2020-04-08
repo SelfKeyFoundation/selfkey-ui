@@ -13,8 +13,8 @@ const styles: StyleSheet = {
 
 export const DirectorIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 30 29'>
-    <g id="Corporate-Vault-icon-director" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="802---Add-New-Member" transform="translate(-450.000000, -346.000000)" fill="#23E6FE" fill-rule="nonzero">
+    <g id="Corporate-Vault-icon-director" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="802---Add-New-Member" transform="translate(-450.000000, -346.000000)" fill="#23E6FE" fillRule="nonzero">
             <g id="Modal" transform="translate(240.000000, 142.000000)">
                 <g id="Select-role" transform="translate(185.000000, 127.000000)">
                     <g id="Radio-button-replace" transform="translate(0.000000, 52.000000)">

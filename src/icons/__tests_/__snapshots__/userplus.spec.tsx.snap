@@ -9,10 +9,10 @@ exports[`User Plus Icon should show User Plus Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="💹-Marketplace-user-plus"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#FFFFFF"

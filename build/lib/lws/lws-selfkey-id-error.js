@@ -18,8 +18,8 @@ var common_style_1 = require("../common/common-style");
 var shield_1 = require("../icons/shield");
 var lws_error_1 = require("./lws-error");
 var styles = {
-    buttonPrimary: __assign({}, common_style_1.default.buttonPrimary, { fontWeight: 700 }),
-    buttonSecondary: __assign({}, common_style_1.default.buttonSecondary, { fontWeight: 700 }),
+    buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
+    buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
 };
 exports.LWSSelfkeyIdError = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, retryAction = _a.retryAction;

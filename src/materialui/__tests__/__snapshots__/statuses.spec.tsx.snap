@@ -107,10 +107,10 @@ exports[`Status Completed should show Status Completed 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill-rule="evenodd"
+              fillRule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <g
                 id="410.1-Marketplace-Applications-Statuses"
@@ -251,10 +251,10 @@ exports[`Status Completed should show Status Denied 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill-rule="evenodd"
+              fillRule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <g
                 id="410.1-Marketplace-Applications-Statuses"
@@ -416,10 +416,10 @@ exports[`Status Completed should show Status Missing 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill-rule="evenodd"
+              fillRule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <g
                 id="410.1-Marketplace-Applications-Statuses"
@@ -558,10 +558,10 @@ exports[`Status Completed should show Status Pending 1`] = `
               icon-refresh-statuses
             </title>
             <g
-              fill-rule="evenodd"
+              fillRule="evenodd"
               id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <g
                 id="410.1-Marketplace-Applications-Statuses"

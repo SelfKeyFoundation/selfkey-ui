@@ -16,16 +16,14 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
-        transition: 'all 0.2s ease-out',
         '& circle': {
             stroke: '#1D505F',
             transition: 'all 0.2s ease-out',
         },
-        '&:hover': {
-            '& circle': {
-                stroke: '#23E6FE',
-            }
-        }
+        '&:hover & circle': {
+            stroke: '#23E6FE',
+        },
+        transition: 'all 0.2s ease-out',
     }
 };
 exports.ModalCloseIcon = react_jss_1.default(styles)(function (props) { return (React.createElement("div", { style: { height: '38px', marginLeft: '779px', marginTop: '-20px', position: 'absolute', width: '38px', cursor: 'pointer' } },

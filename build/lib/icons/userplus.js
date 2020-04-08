@@ -21,7 +21,7 @@ var styles = {
     }
 };
 exports.UserPlusIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 20 20' }),
-    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-user-plus", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-user-plus", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "502-Exchange-Details-+-Not-Unlocked", transform: "translate(-929.000000, -275.000000)", fill: "#FFFFFF" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },
                 React.createElement("g", { id: "Area-Body", transform: "translate(0.000000, 71.000000)" },

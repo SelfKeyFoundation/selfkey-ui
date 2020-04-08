@@ -15,7 +15,6 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
-var Slider_1 = require("@material-ui/lab/Slider");
 var common_style_1 = require("../common/common-style");
 var bignumber_js_1 = require("bignumber.js");
 var core_1 = require("@material-ui/core");
@@ -144,12 +143,12 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
                     this.fiatFee.toFixed(2),
                     " ",
                     fiat)),
-            React.createElement(Slider_1.default, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
+            React.createElement(core_1.Slider, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
+                    // active: classes.activated,
                     root: classes.sliderRoot,
-                    trackAfter: classes.trackAfter,
-                    trackBefore: classes.trackBefore,
+                    // trackBefore: classes.trackBefore,
+                    // trackAfter: classes.trackAfter,
                     thumb: classes.thumb,
-                    activated: classes.activated,
                 } }),
             React.createElement("div", { className: classes.sliderLabels },
                 React.createElement("div", null,

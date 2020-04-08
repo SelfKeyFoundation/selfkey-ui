@@ -15,8 +15,8 @@ const styles: StyleSheet = {
 
 export const ObserverIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
         <SvgIcon style={{ width: props.width || '30px', height: props.height || '30px' }} {...props} viewBox={props.viewBox || "0 0 30 30"}>
-            <g id="🏦-Corporate-Wallet-observer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="802.1---observer" transform="translate(-128.000000, -358.000000)" fill="#23E6FE" fill-rule="nonzero">
+            <g id="🏦-Corporate-Wallet-observer" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <g id="802.1---observer" transform="translate(-128.000000, -358.000000)" fill="#23E6FE" fillRule="nonzero">
                     <g id="LLC-observer" transform="translate(102.000000, 82.000000)">
                         <g id="Radio-button-replace-observer" transform="translate(0.000000, 251.000000)">
                             <g id="Btn-shareholder-observer">

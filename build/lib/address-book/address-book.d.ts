@@ -1,4 +1,4 @@
-/// <reference path="../../../src/react-jss.d.ts" />
+/// <reference types="react-jss" />
 import * as React from 'react';
 export declare type AddressBook = {
     id: number;

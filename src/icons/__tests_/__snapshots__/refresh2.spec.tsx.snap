@@ -12,10 +12,10 @@ exports[`Refresh Icon should show Refresh Icon 1`] = `
     icon-refresh-statuses
   </title>
   <g
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       id="410.1-Marketplace-Applications-Statuses"

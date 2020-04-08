@@ -21,7 +21,7 @@ exports[`Member Icon should show Member Icon 1`] = `
   >
     <g
       fill="#23E6FE"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="member-icon-gg"
       transform="translate(-357.000000, -163.000000)"
     >

@@ -9,16 +9,16 @@ exports[`Chart Icon should show Chart Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Corporate-Vault-chart"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#23E6FE"
       id="802---Add-New-Member"
       stroke="#23E6FE"
-      stroke-width="0.7"
+      strokeWidth="0.7"
       transform="translate(-759.000000, -345.000000)"
     >
       <g

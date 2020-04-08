@@ -24,8 +24,8 @@ var styles = {
     }
 };
 exports.ObserverIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '30px', height: props.height || '30px' } }, props, { viewBox: props.viewBox || "0 0 30 30" }),
-    React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-observer", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "802.1---observer", transform: "translate(-128.000000, -358.000000)", fill: "#23E6FE", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-observer", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "802.1---observer", transform: "translate(-128.000000, -358.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "LLC-observer", transform: "translate(102.000000, 82.000000)" },
                 React.createElement("g", { id: "Radio-button-replace-observer", transform: "translate(0.000000, 251.000000)" },
                     React.createElement("g", { id: "Btn-shareholder-observer" },

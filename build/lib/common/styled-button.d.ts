@@ -1,6 +1,6 @@
-/// <reference path="../../../src/react-jss.d.ts" />
+/// <reference types="react-jss" />
 import * as React from 'react';
-export declare type Variant = 'text' | 'flat' | 'outlined' | 'contained' | 'raised' | 'fab' | 'extendedFab';
+export declare type Variant = 'text' | 'outlined' | 'contained';
 export declare type Color = 'primary' | 'secondary';
 export declare type ButtonProps = {
     onClick?: ((event: React.MouseEvent<HTMLElement>) => void);

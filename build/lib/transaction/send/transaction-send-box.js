@@ -103,18 +103,16 @@ exports.styles = {
         fontWeight: 600
     },
     usdAmoutContainer: {
-        paddingBottom: '65px',
+        '& span &:first-of-type': {
+            fontSize: '40px',
+            fontWeight: 300,
+        },
+        '& span &:last-of-type': {
+            fontSize: '20px',
+            fontWeight: 600,
+        },
         color: '#ffffff',
-        '&& span': {
-            '&:first-of-type': {
-                fontSize: '40px',
-                fontWeight: 300,
-            },
-            '&:last-of-type': {
-                fontSize: '20px',
-                fontWeight: 600,
-            }
-        }
+        paddingBottom: '65px',
     },
     amountInput: {
         width: 'calc(100% - 45px)',
@@ -169,7 +167,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
         var value = String(this.props.balance);
-        this.setState(__assign({}, this.state, { amount: value }));
+        this.setState(__assign(__assign({}, this.state), { amount: value }));
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
@@ -178,7 +176,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         if (!this.props.onAddressFieldChange) {
             return;
         }
-        this.setState(__assign({}, this.state, { address: event.target.value }));
+        this.setState(__assign(__assign({}, this.state), { address: event.target.value }));
         this.props.onAddressFieldChange(event.target.value);
     };
     TransactionSendBoxComponent.prototype.handleAmountChange = function (event) {
@@ -190,14 +188,14 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         if (Number(value) > this.props.balance) {
             value = String(this.props.balance);
         }
-        this.setState(__assign({}, this.state, { amount: value }));
+        this.setState(__assign(__assign({}, this.state), { amount: value }));
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
     };
     TransactionSendBoxComponent.prototype.handleCryptoCurrencyChange = function (event) {
         var value = event.target.value;
-        this.setState(__assign({}, this.state, { cryptoCurrency: value }));
+        this.setState(__assign(__assign({}, this.state), { cryptoCurrency: value }));
         if (this.props.onCryptoCurrencyChange) {
             this.props.onCryptoCurrencyChange(value);
         }
@@ -212,7 +210,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction, addressError = _a.addressError;
         var sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
-            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 24 },
+            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 8 },
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement("button", { className: classes.button, onClick: confirmAction }, " CONFIRM ")),
                 React.createElement(core_1.Grid, { item: true },
@@ -237,7 +235,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
             React.createElement(core_1.Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 16 },
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 4 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("button", { id: 'allAmountButton', onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
                         React.createElement(core_1.Grid, { item: true },

@@ -1,4 +1,3 @@
-/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
 import { StyleSheet, WithStyles } from 'react-jss';
 export declare const styles: StyleSheet;

@@ -15,14 +15,14 @@ exports[`Protection Icon should show Protection Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="🏦-Corporate-Wallet-protection"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#23E6FE"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="802.1---All-Member-Types-protection"
       transform="translate(-590.000000, -821.000000)"
     >

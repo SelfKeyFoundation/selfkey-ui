@@ -9,14 +9,14 @@ exports[`Director Icon should show Director Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Corporate-Vault-icon-director"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#23E6FE"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="802---Add-New-Member"
       transform="translate(-450.000000, -346.000000)"
     >

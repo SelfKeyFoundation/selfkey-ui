@@ -24,8 +24,8 @@ var styles = {
     }
 };
 exports.SignatureIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '30px', height: props.height || '27px' } }, props, { viewBox: props.viewBox || "0 0 30 27" }),
-    React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-signature", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "802.1---All-Member-Types-signature", transform: "translate(-357.000000, -358.000000)", fill: "#23E6FE", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-signature", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "802.1---All-Member-Types-signature", transform: "translate(-357.000000, -358.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "LLC-signature", transform: "translate(102.000000, 82.000000)" },
                 React.createElement("g", { id: "Radio-button-replace-signature", transform: "translate(0.000000, 251.000000)" },
                     React.createElement("g", { id: "Btn-director-signature", transform: "translate(230.000000, 0.000000)" },

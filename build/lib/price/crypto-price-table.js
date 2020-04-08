@@ -51,21 +51,21 @@ exports.styles = {
         },
     },
     bodyTableRow: {
-        height: '74px',
-        cursor: 'pointer',
         '& td': {
             padding: '0px',
             fontSize: '15px',
             textAlign: 'left',
             color: '#ffffff',
             borderBottom: '0px',
-            '& svg g': {
-                fill: '#ffffff',
-            },
+        },
+        '& td & svg g': {
+            fill: '#ffffff',
         },
         '& td:first-child': {
             paddingLeft: '24px !important',
         },
+        cursor: 'pointer',
+        height: '74px',
     },
     iconSize: {
         width: '19.6px !important',
@@ -74,8 +74,8 @@ exports.styles = {
 };
 var CryptoPriceTableComponent = /** @class */ (function (_super) {
     __extends(CryptoPriceTableComponent, _super);
-    function CryptoPriceTableComponent(props) {
-        return _super.call(this, props) || this;
+    function CryptoPriceTableComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     CryptoPriceTableComponent.prototype.renderVisibilityButton = function (token) {
         var _a = this.props, classes = _a.classes, toggleAction = _a.toggleAction, _b = _a.alwaysVisible, alwaysVisible = _b === void 0 ? [] : _b;
@@ -89,12 +89,9 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             icon = React.createElement(visibility_on_1.VisibilityOnIcon, { className: classes.iconSize });
         }
         return (React.createElement("div", { onClick: function (event) {
-                /* eslint no-unused-expressions: [1, { "allowTernary": true }] */
-                toggleAction
-                    ? toggleAction(event, token)
-                    : function () {
-                        return;
-                    };
+                if (toggleAction) {
+                    toggleAction(event, token);
+                }
             } }, icon));
     };
     CryptoPriceTableComponent.prototype.renderRow = function (token, index) {

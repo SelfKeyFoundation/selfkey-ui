@@ -15,14 +15,14 @@ exports[`Money Icon should show Money Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Marketplace-Money"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#FFFFFF"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="721---Bank-Accounts-money"
       transform="translate(-931.000000, -279.000000)"
     >
