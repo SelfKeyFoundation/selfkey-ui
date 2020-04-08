@@ -135,9 +135,9 @@ export const FileUploadInput = withStyles({
 })(Input);
 
 export const DecimalInput = withStyles({
-	// root: {
-	// 	// display: 'initial'
-	// },
+	input: {
+		textAlign: 'right'
+	},
 })(Input);
 
 export type FileViewProps = any;

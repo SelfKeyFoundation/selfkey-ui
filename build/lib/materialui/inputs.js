@@ -143,9 +143,9 @@ exports.FileUploadInput = core_1.withStyles({
     },
 })(core_1.Input);
 exports.DecimalInput = core_1.withStyles({
-// root: {
-// 	// display: 'initial'
-// },
+    input: {
+        textAlign: 'right'
+    },
 })(core_1.Input);
 var fileViewStyles = function (theme) {
     return core_1.createStyles({
