@@ -17,7 +17,7 @@ exports[`Notarize Document Icon should show Notarize Document Icon 1`] = `
     fillRule="evenodd"
     id="Notarize-document-icon"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#FFFFFF"

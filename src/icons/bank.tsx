@@ -8,7 +8,7 @@ const styles: StyleSheet = {};
 
 export const BankIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon style={{ width: props.width || '36px', height: props.height || '36px' }} {...props} viewBox="0 0 36 36">
-        <g id="Marketplace-bank" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+        <g id="Marketplace-bank" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="720---Bank-Accounts" transform="translate(-150.000000, -153.000000)" fill="#00C0D9" fillRule="nonzero">
                 <g id="Title" transform="translate(150.000000, 153.000000)">
                     <g id="icon-marketplace-bank">
