@@ -210,7 +210,7 @@ const theme = createMuiTheme({
 		},
 		MuiTypography: {
 			root: {
-				color: '#BE1E1E',
+				color: '#fff',
 			},
 			h1: {
 				fontSize: '24px',

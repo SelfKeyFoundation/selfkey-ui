@@ -187,7 +187,6 @@ var theme = core_1.createMuiTheme({
     typography: {
         fontFamily: ['Lato', 'arial', 'sans-serif'].join(','),
         fontSize: 16,
-        useNextVariants: true,
     },
     overrides: {
         MuiCard: {
@@ -217,7 +216,7 @@ var theme = core_1.createMuiTheme({
         },
         MuiTypography: {
             root: {
-                color: '#BE1E1E',
+                color: '#fff',
             },
             h1: {
                 fontSize: '24px',
@@ -360,14 +359,6 @@ var theme = core_1.createMuiTheme({
                     borderBottom: '0',
                 },
             },
-            /*
-            error: {
-                backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: "1px solid " + colors_1.error,
-                color: colors_1.error,
-                marginBottom: '6px',
-            },
-            */
         },
         MuiInputBase: {
             input: {
@@ -375,9 +366,6 @@ var theme = core_1.createMuiTheme({
                     color: colors_1.grey,
                     opacity: 1,
                 },
-            },
-            inputType: {
-                height: '22px',
             },
             multiline: {
                 overflow: 'scroll',
@@ -564,12 +552,6 @@ var theme = core_1.createMuiTheme({
                 color: colors_1.white,
                 fontSize: '14px',
                 lineHeight: '21px',
-            },
-            error: {
-                backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: "1px solid " + colors_1.error,
-                color: colors_1.error,
-                marginBottom: '6px',
             },
         },
         MuiMenu: {
@@ -766,6 +748,10 @@ var theme = core_1.createMuiTheme({
             },
         },
         MuiTab: {
+            // label: {
+            // 	fontSize: '16px',
+            // 	lineHeight: '19px',
+            // },
             root: {
                 borderBottom: "4px solid transparent",
                 textTransform: 'initial',
@@ -784,13 +770,6 @@ var theme = core_1.createMuiTheme({
             },
             wrapper: {
                 width: 'initial',
-            },
-            labelContainer: {
-                padding: '6px 15px !important',
-            },
-            label: {
-                fontSize: '16px',
-                lineHeight: '19px',
             },
         },
         MuiExpansionPanel: {
@@ -854,12 +833,6 @@ var theme = core_1.createMuiTheme({
                 top: '6px',
             },
         },
-        MuiModal: {
-            root: {
-                height: '100%',
-                overflow: 'auto',
-            },
-        },
         MuiBackdrop: {
             root: {
                 background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
@@ -871,6 +844,12 @@ var theme = core_1.createMuiTheme({
             },
         },
         // @ts-ignore
+        MuiModal: {
+            root: {
+                height: '100%',
+                overflow: 'auto',
+            },
+        },
         MuiToggleButtonGroup: {
             root: {
                 boxShadow: 'none',
@@ -910,10 +889,10 @@ var theme = core_1.createMuiTheme({
                 borderRadius: '6px',
                 height: '10px',
             },
-            trackAfter: {
-                backgroundColor: '#313D49',
-                opacity: 1,
-            },
+            // trackAfter: {
+            // 	backgroundColor: '#313D49',
+            // 	opacity: 1,
+            // },
             thumb: {
                 height: '18px',
                 width: '18px',
