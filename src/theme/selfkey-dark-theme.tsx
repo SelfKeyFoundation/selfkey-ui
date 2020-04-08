@@ -805,7 +805,9 @@ const theme = createMuiTheme({
 				color: typography,
 				left: '18px',
 				padding: '0',
+				position: 'absolute',
 				right: 'initial',
+				top: '50%',
 				transform: 'translateY(-50%) rotate(90deg)',
 				transformOrigin: '50%',
 			},
@@ -840,6 +842,7 @@ const theme = createMuiTheme({
 				borderRadius: 0,
 				paddingLeft: '12px',
 				paddingRight: '30px',
+				textAlignLast: 'left',
 			},
 			selectIcon: {
 				color: primary,
@@ -906,16 +909,18 @@ const theme = createMuiTheme({
 		},
 		MuiSlider: {
 			root: {
-				margin: '20px 0 33px',
+				margin: 0,
 			},
 			track: {
 				borderRadius: '6px',
 				height: '10px',
 			},
-			// trackAfter: {
-			// 	backgroundColor: '#313D49',
-			// 	opacity: 1,
-			// },
+			rail: {
+				backgroundColor: '#313D49',
+				borderRadius: '10px',
+				height: '10px',
+				opacity: 1
+			},
 			thumb: {
 				height: '18px',
 				width: '18px',
