@@ -266,11 +266,13 @@ var theme = core_1.createMuiTheme({
             },
             caption: {
                 color: colors_1.warning,
+                display: 'block',
                 fontSize: '16px',
                 lineHeight: '24px',
             },
             overline: {
                 color: colors_1.typography,
+                display: 'block',
                 fontSize: '12px',
                 fontWeight: 600,
                 lineHeight: '15px',

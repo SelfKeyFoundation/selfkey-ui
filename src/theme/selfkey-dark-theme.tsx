@@ -260,11 +260,13 @@ const theme = createMuiTheme({
 			},
 			caption: {
 				color: warning,
+				display: 'block',
 				fontSize: '16px',
 				lineHeight: '24px',
 			},
 			overline: {
 				color: typography,
+				display: 'block',
 				fontSize: '12px',
 				fontWeight: 600,
 				lineHeight: '15px',
