@@ -54,3 +54,15 @@ export const KeyTooltip = withStyles({
         },
     },
 })(Tooltip);
+
+export const SliderTooltip = withStyles({
+    tooltip: {
+        backgroundColor: 'transparent',
+        border: 'none',
+        color: 'white',
+        fontSize: '12px',
+        fontWeight: 600,
+        margin: '8px 0',
+        padding: 0,
+    },
+})(Tooltip);

@@ -51,4 +51,15 @@ exports.KeyTooltip = core_1.withStyles({
         },
     },
 })(core_1.Tooltip);
+exports.SliderTooltip = core_1.withStyles({
+    tooltip: {
+        backgroundColor: 'transparent',
+        border: 'none',
+        color: 'white',
+        fontSize: '12px',
+        fontWeight: 600,
+        margin: '8px 0',
+        padding: 0,
+    },
+})(core_1.Tooltip);
 //# sourceMappingURL=tooltipArrow.js.map
