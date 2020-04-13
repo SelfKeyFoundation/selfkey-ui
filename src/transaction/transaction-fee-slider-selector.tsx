@@ -1,9 +1,8 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet, WithStyles } from 'react-jss';
-import { default as Slider } from '@material-ui/lab/Slider';
 import CommonStyle from '../common/common-style';
 import BN from 'bignumber.js';
-import { Typography } from '@material-ui/core';
+import { Slider, Typography } from '@material-ui/core';
 
 const styles: StyleSheet = {
 	root: {
@@ -136,11 +135,12 @@ export class TransactionFeeSelectorComponent extends React.Component<StyledProps
 					onChange={this.handleChange}
 					value={this.value}
 					classes={{
+						// active: classes.activated,
 						root: classes.sliderRoot,
-						trackAfter: classes.trackAfter,
-						trackBefore: classes.trackBefore,
+						// trackBefore: classes.trackBefore,
+						// trackAfter: classes.trackAfter,
 						thumb: classes.thumb,
-						activated: classes.activated,
+						// activated: classes.activated,
 					}}
 				/>
 				<div className={classes.sliderLabels}>

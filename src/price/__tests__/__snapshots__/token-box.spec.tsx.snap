@@ -2,19 +2,18 @@
 
 exports[`Token Box should show Token Box for key 1`] = `
 <div
-  className="Component-tokenBox-0-1-1"
+  className="Component-tokenBox-0-2-1"
 >
   <div
-    className="MuiGrid-container-1"
+    className="MuiGrid-root MuiGrid-container"
   >
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-sm-2-45"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-98 Component-root-0-1-10"
+        className="MuiSvgIcon-root Component-root-0-2-10"
         focusable="false"
-        role="presentation"
         viewBox="0 0 44 44"
       >
         <g
@@ -37,30 +36,29 @@ exports[`Token Box should show Token Box for key 1`] = `
       </svg>
     </div>
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-sm-8-51"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8"
     >
       <div
-        className="Component-cryptoCurrencyName-0-1-8"
+        className="Component-cryptoCurrencyName-0-2-8"
       >
         Selfkey
       </div>
       <div
-        className="Component-cryptoCurrencyShort-0-1-9"
+        className="Component-cryptoCurrencyShort-0-2-9"
       >
         KEY
       </div>
     </div>
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-sm-2-45"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2"
     >
       <button
-        className="Component-transferButton-0-1-7"
+        className="Component-transferButton-0-2-7"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-98 Component-root-0-1-11"
+          className="MuiSvgIcon-root Component-root-0-2-11"
           focusable="false"
-          role="presentation"
           viewBox="0 0 489.2 489.2"
         >
           <g>
@@ -93,36 +91,36 @@ exports[`Token Box should show Token Box for key 1`] = `
     </div>
   </div>
   <div
-    className="Component-tokenBoxBody-0-1-2"
+    className="MuiGrid-root Component-tokenBoxBody-0-2-2"
   />
   <div
-    className="Component-tokenBoxFooter-0-1-3"
+    className="MuiGrid-root Component-tokenBoxFooter-0-2-3"
   >
     <div
-      className="Component-horizontalDivider-0-1-4"
+      className="Component-horizontalDivider-0-2-4"
     />
   </div>
   <div
-    className="MuiGrid-container-1 Component-addressBox-0-1-5"
+    className="MuiGrid-root Component-addressBox-0-2-5 MuiGrid-container"
   >
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-10-39"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
     >
       <span
-        className="Component-publicKey-0-1-6"
+        className="Component-publicKey-0-2-6"
       >
         0x4184288c556524df9cb9e58b73265ee66dca4efe
       </span>
     </div>
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-2-31"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <button
-        className="CopyComponent-copyButton-0-1-12"
+        className="CopyComponent-copyButton-0-2-12"
         onClick={[Function]}
       >
         <span
-          className="CopyComponent-copyButtonSpan-0-1-13"
+          className="CopyComponent-copyButtonSpan-0-2-13"
         >
           COPY
         </span>

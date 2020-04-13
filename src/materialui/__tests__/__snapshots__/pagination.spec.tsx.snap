@@ -2,73 +2,69 @@
 
 exports[`Pagination should show Pagination 1`] = `
 <div
-  className="MuiTablePagination-root-1"
+  className="MuiTablePagination-root"
 >
   <div
-    className="MuiToolbar-root-11 MuiToolbar-regular-13 MuiToolbar-gutters-12 MuiTablePagination-toolbar-2"
+    className="MuiToolbar-root MuiToolbar-regular MuiTablePagination-toolbar MuiToolbar-gutters"
   >
     <div
-      className="MuiTablePagination-spacer-3"
+      className="MuiTablePagination-spacer"
     />
-    <span
-      className="MuiTypography-root-15 MuiTypography-caption-25 MuiTypography-colorInherit-44 MuiTablePagination-caption-4"
+    <p
+      className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
     >
       Rows per page:
-    </span>
+    </p>
     <div
-      className="MuiInputBase-root-58 MuiTablePagination-input-8"
+      className="MuiInputBase-root MuiTablePagination-input MuiTablePagination-selectRoot"
       onClick={[Function]}
     >
       <div
-        className="MuiSelect-root-51 MuiTablePagination-selectRoot-5"
+        aria-haspopup="listbox"
+        aria-label="Rows per page:"
+        className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
       >
-        <div
-          aria-haspopup="true"
-          aria-pressed="false"
-          className="MuiSelect-select-52 MuiTablePagination-select-6 MuiSelect-selectMenu-55 MuiInputBase-input-68"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-          tabIndex={0}
-        >
-          5
-        </div>
-        <input
-          type="hidden"
-          value={5}
-        />
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root-75 MuiSelect-icon-57 MuiTablePagination-selectIcon-7"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M7 10l5 5 5-5z"
-          />
-        </svg>
+        5
       </div>
+      <input
+        onAnimationStart={[Function]}
+        type="hidden"
+        value={5}
+      />
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
     </div>
-    <span
-      className="MuiTypography-root-15 MuiTypography-caption-25 MuiTypography-colorInherit-44 MuiTablePagination-caption-4"
+    <p
+      className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
     >
       1-5 of 148
-    </span>
+    </p>
     <div
-      className="MuiGrid-container-88"
+      className="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-item-89"
+        className="MuiGrid-root MuiGrid-item"
       >
         <button
           aria-label="First Page"
-          className="MuiButtonBase-root-192 MuiIconButton-root-186 WithStyles-IconButton--root-185"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
           disabled={false}
           onBlur={[Function]}
-          onContextMenu={[Function]}
+          onDragLeave={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -78,42 +74,34 @@ exports[`Pagination should show Pagination 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          tabIndex="0"
+          tabIndex={0}
           type="button"
         >
           <span
-            className="MuiIconButton-label-191"
+            className="MuiIconButton-label"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-75"
+              className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
                 d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"
               />
-              <path
-                d="M24 24H0V0h24v24z"
-                fill="none"
-              />
             </svg>
           </span>
-          <span
-            className="MuiTouchRipple-root-195"
-          />
         </button>
       </div>
       <div
-        className="MuiGrid-item-89"
+        className="MuiGrid-root MuiGrid-item"
       >
         <button
           aria-label="Previous Page"
-          className="MuiButtonBase-root-192 MuiIconButton-root-186 WithStyles-IconButton--root-185"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
           disabled={false}
           onBlur={[Function]}
-          onContextMenu={[Function]}
+          onDragLeave={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -123,42 +111,34 @@ exports[`Pagination should show Pagination 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          tabIndex="0"
+          tabIndex={0}
           type="button"
         >
           <span
-            className="MuiIconButton-label-191"
+            className="MuiIconButton-label"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-75"
+              className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
                 d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
               />
-              <path
-                d="M0 0h24v24H0V0z"
-                fill="none"
-              />
             </svg>
           </span>
-          <span
-            className="MuiTouchRipple-root-195"
-          />
         </button>
       </div>
       <div
-        className="MuiGrid-item-89"
+        className="MuiGrid-root MuiGrid-item"
       >
         <button
           aria-label="Next Page"
-          className="MuiButtonBase-root-192 MuiIconButton-root-186 WithStyles-IconButton--root-185"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
           disabled={false}
           onBlur={[Function]}
-          onContextMenu={[Function]}
+          onDragLeave={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -168,42 +148,34 @@ exports[`Pagination should show Pagination 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          tabIndex="0"
+          tabIndex={0}
           type="button"
         >
           <span
-            className="MuiIconButton-label-191"
+            className="MuiIconButton-label"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-75"
+              className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
                 d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
               />
-              <path
-                d="M0 0h24v24H0V0z"
-                fill="none"
-              />
             </svg>
           </span>
-          <span
-            className="MuiTouchRipple-root-195"
-          />
         </button>
       </div>
       <div
-        className="MuiGrid-item-89"
+        className="MuiGrid-root MuiGrid-item"
       >
         <button
           aria-label="Last Page"
-          className="MuiButtonBase-root-192 MuiIconButton-root-186 WithStyles-IconButton--root-185"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
           disabled={false}
           onBlur={[Function]}
-          onContextMenu={[Function]}
+          onDragLeave={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -213,31 +185,23 @@ exports[`Pagination should show Pagination 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          tabIndex="0"
+          tabIndex={0}
           type="button"
         >
           <span
-            className="MuiIconButton-label-191"
+            className="MuiIconButton-label"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-75"
+              className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
                 d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"
               />
-              <path
-                d="M0 0h24v24H0V0z"
-                fill="none"
-              />
             </svg>
           </span>
-          <span
-            className="MuiTouchRipple-root-195"
-          />
         </button>
       </div>
     </div>

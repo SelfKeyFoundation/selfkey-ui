@@ -21,8 +21,8 @@ var styles = {
     }
 };
 exports.CompanyIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 38 35' }),
-    React.createElement("g", { id: "Corporate-Vault-company", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
-        React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-755.000000, -594.000000)", fill: "#23E6FE", "fill-rule": "nonzero" },
+    React.createElement("g", { id: "Corporate-Vault-company", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+        React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-755.000000, -594.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 142.000000)" },
                 React.createElement("g", { id: "Type", transform: "translate(250.000000, 378.000000)" },
                     React.createElement("g", { id: "Radio-button-replace", transform: "translate(0.000000, 51.000000)" },

@@ -3,9 +3,8 @@
 exports[`DID Icon should show DID Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   viewBox="0 0 60 60"
 >
   <defs>
@@ -18,24 +17,24 @@ exports[`DID Icon should show DID Icon 1`] = `
     >
       <stop
         offset="0%"
-        stop-color="#08BCCD"
+        stopColor="#08BCCD"
       />
       <stop
         offset="100%"
-        stop-color="#2DA1F8"
+        stopColor="#2DA1F8"
       />
     </linearGradient>
   </defs>
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="👩🏼‍🚀-ID-Dashboard-DID-icon"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="url(#linearGradient-1)"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="403.1---Identity-Summary---No-DID"
       transform="translate(-242.000000, -548.000000)"
     >

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// @ts-ignore
 var jss_1 = require("jss");
 var jss_preset_default_1 = require("jss-preset-default");
 var reset = require("reset-jss");

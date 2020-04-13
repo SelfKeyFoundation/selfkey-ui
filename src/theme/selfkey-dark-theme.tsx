@@ -180,7 +180,7 @@ const theme = createMuiTheme({
 	typography: {
 		fontFamily: ['Lato', 'arial', 'sans-serif'].join(','),
 		fontSize: 16,
-		useNextVariants: true,
+		// useNextVariants: true,
 	},
 	overrides: {
 		MuiCard: {
@@ -210,7 +210,7 @@ const theme = createMuiTheme({
 		},
 		MuiTypography: {
 			root: {
-				color: '#BE1E1E',
+				color: '#fff',
 			},
 			h1: {
 				fontSize: '24px',
@@ -260,11 +260,13 @@ const theme = createMuiTheme({
 			},
 			caption: {
 				color: warning,
+				display: 'block',
 				fontSize: '16px',
 				lineHeight: '24px',
 			},
 			overline: {
 				color: typography,
+				display: 'block',
 				fontSize: '12px',
 				fontWeight: 600,
 				lineHeight: '15px',
@@ -272,7 +274,7 @@ const theme = createMuiTheme({
 				whiteSpace: 'normal',
 			},
 			gutterBottom: {
-				marginBottom: '1em',
+				marginBottom: '0.35em',
 			},
 		},
 		MuiList: {
@@ -322,6 +324,12 @@ const theme = createMuiTheme({
 				height: '44px',
 				lineHeight: '21px',
 				paddingLeft: '16px',
+				'&$error': {
+					backgroundColor: 'rgba(255, 46, 99, 0.09)',
+					border: `1px solid ${error}`,
+					color: error,
+					marginBottom: '6px',
+				},
 				'&$focused': {
 					'&$focused:not($error):not($disabled)': {
 						border: `1px solid ${primary}`,
@@ -353,12 +361,6 @@ const theme = createMuiTheme({
 					borderBottom: '0',
 				},
 			},
-			error: {
-				backgroundColor: 'rgba(255, 46, 99, 0.09)',
-				border: `1px solid ${error}`,
-				color: error,
-				marginBottom: '6px',
-			},
 		},
 		MuiInputBase: {
 			input: {
@@ -366,9 +368,6 @@ const theme = createMuiTheme({
 					color: grey,
 					opacity: 1,
 				},
-			},
-			inputType: {
-				height: '22px',
 			},
 			multiline: {
 				overflow: 'scroll',
@@ -388,6 +387,7 @@ const theme = createMuiTheme({
 		MuiSvgIcon: {
 			root: {
 				color: '#93B0C1',
+				fontSize: '1.5rem',
 				transition: 'all 0.2s ease-out',
 				'&:hover': {
 					color: white,
@@ -556,12 +556,12 @@ const theme = createMuiTheme({
 				fontSize: '14px',
 				lineHeight: '21px',
 			},
-			error: {
-				backgroundColor: 'rgba(255, 46, 99, 0.09)',
-				border: `1px solid ${error}`,
-				color: error,
-				marginBottom: '6px',
-			},
+			// error: {
+			// 	backgroundColor: 'rgba(255, 46, 99, 0.09)',
+			// 	border: `1px solid ${error}`,
+			// 	color: error,
+			// 	marginBottom: '6px',
+			// },
 		},
 		MuiMenu: {
 			paper: {
@@ -589,7 +589,7 @@ const theme = createMuiTheme({
 			root: {
 				borderRadius: '4px',
 				fontSize: '14px',
-				lineHeight: '21px',
+				lineHeight: '14px',
 			},
 		},
 		MuiFormGroup: {
@@ -610,6 +610,8 @@ const theme = createMuiTheme({
 			},
 			label: {
 				color: typography,
+				fontSize: '16px',
+				lineHeight: '24px'
 			},
 		},
 		MuiFormLabel: {
@@ -757,6 +759,10 @@ const theme = createMuiTheme({
 			},
 		},
 		MuiTab: {
+			// label: {
+			// 	fontSize: '16px',
+			// 	lineHeight: '19px',
+			// },
 			root: {
 				borderBottom: `4px solid transparent`,
 				textTransform: 'initial',
@@ -776,13 +782,9 @@ const theme = createMuiTheme({
 			wrapper: {
 				width: 'initial',
 			},
-			labelContainer: {
-				padding: '6px 15px !important',
-			},
-			label: {
-				fontSize: '16px',
-				lineHeight: '19px',
-			},
+			// labelContainer: {
+			// 	padding: '6px 15px !important',
+			// },
 		},
 		MuiExpansionPanel: {
 			root: {
@@ -803,7 +805,9 @@ const theme = createMuiTheme({
 				color: typography,
 				left: '18px',
 				padding: '0',
+				position: 'absolute',
 				right: 'initial',
+				top: '50%',
 				transform: 'translateY(-50%) rotate(90deg)',
 				transformOrigin: '50%',
 			},
@@ -838,17 +842,12 @@ const theme = createMuiTheme({
 				borderRadius: 0,
 				paddingLeft: '12px',
 				paddingRight: '30px',
+				textAlignLast: 'left',
 			},
 			selectIcon: {
 				color: primary,
 				right: '5px',
 				top: '6px',
-			},
-		},
-		MuiModal: {
-			root: {
-				height: '100%',
-				overflow: 'auto',
 			},
 		},
 		MuiBackdrop: {
@@ -862,8 +861,20 @@ const theme = createMuiTheme({
 			},
 		},
 		// @ts-ignore
-		MuiToggleButtonGroup: {
+		MuiModal: {
 			root: {
+				height: '100%',
+				overflow: 'auto',
+			},
+		},
+		MuiToggleButtonGroup: {
+			grouped: {
+				'&:not(:first-child)': {
+					marginLeft: 0
+				}
+			},
+			root: {
+				backgroundColor: 'transparent',
 				boxShadow: 'none',
 				'&$selected': {
 					backgroundColor: 'transparent',
@@ -875,11 +886,14 @@ const theme = createMuiTheme({
 			root: {
 				backgroundColor: '#293743',
 				border: '1px solid #1D505F',
+				borderRadius: '2px',
 				boxSizing: 'border-box',
 				fill: typography,
 				height: '44px',
+				minWidth: '48px',
 				textTransform: 'initial',
 				'&:hover': {
+					backgroundColor: 'rgba(255, 255, 255, 0.12)',
 					border: `1px solid ${primaryTint}`,
 				},
 				'&$selected': {
@@ -895,15 +909,17 @@ const theme = createMuiTheme({
 		},
 		MuiSlider: {
 			root: {
-				margin: '20px 0 33px',
+				margin: 0,
 			},
 			track: {
 				borderRadius: '6px',
 				height: '10px',
 			},
-			trackAfter: {
+			rail: {
 				backgroundColor: '#313D49',
-				opacity: 1,
+				borderRadius: '10px',
+				height: '10px',
+				opacity: 1
 			},
 			thumb: {
 				height: '18px',

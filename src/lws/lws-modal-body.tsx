@@ -3,14 +3,14 @@ import injectSheet, { StyleSheet } from 'react-jss';
 
 const styles: StyleSheet = {
   root: {
-    padding: '60px 70px 80px',
     '& a': {
       color: '#23E6FE',
       textDecoration: 'none',
-      '&:hover': {
-        textDecoration: 'underline'
-      }
-    }
+    },
+    '& a &:hover': {
+      textDecoration: 'underline'
+    },
+    padding: '60px 70px 80px',
   },
 };
 

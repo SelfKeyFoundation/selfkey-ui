@@ -3,9 +3,8 @@
 exports[`Bank Icon should show Bank Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "36px",
@@ -16,14 +15,14 @@ exports[`Bank Icon should show Bank Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Marketplace-bank"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#00C0D9"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="720---Bank-Accounts"
       transform="translate(-150.000000, -153.000000)"
     >

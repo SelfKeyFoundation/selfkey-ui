@@ -6,16 +6,14 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles: StyleSheet = {
     root: {
-        transition: 'all 0.2s ease-out',
         '& circle': {
             stroke: '#1D505F',
             transition: 'all 0.2s ease-out',
         },
-        '&:hover': {
-            '& circle': {
-                stroke: '#23E6FE',
-            } 
-        }
+        '&:hover & circle': {
+            stroke: '#23E6FE',
+        },
+        transition: 'all 0.2s ease-out',
     }
 };
 

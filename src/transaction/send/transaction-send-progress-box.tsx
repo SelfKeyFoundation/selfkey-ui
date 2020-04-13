@@ -114,9 +114,9 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
                 <Typography variant="h2">{status}</Typography>
               </Grid>
               <Grid item id='body' className={classes.body}>
-                <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={16}>
+                <Grid container direction='column' justify='flex-start' alignItems='flex-start' spacing={4}>
                   <Grid item>
-                    <Typography variant='display2' className={classes.amountContainer}>
+                    <Typography variant='h1' className={classes.amountContainer}>
                       <Grid container>
                         <Grid className={classes.amount} item>
                             <NumberFormat locale={locale} priceStyle='decimal' currency={cryptoCurrency} value={amount} fractionDigits={15}/>
@@ -131,7 +131,7 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
                     <Typography variant="body2" className={classes.sentTo}>Destination address</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="headline" className={classes.address}>{address}</Typography>
+                    <Typography variant="body1" className={classes.address}>{address}</Typography>
                   </Grid>
                 </Grid>
               </Grid>
@@ -140,7 +140,7 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
             {transactionHash &&
               <Grid item>
                 <Grid container>
-                  <Grid container direction="row" justify="flex-start" alignItems="flex-start" className={classes.actionButtonsContainer} spacing={24}>
+                  <Grid container direction="row" justify="flex-start" alignItems="flex-start" className={classes.actionButtonsContainer} spacing={8}>
                     <Grid item>
                         <button id='viewTransactionButton' className={classes.button} onClick={(e) => handleViewTransaction(e, openLink, transactionHash)}> VIEW TRANSACTION </button>
                     </Grid>

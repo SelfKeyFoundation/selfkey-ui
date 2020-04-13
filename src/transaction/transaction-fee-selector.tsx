@@ -1,6 +1,6 @@
 import * as React from 'react';
 import injectSheet, { StyleSheet, WithStyles } from 'react-jss';
-import { default as Slider } from '@material-ui/lab/Slider';
+import { Slider } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
 import BN from 'bignumber.js';
 
@@ -110,10 +110,11 @@ export class TransactionFeeSelectorComponent extends React.Component<StyledProps
 					value={this.value}
 					classes={{
 						root: classes.sliderRoot,
-						trackAfter: classes.trackAfter,
-						trackBefore: classes.trackBefore,
+						// trackAfter: classes.trackAfter,
+						// trackBefore: classes.trackBefore,
 						thumb: classes.thumb,
-						activated: classes.activated,
+						// activated: classes.activated,
+						// active: classes.activated,
 					}}
 				/>
 				<div className={classes.sliderLabels}>

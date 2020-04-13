@@ -16,18 +16,16 @@ var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
-        width: '38px !important',
-        height: '38px !important',
-        transition: 'all 0.2s ease-out',
-        cursor: 'pointer',
         '& circle': {
             stroke: '#1D505F',
         },
-        '&:hover': {
-            '& circle': {
-                stroke: '#23E6FE',
-            }
-        }
+        '& circle &:hover & circle': {
+            stroke: '#23E6FE',
+        },
+        cursor: 'pointer',
+        height: '38px !important',
+        transition: 'all 0.2s ease-out',
+        width: '38px !important',
     }
 };
 exports.CloseButtonIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 38 38' }),

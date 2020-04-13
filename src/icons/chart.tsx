@@ -13,8 +13,8 @@ const styles: StyleSheet = {
 
 export const ChartIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 32 32'>
-    <g id="Corporate-Vault-chart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="802---Add-New-Member" transform="translate(-759.000000, -345.000000)" fill="#23E6FE" stroke="#23E6FE" stroke-width="0.7">
+    <g id="Corporate-Vault-chart" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="802---Add-New-Member" transform="translate(-759.000000, -345.000000)" fill="#23E6FE" stroke="#23E6FE" strokeWidth="0.7">
             <g id="Modal" transform="translate(240.000000, 142.000000)">
                 <g id="Select-role" transform="translate(185.000000, 127.000000)">
                     <g id="Radio-button-replace" transform="translate(0.000000, 52.000000)">

@@ -1,4 +1,4 @@
-/// <reference path="../../../src/react-jss.d.ts" />
+/// <reference types="react-jss" />
 import * as React from 'react';
 import { Website } from './lws-common';
 export declare type Attribute = any;

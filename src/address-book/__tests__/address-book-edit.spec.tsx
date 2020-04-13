@@ -30,7 +30,7 @@ describe('Address Book Add', () => {
       // expect(component.find('#labelInput').prop('value')).toEqual('x');
       expect(onLabelChangeMock).toBeCalled();
 
-      component.setState({label: component.find('#labelInput').prop('value')});
+      // component.setState({label: component.find('#labelInput').prop('value')});
       expect(component.find('#formwrap').simulate('submit')).toBeDefined();
   });
 
@@ -43,7 +43,7 @@ describe('Address Book Add', () => {
         onLabelChange={() => console.log('onLabelChange')}
         labelError='hey'
       />);
-      component.setState({label: component.find('#labelInput').prop('value')});
+      // component.setState({label: component.find('#labelInput').prop('value')});
       expect(component.find('#formwrap').simulate('submit')).toBeDefined();
   });
 });

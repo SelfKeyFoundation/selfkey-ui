@@ -2,6 +2,6 @@
 
 exports[`LWS Modal Body should show LWS Modal Body 1`] = `
 <div
-  className="Component-root-0-1-1"
+  className="Component-root-0-2-1"
 />
 `;

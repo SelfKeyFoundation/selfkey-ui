@@ -16,7 +16,7 @@ const styles: StyleSheet = {
 export const NotarizeDocumentIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
     <SvgIcon style={{ width: props.width || '16px', height: props.height || '18px' }} {...props} viewBox='0 0 16 18'>
 
-        <g id="Notarize-document-icon" stroke="none" stroke-width="1" fillRule="evenodd">
+        <g id="Notarize-document-icon" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="nt-d-i" transform="translate(-1011.000000, -396.000000)" fill="#FFFFFF">
                 <g id="nt-d-i-m" transform="translate(150.000000, 264.000000)">
                     <g id="nt-d-i-mb" transform="translate(0.000000, 71.000000)">

@@ -3,10 +3,9 @@
 exports[`Existing Address Icon should show Existing Address Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="25px"
-  role="presentation"
   viewBox="0 0 28 25"
   width="28px"
 >

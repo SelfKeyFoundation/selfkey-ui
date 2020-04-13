@@ -304,7 +304,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
             isHtml: true
         } : { trigger: 'none' };
         return (React.createElement("div", { className: classes.cryptoBox },
-            React.createElement(core_1.Grid, { container: true, alignItems: 'center', spacing: 16 },
+            React.createElement(core_1.Grid, { container: true, alignItems: 'center', spacing: 4 },
                 React.createElement(core_1.Grid, { item: true, xs: 12 },
                     React.createElement(core_1.Grid, { container: true, justify: 'space-between', alignItems: 'flex-end', className: classes.header },
                         React.createElement(core_1.Grid, { item: true, xs: 11, className: classes.headerText }, "My Crypto"),
@@ -339,7 +339,7 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
                                     "Total Value ",
                                     fiatCurrency))),
                         React.createElement(core_1.Grid, { item: true, xs: 8 },
-                            React.createElement(core_1.Grid, { container: true, spacing: 16 }, this.getTokensLegend(classes, tokens, locale, fiatCurrency))))),
+                            React.createElement(core_1.Grid, { container: true, spacing: 4 }, this.getTokensLegend(classes, tokens, locale, fiatCurrency))))),
                 this.getViewAllSection())));
     };
     return CryptoChartBoxComponent;

@@ -74,12 +74,12 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.handleLabelChange = function (event) {
             var label = event.target.value;
-            _this.setState(__assign({}, _this.state, { label: label }));
+            _this.setState(__assign(__assign({}, _this.state), { label: label }));
             _this.props.onLabelChange(label);
         };
         _this.handleAddressChange = function (event) {
             var address = event.target.value;
-            _this.setState(__assign({}, _this.state, { address: address }));
+            _this.setState(__assign(__assign({}, _this.state), { address: address }));
             _this.props.onAddressChange(address);
         };
         _this.handleSubmit = function (event) {
@@ -96,9 +96,9 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
         var labelInputClass = classes.input + " " + (hasLabelError ? classes.errorColor : '');
         var addressInputClass = classes.input + " " + (hasAddressError ? classes.errorColor : '');
         return (React.createElement("form", { className: classes.container, id: "formwrap", noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
-            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 32 },
+            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 10 },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 8 },
+                    React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 1 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("label", { className: classes.label }, "LABEL")),
                         React.createElement(core_1.Grid, { item: true },
@@ -106,7 +106,7 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
                             hasLabelError &&
                                 React.createElement("span", { id: 'labelError', className: classes.errorText }, labelError)))),
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 8 },
+                    React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 1 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("label", { className: classes.label }, "ETH ADDRESS")),
                         React.createElement(core_1.Grid, { item: true },
@@ -114,7 +114,7 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
                             hasAddressError &&
                                 React.createElement("span", { id: 'addressError', className: classes.errorText }, addressError)))),
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 24 },
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 8 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement(styled_button_1.default, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || !this.state.address || hasAddressError || hasLabelError) }, "Save")),
                         React.createElement(core_1.Grid, { item: true },

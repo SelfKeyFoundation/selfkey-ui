@@ -3,21 +3,20 @@
 exports[`Company Icon should show Company Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   viewBox="0 0 38 35"
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Corporate-Vault-company"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#23E6FE"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="802---Add-New-Member"
       transform="translate(-755.000000, -594.000000)"
     >

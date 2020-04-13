@@ -15,8 +15,8 @@ const styles: StyleSheet = {
 
 export const ProtectionIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
         <SvgIcon style={{ width: props.width || '26px', height: props.height || '29px' }} {...props} viewBox={props.viewBox || "0 0 26 29"}>
-            <g id="🏦-Corporate-Wallet-protection" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="802.1---All-Member-Types-protection" transform="translate(-590.000000, -821.000000)" fill="#23E6FE" fill-rule="nonzero">
+            <g id="🏦-Corporate-Wallet-protection" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <g id="802.1---All-Member-Types-protection" transform="translate(-590.000000, -821.000000)" fill="#23E6FE" fillRule="nonzero">
                     <g id="TST-protection" transform="translate(102.000000, 546.000000)">
                         <g id="Radio-button-replace-protection" transform="translate(0.000000, 251.000000)">
                             <g id="Btn-shareholder-protection" transform="translate(460.000000, 0.000000)">

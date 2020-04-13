@@ -1,4 +1,3 @@
-/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
 import { StyleSheet, WithStyles } from 'react-jss';
 import BN from 'bignumber.js';
@@ -27,10 +26,10 @@ export declare class TransactionFeeSelectorComponent extends React.Component<Sty
     };
     handleChange: (event: React.ChangeEvent<Element>, value: number) => void;
     componentDidMount(): void;
-    readonly avarageGasPrice: number;
-    readonly value: number;
-    readonly transactionFee: BN;
-    readonly fiatFee: BN;
+    get avarageGasPrice(): number;
+    get value(): number;
+    get transactionFee(): BN;
+    get fiatFee(): BN;
     getTransactionPrice: (price: any, fiat: any) => JSX.Element;
     render(): JSX.Element;
 }

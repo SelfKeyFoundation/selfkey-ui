@@ -22,7 +22,7 @@ var styles = {
 };
 exports.NewRefreshIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 22 23", version: "1.1" }),
     React.createElement("title", null, "icon-refresh-statuses"),
-    React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-refresh-icon-for-statuses", stroke: "none", "stroke-width": "1", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-refresh-icon-for-statuses", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-1223.000000, -389.000000)" },
             React.createElement("g", { id: "Content", transform: "translate(150.000000, 264.000000)" },
                 React.createElement("g", { id: "Collapse-box-1" },

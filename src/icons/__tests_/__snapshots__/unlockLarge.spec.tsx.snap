@@ -3,10 +3,9 @@
 exports[`Unlock Large Icon should show Unlock Large Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="66px"
-  role="presentation"
   viewBox="0 0 66 66"
   width="66px"
 >

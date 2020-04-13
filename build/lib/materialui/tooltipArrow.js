@@ -29,7 +29,7 @@ exports.KeyTooltip = core_1.withStyles({
         '&::before': {
             content: '""',
             position: 'absolute',
-            bottom: '-8px',
+            bottom: '6px',
             borderStyle: 'solid',
             borderWidth: '8px 8px 0',
             borderColor: '#43505B transparent',
@@ -44,11 +44,22 @@ exports.KeyTooltip = core_1.withStyles({
             borderWidth: '7px 7px 0',
             borderColor: '#1F2830 transparent',
             marginLeft: '1px',
-            bottom: '-7px',
+            bottom: '8px',
             display: 'block',
             width: 0,
             zIndex: 1
         },
+    },
+})(core_1.Tooltip);
+exports.SliderTooltip = core_1.withStyles({
+    tooltip: {
+        backgroundColor: 'transparent',
+        border: 'none',
+        color: 'white',
+        fontSize: '12px',
+        fontWeight: 600,
+        margin: '8px 0',
+        padding: 0,
     },
 })(core_1.Tooltip);
 //# sourceMappingURL=tooltipArrow.js.map

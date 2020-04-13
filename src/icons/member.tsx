@@ -16,7 +16,7 @@ const styles: StyleSheet = {
 export const MemberIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
         <SvgIcon style={{ width: props.width || '30px', height: props.height || '27px' }} {...props} viewBox={props.viewBox || "0 0 30 27"}>
             <g id="🏦-Corporate-Wallet-member" stroke="none" strokeWidth="1" fillRule="evenodd">
-                <g id="member-icon-gg" transform="translate(-357.000000, -163.000000)" fill="#23E6FE" fill-rule="nonzero">
+                <g id="member-icon-gg" transform="translate(-357.000000, -163.000000)" fill="#23E6FE" fillRule="nonzero">
                     <g id="LLC-member" transform="translate(102.000000, 82.000000)">
                         <g id="Radio-button-replace-member" transform="translate(0.000000, 54.000000)">
                             <g id="Btn-shareholder-member" transform="translate(230.000000, 0.000000)">

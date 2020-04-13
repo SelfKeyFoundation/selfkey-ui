@@ -120,7 +120,7 @@ const renderAddresses = (addresses:Array<AddressBook>, classes: Partial<ClassNam
 }
 
 export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addresses, onEdit, onDelete, onAdd}) => (
-    <Grid container direction='column' justify='center' alignItems='center' className={classes.addressBook} spacing={32}>
+    <Grid container direction='column' justify='center' alignItems='center' className={classes.addressBook} spacing={10}>
         <Grid item>
             <AddressBookIcon/>
         </Grid>

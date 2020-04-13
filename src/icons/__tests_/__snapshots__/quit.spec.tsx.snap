@@ -3,10 +3,9 @@
 exports[`Quit Icon should show Quit Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="36px"
-  role="presentation"
   viewBox="0 0 36 36"
   width="36px"
 >

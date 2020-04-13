@@ -3,10 +3,9 @@
 exports[`Key Icon should show Key Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="25px"
-  role="presentation"
   viewBox="0 0 25 25"
   width="25px"
 >

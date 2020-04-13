@@ -3,10 +3,9 @@
 exports[`Clear Icon should show Clear Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
   height="20px"
-  role="presentation"
   viewBox="0 0 34 20"
   width="34px"
 >

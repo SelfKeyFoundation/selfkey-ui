@@ -22,15 +22,15 @@ var lws_button_1 = require("./lws-button");
 var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var styles = {
     form: common_style_1.default.form,
-    buttonPrimary: __assign({}, common_style_1.default.buttonPrimary, { fontWeight: 700 }),
-    buttonSecondary: __assign({}, common_style_1.default.buttonSecondary, { fontWeight: 700 }),
+    buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
+    buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
     requiredInfo: {
         '& a': {
             color: '#23E6FE',
             textDecoration: 'none',
-            '&:hover': {
-                textDecoration: 'underline',
-            },
+        },
+        '& a &:hover': {
+            textDecoration: 'underline',
         },
         fontFamily: 'Lato, arial, sans-serif',
     },
@@ -59,11 +59,11 @@ var styles = {
             justifyContent: 'space-between',
             width: '100%',
             margin: '0 0 0 15px',
-            '& dd': {
-                color: '#93B0C1',
-                wordBreak: 'break-word',
-                textAlign: 'right',
-            },
+        },
+        '& dl & dd': {
+            color: '#93B0C1',
+            textAlign: 'right',
+            wordBreak: 'break-word',
         },
     },
     clickable: {
@@ -117,7 +117,7 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
             attr = { attribute: attr };
         }
         var found = _.find(attributes, { url: attr.id || attr.attribute }) || {};
-        var merged = __assign({}, attr, found);
+        var merged = __assign(__assign({}, attr), found);
         if (!merged.label && merged.schema && merged.schema.title) {
             merged.label = merged.schema.title;
         }

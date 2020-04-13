@@ -22,7 +22,7 @@ from '../../../src/theme/selfkey-dark-theme';
 export default function ColorStories () {
     return (
         <div>
-            <Grid container spacing={24} style={{ marginBottom: '30px' }}>
+            <Grid container spacing={8} style={{ marginBottom: '30px' }}>
 				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Primary
@@ -64,7 +64,7 @@ export default function ColorStories () {
 				</Grid> 
 			</Grid>
 
-			<Grid container spacing={24} style={{ marginBottom: '30px' }}>
+			<Grid container spacing={8} style={{ marginBottom: '30px' }}>
 				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Grey
@@ -106,7 +106,7 @@ export default function ColorStories () {
 				</Grid>
 			</Grid>
 
-			<Grid container spacing={24} justify="flex-start" style={{ marginBottom: '30px' }}>
+			<Grid container spacing={8} justify="flex-start" style={{ marginBottom: '30px' }}>
 				<Grid item>
 					<Typography color="textSecondary" gutterBottom>
 						Success

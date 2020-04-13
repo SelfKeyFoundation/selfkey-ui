@@ -13,8 +13,8 @@ const styles: StyleSheet = {
 
 export const UnlockIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 14 18'>
-    <g id="💹-Marketplace-unlock-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="501-Exchange-Marketplace" transform="translate(-1051.000000, -159.000000)" fill="#FFFFFF" fill-rule="nonzero">
+    <g id="💹-Marketplace-unlock-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="501-Exchange-Marketplace" transform="translate(-1051.000000, -159.000000)" fill="#FFFFFF" fillRule="nonzero">
             <g id="Title" transform="translate(150.000000, 147.000000)">
                 <g id="Button/Full-Primary" transform="translate(880.000000, 0.000000)">
                     <g id="text" transform="translate(21.000000, 11.000000)">

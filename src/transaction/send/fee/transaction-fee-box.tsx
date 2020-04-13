@@ -30,12 +30,10 @@ export const styles: StyleSheet = {
         marginLeft: '5px',
     },
     rightIcon: {
-        transform: 'rotate(-45deg)',
-        '-webkitTransform': 'rotate(-45deg)'
+        transform: 'rotate(-45deg)'
     },
     downIcon: {
-        transform: 'rotate(45deg)',
-        '-webkit-transform': 'rotate(45deg)'
+        transform: 'rotate(45deg)'
     },
     inputsContainer: {
         paddingTop: '52px'
@@ -45,7 +43,7 @@ export const styles: StyleSheet = {
         flexDirection: 'column',
         '&& label': {
             fontSize: '12px',
-            fontWeight: '600',
+            fontWeight: 600,
             marginBottom: '10px',
             lineHeight: '15px',
             color: '#93A4AF'

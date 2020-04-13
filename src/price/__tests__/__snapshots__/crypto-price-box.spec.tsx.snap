@@ -2,18 +2,18 @@
 
 exports[`Crypto Price Box should show Crypto Price Box for Key 1`] = `
 <div
-  className="Component-cryptoPriceBox-0-1-1"
+  className="Component-cryptoPriceBox-0-2-1"
 >
   <div
-    className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-test-0-1-2"
+    className="MuiGrid-root Component-test-0-2-2 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
   >
     <div
-      className="MuiGrid-item-2 Component-currency-0-1-4"
+      className="MuiGrid-root Component-currency-0-2-4 MuiGrid-item"
     >
       KEY
     </div>
     <div
-      className="MuiGrid-item-2 Component-value-0-1-5"
+      className="MuiGrid-root Component-value-0-2-5 MuiGrid-item"
     >
       <div>
         4
@@ -22,15 +22,15 @@ exports[`Crypto Price Box should show Crypto Price Box for Key 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9 Component-row-0-1-3"
+    className="MuiGrid-root Component-row-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
   >
     <div
-      className="MuiGrid-item-2 Component-currency-0-1-4"
+      className="MuiGrid-root Component-currency-0-2-4 MuiGrid-item"
     >
       USD
     </div>
     <div
-      className="MuiGrid-item-2 Component-value-0-1-5"
+      className="MuiGrid-root Component-value-0-2-5 MuiGrid-item"
     >
       <div>
         $0.0174857

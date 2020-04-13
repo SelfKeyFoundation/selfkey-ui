@@ -14,7 +14,7 @@ const styles: StyleSheet = {
 export const CalendarDepositIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 16 16'>
     <title>icon-calendar-deposit</title>
-    <g id="💹-Marketplace-calendar-deposit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="💹-Marketplace-calendar-deposit" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="501.2-Exchange-Marketplace---Active-Stake" transform="translate(-1054.000000, -161.000000)" fill="#1CA9BA">
             <g id="Title" transform="translate(150.000000, 139.000000)">
                 <g id="Button/Full-Primary" transform="translate(880.000000, 0.000000)">

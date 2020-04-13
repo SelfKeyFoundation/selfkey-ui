@@ -3,21 +3,20 @@
 exports[`Unlock Icon should show Unlock Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   viewBox="0 0 14 18"
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="💹-Marketplace-unlock-icon"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#FFFFFF"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="501-Exchange-Marketplace"
       transform="translate(-1051.000000, -159.000000)"
     >

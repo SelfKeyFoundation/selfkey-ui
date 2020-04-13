@@ -22,7 +22,7 @@ var styles = {
 };
 exports.CalendarDepositIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 16 16' }),
     React.createElement("title", null, "icon-calendar-deposit"),
-    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-calendar-deposit", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+    React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-calendar-deposit", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "501.2-Exchange-Marketplace---Active-Stake", transform: "translate(-1054.000000, -161.000000)", fill: "#1CA9BA" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 139.000000)" },
                 React.createElement("g", { id: "Button/Full-Primary", transform: "translate(880.000000, 0.000000)" },

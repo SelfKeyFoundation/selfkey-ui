@@ -3,17 +3,16 @@
 exports[`User Plus Icon should show User Plus Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   viewBox="0 0 20 20"
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="💹-Marketplace-user-plus"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#FFFFFF"

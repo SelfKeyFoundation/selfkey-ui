@@ -89,7 +89,7 @@ var renderAddresses = function (addresses, classes, onEdit, onDelete) {
 };
 exports.AddressBook = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, addresses = _a.addresses, onEdit = _a.onEdit, onDelete = _a.onDelete, onAdd = _a.onAdd;
-    return (React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center', className: classes.addressBook, spacing: 32 },
+    return (React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center', className: classes.addressBook, spacing: 10 },
         React.createElement(core_1.Grid, { item: true },
             React.createElement(address_book_1.default, null)),
         React.createElement(core_1.Grid, { item: true },

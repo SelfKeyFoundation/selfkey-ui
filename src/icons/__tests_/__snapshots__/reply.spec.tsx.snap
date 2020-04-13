@@ -3,9 +3,8 @@
 exports[`Reply Icon should show Reply Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "19px",

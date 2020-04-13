@@ -55,12 +55,10 @@ exports.styles = {
         marginLeft: '5px',
     },
     rightIcon: {
-        transform: 'rotate(-45deg)',
-        '-webkitTransform': 'rotate(-45deg)'
+        transform: 'rotate(-45deg)'
     },
     downIcon: {
-        transform: 'rotate(45deg)',
-        '-webkit-transform': 'rotate(45deg)'
+        transform: 'rotate(45deg)'
     },
     inputsContainer: {
         paddingTop: '52px'
@@ -70,7 +68,7 @@ exports.styles = {
         flexDirection: 'column',
         '&& label': {
             fontSize: '12px',
-            fontWeight: '600',
+            fontWeight: 600,
             marginBottom: '10px',
             lineHeight: '15px',
             color: '#93A4AF'
@@ -158,7 +156,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     }
     TransactionFeeBoxComponent.prototype.componentDidUpdate = function (prevProps) {
         if (prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
-            this.setState(__assign({}, this.state, { gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice }));
+            this.setState(__assign(__assign({}, this.state), { gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice }));
         }
     };
     TransactionFeeBoxComponent.prototype.renderActualTransactionFeeBox = function () {
@@ -166,14 +164,14 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     };
     TransactionFeeBoxComponent.prototype.toggleShowAdvanced = function () {
         var showAdvanced = this.state.showAdvanced;
-        this.setState(__assign({}, this.state, { showAdvanced: !showAdvanced }));
+        this.setState(__assign(__assign({}, this.state), { showAdvanced: !showAdvanced }));
     };
     TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
         var _this = this;
         var value = event.target.value;
         if (this.timerToUpdateGasLimit)
             clearTimeout(this.timerToUpdateGasLimit);
-        this.setState(__assign({}, this.state, { gasLimit: Number(value) }));
+        this.setState(__assign(__assign({}, this.state), { gasLimit: Number(value) }));
         this.timerToUpdateGasLimit = window.setTimeout(function () {
             if (_this.props.changeGasLimitAction) {
                 _this.props.changeGasLimitAction(value);
@@ -185,7 +183,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         var value = event.target.value;
         if (this.timerToUpdateGasPrice)
             clearTimeout(this.timerToUpdateGasPrice);
-        this.setState(__assign({}, this.state, { gasPrice: Number(value) }));
+        this.setState(__assign(__assign({}, this.state), { gasPrice: Number(value) }));
         this.timerToUpdateGasPrice = window.setTimeout(function () {
             if (_this.props.changeGasPriceAction) {
                 _this.props.changeGasPriceAction(value);

@@ -3,9 +3,8 @@
 exports[`Notarize Document Icon should show Notarize Document Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "18px",
@@ -18,7 +17,7 @@ exports[`Notarize Document Icon should show Notarize Document Icon 1`] = `
     fillRule="evenodd"
     id="Notarize-document-icon"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#FFFFFF"

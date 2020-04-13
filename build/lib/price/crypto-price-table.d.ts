@@ -1,4 +1,3 @@
-/// <reference path="../../../src/react-jss.d.ts" />
 import * as React from 'react';
 import { WithStyles, StyleSheet } from 'react-jss';
 export declare const styles: StyleSheet;
@@ -23,7 +22,6 @@ export declare type CryptoPriceTableProps = {
 export declare type CryptoPriceTableState = {};
 export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoPriceTableProps;
 export declare class CryptoPriceTableComponent extends React.Component<StyledProps, CryptoPriceTableState> {
-    constructor(props: StyledProps);
     renderVisibilityButton(token: Token): JSX.Element | undefined;
     renderRow(token: Token, index: number): JSX.Element;
     render(): JSX.Element;

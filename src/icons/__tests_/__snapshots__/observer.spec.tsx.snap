@@ -3,9 +3,8 @@
 exports[`Observer Icon should show Observer Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root-1 Component-root-0-1-1"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
-  role="presentation"
   style={
     Object {
       "height": "30px",
@@ -16,14 +15,14 @@ exports[`Observer Icon should show Observer Icon 1`] = `
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="🏦-Corporate-Wallet-observer"
     stroke="none"
-    stroke-width="1"
+    strokeWidth="1"
   >
     <g
       fill="#23E6FE"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="802.1---observer"
       transform="translate(-128.000000, -358.000000)"
     >

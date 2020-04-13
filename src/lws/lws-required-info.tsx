@@ -17,9 +17,9 @@ const styles: StyleSheet = {
 		'& a': {
 			color: '#23E6FE',
 			textDecoration: 'none',
-			'&:hover': {
-				textDecoration: 'underline',
-			},
+		},
+		'& a &:hover': {
+			textDecoration: 'underline',
 		},
 		fontFamily: 'Lato, arial, sans-serif',
 	},
@@ -50,11 +50,11 @@ const styles: StyleSheet = {
 			justifyContent: 'space-between',
 			width: '100%',
 			margin: '0 0 0 15px',
-			'& dd': {
-				color: '#93B0C1',
-				wordBreak: 'break-word',
-				textAlign: 'right',
-			},
+		},
+		'& dl & dd': {
+			color: '#93B0C1',
+			textAlign: 'right',
+			wordBreak: 'break-word',
 		},
 	},
 

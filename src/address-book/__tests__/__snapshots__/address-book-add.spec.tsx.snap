@@ -8,28 +8,28 @@ exports[`Address Book Add should show Address Book Add 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-direction-xs-column-4"
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-10 MuiGrid-direction-xs-column"
   >
     <div
-      className="MuiGrid-item-2"
+      className="MuiGrid-root MuiGrid-item"
     >
       <div
-        className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-direction-xs-column-4"
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column"
       >
         <div
-          className="MuiGrid-item-2"
+          className="MuiGrid-root MuiGrid-item"
         >
           <label
-            className="AddressBookAddComponent-label-0-1-5"
+            className="AddressBookAddComponent-label-0-2-5"
           >
             LABEL
           </label>
         </div>
         <div
-          className="MuiGrid-item-2"
+          className="MuiGrid-root MuiGrid-item"
         >
           <input
-            className="AddressBookAddComponent-input-0-1-3 AddressBookAddComponent-errorColor-0-1-2"
+            className="AddressBookAddComponent-input-0-2-3 AddressBookAddComponent-errorColor-0-2-2"
             id="labelInput"
             onChange={[Function]}
             placeholder="Address label"
@@ -37,7 +37,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
             value=""
           />
           <span
-            className="AddressBookAddComponent-errorText-0-1-1"
+            className="AddressBookAddComponent-errorText-0-2-1"
             id="labelError"
           >
             hey
@@ -46,25 +46,25 @@ exports[`Address Book Add should show Address Book Add 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-2"
+      className="MuiGrid-root MuiGrid-item"
     >
       <div
-        className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-direction-xs-column-4"
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column"
       >
         <div
-          className="MuiGrid-item-2"
+          className="MuiGrid-root MuiGrid-item"
         >
           <label
-            className="AddressBookAddComponent-label-0-1-5"
+            className="AddressBookAddComponent-label-0-2-5"
           >
             ETH ADDRESS
           </label>
         </div>
         <div
-          className="MuiGrid-item-2"
+          className="MuiGrid-root MuiGrid-item"
         >
           <input
-            className="AddressBookAddComponent-input-0-1-3 "
+            className="AddressBookAddComponent-input-0-2-3 "
             id="addressInput"
             onChange={[Function]}
             placeholder="0x"
@@ -75,20 +75,20 @@ exports[`Address Book Add should show Address Book Add 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-item-2"
+      className="MuiGrid-root MuiGrid-item"
     >
       <div
-        className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25"
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
       >
         <div
-          className="MuiGrid-item-2"
+          className="MuiGrid-root MuiGrid-item"
         >
           <button
-            className="MuiButtonBase-root-124 MuiButtonBase-disabled-125 MuiButton-root-98 Component-root-0-1-6 MuiButton-contained-109 MuiButton-containedPrimary-110 Component-containedPrimary-0-1-7 MuiButton-raised-112 MuiButton-raisedPrimary-113 MuiButton-disabled-118 Component-disabled-0-1-9"
+            className="MuiButtonBase-root MuiButton-root Component-root-0-2-6 MuiButton-contained MuiButton-containedPrimary Component-containedPrimary-0-2-7 Mui-disabled Component-disabled-0-2-9 Mui-disabled"
             disabled={true}
             id="saveButton"
             onBlur={[Function]}
-            onContextMenu={[Function]}
+            onDragLeave={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -98,26 +98,26 @@ exports[`Address Book Add should show Address Book Add 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
-            tabIndex="-1"
+            tabIndex={-1}
             type="submit"
           >
             <span
-              className="MuiButton-label-99"
+              className="MuiButton-label"
             >
               Save
             </span>
           </button>
         </div>
         <div
-          className="MuiGrid-item-2"
+          className="MuiGrid-root MuiGrid-item"
         >
           <button
-            className="MuiButtonBase-root-124 MuiButton-root-98 Component-root-0-1-6 MuiButton-outlined-106 Component-outlined-0-1-8 MuiButton-outlinedPrimary-107"
+            className="MuiButtonBase-root MuiButton-root Component-root-0-2-6 MuiButton-outlined Component-outlined-0-2-8 MuiButton-outlinedPrimary"
             disabled={false}
             id="cancelButton"
             onBlur={[Function]}
             onClick={[Function]}
-            onContextMenu={[Function]}
+            onDragLeave={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -127,17 +127,14 @@ exports[`Address Book Add should show Address Book Add 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
-            tabIndex="0"
+            tabIndex={0}
             type="button"
           >
             <span
-              className="MuiButton-label-99"
+              className="MuiButton-label"
             >
               Cancel
             </span>
-            <span
-              className="MuiTouchRipple-root-127"
-            />
           </button>
         </div>
       </div>

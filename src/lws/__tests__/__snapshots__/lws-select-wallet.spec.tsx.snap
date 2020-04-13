@@ -3,13 +3,12 @@
 exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
 <div>
   <div
-    className="LWSSelectWalletComponent-areaTitle-0-1-1"
+    className="LWSSelectWalletComponent-areaTitle-0-2-1"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-1"
+      className="MuiSvgIcon-root"
       focusable="false"
-      role="presentation"
       style={
         Object {
           "height": "74px",
@@ -78,26 +77,25 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
       </g>
     </svg>
     <h2
-      className="MuiTypography-root-10 MuiTypography-h2-23 LWSSelectWalletComponent-title-0-1-2"
+      className="MuiTypography-root LWSSelectWalletComponent-title-0-2-2 MuiTypography-h2"
     >
       Verify Ownership Of Your SelfKey ID
     </h2>
   </div>
   <div
-    className="LWSSelectWalletComponent-form-0-1-3"
+    className="LWSSelectWalletComponent-form-0-2-3"
   >
     <div
-      className="LWSSelectWalletComponent-formGroup-0-1-4 LWSSelectWalletComponent-radioReplace-0-1-5"
+      className="LWSSelectWalletComponent-formGroup-0-2-4 LWSSelectWalletComponent-radioReplace-0-2-5"
     >
       <button
-        className="LWSSelectWalletComponent-buttonTertiary-0-1-6 LWSSelectWalletComponent-selected-0-1-12"
+        className="LWSSelectWalletComponent-buttonTertiary-0-2-6 LWSSelectWalletComponent-selected-0-2-12"
         onClick={[Function]}
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1"
+          className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "height": "37px",
@@ -196,14 +194,13 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         </span>
       </button>
       <button
-        className="LWSSelectWalletComponent-buttonTertiary-0-1-6 "
+        className="LWSSelectWalletComponent-buttonTertiary-0-2-6 "
         onClick={[Function]}
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-1 Component-root-0-1-16"
+          className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          role="presentation"
           viewBox="0 0 42 39"
         >
           <defs />
@@ -280,13 +277,13 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
     </div>
     <div>
       <div
-        className="LWSSelectWalletComponent-formGroup-0-1-4"
+        className="LWSSelectWalletComponent-formGroup-0-2-4"
       >
         <label>
           Choose an existing ETH Address
         </label>
         <select
-          className="LWSSelectWalletComponent-formControl-0-1-7"
+          className="LWSSelectWalletComponent-formControl-0-2-7"
           id="eth-address"
           onChange={[Function]}
           value="0x4184288c556524df9cb9e58b73265ee66dca4efe"
@@ -300,13 +297,13 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         </select>
       </div>
       <div
-        className="LWSSelectWalletComponent-formGroup-0-1-4"
+        className="LWSSelectWalletComponent-formGroup-0-2-4"
       >
         <label>
           Password
         </label>
         <input
-          className="LWSSelectWalletComponent-formControl-0-1-7 "
+          className="LWSSelectWalletComponent-formControl-0-2-7 "
           id="password"
           onChange={[Function]}
           placeholder="Enter your password"
@@ -315,10 +312,10 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         />
       </div>
       <div
-        className="LWSSelectWalletComponent-formSubmitRow-0-1-8"
+        className="LWSSelectWalletComponent-formSubmitRow-0-2-8"
       >
         <button
-          className="Component-root-0-1-17 LWSSelectWalletComponent-buttonPrimary-0-1-10"
+          className="Component-root-0-2-17 LWSSelectWalletComponent-buttonPrimary-0-2-10"
           onClick={[Function]}
         >
           Log in

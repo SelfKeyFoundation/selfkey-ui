@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { 
     Grid, 
+    Slider,
     Typography, 
 } from '@material-ui/core';
-import Slider from '@material-ui/lab/Slider';
+import StoryRangeSlider from './story-rangeSlider';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -37,6 +38,7 @@ class SliderStory extends React.Component {
                     <Typography variant="body2" color="textSecondary" gutterBottom>Medium</Typography>
                     <Typography variant="body2" color="textSecondary" gutterBottom>Fast</Typography>
                 </Grid>
+                <StoryRangeSlider />
             </React.Fragment>
         );
     }

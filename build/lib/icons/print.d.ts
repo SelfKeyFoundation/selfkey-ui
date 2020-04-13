@@ -1,4 +1,3 @@
 /// <reference types="react" />
-import { SvgIconProps } from '@material-ui/core/SvgIcon';
-export declare const PrintIcon: (props: SvgIconProps) => JSX.Element;
+export declare const PrintIcon: (props: import("@material-ui/core/OverridableComponent").OverrideProps<import("@material-ui/core").SvgIconTypeMap<{}, "svg">, "svg">) => JSX.Element;
 export default PrintIcon;
