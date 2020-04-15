@@ -112,8 +112,8 @@ exports.styles = {
         height: '50px',
         fontWeight: 700
     },
-    buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
-    buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
+    buttonPrimary: __assign({}, common_style_1.default.buttonPrimary, { fontWeight: 700 }),
+    buttonSecondary: __assign({}, common_style_1.default.buttonSecondary, { fontWeight: 700 }),
     selected: {
         border: "2px solid #1CA9BA",
     },
@@ -176,7 +176,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         this.selectWallet(event.target.value);
     };
     LWSSelectWalletComponent.prototype.setPassword = function (event) {
-        this.setState(__assign(__assign({}, this.state), { password: event.target.value }));
+        this.setState(__assign({}, this.state, { password: event.target.value }));
     };
     LWSSelectWalletComponent.prototype.login = function () {
         var loginAction = this.props.loginAction;

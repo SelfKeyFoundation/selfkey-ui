@@ -167,7 +167,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
         var value = String(this.props.balance);
-        this.setState(__assign(__assign({}, this.state), { amount: value }));
+        this.setState(__assign({}, this.state, { amount: value }));
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
@@ -176,7 +176,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         if (!this.props.onAddressFieldChange) {
             return;
         }
-        this.setState(__assign(__assign({}, this.state), { address: event.target.value }));
+        this.setState(__assign({}, this.state, { address: event.target.value }));
         this.props.onAddressFieldChange(event.target.value);
     };
     TransactionSendBoxComponent.prototype.handleAmountChange = function (event) {
@@ -188,14 +188,14 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         if (Number(value) > this.props.balance) {
             value = String(this.props.balance);
         }
-        this.setState(__assign(__assign({}, this.state), { amount: value }));
+        this.setState(__assign({}, this.state, { amount: value }));
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
     };
     TransactionSendBoxComponent.prototype.handleCryptoCurrencyChange = function (event) {
         var value = event.target.value;
-        this.setState(__assign(__assign({}, this.state), { cryptoCurrency: value }));
+        this.setState(__assign({}, this.state, { cryptoCurrency: value }));
         if (this.props.onCryptoCurrencyChange) {
             this.props.onCryptoCurrencyChange(value);
         }

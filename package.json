@@ -40,7 +40,7 @@
 		"@types/react-dom": "16.9.6",
 		"bignumber.js": "8.0.1",
 		"classnames": "^2.2.6",
-		"jss": "10.1.1",
+		"jss": "9.8.7",
 		"jss-compose": "5.0.0",
 		"jss-expand": "5.3.0",
 		"jss-extend": "6.2.0",

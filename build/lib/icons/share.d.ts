@@ -1,3 +1,4 @@
 /// <reference types="react" />
-export declare const ShareIcon: (props: import("@material-ui/core/OverridableComponent").OverrideProps<import("@material-ui/core").SvgIconTypeMap<{}, "svg">, "svg">) => JSX.Element;
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
+export declare const ShareIcon: (props: SvgIconProps) => JSX.Element;
 export default ShareIcon;

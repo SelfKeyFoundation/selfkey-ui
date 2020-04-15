@@ -74,12 +74,12 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.handleLabelChange = function (event) {
             var label = event.target.value;
-            _this.setState(__assign(__assign({}, _this.state), { label: label }));
+            _this.setState(__assign({}, _this.state, { label: label }));
             _this.props.onLabelChange(label);
         };
         _this.handleAddressChange = function (event) {
             var address = event.target.value;
-            _this.setState(__assign(__assign({}, _this.state), { address: address }));
+            _this.setState(__assign({}, _this.state, { address: address }));
             _this.props.onAddressChange(address);
         };
         _this.handleSubmit = function (event) {

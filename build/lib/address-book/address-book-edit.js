@@ -75,7 +75,7 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
         _this.handleLabelChange = function (event) {
             event.preventDefault();
             var label = event.target.value;
-            _this.setState(__assign(__assign({}, _this.state), { label: label }));
+            _this.setState(__assign({}, _this.state, { label: label }));
             _this.props.onLabelChange(label);
         };
         _this.handleSubmit = function (event) {
