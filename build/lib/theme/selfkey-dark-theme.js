@@ -365,6 +365,9 @@ var theme = core_1.createMuiTheme({
                 '&:hover:not($disabled):not($focused):not($error):after': {
                     borderBottom: '0',
                 },
+                '&:hover:not($disabled):before': {
+                    borderBottom: '0',
+                },
                 '&:after': {
                     borderBottom: '0',
                 },
