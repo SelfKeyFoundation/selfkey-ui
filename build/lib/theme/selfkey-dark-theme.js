@@ -280,7 +280,7 @@ var theme = core_1.createMuiTheme({
                 whiteSpace: 'normal',
             },
             gutterBottom: {
-                marginBottom: '0.35em',
+                marginBottom: '1em',
             },
         },
         MuiList: {

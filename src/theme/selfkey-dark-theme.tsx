@@ -274,7 +274,7 @@ const theme = createMuiTheme({
 				whiteSpace: 'normal',
 			},
 			gutterBottom: {
-				marginBottom: '0.35em',
+				marginBottom: '1em',
 			},
 		},
 		MuiList: {
