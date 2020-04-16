@@ -821,6 +821,7 @@ var theme = core_1.createMuiTheme({
             root: {
                 backgroundColor: '#303C49',
                 height: '1px',
+                width: '100%'
             },
         },
         MuiLinearProgress: {

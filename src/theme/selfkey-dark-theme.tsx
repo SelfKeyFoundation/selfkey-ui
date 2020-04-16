@@ -824,6 +824,7 @@ const theme = createMuiTheme({
 			root: {
 				backgroundColor: '#303C49',
 				height: '1px',
+				width: '100%'
 			},
 		},
 		MuiLinearProgress: {
