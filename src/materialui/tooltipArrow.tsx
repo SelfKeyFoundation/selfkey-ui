@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { withStyles, Tooltip } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
 
 const style = {
     fontSize: 7,
@@ -20,7 +21,7 @@ export const TooltipArrow = (() => (
 ));
 
 export const KeyTooltip = withStyles({
-	popper: {
+    popper: {
         backgroundColor: 'transparent',
         opacity: 1,
     },
