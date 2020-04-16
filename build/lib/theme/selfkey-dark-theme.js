@@ -314,6 +314,11 @@ var theme = core_1.createMuiTheme({
                 },
             },
         },
+        MuiListItemIcon: {
+            root: {
+                minWidth: 'initial'
+            }
+        },
         MuiListItemText: {
             root: {
                 fontSize: '18px',

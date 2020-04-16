@@ -308,6 +308,11 @@ const theme = createMuiTheme({
 				},
 			},
 		},
+		MuiListItemIcon: {
+			root: {
+				minWidth: 'initial'
+			}
+		},
 		MuiListItemText: {
 			root: {
 				fontSize: '18px',
