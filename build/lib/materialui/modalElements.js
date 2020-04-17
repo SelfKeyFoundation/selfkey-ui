@@ -54,13 +54,15 @@ exports.ModalBody2 = core_1.withStyles({
 exports.ModalCloseButton = core_1.withStyles({
     root: {
         border: 0,
-        height: 0,
-        left: 0,
+        height: '40px',
+        left: 'auto',
         margin: 0,
         minWidth: 0,
         padding: 0,
         position: 'absolute',
-        width: 0,
+        width: '40px',
+        right: '-20px',
+        top: '-20px'
     },
 })(core_1.Button);
 //# sourceMappingURL=modalElements.js.map
