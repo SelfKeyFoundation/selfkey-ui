@@ -316,7 +316,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
                                 className={classes.cryptoSelect}
                                 id='customToken'
                             >
-                                <option value="" disabled selected className={classes.selectItem}>
+                                <option value="" disabled className={classes.selectItem}>
                                     Custom Token
                                 </option>
                                 {this.renderSelectTokenItems()}

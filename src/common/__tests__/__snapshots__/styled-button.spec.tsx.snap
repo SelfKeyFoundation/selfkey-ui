@@ -20,6 +20,8 @@ exports[`Styled Button should show Styled Button 1`] = `
 >
   <span
     className="MuiButton-label"
-  />
+  >
+    Content
+  </span>
 </button>
 `;

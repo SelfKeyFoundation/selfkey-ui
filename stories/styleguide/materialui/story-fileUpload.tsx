@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { 
-    Grid, 
+import {
+    Grid,
     Button,
     Typography,
-    withStyles,
 } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
 import HardDriveIcon from '../../../src/icons/hard-drive';
 import { base } from '../../../src/colors';
 import { FileUploadInput, FileUploadLabel } from '../../../src/materialui/inputs';
@@ -14,7 +14,7 @@ const underlineStyle = {
 }
 
 export const FileUploadGrid = withStyles({
-	container: {
+    container: {
         backgroundColor: base,
         border: '1px solid #303C49',
         borderRadius: '4px',
@@ -24,7 +24,7 @@ export const FileUploadGrid = withStyles({
 })(Grid);
 
 export const FileUploadHeaderGrid = withStyles({
-	item: {
+    item: {
         marginLeft: '-210px',
         marginTop: '-150px',
         position: 'absolute',
@@ -35,8 +35,8 @@ export default function FileUploadStory () {
     return (
         <div>
             <Typography variant="h3" style={underlineStyle} gutterBottom>
-				File Upload
-			</Typography>
+                File Upload
+            </Typography>
             <br />
             <FileUploadGrid container direction='column' alignItems='center' justify='center' >
                 <FileUploadHeaderGrid item>
@@ -52,7 +52,7 @@ export default function FileUploadStory () {
                             <Typography variant="subtitle2" color="secondary" gutterBottom>This is stored locally on your machine.</Typography>
                         </Grid>
                     </FileUploadLabel>
-                    <FileUploadInput 
+                    <FileUploadInput
                         id="key-upload"
                         type="file"
                     />

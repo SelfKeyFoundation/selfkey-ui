@@ -1,14 +1,13 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import {
-    withStyles,
     Typography,
     Grid,
     Theme,
-    createStyles,
     Button,
 } from '@material-ui/core';
-import { 
+import { createStyles, withStyles } from '@material-ui/styles';
+import {
     AttributeAlertLargeIcon,
     SimpleCheckIcon,
     SimpleDeniedIcon,
@@ -68,27 +67,27 @@ const statusInfoStyle = (theme: Theme) =>
 export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick, handleRefresh, tooltip }: StatusProps) => {
     let icon, message, statusStyle, button = null;
     switch (status) {
-		case 'Documents Required':
-			icon = <AttributeAlertLargeIcon className={classes.statusIcon} />;
+        case 'Documents Required':
+            icon = <AttributeAlertLargeIcon className={classes.statusIcon} />;
             message = 'Application started. Missing required documents.';
             button = <Button variant='contained' size='large' onClick={onClick}>Add Documents</Button>;
             statusStyle = 'required';
-			break;
+            break;
         case 'Documents Submitted':
-			icon = <SimpleHourglassIcon className={classes.statusIcon} />;
-			message =
+            icon = <SimpleHourglassIcon className={classes.statusIcon} />;
+            message =
                 'Application started. Documents submitted. Please check your email for further instructions.';
             statusStyle = 'submitted';
-			break;
-		case 'Denied':
-			icon = <SimpleDeniedIcon className={classes.statusIcon} />;
+            break;
+        case 'Denied':
+            icon = <SimpleDeniedIcon className={classes.statusIcon} />;
             message = 'Application denied. Please check your email for the reject reason.';
             statusStyle = 'denied';
-			break;
-		default:
-			icon = <SimpleCheckIcon className={classes.statusIcon} />;
-			message =
-				'Application completed. Please check your email to receive relevant documents and information.';
+            break;
+        default:
+            icon = <SimpleCheckIcon className={classes.statusIcon} />;
+            message =
+                'Application completed. Please check your email to receive relevant documents and information.';
     }
 
     return (
@@ -108,7 +107,7 @@ export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClic
                         {button ? button : <span></span>}
                     </Grid>
                     <Grid item style={{ height: '23px' }}>
-                        <KeyTooltip interactive placement="top-start" 
+                        <KeyTooltip interactive placement="top-start"
                             title={
                                 <React.Fragment>
                                     <span>{tooltip}</span>

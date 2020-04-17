@@ -5,7 +5,7 @@ import AddressBookIcon from '../icons/address-book';
 import CopyIcon from '../icons/copy';
 import DeleteIcon from '../icons/delete';
 import EditTransparentIcon from '../icons/edit-transparent';
-import { ClassNameMap } from '@material-ui/core/styles/withStyles';
+import { ClassNameMap } from '@material-ui/styles/withStyles';
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const styles: StyleSheet = {
@@ -37,40 +37,40 @@ const styles: StyleSheet = {
     table: {
         borderSpacing: '0px',
         minWidth: '900px',
-		'& tbody tr:nth-child(odd)': {
-			background: '#262f39',
-		},
-	},
+        '& tbody tr:nth-child(odd)': {
+            background: '#262f39',
+        },
+    },
 
-	headerTableRow: {
-		height: '38px',
-		'& th': {
-			fontSize: '12px',
-			fontWeight: 600,
-			textAlign: 'left',
-			color: '#7f8fa4',
-			textTransform: 'uppercase',
-			borderBottom: '0px',
-			paddingLeft: '0px',
-		},
-		'& th:first-child': {
-			paddingLeft: '24px !important',
-		},
-	},
+    headerTableRow: {
+        height: '38px',
+        '& th': {
+            fontSize: '12px',
+            fontWeight: 600,
+            textAlign: 'left',
+            color: '#7f8fa4',
+            textTransform: 'uppercase',
+            borderBottom: '0px',
+            paddingLeft: '0px',
+        },
+        '& th:first-child': {
+            paddingLeft: '24px !important',
+        },
+    },
 
-	bodyTableRow: {
-		height: '74px',
-		cursor: 'pointer',
-		'& td': {
-			padding: '0px',
-			fontSize: '15px',
-			textAlign: 'left',
-			color: '#ffffff',
-			borderBottom: '0px',
-		},
-		'& td:first-child': {
-			paddingLeft: '24px !important',
-		},
+    bodyTableRow: {
+        height: '74px',
+        cursor: 'pointer',
+        '& td': {
+            padding: '0px',
+            fontSize: '15px',
+            textAlign: 'left',
+            color: '#ffffff',
+            borderBottom: '0px',
+        },
+        '& td:first-child': {
+            paddingLeft: '24px !important',
+        },
     },
 };
 
@@ -91,9 +91,9 @@ const renderAddresses = (addresses:Array<AddressBook>, classes: Partial<ClassNam
     return addresses.map((address, index) => {
         return (
             <TableRow key={index} className={classes.bodyTableRow}>
-				<TableCell id={address.label}>{address.label}</TableCell>
-				<TableCell>{address.address}</TableCell>
-				<TableCell>
+                <TableCell id={address.label}>{address.label}</TableCell>
+                <TableCell>{address.address}</TableCell>
+                <TableCell>
                     <Grid container direction='row' justify='flex-start' alignItems='center'>
                         <Grid item>
                             <IconButton>
@@ -114,7 +114,7 @@ const renderAddresses = (addresses:Array<AddressBook>, classes: Partial<ClassNam
                         </Grid>
                     </Grid>
                 </TableCell>
-			</TableRow>
+            </TableRow>
         )
     })
 }
