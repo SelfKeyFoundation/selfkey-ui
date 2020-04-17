@@ -3,9 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var classnames_1 = require("classnames");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
 var statusInfoStyle = function (theme) {
-    return core_1.createStyles({
+    return styles_1.createStyles({
         defaultStatus: {
             border: "1px solid " + selfkey_dark_theme_1.success,
             borderRadius: '4px',
@@ -45,7 +46,7 @@ var statusInfoStyle = function (theme) {
         }
     });
 };
-exports.StatusInfo = core_1.withStyles(statusInfoStyle)(function (_a) {
+exports.StatusInfo = styles_1.withStyles(statusInfoStyle)(function (_a) {
     var classes = _a.classes, status = _a.status, onClick = _a.onClick, handleRefresh = _a.handleRefresh, tooltip = _a.tooltip;
     var icon, message, statusStyle, button = null;
     switch (status) {

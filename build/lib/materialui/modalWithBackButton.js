@@ -17,13 +17,14 @@ var React = require("react");
 var Typography_1 = require("@material-ui/core/Typography");
 var Modal_1 = require("@material-ui/core/Modal");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var modalElements_1 = require("./modalElements");
 var incorporations_1 = require("../icons/incorporations");
 var inputs_1 = require("./inputs");
 var hard_drive_1 = require("../icons/hard-drive");
 var colors_1 = require("../colors");
 var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
-exports.ModalWrap = core_1.withStyles({
+exports.ModalWrap = styles_1.withStyles({
     root: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -38,7 +39,7 @@ exports.ModalWrap = core_1.withStyles({
         width: '100%',
     },
 })(core_1.Paper);
-exports.FileUploadGrid = core_1.withStyles({
+exports.FileUploadGrid = styles_1.withStyles({
     container: {
         backgroundColor: colors_1.base,
         border: '1px solid #303C49',
@@ -47,7 +48,7 @@ exports.FileUploadGrid = core_1.withStyles({
         width: '760px',
     },
 })(core_1.Grid);
-exports.FileUploadHeaderGrid = core_1.withStyles({
+exports.FileUploadHeaderGrid = styles_1.withStyles({
     item: {
         marginLeft: '-210px',
         marginTop: '-150px',

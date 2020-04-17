@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var style = {
     fontSize: 7,
     height: '3em',
@@ -16,7 +17,7 @@ var style = {
     },
 };
 exports.TooltipArrow = (function () { return (React.createElement("span", { className: "arrowClass", style: style })); });
-exports.KeyTooltip = core_1.withStyles({
+exports.KeyTooltip = styles_1.withStyles({
     popper: {
         backgroundColor: 'transparent',
         opacity: 1,
@@ -51,7 +52,7 @@ exports.KeyTooltip = core_1.withStyles({
         },
     },
 })(core_1.Tooltip);
-exports.SliderTooltip = core_1.withStyles({
+exports.SliderTooltip = styles_1.withStyles({
     tooltip: {
         backgroundColor: 'transparent',
         border: 'none',
