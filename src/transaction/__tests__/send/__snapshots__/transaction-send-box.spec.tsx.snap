@@ -139,7 +139,6 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
           <option
             className="TransactionSendBoxComponent-selectItem-0-2-15"
             disabled={true}
-            selected={true}
             value=""
           >
             Custom Token

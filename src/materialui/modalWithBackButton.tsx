@@ -1,12 +1,12 @@
 import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
-import { 
-    withStyles, 
+import {
     Paper,
     Grid,
     Button,
 } from "@material-ui/core";
+import { withStyles } from '@material-ui/styles';
 import { ModalBody2 } from "./modalElements";
 import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
@@ -15,7 +15,7 @@ import { base } from "../colors";
 import { BackButton } from "../theme/selfkey-dark-theme";
 
 export const ModalWrap = withStyles({
-	root: {
+    root: {
         backgroundColor: 'transparent',
         border: 'none',
         boxSizing: 'border-box',
@@ -31,7 +31,7 @@ export const ModalWrap = withStyles({
 })(Paper);
 
 export const FileUploadGrid = withStyles({
-	container: {
+    container: {
         backgroundColor: base,
         border: '1px solid #303C49',
         borderRadius: '4px',
@@ -41,7 +41,7 @@ export const FileUploadGrid = withStyles({
 })(Grid);
 
 export const FileUploadHeaderGrid = withStyles({
-	item: {
+    item: {
         marginLeft: '-210px',
         marginTop: '-150px',
         position: 'absolute',
@@ -78,7 +78,7 @@ class ModalWithBackButton extends React.Component {
                     </Typography>
                     <br/>
                     <Typography variant="body1" color="textSecondary" gutterBottom>
-                        Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard. 
+                        Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard.
                     </Typography>
                     <br/>
                     <Button id="handleOpen" variant='outlined' size="large" onClick={this.handleOpen}>Add Token</Button>
@@ -98,9 +98,9 @@ class ModalWithBackButton extends React.Component {
                                 Add Attribute
                             </Typography>
                             <Typography variant="body1" color="textSecondary" gutterBottom>
-                                Select the type of attribute you would like to add to your identity wallet. 
+                                Select the type of attribute you would like to add to your identity wallet.
                             </Typography>
-                            
+
                             <Typography variant="body1" color="textSecondary" gutterBottom>
                                 Add Identity Wallet Attribute
                             </Typography>
@@ -119,7 +119,7 @@ class ModalWithBackButton extends React.Component {
                                             <Typography variant="subtitle2" color="secondary" gutterBottom>This is stored locally on your machine.</Typography>
                                         </div>
                                     </FileUploadLabel>
-                                    <FileUploadInput 
+                                    <FileUploadInput
                                         id="key-upload"
                                         type="file"
                                     />
