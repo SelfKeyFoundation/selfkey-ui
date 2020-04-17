@@ -18,7 +18,6 @@ const styles: StyleSheet = {
 };
 
 export const ModalCloseIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-    <div style={{ height: '38px', marginLeft: '779px', marginTop: '-20px', position: 'absolute', width: '38px', cursor: 'pointer' }}>
         <SvgIcon {...props} width="38px" height="38px" viewBox="0 0 38 38" fontSize="large">
             <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="Close-button" transform="translate(1.000000, 1.000000)">
@@ -31,7 +30,6 @@ export const ModalCloseIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconP
                 </g>
             </g>
         </SvgIcon>
-    </div>
 ));
 
 export default ModalCloseIcon;
