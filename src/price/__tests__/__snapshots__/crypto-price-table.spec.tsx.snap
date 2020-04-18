@@ -80,7 +80,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -97,7 +97,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -114,7 +114,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -157,7 +157,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -174,7 +174,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -191,7 +191,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -232,7 +232,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -249,7 +249,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -266,7 +266,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -330,7 +330,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -347,7 +347,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -364,7 +364,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -428,7 +428,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -445,7 +445,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"
@@ -462,7 +462,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-0-3-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
               className="MuiGrid-root Component-value-0-3-8 MuiGrid-item"

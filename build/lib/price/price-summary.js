@@ -26,7 +26,7 @@ var styles = {
 };
 exports.PriceSummary = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, className = _a.className, justify = _a.justify, currencyClass = _a.currencyClass, valueClass = _a.valueClass, locale = _a.locale, fractionDigits = _a.fractionDigits, priceStyle = _a.priceStyle, currency = _a.currency, value = _a.value, appendCurrency = _a.appendCurrency, prependCurrency = _a.prependCurrency;
-    return (React.createElement(core_1.Grid, { container: true, className: className ? className : classes.row, justify: justify, alignItems: 'center', spacing: 8 },
+    return (React.createElement(core_1.Grid, { container: true, className: className ? className : classes.row, justify: justify, alignItems: 'center', spacing: 1 },
         appendCurrency &&
             React.createElement(core_1.Grid, { item: true, className: currencyClass ? currencyClass : classes.currency }, currency),
         React.createElement(core_1.Grid, { item: true, className: valueClass ? valueClass : classes.value },

@@ -53,7 +53,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
   >
     <div>
       <div
-        className="MuiGrid-root Component-row-0-2-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+        className="MuiGrid-root Component-row-0-2-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
       >
         <div
           className="MuiGrid-root Component-cryptoCurrencyValue-0-2-4 MuiGrid-item"
@@ -65,7 +65,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root Component-row-0-2-6 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+        className="MuiGrid-root Component-row-0-2-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
       >
         <div
           className="MuiGrid-root Component-currency-0-2-5 MuiGrid-item"
