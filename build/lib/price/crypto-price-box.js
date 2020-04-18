@@ -15,6 +15,11 @@ var styles = {
         marginRight: '10px',
         marginLeft: '40px',
     },
+    smallText: {
+        color: '#fff',
+        fontSize: '12px',
+        marginTop: '3px !important'
+    },
     test: {
         color: 'red'
     }
@@ -23,7 +28,7 @@ exports.CryptoPriceBox = react_jss_1.default(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, locale = _a.locale, cryptoCurrency = _a.cryptoCurrency, cryptoValue = _a.cryptoValue, toCurrency = _a.toCurrency, toValue = _a.toValue;
     return (React.createElement("div", { className: classes.cryptoPriceBox },
         React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, priceStyle: "decimal", currency: cryptoCurrency, value: cryptoValue, appendCurrency: true }),
-        React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: toCurrency, value: toValue, appendCurrency: true })));
+        React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: toCurrency, value: toValue, appendCurrency: true, valueClass: classes.smallText })));
 });
 exports.default = exports.CryptoPriceBox;
 //# sourceMappingURL=crypto-price-box.js.map

@@ -17,6 +17,7 @@ var styles = {
         fontWeight: 500,
         letterSpacing: '1px',
         color: '#ffffff',
+        minWidth: '40px'
     },
     value: {
         fontFamily: common_style_1.default.fontFamily,

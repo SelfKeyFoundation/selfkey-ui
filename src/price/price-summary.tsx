@@ -19,6 +19,7 @@ const styles: StyleSheet = {
         fontWeight: 500,
         letterSpacing: '1px',
         color: '#ffffff',
+        minWidth: '40px'
     },
     value: {
         fontFamily: CommonStyle.fontFamily,
