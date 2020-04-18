@@ -96,7 +96,7 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
         var labelInputClass = classes.input + " " + (hasLabelError ? classes.errorColor : '');
         var addressInputClass = classes.input + " " + (hasAddressError ? classes.errorColor : '');
         return (React.createElement("form", { className: classes.container, id: "formwrap", noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
-            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 10 },
+            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 2 },
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 1 },
                         React.createElement(core_1.Grid, { item: true },
@@ -114,7 +114,7 @@ var AddressBookAddComponent = /** @class */ (function (_super) {
                             hasAddressError &&
                                 React.createElement("span", { id: 'addressError', className: classes.errorText }, addressError)))),
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 8 },
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 1 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement(styled_button_1.default, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || !this.state.address || hasAddressError || hasLabelError) }, "Save")),
                         React.createElement(core_1.Grid, { item: true },

@@ -228,13 +228,13 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-root MuiGrid-item"
           >
             <div
-              className="MuiGrid-root Component-root-0-2-42 MuiGrid-container MuiGrid-spacing-xs-8"
+              className="MuiGrid-root Component-root-0-2-42 MuiGrid-container MuiGrid-spacing-xs-1"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
               >
                 <div
-                  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
+                  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
                 >
                   <div
                     className="MuiGrid-root MuiGrid-item"
@@ -260,7 +260,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
                 className="MuiGrid-root MuiGrid-item"
               >
                 <div
-                  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
+                  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
                 >
                   <div
                     className="MuiGrid-root MuiGrid-item"
@@ -296,7 +296,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-root TransactionSendBoxComponent-actionButtonsContainer-0-2-4 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+      className="MuiGrid-root TransactionSendBoxComponent-actionButtonsContainer-0-2-4 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
     >
       <div
         className="MuiGrid-root MuiGrid-item"

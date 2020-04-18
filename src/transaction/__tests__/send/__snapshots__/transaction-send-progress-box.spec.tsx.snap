@@ -226,7 +226,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-flex-start"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -484,7 +484,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-flex-start"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -742,7 +742,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-flex-start"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -1000,7 +1000,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-flex-start"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -1257,7 +1257,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-flex-start"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -1515,7 +1515,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-flex-start"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -1722,7 +1722,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
             className="MuiGrid-root MuiGrid-container"
           >
             <div
-              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-flex-start"
+              className="MuiGrid-root Component-actionButtonsContainer-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-flex-start"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
