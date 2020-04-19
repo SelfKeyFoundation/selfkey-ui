@@ -22,7 +22,7 @@ export const styles: StyleSheet = {
     input: {
         boxSizing: 'border-box',
         height: '46px',
-        width: '722px', 
+        width: '722px',
         border: '1px solid #384656',
         borderRadius: '4px',
         backgroundColor: '#1E262E',
@@ -50,7 +50,7 @@ export const styles: StyleSheet = {
 };
 
 export type AddressBookEditState = {
-  label: string
+    label: string
 };
 
 export type AddressBookEditProps = {
@@ -65,67 +65,67 @@ export type StyledProps = WithStyles<keyof typeof styles> & AddressBookEditProps
 
 export class AddressBookEditComponent extends React.Component<StyledProps, AddressBookEditState> {
 
-  constructor(props: StyledProps) {
-    super(props);
-    this.state = {label: props.label};
-  }
+    constructor(props: StyledProps) {
+        super(props);
+        this.state = {label: props.label};
+    }
 
-  componentDidUpdate() {
-    this.state = {label: this.props.label};
-  }
+    componentDidUpdate() {
+        // this.state = {label: this.props.label};
+    }
 
-  handleLabelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    const label = event.target.value;
-    this.setState({...this.state, label});
-    this.props.onLabelChange(label);
-  };
+    handleLabelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault();
+        const label = event.target.value;
+        this.setState({...this.state, label});
+        this.props.onLabelChange(label);
+    };
 
-  handleSubmit = (event: any) => {
-    event.preventDefault();
-    return this.props.onSave(this.state.label);
-  }
+    handleSubmit = (event: any) => {
+        event.preventDefault();
+        return this.props.onSave(this.state.label);
+    }
 
-  render() {
-    const { classes, labelError, onCancel} = this.props;
-    const hasLabelError = (labelError !== '' && labelError !== undefined)
-    const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
-    return (
-        <form id="formwrap" className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
-            <Grid container direction='column' spacing={2}>
-                <Grid item>
-                    <Grid container direction='column' spacing={1}>
-                        <Grid item>
-                            <label className={classes.label}>LABEL</label>
-                        </Grid>
-                        <Grid item>
-                            <input type='text' id='labelInput' onChange={this.handleLabelChange} value={this.state.label} className={labelInputClass} placeholder="Address label" />
-                            {hasLabelError &&
-                                <span id='labelError' className={classes.errorText}>{labelError}</span>
-                            }
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item>
-                    <Grid container direction='row' spacing={1}>
-                        <Grid item>
-                            <StyledButton id='saveButton' variant="contained" size="medium" type="submit" disabled={(!this.state.label || hasLabelError)}>
-                                Save
-                            </StyledButton>
-                        </Grid>
-                        <Grid item>
-                            <StyledButton id='cancelButton' variant="outlined" size="medium" onClick={onCancel}>
-                                Cancel
-                            </StyledButton>
-                        </Grid>
-                    </Grid>
-                </Grid>
+    render() {
+        const { classes, labelError, onCancel} = this.props;
+        const hasLabelError = (labelError !== '' && labelError !== undefined)
+        const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
+        return (
+            <form id="formwrap" className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+            <Grid container direction='column' spacing={10}>
+            <Grid item>
+            <Grid container direction='column' spacing={1}>
+            <Grid item>
+            <label className={classes.label}>LABEL</label>
             </Grid>
-        </form>
-    );
-  }
-}
+            <Grid item>
+            <input type='text' id='labelInput' onChange={this.handleLabelChange} value={this.state.label} className={labelInputClass} placeholder="Address label" />
+            {hasLabelError &&
+                <span id='labelError' className={classes.errorText}>{labelError}</span>
+            }
+            </Grid>
+            </Grid>
+            </Grid>
+            <Grid item>
+            <Grid container direction='row' spacing={8}>
+            <Grid item>
+            <StyledButton id='saveButton' variant="contained" size="medium" type="submit" disabled={(!this.state.label || hasLabelError)}>
+            Save
+            </StyledButton>
+            </Grid>
+            <Grid item>
+            <StyledButton id='cancelButton' variant="outlined" size="medium" onClick={onCancel}>
+            Cancel
+            </StyledButton>
+            </Grid>
+            </Grid>
+            </Grid>
+            </Grid>
+            </form>
+            );
+        }
+    }
 
-export const AddressBookEdit = injectSheet(styles)(AddressBookEditComponent);
+    export const AddressBookEdit = injectSheet(styles)(AddressBookEditComponent);
 
-export default AddressBookEdit;
+    export default AddressBookEdit;

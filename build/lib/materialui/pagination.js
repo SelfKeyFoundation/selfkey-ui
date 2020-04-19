@@ -15,11 +15,12 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var FirstPage_1 = require("@material-ui/icons/FirstPage");
 var KeyboardArrowLeft_1 = require("@material-ui/icons/KeyboardArrowLeft");
 var KeyboardArrowRight_1 = require("@material-ui/icons/KeyboardArrowRight");
 var LastPage_1 = require("@material-ui/icons/LastPage");
-exports.KeyIconButton = core_1.withStyles({
+exports.KeyIconButton = styles_1.withStyles({
     root: {
         border: '1px solid #313D49',
         borderRadius: 0,

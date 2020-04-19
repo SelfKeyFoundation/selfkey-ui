@@ -7,62 +7,49 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
   <div
     className="Component-closeDialogIconWrapper-0-2-19"
   >
-    <div
-      style={
-        Object {
-          "cursor": "pointer",
-          "height": "38px",
-          "marginLeft": "779px",
-          "marginTop": "-20px",
-          "position": "absolute",
-          "width": "38px",
-        }
-      }
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root Component-root-0-2-21 MuiSvgIcon-fontSizeLarge"
+      focusable="false"
+      height="38px"
+      viewBox="0 0 38 38"
+      width="38px"
     >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-21 MuiSvgIcon-fontSizeLarge"
-        focusable="false"
-        height="38px"
-        viewBox="0 0 38 38"
-        width="38px"
+      <g
+        fill="none"
+        fillRule="evenodd"
+        id="Symbols"
+        stroke="none"
+        strokeWidth="1"
       >
         <g
-          fill="none"
-          fillRule="evenodd"
-          id="Symbols"
-          stroke="none"
-          strokeWidth="1"
+          id="Close-button"
+          transform="translate(1.000000, 1.000000)"
         >
           <g
-            id="Close-button"
-            transform="translate(1.000000, 1.000000)"
+            id="icon-close-modal"
           >
+            <circle
+              cx="18"
+              cy="18"
+              fill="#262F39"
+              id="Oval-2"
+              r="18"
+            />
             <g
-              id="icon-close-modal"
+              fill="#23E6FE"
+              fillRule="nonzero"
+              id="Shape"
+              transform="translate(9.000000, 9.000000)"
             >
-              <circle
-                cx="18"
-                cy="18"
-                fill="#262F39"
-                id="Oval-2"
-                r="18"
+              <polygon
+                points="1.81534091 0.639204545 0.639204545 1.81534091 7.82386364 9 0.639204545 16.1846591 1.81534091 17.3607955 9 10.1761364 16.1846591 17.3607955 17.3607955 16.1846591 10.1761364 9 17.3607955 1.81534091 16.1846591 0.639204545 9 7.82386364"
               />
-              <g
-                fill="#23E6FE"
-                fillRule="nonzero"
-                id="Shape"
-                transform="translate(9.000000, 9.000000)"
-              >
-                <polygon
-                  points="1.81534091 0.639204545 0.639204545 1.81534091 7.82386364 9 0.639204545 16.1846591 1.81534091 17.3607955 9 10.1761364 16.1846591 17.3607955 17.3607955 16.1846591 10.1761364 9 17.3607955 1.81534091 16.1846591 0.639204545 9 7.82386364"
-                />
-              </g>
             </g>
           </g>
         </g>
-      </svg>
-    </div>
+      </g>
+    </svg>
   </div>
   <div
     className="Component-iconWrapper-0-2-17"
@@ -152,7 +139,6 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
           <option
             className="TransactionSendBoxComponent-selectItem-0-2-15"
             disabled={true}
-            selected={true}
             value=""
           >
             Custom Token
