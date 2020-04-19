@@ -93,7 +93,7 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
         var hasLabelError = (labelError !== '' && labelError !== undefined);
         var labelInputClass = classes.input + " " + (hasLabelError ? classes.errorColor : '');
         return (React.createElement("form", { id: "formwrap", className: classes.container, noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
-            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 2 },
+            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 10 },
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 1 },
                         React.createElement(core_1.Grid, { item: true },
@@ -103,7 +103,7 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
                             hasLabelError &&
                                 React.createElement("span", { id: 'labelError', className: classes.errorText }, labelError)))),
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 1 },
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 8 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement(styled_button_1.default, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || hasLabelError) }, "Save")),
                         React.createElement(core_1.Grid, { item: true },
