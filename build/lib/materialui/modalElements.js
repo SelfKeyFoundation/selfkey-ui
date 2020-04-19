@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var colors_1 = require("../colors");
-exports.ModalWrap = core_1.withStyles({
+exports.ModalWrap = styles_1.withStyles({
     root: {
         backgroundColor: colors_1.base,
         boxSizing: 'border-box',
@@ -16,7 +17,7 @@ exports.ModalWrap = core_1.withStyles({
         marginBottom: '50px',
     },
 })(core_1.Paper);
-exports.ModalHeader = core_1.withStyles({
+exports.ModalHeader = styles_1.withStyles({
     root: {
         backgroundColor: '#2A3540',
         border: 'none',
@@ -29,7 +30,7 @@ exports.ModalHeader = core_1.withStyles({
         width: '100%',
     },
 })(core_1.Paper);
-exports.ModalBody = core_1.withStyles({
+exports.ModalBody = styles_1.withStyles({
     root: {
         backgroundColor: '#262F39',
         border: 'none',
@@ -41,7 +42,7 @@ exports.ModalBody = core_1.withStyles({
         width: '100%',
     },
 })(core_1.Paper);
-exports.ModalBody2 = core_1.withStyles({
+exports.ModalBody2 = styles_1.withStyles({
     root: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -51,16 +52,18 @@ exports.ModalBody2 = core_1.withStyles({
         width: '780px',
     },
 })(core_1.Paper);
-exports.ModalCloseButton = core_1.withStyles({
+exports.ModalCloseButton = styles_1.withStyles({
     root: {
         border: 0,
-        height: 0,
-        left: 0,
+        height: '40px',
+        left: 'auto',
         margin: 0,
         minWidth: 0,
         padding: 0,
         position: 'absolute',
-        width: 0,
-    },
+        width: '40px',
+        right: '-20px',
+        top: '-20px'
+    }
 })(core_1.Button);
 //# sourceMappingURL=modalElements.js.map

@@ -86,7 +86,7 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
         return _this;
     }
     AddressBookEditComponent.prototype.componentDidUpdate = function () {
-        this.state = { label: this.props.label };
+        // this.state = {label: this.props.label};
     };
     AddressBookEditComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, labelError = _a.labelError, onCancel = _a.onCancel;

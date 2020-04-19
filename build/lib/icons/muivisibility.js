@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var icons_1 = require("@material-ui/icons");
 var colors_1 = require("../colors");
-exports.MuiVisibilityIcon = core_1.withStyles({
+exports.MuiVisibilityIcon = styles_1.withStyles({
     root: {
         fill: colors_1.grey,
         height: '20px',

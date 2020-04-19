@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var colors_1 = require("../colors");
-exports.Tag = core_1.withStyles({
+exports.Tag = styles_1.withStyles({
     root: {
         backgroundColor: colors_1.baseDark,
         borderRadius: '10px',
