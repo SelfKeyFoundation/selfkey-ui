@@ -2,7 +2,7 @@
 
 exports[`Price Summary should show Price Summary 1`] = `
 <div
-  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
 >
   <div
     className="MuiGrid-root Component-value-0-2-3 MuiGrid-item"
@@ -17,7 +17,7 @@ exports[`Price Summary should show Price Summary 1`] = `
 
 exports[`Price Summary should show Price Summary with appendCurrency 1`] = `
 <div
-  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
 >
   <div
     className="MuiGrid-root Component-currency-0-2-2 MuiGrid-item"
@@ -37,7 +37,7 @@ exports[`Price Summary should show Price Summary with appendCurrency 1`] = `
 
 exports[`Price Summary should show Price Summary with currencyClass 1`] = `
 <div
-  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
 >
   <div
     className="MuiGrid-root Component-value-0-2-3 MuiGrid-item"
@@ -52,7 +52,7 @@ exports[`Price Summary should show Price Summary with currencyClass 1`] = `
 
 exports[`Price Summary should show Price Summary with prependCurrency 1`] = `
 <div
-  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-8 MuiGrid-align-items-xs-center"
+  className="MuiGrid-root Component-row-0-2-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
 >
   <div
     className="MuiGrid-root Component-value-0-2-3 MuiGrid-item"

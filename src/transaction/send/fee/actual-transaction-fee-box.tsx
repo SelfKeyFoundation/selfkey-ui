@@ -21,9 +21,9 @@ export type ActualTransactionFeeBoxProps = {
 }
 
 export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeBoxProps>(({classes, locale, ethFee, usdFee, fiatCurrency }) => (
-    <Grid container className={classes.root} direction='row' spacing={8}>
+    <Grid container className={classes.root} direction='row' spacing={1}>
         <Grid item>
-            <Grid container spacing={8}>
+            <Grid container spacing={1}>
                 <Grid item>
                     <NumberFormat locale={locale} priceStyle='decimal' currency='ETH' value={ethFee} fractionDigits={15}/>
                 </Grid>
@@ -36,7 +36,7 @@ export const ActualTransactionFeeBox = injectSheet(styles)<ActualTransactionFeeB
             </Grid>
         </Grid>
         <Grid item>
-            <Grid container spacing={8}>
+            <Grid container spacing={1}>
                 <Grid item>
                     <NumberFormat locale={locale} priceStyle='currency' currency={fiatCurrency} value={usdFee} fractionDigits={15}/>
                 </Grid>

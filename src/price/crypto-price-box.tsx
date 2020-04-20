@@ -15,7 +15,11 @@ const styles: StyleSheet = {
         marginRight: '10px',
         marginLeft: '40px',
     },
-
+    smallText: {
+        color: '#fff',
+        fontSize: '12px',
+        marginTop: '3px !important'
+    },
     test: {
         color: 'red'
     }
@@ -32,7 +36,7 @@ export type CryptoPriceBoxProps = {
 export const CryptoPriceBox = injectSheet(styles)<CryptoPriceBoxProps>(({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
     <div className={classes.cryptoPriceBox}>
         <PriceSummary className={classes.test} locale={locale} priceStyle="decimal" currency={cryptoCurrency} value={cryptoValue} appendCurrency/>
-        <PriceSummary locale={locale} priceStyle="currency" currency={toCurrency} value={toValue} appendCurrency />
+        <PriceSummary locale={locale} priceStyle="currency" currency={toCurrency} value={toValue} appendCurrency valueClass={classes.smallText} />
     </div>
 ));
 

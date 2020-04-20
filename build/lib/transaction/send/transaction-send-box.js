@@ -210,7 +210,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction, addressError = _a.addressError;
         var sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
-            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 8 },
+            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 1 },
                 React.createElement(core_1.Grid, { item: true },
                     React.createElement("button", { className: classes.button, onClick: confirmAction }, " CONFIRM ")),
                 React.createElement(core_1.Grid, { item: true },

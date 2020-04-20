@@ -262,7 +262,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         const sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
             return (
-                <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={8}>
+                <Grid container direction="row" justify="center" alignItems="center" className={classes.actionButtonsContainer} spacing={1}>
                     <Grid item>
                         <button className={classes.button} onClick={confirmAction}> CONFIRM </button>
                     </Grid>

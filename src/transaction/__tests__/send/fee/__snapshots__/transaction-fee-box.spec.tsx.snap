@@ -23,13 +23,13 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
         className="MuiGrid-root MuiGrid-item"
       >
         <div
-          className="MuiGrid-root Component-root-0-2-20 MuiGrid-container MuiGrid-spacing-xs-8"
+          className="MuiGrid-root Component-root-0-2-20 MuiGrid-container MuiGrid-spacing-xs-1"
         >
           <div
             className="MuiGrid-root MuiGrid-item"
           >
             <div
-              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -55,7 +55,7 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
             className="MuiGrid-root MuiGrid-item"
           >
             <div
-              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -207,13 +207,13 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
         className="MuiGrid-root MuiGrid-item"
       >
         <div
-          className="MuiGrid-root Component-root-0-2-20 MuiGrid-container MuiGrid-spacing-xs-8"
+          className="MuiGrid-root Component-root-0-2-20 MuiGrid-container MuiGrid-spacing-xs-1"
         >
           <div
             className="MuiGrid-root MuiGrid-item"
           >
             <div
-              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -239,7 +239,7 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
             className="MuiGrid-root MuiGrid-item"
           >
             <div
-              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
+              className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"

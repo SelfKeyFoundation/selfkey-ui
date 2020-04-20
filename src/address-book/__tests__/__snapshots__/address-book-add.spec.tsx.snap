@@ -8,7 +8,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-10 MuiGrid-direction-xs-column"
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-direction-xs-column"
   >
     <div
       className="MuiGrid-root MuiGrid-item"
@@ -78,7 +78,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
       className="MuiGrid-root MuiGrid-item"
     >
       <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-8"
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
       >
         <div
           className="MuiGrid-root MuiGrid-item"

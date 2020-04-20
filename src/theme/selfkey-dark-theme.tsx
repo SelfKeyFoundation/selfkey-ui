@@ -274,7 +274,7 @@ const theme = createMuiTheme({
 				whiteSpace: 'normal',
 			},
 			gutterBottom: {
-				marginBottom: '0.35em',
+				marginBottom: '1em',
 			},
 		},
 		MuiList: {
@@ -307,6 +307,11 @@ const theme = createMuiTheme({
 					backgroundColor: '#394553',
 				},
 			},
+		},
+		MuiListItemIcon: {
+			root: {
+				minWidth: 'initial'
+			}
 		},
 		MuiListItemText: {
 			root: {
@@ -352,6 +357,9 @@ const theme = createMuiTheme({
 					borderBottom: '0',
 				},
 				'&:hover:not($disabled):not($focused):not($error):after': {
+					borderBottom: '0',
+				},
+				'&:hover:not($disabled):before': {
 					borderBottom: '0',
 				},
 				'&:after': {
@@ -816,6 +824,7 @@ const theme = createMuiTheme({
 			root: {
 				backgroundColor: '#303C49',
 				height: '1px',
+				width: '100%'
 			},
 		},
 		MuiLinearProgress: {

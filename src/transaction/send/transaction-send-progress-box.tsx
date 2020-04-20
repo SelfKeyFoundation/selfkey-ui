@@ -140,7 +140,7 @@ export const TransactionSendProgressBox= injectSheet(styles)<TransactionNoGasErr
             {transactionHash &&
               <Grid item>
                 <Grid container>
-                  <Grid container direction="row" justify="flex-start" alignItems="flex-start" className={classes.actionButtonsContainer} spacing={8}>
+                  <Grid container direction="row" justify="flex-start" alignItems="flex-start" className={classes.actionButtonsContainer} spacing={1}>
                     <Grid item>
                         <button id='viewTransactionButton' className={classes.button} onClick={(e) => handleViewTransaction(e, openLink, transactionHash)}> VIEW TRANSACTION </button>
                     </Grid>
