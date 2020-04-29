@@ -24,7 +24,6 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
         width="38px"
       >
         <g
-          fill="none"
           fillRule="evenodd"
           id="Symbols"
           stroke="none"
@@ -188,7 +187,6 @@ exports[`Transaction Error Box should show transaction error generic screen with
         width="38px"
       >
         <g
-          fill="none"
           fillRule="evenodd"
           id="Symbols"
           stroke="none"

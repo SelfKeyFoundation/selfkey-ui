@@ -16,7 +16,6 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"
@@ -261,7 +260,6 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"
@@ -506,7 +504,6 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"
@@ -751,7 +748,6 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"
@@ -996,7 +992,6 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"
@@ -1240,7 +1235,6 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"
@@ -1485,7 +1479,6 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"

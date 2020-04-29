@@ -57,15 +57,16 @@ export const ModalBody2 = withStyles({
 
 export const ModalCloseButton = withStyles({
 	root: {
-		border: 0,
+        border: 0,
+        borderRadius: '50%',
 		height: '40px',
 		left: 'auto',
 		margin: 0,
 		minWidth: 0,
 		padding: 0,
 		position: 'absolute',
-		width: '40px',
 		right: '-20px',
-		top: '-20px'
+		top: '-20px',
+		width: '40px',
 	}
 })(Button);

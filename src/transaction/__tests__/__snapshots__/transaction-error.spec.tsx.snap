@@ -24,7 +24,6 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
         width="38px"
       >
         <g
-          fill="none"
           fillRule="evenodd"
           id="Symbols"
           stroke="none"
