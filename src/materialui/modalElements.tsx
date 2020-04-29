@@ -39,7 +39,7 @@ export const ModalBody = withStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '30px 40px 60px 45px',
+        padding: '30px 45px 60px',
         width: '100%',
     },
 })(Paper);
