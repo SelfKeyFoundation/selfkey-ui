@@ -39,7 +39,20 @@ export const ModalBody = withStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '28px 30px 60px',
+        padding: '30px 40px 60px 45px',
+        width: '100%',
+    },
+})(Paper);
+
+export const SmallModalBody = withStyles({
+    root: {
+        backgroundColor: '#262F39',
+        border: 'none',
+        borderRadius: '0 0 3px 3px',
+        boxShadow: 'none',
+        boxSizing: 'border-box',
+        minHeight: '200px',
+        padding: '30px 30px 40px',
         width: '100%',
     },
 })(Paper);
