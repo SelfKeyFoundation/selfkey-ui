@@ -24,7 +24,6 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
         width="38px"
       >
         <g
-          fill="none"
           fillRule="evenodd"
           id="Symbols"
           stroke="none"
@@ -210,7 +209,6 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
         width="38px"
       >
         <g
-          fill="none"
           fillRule="evenodd"
           id="Symbols"
           stroke="none"
@@ -396,7 +394,6 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
         width="38px"
       >
         <g
-          fill="none"
           fillRule="evenodd"
           id="Symbols"
           stroke="none"
@@ -582,7 +579,6 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
         width="38px"
       >
         <g
-          fill="none"
           fillRule="evenodd"
           id="Symbols"
           stroke="none"

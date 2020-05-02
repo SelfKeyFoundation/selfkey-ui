@@ -20,14 +20,15 @@ var styles = {
             stroke: '#1D505F',
             transition: 'all 0.2s ease-out',
         },
-        '&:hover & circle': {
+        '&:hover circle': {
+            fill: '#2E3742',
             stroke: '#23E6FE',
         },
         transition: 'all 0.2s ease-out',
     }
 };
 exports.ModalCloseIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { width: "38px", height: "38px", viewBox: "0 0 38 38", fontSize: "large" }),
-    React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
+    React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "Close-button", transform: "translate(1.000000, 1.000000)" },
             React.createElement("g", { id: "icon-close-modal" },
                 React.createElement("circle", { id: "Oval-2", fill: "#262F39", cx: "18", cy: "18", r: "18" }),

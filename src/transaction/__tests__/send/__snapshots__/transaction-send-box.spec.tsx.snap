@@ -16,7 +16,6 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       width="38px"
     >
       <g
-        fill="none"
         fillRule="evenodd"
         id="Symbols"
         stroke="none"

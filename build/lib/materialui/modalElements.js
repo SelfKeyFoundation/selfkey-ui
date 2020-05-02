@@ -38,7 +38,19 @@ exports.ModalBody = styles_1.withStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '28px 30px 60px',
+        padding: '30px 45px 60px',
+        width: '100%',
+    },
+})(core_1.Paper);
+exports.SmallModalBody = styles_1.withStyles({
+    root: {
+        backgroundColor: '#262F39',
+        border: 'none',
+        borderRadius: '0 0 3px 3px',
+        boxShadow: 'none',
+        boxSizing: 'border-box',
+        minHeight: '200px',
+        padding: '30px 30px 40px',
         width: '100%',
     },
 })(core_1.Paper);
@@ -55,15 +67,16 @@ exports.ModalBody2 = styles_1.withStyles({
 exports.ModalCloseButton = styles_1.withStyles({
     root: {
         border: 0,
+        borderRadius: '50%',
         height: '40px',
         left: 'auto',
         margin: 0,
         minWidth: 0,
         padding: 0,
         position: 'absolute',
-        width: '40px',
         right: '-20px',
-        top: '-20px'
+        top: '-20px',
+        width: '40px',
     }
 })(core_1.Button);
 //# sourceMappingURL=modalElements.js.map

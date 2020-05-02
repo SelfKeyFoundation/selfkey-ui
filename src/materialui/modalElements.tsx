@@ -39,7 +39,20 @@ export const ModalBody = withStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '28px 30px 60px',
+        padding: '30px 45px 60px',
+        width: '100%',
+    },
+})(Paper);
+
+export const SmallModalBody = withStyles({
+    root: {
+        backgroundColor: '#262F39',
+        border: 'none',
+        borderRadius: '0 0 3px 3px',
+        boxShadow: 'none',
+        boxSizing: 'border-box',
+        minHeight: '200px',
+        padding: '30px 30px 40px',
         width: '100%',
     },
 })(Paper);
@@ -57,15 +70,16 @@ export const ModalBody2 = withStyles({
 
 export const ModalCloseButton = withStyles({
 	root: {
-		border: 0,
+        border: 0,
+        borderRadius: '50%',
 		height: '40px',
 		left: 'auto',
 		margin: 0,
 		minWidth: 0,
 		padding: 0,
 		position: 'absolute',
-		width: '40px',
 		right: '-20px',
-		top: '-20px'
+		top: '-20px',
+		width: '40px',
 	}
 })(Button);

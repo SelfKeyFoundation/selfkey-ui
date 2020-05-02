@@ -946,7 +946,7 @@ const theme = createMuiTheme({
 			root: {
 				fontSize: '12px',
 				height: '26px',
-				marginTop: '16px',
+				marginTop: '35px',
 				width: '26px',
 			},
 			colorDefault: {

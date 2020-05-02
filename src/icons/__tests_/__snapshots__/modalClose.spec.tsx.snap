@@ -10,7 +10,6 @@ exports[`Modal Close Icon should show Modal Close Icon 1`] = `
   width="38px"
 >
   <g
-    fill="none"
     fillRule="evenodd"
     id="Symbols"
     stroke="none"

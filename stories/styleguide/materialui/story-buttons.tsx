@@ -120,6 +120,7 @@ export default function ButtonStories () {
 								<TooltipArrow />
 							</React.Fragment>
 						}
+						TransitionProps={{ timeout: 1000 }}
 					>
 						<IconButton aria-label="Info">
 							<InfoTooltip />

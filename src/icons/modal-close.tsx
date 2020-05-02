@@ -10,7 +10,8 @@ const styles: StyleSheet = {
             stroke: '#1D505F',
             transition: 'all 0.2s ease-out',
         },
-        '&:hover & circle': {
+        '&:hover circle': {
+            fill: '#2E3742',
             stroke: '#23E6FE',
         },
         transition: 'all 0.2s ease-out',
@@ -19,7 +20,7 @@ const styles: StyleSheet = {
 
 export const ModalCloseIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
         <SvgIcon {...props} width="38px" height="38px" viewBox="0 0 38 38" fontSize="large">
-            <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <g id="Symbols" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="Close-button" transform="translate(1.000000, 1.000000)">
                     <g id="icon-close-modal">
                         <circle id="Oval-2" fill="#262F39" cx="18" cy="18" r="18"></circle>
