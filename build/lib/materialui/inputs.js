@@ -196,6 +196,9 @@ var fileViewStyles = function (theme) {
             whiteSpace: 'nowrap',
             maxWidth: '222px',
         },
+        fileViewContainer: {
+            marginTop: '-42px'
+        },
     });
 };
 exports.FileView = styles_1.withStyles(fileViewStyles)(function (_a) {
@@ -368,20 +371,19 @@ var FileViewWithModal = /** @class */ (function (_super) {
                 return React.createElement(file_default_1.FileDefaultIcon, null);
             }
         };
-        return (React.createElement(core_1.Grid, { item: true },
-            React.createElement(core_1.Grid, { item: true },
-                React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap", className: classes.bottomSpace },
-                    React.createElement(core_1.Grid, { item: true, className: classes.padding },
-                        React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 4, wrap: "nowrap" },
-                            React.createElement(core_1.Grid, { item: true },
-                                React.createElement(FileTypeIcon, { fileType: file.mimeType })),
-                            React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
-                                React.createElement(exports.FileLinkWithModal, { file: file, onPDFOpen: this.props.onPDFOpen })))),
-                    React.createElement(core_1.Grid, { item: true },
-                        React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
-                            React.createElement(delete_1.DeleteIcon, null)))),
-                errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null)));
+        return (React.createElement(core_1.Grid, { item: true, className: classes.fileViewContainer },
+            React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap", className: classes.bottomSpace },
+                React.createElement(core_1.Grid, { item: true, className: classes.padding },
+                    React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 4, wrap: "nowrap" },
+                        React.createElement(core_1.Grid, { item: true },
+                            React.createElement(FileTypeIcon, { fileType: file.mimeType })),
+                        React.createElement(core_1.Grid, { item: true, className: classes.breakAll },
+                            React.createElement(exports.FileLinkWithModal, { file: file, onPDFOpen: this.props.onPDFOpen })))),
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.IconButton, { onClick: function () { return onClearForm(file); } },
+                        React.createElement(delete_1.DeleteIcon, null)))),
+            errors && errors.length ? (React.createElement(core_1.Grid, { container: true, direction: "column", className: classes.fileErrorContainer }, errors.map(function (err) { return (React.createElement(core_1.Grid, { item: true },
+                React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null));
     };
     return FileViewWithModal;
 }(React.Component));
