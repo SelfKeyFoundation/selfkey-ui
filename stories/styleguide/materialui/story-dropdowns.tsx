@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FormControl, MenuItem, Select, Input } from '@material-ui/core';
-import { KeyboardArrowDown } from '@material-ui/icons';
+import SelectDropdownIcon from '../../../src/icons/select-dropdown';
 
 const DropdownItems = ({ value, handleChange }: any) => (
 	<Select
@@ -9,7 +9,7 @@ const DropdownItems = ({ value, handleChange }: any) => (
 		displayEmpty
 		name="country"
 		disableUnderline
-		IconComponent={KeyboardArrowDown}
+		IconComponent={SelectDropdownIcon}
 		input={<Input disableUnderline />}
 	>
 		<MenuItem value="">
