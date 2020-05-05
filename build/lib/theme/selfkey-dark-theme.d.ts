@@ -118,6 +118,7 @@ export * from '../icons/round-company';
 export * from '../icons/round-company-small';
 export * from '../icons/round-person';
 export * from '../icons/round-person-small';
+export * from '../icons/select-dropdown';
 export * from '../icons/selfkey-id-menu';
 export * from '../icons/selfkey';
 export * from '../icons/selfkeyLogo';

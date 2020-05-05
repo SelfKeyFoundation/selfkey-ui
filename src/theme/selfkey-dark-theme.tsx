@@ -121,6 +121,7 @@ export * from '../icons/round-company';
 export * from '../icons/round-company-small';
 export * from '../icons/round-person';
 export * from '../icons/round-person-small';
+export * from '../icons/select-dropdown';
 export * from '../icons/selfkey-id-menu';
 export * from '../icons/selfkey';
 export * from '../icons/selfkeyLogo';
@@ -564,6 +565,9 @@ const theme = createMuiTheme({
 				fontSize: '14px',
 				lineHeight: '21px',
 			},
+			iconFilled: {
+				right: '15px'
+			}
 			// error: {
 			// 	backgroundColor: 'rgba(255, 46, 99, 0.09)',
 			// 	border: `1px solid ${error}`,

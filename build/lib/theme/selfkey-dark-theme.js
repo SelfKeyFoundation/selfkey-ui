@@ -126,6 +126,7 @@ __export(require("../icons/round-company"));
 __export(require("../icons/round-company-small"));
 __export(require("../icons/round-person"));
 __export(require("../icons/round-person-small"));
+__export(require("../icons/select-dropdown"));
 __export(require("../icons/selfkey-id-menu"));
 __export(require("../icons/selfkey"));
 __export(require("../icons/selfkeyLogo"));
@@ -570,6 +571,15 @@ var theme = core_1.createMuiTheme({
                 fontSize: '14px',
                 lineHeight: '21px',
             },
+            iconFilled: {
+                right: '15px'
+            }
+            // error: {
+            // 	backgroundColor: 'rgba(255, 46, 99, 0.09)',
+            // 	border: `1px solid ${error}`,
+            // 	color: error,
+            // 	marginBottom: '6px',
+            // },
         },
         MuiMenu: {
             paper: {
