@@ -189,6 +189,9 @@ const fileViewStyles = (theme: Theme) =>
             whiteSpace: 'nowrap',
             maxWidth: '222px',
         },
+        fileViewContainer: {
+            marginTop: '-42px'
+        },
     });
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -421,7 +424,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
         };
 
         return (
-            <Grid item style={{ marginTop: '-42px' }}>
+            <Grid item className={classes.fileViewContainer}>
                 <Grid
                     container
                     direction="row"

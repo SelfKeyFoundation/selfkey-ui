@@ -196,6 +196,9 @@ var fileViewStyles = function (theme) {
             whiteSpace: 'nowrap',
             maxWidth: '222px',
         },
+        fileViewContainer: {
+            marginTop: '-42px'
+        },
     });
 };
 exports.FileView = styles_1.withStyles(fileViewStyles)(function (_a) {
@@ -368,7 +371,7 @@ var FileViewWithModal = /** @class */ (function (_super) {
                 return React.createElement(file_default_1.FileDefaultIcon, null);
             }
         };
-        return (React.createElement(core_1.Grid, { item: true, style: { marginTop: '-42px' } },
+        return (React.createElement(core_1.Grid, { item: true, className: classes.fileViewContainer },
             React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap", className: classes.bottomSpace },
                 React.createElement(core_1.Grid, { item: true, className: classes.padding },
                     React.createElement(core_1.Grid, { container: true, direction: "row", alignItems: "center", spacing: 4, wrap: "nowrap" },
