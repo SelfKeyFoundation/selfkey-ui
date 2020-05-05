@@ -103,7 +103,7 @@ export default function ButtonStories () {
 					<Typography variant="overline" gutterBottom>
 						Back Button
 					</Typography>
-					<BackButton leftPosition='120px' />
+					<BackButton />
 					<br /><br />
 					<br /><br />
 
