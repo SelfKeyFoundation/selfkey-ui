@@ -240,7 +240,7 @@ const theme = createMuiTheme({
 			},
 			h6: {
 				fontSize: '15px',
-				lineHeight: '18px',
+				lineHeight: '22px',
 			},
 			body1: {
 				fontSize: '18px',
