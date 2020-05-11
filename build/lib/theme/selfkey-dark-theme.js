@@ -573,13 +573,10 @@ var theme = core_1.createMuiTheme({
             },
             iconFilled: {
                 right: '15px'
-            }
-            // error: {
-            // 	backgroundColor: 'rgba(255, 46, 99, 0.09)',
-            // 	border: `1px solid ${error}`,
-            // 	color: error,
-            // 	marginBottom: '6px',
-            // },
+            },
+            filled: {
+                paddingRight: '47px !important'
+            },
         },
         MuiMenu: {
             paper: {
