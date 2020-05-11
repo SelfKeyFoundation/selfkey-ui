@@ -306,12 +306,9 @@ var theme = core_1.createMuiTheme({
                     '&:hover': {
                         backgroundColor: colors_1.grey,
                     },
-                },
-                '&$disable': {
-                    backgroundColor: 'red',
-                    '&:hover': {
-                        backgroundColor: 'lightred',
-                    },
+                    '&$disabled': {
+                        backgroundColor: colors_1.baseLight + " !important"
+                    }
                 },
             },
             button: {
