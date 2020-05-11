@@ -189,6 +189,9 @@ const fileViewStyles = (theme: Theme) =>
             whiteSpace: 'nowrap',
             maxWidth: '222px',
         },
+        fileViewContainer: {
+            marginTop: '-42px'
+        },
     });
 
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
@@ -421,44 +424,42 @@ class FileViewWithModal extends React.Component<FileViewProps> {
         };
 
         return (
-            <Grid item>
-                <Grid item>
-                    <Grid
-                        container
-                        direction="row"
-                        justify="space-between"
-                        alignItems="center"
-                        wrap="nowrap"
-                        className={classes.bottomSpace}
-                    >
-                        <Grid item className={classes.padding}>
-                            <Grid container direction="row" alignItems="center" spacing={4} wrap="nowrap">
-                                <Grid item>
-                                    <FileTypeIcon fileType={file.mimeType} />
-                                </Grid>
-                                <Grid item className={classes.breakAll}>
-                                    <FileLinkWithModal file={file} onPDFOpen={this.props.onPDFOpen} />
-                                </Grid>
+            <Grid item className={classes.fileViewContainer}>
+                <Grid
+                    container
+                    direction="row"
+                    justify="space-between"
+                    alignItems="center"
+                    wrap="nowrap"
+                    className={classes.bottomSpace}
+                >
+                    <Grid item className={classes.padding}>
+                        <Grid container direction="row" alignItems="center" spacing={4} wrap="nowrap">
+                            <Grid item>
+                                <FileTypeIcon fileType={file.mimeType} />
+                            </Grid>
+                            <Grid item className={classes.breakAll}>
+                                <FileLinkWithModal file={file} onPDFOpen={this.props.onPDFOpen} />
                             </Grid>
                         </Grid>
-                        <Grid item>
-                            <IconButton onClick={() => onClearForm(file)}>
-                                <DeleteIcon />
-                            </IconButton>
-                        </Grid>
                     </Grid>
-                    {errors && errors.length ? (
-                        <Grid container direction="column" className={classes.fileErrorContainer}>
-                            {errors.map((err: string) => (
-                                <Grid item>
-                                    <Typography variant="body1" color="error">
-                                        {err}
-                                    </Typography>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    ) : null}
+                    <Grid item>
+                        <IconButton onClick={() => onClearForm(file)}>
+                            <DeleteIcon />
+                        </IconButton>
+                    </Grid>
                 </Grid>
+                {errors && errors.length ? (
+                    <Grid container direction="column" className={classes.fileErrorContainer}>
+                        {errors.map((err: string) => (
+                            <Grid item>
+                                <Typography variant="body1" color="error">
+                                    {err}
+                                </Typography>
+                            </Grid>
+                        ))}
+                    </Grid>
+                ) : null}
             </Grid>
         );
     }

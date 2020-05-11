@@ -15,16 +15,13 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var react_jss_1 = require("react-jss");
 var backButtonStyles = {
-    backButtonContainer: {
-        position: 'absolute'
-    },
     bold: {
         fontWeight: 600
     },
 };
 exports.BackButton = react_jss_1.default(backButtonStyles)(function (_a) {
-    var classes = _a.classes, onclick = _a.onclick, leftPosition = _a.leftPosition, props = __rest(_a, ["classes", "onclick", "leftPosition"]);
-    return (React.createElement("div", { className: classes.backButtonContainer, style: { left: leftPosition || '75px' } },
+    var classes = _a.classes, onclick = _a.onclick, leftPosition = _a.leftPosition, position = _a.position, props = __rest(_a, ["classes", "onclick", "leftPosition", "position"]);
+    return (React.createElement("div", { style: { left: leftPosition || 'initial', position: position || 'initial' } },
         React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: onclick },
             React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary", className: classes.bold }, "\u2039 Back"))));
 });
