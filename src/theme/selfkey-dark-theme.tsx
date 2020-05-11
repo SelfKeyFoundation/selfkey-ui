@@ -301,6 +301,12 @@ const theme = createMuiTheme({
 						backgroundColor: grey,
 					},
 				},
+				'&$disable': {
+					backgroundColor: 'red',
+					'&:hover': {
+						backgroundColor: 'lightred',
+					},
+				},
 			},
 			button: {
 				margin: '0',
