@@ -36,7 +36,7 @@ exports.setup = function () {
             },
             div: {
                 '&::-webkit-scrollbar': {
-                    backgroundColor: 'rgba(0,0,0,.5)',
+                    backgroundColor: 'rgba(0,0,0,.15)',
                     width: '8px'
                 },
                 '&::-webkit-scrollbar-thumb': {
