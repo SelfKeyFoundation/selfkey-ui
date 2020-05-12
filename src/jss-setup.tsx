@@ -13,7 +13,7 @@ export const setup = () => {
 				fontFamily: 'Lato, arial, sans-serif',
 				fontSmoothing: 'antialiased',
 				osxFontSmoothing: 'grayscale',
-				owerflowX: 'hidden',
+				overflowX: 'hidden',
 				'&::-webkit-scrollbar': {
 					backgroundColor: 'rgba(0,0,0,.5)',
 					width: '8px'
@@ -24,6 +24,16 @@ export const setup = () => {
 				},
 			},
 			html: {
+				'&::-webkit-scrollbar': {
+					backgroundColor: 'rgba(0,0,0,.5)',
+					width: '8px'
+				},
+				'&::-webkit-scrollbar-thumb': {
+					borderRadius: '10px',
+					backgroundColor: '#191919'
+				},
+			},
+			div: {
 				'&::-webkit-scrollbar': {
 					backgroundColor: 'rgba(0,0,0,.5)',
 					width: '8px'
