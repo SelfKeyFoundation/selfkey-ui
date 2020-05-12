@@ -104,6 +104,7 @@ import {
     ReturnLargeIcon,
     RoundCompany,
     RoundPerson,
+    SelectDropdownIcon,
     SelfkeyIcon,
     SelfkeyIDMenuIcon,
     SelfkeyLogo,
@@ -912,6 +913,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<SelfkeyIDMenuIcon />`}</code>
             </pre>
             <SelfkeyIDMenuIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<SelectDropdownIcon />`}</code>
+            </pre>
+            <SelectDropdownIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>

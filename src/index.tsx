@@ -133,6 +133,7 @@ export { RoundCompany } from './icons/round-company';
 export { SmallRoundCompany } from './icons/round-company-small';
 export { RoundPerson } from './icons/round-person';
 export { SmallRoundPerson } from './icons/round-person-small';
+export { SelectDropdownIcon } from './icons/select-dropdown';
 export { SelfkeyIcon } from './icons/selfkey';
 export { SelfkeyIDMenuIcon } from './icons/selfkey-id-menu';
 export { SelfkeyLogo } from './icons/selfkeyLogo';
