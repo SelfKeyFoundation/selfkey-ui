@@ -14,6 +14,15 @@ exports.setup = function () {
                 fontFamily: 'Lato, arial, sans-serif',
                 fontSmoothing: 'antialiased',
                 osxFontSmoothing: 'grayscale',
+                '&::-webkit-scrollbar': {
+                    backgroundColor: 'rgba(0,0,0,.5)',
+                    width: '8px'
+                },
+                '&::-webkit-scrollbar-thumb': {
+                    borderRadius: '10px',
+                    webkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,.3)',
+                    backgroundColor: '#191919'
+                },
             },
         },
     };
