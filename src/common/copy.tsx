@@ -1,78 +1,77 @@
-import * as React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import * as React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 // @ts-ignore
 import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
 
 export const styles: StyleSheet = {
-  copyButton: {
-    cursor: "pointer",
-    width: "46px",
-    height: "20px",
-    marginLeft: "7px",
-    padding: 0,
-    backgroundColor: "transparent",
-    border: "1px solid #3B4A5A",
-    borderRadius: "4px",
-    margin: 0,
-    color: "#ffffff !important",
-    display: 'flex',
-    justifyContent: 'center'
-  },
-
-  copyButtonSpan: {
-    fontSize: "11px",
-    lineHeight: "12px",
-    fontFamily: 'Lato, arial, sans-serif',
-    letterSpacing: "normal",
-    color: "#93b0c1"
-  }
+    copyButton: {
+        backgroundColor: 'transparent',
+        border: '1px solid #3B4A5A',
+        borderRadius: '4px',
+        color: '#ffffff !important',
+        cursor: 'pointer',
+        display: 'flex',
+        height: '24px',
+        justifyContent: 'center',
+        margin: 0,
+        marginLeft: '7px',
+        minWidth: '63px',
+        outline: 'none',
+        padding: '6px 12px'
+    },
+    copyButtonSpan: {
+        color: '#93b0c1',
+        fontFamily: 'Lato, arial, sans-serif',
+        fontSize: '10px',
+        letterSpacing: 'normal',
+    }
 };
 
 export type CopyProps = {
-  text: string;
+    text: string;
 };
 
 export type CopyState = {
-  copyTextPlaceholder: string;
+    copyTextPlaceholder: string;
 };
 
 export type StyledProps = WithStyles<keyof typeof styles> & CopyProps;
 
 
 export class CopyComponent extends React.Component<StyledProps, CopyState> {
-  copyText = "COPY";
-  copiedText = "COPIED";
+    copyText = 'COPY';
+    copiedText = 'COPIED';
 
-  state = {
-    copyTextPlaceholder: this.copyText
-  };
+    state = {
+        copyTextPlaceholder: this.copyText
+    };
 
-  constructor(props: StyledProps) {
-    super(props);
-  }
-
-  handleOnCopy() {
-    return () => {
-      this.setState({ copyTextPlaceholder: this.copiedText });
-      const bounceTime = setTimeout(() => {
-        this.setState({ copyTextPlaceholder: this.copyText });
-        clearTimeout(bounceTime);
-      }, 1000);
+    constructor(props: StyledProps) {
+        super(props);
     }
-  }
 
-  render() {
-    const { text, classes } = this.props;
-    return (
-      <CopyToClipboard text={text} onCopy={this.handleOnCopy()}>
-        <button className={classes.copyButton}>
-          <span className={classes.copyButtonSpan}>
-            {this.state.copyTextPlaceholder}
-          </span>
-        </button>
-      </CopyToClipboard>
-    );
-  }
+    handleOnCopy() {
+        return () => {
+            this.setState({ copyTextPlaceholder: this.copiedText });
+            const bounceTime = setTimeout(() => {
+                this.setState({ copyTextPlaceholder: this.copyText });
+                clearTimeout(bounceTime);
+            }, 1000);
+        }
+    }
+
+    render() {
+        const { text, classes } = this.props;
+        return (
+            <CopyToClipboard text={text} onCopy={this.handleOnCopy()}>
+                <button className={classes.copyButton}>
+                <span className={classes.copyButtonSpan}>
+                    {this.state.copyTextPlaceholder}
+                </span>
+                </button>
+            </CopyToClipboard>
+        );
+      }
 }
 
 export const Copy = injectSheet(styles)(CopyComponent);

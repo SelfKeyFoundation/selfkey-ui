@@ -19,33 +19,33 @@ var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
 var react_jss_1 = require("react-jss");
 exports.styles = {
     copyButton: {
-        cursor: "pointer",
-        width: "46px",
-        height: "20px",
-        marginLeft: "7px",
-        padding: 0,
-        backgroundColor: "transparent",
-        border: "1px solid #3B4A5A",
-        borderRadius: "4px",
-        margin: 0,
-        color: "#ffffff !important",
+        backgroundColor: 'transparent',
+        border: '1px solid #3B4A5A',
+        borderRadius: '4px',
+        color: '#ffffff !important',
+        cursor: 'pointer',
         display: 'flex',
-        justifyContent: 'center'
+        height: '24px',
+        justifyContent: 'center',
+        margin: 0,
+        marginLeft: '7px',
+        minWidth: '63px',
+        outline: 'none',
+        padding: '6px 12px'
     },
     copyButtonSpan: {
-        fontSize: "11px",
-        lineHeight: "12px",
+        color: '#93b0c1',
         fontFamily: 'Lato, arial, sans-serif',
-        letterSpacing: "normal",
-        color: "#93b0c1"
+        fontSize: '10px',
+        letterSpacing: 'normal',
     }
 };
 var CopyComponent = /** @class */ (function (_super) {
     __extends(CopyComponent, _super);
     function CopyComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.copyText = "COPY";
-        _this.copiedText = "COPIED";
+        _this.copyText = 'COPY';
+        _this.copiedText = 'COPIED';
         _this.state = {
             copyTextPlaceholder: _this.copyText
         };

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
 export declare const styles: StyleSheet;
 export declare type CopyProps = {
