@@ -31,7 +31,7 @@ exports.styles = {
         marginLeft: '7px',
         minWidth: '63px',
         outline: 'none',
-        padding: '6px 12px'
+        padding: '5px 12px 6px'
     },
     copyButtonSpan: {
         color: '#93b0c1',
