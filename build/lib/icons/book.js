@@ -14,21 +14,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var _defaultLinearGradient_1 = require("./_defaultLinearGradient");
 var styles = {
     root: {
-        width: '68px !important',
-        height: '55px !important'
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        },
     }
 };
-exports.BookIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 68 55' }),
-    React.createElement("title", null, "icon-book"),
-    React.createElement("desc", null, "Created with Sketch."),
-    React.createElement("defs", null,
-        React.createElement("linearGradient", { x1: "50%", y1: "97.783801%", x2: "41.8489583%", y2: "-16.3970588%", id: "book-linearGradient-1" },
-            React.createElement("stop", { stopColor: "#08BCCD", offset: "0%" }),
-            React.createElement("stop", { stopColor: "#2DA1F8", offset: "100%" }))),
-    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
-        React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-240.000000, -958.000000)", fill: "url(#book-linearGradient-1)", fillRule: "nonzero" },
+exports.BookIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '55px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: '0 0 68 55' }),
+    React.createElement(_defaultLinearGradient_1.default, null),
+    React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
+        React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-240.000000, -958.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Area-box-2", transform: "translate(150.000000, 462.000000)" },
                 React.createElement("g", { id: "Additional", transform: "translate(14.000000, 390.000000)" },
                     React.createElement("g", { id: "Explanatory", transform: "translate(10.000000, 106.000000)" },
