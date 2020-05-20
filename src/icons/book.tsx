@@ -3,26 +3,22 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import DefaultLinearGradient from './_defaultLinearGradient';
 
 const styles: StyleSheet = {
   root: {
-    width: '68px !important',
-    height: '55px !important'
+    transition: 'all 0.2s ease-out',
+    '&:hover': {
+        fill: 'white',
+    },
   }
 };
 
 export const BookIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon {...props} viewBox='0 0 68 55'>
-    <title>icon-book</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="50%" y1="97.783801%" x2="41.8489583%" y2="-16.3970588%" id="book-linearGradient-1">
-            <stop stopColor="#08BCCD" offset="0%"></stop>
-            <stop stopColor="#2DA1F8" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="403---Identity-Summary" transform="translate(-240.000000, -958.000000)" fill="url(#book-linearGradient-1)" fillRule="nonzero">
+  <SvgIcon style={{ width: props.width || '68px', height: props.height || '55px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox='0 0 68 55'>
+    <DefaultLinearGradient />
+    <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
+        <g id="403---Identity-Summary" transform="translate(-240.000000, -958.000000)" fill="inherit" fillRule="nonzero">
             <g id="Area-box-2" transform="translate(150.000000, 462.000000)">
                 <g id="Additional" transform="translate(14.000000, 390.000000)">
                     <g id="Explanatory" transform="translate(10.000000, 106.000000)">
