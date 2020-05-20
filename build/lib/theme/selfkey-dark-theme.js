@@ -303,6 +303,9 @@ var theme = core_1.createMuiTheme({
                 paddingTop: '0',
                 '&$selected': {
                     backgroundColor: colors_1.grey,
+                    '& .choose': {
+                        color: colors_1.baseDark + " !important"
+                    },
                     '&:hover': {
                         backgroundColor: colors_1.grey,
                     },
