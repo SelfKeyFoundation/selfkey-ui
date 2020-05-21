@@ -297,6 +297,9 @@ const theme = createMuiTheme({
 				paddingTop: '0',
 				'&$selected': {
 					backgroundColor: grey,
+					'& .choose': {
+						color: `${baseDark} !important`
+					},
 					'&:hover': {
 						backgroundColor: grey,
 					},

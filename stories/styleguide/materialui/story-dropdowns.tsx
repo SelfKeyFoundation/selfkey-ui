@@ -12,8 +12,8 @@ const DropdownItems = ({ value, handleChange }: any) => (
 		IconComponent={SelectDropdownIcon}
 		input={<Input disableUnderline />}
 	>
-		<MenuItem value="" disabled>
-			<Typography variant="subtitle1" color="secondary">
+		<MenuItem value="">
+			<Typography className="choose" variant="subtitle1" color="textSecondary">
 				Choose...
 			</Typography>
 		</MenuItem>
