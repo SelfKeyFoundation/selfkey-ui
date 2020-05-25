@@ -7,40 +7,21 @@ exports[`Bank Icon should show Bank Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
       "height": "36px",
       "width": "36px",
     }
   }
   viewBox="0 0 36 36"
 >
-  <defs>
-    <linearGradient
-      id="dlg"
-      x1="11.0842631%"
-      x2="36.0705554%"
-      y1="68.33943%"
-      y2="0%"
-    >
-      <stop
-        offset="0%"
-        stopColor="#09A8BA"
-      />
-      <stop
-        offset="100%"
-        stopColor="#0ABBD0"
-      />
-    </linearGradient>
-  </defs>
   <g
-    fill="inherit"
+    fill="none"
     fillRule="evenodd"
     id="Marketplace-bank"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="inherit"
+      fill="#00C0D9"
       fillRule="nonzero"
       id="720---Bank-Accounts"
       transform="translate(-150.000000, -153.000000)"
