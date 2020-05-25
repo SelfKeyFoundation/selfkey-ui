@@ -890,7 +890,8 @@ var theme = core_1.createMuiTheme({
             grouped: {
                 '&:not(:first-child)': {
                     marginLeft: 0
-                }
+                },
+                padding: '0 24px !important'
             },
             root: {
                 backgroundColor: 'transparent',
@@ -913,13 +914,13 @@ var theme = core_1.createMuiTheme({
                 textTransform: 'initial',
                 '&:hover': {
                     backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                    border: "1px solid " + colors_1.primaryTint,
+                    border: "1px solid " + colors_1.primaryTint + " !important",
                 },
                 '&$selected': {
                     background: '#313D49',
-                    border: "1px solid " + colors_1.primaryTint,
                     fill: colors_1.primary,
                     color: colors_1.primary,
+                    border: "1px solid " + colors_1.primaryTint + " !important",
                 },
                 '&$disabled': {
                     opacity: 0.5,
