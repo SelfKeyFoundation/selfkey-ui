@@ -3,7 +3,7 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import DefaultLinearGradient from './_defaultLinearGradient';
+import LinearGradient from './_linearGradient';
 
 const styles: StyleSheet = {
   root: {
@@ -16,7 +16,7 @@ const styles: StyleSheet = {
 
 export const IdCardIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon style={{ width: props.width || '41px', height: props.height || '60px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox={props.viewBox || "0 0 41 60"}>
-    <DefaultLinearGradient />
+    <LinearGradient />
     <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
         <g id="403---Identity-Summary" className="shapeColor" fill="inherit" transform="translate(-253.000000, -581.000000)" fillRule="nonzero">
             <g id="Area-box-2" transform="translate(150.000000, 462.000000)">

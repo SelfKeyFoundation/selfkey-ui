@@ -3,7 +3,7 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import DefaultLinearGradient from './_defaultLinearGradient';
+import LinearGradient from './_linearGradient';
 
 const styles: StyleSheet = {
   root: {
@@ -16,7 +16,7 @@ const styles: StyleSheet = {
 
 export const PaymentIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon style={{ width: props.width || '66px', height: props.height || '60px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox={props.viewBox || "0 0 66 66"}>
-    <DefaultLinearGradient />
+    <LinearGradient />
     <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
         <g id="702.1-Incorporation-Payment-confirmation" transform="translate(-375.000000, -273.000000)" fill="inherit" fillRule="nonzero">
             <g id="Modal" transform="translate(330.000000, 159.000000)">
