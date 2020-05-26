@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var _defaultLinearGradient_1 = require("./_defaultLinearGradient");
+var _linearGradient_1 = require("./_linearGradient");
 var styles = {
     root: {
         transition: 'all 0.2s ease-out',
@@ -24,7 +24,7 @@ var styles = {
     }
 };
 exports.AddressBookIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '54px', height: props.height || '62px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: '0 0 54 62' }),
-    React.createElement(_defaultLinearGradient_1.default, null),
+    React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "-Address-Book", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "3000---Address-Book-Full-State", transform: "translate(-693.000000, -146.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Page-header", transform: "translate(434.000000, 146.000000)" },

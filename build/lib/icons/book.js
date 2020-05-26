@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var _defaultLinearGradient_1 = require("./_defaultLinearGradient");
+var _linearGradient_1 = require("./_linearGradient");
 var styles = {
     root: {
         transition: 'all 0.2s ease-out',
@@ -24,7 +24,7 @@ var styles = {
     }
 };
 exports.BookIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '55px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: '0 0 68 55' }),
-    React.createElement(_defaultLinearGradient_1.default, null),
+    React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-240.000000, -958.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Area-box-2", transform: "translate(150.000000, 462.000000)" },

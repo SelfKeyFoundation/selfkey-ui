@@ -7,31 +7,13 @@ exports[`Marketplace Icon should show Marketplace Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
+      "fill": "#00C0D9",
       "height": "30px",
       "width": "36px",
     }
   }
   viewBox="0 0 36 30"
 >
-  <defs>
-    <linearGradient
-      id="dlg"
-      x1="11.0842631%"
-      x2="36.0705554%"
-      y1="68.33943%"
-      y2="0%"
-    >
-      <stop
-        offset="0%"
-        stopColor="#09A8BA"
-      />
-      <stop
-        offset="100%"
-        stopColor="#0ABBD0"
-      />
-    </linearGradient>
-  </defs>
   <g
     fill="inherit"
     fillRule="evenodd"
