@@ -14,8 +14,10 @@ const styles: StyleSheet = {
   }
 };
 
+const linearGradientColor = 'url(#dlg)';
+
 export const AddressBookIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon style={{ width: props.width || '54px', height: props.height || '62px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox='0 0 54 62'>
+  <SvgIcon style={{ width: props.width || '54px', height: props.height || '62px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 54 62'>
     <LinearGradient />
     <g id="-Address-Book" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
         <g id="3000---Address-Book-Full-State" transform="translate(-693.000000, -146.000000)" fill="inherit" fillRule="nonzero">

@@ -14,8 +14,10 @@ const styles: StyleSheet = {
   }
 };
 
+const linearGradientColor = 'url(#dlg)';
+
 export const CoinsIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon style={{ width: props.width || '62px', height: props.height || '64px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox={props.viewBox || "0 0 62 64"}>
+  <SvgIcon style={{ width: props.width || '62px', height: props.height || '64px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 62 64"}>
     <LinearGradient />
     <g id="Page-1-coins" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
         <g id="coins-icon" fill="inherit" fillRule="nonzero">

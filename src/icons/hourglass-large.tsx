@@ -14,8 +14,10 @@ const styles: StyleSheet = {
   }
 };
 
+const linearGradientColor = 'url(#glg)';
+
 export const HourGlassLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon style={{ width: props.width || '66px', height: props.height || '66px', fill: props.fill || 'url(#glg)' }} {...props} viewBox='0 0 66 66'>
+  <SvgIcon style={{ width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 66 66'>
     <LinearGradient color="grey" />
     <g id="-Wallet-Setup" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
         <g id="116.1---Nano---Connecting-+-Messages" transform="translate(-375.000000, -214.000000)" fill="inherit" fillRule="nonzero">

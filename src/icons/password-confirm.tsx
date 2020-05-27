@@ -20,7 +20,7 @@ export const PasswordConfirmIcon = injectSheet(styles)<SvgIconProps>((props: Svg
   <SvgIcon style={{ width: props.width || '66px', height: props.height || '68px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 66 68"}>
     <LinearGradient />
     <g id="🛠-Vault-Setup" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
-        <g id="107-Confirm-Password" transform="translate(-375.000000, -386.000000)" fill={linearGradientColor} fillRule="nonzero">
+        <g id="107-Confirm-Password" transform="translate(-375.000000, -386.000000)" fill="inherit" fillRule="nonzero">
             <g id="Modal" transform="translate(330.000000, 291.000000)">
                 <g id="Content" transform="translate(45.000000, 94.000000)">
                     <g id="icon-password-confirm" transform="translate(0.000000, 1.000000)">

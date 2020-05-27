@@ -20,7 +20,7 @@ export const IDIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & S
 	<SvgIcon style={{ width: props.width || '74px', height: props.height || '74px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 74 74"}>
 		<LinearGradient />
 		<g id="Modal---Dark" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
-			<g id="SelectWalletModal" transform="translate(-683.000000, -277.000000)" fill={linearGradientColor} fillRule="nonzero">
+			<g id="SelectWalletModal" transform="translate(-683.000000, -277.000000)" fill="inherit" fillRule="nonzero">
 				<g id="Modal-content" transform="translate(420.000000, 100.000000)">
 					<g id="Text" transform="translate(147.000000, 177.000000)">
 						<g id="icon-id" transform="translate(116.000000, 0.000000)">

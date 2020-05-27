@@ -14,8 +14,10 @@ const styles: StyleSheet = {
   }
 };
 
+const linearGradientColor = 'url(#dlg)';
+
 export const BookIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon style={{ width: props.width || '68px', height: props.height || '55px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox='0 0 68 55'>
+  <SvgIcon style={{ width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 68 55'>
     <LinearGradient />
     <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
         <g id="403---Identity-Summary" transform="translate(-240.000000, -958.000000)" fill="inherit" fillRule="nonzero">

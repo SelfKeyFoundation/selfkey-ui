@@ -14,11 +14,13 @@ const styles: StyleSheet = {
 	}
 };
 
+const linearGradientColor = 'url(#dlg)';
+
 export const MyCryptoLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-	<SvgIcon style={{ width: props.width || '66px', height: props.height || '64px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox={props.viewBox || "0 0 66 64"}>
+	<SvgIcon style={{ width: props.width || '66px', height: props.height || '64px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 66 64"}>
 		<LinearGradient />
 		<g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
-			<g id="MMTokens" transform="translate(-687.000000, -146.000000)" fill="url(#dlg)" fillRule="nonzero" >
+			<g id="MMTokens" transform="translate(-687.000000, -146.000000)" fill="inherit" fillRule="nonzero" >
 				<g id="Page-header" transform="translate(409.000000, 146.000000)">
 					<g id="icon-my-crypto-large" transform="translate(279.000000, 0.000000)">
 						<path

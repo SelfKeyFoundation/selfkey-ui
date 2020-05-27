@@ -14,8 +14,10 @@ const styles: StyleSheet = {
   }
 };
 
+const linearGradientColor = 'url(#dlg)';
+
 export const IdCardIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon style={{ width: props.width || '41px', height: props.height || '60px', fill: props.fill || 'url(#dlg)' }} {...props} viewBox={props.viewBox || "0 0 41 60"}>
+  <SvgIcon style={{ width: props.width || '41px', height: props.height || '60px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 41 60"}>
     <LinearGradient />
     <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
         <g id="403---Identity-Summary" className="shapeColor" fill="inherit" transform="translate(-253.000000, -581.000000)" fillRule="nonzero">
