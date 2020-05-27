@@ -5,35 +5,42 @@ exports[`DID Icon should show DID Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
+  style={
+    Object {
+      "fill": "url(#dlg)",
+      "height": "60px",
+      "width": "60px",
+    }
+  }
   viewBox="0 0 60 60"
 >
   <defs>
     <linearGradient
-      id="linearGradient-1"
-      x1="50%"
-      x2="41.8489583%"
-      y1="97.783801%"
-      y2="-16.3970588%"
+      id="dlg"
+      x1="11.0842631%"
+      x2="36.0705554%"
+      y1="68.33943%"
+      y2="0%"
     >
       <stop
         offset="0%"
-        stopColor="#08BCCD"
+        stopColor="#09A8BA"
       />
       <stop
         offset="100%"
-        stopColor="#2DA1F8"
+        stopColor="#0ABBD0"
       />
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
     id="👩🏼‍🚀-ID-Dashboard-DID-icon"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="url(#linearGradient-1)"
+      fill="url(#dlg)"
       fillRule="nonzero"
       id="403.1---Identity-Summary---No-DID"
       transform="translate(-242.000000, -548.000000)"
