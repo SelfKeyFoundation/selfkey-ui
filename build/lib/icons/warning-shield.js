@@ -23,7 +23,7 @@ var styles = {
         },
     }
 };
-var linearGradientColor = 'url(#glg)';
+var linearGradientColor = 'url(#dlg)';
 exports.WarningShieldIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '74px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 68 74' }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
