@@ -14,16 +14,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {};
-exports.IDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '74px', height: props.height || '74px' } }, props, { viewBox: "0 0 74 74" }),
-    React.createElement("title", null, "icon-id"),
-    React.createElement("desc", null, "Created with Sketch."),
-    React.createElement("defs", null,
-        React.createElement("linearGradient", { x1: "50%", y1: "100%", x2: "50%", y2: "0%", id: "id-linearGradient-1" },
-            React.createElement("stop", { stopColor: "#1CA9BA", offset: "0%" }),
-            React.createElement("stop", { stopColor: "#23E6FE", offset: "100%" }))),
-    React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
-        React.createElement("g", { id: "1.-Select-Wallet-Modal", transform: "translate(-683.000000, -277.000000)", fill: "url(#id-linearGradient-1)", fillRule: "nonzero" },
+var _linearGradient_1 = require("./_linearGradient");
+var styles = {
+    root: {
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        },
+    }
+};
+var linearGradientColor = 'url(#dlg)';
+exports.IDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '74px', height: props.height || '74px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 74 74" }),
+    React.createElement(_linearGradient_1.default, null),
+    React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
+        React.createElement("g", { id: "SelectWalletModal", transform: "translate(-683.000000, -277.000000)", fill: linearGradientColor, fillRule: "nonzero" },
             React.createElement("g", { id: "Modal-content", transform: "translate(420.000000, 100.000000)" },
                 React.createElement("g", { id: "Text", transform: "translate(147.000000, 177.000000)" },
                     React.createElement("g", { id: "icon-id", transform: "translate(116.000000, 0.000000)" },
