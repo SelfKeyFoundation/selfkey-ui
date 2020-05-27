@@ -11,41 +11,42 @@ exports[`LWS Success should show LWS Success 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-0-2-3"
       focusable="false"
+      style={
+        Object {
+          "fill": "url(#default-linear-gradient)",
+          "height": "74px",
+          "width": "68px",
+        }
+      }
       viewBox="0 0 68 74"
     >
-      <title>
-        icon-success
-      </title>
-      <desc>
-        Created with Sketch.
-      </desc>
       <defs>
         <linearGradient
-          id="success-linearGradient-1"
-          x1="50%"
-          x2="50%"
-          y1="100%"
+          id="default-linear-gradient"
+          x1="11.0842631%"
+          x2="36.0705554%"
+          y1="68.33943%"
           y2="0%"
         >
           <stop
             offset="0%"
-            stopColor="#1CA9BA"
+            stopColor="#09A8BA"
           />
           <stop
             offset="100%"
-            stopColor="#23E6FE"
+            stopColor="#0ABBD0"
           />
         </linearGradient>
       </defs>
       <g
-        fill="none"
+        fill="inherit"
         fillRule="evenodd"
         id="Modal---Dark"
         stroke="none"
         strokeWidth="1"
       >
         <g
-          fill="url(#success-linearGradient-1)"
+          fill="inherit"
           fillRule="nonzero"
           id="1.6.-Success"
           transform="translate(-686.000000, -277.000000)"

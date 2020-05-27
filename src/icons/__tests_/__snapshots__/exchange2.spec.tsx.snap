@@ -5,31 +5,39 @@ exports[`Exchange Icon should show Exchange Large Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
+  style={
+    Object {
+      "fill": "url(#default-linear-gradient)",
+      "height": "66px",
+      "width": "66px",
+    }
+  }
   viewBox="0 0 66 66"
 >
   <defs>
     <linearGradient
-      id="exchange-large-a"
-      x1="11.084%"
-      x2="36.071%"
-      y1="68.339%"
+      id="default-linear-gradient"
+      x1="11.0842631%"
+      x2="36.0705554%"
+      y1="68.33943%"
+      y2="0%"
     >
       <stop
-        offset="0"
+        offset="0%"
         stopColor="#09A8BA"
       />
       <stop
-        offset="1"
+        offset="100%"
         stopColor="#0ABBD0"
       />
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
   >
     <g
-      fill="url(#exchange-large-a)"
+      fill="inherit"
       fillRule="nonzero"
       transform="translate(-375 -273)"
     >

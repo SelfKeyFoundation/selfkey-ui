@@ -5,15 +5,22 @@ exports[`HourGlass Large Icon should show HourGlass Large Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
+  style={
+    Object {
+      "fill": "url(#grey-linear-gradient)",
+      "height": "66px",
+      "width": "66px",
+    }
+  }
   viewBox="0 0 66 66"
 >
   <defs>
     <linearGradient
-      id="hourglass-large-linearGradient-1"
-      x1="50%"
-      x2="41.8489583%"
-      y1="97.783801%"
-      y2="-16.3970588%"
+      id="grey-linear-gradient"
+      x1="11.0842631%"
+      x2="36.0705554%"
+      y1="68.33943%"
+      y2="0%"
     >
       <stop
         offset="0%"
@@ -26,14 +33,14 @@ exports[`HourGlass Large Icon should show HourGlass Large Icon 1`] = `
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
     id="-Wallet-Setup"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="url(#hourglass-large-linearGradient-1)"
+      fill="inherit"
       fillRule="nonzero"
       id="116.1---Nano---Connecting-+-Messages"
       transform="translate(-375.000000, -214.000000)"

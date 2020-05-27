@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var _defaultLinearGradient_1 = require("./_defaultLinearGradient");
+var _linearGradient_1 = require("./_linearGradient");
 var styles = {
     root: {
         transition: 'all 0.2s ease-out',
@@ -23,8 +23,9 @@ var styles = {
         },
     }
 };
-exports.PaymentIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '60px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
-    React.createElement(_defaultLinearGradient_1.default, null),
+var linearGradientColor = 'url(#default-linear-gradient)';
+exports.PaymentIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '60px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
+    React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "702.1-Incorporation-Payment-confirmation", transform: "translate(-375.000000, -273.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(330.000000, 159.000000)" },

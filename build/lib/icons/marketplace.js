@@ -13,7 +13,6 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
-var _defaultLinearGradient_1 = require("./_defaultLinearGradient");
 var core_1 = require("@material-ui/core");
 var styles = {
     root: {
@@ -23,8 +22,7 @@ var styles = {
         },
     }
 };
-exports.MarketplaceIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '30px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: props.viewBox || "0 0 36 30" }),
-    React.createElement(_defaultLinearGradient_1.default, null),
+exports.MarketplaceIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '30px', fill: props.fill || '#00C0D9' } }, props, { viewBox: props.viewBox || "0 0 36 30" }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "500---SelfKey-Marketplace", transform: "translate(-150.000000, -156.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 156.000000)" },

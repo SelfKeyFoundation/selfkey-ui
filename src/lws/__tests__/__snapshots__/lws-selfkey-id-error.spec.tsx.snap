@@ -11,41 +11,42 @@ exports[`LWS Selfkey Id Error should show LWS Selfkey Id Error 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-0-2-8"
       focusable="false"
+      style={
+        Object {
+          "fill": "url(#orange-linear-gradient)",
+          "height": "74px",
+          "width": "68px",
+        }
+      }
       viewBox="0 0 68 74"
     >
-      <title>
-        icon-shield
-      </title>
-      <desc>
-        Created with Sketch.
-      </desc>
       <defs>
         <linearGradient
-          id="shield-linearGradient-1"
-          x1="50%"
-          x2="50%"
-          y1="0%"
-          y2="100%"
+          id="orange-linear-gradient"
+          x1="11.0842631%"
+          x2="36.0705554%"
+          y1="68.33943%"
+          y2="0%"
         >
           <stop
             offset="0%"
-            stopColor="#DB7400"
+            stopColor="#B44000"
           />
           <stop
             offset="100%"
-            stopColor="#B44000"
+            stopColor="#DB7400"
           />
         </linearGradient>
       </defs>
       <g
-        fill="none"
+        fill="inherit"
         fillRule="evenodd"
         id="Modal---Dark"
         stroke="none"
         strokeWidth="1"
       >
         <g
-          fill="url(#shield-linearGradient-1)"
+          fill="inherit"
           fillRule="nonzero"
           id="2.1-Error---No-Selfkey-id"
           transform="translate(-686.000000, -277.000000)"

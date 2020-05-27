@@ -3,7 +3,7 @@
 exports[`Bank Icon should show Bank Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root"
+  className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
   style={
     Object {

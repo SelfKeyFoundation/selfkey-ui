@@ -5,11 +5,18 @@ exports[`AddressBook Icon should show AddressBook Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
+  style={
+    Object {
+      "fill": "url(#default-linear-gradient)",
+      "height": "62px",
+      "width": "54px",
+    }
+  }
   viewBox="0 0 54 62"
 >
   <defs>
     <linearGradient
-      id="addressBook-linearGradient-1"
+      id="default-linear-gradient"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -26,14 +33,14 @@ exports[`AddressBook Icon should show AddressBook Icon 1`] = `
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
     id="-Address-Book"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="url(#addressBook-linearGradient-1)"
+      fill="inherit"
       fillRule="nonzero"
       id="3000---Address-Book-Full-State"
       transform="translate(-693.000000, -146.000000)"
