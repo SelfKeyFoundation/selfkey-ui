@@ -7,9 +7,11 @@ import LinearGradient from './_linearGradient';
 
 const styles: StyleSheet = {
 	root: {
-		width: '66px !important',
-		height: '64px !important',
-	},
+		transition: 'all 0.2s ease-out',
+		'&:hover': {
+			fill: 'white',
+		},
+	}
 };
 
 export const MyCryptoLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (

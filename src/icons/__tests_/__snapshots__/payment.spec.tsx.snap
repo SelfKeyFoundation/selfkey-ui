@@ -40,7 +40,7 @@ exports[`Payment Icon should show Payment Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="inherit"
+      fill="url(#dlg)"
       fillRule="nonzero"
       id="702.1-Incorporation-Payment-confirmation"
       transform="translate(-375.000000, -273.000000)"

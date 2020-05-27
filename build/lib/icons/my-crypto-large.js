@@ -17,9 +17,11 @@ var core_1 = require("@material-ui/core");
 var _linearGradient_1 = require("./_linearGradient");
 var styles = {
     root: {
-        width: '66px !important',
-        height: '64px !important',
-    },
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        },
+    }
 };
 exports.MyCryptoLargeIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '64px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: props.viewBox || "0 0 66 64" }),
     React.createElement(_linearGradient_1.default, null),
