@@ -9,41 +9,42 @@ exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] =
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-0-2-7"
       focusable="false"
+      style={
+        Object {
+          "fill": "url(#dlg)",
+          "height": "74px",
+          "width": "74px",
+        }
+      }
       viewBox="0 0 74 74"
     >
-      <title>
-        icon-download
-      </title>
-      <desc>
-        Created with Sketch.
-      </desc>
       <defs>
         <linearGradient
-          id="download-linearGradient-1"
-          x1="50%"
-          x2="50%"
-          y1="100%"
+          id="dlg"
+          x1="11.0842631%"
+          x2="36.0705554%"
+          y1="68.33943%"
           y2="0%"
         >
           <stop
             offset="0%"
-            stopColor="#1CA9BA"
+            stopColor="#09A8BA"
           />
           <stop
             offset="100%"
-            stopColor="#23E6FE"
+            stopColor="#0ABBD0"
           />
         </linearGradient>
       </defs>
       <g
-        fill="none"
+        fill="inherit"
         fillRule="evenodd"
         id="Modal---Dark"
         stroke="none"
         strokeWidth="1"
       >
         <g
-          fill="url(#download-linearGradient-1)"
+          fill="url(#dlg)"
           fillRule="nonzero"
           id="2.3-Error---No-Plugin"
           transform="translate(-683.000000, -277.000000)"
