@@ -5,11 +5,18 @@ exports[`Return Large Icon should show Return Large Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
+  style={
+    Object {
+      "fill": "url(#dlg)",
+      "height": "66px",
+      "width": "66px",
+    }
+  }
   viewBox="0 0 66 66"
 >
   <defs>
     <linearGradient
-      id="return-large-linearGradient-1"
+      id="dlg"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -26,16 +33,16 @@ exports[`Return Large Icon should show Return Large Icon 1`] = `
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
     id="💹-Marketplace"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="url(#return-large-linearGradient-1)"
+      fill="url(#dlg)"
       fillRule="nonzero"
-      id="507---Exchange-Details-+-Reclaim-Stake-+-Generate-Transaction"
+      id="Exc-DRSGTrans"
       transform="translate(-375.000000, -273.000000)"
     >
       <g
