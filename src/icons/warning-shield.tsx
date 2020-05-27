@@ -14,7 +14,7 @@ const styles: StyleSheet = {
   }
 };
 
-const linearGradientColor = 'url(#olg)';
+const linearGradientColor = 'url(#orange-linear-gradient)';
 
 export const WarningShieldIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon style={{ width: props.width || '68px', height: props.height || '74px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 68 74'>

@@ -7,7 +7,7 @@ exports[`Payment Icon should show Payment Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
+      "fill": "url(#default-linear-gradient)",
       "height": "60px",
       "width": "66px",
     }
@@ -16,7 +16,7 @@ exports[`Payment Icon should show Payment Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="dlg"
+      id="default-linear-gradient"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -40,7 +40,7 @@ exports[`Payment Icon should show Payment Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#dlg)"
+      fill="inherit"
       fillRule="nonzero"
       id="702.1-Incorporation-Payment-confirmation"
       transform="translate(-375.000000, -273.000000)"

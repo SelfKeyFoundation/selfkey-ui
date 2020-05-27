@@ -23,7 +23,8 @@ var styles = {
         },
     }
 };
-exports.CoinsIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '62px', height: props.height || '64px', fill: props.fill || 'url(#dlg)' } }, props, { viewBox: props.viewBox || "0 0 62 64" }),
+var linearGradientColor = 'url(#default-linear-gradient)';
+exports.CoinsIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '62px', height: props.height || '64px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 62 64" }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "Page-1-coins", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "coins-icon", fill: "inherit", fillRule: "nonzero" },

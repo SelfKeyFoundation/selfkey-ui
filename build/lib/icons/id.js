@@ -23,11 +23,11 @@ var styles = {
         },
     }
 };
-var linearGradientColor = 'url(#dlg)';
+var linearGradientColor = 'url(#default-linear-gradient)';
 exports.IDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '74px', height: props.height || '74px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 74 74" }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
-        React.createElement("g", { id: "SelectWalletModal", transform: "translate(-683.000000, -277.000000)", fill: linearGradientColor, fillRule: "nonzero" },
+        React.createElement("g", { id: "SelectWalletModal", transform: "translate(-683.000000, -277.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal-content", transform: "translate(420.000000, 100.000000)" },
                 React.createElement("g", { id: "Text", transform: "translate(147.000000, 177.000000)" },
                     React.createElement("g", { id: "icon-id", transform: "translate(116.000000, 0.000000)" },

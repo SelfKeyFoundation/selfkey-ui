@@ -7,7 +7,7 @@ exports[`DID Icon should show DID Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
+      "fill": "url(#default-linear-gradient)",
       "height": "60px",
       "width": "60px",
     }
@@ -16,7 +16,7 @@ exports[`DID Icon should show DID Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="dlg"
+      id="default-linear-gradient"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -40,7 +40,7 @@ exports[`DID Icon should show DID Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#dlg)"
+      fill="inherit"
       fillRule="nonzero"
       id="403.1---Identity-Summary---No-DID"
       transform="translate(-242.000000, -548.000000)"

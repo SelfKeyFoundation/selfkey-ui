@@ -23,11 +23,11 @@ var styles = {
         },
     }
 };
-var linearGradientColor = 'url(#dlg)';
+var linearGradientColor = 'url(#default-linear-gradient)';
 exports.PasswordConfirmIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '68px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 68" }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDEE0-Vault-Setup", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
-        React.createElement("g", { id: "107-Confirm-Password", transform: "translate(-375.000000, -386.000000)", fill: linearGradientColor, fillRule: "nonzero" },
+        React.createElement("g", { id: "107-Confirm-Password", transform: "translate(-375.000000, -386.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(330.000000, 291.000000)" },
                 React.createElement("g", { id: "Content", transform: "translate(45.000000, 94.000000)" },
                     React.createElement("g", { id: "icon-password-confirm", transform: "translate(0.000000, 1.000000)" },

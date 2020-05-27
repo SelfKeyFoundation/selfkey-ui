@@ -7,7 +7,7 @@ exports[`Wallet  Icon should show Wallet Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
+      "fill": "url(#orange-linear-gradient)",
       "height": "73px",
       "width": "74px",
     }
@@ -16,7 +16,7 @@ exports[`Wallet  Icon should show Wallet Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="olg"
+      id="orange-linear-gradient"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -40,7 +40,7 @@ exports[`Wallet  Icon should show Wallet Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#dlg)"
+      fill="inherit"
       fillRule="nonzero"
       id="2-Error---Connection-to-wallet"
       transform="translate(-686.000000, -277.000000)"

@@ -7,7 +7,7 @@ exports[`HourGlass Large Icon should show HourGlass Large Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#glg)",
+      "fill": "url(#grey-linear-gradient)",
       "height": "66px",
       "width": "66px",
     }
@@ -16,7 +16,7 @@ exports[`HourGlass Large Icon should show HourGlass Large Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="glg"
+      id="grey-linear-gradient"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"

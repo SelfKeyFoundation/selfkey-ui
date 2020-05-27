@@ -7,7 +7,7 @@ exports[`Id Icon should show Id Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
+      "fill": "url(#default-linear-gradient)",
       "height": "74px",
       "width": "74px",
     }
@@ -16,7 +16,7 @@ exports[`Id Icon should show Id Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="dlg"
+      id="default-linear-gradient"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -40,7 +40,7 @@ exports[`Id Icon should show Id Icon 1`] = `
     strokeWidth="1"
   >
     <g
-      fill="url(#dlg)"
+      fill="inherit"
       fillRule="nonzero"
       id="SelectWalletModal"
       transform="translate(-683.000000, -277.000000)"

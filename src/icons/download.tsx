@@ -14,7 +14,7 @@ const styles: StyleSheet = {
   }
 };
 
-const linearGradientColor = 'url(#dlg)';
+const linearGradientColor = 'url(#default-linear-gradient)';
 
 export const DownloadIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon style={{ width: props.width || '74px', height: props.height || '74px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 74 74"}>

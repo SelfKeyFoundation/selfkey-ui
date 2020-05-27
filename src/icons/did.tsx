@@ -14,7 +14,7 @@ const styles: StyleSheet = {
   }
 };
 
-const linearGradientColor = 'url(#dlg)';
+const linearGradientColor = 'url(#default-linear-gradient)';
 
 export const DIDIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon style={{ width: props.width || '60px', height: props.height || '60px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 60 60"}>

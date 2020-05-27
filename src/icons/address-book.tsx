@@ -14,7 +14,7 @@ const styles: StyleSheet = {
   }
 };
 
-const linearGradientColor = 'url(#dlg)';
+const linearGradientColor = 'url(#default-linear-gradient)';
 
 export const AddressBookIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon style={{ width: props.width || '54px', height: props.height || '62px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 54 62'>

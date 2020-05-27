@@ -14,7 +14,7 @@ const styles: StyleSheet = {
   }
 };
 
-const linearGradientColor = 'url(#glg)';
+const linearGradientColor = 'url(#grey-linear-gradient)';
 
 export const HourGlassLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon style={{ width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 66 66'>

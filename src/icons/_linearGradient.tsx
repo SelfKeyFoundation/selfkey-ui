@@ -8,17 +8,17 @@ export const LinearGradient = (({ color }: LinearGradientProps) => {
         case 'orange':
             color1 = '#B44000';
             color2 = '#DB7400';
-            id = 'olg';
+            id = 'orange-linear-gradient';
             break;
         case 'grey':
             color1 = '#93B0C1';
             color2 = '#647A86';
-            id = 'glg';
+            id = 'grey-linear-gradient';
             break;
         default:
             color1 = '#09A8BA';
             color2 = '#0ABBD0';
-            id = 'dlg';
+            id = 'default-linear-gradient';
     }
 
     return (

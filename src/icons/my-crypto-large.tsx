@@ -14,7 +14,7 @@ const styles: StyleSheet = {
 	}
 };
 
-const linearGradientColor = 'url(#dlg)';
+const linearGradientColor = 'url(#default-linear-gradient)';
 
 export const MyCryptoLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon style={{ width: props.width || '66px', height: props.height || '64px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 66 64"}>

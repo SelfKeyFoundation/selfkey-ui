@@ -71,7 +71,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
         focusable="false"
         style={
           Object {
-            "fill": "url(#dlg)",
+            "fill": "url(#orange-linear-gradient)",
             "height": "74px",
             "width": "68px",
           }
@@ -80,7 +80,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
       >
         <defs>
           <linearGradient
-            id="dlg"
+            id="orange-linear-gradient"
             x1="11.0842631%"
             x2="36.0705554%"
             y1="68.33943%"
@@ -88,11 +88,11 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           >
             <stop
               offset="0%"
-              stopColor="#09A8BA"
+              stopColor="#B44000"
             />
             <stop
               offset="100%"
-              stopColor="#0ABBD0"
+              stopColor="#DB7400"
             />
           </linearGradient>
         </defs>
@@ -104,7 +104,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#dlg)"
+            fill="inherit"
             fillRule="nonzero"
             id="504.3---Exchange-Details-+-Send-Stake-+-Transaction-Error"
             transform="translate(-375.000000, -273.000000)"
@@ -263,7 +263,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
         focusable="false"
         style={
           Object {
-            "fill": "url(#dlg)",
+            "fill": "url(#orange-linear-gradient)",
             "height": "74px",
             "width": "68px",
           }
@@ -272,7 +272,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
       >
         <defs>
           <linearGradient
-            id="dlg"
+            id="orange-linear-gradient"
             x1="11.0842631%"
             x2="36.0705554%"
             y1="68.33943%"
@@ -280,11 +280,11 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           >
             <stop
               offset="0%"
-              stopColor="#09A8BA"
+              stopColor="#B44000"
             />
             <stop
               offset="100%"
-              stopColor="#0ABBD0"
+              stopColor="#DB7400"
             />
           </linearGradient>
         </defs>
@@ -296,7 +296,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#dlg)"
+            fill="inherit"
             fillRule="nonzero"
             id="504.3---Exchange-Details-+-Send-Stake-+-Transaction-Error"
             transform="translate(-375.000000, -273.000000)"
@@ -455,7 +455,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
         focusable="false"
         style={
           Object {
-            "fill": "url(#dlg)",
+            "fill": "url(#orange-linear-gradient)",
             "height": "74px",
             "width": "68px",
           }
@@ -464,7 +464,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
       >
         <defs>
           <linearGradient
-            id="dlg"
+            id="orange-linear-gradient"
             x1="11.0842631%"
             x2="36.0705554%"
             y1="68.33943%"
@@ -472,11 +472,11 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           >
             <stop
               offset="0%"
-              stopColor="#09A8BA"
+              stopColor="#B44000"
             />
             <stop
               offset="100%"
-              stopColor="#0ABBD0"
+              stopColor="#DB7400"
             />
           </linearGradient>
         </defs>
@@ -488,7 +488,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#dlg)"
+            fill="inherit"
             fillRule="nonzero"
             id="504.3---Exchange-Details-+-Send-Stake-+-Transaction-Error"
             transform="translate(-375.000000, -273.000000)"
@@ -647,7 +647,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
         focusable="false"
         style={
           Object {
-            "fill": "url(#dlg)",
+            "fill": "url(#orange-linear-gradient)",
             "height": "74px",
             "width": "68px",
           }
@@ -656,7 +656,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
       >
         <defs>
           <linearGradient
-            id="dlg"
+            id="orange-linear-gradient"
             x1="11.0842631%"
             x2="36.0705554%"
             y1="68.33943%"
@@ -664,11 +664,11 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           >
             <stop
               offset="0%"
-              stopColor="#09A8BA"
+              stopColor="#B44000"
             />
             <stop
               offset="100%"
-              stopColor="#0ABBD0"
+              stopColor="#DB7400"
             />
           </linearGradient>
         </defs>
@@ -680,7 +680,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           strokeWidth="1"
         >
           <g
-            fill="url(#dlg)"
+            fill="inherit"
             fillRule="nonzero"
             id="504.3---Exchange-Details-+-Send-Stake-+-Transaction-Error"
             transform="translate(-375.000000, -273.000000)"

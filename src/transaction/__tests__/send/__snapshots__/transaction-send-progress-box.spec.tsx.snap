@@ -91,7 +91,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
           focusable="false"
           style={
             Object {
-              "fill": "url(#dlg)",
+              "fill": "url(#default-linear-gradient)",
               "height": "66px",
               "width": "66px",
             }
@@ -100,7 +100,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
         >
           <defs>
             <linearGradient
-              id="dlg"
+              id="default-linear-gradient"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -124,7 +124,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#dlg)"
+              fill="inherit"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -341,7 +341,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
           focusable="false"
           style={
             Object {
-              "fill": "url(#dlg)",
+              "fill": "url(#default-linear-gradient)",
               "height": "66px",
               "width": "66px",
             }
@@ -350,7 +350,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
         >
           <defs>
             <linearGradient
-              id="dlg"
+              id="default-linear-gradient"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -374,7 +374,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#dlg)"
+              fill="inherit"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -591,7 +591,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
           focusable="false"
           style={
             Object {
-              "fill": "url(#dlg)",
+              "fill": "url(#default-linear-gradient)",
               "height": "66px",
               "width": "66px",
             }
@@ -600,7 +600,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
         >
           <defs>
             <linearGradient
-              id="dlg"
+              id="default-linear-gradient"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -624,7 +624,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#dlg)"
+              fill="inherit"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -841,7 +841,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
           focusable="false"
           style={
             Object {
-              "fill": "url(#dlg)",
+              "fill": "url(#default-linear-gradient)",
               "height": "66px",
               "width": "66px",
             }
@@ -850,7 +850,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
         >
           <defs>
             <linearGradient
-              id="dlg"
+              id="default-linear-gradient"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -874,7 +874,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#dlg)"
+              fill="inherit"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -1091,7 +1091,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
           focusable="false"
           style={
             Object {
-              "fill": "url(#glg)",
+              "fill": "url(#grey-linear-gradient)",
               "height": "66px",
               "width": "66px",
             }
@@ -1100,7 +1100,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
         >
           <defs>
             <linearGradient
-              id="glg"
+              id="grey-linear-gradient"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -1341,7 +1341,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
           focusable="false"
           style={
             Object {
-              "fill": "url(#dlg)",
+              "fill": "url(#default-linear-gradient)",
               "height": "66px",
               "width": "66px",
             }
@@ -1350,7 +1350,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
         >
           <defs>
             <linearGradient
-              id="dlg"
+              id="default-linear-gradient"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -1374,7 +1374,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="url(#dlg)"
+              fill="inherit"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
