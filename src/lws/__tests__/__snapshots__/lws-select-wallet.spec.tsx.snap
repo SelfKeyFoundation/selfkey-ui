@@ -7,51 +7,46 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root"
+      className="MuiSvgIcon-root Component-root-0-2-16"
       focusable="false"
       style={
         Object {
+          "fill": "url(#default-linear-gradient)",
           "height": "74px",
           "width": "74px",
         }
       }
       viewBox="0 0 74 74"
     >
-      <title>
-        icon-id
-      </title>
-      <desc>
-        Created with Sketch.
-      </desc>
       <defs>
         <linearGradient
-          id="id-linearGradient-1"
-          x1="50%"
-          x2="50%"
-          y1="100%"
+          id="default-linear-gradient"
+          x1="11.0842631%"
+          x2="36.0705554%"
+          y1="68.33943%"
           y2="0%"
         >
           <stop
             offset="0%"
-            stopColor="#1CA9BA"
+            stopColor="#09A8BA"
           />
           <stop
             offset="100%"
-            stopColor="#23E6FE"
+            stopColor="#0ABBD0"
           />
         </linearGradient>
       </defs>
       <g
-        fill="none"
+        fill="inherit"
         fillRule="evenodd"
         id="Modal---Dark"
         stroke="none"
         strokeWidth="1"
       >
         <g
-          fill="url(#id-linearGradient-1)"
+          fill="inherit"
           fillRule="nonzero"
-          id="1.-Select-Wallet-Modal"
+          id="SelectWalletModal"
           transform="translate(-683.000000, -277.000000)"
         >
           <g
@@ -199,7 +194,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-0-2-16"
+          className="MuiSvgIcon-root Component-root-0-2-17"
           focusable="false"
           viewBox="0 0 42 39"
         >
@@ -315,7 +310,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         className="LWSSelectWalletComponent-formSubmitRow-0-2-8"
       >
         <button
-          className="Component-root-0-2-17 LWSSelectWalletComponent-buttonPrimary-0-2-10"
+          className="Component-root-0-2-18 LWSSelectWalletComponent-buttonPrimary-0-2-10"
           onClick={[Function]}
         >
           Log in

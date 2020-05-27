@@ -14,7 +14,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {};
+var styles = {
+    root: {
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        },
+    }
+};
 exports.BankIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '36px' } }, props, { viewBox: "0 0 36 36" }),
     React.createElement("g", { id: "Marketplace-bank", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "720---Bank-Accounts", transform: "translate(-150.000000, -153.000000)", fill: "#00C0D9", fillRule: "nonzero" },

@@ -3,30 +3,24 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import LinearGradient from './_linearGradient';
 
 const styles: StyleSheet = {
 	root: {
-		width: '66px !important',
-		height: '64px !important',
-	},
+		transition: 'all 0.2s ease-out',
+		'&:hover': {
+			fill: 'white',
+		},
+	}
 };
 
+const linearGradientColor = 'url(#default-linear-gradient)';
+
 export const MyCryptoLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-	<SvgIcon viewBox="0 0 66 64" {...props}>
-		<defs>
-			<linearGradient x1="36.0705566%" y1="100%" x2="36.0705554%" y2="0%" id="my-crypto-large-linearGradient-1">
-				<stop stopColor="#09A8BA" offset="0%" />
-				<stop stopColor="#0ABBD0" offset="100%" />
-			</linearGradient>
-		</defs>
-		<g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-			<g
-				id="304-Manage-My-Tokens"
-				transform="translate(-687.000000, -146.000000)"
-				fill="url(#my-crypto-large-linearGradient-1)"
-				fillRule="nonzero"
-				stroke="#0FB8D0"
-			>
+	<SvgIcon style={{ width: props.width || '66px', height: props.height || '64px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 66 64"}>
+		<LinearGradient />
+		<g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
+			<g id="MMTokens" transform="translate(-687.000000, -146.000000)" fill="inherit" fillRule="nonzero" >
 				<g id="Page-header" transform="translate(409.000000, 146.000000)">
 					<g id="icon-my-crypto-large" transform="translate(279.000000, 0.000000)">
 						<path

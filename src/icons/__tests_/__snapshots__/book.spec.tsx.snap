@@ -7,7 +7,7 @@ exports[`Book Icon should show Book Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
+      "fill": "url(#default-linear-gradient)",
       "height": "55px",
       "width": "68px",
     }
@@ -16,7 +16,7 @@ exports[`Book Icon should show Book Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="dlg"
+      id="default-linear-gradient"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"

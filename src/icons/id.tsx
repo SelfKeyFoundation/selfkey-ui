@@ -3,26 +3,24 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import LinearGradient from './_linearGradient';
 
-const styles: StyleSheet = {};
+const styles: StyleSheet = {
+	root: {
+		transition: 'all 0.2s ease-out',
+		'&:hover': {
+			fill: 'white',
+		},
+	}
+};
+
+const linearGradientColor = 'url(#default-linear-gradient)';
 
 export const IDIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-	<SvgIcon style={{ width: props.width || '74px', height: props.height || '74px' }} {...props} viewBox="0 0 74 74">
-		<title>icon-id</title>
-		<desc>Created with Sketch.</desc>
-		<defs>
-			<linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="id-linearGradient-1">
-				<stop stopColor="#1CA9BA" offset="0%" />
-				<stop stopColor="#23E6FE" offset="100%" />
-			</linearGradient>
-		</defs>
-		<g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-			<g
-				id="1.-Select-Wallet-Modal"
-				transform="translate(-683.000000, -277.000000)"
-				fill="url(#id-linearGradient-1)"
-				fillRule="nonzero"
-			>
+	<SvgIcon style={{ width: props.width || '74px', height: props.height || '74px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 74 74"}>
+		<LinearGradient />
+		<g id="Modal---Dark" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
+			<g id="SelectWalletModal" transform="translate(-683.000000, -277.000000)" fill="inherit" fillRule="nonzero">
 				<g id="Modal-content" transform="translate(420.000000, 100.000000)">
 					<g id="Text" transform="translate(147.000000, 177.000000)">
 						<g id="icon-id" transform="translate(116.000000, 0.000000)">

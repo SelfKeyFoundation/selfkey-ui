@@ -4,7 +4,14 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {};
+const styles: StyleSheet = {
+    root: {
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        },
+    }
+};
 
 export const BankIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
 	<SvgIcon style={{ width: props.width || '36px', height: props.height || '36px' }} {...props} viewBox="0 0 36 36">
