@@ -3,24 +3,22 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import LinearGradient from './_linearGradient';
 
 const styles: StyleSheet = {
-  root: {
-    width: '66px !important',
-    height: '68px !important'
-  }
+	root: {
+		width: '66px !important',
+		height: '64px !important',
+	},
 };
 
+const linearGradientColor = 'url(#dlg)';
+
 export const PasswordConfirmIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
-  <SvgIcon {...props} viewBox='0 0 66 68'>
-    <defs>
-        <linearGradient x1="12.3706444%" y1="68.33943%" x2="36.531001%" y2="0%" id="password-confirm-linearGradient-1">
-            <stop stopColor="#09A8BA" offset="0%"></stop>
-            <stop stopColor="#0ABBD0" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="🛠-Vault-Setup" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="107-Confirm-Password" transform="translate(-375.000000, -386.000000)" fill="url(#password-confirm-linearGradient-1)" fillRule="nonzero">
+  <SvgIcon style={{ width: props.width || '66px', height: props.height || '68px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 66 68"}>
+    <LinearGradient />
+    <g id="🛠-Vault-Setup" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
+        <g id="107-Confirm-Password" transform="translate(-375.000000, -386.000000)" fill={linearGradientColor} fillRule="nonzero">
             <g id="Modal" transform="translate(330.000000, 291.000000)">
                 <g id="Content" transform="translate(45.000000, 94.000000)">
                     <g id="icon-password-confirm" transform="translate(0.000000, 1.000000)">
