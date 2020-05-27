@@ -7,7 +7,7 @@ exports[`Warning Shield Icon should show Warning Shield Icon 1`] = `
   focusable="false"
   style={
     Object {
-      "fill": "url(#dlg)",
+      "fill": "url(#olg)",
       "height": "74px",
       "width": "68px",
     }
@@ -16,7 +16,7 @@ exports[`Warning Shield Icon should show Warning Shield Icon 1`] = `
 >
   <defs>
     <linearGradient
-      id="olg"
+      id="dlg"
       x1="11.0842631%"
       x2="36.0705554%"
       y1="68.33943%"
@@ -24,16 +24,16 @@ exports[`Warning Shield Icon should show Warning Shield Icon 1`] = `
     >
       <stop
         offset="0%"
-        stopColor="#B44000"
+        stopColor="#09A8BA"
       />
       <stop
         offset="100%"
-        stopColor="#DB7400"
+        stopColor="#0ABBD0"
       />
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
     id="Marketplace"
     stroke="none"
