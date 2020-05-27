@@ -5,14 +5,21 @@ exports[`My Crypto Large Icon should show My Crypto Large Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-0-2-1"
   focusable="false"
+  style={
+    Object {
+      "fill": "url(#dlg)",
+      "height": "64px",
+      "width": "66px",
+    }
+  }
   viewBox="0 0 66 64"
 >
   <defs>
     <linearGradient
-      id="my-crypto-large-linearGradient-1"
-      x1="36.0705566%"
+      id="dlg"
+      x1="11.0842631%"
       x2="36.0705554%"
-      y1="100%"
+      y1="68.33943%"
       y2="0%"
     >
       <stop
@@ -26,17 +33,16 @@ exports[`My Crypto Large Icon should show My Crypto Large Icon 1`] = `
     </linearGradient>
   </defs>
   <g
-    fill="none"
+    fill="inherit"
     fillRule="evenodd"
     id="🖥-Main-Dashboard"
     stroke="none"
     strokeWidth="1"
   >
     <g
-      fill="url(#my-crypto-large-linearGradient-1)"
+      fill="url(#dlg)"
       fillRule="nonzero"
-      id="304-Manage-My-Tokens"
-      stroke="#0FB8D0"
+      id="MMTokens"
       transform="translate(-687.000000, -146.000000)"
     >
       <g
