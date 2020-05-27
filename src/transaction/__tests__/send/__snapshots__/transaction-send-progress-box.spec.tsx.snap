@@ -89,12 +89,18 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
           aria-hidden="true"
           className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "fill": "url(#dlg)",
+              "height": "66px",
+              "width": "66px",
+            }
+          }
           viewBox="0 0 66 66"
         >
           <defs>
             <linearGradient
-              id="okey-linearGradient-1"
+              id="dlg"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -111,14 +117,14 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
             </linearGradient>
           </defs>
           <g
-            fill="none"
+            fill="inherit"
             fillRule="evenodd"
             id="🛠-Wallet-Setup"
             stroke="none"
             strokeWidth="1"
           >
             <g
-              fill="url(#okey-linearGradient-1)"
+              fill="url(#dlg)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -333,12 +339,18 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
           aria-hidden="true"
           className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "fill": "url(#dlg)",
+              "height": "66px",
+              "width": "66px",
+            }
+          }
           viewBox="0 0 66 66"
         >
           <defs>
             <linearGradient
-              id="okey-linearGradient-1"
+              id="dlg"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -355,14 +367,14 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
             </linearGradient>
           </defs>
           <g
-            fill="none"
+            fill="inherit"
             fillRule="evenodd"
             id="🛠-Wallet-Setup"
             stroke="none"
             strokeWidth="1"
           >
             <g
-              fill="url(#okey-linearGradient-1)"
+              fill="url(#dlg)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -577,12 +589,18 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
           aria-hidden="true"
           className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "fill": "url(#dlg)",
+              "height": "66px",
+              "width": "66px",
+            }
+          }
           viewBox="0 0 66 66"
         >
           <defs>
             <linearGradient
-              id="okey-linearGradient-1"
+              id="dlg"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -599,14 +617,14 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
             </linearGradient>
           </defs>
           <g
-            fill="none"
+            fill="inherit"
             fillRule="evenodd"
             id="🛠-Wallet-Setup"
             stroke="none"
             strokeWidth="1"
           >
             <g
-              fill="url(#okey-linearGradient-1)"
+              fill="url(#dlg)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -821,12 +839,18 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
           aria-hidden="true"
           className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "fill": "url(#dlg)",
+              "height": "66px",
+              "width": "66px",
+            }
+          }
           viewBox="0 0 66 66"
         >
           <defs>
             <linearGradient
-              id="okey-linearGradient-1"
+              id="dlg"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -843,14 +867,14 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
             </linearGradient>
           </defs>
           <g
-            fill="none"
+            fill="inherit"
             fillRule="evenodd"
             id="🛠-Wallet-Setup"
             stroke="none"
             strokeWidth="1"
           >
             <g
-              fill="url(#okey-linearGradient-1)"
+              fill="url(#dlg)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
@@ -1315,12 +1339,18 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
           aria-hidden="true"
           className="MuiSvgIcon-root Component-root-0-2-16"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "fill": "url(#dlg)",
+              "height": "66px",
+              "width": "66px",
+            }
+          }
           viewBox="0 0 66 66"
         >
           <defs>
             <linearGradient
-              id="okey-linearGradient-1"
+              id="dlg"
               x1="11.0842631%"
               x2="36.0705554%"
               y1="68.33943%"
@@ -1337,14 +1367,14 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
             </linearGradient>
           </defs>
           <g
-            fill="none"
+            fill="inherit"
             fillRule="evenodd"
             id="🛠-Wallet-Setup"
             stroke="none"
             strokeWidth="1"
           >
             <g
-              fill="url(#okey-linearGradient-1)"
+              fill="url(#dlg)"
               fillRule="nonzero"
               id="117.1---Trezor---Connecting-+-Messages"
               transform="translate(-368.000000, -1716.000000)"
