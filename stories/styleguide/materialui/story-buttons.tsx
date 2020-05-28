@@ -100,6 +100,18 @@ export default function ButtonStories () {
 						</Grid>
 					</Grid>
 					<br/><br/>
+
+					<Typography variant="overline" gutterBottom>
+						Button links & text links
+					</Typography>
+
+					<Grid container spacing={8}>
+						<Grid item>
+							<Button variant="text">Normal text button</Button>
+						</Grid>
+					</Grid>
+					<br/><br/>
+
 					<Typography variant="overline" gutterBottom>
 						Back Button
 					</Typography>
