@@ -716,6 +716,19 @@ const theme = createMuiTheme({
 				minWidth: '50px',
 				padding: '0 10px',
 			},
+			text: {
+				color: primary,
+				fontSize: '14px',
+				fontWeight: 400,
+				letterSpacing: 'initial',
+				lineHeight: '17px',
+				textTransform: 'initial',
+				'&:hover': {
+					backgroundColor: 'transparent',
+					color: primaryTint,
+					textDecoration: 'underline'
+				},
+			}
 		},
 		MuiIconButton: {
 			root: {
