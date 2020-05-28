@@ -107,7 +107,7 @@ export default function ButtonStories () {
 
 					<Grid container spacing={8}>
 						<Grid item>
-							<Button variant="text">Normal text button</Button>
+							<Button>Normal text button</Button>
 						</Grid>
 					</Grid>
 					<br/><br/>
