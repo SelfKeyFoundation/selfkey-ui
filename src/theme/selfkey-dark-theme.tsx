@@ -902,7 +902,7 @@ const theme = createMuiTheme({
 			root: {
 				backgroundColor: '#293743',
 				border: '1px solid #1D505F',
-				borderRadius: '2px',
+				borderRadius: '4px',
 				boxSizing: 'border-box',
 				fill: typography,
 				height: '44px',
