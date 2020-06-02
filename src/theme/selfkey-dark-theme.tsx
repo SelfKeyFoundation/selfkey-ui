@@ -716,6 +716,19 @@ const theme = createMuiTheme({
 				minWidth: '50px',
 				padding: '0 10px',
 			},
+			text: {
+				color: primary,
+				fontSize: '14px',
+				fontWeight: 400,
+				letterSpacing: 'initial',
+				lineHeight: '17px',
+				textTransform: 'initial',
+				'&:hover': {
+					backgroundColor: 'transparent',
+					color: primaryTint,
+					textDecoration: 'underline'
+				},
+			}
 		},
 		MuiIconButton: {
 			root: {
@@ -887,7 +900,8 @@ const theme = createMuiTheme({
 			grouped: {
 				'&:not(:first-child)': {
 					marginLeft: 0
-				}
+				},
+				padding: '0 24px !important'
 			},
 			root: {
 				backgroundColor: 'transparent',
@@ -910,13 +924,13 @@ const theme = createMuiTheme({
 				textTransform: 'initial',
 				'&:hover': {
 					backgroundColor: 'rgba(255, 255, 255, 0.12)',
-					border: `1px solid ${primaryTint}`,
+					border: `1px solid ${primaryTint} !important`,
 				},
 				'&$selected': {
 					background: '#313D49',
-					border: `1px solid ${primaryTint}`,
 					fill: primary,
 					color: primary,
+					border: `1px solid ${primaryTint} !important`,
 				},
 				'&$disabled': {
 					opacity: 0.5,
