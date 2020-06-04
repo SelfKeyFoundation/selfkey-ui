@@ -919,7 +919,7 @@ var theme = core_1.createMuiTheme({
             root: {
                 backgroundColor: '#293743',
                 border: '1px solid #1D505F',
-                borderRadius: '2px',
+                borderRadius: '4px',
                 boxSizing: 'border-box',
                 fill: colors_1.typography,
                 height: '44px',
