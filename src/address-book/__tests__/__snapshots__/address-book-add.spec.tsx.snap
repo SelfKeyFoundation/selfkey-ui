@@ -20,7 +20,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-root MuiGrid-item"
         >
           <label
-            className="AddressBookAddComponent-label-0-2-5"
+            className="AddressBookAddComponent-label-5"
           >
             LABEL
           </label>
@@ -29,7 +29,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-root MuiGrid-item"
         >
           <input
-            className="AddressBookAddComponent-input-0-2-3 AddressBookAddComponent-errorColor-0-2-2"
+            className="AddressBookAddComponent-input-3 AddressBookAddComponent-errorColor-2"
             id="labelInput"
             onChange={[Function]}
             placeholder="Address label"
@@ -37,7 +37,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
             value=""
           />
           <span
-            className="AddressBookAddComponent-errorText-0-2-1"
+            className="AddressBookAddComponent-errorText-1"
             id="labelError"
           >
             hey
@@ -55,7 +55,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-root MuiGrid-item"
         >
           <label
-            className="AddressBookAddComponent-label-0-2-5"
+            className="AddressBookAddComponent-label-5"
           >
             ETH ADDRESS
           </label>
@@ -64,7 +64,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-root MuiGrid-item"
         >
           <input
-            className="AddressBookAddComponent-input-0-2-3 "
+            className="AddressBookAddComponent-input-3 "
             id="addressInput"
             onChange={[Function]}
             placeholder="0x"
@@ -84,7 +84,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-root MuiGrid-item"
         >
           <button
-            className="MuiButtonBase-root MuiButton-root Component-root-0-2-6 MuiButton-contained MuiButton-containedPrimary Component-containedPrimary-0-2-7 Mui-disabled Component-disabled-0-2-9 Mui-disabled"
+            className="MuiButtonBase-root MuiButton-root Component-root-6 MuiButton-contained MuiButton-containedPrimary Component-containedPrimary-7 Mui-disabled Component-disabled-9 Mui-disabled"
             disabled={true}
             id="saveButton"
             onBlur={[Function]}
@@ -112,7 +112,7 @@ exports[`Address Book Add should show Address Book Add 1`] = `
           className="MuiGrid-root MuiGrid-item"
         >
           <button
-            className="MuiButtonBase-root MuiButton-root Component-root-0-2-6 MuiButton-outlined Component-outlined-0-2-8 MuiButton-outlinedPrimary"
+            className="MuiButtonBase-root MuiButton-root Component-root-6 MuiButton-outlined Component-outlined-8 MuiButton-outlinedPrimary"
             disabled={false}
             id="cancelButton"
             onBlur={[Function]}

@@ -1,19 +1,18 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-  root: {
-    fill: '#90acbd',
-    '&:hover': {
-        fill: 'white'
+const styles = createStyles({
+    root: {
+        fill: '#90acbd',
+        '&:hover': {
+            fill: 'white'
+        }
     }
-  }
-};
+});
 
-export const ReplyIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const ReplyIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon style={{ width: props.width || '22px', height: props.height || '19px' }} {...props} viewBox='0 0 22 19'>
         <g id="Certifiers-Dashboard-info-icon"  stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="Certifier's-Messages-info-icon" transform="translate(-1241.000000, -428.000000)">

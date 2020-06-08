@@ -1,8 +1,8 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet } from 'react-jss';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     root: {
         fontFamily: 'Lato, arial, sans-serif',
         fontWeight: 'bold',
@@ -33,7 +33,7 @@ const styles: StyleSheet = {
         background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
         boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 0 2px 2px 0 #07C1DC, 2px 0 2px 0 rgba(0,0,0,0.2)',
     },
-};
+});
 
 export type Variant = 'text' | 'outlined' | 'contained';
 export type Color = 'primary' | 'secondary';
@@ -46,9 +46,10 @@ export type ButtonProps = {
     type?: 'button' | 'submit';
     disabled?: boolean;
     id?: string;
+    children?: any;
 };
 
-export const StyledButton = injectSheet(styles)<ButtonProps>(
+export const StyledButton = withStyles(styles)(
     ({
         classes,
         children,
@@ -59,7 +60,7 @@ export const StyledButton = injectSheet(styles)<ButtonProps>(
         onClick,
         disabled = false,
         id
-    }) => (
+    }: ButtonProps & WithStyles<typeof styles>) => (
         <Button
             id={id}
             variant={variant as Variant}

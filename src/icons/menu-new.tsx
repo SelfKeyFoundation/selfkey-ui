@@ -1,9 +1,9 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '& #icon-menu-new-mn': {
@@ -18,9 +18,9 @@ const styles: StyleSheet = {
         }
         */
     }
-};
+});
 
-export const MenuNewIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+export const MenuNewIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon style={{ width: props.width || '30px', height: props.height || '21px' }} {...props} viewBox={props.viewBox || "0 0 30 21"}>
         <g id="MD-mn" stroke="none" strokeWidth="1">
             <g id="300.4-Nc-mn" transform="translate(-76.000000, -27.000000)" fill="#00C0D9" fillRule="nonzero">

@@ -1,21 +1,20 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-  root: {
-    width: '16px !important',
-    height: '16px !important',
-    fill: '#C5D0DE',
-    '&:hover': {
-        fill: 'white',
+const styles = createStyles({
+    root: {
+        width: '16px !important',
+        height: '16px !important',
+        fill: '#C5D0DE',
+        '&:hover': {
+            fill: 'white',
+        }
     }
-  }
-};
+});
 
-export const InfoTooltip = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const InfoTooltip = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon {...props} viewBox='0 0 16 16'>
         <g stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="3.-Style-Guide---Forms" transform="translate(-1539.000000, -931.000000)" fillRule="nonzero">

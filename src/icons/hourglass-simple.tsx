@@ -28,7 +28,3 @@ export const SimpleHourglassIcon = withStyles(styles)((props: SvgIconProps & Wit
 ));
 
 export default SimpleHourglassIcon;
-
-
-
-

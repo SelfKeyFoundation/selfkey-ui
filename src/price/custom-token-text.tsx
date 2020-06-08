@@ -1,7 +1,7 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet } from 'react-jss';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     customTokenText: {
         fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
@@ -10,9 +10,9 @@ const styles: StyleSheet = {
         paddingBottom: '50px',
         textAlign: 'center'
     }
-};
+});
 
-export const CustomTokenText = injectSheet(styles)<{}>(({classes, children}) => (
+export const CustomTokenText = withStyles(styles)( ({ classes, children }: { children: any } & WithStyles<typeof styles>) => (
     <div className={classes.customTokenText}>
         {children}
     </div>

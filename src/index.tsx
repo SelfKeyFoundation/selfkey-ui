@@ -1,6 +1,5 @@
-import { setup } from './jss-setup';
-
-setup();
+// import { setup } from './jss-setup';
+// setup();
 
 export { CryptoPriceBox } from './price/crypto-price-box';
 export { NumberFormat } from './price/number-format';
@@ -160,4 +159,3 @@ export { ViewIcon } from './icons/view';
 export { VisibilityOffIcon } from './icons/visibility-off';
 export { VisibilityOnIcon } from './icons/visibility-on';
 export { WarningShieldIcon } from './icons/warning-shield';
-

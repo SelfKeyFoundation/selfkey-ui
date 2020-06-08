@@ -1,17 +1,16 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-	root: {
-		width: '38px !important',
-		height: '44px !important',
-	},
-};
+const styles = createStyles({
+    root: {
+       width: '38px !important',
+       height: '44px !important',
+    },
+});
 
-export const AttributeAlertLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+export const AttributeAlertLargeIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
 	<SvgIcon {...props} viewBox="0 0 38 44" version="1.1">
         <g id="💻-ID-Dashboard-attribute-large-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="410.1-Marketplace-Applications-Statuses" transform="translate(-195.000000, -379.000000)" fill="#E98548">

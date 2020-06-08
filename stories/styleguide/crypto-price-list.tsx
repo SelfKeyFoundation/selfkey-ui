@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import { CryptoPriceBox } from '../../src/price/crypto-price-box';
 
 export const CryptoPriceList = () => (

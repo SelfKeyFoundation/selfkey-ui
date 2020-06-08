@@ -2,10 +2,10 @@
 
 exports[`LWS Required Info should show LWS Required Info 1`] = `
 <div
-  className="Component-requiredInfo-0-2-4"
+  className="Component-requiredInfo-4"
 >
   <div
-    className="Component-areaTitle-0-2-5"
+    className="Component-areaTitle-5"
   >
     <h4>
       <a
@@ -22,15 +22,15 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
     </h4>
   </div>
   <div
-    className="Component-form-0-2-1"
+    className="Component-form-1"
   >
     <div>
       <div
-        className="Component-attribute-0-2-6"
+        className="Component-attribute-6"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-0-2-12"
+          className="MuiSvgIcon-root Component-root-12"
           focusable="false"
           version="1.1"
           viewBox="0 0 18 20"
@@ -76,18 +76,18 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
         </dl>
       </div>
       <div
-        className="Component-waringMessage-0-2-8"
+        className="Component-waringMessage-8"
       >
         Please update your missing details.
       </div>
     </div>
     <div>
       <div
-        className="Component-attribute-0-2-6"
+        className="Component-attribute-6"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-0-2-12"
+          className="MuiSvgIcon-root Component-root-12"
           focusable="false"
           version="1.1"
           viewBox="0 0 18 20"
@@ -133,13 +133,13 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
         </dl>
       </div>
       <div
-        className="Component-waringMessage-0-2-8"
+        className="Component-waringMessage-8"
       >
         Please update your missing details.
       </div>
     </div>
     <div
-      className="Component-tocMessage-0-2-10"
+      className="Component-tocMessage-10"
     >
       By clicking "Allow", your information listed above will be used by
        
@@ -173,15 +173,15 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
       .
     </div>
     <div
-      className="Component-formSubmitColumn-0-2-9"
+      className="Component-formSubmitColumn-9"
     >
       <button
-        className="Component-root-0-2-13 Component-buttonSecondary-0-2-3"
+        className="Component-root-13 Component-buttonSecondary-3"
       >
         Cancel
       </button>
       <button
-        className="Component-root-0-2-13 Component-buttonPrimary-0-2-2"
+        className="Component-root-13 Component-buttonPrimary-2"
       >
         Allow
       </button>

@@ -1,18 +1,17 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-	root: {
-		width: '16px !important',
-		height: '11px !important',
-	},
-};
+const styles = createStyles({
+    root: {
+       width: '16px !important',
+       height: '11px !important',
+    },
+});
 
-export const CheckMaIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-	<SvgIcon {...props} viewBox="0 0 16 11">
+export const CheckMaIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
+    <SvgIcon {...props} viewBox="0 0 16 11">
         <title>icon-check-manage-applications</title>
         <g id="💻-ID-Dashboard-check-icon-ma" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="410-Marketplace-Applications" transform="translate(-1176.000000, -852.000000)" fill="#1CBA7D">
@@ -27,7 +26,7 @@ export const CheckMaIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProp
                 </g>
             </g>
         </g>
-	</SvgIcon>
+    </SvgIcon>
 ));
 
 export default CheckMaIcon;

@@ -3,7 +3,7 @@
 exports[`Bank Rounded Icon should show Bank Rounded Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-0-2-1"
+  className="MuiSvgIcon-root Component-root-1"
   focusable="false"
   style={
     Object {

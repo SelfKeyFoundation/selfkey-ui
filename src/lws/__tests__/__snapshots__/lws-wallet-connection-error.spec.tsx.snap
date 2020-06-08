@@ -2,14 +2,14 @@
 
 exports[`LWS Wallet Connection Error should show LWS Wallet Connection Error 1`] = `
 <div
-  className="Component-lwsError-0-2-4"
+  className="Component-lwsError-4"
 >
   <div
-    className="Component-areaTitle-0-2-7"
+    className="Component-areaTitle-7"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-8"
+      className="MuiSvgIcon-root Component-root-8"
       focusable="false"
       style={
         Object {
@@ -76,24 +76,24 @@ exports[`LWS Wallet Connection Error should show LWS Wallet Connection Error 1`]
     </h3>
   </div>
   <div
-    className="Component-form-0-2-3"
+    className="Component-form-3"
   >
     <p
-      className="Component-supportText-0-2-6"
+      className="Component-supportText-6"
     >
       The SelfKey Identity Wallet is required to securely authenticate with this website. Please download and open the SelfKey Identity Wallet to proceed.
     </p>
     <div
-      className="Component-formSubmitRow-0-2-5"
+      className="Component-formSubmitRow-5"
     >
       <div>
         <button
-          className="Component-root-0-2-9 Component-buttonPrimary-0-2-1"
+          className="Component-root-9 Component-buttonPrimary-1"
         >
           Download The SelfKey Wallet
         </button>
         <button
-          className="Component-root-0-2-9 Component-buttonSecondary-0-2-2"
+          className="Component-root-9 Component-buttonSecondary-2"
         >
           Retry
         </button>

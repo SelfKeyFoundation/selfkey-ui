@@ -5,23 +5,23 @@ exports[`Transaction History should show transaction history list 1`] = `
   className="MuiGrid-root"
 >
   <div
-    className="TransactionHistoryComponent-line-0-2-1"
+    className="TransactionHistoryComponent-line-1"
   >
      
   </div>
   <div>
     <div
-      className="MuiGrid-root TransactionHistoryComponent-row-0-2-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      className="MuiGrid-root TransactionHistoryComponent-row-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
     >
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-icon-0-2-5"
+          className="TransactionHistoryComponent-icon-5"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-12"
+            className="MuiSvgIcon-root Component-root-12"
             focusable="false"
             viewBox="0 0 26 26"
           >
@@ -73,39 +73,39 @@ exports[`Transaction History should show transaction history list 1`] = `
           </svg>
         </span>
         <span
-          className="TransactionHistoryComponent-date-0-2-4"
+          className="TransactionHistoryComponent-date-4"
         >
           1995/45/45
         </span>
         <div>
           <span
-            className="TransactionHistoryComponent-status-0-2-6"
+            className="TransactionHistoryComponent-status-6"
           >
             sented
              
           </span>
           <span
-            className="TransactionHistoryComponent-cryptoCurrency-0-2-7"
+            className="TransactionHistoryComponent-cryptoCurrency-7"
           >
             eth
           </span>
         </div>
       </div>
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-value-0-2-8"
+          className="TransactionHistoryComponent-value-8"
         >
           
         </span>
         <div
-          className="TransactionHistoryComponent-copyActionContainer-0-2-11"
+          className="TransactionHistoryComponent-copyActionContainer-11"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-13"
+            className="MuiSvgIcon-root Component-root-13"
             focusable="false"
             version="1.1"
             viewBox="0 0 14 16"
@@ -150,7 +150,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              
             Copy
@@ -158,12 +158,12 @@ exports[`Transaction History should show transaction history list 1`] = `
           </span>
         </div>
         <div
-          className="TransactionHistoryComponent-viewActionContainer-0-2-10"
+          className="TransactionHistoryComponent-viewActionContainer-10"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-14"
+            className="MuiSvgIcon-root Component-root-14"
             focusable="false"
             version="1.1"
             viewBox="0 0 22 16"
@@ -221,7 +221,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              View 
           </span>
@@ -229,24 +229,24 @@ exports[`Transaction History should show transaction history list 1`] = `
       </div>
     </div>
     <div
-      className="TransactionHistoryComponent-line-0-2-1"
+      className="TransactionHistoryComponent-line-1"
     >
        
     </div>
   </div>
   <div>
     <div
-      className="MuiGrid-root TransactionHistoryComponent-row-0-2-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      className="MuiGrid-root TransactionHistoryComponent-row-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
     >
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-icon-0-2-5"
+          className="TransactionHistoryComponent-icon-5"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-15"
+            className="MuiSvgIcon-root Component-root-15"
             focusable="false"
             version="1.1"
             viewBox="0 0 32 26"
@@ -294,39 +294,39 @@ exports[`Transaction History should show transaction history list 1`] = `
           </svg>
         </span>
         <span
-          className="TransactionHistoryComponent-date-0-2-4"
+          className="TransactionHistoryComponent-date-4"
         >
           1995/45/41
         </span>
         <div>
           <span
-            className="TransactionHistoryComponent-status-0-2-6"
+            className="TransactionHistoryComponent-status-6"
           >
             received
              
           </span>
           <span
-            className="TransactionHistoryComponent-cryptoCurrency-0-2-7"
+            className="TransactionHistoryComponent-cryptoCurrency-7"
           >
             key
           </span>
         </div>
       </div>
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-value-0-2-8"
+          className="TransactionHistoryComponent-value-8"
         >
           +15
         </span>
         <div
-          className="TransactionHistoryComponent-copyActionContainer-0-2-11"
+          className="TransactionHistoryComponent-copyActionContainer-11"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-13"
+            className="MuiSvgIcon-root Component-root-13"
             focusable="false"
             version="1.1"
             viewBox="0 0 14 16"
@@ -371,7 +371,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              
             Copy
@@ -379,12 +379,12 @@ exports[`Transaction History should show transaction history list 1`] = `
           </span>
         </div>
         <div
-          className="TransactionHistoryComponent-viewActionContainer-0-2-10"
+          className="TransactionHistoryComponent-viewActionContainer-10"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-14"
+            className="MuiSvgIcon-root Component-root-14"
             focusable="false"
             version="1.1"
             viewBox="0 0 22 16"
@@ -442,7 +442,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              View 
           </span>
@@ -450,20 +450,20 @@ exports[`Transaction History should show transaction history list 1`] = `
       </div>
     </div>
     <div
-      className="TransactionHistoryComponent-line-0-2-1"
+      className="TransactionHistoryComponent-line-1"
     >
        
     </div>
   </div>
   <div>
     <div
-      className="MuiGrid-root TransactionHistoryComponent-row-0-2-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      className="MuiGrid-root TransactionHistoryComponent-row-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
     >
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-icon-0-2-5"
+          className="TransactionHistoryComponent-icon-5"
         >
           <svg
             aria-hidden="true"
@@ -477,7 +477,6 @@ exports[`Transaction History should show transaction history list 1`] = `
             }
             viewBox="0 0 20 26"
           >
-            &gt;
             <defs />
             <g
               fill="none"
@@ -516,39 +515,39 @@ exports[`Transaction History should show transaction history list 1`] = `
           </svg>
         </span>
         <span
-          className="TransactionHistoryComponent-date-0-2-4"
+          className="TransactionHistoryComponent-date-4"
         >
           1995/45/41
         </span>
         <div>
           <span
-            className="TransactionHistoryComponent-status-0-2-6"
+            className="TransactionHistoryComponent-status-6"
           >
             panding
              
           </span>
           <span
-            className="TransactionHistoryComponent-cryptoCurrency-0-2-7"
+            className="TransactionHistoryComponent-cryptoCurrency-7"
           >
             key
           </span>
         </div>
       </div>
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-value-0-2-8"
+          className="TransactionHistoryComponent-value-8"
         >
           +15
         </span>
         <div
-          className="TransactionHistoryComponent-copyActionContainer-0-2-11"
+          className="TransactionHistoryComponent-copyActionContainer-11"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-13"
+            className="MuiSvgIcon-root Component-root-13"
             focusable="false"
             version="1.1"
             viewBox="0 0 14 16"
@@ -593,7 +592,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              
             Copy
@@ -601,12 +600,12 @@ exports[`Transaction History should show transaction history list 1`] = `
           </span>
         </div>
         <div
-          className="TransactionHistoryComponent-viewActionContainer-0-2-10"
+          className="TransactionHistoryComponent-viewActionContainer-10"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-14"
+            className="MuiSvgIcon-root Component-root-14"
             focusable="false"
             version="1.1"
             viewBox="0 0 22 16"
@@ -664,7 +663,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              View 
           </span>
@@ -672,24 +671,24 @@ exports[`Transaction History should show transaction history list 1`] = `
       </div>
     </div>
     <div
-      className="TransactionHistoryComponent-line-0-2-1"
+      className="TransactionHistoryComponent-line-1"
     >
        
     </div>
   </div>
   <div>
     <div
-      className="MuiGrid-root TransactionHistoryComponent-row-0-2-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      className="MuiGrid-root TransactionHistoryComponent-row-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
     >
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-icon-0-2-5"
+          className="TransactionHistoryComponent-icon-5"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-16"
+            className="MuiSvgIcon-root Component-root-16"
             focusable="false"
             version="1.1"
             viewBox="0 0 26 26"
@@ -737,39 +736,39 @@ exports[`Transaction History should show transaction history list 1`] = `
           </svg>
         </span>
         <span
-          className="TransactionHistoryComponent-date-0-2-4"
+          className="TransactionHistoryComponent-date-4"
         >
           1995/45/41
         </span>
         <div>
           <span
-            className="TransactionHistoryComponent-status-0-2-6"
+            className="TransactionHistoryComponent-status-6"
           >
             sent
              
           </span>
           <span
-            className="TransactionHistoryComponent-cryptoCurrency-0-2-7"
+            className="TransactionHistoryComponent-cryptoCurrency-7"
           >
             key
           </span>
         </div>
       </div>
       <div
-        className="TransactionHistoryComponent-flex-0-2-2"
+        className="TransactionHistoryComponent-flex-2"
       >
         <span
-          className="TransactionHistoryComponent-value-0-2-8"
+          className="TransactionHistoryComponent-value-8"
         >
           +15
         </span>
         <div
-          className="TransactionHistoryComponent-copyActionContainer-0-2-11"
+          className="TransactionHistoryComponent-copyActionContainer-11"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-13"
+            className="MuiSvgIcon-root Component-root-13"
             focusable="false"
             version="1.1"
             viewBox="0 0 14 16"
@@ -814,7 +813,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              
             Copy
@@ -822,12 +821,12 @@ exports[`Transaction History should show transaction history list 1`] = `
           </span>
         </div>
         <div
-          className="TransactionHistoryComponent-viewActionContainer-0-2-10"
+          className="TransactionHistoryComponent-viewActionContainer-10"
           onClick={[Function]}
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-0-2-14"
+            className="MuiSvgIcon-root Component-root-14"
             focusable="false"
             version="1.1"
             viewBox="0 0 22 16"
@@ -885,7 +884,7 @@ exports[`Transaction History should show transaction history list 1`] = `
             </g>
           </svg>
           <span
-            className="TransactionHistoryComponent-actionTitle-0-2-9"
+            className="TransactionHistoryComponent-actionTitle-9"
           >
              View 
           </span>
@@ -893,7 +892,7 @@ exports[`Transaction History should show transaction history list 1`] = `
       </div>
     </div>
     <div
-      className="TransactionHistoryComponent-line-0-2-1"
+      className="TransactionHistoryComponent-line-1"
     >
        
     </div>

@@ -1,17 +1,16 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     root: {
         width: '24px !important',
         height: '24px !important'
     }
-};
+});
 
-export const SentBlueIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+export const SentBlueIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon {...props} viewBox="0 0 24 24" version="1.1">
         <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="350-Send-KEY-Dashboard" transform="translate(-615.000000, -475.000000)" fill="#00C0D9" fillRule="nonzero">

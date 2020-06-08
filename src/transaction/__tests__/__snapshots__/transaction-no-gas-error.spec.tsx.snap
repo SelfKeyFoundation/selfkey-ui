@@ -2,22 +2,22 @@
 
 exports[`Transaction no Gas Error shoul not call open external link 1`] = `
 <div
-  className="Component-boxWrapper-0-2-4"
+  className="Component-boxWrapper-4"
 >
   <div
-    className="Component-header-0-2-5"
+    className="Component-header-5"
   >
     <span
-      className="Component-headerTitle-0-2-6"
+      className="Component-headerTitle-6"
     >
        Transaction Confirmation 
     </span>
     <div
-      className="Component-closeDialogIconWrapper-0-2-12"
+      className="Component-closeDialogIconWrapper-12"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
+        className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
         viewBox="0 0 38 38"
@@ -60,14 +60,14 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-root Component-bodyContainer-0-2-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
+    className="MuiGrid-root Component-bodyContainer-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-14"
+        className="MuiSvgIcon-root Component-root-14"
         focusable="false"
         style={
           Object {
@@ -129,12 +129,12 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
         className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
       >
         <div
-          className="Component-txFailedText-0-2-8"
+          className="Component-txFailedText-8"
         >
           Transaction Failed 
         </div>
         <div
-          className="Component-bodyText-0-2-1"
+          className="Component-bodyText-1"
         >
           <p
             className="MuiTypography-root MuiTypography-body1"
@@ -142,12 +142,12 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
           <div
-            className="Component-learnMoreText-0-2-2"
+            className="Component-learnMoreText-2"
           >
             To learn more about transaction fees, click 
              
             <a
-              className="Component-learnMoreText-0-2-2  Component-learnMoreLink-0-2-3"
+              className="Component-learnMoreText-2  Component-learnMoreLink-3"
               href="https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed"
               onClick={[Function]}
             >
@@ -156,13 +156,13 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           </div>
         </div>
         <span
-          className="Component-divider-0-2-11"
+          className="Component-divider-11"
         >
            
         </span>
         <div>
           <span
-            className="Component-yourAddressTitle-0-2-9"
+            className="Component-yourAddressTitle-9"
           >
              Your Address: 
           </span>
@@ -170,16 +170,16 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <span
-              className="Component-publicKey-0-2-10"
+              className="Component-publicKey-10"
             >
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-2-15"
+              className="CopyComponent-copyButton-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-2-16"
+                className="CopyComponent-copyButtonSpan-16"
               >
                 COPY
               </span>
@@ -194,22 +194,22 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
 
 exports[`Transaction no Gas Error shoul not call open external link 2`] = `
 <div
-  className="Component-boxWrapper-0-2-4"
+  className="Component-boxWrapper-4"
 >
   <div
-    className="Component-header-0-2-5"
+    className="Component-header-5"
   >
     <span
-      className="Component-headerTitle-0-2-6"
+      className="Component-headerTitle-6"
     >
        Transaction Confirmation 
     </span>
     <div
-      className="Component-closeDialogIconWrapper-0-2-12"
+      className="Component-closeDialogIconWrapper-12"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
+        className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
         viewBox="0 0 38 38"
@@ -252,14 +252,14 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-root Component-bodyContainer-0-2-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
+    className="MuiGrid-root Component-bodyContainer-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-14"
+        className="MuiSvgIcon-root Component-root-14"
         focusable="false"
         style={
           Object {
@@ -321,12 +321,12 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
         className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
       >
         <div
-          className="Component-txFailedText-0-2-8"
+          className="Component-txFailedText-8"
         >
           Transaction Failed 
         </div>
         <div
-          className="Component-bodyText-0-2-1"
+          className="Component-bodyText-1"
         >
           <p
             className="MuiTypography-root MuiTypography-body1"
@@ -334,12 +334,12 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
           <div
-            className="Component-learnMoreText-0-2-2"
+            className="Component-learnMoreText-2"
           >
             To learn more about transaction fees, click 
              
             <a
-              className="Component-learnMoreText-0-2-2  Component-learnMoreLink-0-2-3"
+              className="Component-learnMoreText-2  Component-learnMoreLink-3"
               href="https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed"
               onClick={[Function]}
             >
@@ -348,13 +348,13 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           </div>
         </div>
         <span
-          className="Component-divider-0-2-11"
+          className="Component-divider-11"
         >
            
         </span>
         <div>
           <span
-            className="Component-yourAddressTitle-0-2-9"
+            className="Component-yourAddressTitle-9"
           >
              Your Address: 
           </span>
@@ -362,16 +362,16 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <span
-              className="Component-publicKey-0-2-10"
+              className="Component-publicKey-10"
             >
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-2-15"
+              className="CopyComponent-copyButton-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-2-16"
+                className="CopyComponent-copyButtonSpan-16"
               >
                 COPY
               </span>
@@ -386,22 +386,22 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
 
 exports[`Transaction no Gas Error shoul open external link 1`] = `
 <div
-  className="Component-boxWrapper-0-2-4"
+  className="Component-boxWrapper-4"
 >
   <div
-    className="Component-header-0-2-5"
+    className="Component-header-5"
   >
     <span
-      className="Component-headerTitle-0-2-6"
+      className="Component-headerTitle-6"
     >
        Transaction Confirmation 
     </span>
     <div
-      className="Component-closeDialogIconWrapper-0-2-12"
+      className="Component-closeDialogIconWrapper-12"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
+        className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
         viewBox="0 0 38 38"
@@ -444,14 +444,14 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-root Component-bodyContainer-0-2-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
+    className="MuiGrid-root Component-bodyContainer-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-14"
+        className="MuiSvgIcon-root Component-root-14"
         focusable="false"
         style={
           Object {
@@ -513,12 +513,12 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
         className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
       >
         <div
-          className="Component-txFailedText-0-2-8"
+          className="Component-txFailedText-8"
         >
           Transaction Failed 
         </div>
         <div
-          className="Component-bodyText-0-2-1"
+          className="Component-bodyText-1"
         >
           <p
             className="MuiTypography-root MuiTypography-body1"
@@ -526,12 +526,12 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
           <div
-            className="Component-learnMoreText-0-2-2"
+            className="Component-learnMoreText-2"
           >
             To learn more about transaction fees, click 
              
             <a
-              className="Component-learnMoreText-0-2-2  Component-learnMoreLink-0-2-3"
+              className="Component-learnMoreText-2  Component-learnMoreLink-3"
               href="https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed"
               onClick={[Function]}
             >
@@ -540,13 +540,13 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           </div>
         </div>
         <span
-          className="Component-divider-0-2-11"
+          className="Component-divider-11"
         >
            
         </span>
         <div>
           <span
-            className="Component-yourAddressTitle-0-2-9"
+            className="Component-yourAddressTitle-9"
           >
              Your Address: 
           </span>
@@ -554,16 +554,16 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <span
-              className="Component-publicKey-0-2-10"
+              className="Component-publicKey-10"
             >
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-2-15"
+              className="CopyComponent-copyButton-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-2-16"
+                className="CopyComponent-copyButtonSpan-16"
               >
                 COPY
               </span>
@@ -578,22 +578,22 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
 
 exports[`Transaction no Gas Error shoul open external link 2`] = `
 <div
-  className="Component-boxWrapper-0-2-4"
+  className="Component-boxWrapper-4"
 >
   <div
-    className="Component-header-0-2-5"
+    className="Component-header-5"
   >
     <span
-      className="Component-headerTitle-0-2-6"
+      className="Component-headerTitle-6"
     >
        Transaction Confirmation 
     </span>
     <div
-      className="Component-closeDialogIconWrapper-0-2-12"
+      className="Component-closeDialogIconWrapper-12"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-13 MuiSvgIcon-fontSizeLarge"
+        className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
         viewBox="0 0 38 38"
@@ -636,14 +636,14 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-root Component-bodyContainer-0-2-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
+    className="MuiGrid-root Component-bodyContainer-7 MuiGrid-container MuiGrid-align-items-xs-flex-start"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-14"
+        className="MuiSvgIcon-root Component-root-14"
         focusable="false"
         style={
           Object {
@@ -705,12 +705,12 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
         className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
       >
         <div
-          className="Component-txFailedText-0-2-8"
+          className="Component-txFailedText-8"
         >
           Transaction Failed 
         </div>
         <div
-          className="Component-bodyText-0-2-1"
+          className="Component-bodyText-1"
         >
           <p
             className="MuiTypography-root MuiTypography-body1"
@@ -718,12 +718,12 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
             You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below.
           </p>
           <div
-            className="Component-learnMoreText-0-2-2"
+            className="Component-learnMoreText-2"
           >
             To learn more about transaction fees, click 
              
             <a
-              className="Component-learnMoreText-0-2-2  Component-learnMoreLink-0-2-3"
+              className="Component-learnMoreText-2  Component-learnMoreLink-3"
               href="https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed"
               onClick={[Function]}
             >
@@ -732,13 +732,13 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           </div>
         </div>
         <span
-          className="Component-divider-0-2-11"
+          className="Component-divider-11"
         >
            
         </span>
         <div>
           <span
-            className="Component-yourAddressTitle-0-2-9"
+            className="Component-yourAddressTitle-9"
           >
              Your Address: 
           </span>
@@ -746,16 +746,16 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
             className="MuiGrid-root MuiGrid-container"
           >
             <span
-              className="Component-publicKey-0-2-10"
+              className="Component-publicKey-10"
             >
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-2-15"
+              className="CopyComponent-copyButton-15"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-2-16"
+                className="CopyComponent-copyButtonSpan-16"
               >
                 COPY
               </span>

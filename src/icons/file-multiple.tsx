@@ -10,7 +10,7 @@ const styles = createStyles({
     }
 });
 
-export const FileMultipleIcon = withStyles(styles)((props: SvgIconProps  & WithStyles<typeof styles>) => (
+export const FileMultipleIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon {...props} viewBox='0 0 31 39'>
         <g id="💻-ID-Dashboard-multiple-files" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="multiple-files" transform="translate(-392.000000, -1692.000000)" stroke="#697C95" strokeWidth="1.71428571">

@@ -6,7 +6,7 @@ import {
     Theme,
     Button,
 } from '@material-ui/core';
-import { createStyles, withStyles } from '@material-ui/styles';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import {
     AttributeAlertLargeIcon,
     SimpleCheckIcon,
@@ -23,7 +23,7 @@ import {
 
 export type StatusProps = any;
 
-const statusInfoStyle = (theme: Theme) =>
+const styles = (theme: Theme) =>
     createStyles({
         defaultStatus: {
             border: `1px solid ${success}`,
@@ -64,7 +64,7 @@ const statusInfoStyle = (theme: Theme) =>
         }
     });
 
-export const StatusInfo = withStyles(statusInfoStyle)(({ classes, status, onClick, handleRefresh, tooltip }: StatusProps) => {
+export const StatusInfo = withStyles(styles)(({ classes, status, onClick, handleRefresh, tooltip }: StatusProps & WithStyles<typeof styles>) => {
     let icon, message, statusStyle, button = null;
     switch (status) {
         case 'Documents Required':

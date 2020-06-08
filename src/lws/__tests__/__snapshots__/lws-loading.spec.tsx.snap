@@ -2,11 +2,11 @@
 
 exports[`LWS Loading should show LWS Loading 1`] = `
 <div
-  className="Component-loading-0-2-1"
+  className="Component-loading-1"
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root Component-root-0-2-2"
+    className="MuiSvgIcon-root Component-root-2"
     focusable="false"
     viewBox="0 0 120 30"
   >

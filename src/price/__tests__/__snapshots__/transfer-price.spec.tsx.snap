@@ -10,7 +10,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-3"
+        className="MuiSvgIcon-root Component-root-3"
         focusable="false"
         viewBox="0 0 44 44"
       >
@@ -37,12 +37,12 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11"
     >
       <div
-        className="Component-cryptoCurrencyName-0-2-1"
+        className="Component-cryptoCurrencyName-1"
       >
         Selfkey
       </div>
       <div
-        className="Component-cryptoCurrencyShort-0-2-2"
+        className="Component-cryptoCurrencyShort-2"
       >
         KEY
       </div>
@@ -53,10 +53,10 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
   >
     <div>
       <div
-        className="MuiGrid-root Component-row-0-2-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
       >
         <div
-          className="MuiGrid-root Component-cryptoCurrencyValue-0-2-4 MuiGrid-item"
+          className="MuiGrid-root Component-cryptoCurrencyValue-4 MuiGrid-item"
         >
           <div>
             4
@@ -65,10 +65,10 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root Component-row-0-2-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
       >
         <div
-          className="MuiGrid-root Component-currency-0-2-5 MuiGrid-item"
+          className="MuiGrid-root Component-currency-5 MuiGrid-item"
         >
           <div>
             $0.0174857
@@ -76,7 +76,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
           </div>
         </div>
         <div
-          className="MuiGrid-root Component-currency-0-2-5 MuiGrid-item"
+          className="MuiGrid-root Component-currency-5 MuiGrid-item"
         >
           USD
         </div>

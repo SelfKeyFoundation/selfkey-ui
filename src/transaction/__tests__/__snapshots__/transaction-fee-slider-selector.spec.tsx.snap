@@ -2,7 +2,7 @@
 
 exports[`Transaction Fee Slider Selector should show Transaction Fee Slider Selector screen 1`] = `
 <div
-  className="TransactionFeeSelectorComponent-root-0-2-1"
+  className="TransactionFeeSelectorComponent-root-1"
 >
   <div>
     <span>
@@ -10,7 +10,7 @@ exports[`Transaction Fee Slider Selector should show Transaction Fee Slider Sele
     </span>
      
     <span
-      className="TransactionFeeSelectorComponent-networkFeeValue-0-2-8"
+      className="TransactionFeeSelectorComponent-networkFeeValue-8"
     >
       5.05e-8
        ETH / 
@@ -20,7 +20,7 @@ exports[`Transaction Fee Slider Selector should show Transaction Fee Slider Sele
     </span>
   </div>
   <span
-    className="MuiSlider-root TransactionFeeSelectorComponent-sliderRoot-0-2-2 MuiSlider-colorPrimary"
+    className="MuiSlider-root TransactionFeeSelectorComponent-sliderRoot-2 MuiSlider-colorPrimary"
     onMouseDown={[Function]}
   >
     <span
@@ -44,7 +44,7 @@ exports[`Transaction Fee Slider Selector should show Transaction Fee Slider Sele
       aria-valuemax={100000000000}
       aria-valuemin={1000000000}
       aria-valuenow={50500000000}
-      className="MuiSlider-thumb TransactionFeeSelectorComponent-thumb-0-2-5 MuiSlider-thumbColorPrimary"
+      className="MuiSlider-thumb TransactionFeeSelectorComponent-thumb-5 MuiSlider-thumbColorPrimary"
       data-index={0}
       onBlur={[Function]}
       onFocus={[Function]}
@@ -61,7 +61,7 @@ exports[`Transaction Fee Slider Selector should show Transaction Fee Slider Sele
     />
   </span>
   <div
-    className="TransactionFeeSelectorComponent-sliderLabels-0-2-7"
+    className="TransactionFeeSelectorComponent-sliderLabels-7"
   >
     <div>
       <p
@@ -116,7 +116,7 @@ exports[`Transaction Fee Slider Selector should show Transaction Fee Slider Sele
       </h6>
     </div>
     <div
-      className="TransactionFeeSelectorComponent-rightAligned-0-2-9"
+      className="TransactionFeeSelectorComponent-rightAligned-9"
     >
       <p
         className="MuiTypography-root MuiTypography-body1"

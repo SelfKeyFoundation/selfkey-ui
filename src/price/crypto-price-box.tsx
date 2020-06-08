@@ -1,10 +1,8 @@
 import * as React from 'react';
-// @ts-ignore
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { PriceSummary } from './price-summary';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     cryptoPriceBox: {
         height: 'calc(100% - 36px)',
         padding: '18px 0 18px 0',
@@ -23,7 +21,7 @@ const styles: StyleSheet = {
     test: {
         color: 'red'
     }
-};
+});
 
 export type CryptoPriceBoxProps = {
     locale: string,
@@ -31,9 +29,9 @@ export type CryptoPriceBoxProps = {
     cryptoValue: number,
     toCurrency: string
     toValue: number
-}
+};
 
-export const CryptoPriceBox = injectSheet(styles)<CryptoPriceBoxProps>(({classes, children, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (
+export const CryptoPriceBox = withStyles(styles)(({classes, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }: CryptoPriceBoxProps & WithStyles<typeof styles>) => (
     <div className={classes.cryptoPriceBox}>
         <PriceSummary className={classes.test} locale={locale} priceStyle="decimal" currency={cryptoCurrency} value={cryptoValue} appendCurrency/>
         <PriceSummary locale={locale} priceStyle="currency" currency={toCurrency} value={toValue} appendCurrency valueClass={classes.smallText} />

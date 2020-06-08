@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import injectSheet, { StyleSheet } from 'react-jss';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     root: {
       width: '39px !important',
       height: '45px !important'
     }
-  };
+});
 
-export const SimpleDeniedIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps) => (
+export const SimpleDeniedIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon width="39px" height="45px" {...props} viewBox="0 0 39 45">
         <title>icon-simple-denied</title>
         <g id="💻-ID-Dashboard-simple-denied" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

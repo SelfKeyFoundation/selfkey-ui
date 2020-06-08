@@ -1,19 +1,18 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',
         },
     }
-};
+});
 
-export const BankIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+export const BankIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
 	<SvgIcon style={{ width: props.width || '36px', height: props.height || '36px' }} {...props} viewBox="0 0 36 36">
         <g id="Marketplace-bank" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="720---Bank-Accounts" transform="translate(-150.000000, -153.000000)" fill="#00C0D9" fillRule="nonzero">
@@ -24,7 +23,7 @@ export const BankIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps &
                 </g>
             </g>
         </g>
-	</SvgIcon>
+    </SvgIcon>
 ));
 
 export default BankIcon;

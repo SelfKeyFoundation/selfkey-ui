@@ -1,17 +1,14 @@
 import * as React from 'react';
-// @ts-ignore
-import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
+import { Grid, Divider, WithStyles, withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../../common/common-style';
 import { TransactionFeeBox } from './fee/transaction-fee-box';
 import TransactionBox from '../transaction-box';
-import { Grid, Divider } from '@material-ui/core';
 import { NumberFormat } from '../../price/number-format';
 
-export const styles: StyleSheet = {
+export const styles = createStyles({
     container: {
         fontFamily: CommonStyle.fontFamily
     },
-
     button: {
         boxSizing: 'border-box',
         height: '45px',
@@ -33,7 +30,6 @@ export const styles: StyleSheet = {
             opacity: 0.7
         }
     },
-
     selectAllAmountBtn: {
         cursor: 'pointer',
         fontSize: '13px',
@@ -98,7 +94,6 @@ export const styles: StyleSheet = {
         margin: '0px',
         padding: '0px'
     },
-
     addressErrorText: {
         height: '19px',
         width: '242px',
@@ -107,17 +102,14 @@ export const styles: StyleSheet = {
         fontSize: '13px',
         lineHeight: '19px'
     },
-
     addressErrorColor: {
         color: '#FE4B61',
         borderBottom: '2px solid #FE4B61',
     },
-
     divider: {
         borderBottom: '2px solid #93b0c1',
         paddingTop: '10px'
     },
-
     cryptoSelect: {
         height: '40px',
         width: '300px',
@@ -131,13 +123,12 @@ export const styles: StyleSheet = {
         paddingLeft: '10px',
         paddingBottom: '10px',
     },
-
     selectItem: {
         border: 0,
         backgroundColor: '#1E262E',
         color: '#FFFFFF',
     }
-};
+});
 
 export type EthGasStationInfo = {
     safeLow: string;
@@ -146,14 +137,14 @@ export type EthGasStationInfo = {
 };
 
 export type Token = {
-	name: string;
-	symbol: string;
-	price: number;
-	balance: number;
-	balanceInFiat: number;
-	address?: string;
-	hidden: boolean;
-	isCustom: boolean;
+    name: string;
+    symbol: string;
+    price: number;
+    balance: number;
+    balanceInFiat: number;
+    address?: string;
+    hidden: boolean;
+    isCustom: boolean;
 };
 
 export type TransactionSendBoxProps = {
@@ -162,9 +153,9 @@ export type TransactionSendBoxProps = {
     address: string,
     amount: number,
     amountUsd: number,
-	gasPrice: number,
-	gasLimit: number,
-	nonce: number,
+    gasPrice: number,
+    gasLimit: number,
+    nonce: number,
     addressError: boolean
     ethFee: number,
     usdFee: number,
@@ -192,19 +183,19 @@ export type TransactionSendBoxState = {
     cryptoCurrency?: string
 }
 
-export type StyledProps = WithStyles<keyof typeof styles> & TransactionSendBoxProps;
+export type StyledProps = WithStyles<typeof styles> & TransactionSendBoxProps;
 
 export class TransactionSendBoxComponent extends React.Component<StyledProps, TransactionSendBoxState> {
     constructor(props: StyledProps) {
         super(props);
-        this.state = { amount: '', address: '', cryptoCurrency: props.cryptoCurrency }
+        this.state = {
+            amount: '',
+            address: '',
+            cryptoCurrency: props.cryptoCurrency
+        };
     }
 
-    renderFeeBox() {
-        return (
-            <TransactionFeeBox {...this.props} />
-        );
-    }
+    renderFeeBox = () => <TransactionFeeBox {...this.props} />;
 
     handleAllAmountClick() {
         const value = String(this.props.balance);
@@ -229,7 +220,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
         }
 
         // Do not allow to enter values above the balance
-        if(Number(value) > this.props.balance){
+        if (Number(value) > this.props.balance){
             value = String(this.props.balance)
         }
 
@@ -241,7 +232,7 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
 
     handleCryptoCurrencyChange(event: React.ChangeEvent<HTMLSelectElement>) {
         const value = event.target.value;
-        this.setState({...this.state, cryptoCurrency: value});
+        this.setState({...this.state, cryptoCurrency: value });
         if (this.props.onCryptoCurrencyChange) {
             this.props.onCryptoCurrencyChange(value);
         }
@@ -249,12 +240,9 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
 
     renderSelectTokenItems() {
         const { tokens, classes } = this.props;
-
-        return tokens.map((token, index) => {
-            return (
-                <option key={index} value={token.symbol} className={classes.selectItem}>{`${token.name} - ${token.balance} ${token.symbol}`}</option>
-            );
-        });
+        return tokens.map((token, index) => (
+            <option key={index} value={token.symbol} className={classes.selectItem}>{`${token.name} - ${token.balance} ${token.symbol}`}</option>
+        ));
     }
 
     renderButtons() {
@@ -283,13 +271,12 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 
     render() {
-        const {closeAction, isSendCustomToken, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
+        const { closeAction, isSendCustomToken, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
         let { cryptoCurrency } = this.state;
-
         let sendAmountClass = `${classes.input} ${classes.amountInput}`
         let addressInputClass = `${classes.input} ${addressError? classes.addressErrorColor : ''}`;
-
         let cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
+
         return (
             <TransactionBox cryptoCurrency={cryptoCurrencyText} closeAction={closeAction}>
                 <input id='sendToAddress' type='text' onChange={e => this.handleAddressChange(e)} value={this.state.address} className={addressInputClass} placeholder="Send to Address" />
@@ -336,6 +323,6 @@ export class TransactionSendBoxComponent extends React.Component<StyledProps, Tr
     }
 }
 
-export const TransactionSendBox = injectSheet(styles)(TransactionSendBoxComponent);
+export const TransactionSendBox = withStyles(styles)(TransactionSendBoxComponent);
 
 export default TransactionSendBox;

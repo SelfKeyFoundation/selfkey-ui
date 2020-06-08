@@ -9,5 +9,3 @@ export const success = '#1CBA7D';
 export const warning = '#E98548';
 export const error = '#FE4B61';
 export const white = '#FFFFFF';
-
-

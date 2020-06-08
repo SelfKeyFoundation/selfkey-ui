@@ -1,18 +1,17 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-	root: {
-		width: '22px !important',
-		height: '23px !important',
-	},
-};
+const styles = createStyles({
+    root: {
+        width: '22px !important',
+        height: '23px !important',
+    },
+});
 
-export const NewRefreshIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-	<SvgIcon {...props} viewBox="0 0 22 23" version="1.1">
+export const NewRefreshIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
+    <SvgIcon {...props} viewBox="0 0 22 23" version="1.1">
         <title>icon-refresh-statuses</title>
         <g id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="410.1-Marketplace-Applications-Statuses" transform="translate(-1223.000000, -389.000000)">
@@ -25,7 +24,7 @@ export const NewRefreshIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconP
                 </g>
             </g>
         </g>
-	</SvgIcon>
+    </SvgIcon>
 ));
 
 export default NewRefreshIcon;

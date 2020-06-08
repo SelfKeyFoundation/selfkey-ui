@@ -1,14 +1,10 @@
 import * as React from 'react';
-// @ts-ignore
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { Grid, WithStyles, withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
-
 import { NumberFormat } from './number-format';
-import { Grid } from '@material-ui/core'
 
 
-const styles: StyleSheet = {
+const styles = createStyles({
     row: {
         marginTop: '4px',
     },
@@ -26,11 +22,11 @@ const styles: StyleSheet = {
         fontSize: '17px',
         color: '#ffffff'
     }
-};
+});
 
 export type PriceSummaryProps = {
     className?: string,
-    justify?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | undefined, 
+    justify?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | undefined,
     currencyClass?: string,
     valueClass?: string,
     locale: string,
@@ -43,18 +39,32 @@ export type PriceSummaryProps = {
     showCurrency?: boolean,
 };
 
-export const PriceSummary = injectSheet(styles)<PriceSummaryProps>(({ classes, children, className, justify, currencyClass, valueClass, locale, fractionDigits, priceStyle, currency, value, appendCurrency, prependCurrency }) => (
-    <Grid container className={className? className : classes.row} justify={justify} alignItems='center' spacing={1}>
-        {appendCurrency &&
-            <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>
-        }
-        <Grid item className={valueClass? valueClass : classes.value} >
-            <NumberFormat locale={locale} priceStyle={priceStyle} currency={currency} value={value} fractionDigits={fractionDigits}/>
+export const PriceSummary = withStyles(styles)(
+    ({
+        classes,
+        className,
+        justify,
+        currencyClass,
+        valueClass,
+        locale,
+        fractionDigits,
+        priceStyle,
+        currency,
+        value,
+        appendCurrency,
+        prependCurrency
+    }: PriceSummaryProps & WithStyles<typeof styles>) => (
+        <Grid container className={className? className : classes.row} justify={justify} alignItems='center' spacing={1}>
+            {appendCurrency &&
+                <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>
+            }
+            <Grid item className={valueClass? valueClass : classes.value} >
+                <NumberFormat locale={locale} priceStyle={priceStyle} currency={currency} value={value} fractionDigits={fractionDigits}/>
+            </Grid>
+            {prependCurrency &&
+                <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>
+            }
         </Grid>
-        {prependCurrency &&
-            <Grid item className={currencyClass? currencyClass : classes.currency}>{currency}</Grid>
-        }
-    </Grid>
 ));
 
 export default PriceSummary;

@@ -1,1 +1,1 @@
-declare module 'react-truncate'
+declare module 'react-truncate';

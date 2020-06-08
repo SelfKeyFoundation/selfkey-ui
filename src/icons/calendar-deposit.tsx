@@ -1,17 +1,16 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-  root: {
-    width: '16px !important',
-    height: '16px !important'
-  }
-};
+const styles = createStyles({
+    root: {
+        width: '16px !important',
+        height: '16px !important'
+    }
+});
 
-export const CalendarDepositIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const CalendarDepositIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
   <SvgIcon {...props} viewBox='0 0 16 16'>
     <title>icon-calendar-deposit</title>
     <g id="💹-Marketplace-calendar-deposit" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

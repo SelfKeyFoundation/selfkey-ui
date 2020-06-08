@@ -2,14 +2,14 @@
 
 exports[`LWS Success should show LWS Success 1`] = `
 <div
-  className="Component-lwsSuccess-0-2-1"
+  className="Component-lwsSuccess-1"
 >
   <div
-    className="Component-areaTitle-0-2-2"
+    className="Component-areaTitle-2"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-3"
+      className="MuiSvgIcon-root Component-root-3"
       focusable="false"
       style={
         Object {

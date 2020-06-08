@@ -2,22 +2,22 @@
 
 exports[`Transaction Error Box should show transaction error generic screen 1`] = `
 <div
-  className="Component-boxWrapper-0-2-1"
+  className="Component-boxWrapper-1"
 >
   <div
-    className="Component-header-0-2-2"
+    className="Component-header-2"
   >
     <span
-      className="Component-headerTitle-0-2-3"
+      className="Component-headerTitle-3"
     >
        Transaction Confirmation 
     </span>
     <div
-      className="Component-closeDialogIconWrapper-0-2-9"
+      className="Component-closeDialogIconWrapper-9"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-10 MuiSvgIcon-fontSizeLarge"
+        className="MuiSvgIcon-root Component-root-10 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
         viewBox="0 0 38 38"
@@ -60,14 +60,14 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
     </div>
   </div>
   <div
-    className="MuiGrid-root Component-bodyContainer-0-2-4 MuiGrid-container MuiGrid-align-items-xs-flex-start"
+    className="MuiGrid-root Component-bodyContainer-4 MuiGrid-container MuiGrid-align-items-xs-flex-start"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-11"
+        className="MuiSvgIcon-root Component-root-11"
         focusable="false"
         style={
           Object {
@@ -129,18 +129,18 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
         className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
       >
         <div
-          className="Component-txFailedText-0-2-5"
+          className="Component-txFailedText-5"
         >
           Transaction Failed 
         </div>
         <span
-          className="Component-divider-0-2-8"
+          className="Component-divider-8"
         >
            
         </span>
         <div>
           <span
-            className="Component-yourAddressTitle-0-2-6"
+            className="Component-yourAddressTitle-6"
           >
              Your Address: 
           </span>
@@ -148,16 +148,16 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
             className="MuiGrid-root MuiGrid-container"
           >
             <span
-              className="Component-publicKey-0-2-7"
+              className="Component-publicKey-7"
             >
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-2-12"
+              className="CopyComponent-copyButton-12"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-2-13"
+                className="CopyComponent-copyButtonSpan-13"
               >
                 COPY
               </span>
@@ -172,22 +172,22 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
 
 exports[`Transaction Error Box should show transaction error generic screen with children 1`] = `
 <div
-  className="Component-boxWrapper-0-2-1"
+  className="Component-boxWrapper-1"
 >
   <div
-    className="Component-header-0-2-2"
+    className="Component-header-2"
   >
     <span
-      className="Component-headerTitle-0-2-3"
+      className="Component-headerTitle-3"
     >
        Transaction Confirmation 
     </span>
     <div
-      className="Component-closeDialogIconWrapper-0-2-9"
+      className="Component-closeDialogIconWrapper-9"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-10 MuiSvgIcon-fontSizeLarge"
+        className="MuiSvgIcon-root Component-root-10 MuiSvgIcon-fontSizeLarge"
         focusable="false"
         height="38px"
         viewBox="0 0 38 38"
@@ -230,14 +230,14 @@ exports[`Transaction Error Box should show transaction error generic screen with
     </div>
   </div>
   <div
-    className="MuiGrid-root Component-bodyContainer-0-2-4 MuiGrid-container MuiGrid-align-items-xs-flex-start"
+    className="MuiGrid-root Component-bodyContainer-4 MuiGrid-container MuiGrid-align-items-xs-flex-start"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-0-2-11"
+        className="MuiSvgIcon-root Component-root-11"
         focusable="false"
         style={
           Object {
@@ -299,7 +299,7 @@ exports[`Transaction Error Box should show transaction error generic screen with
         className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-flex-start"
       >
         <div
-          className="Component-txFailedText-0-2-5"
+          className="Component-txFailedText-5"
         >
           Transaction Failed 
         </div>
@@ -307,13 +307,13 @@ exports[`Transaction Error Box should show transaction error generic screen with
           some error goes here
         </span>
         <span
-          className="Component-divider-0-2-8"
+          className="Component-divider-8"
         >
            
         </span>
         <div>
           <span
-            className="Component-yourAddressTitle-0-2-6"
+            className="Component-yourAddressTitle-6"
           >
              Your Address: 
           </span>
@@ -321,16 +321,16 @@ exports[`Transaction Error Box should show transaction error generic screen with
             className="MuiGrid-root MuiGrid-container"
           >
             <span
-              className="Component-publicKey-0-2-7"
+              className="Component-publicKey-7"
             >
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-0-2-12"
+              className="CopyComponent-copyButton-12"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-0-2-13"
+                className="CopyComponent-copyButtonSpan-13"
               >
                 COPY
               </span>

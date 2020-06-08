@@ -1,12 +1,10 @@
 import * as React from 'react';
-
 import { TokenBox } from '../../src/price/token-box';
 import { TokenPrice } from '../../src/price/token-price';
 import { CustomTokenText } from '../../src/price/custom-token-text';
 import { EthereumIcon } from '../../src/icons/ethereum';
 import { SelfkeyIcon } from '../../src/icons/selfkey';
 import { CustomIcon } from '../../src/icons/custom';
-
 import { Grid } from '@material-ui/core'
 
 
