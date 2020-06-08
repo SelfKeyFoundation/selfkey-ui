@@ -1,22 +1,21 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import LinearGradient from './_linearGradient';
 
-const styles: StyleSheet = {
+const styles = createStyles({
   root: {
     transition: 'all 0.2s ease-out',
     '&:hover': {
         fill: 'white',
     },
   }
-};
+});
 
 const linearGradientColor = 'url(#grey-linear-gradient)';
 
-export const HourGlassLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const HourGlassLargeIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>)=> (
   <SvgIcon style={{ width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 66 66'>
     <LinearGradient color="grey" />
     <g id="-Wallet-Setup" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
@@ -30,7 +29,3 @@ export const HourGlassLargeIcon = injectSheet(styles)<SvgIconProps>((props: SvgI
 ));
 
 export default HourGlassLargeIcon;
-
-
-
-

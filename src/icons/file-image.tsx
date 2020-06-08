@@ -4,12 +4,12 @@ import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-  root: {
-    width: '29px !important',
-    height: '36px !important'
-  }
-};
+const styles = createStyles({
+    root: {
+        width: '29px !important',
+        height: '36px !important',
+    }
+});
 
 export const FileImageIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
   <SvgIcon {...props} viewBox='0 0 29 36'>

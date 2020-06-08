@@ -1,17 +1,16 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-  root: {
-    width: '27px !important',
-    height: '45px !important'
-  }
-};
+const styles = createStyles({
+    root: {
+        width: '27px !important',
+        height: '45px !important'
+      }
+});
 
-export const SimpleHourglassIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const SimpleHourglassIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon {...props} viewBox='0 0 27 45'>
         <title>icon-simple-hourglass</title>
         <g id="💻-ID-Dashboard-simle-hourglass-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

@@ -1,3 +1,4 @@
+/*
 // @ts-ignore
 import jss from 'jss';
 import preset from 'jss-preset-default';
@@ -47,3 +48,4 @@ export const setup = () => {
 	};
 	jss.createStyleSheet(styles).attach();
 };
+*/

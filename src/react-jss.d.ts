@@ -1,3 +1,4 @@
+/*
 declare module 'react-jss' {
   import * as React from 'react';
 
@@ -10,19 +11,19 @@ declare module 'react-jss' {
         string,
         | CSSProperties
         | ((props: Props) => React.CSSProperties)>
-        
+
   }
 
   export type StyleSheet<Props = {}>
     = Record<
         string,
-        | CSSProperties 
+        | CSSProperties
         | ((props: Props) => React.CSSProperties)
         | Record<string, CSSProperties>
       >;
 
-  type StyleRules<ClassKey extends string = string, Props = {}> 
-    = Record<ClassKey, CSSProperties 
+  type StyleRules<ClassKey extends string = string, Props = {}>
+    = Record<ClassKey, CSSProperties
     | ((props: Props) => React.CSSProperties)>;
 
   export type ClassNameMap<ClassKey extends string = string> = Record<ClassKey, string>;
@@ -48,3 +49,4 @@ declare module 'react-jss' {
 
   export const JssProvider: any
 }
+*/

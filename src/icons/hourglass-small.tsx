@@ -1,12 +1,12 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+// import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {};
+const styles = createStyles({});
 
-export const HourGlassSmallIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => {
+export const HourGlassSmallIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => {
 	let width = props.width || '20px';
 	let height = props.height || '26px';
 	let fill = props.fill || '#697C95';
