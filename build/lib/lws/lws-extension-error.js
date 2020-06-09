@@ -1,15 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LWSExtensionError = void 0;
-var React = require("react");
-var core_1 = require("@material-ui/core");
-var lws_button_1 = require("./lws-button");
-var common_style_1 = require("../common/common-style");
-var download_1 = require("../icons/download");
-var styles = core_1.createStyles({
-    buttonPrimary: common_style_1.default.buttonPrimary,
-    buttonSecondary: common_style_1.default.buttonSecondary,
-    form: common_style_1.default.form,
+import * as React from 'react';
+import { withStyles, createStyles } from '@material-ui/core';
+import { LWSButton } from './lws-button';
+import CommonStyle from '../common/common-style';
+import { DownloadIcon } from '../icons/download';
+const styles = createStyles({
+    buttonPrimary: CommonStyle.buttonPrimary,
+    buttonSecondary: CommonStyle.buttonSecondary,
+    form: CommonStyle.form,
     formSubmitRow: {
         marginTop: '15px',
         '& button': {
@@ -44,17 +41,14 @@ var styles = core_1.createStyles({
         }
     },
 });
-exports.LWSExtensionError = core_1.withStyles(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, installExtensionAction = _a.installExtensionAction;
-    return (React.createElement("div", null,
-        React.createElement("div", { className: classes.areaTitle },
-            React.createElement(download_1.DownloadIcon, null),
-            React.createElement("h2", null, "Action Required"),
-            React.createElement("h3", null, "Install Login With SelfKey Browser Extension")),
-        React.createElement("div", { className: classes.form },
-            React.createElement("p", { className: classes.supportText }, "Login With SelfKey is a browser extension that allows you to securely login to this website through your SelfKey ID and Ethereum address, powered by the SelfKey Identity Wallet."),
-            React.createElement("div", { className: classes.formSubmitRow },
-                React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: installExtensionAction }, "Install Browser Extension")))));
-});
-exports.default = exports.LWSExtensionError;
+export const LWSExtensionError = withStyles(styles)(({ classes, children, installExtensionAction }) => (React.createElement("div", null,
+    React.createElement("div", { className: classes.areaTitle },
+        React.createElement(DownloadIcon, null),
+        React.createElement("h2", null, "Action Required"),
+        React.createElement("h3", null, "Install Login With SelfKey Browser Extension")),
+    React.createElement("div", { className: classes.form },
+        React.createElement("p", { className: classes.supportText }, "Login With SelfKey is a browser extension that allows you to securely login to this website through your SelfKey ID and Ethereum address, powered by the SelfKey Identity Wallet."),
+        React.createElement("div", { className: classes.formSubmitRow },
+            React.createElement(LWSButton, { className: classes.buttonPrimary, onClick: installExtensionAction }, "Install Browser Extension"))))));
+export default LWSExtensionError;
 //# sourceMappingURL=lws-extension-error.js.map

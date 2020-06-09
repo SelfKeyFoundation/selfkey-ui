@@ -1,14 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.NumberFormat = void 0;
-var React = require("react");
-var formatters = {};
-exports.NumberFormat = function (_a) {
-    var locale = _a.locale, priceStyle = _a.priceStyle, currency = _a.currency, value = _a.value, fractionDigits = _a.fractionDigits, showCurrency = _a.showCurrency;
+import * as React from "react";
+const formatters = {};
+export const NumberFormat = ({ locale, priceStyle, currency, value, fractionDigits, showCurrency, }) => {
     fractionDigits = (fractionDigits) ? fractionDigits : (Number(value) >= 1) ? 2 : 10;
-    var formatString = locale + ":" + priceStyle + ":" + currency + ":" + (fractionDigits || "default");
+    const formatString = `${locale}:${priceStyle}:${currency}:${fractionDigits || "default"}`;
     if (locale && !formatters[formatString]) {
-        var options = {
+        const options = {
             style: priceStyle,
             maximumFractionDigits: fractionDigits
         };

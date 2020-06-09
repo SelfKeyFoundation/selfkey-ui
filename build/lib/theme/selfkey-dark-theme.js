@@ -1,178 +1,165 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SelfkeyDarkTheme = void 0;
-var React = require("react");
-var core_1 = require("@material-ui/core");
-var colors_1 = require("../colors");
-__exportStar(require("../colors"), exports);
-__exportStar(require("../materialui/button"), exports);
-__exportStar(require("../materialui/colorPresentation"), exports);
-__exportStar(require("../materialui/datepicker"), exports);
-__exportStar(require("../materialui/inputs"), exports);
-__exportStar(require("../materialui/lists"), exports);
-__exportStar(require("../materialui/modalElements"), exports);
-__exportStar(require("../materialui/pagination"), exports);
-__exportStar(require("../materialui/statuses"), exports);
-__exportStar(require("../materialui/tables"), exports);
-__exportStar(require("../materialui/tooltipArrow"), exports);
-__exportStar(require("../materialui/typography"), exports);
-__exportStar(require("../icons/address-book-menu"), exports);
-__exportStar(require("../icons/address-book"), exports);
-__exportStar(require("../icons/animated-loading"), exports);
-__exportStar(require("../icons/attribute-alert"), exports);
-__exportStar(require("../icons/attribute-alert-large"), exports);
-__exportStar(require("../icons/bank"), exports);
-__exportStar(require("../icons/bank-rounded"), exports);
-__exportStar(require("../icons/book"), exports);
-__exportStar(require("../icons/buy-rounded"), exports);
-__exportStar(require("../icons/calculator"), exports);
-__exportStar(require("../icons/calendar"), exports);
-__exportStar(require("../icons/calendar-deposit"), exports);
-__exportStar(require("../icons/certificate"), exports);
-__exportStar(require("../icons/chart"), exports);
-__exportStar(require("../icons/check-empty"), exports);
-__exportStar(require("../icons/check"), exports);
-__exportStar(require("../icons/check-ma"), exports);
-__exportStar(require("../icons/clear"), exports);
-__exportStar(require("../icons/clipboard"), exports);
-__exportStar(require("../icons/close-button"), exports);
-__exportStar(require("../icons/coins"), exports);
-__exportStar(require("../icons/company"), exports);
-__exportStar(require("../icons/copy"), exports);
-__exportStar(require("../icons/corporate"), exports);
-__exportStar(require("../icons/custom"), exports);
-__exportStar(require("../icons/dashboard-menu"), exports);
-__exportStar(require("../icons/delete"), exports);
-__exportStar(require("../icons/denied"), exports);
-__exportStar(require("../icons/did"), exports);
-__exportStar(require("../icons/director"), exports);
-__exportStar(require("../icons/document"), exports);
-__exportStar(require("../icons/download-2"), exports);
-__exportStar(require("../icons/download"), exports);
-__exportStar(require("../icons/dropdown"), exports);
-__exportStar(require("../icons/edit-transparent"), exports);
-__exportStar(require("../icons/erc20"), exports);
-__exportStar(require("../icons/ethereum"), exports);
-__exportStar(require("../icons/exchange-large"), exports);
-__exportStar(require("../icons/exchange-rounded"), exports);
+import * as React from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+import { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight } from '../colors';
+export * from '../colors';
+export * from '../materialui/button';
+export * from '../materialui/colorPresentation';
+export * from '../materialui/datepicker';
+export * from '../materialui/inputs';
+export * from '../materialui/lists';
+export * from '../materialui/modalElements';
+export * from '../materialui/pagination';
+export * from '../materialui/statuses';
+export * from '../materialui/tables';
+export * from '../materialui/tooltipArrow';
+export * from '../materialui/typography';
+export * from '../icons/address-book-menu';
+export * from '../icons/address-book';
+export * from '../icons/animated-loading';
+export * from '../icons/attribute-alert';
+export * from '../icons/attribute-alert-large';
+export * from '../icons/bank';
+export * from '../icons/bank-rounded';
+export * from '../icons/book';
+export * from '../icons/buy-rounded';
+export * from '../icons/calculator';
+export * from '../icons/calendar';
+export * from '../icons/calendar-deposit';
+export * from '../icons/certificate';
+export * from '../icons/chart';
+export * from '../icons/check-empty';
+export * from '../icons/check';
+export * from '../icons/check-ma';
+export * from '../icons/clear';
+export * from '../icons/clipboard';
+export * from '../icons/close-button';
+export * from '../icons/coins';
+export * from '../icons/company';
+export * from '../icons/copy';
+export * from '../icons/corporate';
+export * from '../icons/custom';
+export * from '../icons/dashboard-menu';
+export * from '../icons/delete';
+export * from '../icons/denied';
+export * from '../icons/did';
+export * from '../icons/director';
+export * from '../icons/document';
+export * from '../icons/download-2';
+export * from '../icons/download';
+export * from '../icons/dropdown';
+export * from '../icons/edit-transparent';
+export * from '../icons/erc20';
+export * from '../icons/ethereum';
+export * from '../icons/exchange-large';
+export * from '../icons/exchange-rounded';
 // export * from '../icons/exchange';
-__exportStar(require("../icons/existing-address"), exports);
-__exportStar(require("../icons/failed"), exports);
-__exportStar(require("../icons/file-audio"), exports);
-__exportStar(require("../icons/file-default"), exports);
-__exportStar(require("../icons/file-image"), exports);
-__exportStar(require("../icons/file-multiple"), exports);
-__exportStar(require("../icons/file-pdf"), exports);
-__exportStar(require("../icons/file-video"), exports);
-__exportStar(require("../icons/filter"), exports);
-__exportStar(require("../icons/gear"), exports);
-__exportStar(require("../icons/green-tick"), exports);
-__exportStar(require("../icons/hard-drive"), exports);
-__exportStar(require("../icons/help"), exports);
-__exportStar(require("../icons/hourglass-large"), exports);
-__exportStar(require("../icons/hourglass-simple"), exports);
-__exportStar(require("../icons/hourglass-small"), exports);
-__exportStar(require("../icons/id-card"), exports);
-__exportStar(require("../icons/incorporations"), exports);
-__exportStar(require("../icons/incorporations-rounded"), exports);
-__exportStar(require("../icons/info"), exports);
-__exportStar(require("../icons/key"), exports);
-__exportStar(require("../icons/ledger"), exports);
-__exportStar(require("../icons/list"), exports);
-__exportStar(require("../icons/mail"), exports);
-__exportStar(require("../icons/marketplace-menu"), exports);
-__exportStar(require("../icons/marketplace"), exports);
-__exportStar(require("../icons/marketplace-loan"), exports);
-__exportStar(require("../icons/marketplace-notaries"), exports);
-__exportStar(require("../icons/member"), exports);
-__exportStar(require("../icons/menu-affiliate"), exports);
-__exportStar(require("../icons/menu-button"), exports);
-__exportStar(require("../icons/menu-help"), exports);
-__exportStar(require("../icons/menu-export"), exports);
-__exportStar(require("../icons/menu-new"), exports);
-__exportStar(require("../icons/merge"), exports);
-__exportStar(require("../icons/modal-close"), exports);
-__exportStar(require("../icons/money"), exports);
-__exportStar(require("../icons/muiadd"), exports);
-__exportStar(require("../icons/muidelete"), exports);
-__exportStar(require("../icons/muiedit"), exports);
-__exportStar(require("../icons/muivisibility"), exports);
-__exportStar(require("../icons/my-crypto-large"), exports);
-__exportStar(require("../icons/new-address"), exports);
-__exportStar(require("../icons/notarize-document"), exports);
-__exportStar(require("../icons/observer"), exports);
-__exportStar(require("../icons/okay"), exports);
-__exportStar(require("../icons/password-confirm"), exports);
-__exportStar(require("../icons/password"), exports);
-__exportStar(require("../icons/payment"), exports);
-__exportStar(require("../icons/pending-rounded"), exports);
-__exportStar(require("../icons/person"), exports);
-__exportStar(require("../icons/power"), exports);
-__exportStar(require("../icons/print-small"), exports);
-__exportStar(require("../icons/print"), exports);
-__exportStar(require("../icons/profile"), exports);
-__exportStar(require("../icons/protection"), exports);
-__exportStar(require("../icons/quit"), exports);
-__exportStar(require("../icons/receive"), exports);
-__exportStar(require("../icons/received-rounded"), exports);
-__exportStar(require("../icons/refresh"), exports);
-__exportStar(require("../icons/refresh2"), exports);
-__exportStar(require("../icons/reply"), exports);
-__exportStar(require("../icons/return-large"), exports);
-__exportStar(require("../icons/return"), exports);
-__exportStar(require("../icons/round-company"), exports);
-__exportStar(require("../icons/round-company-small"), exports);
-__exportStar(require("../icons/round-person"), exports);
-__exportStar(require("../icons/round-person-small"), exports);
-__exportStar(require("../icons/select-dropdown"), exports);
-__exportStar(require("../icons/selfkey-id-menu"), exports);
-__exportStar(require("../icons/selfkey"), exports);
-__exportStar(require("../icons/selfkeyLogo"), exports);
-__exportStar(require("../icons/selfkeyLogoTemp"), exports);
-__exportStar(require("../icons/sent-blue"), exports);
-__exportStar(require("../icons/sent"), exports);
-__exportStar(require("../icons/sent-rounded"), exports);
-__exportStar(require("../icons/share"), exports);
-__exportStar(require("../icons/shield"), exports);
-__exportStar(require("../icons/signature"), exports);
-__exportStar(require("../icons/simple-check"), exports);
-__exportStar(require("../icons/simple-denied"), exports);
-__exportStar(require("../icons/sk-id"), exports);
-__exportStar(require("../icons/stick"), exports);
-__exportStar(require("../icons/structure"), exports);
-__exportStar(require("../icons/success"), exports);
-__exportStar(require("../icons/switch-accounts"), exports);
-__exportStar(require("../icons/tick"), exports);
-__exportStar(require("../icons/transfer"), exports);
-__exportStar(require("../icons/trezor-bridge"), exports);
-__exportStar(require("../icons/trezor"), exports);
-__exportStar(require("../icons/unlock-large"), exports);
-__exportStar(require("../icons/unlock"), exports);
-__exportStar(require("../icons/upload"), exports);
-__exportStar(require("../icons/userplus"), exports);
-__exportStar(require("../icons/view"), exports);
-__exportStar(require("../icons/visibility-off"), exports);
-__exportStar(require("../icons/visibility-on"), exports);
-__exportStar(require("../icons/wallet"), exports);
-__exportStar(require("../icons/warning-shield"), exports);
-__exportStar(require("../icons/id"), exports);
+export * from '../icons/existing-address';
+export * from '../icons/failed';
+export * from '../icons/file-audio';
+export * from '../icons/file-default';
+export * from '../icons/file-image';
+export * from '../icons/file-multiple';
+export * from '../icons/file-pdf';
+export * from '../icons/file-video';
+export * from '../icons/filter';
+export * from '../icons/gear';
+export * from '../icons/green-tick';
+export * from '../icons/hard-drive';
+export * from '../icons/help';
+export * from '../icons/hourglass-large';
+export * from '../icons/hourglass-simple';
+export * from '../icons/hourglass-small';
+export * from '../icons/id-card';
+export * from '../icons/incorporations';
+export * from '../icons/incorporations-rounded';
+export * from '../icons/info';
+export * from '../icons/key';
+export * from '../icons/ledger';
+export * from '../icons/list';
+export * from '../icons/mail';
+export * from '../icons/marketplace-menu';
+export * from '../icons/marketplace';
+export * from '../icons/marketplace-loan';
+export * from '../icons/marketplace-notaries';
+export * from '../icons/member';
+export * from '../icons/menu-affiliate';
+export * from '../icons/menu-button';
+export * from '../icons/menu-help';
+export * from '../icons/menu-export';
+export * from '../icons/menu-new';
+export * from '../icons/merge';
+export * from '../icons/modal-close';
+export * from '../icons/money';
+export * from '../icons/muiadd';
+export * from '../icons/muidelete';
+export * from '../icons/muiedit';
+export * from '../icons/muivisibility';
+export * from '../icons/my-crypto-large';
+export * from '../icons/new-address';
+export * from '../icons/notarize-document';
+export * from '../icons/observer';
+export * from '../icons/okay';
+export * from '../icons/password-confirm';
+export * from '../icons/password';
+export * from '../icons/payment';
+export * from '../icons/pending-rounded';
+export * from '../icons/person';
+export * from '../icons/power';
+export * from '../icons/print-small';
+export * from '../icons/print';
+export * from '../icons/profile';
+export * from '../icons/protection';
+export * from '../icons/quit';
+export * from '../icons/receive';
+export * from '../icons/received-rounded';
+export * from '../icons/refresh';
+export * from '../icons/refresh2';
+export * from '../icons/reply';
+export * from '../icons/return-large';
+export * from '../icons/return';
+export * from '../icons/round-company';
+export * from '../icons/round-company-small';
+export * from '../icons/round-person';
+export * from '../icons/round-person-small';
+export * from '../icons/select-dropdown';
+export * from '../icons/selfkey-id-menu';
+export * from '../icons/selfkey';
+export * from '../icons/selfkeyLogo';
+export * from '../icons/selfkeyLogoTemp';
+export * from '../icons/sent-blue';
+export * from '../icons/sent';
+export * from '../icons/sent-rounded';
+export * from '../icons/share';
+export * from '../icons/shield';
+export * from '../icons/signature';
+export * from '../icons/simple-check';
+export * from '../icons/simple-denied';
+export * from '../icons/sk-id';
+export * from '../icons/stick';
+export * from '../icons/structure';
+export * from '../icons/success';
+export * from '../icons/switch-accounts';
+export * from '../icons/tick';
+export * from '../icons/transfer';
+export * from '../icons/trezor-bridge';
+export * from '../icons/trezor';
+export * from '../icons/unlock-large';
+export * from '../icons/unlock';
+export * from '../icons/upload';
+export * from '../icons/userplus';
+export * from '../icons/view';
+export * from '../icons/visibility-off';
+export * from '../icons/visibility-on';
+export * from '../icons/wallet';
+export * from '../icons/warning-shield';
+export * from '../icons/id';
 /*
 export { MuiEditIcon } from '../icons/muiedit';
 export { MuiAddIcon } from '../icons/muiadd';
 export { MuiDeleteIcon } from '../icons/muidelete';
 export { MuiVisibilityIcon } from '../icons/muivisibility';
 */
-var theme = core_1.createMuiTheme({
+const theme = createMuiTheme({
     // Reset and Globals
     '@global': {
         'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video': {
@@ -239,19 +226,19 @@ var theme = core_1.createMuiTheme({
     // Theme
     palette: {
         primary: {
-            main: colors_1.primary,
-            light: colors_1.primaryTint,
+            main: primary,
+            light: primaryTint,
         },
         secondary: {
-            main: colors_1.typography,
+            main: typography,
         },
         error: {
-            main: colors_1.error,
+            main: error,
         },
         text: {
-            primary: colors_1.white,
-            secondary: colors_1.grey,
-            disabled: colors_1.grey,
+            primary: white,
+            secondary: grey,
+            disabled: grey,
             hint: 'rgba(0, 0, 0, 0.38)',
         },
     },
@@ -268,13 +255,13 @@ var theme = core_1.createMuiTheme({
         },
         MuiCardHeader: {
             title: {
-                color: colors_1.white,
+                color: white,
                 fontSize: '18px',
                 fontWeight: 400,
                 lineHeight: '22px',
             },
             subheader: {
-                color: colors_1.white,
+                color: white,
                 fontSize: '16px',
                 fontWeight: 600,
             },
@@ -299,7 +286,7 @@ var theme = core_1.createMuiTheme({
                 lineHeight: '26px',
             },
             h3: {
-                color: colors_1.typography,
+                color: typography,
                 fontSize: '16px',
                 lineHeight: '24px',
             },
@@ -335,13 +322,13 @@ var theme = core_1.createMuiTheme({
                 lineHeight: '19px',
             },
             caption: {
-                color: colors_1.warning,
+                color: warning,
                 display: 'block',
                 fontSize: '16px',
                 lineHeight: '24px',
             },
             overline: {
-                color: colors_1.typography,
+                color: typography,
                 display: 'block',
                 fontSize: '12px',
                 fontWeight: 600,
@@ -371,15 +358,15 @@ var theme = core_1.createMuiTheme({
                 paddingBottom: '0',
                 paddingTop: '0',
                 '&$selected': {
-                    backgroundColor: colors_1.grey,
+                    backgroundColor: grey,
                     '& .choose': {
-                        color: colors_1.baseDark + " !important"
+                        color: `${baseDark} !important`
                     },
                     '&:hover': {
-                        backgroundColor: colors_1.grey,
+                        backgroundColor: grey,
                     },
                     '&$disabled': {
-                        backgroundColor: colors_1.baseLight + " !important"
+                        backgroundColor: `${baseLight} !important`
                     }
                 },
             },
@@ -402,25 +389,25 @@ var theme = core_1.createMuiTheme({
         },
         MuiInput: {
             root: {
-                backgroundColor: colors_1.baseDark,
+                backgroundColor: baseDark,
                 borderRadius: '4px',
                 border: '1px solid #384656',
                 boxSizing: 'border-box',
-                color: colors_1.white,
+                color: white,
                 fontSize: '14px',
                 height: '44px',
                 lineHeight: '21px',
                 paddingLeft: '16px',
                 '&$error': {
                     backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                    border: "1px solid " + colors_1.error,
-                    color: colors_1.error,
+                    border: `1px solid ${error}`,
+                    color: error,
                     marginBottom: '6px',
                 },
                 '&$focused': {
                     '&$focused:not($error):not($disabled)': {
-                        border: "1px solid " + colors_1.primary,
-                        boxShadow: "0 0 3px 1px " + colors_1.primary,
+                        border: `1px solid ${primary}`,
+                        boxShadow: `0 0 3px 1px ${primary}`,
                     },
                 },
                 '&$disabled': {
@@ -455,7 +442,7 @@ var theme = core_1.createMuiTheme({
         MuiInputBase: {
             input: {
                 '&::placeholder': {
-                    color: colors_1.grey,
+                    color: grey,
                     opacity: 1,
                 },
             },
@@ -480,13 +467,13 @@ var theme = core_1.createMuiTheme({
                 fontSize: '1.5rem',
                 transition: 'all 0.2s ease-out',
                 '&:hover': {
-                    color: colors_1.white,
+                    color: white,
                 },
                 '&:focus': {
-                    color: colors_1.primary,
+                    color: primary,
                 },
                 '&:checked': {
-                    color: colors_1.primary,
+                    color: primary,
                 },
             },
             fontSizeSmall: {
@@ -496,7 +483,7 @@ var theme = core_1.createMuiTheme({
         MuiCheckbox: {
             root: {
                 borderRadius: '3px',
-                color: colors_1.grey,
+                color: grey,
                 height: '18px',
                 marginRight: '10px',
                 padding: 0,
@@ -508,19 +495,19 @@ var theme = core_1.createMuiTheme({
                     },
                 },
                 '&$checked:not($disabled):not($colorPrimary)': {
-                    backgroundColor: colors_1.primary + " !important",
-                    border: "1px solid " + colors_1.primary + " !important",
-                    color: colors_1.baseDark + " !important",
+                    backgroundColor: `${primary} !important`,
+                    border: `1px solid ${primary} !important`,
+                    color: `${baseDark} !important`,
                 },
                 '&$checked:not($disabled)': {
-                    backgroundColor: colors_1.error + " !important",
-                    border: "1px solid " + colors_1.error + " !important",
-                    color: "#392E3C !important",
+                    backgroundColor: `${error} !important`,
+                    border: `1px solid ${error} !important`,
+                    color: `#392E3C !important`,
                 },
                 '&$checked': {
-                    backgroundColor: "#384656 !important",
-                    border: "1px solid #2F3B48 !important",
-                    color: colors_1.baseDark + " !important",
+                    backgroundColor: `#384656 !important`,
+                    border: `1px solid #2F3B48 !important`,
+                    color: `${baseDark} !important`,
                 },
                 '&$disabled:not($checked)': {
                     color: 'transparent !important',
@@ -539,8 +526,8 @@ var theme = core_1.createMuiTheme({
                 },
             },
             colorSecondary: {
-                backgroundColor: colors_1.baseDark,
-                border: "1px solid " + colors_1.grey,
+                backgroundColor: baseDark,
+                border: `1px solid ${grey}`,
                 borderRadius: '3px',
                 color: 'transparent',
                 height: '18px',
@@ -549,7 +536,7 @@ var theme = core_1.createMuiTheme({
             },
             colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: "1px solid " + colors_1.error,
+                border: `1px solid ${error}`,
                 borderRadius: '3px',
                 color: 'transparent',
                 height: '18px',
@@ -564,7 +551,7 @@ var theme = core_1.createMuiTheme({
             root: {
                 borderRadius: '50%',
                 boxSizing: 'border-box',
-                color: colors_1.grey,
+                color: grey,
                 height: '18px',
                 marginRight: '10px',
                 padding: 0,
@@ -576,19 +563,19 @@ var theme = core_1.createMuiTheme({
                     },
                 },
                 '&$checked:not($disabled):not($colorPrimary)': {
-                    backgroundColor: "#1e262d !important",
-                    border: "1px solid " + colors_1.primary + " !important",
-                    color: colors_1.primary + " !important",
+                    backgroundColor: `#1e262d !important`,
+                    border: `1px solid ${primary} !important`,
+                    color: `${primary} !important`,
                 },
                 '&$checked:not($disabled)': {
-                    backgroundColor: "#392E3C !important",
-                    border: "1px solid " + colors_1.error + " !important",
-                    color: colors_1.error + " !important",
+                    backgroundColor: `#392E3C !important`,
+                    border: `1px solid ${error} !important`,
+                    color: `${error} !important`,
                 },
                 '&$checked': {
-                    backgroundColor: colors_1.baseDark + " !important",
-                    border: "1px solid " + colors_1.baseDark + " !important",
-                    color: "#35424e !important",
+                    backgroundColor: `${baseDark} !important`,
+                    border: `1px solid ${baseDark} !important`,
+                    color: `#35424e !important`,
                 },
                 '&$disabled:not($checked)': {
                     color: 'transparent !important',
@@ -607,8 +594,8 @@ var theme = core_1.createMuiTheme({
                 },
             },
             colorSecondary: {
-                backgroundColor: colors_1.baseDark,
-                border: "1px solid " + colors_1.grey,
+                backgroundColor: baseDark,
+                border: `1px solid ${grey}`,
                 borderRadius: '50%',
                 color: 'transparent',
                 height: '18px',
@@ -617,7 +604,7 @@ var theme = core_1.createMuiTheme({
             },
             colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: "1px solid " + colors_1.error,
+                border: `1px solid ${error}`,
                 borderRadius: '50%',
                 color: 'transparent',
                 height: '18px',
@@ -633,16 +620,16 @@ var theme = core_1.createMuiTheme({
                 borderRadius: '4px',
                 lineHeight: 'initial',
                 '& option': {
-                    backgroundColor: colors_1.baseDark + " !important",
-                    border: "1px solid " + colors_1.baseDark + " !important",
-                    color: "#FFFFFF !important",
+                    backgroundColor: `${baseDark} !important`,
+                    border: `1px solid ${baseDark} !important`,
+                    color: `#FFFFFF !important`,
                 },
             },
             icon: {
                 color: 'rgba(147, 176, 193, 0.5)',
             },
             selectMenu: {
-                color: colors_1.white,
+                color: white,
                 fontSize: '14px',
                 lineHeight: '21px',
             },
@@ -655,8 +642,8 @@ var theme = core_1.createMuiTheme({
         },
         MuiMenu: {
             paper: {
-                border: "1px solid " + colors_1.primary,
-                boxShadow: "0 0 3px 1px " + colors_1.primary,
+                border: `1px solid ${primary}`,
+                boxShadow: `0 0 3px 1px ${primary}`,
                 marginLeft: '-17px',
                 marginTop: '-6px',
                 maxHeight: '300px',
@@ -665,11 +652,11 @@ var theme = core_1.createMuiTheme({
         },
         MuiPaper: {
             root: {
-                backgroundColor: colors_1.baseDark,
+                backgroundColor: baseDark,
                 border: '1px solid #384656',
                 boxShadow: 'none',
                 boxSizing: 'border-box',
-                color: colors_1.white,
+                color: white,
                 minWidth: '200px',
                 top: '535px',
                 left: '31px',
@@ -684,7 +671,7 @@ var theme = core_1.createMuiTheme({
         },
         MuiFormGroup: {
             root: {
-                backgroundColor: colors_1.base,
+                backgroundColor: base,
                 marginBottom: '15px',
             },
         },
@@ -699,7 +686,7 @@ var theme = core_1.createMuiTheme({
                 marginLeft: 0,
             },
             label: {
-                color: colors_1.typography,
+                color: typography,
                 fontSize: '16px',
                 lineHeight: '24px'
             },
@@ -718,7 +705,7 @@ var theme = core_1.createMuiTheme({
             root: {
                 borderRadius: '4px',
                 boxSizing: 'border-box',
-                color: colors_1.white,
+                color: white,
                 fontSize: '13px',
                 fontWeight: 600,
                 height: '36px',
@@ -726,7 +713,7 @@ var theme = core_1.createMuiTheme({
                 lineHeight: '16px',
                 minWidth: '120px',
                 '&$disabled': {
-                    color: colors_1.white,
+                    color: white,
                     opacity: 0.5,
                 },
             },
@@ -734,7 +721,7 @@ var theme = core_1.createMuiTheme({
                 background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
                 border: '1px solid #0FB8D0',
                 boxShadow: 'none',
-                color: colors_1.white,
+                color: white,
                 '&:hover': {
                     background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
                 },
@@ -742,13 +729,13 @@ var theme = core_1.createMuiTheme({
                     background: 'linear-gradient(to top right, #0A99D0 10%, #097CBA 70%);',
                 },
                 '&$disabled': {
-                    color: colors_1.white,
+                    color: white,
                 },
             },
             outlined: {
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
-                color: colors_1.primary,
+                color: primary,
                 '&:hover': {
                     background: '#313D49',
                     borderColor: '#23E6FE',
@@ -757,24 +744,24 @@ var theme = core_1.createMuiTheme({
                     background: '#1E262E',
                 },
                 '&$disabled': {
-                    color: colors_1.primary,
+                    color: primary,
                     border: '2px solid #1CA9BA',
                 },
             },
             outlinedSecondary: {
                 background: 'transparent',
-                border: "1px solid " + colors_1.typography,
-                color: colors_1.typography,
+                border: `1px solid ${typography}`,
+                color: typography,
                 '&:hover': {
                     backgroundColor: '#313D49',
-                    border: "1px solid " + colors_1.typography,
+                    border: `1px solid ${typography}`,
                 },
                 '&:focus': {
-                    background: colors_1.baseDark,
+                    background: baseDark,
                 },
                 '&$disabled': {
-                    border: "1px solid " + colors_1.typography,
-                    color: colors_1.typography,
+                    border: `1px solid ${typography}`,
+                    color: typography,
                 },
             },
             sizeLarge: {
@@ -792,7 +779,7 @@ var theme = core_1.createMuiTheme({
                 padding: '0 10px',
             },
             text: {
-                color: colors_1.primary,
+                color: primary,
                 fontSize: '14px',
                 fontWeight: 400,
                 letterSpacing: 'initial',
@@ -800,20 +787,20 @@ var theme = core_1.createMuiTheme({
                 textTransform: 'initial',
                 '&:hover': {
                     backgroundColor: 'transparent',
-                    color: colors_1.primaryTint,
+                    color: primaryTint,
                     textDecoration: 'underline'
                 },
             }
         },
         MuiIconButton: {
             root: {
-                color: colors_1.grey,
+                color: grey,
                 padding: '7px 5px',
                 '&:hover': {
                     backgroundColor: 'transparent',
                 },
                 '&$disabled': {
-                    color: colors_1.grey,
+                    color: grey,
                 },
             },
         },
@@ -833,7 +820,7 @@ var theme = core_1.createMuiTheme({
                 textOverflow: 'ellipsis',
             },
             head: {
-                backgroundColor: colors_1.baseDark,
+                backgroundColor: baseDark,
                 borderBottom: 0,
             },
             body: {
@@ -841,7 +828,7 @@ var theme = core_1.createMuiTheme({
                 minHeight: '74px',
             },
             footer: {
-                color: colors_1.warning,
+                color: warning,
             },
         },
         MuiTooltip: {
@@ -853,10 +840,10 @@ var theme = core_1.createMuiTheme({
         },
         MuiTabs: {
             root: {
-                borderBottom: "1px solid " + colors_1.grey,
+                borderBottom: `1px solid ${grey}`,
             },
             indicator: {
-                backgroundColor: colors_1.primary,
+                backgroundColor: primary,
                 height: '4px',
                 marginLeft: '-1px',
             },
@@ -867,20 +854,20 @@ var theme = core_1.createMuiTheme({
             // 	lineHeight: '19px',
             // },
             root: {
-                borderBottom: "4px solid transparent",
+                borderBottom: `4px solid transparent`,
                 textTransform: 'initial',
                 minWidth: '0 !important',
                 '&:hover': {
-                    borderBottom: "4px solid " + colors_1.grey,
+                    borderBottom: `4px solid ${grey}`,
                     boxSizing: 'border-box',
-                    color: colors_1.white,
+                    color: white,
                 },
                 '&$selected': {
-                    color: colors_1.white,
+                    color: white,
                 },
             },
             textColorInherit: {
-                color: colors_1.typography,
+                color: typography,
             },
             wrapper: {
                 width: 'initial',
@@ -888,7 +875,7 @@ var theme = core_1.createMuiTheme({
         },
         MuiExpansionPanel: {
             root: {
-                backgroundColor: colors_1.base,
+                backgroundColor: base,
                 borderRadius: '4px',
                 boxShadow: 'none',
                 position: 'initial',
@@ -902,7 +889,7 @@ var theme = core_1.createMuiTheme({
                 paddingLeft: '30px',
             },
             expandIcon: {
-                color: colors_1.typography,
+                color: typography,
                 left: '18px',
                 padding: '0',
                 position: 'absolute',
@@ -938,7 +925,7 @@ var theme = core_1.createMuiTheme({
         MuiTablePagination: {
             actions: {},
             select: {
-                backgroundColor: colors_1.base,
+                backgroundColor: base,
                 border: '1px solid #313D49',
                 borderRadius: 0,
                 paddingLeft: '12px',
@@ -946,7 +933,7 @@ var theme = core_1.createMuiTheme({
                 textAlignLast: 'left',
             },
             selectIcon: {
-                color: colors_1.primary,
+                color: primary,
                 right: '5px',
                 top: '6px',
             },
@@ -990,19 +977,19 @@ var theme = core_1.createMuiTheme({
                 border: '1px solid #1D505F',
                 borderRadius: '4px',
                 boxSizing: 'border-box',
-                fill: colors_1.typography,
+                fill: typography,
                 height: '44px',
                 minWidth: '48px',
                 textTransform: 'initial',
                 '&:hover': {
                     backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                    border: "1px solid " + colors_1.primaryTint + " !important",
+                    border: `1px solid ${primaryTint} !important`,
                 },
                 '&$selected': {
                     background: '#313D49',
-                    fill: colors_1.primary,
-                    color: colors_1.primary,
-                    border: "1px solid " + colors_1.primaryTint + " !important",
+                    fill: primary,
+                    color: primary,
+                    border: `1px solid ${primaryTint} !important`,
                 },
                 '&$disabled': {
                     opacity: 0.5,
@@ -1043,14 +1030,13 @@ var theme = core_1.createMuiTheme({
                 width: '26px',
             },
             colorDefault: {
-                backgroundColor: colors_1.baseLight,
+                backgroundColor: baseLight,
             },
         },
     },
 });
-exports.SelfkeyDarkTheme = function (_a) {
-    var children = _a.children;
-    return React.createElement(core_1.MuiThemeProvider, { theme: theme }, children);
+export const SelfkeyDarkTheme = ({ children }) => {
+    return React.createElement(MuiThemeProvider, { theme: theme }, children);
 };
-exports.default = exports.SelfkeyDarkTheme;
+export default SelfkeyDarkTheme;
 //# sourceMappingURL=selfkey-dark-theme.js.map

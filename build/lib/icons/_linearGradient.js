@@ -1,10 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LinearGradient = void 0;
-var React = require("react");
-exports.LinearGradient = (function (_a) {
-    var color = _a.color;
-    var color1, color2, id;
+import * as React from 'react';
+export const LinearGradient = (({ color }) => {
+    let color1, color2, id;
     switch (color) {
         case 'orange':
             color1 = '#B44000';
@@ -26,5 +22,5 @@ exports.LinearGradient = (function (_a) {
             React.createElement("stop", { stopColor: color1, offset: "0%" }),
             React.createElement("stop", { stopColor: color2, offset: "100%" }))));
 });
-exports.default = exports.LinearGradient;
+export default LinearGradient;
 //# sourceMappingURL=_linearGradient.js.map

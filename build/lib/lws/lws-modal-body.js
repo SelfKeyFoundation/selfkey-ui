@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LWSModalBody = void 0;
-var React = require("react");
-var core_1 = require("@material-ui/core");
-var styles = core_1.createStyles({
+import * as React from 'react';
+import { withStyles, createStyles } from '@material-ui/core';
+const styles = createStyles({
     root: {
         '& a': {
             color: '#23E6FE',
@@ -15,9 +12,6 @@ var styles = core_1.createStyles({
         padding: '60px 70px 80px',
     },
 });
-exports.LWSModalBody = core_1.withStyles(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children;
-    return (React.createElement("div", { className: classes.root }, children));
-});
-exports.default = exports.LWSModalBody;
+export const LWSModalBody = withStyles(styles)(({ classes, children }) => (React.createElement("div", { className: classes.root }, children)));
+export default LWSModalBody;
 //# sourceMappingURL=lws-modal-body.js.map

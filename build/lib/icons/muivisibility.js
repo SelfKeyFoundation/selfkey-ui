@@ -1,17 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MuiVisibilityIcon = void 0;
-var styles_1 = require("@material-ui/styles");
-var icons_1 = require("@material-ui/icons");
-var colors_1 = require("../colors");
-exports.MuiVisibilityIcon = styles_1.withStyles({
+import { withStyles } from '@material-ui/styles';
+import { VisibilityOutlined } from '@material-ui/icons';
+import { grey, white } from '../colors';
+export const MuiVisibilityIcon = withStyles({
     root: {
-        fill: colors_1.grey,
+        fill: grey,
         height: '20px',
         width: '20px',
         '&:hover': {
-            fill: colors_1.white,
+            fill: white,
         },
     },
-})(icons_1.VisibilityOutlined);
+})(VisibilityOutlined);
 //# sourceMappingURL=muivisibility.js.map

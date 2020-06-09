@@ -1,73 +1,70 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WhiteCard = exports.ErrorCard = exports.WarningCard = exports.SuccessCard = exports.BaseCard = exports.BaseDarkCard = exports.BaseLightCard = exports.GreyCard = exports.TypographyCard = exports.PrimaryTintCard = exports.PrimaryCard = void 0;
-var core_1 = require("@material-ui/core");
-var styles_1 = require("@material-ui/styles");
-var colors_1 = require("../colors");
-exports.PrimaryCard = styles_1.withStyles({
+import { Card } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+import { primary, primaryTint, typography, grey, baseLight, baseDark, base, success, warning, error, white, } from '../colors';
+export const PrimaryCard = withStyles({
     root: {
-        backgroundColor: colors_1.primary,
+        backgroundColor: primary,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.PrimaryTintCard = styles_1.withStyles({
+})(Card);
+export const PrimaryTintCard = withStyles({
     root: {
-        backgroundColor: colors_1.primaryTint,
+        backgroundColor: primaryTint,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.TypographyCard = styles_1.withStyles({
+})(Card);
+export const TypographyCard = withStyles({
     root: {
-        backgroundColor: colors_1.typography,
+        backgroundColor: typography,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.GreyCard = styles_1.withStyles({
+})(Card);
+export const GreyCard = withStyles({
     root: {
-        backgroundColor: colors_1.grey,
+        backgroundColor: grey,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.BaseLightCard = styles_1.withStyles({
+})(Card);
+export const BaseLightCard = withStyles({
     root: {
-        backgroundColor: colors_1.baseLight,
+        backgroundColor: baseLight,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.BaseDarkCard = styles_1.withStyles({
+})(Card);
+export const BaseDarkCard = withStyles({
     root: {
-        backgroundColor: colors_1.baseDark,
+        backgroundColor: baseDark,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.BaseCard = styles_1.withStyles({
+})(Card);
+export const BaseCard = withStyles({
     root: {
-        backgroundColor: colors_1.base,
+        backgroundColor: base,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.SuccessCard = styles_1.withStyles({
+})(Card);
+export const SuccessCard = withStyles({
     root: {
-        backgroundColor: colors_1.success,
+        backgroundColor: success,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.WarningCard = styles_1.withStyles({
+})(Card);
+export const WarningCard = withStyles({
     root: {
-        backgroundColor: colors_1.warning,
+        backgroundColor: warning,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.ErrorCard = styles_1.withStyles({
+})(Card);
+export const ErrorCard = withStyles({
     root: {
-        backgroundColor: colors_1.error,
+        backgroundColor: error,
         maxWidth: '50px',
     },
-})(core_1.Card);
-exports.WhiteCard = styles_1.withStyles({
+})(Card);
+export const WhiteCard = withStyles({
     root: {
-        backgroundColor: colors_1.white,
+        backgroundColor: white,
         maxWidth: '50px',
     },
-})(core_1.Card);
+})(Card);
 //# sourceMappingURL=colorPresentation.js.map

@@ -1,27 +1,13 @@
-"use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StickIcon = void 0;
-var React = require("react");
-var core_1 = require("@material-ui/core");
-var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
+import * as React from 'react';
+import { withStyles, createStyles } from '@material-ui/core';
+import { SvgIcon } from '@material-ui/core';
+const styles = createStyles({
     root: {
         width: '42px !important',
         height: '39px !important'
     }
 });
-exports.StickIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 42 39' }),
+export const StickIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 42 39' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "1.-Select-Wallet-Modal", transform: "translate(-754.000000, -461.000000)", stroke: "#23E6FE", strokeWidth: "0.833333333" },
@@ -34,6 +20,6 @@ exports.StickIcon = core_1.withStyles(styles)(function (props) { return (React.c
                             React.createElement("path", { d: "M5.45,31.3317352 L5.45,32.6664384 C5.45,32.902968 5.26666667,33.0888128 5.03333333,33.0888128 L4.34166667,33.0888128 C4.10833333,33.0888128 3.925,32.902968 3.925,32.6664384 L3.925,31.3317352 C3.925,31.0952055 4.10833333,30.9093607 4.34166667,30.9093607 L5.03333333,30.9093607 C5.26666667,30.9093607 5.45,31.0952055 5.45,31.3317352 Z", id: "XMLID_402_" }),
                             React.createElement("path", { d: "M5.45,26.6687215 L5.45,28.0034247 C5.45,28.2399543 5.26666667,28.4257991 5.03333333,28.4257991 L4.34166667,28.4257991 C4.10833333,28.4257991 3.925,28.2399543 3.925,28.0034247 L3.925,26.6687215 C3.925,26.4321918 4.10833333,26.246347 4.34166667,26.246347 L5.03333333,26.246347 C5.26666667,26.246347 5.45,26.4321918 5.45,26.6687215 Z", id: "XMLID_401_" }),
                             React.createElement("path", { d: "M36.9,34.6938356 C34.1583333,37.6166667 29.6,37.726484 26.725,34.9472603 L1.8,10.9141553 C1.36666667,10.5002283 1.35,9.80753425 1.75833333,9.36826484 L10.1916667,0.371689498 C10.6,-0.0675799087 11.2833333,-0.0844748858 11.7166667,0.329452055 L36.6416667,24.3710046 C39.5333333,27.1586758 39.6416667,31.7794521 36.9,34.6938356 Z", id: "XMLID_398_" }),
-                            React.createElement("ellipse", { id: "XMLID_397_", cx: "31.5333333", cy: "29.5155251", rx: "4.93333333", ry: "5.00091324" }))))))))); });
-exports.default = exports.StickIcon;
+                            React.createElement("ellipse", { id: "XMLID_397_", cx: "31.5333333", cy: "29.5155251", rx: "4.93333333", ry: "5.00091324" }))))))))));
+export default StickIcon;
 //# sourceMappingURL=stick.js.map

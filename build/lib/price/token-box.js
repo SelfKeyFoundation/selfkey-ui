@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TokenBox = void 0;
-var React = require("react");
-var core_1 = require("@material-ui/core");
-var core_2 = require("@material-ui/core");
-var transfer_1 = require("../icons/transfer");
-var copy_1 = require("../common/copy");
-var styles = core_1.createStyles({
+import * as React from 'react';
+import { withStyles, createStyles } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { TransferIcon } from '../icons/transfer';
+import { Copy } from '../common/copy';
+const styles = createStyles({
     tokenBox: {
         minWidth: '320px',
         position: 'relative',
@@ -64,26 +61,23 @@ var styles = core_1.createStyles({
         color: '#ffffff'
     }
 });
-exports.TokenBox = core_1.withStyles(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, cryptoCurrencyShort = _a.cryptoCurrencyShort, cryptoCurrencyName = _a.cryptoCurrencyName, CryptoCurrencyIconComponent = _a.CryptoCurrencyIconComponent, publicKey = _a.publicKey, transferAction = _a.transferAction;
-    return (React.createElement("div", { className: classes.tokenBox },
-        React.createElement(core_2.Grid, { container: true },
-            React.createElement(core_2.Grid, { item: true, sm: 2 },
-                React.createElement(CryptoCurrencyIconComponent, null)),
-            React.createElement(core_2.Grid, { item: true, sm: 8 },
-                React.createElement("div", { className: classes.cryptoCurrencyName }, cryptoCurrencyName),
-                React.createElement("div", { className: classes.cryptoCurrencyShort }, cryptoCurrencyShort)),
-            React.createElement(core_2.Grid, { item: true, sm: 2 },
-                React.createElement("button", { className: classes.transferButton, onClick: transferAction },
-                    React.createElement(transfer_1.TransferIcon, null)))),
-        React.createElement(core_2.Grid, { className: classes.tokenBoxBody }, children),
-        React.createElement(core_2.Grid, { className: classes.tokenBoxFooter },
-            React.createElement("div", { className: classes.horizontalDivider })),
-        React.createElement(core_2.Grid, { container: true, className: classes.addressBox },
-            React.createElement(core_2.Grid, { item: true, xs: 10 },
-                React.createElement("span", { className: classes.publicKey }, publicKey)),
-            React.createElement(core_2.Grid, { item: true, xs: 2 },
-                React.createElement(copy_1.Copy, { text: publicKey })))));
-});
-exports.default = exports.TokenBox;
+export const TokenBox = withStyles(styles)(({ classes, children, cryptoCurrencyShort, cryptoCurrencyName, CryptoCurrencyIconComponent, publicKey, transferAction }) => (React.createElement("div", { className: classes.tokenBox },
+    React.createElement(Grid, { container: true },
+        React.createElement(Grid, { item: true, sm: 2 },
+            React.createElement(CryptoCurrencyIconComponent, null)),
+        React.createElement(Grid, { item: true, sm: 8 },
+            React.createElement("div", { className: classes.cryptoCurrencyName }, cryptoCurrencyName),
+            React.createElement("div", { className: classes.cryptoCurrencyShort }, cryptoCurrencyShort)),
+        React.createElement(Grid, { item: true, sm: 2 },
+            React.createElement("button", { className: classes.transferButton, onClick: transferAction },
+                React.createElement(TransferIcon, null)))),
+    React.createElement(Grid, { className: classes.tokenBoxBody }, children),
+    React.createElement(Grid, { className: classes.tokenBoxFooter },
+        React.createElement("div", { className: classes.horizontalDivider })),
+    React.createElement(Grid, { container: true, className: classes.addressBox },
+        React.createElement(Grid, { item: true, xs: 10 },
+            React.createElement("span", { className: classes.publicKey }, publicKey)),
+        React.createElement(Grid, { item: true, xs: 2 },
+            React.createElement(Copy, { text: publicKey }))))));
+export default TokenBox;
 //# sourceMappingURL=token-box.js.map
