@@ -11,18 +11,19 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BankIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',
         },
     }
-};
-exports.BankIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '36px' } }, props, { viewBox: "0 0 36 36" }),
+});
+exports.BankIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '36px' } }, props, { viewBox: "0 0 36 36" }),
     React.createElement("g", { id: "Marketplace-bank", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "720---Bank-Accounts", transform: "translate(-150.000000, -153.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 153.000000)" },

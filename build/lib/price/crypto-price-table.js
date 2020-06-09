@@ -13,14 +13,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CryptoPriceTable = exports.CryptoPriceTableComponent = exports.styles = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-// @ts-ignore
-var react_jss_1 = require("react-jss");
+var core_2 = require("@material-ui/core");
 var price_summary_1 = require("./price-summary");
 var visibility_on_1 = require("../icons/visibility-on");
 var visibility_off_1 = require("../icons/visibility-off");
-exports.styles = {
+exports.styles = core_2.createStyles({
     cryptoPriceTable: {
         fontFamily: 'Lato, arial, sans-serif',
         width: '1140px',
@@ -71,7 +71,7 @@ exports.styles = {
         width: '19.6px !important',
         height: '23.1px !important',
     },
-};
+});
 var CryptoPriceTableComponent = /** @class */ (function (_super) {
     __extends(CryptoPriceTableComponent, _super);
     function CryptoPriceTableComponent() {
@@ -101,7 +101,7 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
             React.createElement(core_1.TableCell, null, token.name),
             React.createElement(core_1.TableCell, null, token.symbol),
             React.createElement(core_1.TableCell, { align: "right" },
-                React.createElement(price_summary_1.PriceSummary, { className: classes.test, locale: locale, priceStyle: "decimal", currency: token.symbol, value: token.balance })),
+                React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "decimal", currency: token.symbol, value: token.balance })),
             React.createElement(core_1.TableCell, { align: "right" },
                 React.createElement(price_summary_1.PriceSummary, { locale: locale, priceStyle: "currency", currency: fiatCurrency, value: token.price, showCurrency: showCurrency })),
             React.createElement(core_1.TableCell, { align: "right" },
@@ -127,6 +127,6 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
     return CryptoPriceTableComponent;
 }(React.Component));
 exports.CryptoPriceTableComponent = CryptoPriceTableComponent;
-exports.CryptoPriceTable = react_jss_1.default(exports.styles)(CryptoPriceTableComponent);
+exports.CryptoPriceTable = core_2.withStyles(exports.styles)(CryptoPriceTableComponent);
 exports.default = exports.CryptoPriceTable;
 //# sourceMappingURL=crypto-price-table.js.map

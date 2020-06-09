@@ -24,16 +24,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSSelectWallet = exports.LWSSelectWalletComponent = exports.styles = void 0;
 var React = require("react");
 var _ = require("lodash");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var id_1 = require("../icons/id");
 var profile_1 = require("../icons/profile");
 var stick_1 = require("../icons/stick");
 var lws_button_1 = require("./lws-button");
 var common_style_1 = require("../common/common-style");
-var core_1 = require("@material-ui/core");
-exports.styles = {
+var core_2 = require("@material-ui/core");
+exports.styles = core_1.createStyles({
     areaTitle: {
         textAlign: 'center',
     },
@@ -138,7 +139,7 @@ exports.styles = {
             boxShadow: '0 0 5px rgba(254, 75, 97, 1)',
         },
     },
-};
+});
 var LWSSelectWalletComponent = /** @class */ (function (_super) {
     __extends(LWSSelectWalletComponent, _super);
     function LWSSelectWalletComponent(props) {
@@ -243,7 +244,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         return (React.createElement("div", null,
             React.createElement("div", { className: classes.areaTitle },
                 React.createElement(id_1.IDIcon, null),
-                React.createElement(core_1.Typography, { variant: "h2", className: classes.title }, "Verify Ownership Of Your SelfKey ID")),
+                React.createElement(core_2.Typography, { variant: "h2", className: classes.title }, "Verify Ownership Of Your SelfKey ID")),
             React.createElement("div", { className: classes.form },
                 React.createElement("div", { className: classes.formGroup + " " + classes.radioReplace },
                     React.createElement("button", { className: classes.buttonTertiary + " " + (!isHardwareWallet ? classes.selected : ''), onClick: function () { return _this.toggleIsHardwallet(false); } },
@@ -259,6 +260,6 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
     return LWSSelectWalletComponent;
 }(React.Component));
 exports.LWSSelectWalletComponent = LWSSelectWalletComponent;
-exports.LWSSelectWallet = react_jss_1.default(exports.styles)(LWSSelectWalletComponent);
+exports.LWSSelectWallet = core_1.withStyles(exports.styles)(LWSSelectWalletComponent);
 exports.default = exports.LWSSelectWallet;
 //# sourceMappingURL=lws-select-wallet.js.map

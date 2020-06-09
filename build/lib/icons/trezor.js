@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrezorIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.TrezorIcon = function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '18px', height: props.height || '25px' } }, props, { viewBox: "0 0 18 25" }),

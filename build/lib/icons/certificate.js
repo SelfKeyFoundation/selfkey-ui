@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '16px !important',
         height: '20px !important',
     },
-};
-exports.CertificateIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 16 20", version: "1.1" }),
+});
+exports.CertificateIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 16 20", version: "1.1" }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "701.1---Incorporation-Taxes-View", transform: "translate(-925.000000, -277.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },

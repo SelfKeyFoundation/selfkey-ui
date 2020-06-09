@@ -11,20 +11,21 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
 var _linearGradient_1 = require("./_linearGradient");
-var styles = {
+var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',
         },
     }
-};
+});
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.BookIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 68 55' }),
+exports.BookIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 68 55' }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-240.000000, -958.000000)", fill: "inherit", fillRule: "nonzero" },

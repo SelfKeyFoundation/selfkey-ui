@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeniedIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '16px !important',
         height: '16px !important',
     },
-};
-exports.DeniedIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 16 16" }),
+});
+exports.DeniedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 16 16" }),
     React.createElement("title", null, "icon-denied"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-icon-denied-ma", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410-Marketplace-Applications", transform: "translate(-1188.000000, -940.000000)", fill: "#FE4B61" },

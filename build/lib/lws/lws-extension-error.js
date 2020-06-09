@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSExtensionError = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var lws_button_1 = require("./lws-button");
 var common_style_1 = require("../common/common-style");
 var download_1 = require("../icons/download");
-var styles = {
+var styles = core_1.createStyles({
     buttonPrimary: common_style_1.default.buttonPrimary,
     buttonSecondary: common_style_1.default.buttonSecondary,
     form: common_style_1.default.form,
@@ -42,8 +43,8 @@ var styles = {
             color: '#93B0C1'
         }
     },
-};
-exports.LWSExtensionError = react_jss_1.default(styles)(function (_a) {
+});
+exports.LWSExtensionError = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, installExtensionAction = _a.installExtensionAction;
     return (React.createElement("div", null,
         React.createElement("div", { className: classes.areaTitle },

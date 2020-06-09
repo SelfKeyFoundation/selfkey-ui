@@ -11,15 +11,16 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackButton = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var react_jss_1 = require("react-jss");
-var backButtonStyles = {
+var core_2 = require("@material-ui/core");
+var styles = core_2.createStyles({
     bold: {
         fontWeight: 600
     },
-};
-exports.BackButton = react_jss_1.default(backButtonStyles)(function (_a) {
+});
+exports.BackButton = core_2.withStyles(styles)(function (_a) {
     var classes = _a.classes, onclick = _a.onclick, leftPosition = _a.leftPosition, position = _a.position, props = __rest(_a, ["classes", "onclick", "leftPosition", "position"]);
     return (React.createElement("div", { style: { left: leftPosition || 'initial', position: position || 'initial' } },
         React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: onclick },

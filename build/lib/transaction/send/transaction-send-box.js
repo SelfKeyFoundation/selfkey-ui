@@ -24,15 +24,14 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionSendBox = exports.TransactionSendBoxComponent = exports.styles = void 0;
 var React = require("react");
-// @ts-ignore
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var common_style_1 = require("../../common/common-style");
 var transaction_fee_box_1 = require("./fee/transaction-fee-box");
 var transaction_box_1 = require("../transaction-box");
-var core_1 = require("@material-ui/core");
 var number_format_1 = require("../../price/number-format");
-exports.styles = {
+exports.styles = core_1.createStyles({
     container: {
         fontFamily: common_style_1.default.fontFamily
     },
@@ -154,17 +153,19 @@ exports.styles = {
         backgroundColor: '#1E262E',
         color: '#FFFFFF',
     }
-};
+});
 var TransactionSendBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionSendBoxComponent, _super);
     function TransactionSendBoxComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { amount: '', address: '', cryptoCurrency: props.cryptoCurrency };
+        _this.renderFeeBox = function () { return React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, _this.props)); };
+        _this.state = {
+            amount: '',
+            address: '',
+            cryptoCurrency: props.cryptoCurrency
+        };
         return _this;
     }
-    TransactionSendBoxComponent.prototype.renderFeeBox = function () {
-        return (React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, this.props)));
-    };
     TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
         var value = String(this.props.balance);
         this.setState(__assign(__assign({}, this.state), { amount: value }));
@@ -202,9 +203,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     };
     TransactionSendBoxComponent.prototype.renderSelectTokenItems = function () {
         var _a = this.props, tokens = _a.tokens, classes = _a.classes;
-        return tokens.map(function (token, index) {
-            return (React.createElement("option", { key: index, value: token.symbol, className: classes.selectItem }, token.name + " - " + token.balance + " " + token.symbol));
-        });
+        return tokens.map(function (token, index) { return (React.createElement("option", { key: index, value: token.symbol, className: classes.selectItem }, token.name + " - " + token.balance + " " + token.symbol)); });
     };
     TransactionSendBoxComponent.prototype.renderButtons = function () {
         var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction, addressError = _a.addressError;
@@ -255,6 +254,6 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     return TransactionSendBoxComponent;
 }(React.Component));
 exports.TransactionSendBoxComponent = TransactionSendBoxComponent;
-exports.TransactionSendBox = react_jss_1.default(exports.styles)(TransactionSendBoxComponent);
+exports.TransactionSendBox = core_1.withStyles(exports.styles)(TransactionSendBoxComponent);
 exports.default = exports.TransactionSendBox;
 //# sourceMappingURL=transaction-send-box.js.map

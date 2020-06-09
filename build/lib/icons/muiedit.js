@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MuiEditIcon = void 0;
 var styles_1 = require("@material-ui/styles");
 var icons_1 = require("@material-ui/icons");
 var colors_1 = require("../colors");

@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyIconButton = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var styles_1 = require("@material-ui/styles");

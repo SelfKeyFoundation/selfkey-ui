@@ -11,20 +11,21 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.OkayIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
 var _linearGradient_1 = require("./_linearGradient");
-var styles = {
+var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',
         },
     }
-};
+});
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.OkayIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
+exports.OkayIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDEE0-Wallet-Setup", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "117.1---Trezor---Connecting-+-Messages", transform: "translate(-368.000000, -1716.000000)", fill: "inherit", fillRule: "nonzero" },

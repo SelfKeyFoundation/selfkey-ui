@@ -1,12 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatusInfo = void 0;
 var React = require("react");
 var classnames_1 = require("classnames");
 var core_1 = require("@material-ui/core");
-var styles_1 = require("@material-ui/styles");
+var core_2 = require("@material-ui/core");
 var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
-var statusInfoStyle = function (theme) {
-    return styles_1.createStyles({
+var styles = function (theme) {
+    return core_2.createStyles({
         defaultStatus: {
             border: "1px solid " + selfkey_dark_theme_1.success,
             borderRadius: '4px',
@@ -46,7 +47,7 @@ var statusInfoStyle = function (theme) {
         }
     });
 };
-exports.StatusInfo = styles_1.withStyles(statusInfoStyle)(function (_a) {
+exports.StatusInfo = core_2.withStyles(styles)(function (_a) {
     var classes = _a.classes, status = _a.status, onClick = _a.onClick, handleRefresh = _a.handleRefresh, tooltip = _a.tooltip;
     var icon, message, statusStyle, button = null;
     switch (status) {

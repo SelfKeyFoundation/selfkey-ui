@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeAlertLargeIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '38px !important',
         height: '44px !important',
     },
-};
-exports.AttributeAlertLargeIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 38 44", version: "1.1" }),
+});
+exports.AttributeAlertLargeIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 38 44", version: "1.1" }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-attribute-large-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-195.000000, -379.000000)", fill: "#E98548" },
             React.createElement("g", { id: "Content", transform: "translate(150.000000, 264.000000)" },

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
-export declare const styles: StyleSheet;
+import { WithStyles } from '@material-ui/core';
+export declare const styles: Record<"checkbox" | "icon" | "fullWidth" | "container" | "formControl" | "formGroup" | "networkTransactionFeeTitle" | "showAdvancedContainer" | "rightIcon" | "downIcon" | "inputsContainer" | "checkboxRoot" | "checkboxChecked" | "checkboxLabel" | "nonceValue" | "currNetworkStatusContainer" | "currNetworkStatusTitle" | "reloadNetworkIcon" | "gasPriceValuesContainer", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
 export declare type EthGasStationInfo = {
     safeLow: string;
     average: string;
@@ -25,7 +25,7 @@ export declare type TransactionFeeBoxState = {
     gasLimit: number;
     gasPrice: number;
 };
-export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
+export declare type StyledProps = WithStyles<typeof styles> & TransactionFeeBoxProps;
 export declare class TransactionFeeBoxComponent extends React.Component<StyledProps, TransactionFeeBoxState> {
     timerToUpdateGasPrice: number;
     timerToUpdateGasLimit: number;
@@ -39,5 +39,5 @@ export declare class TransactionFeeBoxComponent extends React.Component<StyledPr
     renderAdvancedContent(): JSX.Element;
     render(): JSX.Element;
 }
-export declare const TransactionFeeBox: React.ComponentType<TransactionFeeBoxProps & StyledComponentProps<string>>;
+export declare const TransactionFeeBox: React.ComponentType<Pick<StyledProps, "locale" | "nonce" | "fiatCurrency" | "ethFee" | "usdFee" | "gasLimit" | "gasPrice" | "showAdvanced" | "ethGasStationInfo" | "reloadEthGasStationInfoAction" | "changeGasLimitAction" | "changeGasPriceAction"> & import("@material-ui/core").StyledComponentProps<"checkbox" | "icon" | "fullWidth" | "container" | "formControl" | "formGroup" | "networkTransactionFeeTitle" | "showAdvancedContainer" | "rightIcon" | "downIcon" | "inputsContainer" | "checkboxRoot" | "checkboxChecked" | "checkboxLabel" | "nonceValue" | "currNetworkStatusContainer" | "currNetworkStatusTitle" | "reloadNetworkIcon" | "gasPriceValuesContainer">>;
 export default TransactionFeeBox;

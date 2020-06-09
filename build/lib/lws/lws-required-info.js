@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSRequiredInfo = void 0;
 var React = require("react");
 var _ = require("lodash");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var common_style_1 = require("../common/common-style");
 var check_1 = require("../icons/check");
 var check_empty_1 = require("../icons/check-empty");
 var attribute_alert_1 = require("../icons/attribute-alert");
 var lws_button_1 = require("./lws-button");
 var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
-var styles = {
+var styles = core_1.createStyles({
     form: common_style_1.default.form,
     buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
     buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
@@ -103,12 +104,14 @@ var styles = {
         outline: 'none',
         padding: 0,
     },
-};
+});
 var getAttributeValue = function (attribute) {
-    if (!attribute.value)
+    if (!attribute.value) {
         return null;
-    if (typeof attribute.value !== 'object')
+    }
+    if (typeof attribute.value !== 'object') {
         return attribute.value;
+    }
     return attribute.name || attribute.schema.title || attribute.url;
 };
 var renderAttributes = function (requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction) {
@@ -147,7 +150,7 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
         }
     });
 };
-exports.LWSRequiredInfo = react_jss_1.default(styles)(function (_a) {
+exports.LWSRequiredInfo = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, allowAction = _a.allowAction, requested = _a.requested, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, _b = _a.notAllowedAttributes, notAllowedAttributes = _b === void 0 ? [] : _b, website = _a.website, _c = _a.disallowAttributeAction, disallowAttributeAction = _c === void 0 ? function (attribute, disallow) { } : _c;
     return (React.createElement("div", { className: classes.requiredInfo },
         React.createElement("div", { className: classes.areaTitle },

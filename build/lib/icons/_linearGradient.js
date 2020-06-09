@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinearGradient = void 0;
 var React = require("react");
 exports.LinearGradient = (function (_a) {
     var color = _a.color;

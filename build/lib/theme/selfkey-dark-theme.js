@@ -1,172 +1,242 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelfkeyDarkTheme = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var colors_1 = require("../colors");
-__export(require("../colors"));
-__export(require("../materialui/button"));
-__export(require("../materialui/colorPresentation"));
-__export(require("../materialui/datepicker"));
-__export(require("../materialui/inputs"));
-__export(require("../materialui/lists"));
-__export(require("../materialui/modalElements"));
-__export(require("../materialui/pagination"));
-__export(require("../materialui/statuses"));
-__export(require("../materialui/tables"));
-__export(require("../materialui/tooltipArrow"));
-__export(require("../materialui/typography"));
-__export(require("../icons/address-book-menu"));
-__export(require("../icons/address-book"));
-__export(require("../icons/animated-loading"));
-__export(require("../icons/attribute-alert"));
-__export(require("../icons/attribute-alert-large"));
-__export(require("../icons/bank"));
-__export(require("../icons/bank-rounded"));
-__export(require("../icons/book"));
-__export(require("../icons/buy-rounded"));
-__export(require("../icons/calculator"));
-__export(require("../icons/calendar"));
-__export(require("../icons/calendar-deposit"));
-__export(require("../icons/certificate"));
-__export(require("../icons/chart"));
-__export(require("../icons/check-empty"));
-__export(require("../icons/check"));
-__export(require("../icons/check-ma"));
-__export(require("../icons/clear"));
-__export(require("../icons/clipboard"));
-__export(require("../icons/close-button"));
-__export(require("../icons/coins"));
-__export(require("../icons/company"));
-__export(require("../icons/copy"));
-__export(require("../icons/corporate"));
-__export(require("../icons/custom"));
-__export(require("../icons/dashboard-menu"));
-__export(require("../icons/delete"));
-__export(require("../icons/denied"));
-__export(require("../icons/did"));
-__export(require("../icons/director"));
-__export(require("../icons/document"));
-__export(require("../icons/download-2"));
-__export(require("../icons/download"));
-__export(require("../icons/dropdown"));
-__export(require("../icons/edit-transparent"));
-__export(require("../icons/erc20"));
-__export(require("../icons/ethereum"));
-__export(require("../icons/exchange-large"));
-__export(require("../icons/exchange-rounded"));
+__exportStar(require("../colors"), exports);
+__exportStar(require("../materialui/button"), exports);
+__exportStar(require("../materialui/colorPresentation"), exports);
+__exportStar(require("../materialui/datepicker"), exports);
+__exportStar(require("../materialui/inputs"), exports);
+__exportStar(require("../materialui/lists"), exports);
+__exportStar(require("../materialui/modalElements"), exports);
+__exportStar(require("../materialui/pagination"), exports);
+__exportStar(require("../materialui/statuses"), exports);
+__exportStar(require("../materialui/tables"), exports);
+__exportStar(require("../materialui/tooltipArrow"), exports);
+__exportStar(require("../materialui/typography"), exports);
+__exportStar(require("../icons/address-book-menu"), exports);
+__exportStar(require("../icons/address-book"), exports);
+__exportStar(require("../icons/animated-loading"), exports);
+__exportStar(require("../icons/attribute-alert"), exports);
+__exportStar(require("../icons/attribute-alert-large"), exports);
+__exportStar(require("../icons/bank"), exports);
+__exportStar(require("../icons/bank-rounded"), exports);
+__exportStar(require("../icons/book"), exports);
+__exportStar(require("../icons/buy-rounded"), exports);
+__exportStar(require("../icons/calculator"), exports);
+__exportStar(require("../icons/calendar"), exports);
+__exportStar(require("../icons/calendar-deposit"), exports);
+__exportStar(require("../icons/certificate"), exports);
+__exportStar(require("../icons/chart"), exports);
+__exportStar(require("../icons/check-empty"), exports);
+__exportStar(require("../icons/check"), exports);
+__exportStar(require("../icons/check-ma"), exports);
+__exportStar(require("../icons/clear"), exports);
+__exportStar(require("../icons/clipboard"), exports);
+__exportStar(require("../icons/close-button"), exports);
+__exportStar(require("../icons/coins"), exports);
+__exportStar(require("../icons/company"), exports);
+__exportStar(require("../icons/copy"), exports);
+__exportStar(require("../icons/corporate"), exports);
+__exportStar(require("../icons/custom"), exports);
+__exportStar(require("../icons/dashboard-menu"), exports);
+__exportStar(require("../icons/delete"), exports);
+__exportStar(require("../icons/denied"), exports);
+__exportStar(require("../icons/did"), exports);
+__exportStar(require("../icons/director"), exports);
+__exportStar(require("../icons/document"), exports);
+__exportStar(require("../icons/download-2"), exports);
+__exportStar(require("../icons/download"), exports);
+__exportStar(require("../icons/dropdown"), exports);
+__exportStar(require("../icons/edit-transparent"), exports);
+__exportStar(require("../icons/erc20"), exports);
+__exportStar(require("../icons/ethereum"), exports);
+__exportStar(require("../icons/exchange-large"), exports);
+__exportStar(require("../icons/exchange-rounded"), exports);
 // export * from '../icons/exchange';
-__export(require("../icons/existing-address"));
-__export(require("../icons/failed"));
-__export(require("../icons/file-audio"));
-__export(require("../icons/file-default"));
-__export(require("../icons/file-image"));
-__export(require("../icons/file-multiple"));
-__export(require("../icons/file-pdf"));
-__export(require("../icons/file-video"));
-__export(require("../icons/filter"));
-__export(require("../icons/gear"));
-__export(require("../icons/green-tick"));
-__export(require("../icons/hard-drive"));
-__export(require("../icons/help"));
-__export(require("../icons/hourglass-large"));
-__export(require("../icons/hourglass-simple"));
-__export(require("../icons/hourglass-small"));
-__export(require("../icons/id-card"));
-__export(require("../icons/incorporations"));
-__export(require("../icons/incorporations-rounded"));
-__export(require("../icons/info"));
-__export(require("../icons/key"));
-__export(require("../icons/ledger"));
-__export(require("../icons/list"));
-__export(require("../icons/mail"));
-__export(require("../icons/marketplace-menu"));
-__export(require("../icons/marketplace"));
-__export(require("../icons/marketplace-loan"));
-__export(require("../icons/marketplace-notaries"));
-__export(require("../icons/member"));
-__export(require("../icons/menu-affiliate"));
-__export(require("../icons/menu-button"));
-__export(require("../icons/menu-help"));
-__export(require("../icons/menu-export"));
-__export(require("../icons/menu-new"));
-__export(require("../icons/merge"));
-__export(require("../icons/modal-close"));
-__export(require("../icons/money"));
-__export(require("../icons/muiadd"));
-__export(require("../icons/muidelete"));
-__export(require("../icons/muiedit"));
-__export(require("../icons/muivisibility"));
-__export(require("../icons/my-crypto-large"));
-__export(require("../icons/new-address"));
-__export(require("../icons/notarize-document"));
-__export(require("../icons/observer"));
-__export(require("../icons/okay"));
-__export(require("../icons/password-confirm"));
-__export(require("../icons/password"));
-__export(require("../icons/payment"));
-__export(require("../icons/pending-rounded"));
-__export(require("../icons/person"));
-__export(require("../icons/power"));
-__export(require("../icons/print-small"));
-__export(require("../icons/print"));
-__export(require("../icons/profile"));
-__export(require("../icons/protection"));
-__export(require("../icons/quit"));
-__export(require("../icons/receive"));
-__export(require("../icons/received-rounded"));
-__export(require("../icons/refresh"));
-__export(require("../icons/refresh2"));
-__export(require("../icons/reply"));
-__export(require("../icons/return-large"));
-__export(require("../icons/return"));
-__export(require("../icons/round-company"));
-__export(require("../icons/round-company-small"));
-__export(require("../icons/round-person"));
-__export(require("../icons/round-person-small"));
-__export(require("../icons/select-dropdown"));
-__export(require("../icons/selfkey-id-menu"));
-__export(require("../icons/selfkey"));
-__export(require("../icons/selfkeyLogo"));
-__export(require("../icons/selfkeyLogoTemp"));
-__export(require("../icons/sent-blue"));
-__export(require("../icons/sent"));
-__export(require("../icons/sent-rounded"));
-__export(require("../icons/share"));
-__export(require("../icons/shield"));
-__export(require("../icons/signature"));
-__export(require("../icons/simple-check"));
-__export(require("../icons/simple-denied"));
-__export(require("../icons/sk-id"));
-__export(require("../icons/stick"));
-__export(require("../icons/structure"));
-__export(require("../icons/success"));
-__export(require("../icons/switch-accounts"));
-__export(require("../icons/tick"));
-__export(require("../icons/transfer"));
-__export(require("../icons/trezor-bridge"));
-__export(require("../icons/trezor"));
-__export(require("../icons/unlock-large"));
-__export(require("../icons/unlock"));
-__export(require("../icons/upload"));
-__export(require("../icons/userplus"));
-__export(require("../icons/view"));
-__export(require("../icons/visibility-off"));
-__export(require("../icons/visibility-on"));
-__export(require("../icons/wallet"));
-__export(require("../icons/warning-shield"));
-__export(require("../icons/id"));
-var muiedit_1 = require("../icons/muiedit");
-exports.MuiEditIcon = muiedit_1.MuiEditIcon;
-var muiadd_1 = require("../icons/muiadd");
-exports.MuiAddIcon = muiadd_1.MuiAddIcon;
-var muidelete_1 = require("../icons/muidelete");
-exports.MuiDeleteIcon = muidelete_1.MuiDeleteIcon;
-var muivisibility_1 = require("../icons/muivisibility");
-exports.MuiVisibilityIcon = muivisibility_1.MuiVisibilityIcon;
+__exportStar(require("../icons/existing-address"), exports);
+__exportStar(require("../icons/failed"), exports);
+__exportStar(require("../icons/file-audio"), exports);
+__exportStar(require("../icons/file-default"), exports);
+__exportStar(require("../icons/file-image"), exports);
+__exportStar(require("../icons/file-multiple"), exports);
+__exportStar(require("../icons/file-pdf"), exports);
+__exportStar(require("../icons/file-video"), exports);
+__exportStar(require("../icons/filter"), exports);
+__exportStar(require("../icons/gear"), exports);
+__exportStar(require("../icons/green-tick"), exports);
+__exportStar(require("../icons/hard-drive"), exports);
+__exportStar(require("../icons/help"), exports);
+__exportStar(require("../icons/hourglass-large"), exports);
+__exportStar(require("../icons/hourglass-simple"), exports);
+__exportStar(require("../icons/hourglass-small"), exports);
+__exportStar(require("../icons/id-card"), exports);
+__exportStar(require("../icons/incorporations"), exports);
+__exportStar(require("../icons/incorporations-rounded"), exports);
+__exportStar(require("../icons/info"), exports);
+__exportStar(require("../icons/key"), exports);
+__exportStar(require("../icons/ledger"), exports);
+__exportStar(require("../icons/list"), exports);
+__exportStar(require("../icons/mail"), exports);
+__exportStar(require("../icons/marketplace-menu"), exports);
+__exportStar(require("../icons/marketplace"), exports);
+__exportStar(require("../icons/marketplace-loan"), exports);
+__exportStar(require("../icons/marketplace-notaries"), exports);
+__exportStar(require("../icons/member"), exports);
+__exportStar(require("../icons/menu-affiliate"), exports);
+__exportStar(require("../icons/menu-button"), exports);
+__exportStar(require("../icons/menu-help"), exports);
+__exportStar(require("../icons/menu-export"), exports);
+__exportStar(require("../icons/menu-new"), exports);
+__exportStar(require("../icons/merge"), exports);
+__exportStar(require("../icons/modal-close"), exports);
+__exportStar(require("../icons/money"), exports);
+__exportStar(require("../icons/muiadd"), exports);
+__exportStar(require("../icons/muidelete"), exports);
+__exportStar(require("../icons/muiedit"), exports);
+__exportStar(require("../icons/muivisibility"), exports);
+__exportStar(require("../icons/my-crypto-large"), exports);
+__exportStar(require("../icons/new-address"), exports);
+__exportStar(require("../icons/notarize-document"), exports);
+__exportStar(require("../icons/observer"), exports);
+__exportStar(require("../icons/okay"), exports);
+__exportStar(require("../icons/password-confirm"), exports);
+__exportStar(require("../icons/password"), exports);
+__exportStar(require("../icons/payment"), exports);
+__exportStar(require("../icons/pending-rounded"), exports);
+__exportStar(require("../icons/person"), exports);
+__exportStar(require("../icons/power"), exports);
+__exportStar(require("../icons/print-small"), exports);
+__exportStar(require("../icons/print"), exports);
+__exportStar(require("../icons/profile"), exports);
+__exportStar(require("../icons/protection"), exports);
+__exportStar(require("../icons/quit"), exports);
+__exportStar(require("../icons/receive"), exports);
+__exportStar(require("../icons/received-rounded"), exports);
+__exportStar(require("../icons/refresh"), exports);
+__exportStar(require("../icons/refresh2"), exports);
+__exportStar(require("../icons/reply"), exports);
+__exportStar(require("../icons/return-large"), exports);
+__exportStar(require("../icons/return"), exports);
+__exportStar(require("../icons/round-company"), exports);
+__exportStar(require("../icons/round-company-small"), exports);
+__exportStar(require("../icons/round-person"), exports);
+__exportStar(require("../icons/round-person-small"), exports);
+__exportStar(require("../icons/select-dropdown"), exports);
+__exportStar(require("../icons/selfkey-id-menu"), exports);
+__exportStar(require("../icons/selfkey"), exports);
+__exportStar(require("../icons/selfkeyLogo"), exports);
+__exportStar(require("../icons/selfkeyLogoTemp"), exports);
+__exportStar(require("../icons/sent-blue"), exports);
+__exportStar(require("../icons/sent"), exports);
+__exportStar(require("../icons/sent-rounded"), exports);
+__exportStar(require("../icons/share"), exports);
+__exportStar(require("../icons/shield"), exports);
+__exportStar(require("../icons/signature"), exports);
+__exportStar(require("../icons/simple-check"), exports);
+__exportStar(require("../icons/simple-denied"), exports);
+__exportStar(require("../icons/sk-id"), exports);
+__exportStar(require("../icons/stick"), exports);
+__exportStar(require("../icons/structure"), exports);
+__exportStar(require("../icons/success"), exports);
+__exportStar(require("../icons/switch-accounts"), exports);
+__exportStar(require("../icons/tick"), exports);
+__exportStar(require("../icons/transfer"), exports);
+__exportStar(require("../icons/trezor-bridge"), exports);
+__exportStar(require("../icons/trezor"), exports);
+__exportStar(require("../icons/unlock-large"), exports);
+__exportStar(require("../icons/unlock"), exports);
+__exportStar(require("../icons/upload"), exports);
+__exportStar(require("../icons/userplus"), exports);
+__exportStar(require("../icons/view"), exports);
+__exportStar(require("../icons/visibility-off"), exports);
+__exportStar(require("../icons/visibility-on"), exports);
+__exportStar(require("../icons/wallet"), exports);
+__exportStar(require("../icons/warning-shield"), exports);
+__exportStar(require("../icons/id"), exports);
+/*
+export { MuiEditIcon } from '../icons/muiedit';
+export { MuiAddIcon } from '../icons/muiadd';
+export { MuiDeleteIcon } from '../icons/muidelete';
+export { MuiVisibilityIcon } from '../icons/muivisibility';
+*/
 var theme = core_1.createMuiTheme({
+    // Reset and Globals
+    '@global': {
+        'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video': {
+            margin: '0',
+            padding: '0',
+            border: '0',
+            fontSize: '100%',
+            font: 'inherit',
+            verticalAlign: 'baseline'
+        },
+        'article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section': {
+            display: 'block'
+        },
+        'ol, ul': {
+            listStyle: 'none'
+        },
+        'blockquote, q': {
+            quotes: 'none'
+        },
+        'blockquote:before, blockquote:after, q:before, q:after': {
+            content: 'none'
+        },
+        table: {
+            borderCollapse: 'collapse',
+            borderSpacing: 0
+        },
+        body: {
+            lineHeight: 1,
+            background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
+            fontFamily: 'Lato, arial, sans-serif',
+            fontSmoothing: 'antialiased',
+            osxFontSmoothing: 'grayscale',
+            overflowX: 'hidden',
+            '&::-webkit-scrollbar': {
+                backgroundColor: 'rgba(0,0,0,.5)',
+                width: '8px'
+            },
+            '&::-webkit-scrollbar-thumb': {
+                borderRadius: '10px',
+                backgroundColor: '#191919'
+            },
+        },
+        html: {
+            '&::-webkit-scrollbar': {
+                backgroundColor: 'rgba(0,0,0,.5)',
+                width: '8px'
+            },
+            '&::-webkit-scrollbar-thumb': {
+                borderRadius: '10px',
+                backgroundColor: '#191919'
+            },
+        },
+        div: {
+            '&::-webkit-scrollbar': {
+                backgroundColor: 'rgba(0,0,0,.15)',
+                width: '8px'
+            },
+            '&::-webkit-scrollbar-thumb': {
+                borderRadius: '10px',
+                backgroundColor: '#191919'
+            },
+        }
+    },
+    // Theme
     palette: {
         primary: {
             main: colors_1.primary,
@@ -192,7 +262,6 @@ var theme = core_1.createMuiTheme({
     overrides: {
         MuiCard: {
             root: {
-                backgroundColor: colors_1.base,
                 boxShadow: 'none',
                 height: '100%',
             },

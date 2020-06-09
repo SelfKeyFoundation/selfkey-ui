@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionErrorBox = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
-var warning_shield_1 = require("../icons/warning-shield");
 var core_1 = require("@material-ui/core");
+var warning_shield_1 = require("../icons/warning-shield");
 var copy_1 = require("../common/copy");
 var modal_close_1 = require("../icons/modal-close");
-var styles = {
+var styles = core_1.createStyles({
     boxWrapper: {
         position: 'relative',
         width: '781px',
@@ -70,8 +70,8 @@ var styles = {
         top: 0,
         cursor: 'pointer'
     }
-};
-exports.TransactionErrorBox = react_jss_1.default(styles)(function (_a) {
+});
+exports.TransactionErrorBox = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, publicKey = _a.publicKey, closeAction = _a.closeAction;
     return (React.createElement("div", { className: classes.boxWrapper },
         React.createElement("div", { className: classes.header },

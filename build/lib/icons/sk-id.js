@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SKIDIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '44px !important',
         height: '36px !important'
     }
-};
-exports.SKIDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 36 44' }),
+});
+exports.SKIDIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 36 44' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "11.0842631%", y1: "62.5905801%", x2: "36.0705554%", y2: "15.6734694%", id: "sk-id-linearGradient-1" },
             React.createElement("stop", { stopColor: "#09A8BA", offset: "0%" }),

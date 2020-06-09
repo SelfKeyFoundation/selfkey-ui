@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileUploadHeaderGrid = exports.FileUploadGrid = exports.ModalWrap = void 0;
 var React = require("react");
 var Typography_1 = require("@material-ui/core/Typography");
 var Modal_1 = require("@material-ui/core/Modal");

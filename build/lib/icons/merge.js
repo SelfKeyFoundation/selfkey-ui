@@ -11,20 +11,21 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MergeIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
 var _linearGradient_1 = require("./_linearGradient");
-var styles = {
+var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',
         },
     }
-};
+});
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.MergeIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
+exports.MergeIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBB-ID-Registration-merge", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "214-Register-Existing-DID", transform: "translate(-375.000000, -273.000000)", fill: "inherit", fillRule: "nonzero" },

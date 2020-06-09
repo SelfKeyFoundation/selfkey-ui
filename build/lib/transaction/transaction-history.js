@@ -13,18 +13,18 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionHistory = exports.TransactionHistoryComponent = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
 var common_style_1 = require("../common/common-style");
 var failed_1 = require("../icons/failed");
 var receive_1 = require("../icons/receive");
-var hourglass_small_1 = require("../icons/hourglass-small");
 var sent_1 = require("../icons/sent");
 var copy_1 = require("../icons/copy");
 var view_1 = require("../icons/view");
+var hourglass_small_1 = require("../icons/hourglass-small");
 var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
-var styles = {
+var styles = core_1.createStyles({
     line: {
         height: '1px',
         transform: 'scaleY(-1)',
@@ -87,7 +87,7 @@ var styles = {
         cursor: 'pointer',
         display: 'flex',
     },
-};
+});
 var TransactionHistoryComponent = /** @class */ (function (_super) {
     __extends(TransactionHistoryComponent, _super);
     function TransactionHistoryComponent(props) {
@@ -177,5 +177,5 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
     return TransactionHistoryComponent;
 }(React.Component));
 exports.TransactionHistoryComponent = TransactionHistoryComponent;
-exports.TransactionHistory = react_jss_1.default(styles)(TransactionHistoryComponent);
+exports.TransactionHistory = core_1.withStyles(styles)(TransactionHistoryComponent);
 //# sourceMappingURL=transaction-history.js.map

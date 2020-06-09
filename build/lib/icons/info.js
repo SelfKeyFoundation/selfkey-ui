@@ -11,10 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.InfoTooltip = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '16px !important',
         height: '16px !important',
@@ -23,8 +24,8 @@ var styles = {
             fill: 'white',
         }
     }
-};
-exports.InfoTooltip = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 16 16' }),
+});
+exports.InfoTooltip = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 16 16' }),
     React.createElement("g", { stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "3.-Style-Guide---Forms", transform: "translate(-1539.000000, -931.000000)", fillRule: "nonzero" },
             React.createElement("g", { id: "Tooltips", transform: "translate(1523.000000, 801.000000)" },

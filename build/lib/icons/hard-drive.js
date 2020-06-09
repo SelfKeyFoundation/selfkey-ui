@@ -11,11 +11,12 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HardDriveIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
 var colors_1 = require("../colors");
-var styles = {
+var styles = core_1.createStyles({
     root: {
         fill: colors_1.white,
         height: '44px !important',
@@ -23,9 +24,9 @@ var styles = {
         '&:hover': {
             fill: colors_1.primary,
         }
-    },
-};
-exports.HardDriveIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 44 44", version: "1.1" }),
+    }
+});
+exports.HardDriveIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 44 44", version: "1.1" }),
     React.createElement("g", { stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "5.-Style-Guide---UI-Elements", transform: "translate(-1026.000000, -785.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "File-upload", transform: "translate(930.000000, 124.000000)" },

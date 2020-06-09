@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewRefreshIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '22px !important',
         height: '23px !important',
     },
-};
-exports.NewRefreshIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 22 23", version: "1.1" }),
+});
+exports.NewRefreshIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 22 23", version: "1.1" }),
     React.createElement("title", null, "icon-refresh-statuses"),
     React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-refresh-icon-for-statuses", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-1223.000000, -389.000000)" },

@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModalBox = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
 var close_button_1 = require("../icons/close-button");
-var styles = {
+var styles = core_1.createStyles({
     root: {
         boxSizing: 'border-box',
         minHeight: '300px',
@@ -44,16 +45,13 @@ var styles = {
         position: 'absolute',
         top: '-18px',
         right: '-18px',
-    },
-};
-exports.ModalBox = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, headerText = _a.headerText, children = _a.children, closeAction = _a.closeAction;
-    return (React.createElement(core_1.Grid, { container: true, className: classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
-        React.createElement(core_1.Grid, { item: true, id: 'header', className: classes.header },
-            React.createElement(core_1.Typography, { variant: "h2" }, headerText),
-            React.createElement("button", { className: classes.closeButton, onClick: closeAction },
-                React.createElement(close_button_1.CloseButtonIcon, null))),
-        React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body }, children)));
+    }
 });
+exports.ModalBox = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.Grid, { container: true, className: props.classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
+    React.createElement(core_2.Grid, { item: true, id: 'header', className: props.classes.header },
+        React.createElement(core_2.Typography, { variant: "h2" }, props.headerText),
+        React.createElement("button", { className: props.classes.closeButton, onClick: props.closeAction },
+            React.createElement(close_button_1.CloseButtonIcon, null))),
+    React.createElement(core_2.Grid, { item: true, id: 'body', className: props.classes.body }, props.children))); });
 exports.default = exports.ModalBox;
 //# sourceMappingURL=modal-box.js.map

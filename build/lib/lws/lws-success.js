@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSSuccess = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var success_1 = require("../icons/success");
-var styles = {
+var styles = core_1.createStyles({
     lwsSuccess: {
         fontFamily: 'Lato, arial, sans-serif',
     },
@@ -25,8 +26,8 @@ var styles = {
             color: '#93B0C1',
         },
     },
-};
-exports.LWSSuccess = react_jss_1.default(styles)(function (_a) {
+});
+exports.LWSSuccess = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes;
     return (React.createElement("div", { className: classes.lwsSuccess },
         React.createElement("div", { className: classes.areaTitle },

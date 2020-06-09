@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSError = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var common_style_1 = require("../common/common-style");
-var styles = {
+var styles = core_1.createStyles({
     form: common_style_1.default.form,
     lwsError: {
         fontFamily: 'Lato, arial, sans-serif'
@@ -41,8 +42,8 @@ var styles = {
             color: '#93B0C1',
         },
     },
-};
-exports.LWSError = react_jss_1.default(styles)(function (_a) {
+});
+exports.LWSError = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, actionButton = _a.actionButton, actionName = _a.actionName, errorName = _a.errorName, actionIcon = _a.actionIcon, supportText = _a.supportText;
     return (React.createElement("div", { className: classes.lwsError },
         React.createElement("div", { className: classes.areaTitle },

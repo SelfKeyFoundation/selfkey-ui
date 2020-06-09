@@ -13,12 +13,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionFeeSliderSelector = exports.TransactionFeeSelectorComponent = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var common_style_1 = require("../common/common-style");
 var bignumber_js_1 = require("bignumber.js");
-var core_1 = require("@material-ui/core");
-var styles = {
+var styles = core_1.createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
@@ -70,8 +70,8 @@ var styles = {
     },
     rightAligned: {
         textAlign: 'right'
-    }
-};
+    },
+});
 var WEI = new bignumber_js_1.default('1000000000000000000');
 var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
     __extends(TransactionFeeSelectorComponent, _super);
@@ -107,34 +107,34 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
         get: function () {
             return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(TransactionFeeSelectorComponent.prototype, "value", {
         get: function () {
             return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(TransactionFeeSelectorComponent.prototype, "transactionFee", {
         get: function () {
             return new bignumber_js_1.default(this.value).times(this.props.gasLimit).dividedBy(WEI);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(TransactionFeeSelectorComponent.prototype, "fiatFee", {
         get: function () {
             return this.transactionFee.times(this.props.fiatRate);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     TransactionFeeSelectorComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, minGasPrice = _a.minGasPrice, maxGasPrice = _a.maxGasPrice, slowPrice = _a.slowPrice, mediumPrice = _a.mediumPrice, fastPrice = _a.fastPrice, fiat = _a.fiat;
         return (React.createElement("div", { className: classes.root },
-            React.createElement("div", { className: classes.networkFee },
+            React.createElement("div", null,
                 React.createElement("span", null, "Network Transaction Fee:"),
                 ' ',
                 React.createElement("span", { className: classes.networkFeeValue },
@@ -167,6 +167,6 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
     return TransactionFeeSelectorComponent;
 }(React.Component));
 exports.TransactionFeeSelectorComponent = TransactionFeeSelectorComponent;
-exports.TransactionFeeSliderSelector = react_jss_1.default(styles)(TransactionFeeSelectorComponent);
+exports.TransactionFeeSliderSelector = core_1.withStyles(styles)(TransactionFeeSelectorComponent);
 exports.default = exports.TransactionFeeSliderSelector;
 //# sourceMappingURL=transaction-fee-slider-selector.js.map

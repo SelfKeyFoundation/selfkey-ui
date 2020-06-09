@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelfkeyLogo = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.SelfkeyLogo = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "18px", height: "20px" }, props, { viewBox: "0 0 18 20" }),

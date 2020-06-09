@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomTokenText = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
-var styles = {
+var core_1 = require("@material-ui/core");
+var styles = core_1.createStyles({
     customTokenText: {
         fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
@@ -11,8 +12,8 @@ var styles = {
         paddingBottom: '50px',
         textAlign: 'center'
     }
-};
-exports.CustomTokenText = react_jss_1.default(styles)(function (_a) {
+});
+exports.CustomTokenText = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children;
     return (React.createElement("div", { className: classes.customTokenText }, children));
 });

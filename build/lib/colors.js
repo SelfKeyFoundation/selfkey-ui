@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.white = exports.error = exports.warning = exports.success = exports.base = exports.baseDark = exports.baseLight = exports.grey = exports.typography = exports.primaryTint = exports.primary = void 0;
 exports.primary = '#00C0D9';
 exports.primaryTint = '#23E6FE';
 exports.typography = '#93B0C1';

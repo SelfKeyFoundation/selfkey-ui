@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionSendProgressBox = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
 var transaction_box_1 = require("../transaction-box");
-var core_1 = require("@material-ui/core");
 var hourglass_large_1 = require("../../icons/hourglass-large");
 var okay_1 = require("../../icons/okay");
 var number_format_1 = require("../../price/number-format");
-var styles = {
+var styles = core_1.createStyles({
     button: {
         boxSizing: 'border-box',
         height: '45px',
@@ -64,7 +64,7 @@ var styles = {
         fontSize: '18px',
         lineHeight: '28px'
     }
-};
+});
 var handleViewTransaction = function (event, openLink, transactionHash) {
     event.preventDefault();
     if (!openLink) {
@@ -79,10 +79,10 @@ var renderIcon = function (status) {
     else if (status === 'Sent!') {
         return React.createElement(okay_1.OkayIcon, null);
     }
-    return;
+    return null;
 };
-exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, amount = _a.amount, address = _a.address, openLink = _a.openLink, locale = _a.locale, status = _a.status, transactionHash = _a.transactionHash;
+exports.TransactionSendProgressBox = core_1.withStyles(styles)(function (_a) {
+    var classes = _a.classes, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, amount = _a.amount, address = _a.address, openLink = _a.openLink, locale = _a.locale, status = _a.status, transactionHash = _a.transactionHash;
     return (React.createElement(transaction_box_1.TransactionBox, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
         React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
             React.createElement(core_1.Grid, { item: true, xs: 2 }, renderIcon(status)),
@@ -90,7 +90,7 @@ exports.TransactionSendProgressBox = react_jss_1.default(styles)(function (_a) {
                 React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
                     React.createElement(core_1.Grid, { item: true, id: 'header' },
                         React.createElement(core_1.Typography, { variant: "h2" }, status)),
-                    React.createElement(core_1.Grid, { item: true, id: 'body', className: classes.body },
+                    React.createElement(core_1.Grid, { item: true, id: "body" },
                         React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start', spacing: 4 },
                             React.createElement(core_1.Grid, { item: true },
                                 React.createElement(core_1.Typography, { variant: 'h1', className: classes.amountContainer },

@@ -13,11 +13,11 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Copy = exports.CopyComponent = exports.styles = void 0;
 var React = require("react");
 var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
-// @ts-ignore
-var react_jss_1 = require("react-jss");
-exports.styles = {
+var core_1 = require("@material-ui/core");
+exports.styles = core_1.createStyles({
     copyButton: {
         backgroundColor: 'transparent',
         border: '1px solid #3B4A5A',
@@ -39,11 +39,11 @@ exports.styles = {
         fontSize: '10px',
         letterSpacing: 'normal',
     }
-};
+});
 var CopyComponent = /** @class */ (function (_super) {
     __extends(CopyComponent, _super);
-    function CopyComponent(props) {
-        var _this = _super.call(this, props) || this;
+    function CopyComponent() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.copyText = 'COPY';
         _this.copiedText = 'COPIED';
         _this.state = {
@@ -70,6 +70,6 @@ var CopyComponent = /** @class */ (function (_super) {
     return CopyComponent;
 }(React.Component));
 exports.CopyComponent = CopyComponent;
-exports.Copy = react_jss_1.default(exports.styles)(CopyComponent);
+exports.Copy = core_1.withStyles(exports.styles)(CopyComponent);
 exports.default = exports.Copy;
 //# sourceMappingURL=copy.js.map

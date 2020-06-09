@@ -11,10 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MenuExportIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
@@ -22,8 +23,8 @@ var styles = {
             fill: 'white',
         }
     }
-};
-exports.MenuExportIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '17px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || "0 0 17 20" }),
+});
+exports.MenuExportIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '17px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || "0 0 17 20" }),
     React.createElement("g", { id: "Main-Dashboard-export", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "300.3-Navigation-open-default-state-export", transform: "translate(-20.000000, -1266.000000)" },
             React.createElement("g", { id: "Menu-export" },

@@ -11,17 +11,18 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSWalletConnectionError = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var lws_button_1 = require("./lws-button");
 var common_style_1 = require("../common/common-style");
 var wallet_1 = require("../icons/wallet");
 var lws_error_1 = require("./lws-error");
-var styles = {
+var styles = core_1.createStyles({
     buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
     buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
-};
-exports.LWSWalletConnectionError = react_jss_1.default(styles)(function (_a) {
+});
+exports.LWSWalletConnectionError = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, downloadWalletAction = _a.downloadWalletAction, retryAction = _a.retryAction;
     return (React.createElement(lws_error_1.LWSError, { actionIcon: React.createElement(wallet_1.WalletIcon, null), actionName: "Action Required", errorName: "Install & Open The SelfKey Identity Wallet", supportText: "The SelfKey Identity Wallet is required to securely authenticate with this website. Please download and open the SelfKey Identity Wallet to proceed.", actionButton: React.createElement("div", null,
             React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: downloadWalletAction }, "Download The SelfKey Wallet"),

@@ -11,10 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModalCloseIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         '& circle': {
             stroke: '#1D505F',
@@ -26,8 +27,8 @@ var styles = {
         },
         transition: 'all 0.2s ease-out',
     }
-};
-exports.ModalCloseIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { width: "38px", height: "38px", viewBox: "0 0 38 38", fontSize: "large" }),
+});
+exports.ModalCloseIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { width: "38px", height: "38px", viewBox: "0 0 38 38", fontSize: "large" }),
     React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "Close-button", transform: "translate(1.000000, 1.000000)" },
             React.createElement("g", { id: "icon-close-modal" },

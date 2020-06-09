@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionBox = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var ethereum_1 = require("../icons/ethereum");
 var selfkey_1 = require("../icons/selfkey");
 var selfkey_dark_theme_1 = require("../theme/selfkey-dark-theme");
-var styles = {
+var styles = core_1.createStyles({
     transactionBox: {
         padding: '90px 30px 40px 30px',
         position: 'relative',
@@ -40,7 +41,7 @@ var styles = {
         fontWeight: 600,
         fontFamily: 'Lato, arial, sans-serif'
     }
-};
+});
 var renderIcon = function (shortName, classes) {
     switch (shortName) {
         case 'KEY':
@@ -53,7 +54,7 @@ var renderIcon = function (shortName, classes) {
             return (React.createElement("div", { className: classes.custom }, shortName));
     }
 };
-exports.TransactionBox = react_jss_1.default(styles)(function (_a) {
+exports.TransactionBox = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction;
     return (React.createElement("div", { className: classes.transactionBox },
         React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },

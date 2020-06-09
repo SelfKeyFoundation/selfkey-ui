@@ -24,14 +24,13 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionFeeBox = exports.TransactionFeeBoxComponent = exports.styles = void 0;
 var React = require("react");
-// @ts-ignore
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var actual_transaction_fee_box_1 = require("./actual-transaction-fee-box");
 var common_style_1 = require("../../../common/common-style");
-var core_1 = require("@material-ui/core");
 var icons_1 = require("@material-ui/icons");
-exports.styles = {
+exports.styles = core_1.createStyles({
     container: {
         fontFamily: common_style_1.default.fontFamily
     },
@@ -139,7 +138,7 @@ exports.styles = {
             margin: 0
         }
     }
-};
+});
 var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionFeeBoxComponent, _super);
     function TransactionFeeBoxComponent(props) {
@@ -246,6 +245,6 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     return TransactionFeeBoxComponent;
 }(React.Component));
 exports.TransactionFeeBoxComponent = TransactionFeeBoxComponent;
-exports.TransactionFeeBox = react_jss_1.default(exports.styles)(TransactionFeeBoxComponent);
+exports.TransactionFeeBox = core_1.withStyles(exports.styles)(TransactionFeeBoxComponent);
 exports.default = exports.TransactionFeeBox;
 //# sourceMappingURL=transaction-fee-box.js.map

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModalCloseButton = exports.ModalBody2 = exports.SmallModalBody = exports.ModalBody = exports.ModalHeader = exports.ModalWrap = void 0;
 var core_1 = require("@material-ui/core");
 var styles_1 = require("@material-ui/styles");
 var colors_1 = require("../colors");

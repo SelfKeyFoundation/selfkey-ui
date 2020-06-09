@@ -11,10 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SentRoundedIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
@@ -22,8 +23,8 @@ var styles = {
             fill: 'white',
         }
     }
-};
-exports.SentRoundedIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || "0 0 34 34" }),
+});
+exports.SentRoundedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || "0 0 34 34" }),
     React.createElement("g", { id: "Main-Dashboard-sent-rounded-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.7-dashboard-alternate1--sent-rounded-icon", transform: "translate(-1048.000000, -536.000000)" },
             React.createElement("g", { id: "Transactions", transform: "translate(1020.000000, 447.000000)" },

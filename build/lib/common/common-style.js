@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommonStyle = void 0;
 exports.CommonStyle = {
     fontFamily: 'Lato, arial, sans-serif',
     form: {

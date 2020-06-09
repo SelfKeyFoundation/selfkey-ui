@@ -42,10 +42,10 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArrayFileUploadWidget = exports.FileUploadGrid = exports.FileUploadWidget = exports.FileViewWithModalComponent = exports.FileLinkWithModal = exports.FilePreviewModalView = exports.FileView = exports.DecimalInput = exports.FileUploadInput = exports.FileUploadLabel = exports.MultilineSelect = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var styles_1 = require("@material-ui/styles");
-var react_jss_1 = require("react-jss");
+var core_2 = require("@material-ui/core");
 var delete_1 = require("../icons/delete");
 var classnames_1 = require("classnames");
 var hard_drive_1 = require("../icons/hard-drive");
@@ -57,7 +57,7 @@ var file_image_1 = require("../icons/file-image");
 var file_pdf_1 = require("../icons/file-pdf");
 var file_audio_1 = require("../icons/file-audio");
 var multilineSelectStyles = function (theme) {
-    return styles_1.createStyles({
+    return core_2.createStyles({
         root: {
             backgroundColor: colors_1.baseDark,
             borderRadius: '4px',
@@ -94,7 +94,7 @@ var multilineSelectStyles = function (theme) {
         },
     });
 };
-exports.MultilineSelect = styles_1.withStyles(multilineSelectStyles)(function (props) {
+exports.MultilineSelect = core_2.withStyles(multilineSelectStyles)(function (props) {
     var classes = props.classes, multiselect = props.multiselect, _a = props.selected, selected = _a === void 0 ? [] : _a, _b = props.items, items = _b === void 0 ? [] : _b, onSelectUpdated = props.onSelectUpdated, onAdd = props.onAdd;
     var isSelected = function (item) { return selected.includes(item.key); };
     var handleItemClick = function (item) {
@@ -123,7 +123,7 @@ exports.MultilineSelect = styles_1.withStyles(multilineSelectStyles)(function (p
             onAdd && items.length > 0 ? React.createElement(core_1.Divider, null) : null,
             onAdd ? (React.createElement(core_1.ListItem, { className: classes.itemAdd, onClick: onAdd }, "+Add Option")) : null)));
 });
-exports.FileUploadLabel = styles_1.withStyles({
+exports.FileUploadLabel = core_2.withStyles({
     root: {
         alignItems: 'center',
         cursor: 'pointer',
@@ -138,18 +138,18 @@ exports.FileUploadLabel = styles_1.withStyles({
         },
     },
 })(core_1.InputLabel);
-exports.FileUploadInput = styles_1.withStyles({
+exports.FileUploadInput = core_2.withStyles({
     root: {
         display: 'none',
     },
 })(core_1.Input);
-exports.DecimalInput = styles_1.withStyles({
+exports.DecimalInput = core_2.withStyles({
     input: {
         textAlign: 'right'
     },
 })(core_1.Input);
 var fileViewStyles = function (theme) {
-    return styles_1.createStyles({
+    return core_2.createStyles({
         fileItem: {
             padding: '5px 20px',
             boxSizing: 'border-box',
@@ -201,7 +201,7 @@ var fileViewStyles = function (theme) {
         },
     });
 };
-exports.FileView = styles_1.withStyles(fileViewStyles)(function (_a) {
+exports.FileView = core_2.withStyles(fileViewStyles)(function (_a) {
     var classes = _a.classes, file = _a.file, onClearForm = _a.onClearForm, _b = _a.errors, errors = _b === void 0 ? [] : _b;
     return (React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.fileItem, errors && errors.length && classes.fileItemError) },
         React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
@@ -252,7 +252,7 @@ var dataURItoBlob = function (dataURI) {
     var blob = new window.Blob([new Uint8Array(array)], { type: type });
     return { blob: blob, name: name };
 };
-var PreviewFileType = styles_1.withStyles(fileViewStyles)(function (_a) {
+var PreviewFileType = core_2.withStyles(fileViewStyles)(function (_a) {
     var classes = _a.classes, file = _a.file, url = _a.url, mime = _a.mime;
     if (isImageType(mime)) {
         return React.createElement("img", { src: url, alt: file.name, className: classes.imageWidth });
@@ -261,7 +261,7 @@ var PreviewFileType = styles_1.withStyles(fileViewStyles)(function (_a) {
         return React.createElement("audio", { src: url, controls: true });
     }
 });
-exports.FilePreviewModalView = styles_1.withStyles(fileViewStyles)(function (_a) {
+exports.FilePreviewModalView = core_2.withStyles(fileViewStyles)(function (_a) {
     var classes = _a.classes, open = _a.open, onClose = _a.onClose, onBack = _a.onBack, file = _a.file, url = _a.url, mime = _a.mime;
     return (React.createElement(core_1.Modal, { open: open, onClose: onClose },
         React.createElement(modalWithBackButton_1.ModalWrap, null,
@@ -348,7 +348,7 @@ var FileLinkWithModalComponent = /** @class */ (function (_super) {
     };
     return FileLinkWithModalComponent;
 }(React.Component));
-exports.FileLinkWithModal = styles_1.withStyles(fileViewStyles)(FileLinkWithModalComponent);
+exports.FileLinkWithModal = core_2.withStyles(fileViewStyles)(FileLinkWithModalComponent);
 var FileViewWithModal = /** @class */ (function (_super) {
     __extends(FileViewWithModal, _super);
     function FileViewWithModal() {
@@ -387,8 +387,8 @@ var FileViewWithModal = /** @class */ (function (_super) {
     };
     return FileViewWithModal;
 }(React.Component));
-exports.FileViewWithModalComponent = styles_1.withStyles(fileViewStyles)(FileViewWithModal);
-var fileUploadStyles = {
+exports.FileViewWithModalComponent = core_2.withStyles(fileViewStyles)(FileViewWithModal);
+var fileUploadStyles = core_2.createStyles({
     form: {
         width: '100%',
         height: '46px',
@@ -411,8 +411,8 @@ var fileUploadStyles = {
         backgroundColor: 'rgba(255, 46, 99, 0.09)',
         border: "1px solid " + colors_1.error,
     },
-};
-exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
+});
+exports.FileUploadWidget = core_2.withStyles(fileUploadStyles)(function (_a) {
     var classes = _a.classes, id = _a.id, file = _a.file, isError = _a.isError, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, onPDFOpen = _a.onPDFOpen, required = _a.required, props = __rest(_a, ["classes", "id", "file", "isError", "onClearForm", "onChange", "onBlur", "onFocus", "onPDFOpen", "required"]);
     var eventHandlers = {};
     if (onChange) {
@@ -451,7 +451,7 @@ exports.FileUploadWidget = react_jss_1.default(fileUploadStyles)(function (_a) {
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
-exports.FileUploadGrid = styles_1.withStyles({
+exports.FileUploadGrid = core_2.withStyles({
     container: {
         backgroundColor: colors_1.base,
         border: '1px solid #303C49',
@@ -464,7 +464,7 @@ exports.FileUploadGrid = styles_1.withStyles({
     },
 })(core_1.Grid);
 var fileUploadWidgetStyles = function (theme) {
-    return styles_1.createStyles({
+    return core_2.createStyles({
         fileInput: {
             display: 'none',
         },
@@ -593,5 +593,5 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
     };
     return ArrayFileUploadWidgetComponent;
 }(React.Component));
-exports.ArrayFileUploadWidget = styles_1.withStyles(fileUploadWidgetStyles)(ArrayFileUploadWidgetComponent);
+exports.ArrayFileUploadWidget = core_2.withStyles(fileUploadWidgetStyles)(ArrayFileUploadWidgetComponent);
 //# sourceMappingURL=inputs.js.map

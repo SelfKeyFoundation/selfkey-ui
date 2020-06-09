@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelfkeyLogoTemp = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '177px !important',
         height: '119px !important'
     }
-};
-exports.SelfkeyLogoTemp = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 177 119' }),
+});
+exports.SelfkeyLogoTemp = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 177 119' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "50%", y1: "97.784%", x2: "50%", y2: "1.559%", id: "selfkey-logo-temp-linearGradient-1" },
             React.createElement("stop", { stopColor: "#08BCCD", offset: "0%" }),

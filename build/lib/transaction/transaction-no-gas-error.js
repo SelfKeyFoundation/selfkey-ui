@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionNoGasError = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
-var transaction_error_box_1 = require("./transaction-error-box");
 var core_1 = require("@material-ui/core");
-var styles = {
+var transaction_error_box_1 = require("./transaction-error-box");
+var styles = core_1.createStyles({
     bodyText: {
         paddingRight: '40px',
         textAlign: 'justify',
@@ -19,9 +19,9 @@ var styles = {
     learnMoreLink: {
         textDecoration: 'none',
     }
-};
-exports.TransactionNoGasError = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, publicKey = _a.publicKey, openLink = _a.openLink, closeAction = _a.closeAction;
+});
+exports.TransactionNoGasError = core_1.withStyles(styles)(function (_a) {
+    var classes = _a.classes, publicKey = _a.publicKey, openLink = _a.openLink, closeAction = _a.closeAction;
     var gasExplanationUrl = 'https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed';
     var handleLinkClick = function (event) {
         event.preventDefault();

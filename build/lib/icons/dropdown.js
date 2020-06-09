@@ -11,10 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DropdownIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
@@ -22,8 +23,8 @@ var styles = {
             fill: 'white',
         }
     }
-};
-exports.DropdownIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '18px', height: props.height || '10px' } }, props, { viewBox: props.viewBox || "0 0 18 10" }),
+});
+exports.DropdownIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '18px', height: props.height || '10px' } }, props, { viewBox: props.viewBox || "0 0 18 10" }),
     React.createElement("g", { id: "dropdown-icon", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "Top-Header-Personal-dropdown-icon", transform: "translate(-1372.000000, -33.000000)" },
             React.createElement("g", { id: "Top-Header-dropdown-icon" },

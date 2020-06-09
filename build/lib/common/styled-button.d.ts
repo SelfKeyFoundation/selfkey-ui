@@ -1,4 +1,3 @@
-/// <reference types="react-jss" />
 import * as React from 'react';
 export declare type Variant = 'text' | 'outlined' | 'contained';
 export declare type Color = 'primary' | 'secondary';
@@ -10,6 +9,9 @@ export declare type ButtonProps = {
     type?: 'button' | 'submit';
     disabled?: boolean;
     id?: string;
+    children?: any;
 };
-export declare const StyledButton: React.ComponentType<ButtonProps & import("react-jss").StyledComponentProps<string>>;
+export declare const StyledButton: React.ComponentType<Pick<ButtonProps & {
+    classes: Record<"disabled" | "root" | "outlined" | "containedPrimary", string>;
+}, "disabled" | "color" | "size" | "children" | "id" | "onClick" | "variant" | "type"> & import("@material-ui/core").StyledComponentProps<"disabled" | "root" | "outlined" | "containedPrimary">>;
 export default StyledButton;

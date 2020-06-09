@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddressBookMenuIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 exports.AddressBookMenuIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '15px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || "0 0 15 16" }),

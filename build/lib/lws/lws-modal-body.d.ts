@@ -1,4 +1,8 @@
-/// <reference types="react-jss" />
 import * as React from 'react';
-export declare const LWSModalBody: React.ComponentType<import("react-jss").StyledComponentProps<string>>;
+export declare type LWSModalBodyProps = {
+    children?: any;
+};
+export declare const LWSModalBody: React.ComponentType<Pick<LWSModalBodyProps & {
+    classes: Record<"root", string>;
+}, "children"> & import("@material-ui/core").StyledComponentProps<"root">>;
 export default LWSModalBody;

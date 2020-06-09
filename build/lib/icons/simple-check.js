@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleCheckIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var react_jss_1 = require("react-jss");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_2.createStyles({
     root: {
         width: '39px !important',
         height: '45px !important'
     }
-};
-exports.SimpleCheckIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "39px", height: "45px" }, props, { viewBox: "0 0 39 45" }),
+});
+exports.SimpleCheckIcon = core_2.withStyles(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "39px", height: "45px" }, props, { viewBox: "0 0 39 45" }),
     React.createElement("title", null, "icon-simple-check"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-simple-check", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "Statuses-simple-check", transform: "translate(-195.000000, -625.000000)", fill: "#1CBA7D" },

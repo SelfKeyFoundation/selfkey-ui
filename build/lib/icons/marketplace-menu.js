@@ -11,9 +11,12 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarketplaceMenuIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.MarketplaceMenuIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '15px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || "0 0 15 16" }),
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({});
+exports.MarketplaceMenuIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '15px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || "0 0 15 16" }),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "300-Navigation", transform: "translate(-1172.000000, -231.000000)", fillRule: "nonzero" },

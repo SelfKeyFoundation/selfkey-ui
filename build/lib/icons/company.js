@@ -11,16 +11,17 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompanyIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '38px !important',
         height: '35px !important'
     }
-};
-exports.CompanyIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: '0 0 38 35' }),
+});
+exports.CompanyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 38 35' }),
     React.createElement("g", { id: "Corporate-Vault-company", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-755.000000, -594.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 142.000000)" },

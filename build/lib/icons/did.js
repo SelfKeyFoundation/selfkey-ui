@@ -11,20 +11,21 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DIDIcon = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
 var _linearGradient_1 = require("./_linearGradient");
-var styles = {
+var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',
         },
     }
-};
+});
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.DIDIcon = react_jss_1.default(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '60px', height: props.height || '60px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 60 60" }),
+exports.DIDIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '60px', height: props.height || '60px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 60 60" }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-DID-icon", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403.1---Identity-Summary---No-DID", transform: "translate(-242.000000, -548.000000)", fill: "inherit", fillRule: "nonzero" },

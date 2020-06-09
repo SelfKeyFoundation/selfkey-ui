@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransferPrice = void 0;
 var React = require("react");
-// @ts-ignore
-var react_jss_1 = require("react-jss");
 var core_1 = require("@material-ui/core");
-var styles = {
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     cryptoCurrencyName: {
         fontFamily: 'Lato, arial, sans-serif',
         fontSize: '18px',
@@ -18,17 +18,17 @@ var styles = {
         letterSpacing: '1px',
         color: '#ffffff'
     }
-};
-exports.TransferPrice = react_jss_1.default(styles)(function (_a) {
+});
+exports.TransferPrice = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, cryptoCurrencyShort = _a.cryptoCurrencyShort, cryptoCurrencyName = _a.cryptoCurrencyName, CryptoCurrencyIconComponent = _a.CryptoCurrencyIconComponent;
     return (React.createElement("div", null,
-        React.createElement(core_1.Grid, { container: true },
-            React.createElement(core_1.Grid, { item: true, xs: 1 },
+        React.createElement(core_2.Grid, { container: true },
+            React.createElement(core_2.Grid, { item: true, xs: 1 },
                 React.createElement(CryptoCurrencyIconComponent, null)),
-            React.createElement(core_1.Grid, { item: true, xs: 11 },
+            React.createElement(core_2.Grid, { item: true, xs: 11 },
                 React.createElement("div", { className: classes.cryptoCurrencyName }, cryptoCurrencyName),
                 React.createElement("div", { className: classes.cryptoCurrencyShort }, cryptoCurrencyShort))),
-        React.createElement(core_1.Grid, null, children)));
+        React.createElement(core_2.Grid, null, children)));
 });
 exports.default = exports.TransferPrice;
 //# sourceMappingURL=transfer-price.js.map

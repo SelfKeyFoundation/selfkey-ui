@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSLoading = void 0;
 var React = require("react");
-var react_jss_1 = require("react-jss");
+var core_1 = require("@material-ui/core");
 var animated_loading_1 = require("../icons/animated-loading");
-var styles = {
+var styles = core_1.createStyles({
     loading: {
         minHeight: '300px',
         textAlign: 'center',
@@ -11,9 +12,9 @@ var styles = {
         '& svg circle': {
             fill: '#1CA9BA',
         },
-    },
-};
-exports.LWSLoading = react_jss_1.default(styles)(function (_a) {
+    }
+});
+exports.LWSLoading = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes;
     return (React.createElement("div", { className: classes.loading },
         React.createElement(animated_loading_1.default, null)));
