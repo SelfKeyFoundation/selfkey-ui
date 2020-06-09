@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { WithStyles, withStyles, createStyles } from '@material-ui/core';
-import { SvgIcon } from '@material-ui/core';
+import { SvgIcon, WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles = createStyles({

@@ -1,12 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import {
-    Typography,
-    Grid,
-    Theme,
-    Button,
-} from '@material-ui/core';
-import { WithStyles, withStyles, createStyles } from '@material-ui/core';
+import { Typography, Grid, Theme, Button, WithStyles, withStyles, createStyles } from '@material-ui/core';
 import {
     AttributeAlertLargeIcon,
     SimpleCheckIcon,
@@ -19,7 +13,7 @@ import {
     NewRefreshIcon,
     KeyTooltip,
     TooltipArrow
-} from '../theme/selfkey-dark-theme';
+} from '../index';
 
 export type StatusProps = any;
 

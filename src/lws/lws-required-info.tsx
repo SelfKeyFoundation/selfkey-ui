@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as _ from 'lodash';
+import { find } from 'lodash';
 import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
 import { CheckIcon } from '../icons/check';
@@ -7,7 +7,7 @@ import { CheckEmptyIcon } from '../icons/check-empty';
 import { AttributeAlertIcon } from '../icons/attribute-alert';
 import { LWSButton } from './lws-button';
 import { Website } from './lws-common';
-import { EditTransparentIcon } from '../theme/selfkey-dark-theme';
+import { EditTransparentIcon } from '../icons/edit-transparent';
 
 const styles = createStyles({
     form: CommonStyle.form,
@@ -130,7 +130,7 @@ const renderAttributes = (
         if (typeof attr !== 'object') {
             attr = { attribute: attr };
         }
-        let found = _.find(attributes, { url: attr.id || attr.attribute }) || {};
+        let found = find(attributes, { url: attr.id || attr.attribute }) || {};
         let merged = { ...attr, ...found };
         if (!merged.label && merged.schema && merged.schema.title) {
             merged.label = merged.schema.title;

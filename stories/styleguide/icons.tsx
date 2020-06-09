@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Grid, Theme } from '@material-ui/core';
 import { createStyles, withStyles } from '@material-ui/styles';
-import { MuiAddIcon } from '../../src/icons/muiadd';
 import {
     AddressBookIcon,
     AddressBookMenuIcon,
@@ -25,6 +24,7 @@ import {
     CoinsIcon,
     CompanyIcon,
     CopyIcon,
+    CorporateIcon,
     CustomIcon,
     DashboardMenuIcon,
     DeleteIcon,
@@ -79,6 +79,7 @@ import {
     MoneyIcon,
     MuiDeleteIcon,
     MuiEditIcon,
+    MuiAddIcon,
     MuiVisibilityIcon,
     MyCryptoLargeIcon,
     NewAddressIcon,
@@ -139,8 +140,7 @@ import {
     WarningShieldIcon,
     NewRefreshIcon,
     IDIcon
-} from '../../src/theme/selfkey-dark-theme';
-import CorporateIcon from '../../src/icons/corporate';
+} from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
     createStyles({

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import EthereumIcon from '../icons/ethereum';
 import SelfkeyIcon from '../icons/selfkey';
-import { ModalCloseIcon } from '../theme/selfkey-dark-theme';
+import { ModalCloseIcon } from '../icons/modal-close';
 
 const styles = createStyles({
     transactionBox: {

@@ -1,18 +1,14 @@
 import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
-import {
-    Paper,
-    Grid,
-    Button,
-} from "@material-ui/core";
+import { Paper, Grid, Button } from "@material-ui/core";
 import { withStyles } from '@material-ui/styles';
 import { ModalBody2 } from "./modalElements";
 import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
 import HardDriveIcon from "../icons/hard-drive";
 import { base } from "../colors";
-import { BackButton } from "../theme/selfkey-dark-theme";
+import { BackButton } from "../materialui/button";
 
 export const ModalWrap = withStyles({
     root: {

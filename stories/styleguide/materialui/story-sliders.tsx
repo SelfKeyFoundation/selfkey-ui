@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { 
-    Grid, 
-    Slider,
-    Typography, 
-} from '@material-ui/core';
+import { Grid, Slider, Typography } from '@material-ui/core';
 import StoryRangeSlider from './story-rangeSlider';
 
 const underlineStyle = {

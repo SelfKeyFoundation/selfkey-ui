@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Typography } from '@material-ui/core';
-import { StatusInfo } from '../../../src/theme/selfkey-dark-theme';
+import { StatusInfo } from '../../../src';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -8,35 +8,35 @@ const underlineStyle = {
 
 class StatusStories extends React.Component {
     state = {
-		empty: '',
-		tooltip: 'Test Tooltip message'
+        empty: '',
+        tooltip: 'Test Tooltip message'
     };
 
-	handleClick = () => {
-		alert('Clicked!');
-	};
+    handleClick = () => {
+        alert('Clicked!');
+    };
 
-	handleRefresh = () => {
-		alert('Status refreshed!');
-	};
+    handleRefresh = () => {
+        alert('Status refreshed!');
+    };
 
     render() {
         return (
-			<div>
-				<Typography variant="h3" style={underlineStyle} gutterBottom>
-					Statuses
-				</Typography>
-				<StatusInfo status="Documents Required" onClick={this.handleClick} handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
-				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} status="Documents Submitted" tooltip={this.state.tooltip} />
-				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} status="Denied" tooltip={this.state.tooltip} />
-				<br/><br/>
-				<StatusInfo handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
+            <div>
+                <Typography variant="h3" style={underlineStyle} gutterBottom>
+                    Statuses
+                </Typography>
+                <StatusInfo status="Documents Required" onClick={this.handleClick} handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
+                <br/><br/>
+                <StatusInfo handleRefresh={this.handleRefresh} status="Documents Submitted" tooltip={this.state.tooltip} />
+                <br/><br/>
+                <StatusInfo handleRefresh={this.handleRefresh} status="Denied" tooltip={this.state.tooltip} />
+                <br/><br/>
+                <StatusInfo handleRefresh={this.handleRefresh} tooltip={this.state.tooltip} />
 
-			</div>
-		)
-	}
+            </div>
+        )
+    }
 }
 
 export default StatusStories;

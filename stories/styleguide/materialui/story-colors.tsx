@@ -1,9 +1,5 @@
 import * as React from 'react';
-import {
-    Typography,
-    Grid,
-    CardContent
-} from '@material-ui/core';
+import { Typography, Grid, CardContent } from '@material-ui/core';
 import {
     PrimaryCard,
     PrimaryTintCard,
@@ -15,9 +11,8 @@ import {
     BaseCard,
     SuccessCard,
     WarningCard,
-    ErrorCard }
-from '../../../src/theme/selfkey-dark-theme';
-
+    ErrorCard
+} from '../../../src';
 
 export default function ColorStories () {
     return (
