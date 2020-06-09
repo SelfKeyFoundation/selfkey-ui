@@ -41,7 +41,6 @@ export { Tag } from './materialui/typography';
 export { StatusInfo } from './materialui/statuses';
 export { BackButton } from './materialui/button';
 export { TooltipArrow, KeyTooltip } from './materialui/tooltipArrow';
-export { FileUploadWidget, MultilineSelect, FileUploadLabel, FileUploadInput, DecimalInput, FileView, FilePreviewModalView, FileLinkWithModal, FileViewWithModalComponent, FileUploadGrid, ArrayFileUploadWidget } from './materialui/inputs';
 export { LargeTableHeadRow, SmallTableHeadRow, SmallTableRow, SmallTableCell, TagTableCell } from './materialui/tables';
 export { PrimaryCard, PrimaryTintCard, TypographyCard, WhiteCard, GreyCard, BaseLightCard, BaseDarkCard, BaseCard, SuccessCard, WarningCard, ErrorCard } from './materialui/colorPresentation';
 // Icons

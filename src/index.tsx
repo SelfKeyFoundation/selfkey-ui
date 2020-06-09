@@ -55,19 +55,6 @@ export { Tag } from './materialui/typography';
 export { StatusInfo } from './materialui/statuses';
 export { BackButton } from './materialui/button';
 export { TooltipArrow, KeyTooltip } from './materialui/tooltipArrow';
-export {
-    FileUploadWidget,
-    MultilineSelect,
-    FileUploadLabel,
-    FileUploadInput,
-    DecimalInput,
-    FileView,
-    FilePreviewModalView,
-    FileLinkWithModal,
-    FileViewWithModalComponent,
-    FileUploadGrid,
-    ArrayFileUploadWidget
-} from './materialui/inputs';
 
 export {
     LargeTableHeadRow,

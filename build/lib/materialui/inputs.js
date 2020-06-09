@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Input, InputLabel, Typography, Grid, Button, IconButton, Modal, List, ListItem, ListItemText, Divider, } from '@material-ui/core';
+import classNames from 'classnames';
 import { withStyles, createStyles } from '@material-ui/core';
 import { DeleteIcon } from '../icons/delete';
-import classNames from 'classnames';
 import { HardDriveIcon } from '../icons/hard-drive';
 import { FileDefaultIcon } from '../icons/file-default';
 import { primary, baseDark, base, error, white } from '../colors';

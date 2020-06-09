@@ -14,7 +14,7 @@ import {
     FileUploadWidget,
     ArrayFileUploadWidget,
     MultilineSelect,
-} from '../../../src';
+} from '../../../src/materialui/inputs';
 
 import DropdownStories from './story-dropdowns';
 

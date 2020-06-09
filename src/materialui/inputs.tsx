@@ -13,9 +13,9 @@ import {
     ListItemText,
     Divider,
 } from '@material-ui/core';
+import classNames from 'classnames';
 import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { DeleteIcon } from '../icons/delete';
-import classNames from 'classnames';
 import { HardDriveIcon } from '../icons/hard-drive';
 import { FileDefaultIcon } from '../icons/file-default';
 import { primary, baseDark, base, error, white } from '../colors';
