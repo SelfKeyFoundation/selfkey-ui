@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-import { SvgIcon } from '@material-ui/core';
+import { SvgIcon, withStyles, createStyles } from '@material-ui/core';
 const styles = createStyles({
     root: {
         width: '38px !important',

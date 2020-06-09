@@ -10,6 +10,6 @@ export declare type TransactionNoGasErrorProps = {
     status: string;
 };
 export declare const TransactionSendProgressBox: React.ComponentType<Pick<TransactionNoGasErrorProps & {
-    classes: Record<"address" | "button" | "button2" | "actionButtonsContainer" | "amountContainer" | "amount" | "sentTo", string>;
-}, "address" | "locale" | "cryptoCurrency" | "status" | "closeAction" | "openLink" | "amount" | "transactionHash"> & import("@material-ui/core").StyledComponentProps<"address" | "button" | "button2" | "actionButtonsContainer" | "amountContainer" | "amount" | "sentTo">>;
+    classes: Record<"address" | "button" | "actionButtonsContainer" | "amountContainer" | "amount" | "button2" | "sentTo", string>;
+}, "address" | "locale" | "cryptoCurrency" | "closeAction" | "status" | "openLink" | "amount" | "transactionHash"> & import("@material-ui/core").StyledComponentProps<"address" | "button" | "actionButtonsContainer" | "amountContainer" | "amount" | "button2" | "sentTo">>;
 export default TransactionSendProgressBox;

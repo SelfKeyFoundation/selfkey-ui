@@ -12,6 +12,6 @@ export declare type LWSRequiredInfoProps = {
     website: Website;
 };
 export declare const LWSRequiredInfo: React.ComponentType<Pick<LWSRequiredInfoProps & {
-    classes: Record<"form" | "clickable" | "attribute" | "areaTitle" | "buttonPrimary" | "buttonSecondary" | "requiredInfo" | "waringMessage" | "formSubmitColumn" | "tocMessage" | "edit", string>;
-}, "requested" | "attributes" | "allowAction" | "cancelAction" | "editAction" | "notAllowedAttributes" | "website" | "disallowAttributeAction"> & import("@material-ui/core").StyledComponentProps<"form" | "clickable" | "attribute" | "areaTitle" | "buttonPrimary" | "buttonSecondary" | "requiredInfo" | "waringMessage" | "formSubmitColumn" | "tocMessage" | "edit">>;
+    classes: Record<"form" | "clickable" | "areaTitle" | "buttonPrimary" | "buttonSecondary" | "requiredInfo" | "attribute" | "waringMessage" | "formSubmitColumn" | "tocMessage" | "edit", string>;
+}, "requested" | "attributes" | "allowAction" | "cancelAction" | "editAction" | "notAllowedAttributes" | "website" | "disallowAttributeAction"> & import("@material-ui/core").StyledComponentProps<"form" | "clickable" | "areaTitle" | "buttonPrimary" | "buttonSecondary" | "requiredInfo" | "attribute" | "waringMessage" | "formSubmitColumn" | "tocMessage" | "edit">>;
 export default LWSRequiredInfo;

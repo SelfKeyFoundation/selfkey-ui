@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { CloseButtonIcon } from '../icons/close-button';
-import { SelfkeyLogo } from '../theme/selfkey-dark-theme';
+import { SelfkeyLogo } from '../icons/selfkeyLogo';
 import { Typography } from '@material-ui/core';
 const styles = createStyles({
     root: {

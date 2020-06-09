@@ -12,5 +12,5 @@ export declare type AddressBookProps = {
 };
 export declare const AddressBook: React.ComponentType<Pick<AddressBookProps & {
     classes: Record<"button" | "table" | "headerTableRow" | "bodyTableRow" | "addressBook" | "descriptionText", string>;
-}, "onAdd" | "addresses" | "onEdit" | "onDelete"> & import("@material-ui/core").StyledComponentProps<"button" | "table" | "headerTableRow" | "bodyTableRow" | "addressBook" | "descriptionText">>;
+}, "addresses" | "onEdit" | "onDelete" | "onAdd"> & import("@material-ui/core").StyledComponentProps<"button" | "table" | "headerTableRow" | "bodyTableRow" | "addressBook" | "descriptionText">>;
 export default AddressBook;
