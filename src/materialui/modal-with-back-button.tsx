@@ -3,12 +3,12 @@ import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import { Paper, Grid, Button } from "@material-ui/core";
 import { withStyles } from '@material-ui/styles';
-import { ModalBody2 } from "./modalElements";
+import { ModalBody2 } from "./modal-elements";
 import IncorporationsIcon from "../icons/incorporations";
 import { FileUploadLabel, FileUploadInput } from "./inputs";
 import HardDriveIcon from "../icons/hard-drive";
 import { base } from "../colors";
-import { BackButton } from "../materialui/button";
+import { BackButton } from "./button";
 
 export const ModalWrap = withStyles({
     root: {
@@ -36,6 +36,7 @@ export const FileUploadGrid = withStyles({
     },
 })(Grid);
 
+
 export const FileUploadHeaderGrid = withStyles({
     item: {
         marginLeft: '-210px',
@@ -44,7 +45,7 @@ export const FileUploadHeaderGrid = withStyles({
     },
 })(Grid);
 
-class ModalWithBackButton extends React.Component {
+export class ModalWithBackButton extends React.Component {
     state = {
         open: false
     };

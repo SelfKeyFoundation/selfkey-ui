@@ -8,14 +8,14 @@ const styles = createStyles({
     }
 });
 
-export type TransactionNoGasErrorProps = {
+export type TransactionErrorProps = {
     publicKey: string;
     message: string;
     closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
 };
 
 export const TransactionError = withStyles(styles)(
-    ({ classes, message, publicKey, closeAction }: TransactionNoGasErrorProps & WithStyles<typeof styles>) => (
+    ({ classes, message, publicKey, closeAction }: TransactionErrorProps & WithStyles<typeof styles>) => (
         <TransactionErrorBox publicKey={publicKey} closeAction={closeAction}>
             <Typography variant="body2" className={classes.bodyText}>{message}</Typography>
         </TransactionErrorBox>

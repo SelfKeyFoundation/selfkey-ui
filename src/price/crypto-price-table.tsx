@@ -58,7 +58,7 @@ export const styles = createStyles({
     },
 });
 
-export type Token = {
+type Token = {
     name: string;
     symbol: string;
     price: number;

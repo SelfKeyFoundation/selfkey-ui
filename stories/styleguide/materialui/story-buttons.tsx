@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Typography, Grid, IconButton, Button } from '@material-ui/core';
 import InfoTooltip from '../../../src/icons/info';
-import { TooltipArrow, KeyTooltip } from '../../../src/materialui/tooltipArrow';
+import { TooltipArrow, KeyTooltip } from '../../../src/materialui/tooltip-arrow';
 import ToggleButtonGroupStory from './story-buttonGroups';
 import { BackButton } from '../../../src';
 

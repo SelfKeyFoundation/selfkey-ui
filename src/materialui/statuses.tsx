@@ -6,14 +6,15 @@ import {
     SimpleCheckIcon,
     SimpleDeniedIcon,
     SimpleHourglassIcon,
+    NewRefreshIcon
+} from '../icons';
+import {
     error,
     success,
     typography,
-    warning,
-    NewRefreshIcon,
-    KeyTooltip,
-    TooltipArrow
-} from '../index';
+    warning
+} from '../colors';
+import { KeyTooltip, TooltipArrow } from './tooltip-arrow';
 
 export type StatusProps = any;
 

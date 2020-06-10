@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { WithStyles, withStyles, createStyles } from '@material-ui/core';
-import { Grid } from '@material-ui/core';
+import { Grid, WithStyles, withStyles, createStyles } from '@material-ui/core';
 import StyledButton from '../common/styled-button';
 
-export const styles = createStyles({
+const styles = createStyles({
     errorText: {
         height: '19px',
         width: '242px',
@@ -58,11 +57,11 @@ export type AddressBookAddProps = {
     onAddressChange: (address: string) => void
 }
 
-export type StyledProps = WithStyles<typeof styles> & AddressBookAddProps;
+export type AddressBookAddSyledProps = WithStyles<typeof styles> & AddressBookAddProps;
 
-export class AddressBookAddComponent extends React.Component<StyledProps, AddressBookAddState> {
+export class AddressBookAddComponent extends React.Component<AddressBookAddSyledProps, AddressBookAddState> {
 
-    constructor(props: StyledProps) {
+    constructor(props: AddressBookAddSyledProps) {
         super(props);
         this.state = {label: '', address: ''};
     }

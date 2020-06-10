@@ -2,12 +2,12 @@ import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import { Grid, Button } from "@material-ui/core";
-import { 
-    ModalWrap, 
-    ModalCloseButton, 
+import {
+    ModalWrap,
+    ModalCloseButton,
     ModalHeader,
     ModalBody,
-} from "../../../src/materialui/modalElements";
+} from "../../../src/materialui/modal-elements";
 import ModalCloseIcon from "../../../src/icons/modal-close";
 
 

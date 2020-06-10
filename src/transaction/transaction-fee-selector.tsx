@@ -62,11 +62,11 @@ export type TransactionFeeSelectorProps = {
     onChange: (value: number) => void;
 };
 
-export type TransactionFeeSelectorState = {
+type TransactionFeeSelectorState = {
     value: number | null;
 };
 
-export type StyledProps = WithStyles<typeof styles> & TransactionFeeSelectorProps;
+type StyledProps = WithStyles<typeof styles> & TransactionFeeSelectorProps;
 
 const WEI = new BN('1000000000000000000');
 

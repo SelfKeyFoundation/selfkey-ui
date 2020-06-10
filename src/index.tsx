@@ -48,13 +48,13 @@ export { AddressBookAdd } from './address-book/address-book-add';
 export { AddressBookEdit } from './address-book/address-book-edit';
 export { ModalBox } from './common/modal-box';
 export { Copy } from './common/copy';
-export { CopyWithIcon } from './common/copywithicon';
+export { CopyWithIcon } from './common/copy-with-icon';
 export { StyledButton } from './common/styled-button';
 
 export { Tag } from './materialui/typography';
 export { StatusInfo } from './materialui/statuses';
 export { BackButton } from './materialui/button';
-export { TooltipArrow, KeyTooltip } from './materialui/tooltipArrow';
+export { TooltipArrow, KeyTooltip } from './materialui/tooltip-arrow';
 
 export {
     LargeTableHeadRow,
@@ -76,7 +76,7 @@ export {
     SuccessCard,
     WarningCard,
     ErrorCard
-} from './materialui/colorPresentation';
+} from './materialui/color-presentation';
 
 // Icons
 export { AddressBookIcon } from './icons/address-book';

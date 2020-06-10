@@ -117,7 +117,7 @@ const styles = createStyles({
     }
 });
 
-export type Token = {
+type Token = {
     name: string,
     symbol: string,
     balance: number,
@@ -134,7 +134,7 @@ export type CryptoChartBoxProps = {
     toggleViewAll?: Function
 }
 
-export type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
+type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
 
 export type Active = {
     active: boolean;
