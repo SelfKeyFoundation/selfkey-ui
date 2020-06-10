@@ -14,10 +14,10 @@ export declare type TxHistoryItem = {
     externalLink: String;
     statusIconName: StatusIconName;
 };
-export declare type TransactionHistoryState = {
+declare type TransactionHistoryState = {
     currentCopyValues: Array<string>;
 };
-export declare type StyledProps = WithStyles<typeof styles> & TransactionHistoryProps;
+declare type StyledProps = WithStyles<typeof styles> & TransactionHistoryProps;
 export declare class TransactionHistoryComponent extends React.Component<StyledProps, TransactionHistoryState> {
     copyText: string;
     copiedText: string;

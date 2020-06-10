@@ -35,14 +35,14 @@ export { AddressBookAdd } from './address-book/address-book-add';
 export { AddressBookEdit } from './address-book/address-book-edit';
 export { ModalBox } from './common/modal-box';
 export { Copy } from './common/copy';
-export { CopyWithIcon } from './common/copywithicon';
+export { CopyWithIcon } from './common/copy-with-icon';
 export { StyledButton } from './common/styled-button';
 export { Tag } from './materialui/typography';
 export { StatusInfo } from './materialui/statuses';
 export { BackButton } from './materialui/button';
-export { TooltipArrow, KeyTooltip } from './materialui/tooltipArrow';
+export { TooltipArrow, KeyTooltip } from './materialui/tooltip-arrow';
 export { LargeTableHeadRow, SmallTableHeadRow, SmallTableRow, SmallTableCell, TagTableCell } from './materialui/tables';
-export { PrimaryCard, PrimaryTintCard, TypographyCard, WhiteCard, GreyCard, BaseLightCard, BaseDarkCard, BaseCard, SuccessCard, WarningCard, ErrorCard } from './materialui/colorPresentation';
+export { PrimaryCard, PrimaryTintCard, TypographyCard, WhiteCard, GreyCard, BaseLightCard, BaseDarkCard, BaseCard, SuccessCard, WarningCard, ErrorCard } from './materialui/color-presentation';
 // Icons
 export { AddressBookIcon } from './icons/address-book';
 export { AddressBookMenuIcon } from './icons/address-book-menu';

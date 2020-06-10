@@ -57,7 +57,7 @@ const styles = createStyles({
     },
 });
 const WEI = new BN('1000000000000000000');
-export class TransactionFeeSelectorComponent extends React.Component {
+class TransactionFeeSliderSelectorComponent extends React.Component {
     constructor() {
         super(...arguments);
         this.state = {
@@ -131,6 +131,6 @@ export class TransactionFeeSelectorComponent extends React.Component {
                     React.createElement(Typography, { variant: "subtitle2", color: "secondary" }, `< 2 min`)))));
     }
 }
-export const TransactionFeeSliderSelector = withStyles(styles)(TransactionFeeSelectorComponent);
+export const TransactionFeeSliderSelector = withStyles(styles)(TransactionFeeSliderSelectorComponent);
 export default TransactionFeeSliderSelector;
 //# sourceMappingURL=transaction-fee-slider-selector.js.map

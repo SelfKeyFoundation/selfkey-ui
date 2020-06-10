@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-import { Grid } from '@material-ui/core';
+import { Grid, withStyles, createStyles } from '@material-ui/core';
 import StyledButton from '../common/styled-button';
-export const styles = createStyles({
+const styles = createStyles({
     errorText: {
         height: '19px',
         width: '242px',

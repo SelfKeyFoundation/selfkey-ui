@@ -2,7 +2,7 @@ import * as React from 'react';
 import { WithStyles } from '@material-ui/core';
 import { ChartEvent } from 'react-google-charts';
 declare const styles: Record<"active" | "header" | "horizontalDivider" | "cryptoBox" | "coloredBox" | "coloredBoxText" | "prices" | "texts" | "totalPrice" | "totalPriceText" | "chartCenterContainer" | "chart" | "gearButton" | "buttonViewMore" | "buttonViewMoreText" | "expandMore" | "headerText", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
-export declare type Token = {
+declare type Token = {
     name: string;
     symbol: string;
     balance: number;
@@ -17,7 +17,7 @@ export declare type CryptoChartBoxProps = {
     viewAll: boolean;
     toggleViewAll?: Function;
 };
-export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
+declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
 export declare type Active = {
     active: boolean;
 };

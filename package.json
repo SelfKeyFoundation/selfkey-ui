@@ -8,7 +8,7 @@
         "build/lib"
     ],
     "exports": {
-        "./": "./build/lib"
+        "./": "./build/lib/"
     },
     "scripts": {
         "start": "start-storybook -p 6006",

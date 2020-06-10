@@ -12,10 +12,10 @@ export declare type TransactionFeeSelectorProps = {
     value?: number;
     onChange: (value: number) => void;
 };
-export declare type TransactionFeeSelectorState = {
+declare type TransactionFeeSelectorState = {
     value: number | null;
 };
-export declare type StyledProps = WithStyles<typeof styles> & TransactionFeeSelectorProps;
+declare type StyledProps = WithStyles<typeof styles> & TransactionFeeSelectorProps;
 export declare class TransactionFeeSelectorComponent extends React.Component<StyledProps, TransactionFeeSelectorState> {
     state: {
         value: null;
