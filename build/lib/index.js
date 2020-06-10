@@ -115,6 +115,7 @@ export { NewRefreshIcon } from './icons/refresh2';
 export { NotarizeDocumentIcon } from './icons/notarize-document';
 export { ObserverIcon } from './icons/observer';
 export { OkayIcon } from './icons/okay';
+export { PaymentIcon } from './icons/payment';
 export { PasswordConfirmIcon } from './icons/password-confirm';
 export { PasswordIcon } from './icons/password';
 export { PendingRoundedIcon } from './icons/pending-rounded';
