@@ -189,7 +189,7 @@ const fileViewStyles = (theme: Theme) =>
             maxWidth: '222px',
         },
         fileViewContainer: {
-            marginTop: '-42px'
+            marginTop: '10px'
         },
     });
 

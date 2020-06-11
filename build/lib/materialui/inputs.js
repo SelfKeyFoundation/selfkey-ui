@@ -149,7 +149,7 @@ const fileViewStyles = (theme) => createStyles({
         maxWidth: '222px',
     },
     fileViewContainer: {
-        marginTop: '-42px'
+        marginTop: '10px'
     },
 });
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }) => (React.createElement(Grid, { item: true, className: classNames(classes.fileItem, errors && errors.length && classes.fileItemError) },
