@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+import { MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 import { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight } from '../colors';
 const theme = createMuiTheme({
     // Reset and Globals
@@ -89,6 +89,46 @@ const theme = createMuiTheme({
         fontSize: 16,
     },
     overrides: {
+        MuiCssBaseline: {
+            '@global': {
+                body: {
+                    lineHeight: 1,
+                    background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
+                    fontFamily: 'Lato, arial, sans-serif',
+                    fontSmoothing: 'antialiased',
+                    osxFontSmoothing: 'grayscale',
+                    overflowX: 'hidden',
+                    '&::-webkit-scrollbar': {
+                        backgroundColor: 'rgba(0,0,0,.5)',
+                        width: '8px'
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        borderRadius: '10px',
+                        backgroundColor: '#191919'
+                    },
+                },
+                html: {
+                    '&::-webkit-scrollbar': {
+                        backgroundColor: 'rgba(0,0,0,.5)',
+                        width: '8px'
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        borderRadius: '10px',
+                        backgroundColor: '#191919'
+                    },
+                },
+                div: {
+                    '&::-webkit-scrollbar': {
+                        backgroundColor: 'rgba(0,0,0,.15)',
+                        width: '8px'
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        borderRadius: '10px',
+                        backgroundColor: '#191919'
+                    },
+                }
+            },
+        },
         MuiCard: {
             root: {
                 boxShadow: 'none',
@@ -878,7 +918,9 @@ const theme = createMuiTheme({
     },
 });
 export const SelfkeyDarkTheme = ({ children }) => {
-    return React.createElement(MuiThemeProvider, { theme: theme }, children);
+    return React.createElement(MuiThemeProvider, { theme: theme },
+        React.createElement(CssBaseline, null),
+        children);
 };
 export default SelfkeyDarkTheme;
 //# sourceMappingURL=selfkey-dark-theme.js.map
