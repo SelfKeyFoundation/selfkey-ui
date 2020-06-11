@@ -148,10 +148,10 @@ const fileViewStyles = (theme) => createStyles({
         whiteSpace: 'nowrap',
         maxWidth: '222px',
     },
-    fileViewContainer: {
+    fileViewContainerDragAndDrop: {
         marginTop: '10px'
     },
-    fileViewContainerDragAndDrop: {
+    fileViewContainer: {
         marginTop: '-42px'
     },
 });
