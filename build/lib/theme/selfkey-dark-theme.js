@@ -131,6 +131,7 @@ const theme = createMuiTheme({
         },
         MuiCard: {
             root: {
+                backgroundColor: base,
                 boxShadow: 'none',
                 height: '100%',
             },
