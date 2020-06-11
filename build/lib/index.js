@@ -167,4 +167,5 @@ export { MuiEditIcon } from './icons/muiedit';
 export { MuiDeleteIcon } from './icons/muidelete';
 export { MuiAddIcon } from './icons/muiadd';
 export { SelfkeyDarkTheme } from './theme/selfkey-dark-theme';
+export * from './icons/index';
 //# sourceMappingURL=index.js.map
