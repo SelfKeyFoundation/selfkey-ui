@@ -295,7 +295,7 @@ class FileLinkWithModalComponent extends React.Component {
 export const FileLinkWithModal = withStyles(fileViewStyles)(FileLinkWithModalComponent);
 class FileViewWithModal extends React.Component {
     render() {
-        const { classes, file, onClearForm, dragAndDrop = 'false', errors = [] } = this.props;
+        const { classes, file, onClearForm, dragAndDrop = false, errors = [] } = this.props;
         const FileTypeIcon = (fileType) => {
             const type = fileType.fileType || fileType;
             if (isImageType(type)) {
@@ -311,7 +311,7 @@ class FileViewWithModal extends React.Component {
                 return React.createElement(FileDefaultIcon, null);
             }
         };
-        return (React.createElement(Grid, { item: true, className: `${dragAndDrop} ? ${classes.fileViewContainerDragAndDrop} : ${classes.fileViewContainer}` },
+        return (React.createElement(Grid, { item: true, className: dragAndDrop ? classes.fileViewContainerDragAndDrop : classes.fileViewContainer },
             React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap", className: classes.bottomSpace },
                 React.createElement(Grid, { item: true, className: classes.padding },
                     React.createElement(Grid, { container: true, direction: "row", alignItems: "center", spacing: 4, wrap: "nowrap" },
