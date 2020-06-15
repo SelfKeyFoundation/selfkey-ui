@@ -21,7 +21,7 @@ var backButtonStyles = {
 };
 exports.BackButton = react_jss_1.default(backButtonStyles)(function (_a) {
     var classes = _a.classes, onclick = _a.onclick, leftPosition = _a.leftPosition, position = _a.position, width = _a.width, props = __rest(_a, ["classes", "onclick", "leftPosition", "position", "width"]);
-    return (React.createElement("div", { style: { left: leftPosition || 'initial', position: position || 'initial', width: '100%' || width } },
+    return (React.createElement("div", { style: { left: leftPosition || 'initial', position: position || 'initial', width: width || '100%' } },
         React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: onclick },
             React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary", className: classes.bold }, "\u2039 Back"))));
 });
