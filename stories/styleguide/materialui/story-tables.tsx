@@ -23,7 +23,7 @@ import {
     PersonIcon,
     CorporateIcon,
     SelfkeyLogo
-} from '../../../src';
+} from '../../../src/index';
 
 const underlineStyle = {
     textDecoration: 'underline',

@@ -188,6 +188,9 @@ const fileViewStyles = (theme: Theme) =>
             whiteSpace: 'nowrap',
             maxWidth: '222px',
         },
+        fileViewContainerDragAndDrop: {
+            marginTop: '10px'
+        },
         fileViewContainer: {
             marginTop: '-42px'
         },
@@ -407,7 +410,7 @@ export const FileLinkWithModal = withStyles(fileViewStyles)(FileLinkWithModalCom
 
 class FileViewWithModal extends React.Component<FileViewProps> {
     render() {
-        const { classes, file, onClearForm, errors = [] } = this.props;
+        const { classes, file, onClearForm, dragAndDrop = false, errors = [] } = this.props;
 
         const FileTypeIcon = (fileType: any) => {
             const type = fileType.fileType || fileType;
@@ -423,7 +426,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
         };
 
         return (
-            <Grid item className={classes.fileViewContainer}>
+            <Grid item className={dragAndDrop ? classes.fileViewContainerDragAndDrop : classes.fileViewContainer}>
                 <Grid
                     container
                     direction="row"
@@ -750,6 +753,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
                         onClearForm={onClearForm}
                         errors={errorFiles && errorFiles[ind]}
                         onPDFOpen={onPDFOpen}
+                        dragAndDrop={true}
                     />
                 ))}
             </Grid>

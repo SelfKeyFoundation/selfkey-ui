@@ -148,6 +148,9 @@ const fileViewStyles = (theme) => createStyles({
         whiteSpace: 'nowrap',
         maxWidth: '222px',
     },
+    fileViewContainerDragAndDrop: {
+        marginTop: '10px'
+    },
     fileViewContainer: {
         marginTop: '-42px'
     },
@@ -292,7 +295,7 @@ class FileLinkWithModalComponent extends React.Component {
 export const FileLinkWithModal = withStyles(fileViewStyles)(FileLinkWithModalComponent);
 class FileViewWithModal extends React.Component {
     render() {
-        const { classes, file, onClearForm, errors = [] } = this.props;
+        const { classes, file, onClearForm, dragAndDrop = false, errors = [] } = this.props;
         const FileTypeIcon = (fileType) => {
             const type = fileType.fileType || fileType;
             if (isImageType(type)) {
@@ -308,7 +311,7 @@ class FileViewWithModal extends React.Component {
                 return React.createElement(FileDefaultIcon, null);
             }
         };
-        return (React.createElement(Grid, { item: true, className: classes.fileViewContainer },
+        return (React.createElement(Grid, { item: true, className: dragAndDrop ? classes.fileViewContainerDragAndDrop : classes.fileViewContainer },
             React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap", className: classes.bottomSpace },
                 React.createElement(Grid, { item: true, className: classes.padding },
                     React.createElement(Grid, { container: true, direction: "row", alignItems: "center", spacing: 4, wrap: "nowrap" },
@@ -518,7 +521,7 @@ class ArrayFileUploadWidgetComponent extends React.Component {
                             uploadError ? (React.createElement(Grid, { item: true },
                                 React.createElement(Typography, { variant: "subtitle1", color: "error" }, uploadError))) : null),
                         React.createElement(FileUploadInput, { id: "key-upload", type: "file" })))),
-            (files || []).map((f, ind) => (React.createElement(FileViewWithModalComponent, { key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind], onPDFOpen: onPDFOpen })))));
+            (files || []).map((f, ind) => (React.createElement(FileViewWithModalComponent, { key: ind, file: f, onClearForm: onClearForm, errors: errorFiles && errorFiles[ind], onPDFOpen: onPDFOpen, dragAndDrop: true })))));
     }
 }
 export const ArrayFileUploadWidget = withStyles(fileUploadWidgetStyles)(ArrayFileUploadWidgetComponent);

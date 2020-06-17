@@ -5,12 +5,14 @@ export const Tag = withStyles({
     root: {
         backgroundColor: baseDark,
         borderRadius: '10px',
-        color: typography,
         display: 'inline',
-        fontSize: '12px',
         lineHeight: '13px',
         margin: '2px 4px 2px 0',
         padding: '2px 10px',
     },
+    body1: {
+        fontSize: '12px',
+        color: typography,
+    }
 })(Typography);
 //# sourceMappingURL=typography.js.map
