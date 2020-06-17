@@ -4,7 +4,7 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import ClipboardIcon from "../icons/clipboard";
 import { Grid, Typography } from "@material-ui/core";
 
-export const styles = createStyles({
+const styles = createStyles({
     clipboard: {
         '&:hover & svg': {
             fill: '#FFFFFF'
@@ -20,27 +20,23 @@ export const styles = createStyles({
     }
 });
 
-export type CopyProps = {
+export type CopyWithIconProps = {
     text: string;
 };
 
-export type CopyState = {
+type CopyWithIconState = {
     copyTextPlaceholder: string;
 };
 
-export type StyledProps = WithStyles<keyof typeof styles> & CopyProps;
+export type CopyWithIconStyledProps = WithStyles<keyof typeof styles> & CopyWithIconProps;
 
-export class CopyComponent extends React.Component<StyledProps, CopyState> {
+class CopyComponent extends React.Component<CopyWithIconStyledProps, CopyWithIconState> {
     copyText = "Copy";
     copiedText = "Copied";
 
     state = {
         copyTextPlaceholder: this.copyText
     };
-
-    constructor(props: StyledProps) {
-        super(props);
-    }
 
     handleOnCopy() {
         return () => {

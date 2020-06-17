@@ -1,7 +1,7 @@
 import * as React from 'react';
 export * from '../colors';
 export * from '../materialui/button';
-export * from '../materialui/colorPresentation';
+export * from '../materialui/color-presentation';
 export * from '../materialui/datepicker';
 export * from '../materialui/inputs';
 export * from '../materialui/lists';
@@ -9,7 +9,7 @@ export * from '../materialui/modalElements';
 export * from '../materialui/pagination';
 export * from '../materialui/statuses';
 export * from '../materialui/tables';
-export * from '../materialui/tooltipArrow';
+export * from '../materialui/tooltip-arrow';
 export * from '../materialui/typography';
 export * from '../icons/address-book-menu';
 export * from '../icons/address-book';

@@ -5,7 +5,7 @@ import {
     FileView,
     FileViewWithModalComponent,
     ArrayFileUploadWidget,
-} from '../../icons';
+} from '../inputs';
 
 const files = [
     { name: 'filename1.jpg', mimeType: 'image/jpeg' },

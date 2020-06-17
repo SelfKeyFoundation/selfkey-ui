@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Typography } from '@material-ui/core';
-import ModalWithBackButton from '../../../src/materialui/modalWithBackButton';
+import ModalWithBackButton from '../../../src/materialui/modal-with-back-button';
 import SimpleModalStory from './story-simplemodal';
 
 const underlineStyle = {

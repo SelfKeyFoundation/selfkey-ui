@@ -89,11 +89,11 @@ export type TxHistoryItem = {
     statusIconName: StatusIconName;
 };
 
-export type TransactionHistoryState = {
+type TransactionHistoryState = {
     currentCopyValues: Array<string>;
 };
 
-export type StyledProps = WithStyles<typeof styles> & TransactionHistoryProps;
+type StyledProps = WithStyles<typeof styles> & TransactionHistoryProps;
 
 export class TransactionHistoryComponent extends React.Component<StyledProps, TransactionHistoryState> {
     copyText = 'Copy';

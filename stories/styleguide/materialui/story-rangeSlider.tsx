@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Typography, Grid, Slider } from '@material-ui/core';
-import { SliderTooltip } from './../../../src/materialui/tooltipArrow';
+import { SliderTooltip } from './../../../src/materialui/tooltip-arrow';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -25,7 +25,7 @@ export default function StoryRangeSlider () {
 
     const valueLabelComponent = (props: Props) => {
         const { children, open, value } = props;
-      
+
         return (
             <SliderTooltip open={open} placement="bottom" title={`${value}%`}>
                 {children}

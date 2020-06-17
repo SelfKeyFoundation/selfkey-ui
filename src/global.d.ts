@@ -1,3 +1,9 @@
+declare module "*.svg";
+declare module 'react-copy-to-clipboard';
+declare module 'enzyme';
+declare module 'react-truncate';
+declare module 'storybook-addon-jsx';
+
 /// <reference types="react"/>
 /// <reference types="google.visualization"/>
 declare module 'react-google-charts' {

@@ -7,6 +7,9 @@
     "files": [
         "build/lib"
     ],
+    "exports": {
+        "./": "./build/lib/"
+    },
     "scripts": {
         "start": "start-storybook -p 6006",
         "build": "yarn lint && yarn build-lib",

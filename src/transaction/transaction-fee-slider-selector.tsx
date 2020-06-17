@@ -58,7 +58,7 @@ const styles = createStyles({
     },
 });
 
-export type TransactionFeeSelectorProps = {
+export type TransactionFeeSliderSelectorProps = {
     minGasPrice: number;
     maxGasPrice: number;
     slowPrice: number;
@@ -73,15 +73,15 @@ export type TransactionFeeSelectorProps = {
     onChange: (value: number) => void;
 };
 
-export type TransactionFeeSelectorState = {
+type TransactionFeeSelectorState = {
     value: number | null;
 };
 
-export type StyledProps = WithStyles<typeof styles> & TransactionFeeSelectorProps;
+type StyledProps = WithStyles<typeof styles> & TransactionFeeSliderSelectorProps;
 
 const WEI = new BN('1000000000000000000');
 
-export class TransactionFeeSelectorComponent extends React.Component<StyledProps, TransactionFeeSelectorState> {
+class TransactionFeeSliderSelectorComponent extends React.Component<StyledProps, TransactionFeeSelectorState> {
     state = {
         value: null
     };
@@ -161,5 +161,5 @@ export class TransactionFeeSelectorComponent extends React.Component<StyledProps
     }
 }
 
-export const TransactionFeeSliderSelector = withStyles(styles)(TransactionFeeSelectorComponent);
+export const TransactionFeeSliderSelector = withStyles(styles)(TransactionFeeSliderSelectorComponent);
 export default TransactionFeeSliderSelector;

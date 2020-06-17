@@ -1,7 +1,9 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { Typography, Grid, Button, withStyles, createStyles } from '@material-ui/core';
-import { AttributeAlertLargeIcon, SimpleCheckIcon, SimpleDeniedIcon, SimpleHourglassIcon, error, success, typography, warning, NewRefreshIcon, KeyTooltip, TooltipArrow } from '../index';
+import { AttributeAlertLargeIcon, SimpleCheckIcon, SimpleDeniedIcon, SimpleHourglassIcon, NewRefreshIcon } from '../icons';
+import { error, success, typography, warning } from '../colors';
+import { KeyTooltip, TooltipArrow } from './tooltip-arrow';
 const styles = (theme) => createStyles({
     defaultStatus: {
         border: `1px solid ${success}`,

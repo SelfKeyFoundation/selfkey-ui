@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { WithStyles } from '@material-ui/core';
 export declare const styles: Record<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
-export declare type Token = {
+declare type Token = {
     name: string;
     symbol: string;
     price: number;
