@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-var react_jss_1 = require("react-jss");
-var animated_loading_1 = require("../icons/animated-loading");
-var styles = {
+import * as React from 'react';
+import { withStyles, createStyles } from '@material-ui/core';
+import AnimatedLoadingIcon from '../icons/animated-loading';
+const styles = createStyles({
     loading: {
         minHeight: '300px',
         textAlign: 'center',
@@ -11,12 +9,9 @@ var styles = {
         '& svg circle': {
             fill: '#1CA9BA',
         },
-    },
-};
-exports.LWSLoading = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes;
-    return (React.createElement("div", { className: classes.loading },
-        React.createElement(animated_loading_1.default, null)));
+    }
 });
-exports.default = exports.LWSLoading;
+export const LWSLoading = withStyles(styles)(({ classes }) => (React.createElement("div", { className: classes.loading },
+    React.createElement(AnimatedLoadingIcon, null))));
+export default LWSLoading;
 //# sourceMappingURL=lws-loading.js.map

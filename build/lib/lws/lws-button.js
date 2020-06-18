@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-var react_jss_1 = require("react-jss");
-var styles = {
+import * as React from 'react';
+import { withStyles, createStyles } from '@material-ui/core';
+const styles = createStyles({
     root: {
         borderRadius: '3px',
         boxSizing: 'border-box',
@@ -16,10 +14,7 @@ var styles = {
         textTransform: 'uppercase',
         transition: 'background .5s ease',
     },
-};
-exports.LWSButton = react_jss_1.default(styles)(function (_a) {
-    var classes = _a.classes, children = _a.children, className = _a.className, onClick = _a.onClick;
-    return (React.createElement("button", { className: classes.root + " " + className, onClick: onClick }, children));
 });
-exports.default = exports.LWSButton;
+export const LWSButton = withStyles(styles)(({ classes, children, className, onClick }) => (React.createElement("button", { className: `${classes.root} ${className}`, onClick: onClick }, children)));
+export default LWSButton;
 //# sourceMappingURL=lws-button.js.map

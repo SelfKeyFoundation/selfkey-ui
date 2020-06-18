@@ -1,12 +1,13 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {root: {}};
+const styles = createStyles({
+    root: {}
+});
 
-export const CustomIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const CustomIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon style={{ width: props.width || '44px', height: props.height || '44px' }} {...props} viewBox={props.viewBox || "0 0 24 24"}>
         <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="300.3-Navigation-Open---Default-State" transform="translate(-1063.000000, -337.000000)" fill="#00C0D9" fillRule="nonzero">

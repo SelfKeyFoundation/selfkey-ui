@@ -3,10 +3,10 @@
 exports[`Token Price should show Token Price for key 1`] = `
 <div>
   <div
-    className="MuiGrid-root Component-row-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+    className="MuiGrid-root Component-row-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
   >
     <div
-      className="MuiGrid-root Component-cryptoCurrencyValue-0-2-1 MuiGrid-item"
+      className="MuiGrid-root Component-cryptoCurrencyValue-1 MuiGrid-item"
     >
       <div>
         4
@@ -15,10 +15,10 @@ exports[`Token Price should show Token Price for key 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-root Component-row-0-2-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+    className="MuiGrid-root Component-row-3 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
   >
     <div
-      className="MuiGrid-root Component-currency-0-2-2 MuiGrid-item"
+      className="MuiGrid-root Component-currency-2 MuiGrid-item"
     >
       <div>
         $0.0174857
@@ -26,7 +26,7 @@ exports[`Token Price should show Token Price for key 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-root Component-currency-0-2-2 MuiGrid-item"
+      className="MuiGrid-root Component-currency-2 MuiGrid-item"
     >
       USD
     </div>

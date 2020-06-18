@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.primary = '#00C0D9';
-exports.primaryTint = '#23E6FE';
-exports.typography = '#93B0C1';
-exports.grey = '#697C95';
-exports.baseLight = '#435160';
-exports.baseDark = '#1E262E';
-exports.base = '#262F39';
-exports.success = '#1CBA7D';
-exports.warning = '#E98548';
-exports.error = '#FE4B61';
-exports.white = '#FFFFFF';
+export const primary = '#00C0D9';
+export const primaryTint = '#23E6FE';
+export const typography = '#93B0C1';
+export const grey = '#697C95';
+export const baseLight = '#435160';
+export const baseDark = '#1E262E';
+export const base = '#262F39';
+export const success = '#1CBA7D';
+export const warning = '#E98548';
+export const error = '#FE4B61';
+export const white = '#FFFFFF';
 //# sourceMappingURL=colors.js.map

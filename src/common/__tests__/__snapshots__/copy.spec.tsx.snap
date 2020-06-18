@@ -2,11 +2,11 @@
 
 exports[`Copy should Copy 1`] = `
 <button
-  className="CopyComponent-copyButton-0-2-1"
+  className="CopyComponent-copyButton-1"
   onClick={[Function]}
 >
   <span
-    className="CopyComponent-copyButtonSpan-0-2-2"
+    className="CopyComponent-copyButtonSpan-2"
   >
     COPY
   </span>

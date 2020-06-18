@@ -2,7 +2,7 @@
 
 exports[`Transaction Fee Selector should show Transaction Fee Selector screen 1`] = `
 <div
-  className="TransactionFeeSelectorComponent-root-0-2-1"
+  className="TransactionFeeSelectorComponent-root-1"
 >
   <div>
     <span>
@@ -10,7 +10,7 @@ exports[`Transaction Fee Selector should show Transaction Fee Selector screen 1`
     </span>
      
     <span
-      className="TransactionFeeSelectorComponent-networkFeeValue-0-2-8"
+      className="TransactionFeeSelectorComponent-networkFeeValue-8"
     >
       3e-18
        ETH / 
@@ -20,7 +20,7 @@ exports[`Transaction Fee Selector should show Transaction Fee Selector screen 1`
     </span>
   </div>
   <span
-    className="MuiSlider-root TransactionFeeSelectorComponent-sliderRoot-0-2-2 MuiSlider-colorPrimary"
+    className="MuiSlider-root TransactionFeeSelectorComponent-sliderRoot-2 MuiSlider-colorPrimary"
     onMouseDown={[Function]}
   >
     <span
@@ -44,7 +44,7 @@ exports[`Transaction Fee Selector should show Transaction Fee Selector screen 1`
       aria-valuemax={2}
       aria-valuemin={1}
       aria-valuenow={1.5}
-      className="MuiSlider-thumb TransactionFeeSelectorComponent-thumb-0-2-5 MuiSlider-thumbColorPrimary"
+      className="MuiSlider-thumb TransactionFeeSelectorComponent-thumb-5 MuiSlider-thumbColorPrimary"
       data-index={0}
       onBlur={[Function]}
       onFocus={[Function]}
@@ -61,7 +61,7 @@ exports[`Transaction Fee Selector should show Transaction Fee Selector screen 1`
     />
   </span>
   <div
-    className="TransactionFeeSelectorComponent-sliderLabels-0-2-7"
+    className="TransactionFeeSelectorComponent-sliderLabels-7"
   >
     <span>
       Slow

@@ -2,12 +2,12 @@
 
 exports[`Copy With Icon should Copy With Icon 1`] = `
 <div
-  className="MuiGrid-root CopyComponent-clipboard-0-2-1 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center"
+  className="MuiGrid-root CopyComponent-clipboard-1 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center"
   onClick={[Function]}
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root Component-root-0-2-4 CopyComponent-icon-0-2-2"
+    className="MuiSvgIcon-root Component-root-4 CopyComponent-icon-2"
     focusable="false"
     height="36px"
     viewBox="0 0 30 36"
@@ -46,7 +46,7 @@ exports[`Copy With Icon should Copy With Icon 1`] = `
     </g>
   </svg>
   <h6
-    className="MuiTypography-root CopyComponent-copyText-0-2-3 MuiTypography-subtitle2 MuiTypography-colorSecondary"
+    className="MuiTypography-root CopyComponent-copyText-3 MuiTypography-subtitle2 MuiTypography-colorSecondary"
   >
     Copy
   </h6>

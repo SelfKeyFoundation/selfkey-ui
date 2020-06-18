@@ -13,7 +13,6 @@ exports[`HourGlass Small Icon should show HourGlass Small Icon 1`] = `
   }
   viewBox="0 0 20 26"
 >
-  &gt;
   <defs />
   <g
     fill="none"

@@ -3,11 +3,11 @@
 exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] = `
 <div>
   <div
-    className="Component-areaTitle-0-2-6"
+    className="Component-areaTitle-6"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-7"
+      className="MuiSvgIcon-root Component-root-7"
       focusable="false"
       style={
         Object {
@@ -73,18 +73,18 @@ exports[`LWS Extension Error Screen should show LWS Extension Error Screen 1`] =
     </h3>
   </div>
   <div
-    className="Component-form-0-2-3"
+    className="Component-form-3"
   >
     <p
-      className="Component-supportText-0-2-5"
+      className="Component-supportText-5"
     >
       Login With SelfKey is a browser extension that allows you to securely login to this website through your SelfKey ID and Ethereum address, powered by the SelfKey Identity Wallet.
     </p>
     <div
-      className="Component-formSubmitRow-0-2-4"
+      className="Component-formSubmitRow-4"
     >
       <button
-        className="Component-root-0-2-8 Component-buttonPrimary-0-2-1"
+        className="Component-root-8 Component-buttonPrimary-1"
       >
         Install Browser Extension
       </button>

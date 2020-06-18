@@ -1,18 +1,17 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-	root: {
-		width: '18px !important',
-		height: '20px !important',
-	},
-};
+const styles = createStyles({
+    root: {
+       width: '18px !important',
+       height: '20px !important',
+    },
+});
 
-export const AttributeAlertIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-	<SvgIcon {...props} viewBox="0 0 18 20" version="1.1">
+export const AttributeAlertIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
+    <SvgIcon {...props} viewBox="0 0 18 20" version="1.1">
         <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="703.1---Incorporation-+-Submit-+-Errors" transform="translate(-385.000000, -635.000000)" fill="#E98548">
                 <g id="Modal1" transform="translate(330.000000, 159.000000)">
@@ -24,7 +23,7 @@ export const AttributeAlertIcon = injectSheet(styles)<SvgIconProps>((props: SvgI
                 </g>
             </g>
         </g>
-	</SvgIcon>
+    </SvgIcon>
 ));
 
 export default AttributeAlertIcon;

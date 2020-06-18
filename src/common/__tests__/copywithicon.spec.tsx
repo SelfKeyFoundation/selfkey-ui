@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { CopyWithIcon } from '../copywithicon';
+import { CopyWithIcon } from '../copy-with-icon';
 
 describe('Copy With Icon', () => {
   it('should Copy With Icon', () => {

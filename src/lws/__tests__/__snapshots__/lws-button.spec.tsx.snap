@@ -2,7 +2,7 @@
 
 exports[`LWS Button should show LWS Button 1`] = `
 <button
-  className="Component-root-0-2-1 undefined"
+  className="Component-root-1 undefined"
 >
   Test
 </button>

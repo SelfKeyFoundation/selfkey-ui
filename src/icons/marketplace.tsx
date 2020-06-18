@@ -1,19 +1,18 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
             fill: 'white',
         },
     }
-  };
-  
-export const MarketplaceIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+});
+
+export const MarketplaceIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon style={{ width: props.width || '36px', height: props.height || '30px', fill: props.fill || '#00C0D9' }} {...props} viewBox={props.viewBox || "0 0 36 30"}>
         <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
             <g id="500---SelfKey-Marketplace" transform="translate(-150.000000, -156.000000)" fill="inherit" fillRule="nonzero">
@@ -25,9 +24,6 @@ export const MarketplaceIcon = injectSheet(styles)<SvgIconProps>((props: SvgIcon
             </g>
         </g>
     </SvgIcon>
-
 ));
 
 export default MarketplaceIcon;
-
-

@@ -1,29 +1,29 @@
 import * as React from 'react';
-import { 
-	Typography, 
-	TableRow,
-	TableCell,
-	TableHead,
-	TableBody,
-	IconButton,
-	Table,
+import {
+    Typography,
+    TableRow,
+    TableCell,
+    TableHead,
+    TableBody,
+    IconButton,
+    Table,
     Grid,
 } from '@material-ui/core';
-import { 
+import {
     MuiEditIcon,
     MuiDeleteIcon,
-	LargeTableHeadRow,
-	SmallTableHeadRow,
-	SmallTableCell,
-	SmallTableRow,
+    LargeTableHeadRow,
+    SmallTableHeadRow,
+    SmallTableCell,
+    SmallTableRow,
     Tag,
     TagTableCell,
     FilePdfIcon,
     FileImageIcon,
-} from '../../../src/theme/selfkey-dark-theme';
-import PersonIcon from '../../../src/icons/person';
-import CorporateIcon from '../../../src/icons/corporate';
-import SelfkeyLogo from '../../../src/icons/selfkeyLogo';
+    PersonIcon,
+    CorporateIcon,
+    SelfkeyLogo
+} from '../../../src/index';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -177,44 +177,44 @@ export default function TableStories () {
                         return (
                             <SmallTableRow key={row.name}>
                                 <SmallTableCell>
-                                    { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" >{row.type}</Typography> 
+                                    { row.disabled
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.type}</Typography>
                                         : <Typography variant="subtitle1" >{row.type}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" >{row.role}</Typography> 
+                                    { row.disabled
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.role}</Typography>
                                         : <Typography variant="subtitle1" >{row.role}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" >{row.name}</Typography> 
+                                    { row.disabled
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.name}</Typography>
                                         : <Typography variant="subtitle1" >{row.name}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" >{row.email}</Typography> 
+                                    { row.disabled
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.email}</Typography>
                                         : <Typography variant="subtitle1" >{row.email}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" >{row.citizensip}</Typography> 
+                                    { row.disabled
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.citizensip}</Typography>
                                         : <Typography variant="subtitle1" >{row.citizensip}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" >{row.residency}</Typography> 
+                                    { row.disabled
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.residency}</Typography>
                                         : <Typography variant="subtitle1" >{row.residency}</Typography>
                                     }
                                 </SmallTableCell>
                                 <SmallTableCell>
-                                    { row.disabled 
-                                        ? <Typography variant="subtitle1" color="secondary" >{row.shares}</Typography> 
+                                    { row.disabled
+                                        ? <Typography variant="subtitle1" color="secondary" >{row.shares}</Typography>
                                         : <Typography variant="subtitle1" >{row.shares}</Typography>
                                     }
                                 </SmallTableCell>
@@ -225,16 +225,16 @@ export default function TableStories () {
                                 </SmallTableCell>
                                 <SmallTableCell>
                                     <Typography variant="subtitle1" >
-                                        { row.disabled 
+                                        { row.disabled
                                             ?  <IconButton aria-label="Edit" disabled>
                                                     <MuiEditIcon/>
-                                                </IconButton>    
-                                            :  <IconButton aria-label="Edit"> 
+                                                </IconButton>
+                                            :  <IconButton aria-label="Edit">
                                                     <MuiEditIcon/>
-                                                </IconButton>    
+                                                </IconButton>
                                         }
 
-                                        { row.disabled 
+                                        { row.disabled
                                             ?  <IconButton aria-label="Delete" disabled>
                                                     <MuiDeleteIcon/>
                                                 </IconButton>

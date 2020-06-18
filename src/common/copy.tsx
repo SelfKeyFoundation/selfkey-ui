@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-// @ts-ignore
-import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 
-export const styles: StyleSheet = {
+export const styles = createStyles({
     copyButton: {
         backgroundColor: 'transparent',
         border: '1px solid #3B4A5A',
@@ -25,7 +24,7 @@ export const styles: StyleSheet = {
         fontSize: '10px',
         letterSpacing: 'normal',
     }
-};
+});
 
 export type CopyProps = {
     text: string;
@@ -35,20 +34,14 @@ export type CopyState = {
     copyTextPlaceholder: string;
 };
 
-export type StyledProps = WithStyles<keyof typeof styles> & CopyProps;
-
+export type StyledProps = WithStyles<typeof styles> & CopyProps;
 
 export class CopyComponent extends React.Component<StyledProps, CopyState> {
     copyText = 'COPY';
     copiedText = 'COPIED';
-
     state = {
         copyTextPlaceholder: this.copyText
     };
-
-    constructor(props: StyledProps) {
-        super(props);
-    }
 
     handleOnCopy() {
         return () => {
@@ -74,6 +67,6 @@ export class CopyComponent extends React.Component<StyledProps, CopyState> {
       }
 }
 
-export const Copy = injectSheet(styles)(CopyComponent);
+export const Copy = withStyles(styles)(CopyComponent);
 
 export default Copy;

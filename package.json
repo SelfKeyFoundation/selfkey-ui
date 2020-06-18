@@ -7,6 +7,9 @@
     "files": [
         "build/lib"
     ],
+    "exports": {
+        "./": "./build/lib/"
+    },
     "scripts": {
         "start": "start-storybook -p 6006",
         "build": "yarn lint && yarn build-lib",
@@ -38,17 +41,9 @@
         "@material-ui/styles": "4.9.6",
         "@types/classnames": "^2.2.7",
         "@types/google.visualization": "0.0.46",
-        "@types/jss": "^10.0.0",
         "@types/react-dom": "16.9.6",
         "bignumber.js": "8.0.1",
         "classnames": "^2.2.6",
-        "jss": "10.1.1",
-        "jss-compose": "5.0.0",
-        "jss-expand": "5.3.0",
-        "jss-extend": "6.2.0",
-        "jss-global": "3.0.0",
-        "jss-preset-default": "10.1.1",
-        "jss-template": "1.0.1",
         "lodash": "4.17.13",
         "moment": "^2.23.0",
         "react": "16.13.1",
@@ -56,9 +51,7 @@
         "react-datetime": "^2.16.3",
         "react-dom": "16.13.1",
         "react-google-charts": "3.0.10",
-        "react-jss": "10.1.1",
         "react-truncate": "2.4.0",
-        "reset-jss": "1.0.0",
         "snyk": "^1.193.2"
     },
     "devDependencies": {
@@ -119,7 +112,6 @@
             "src/**/*.{js,jsx,ts,tsx}",
             "!**/node_modules/**",
             "!src/index.tsx",
-            "!src/jss-setup.tsx",
             "!src/transaction/transaction-history.tsx",
             "!src/transaction/send/transaction-send.tsx",
             "!src/transaction/send/fee/transaction-fee-box.tsx",

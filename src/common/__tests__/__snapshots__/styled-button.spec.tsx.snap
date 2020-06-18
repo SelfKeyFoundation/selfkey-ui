@@ -2,7 +2,7 @@
 
 exports[`Styled Button should show Styled Button 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root Component-root-0-2-1 MuiButton-contained MuiButton-containedPrimary Component-containedPrimary-0-2-2"
+  className="MuiButtonBase-root MuiButton-root Component-root-1 MuiButton-contained MuiButton-containedPrimary Component-containedPrimary-2"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}

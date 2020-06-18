@@ -1,12 +1,11 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {};
+const styles = createStyles({});
 
-export const RoundCompany = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps)=> (
+export const RoundCompany = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon style={{ width: props.width || '40px', height: props.height || '40px' }} {...props} viewBox={props.viewBox || "0 0 40 40"}>
         <g id="🖥-Main-Dashboard-round-company" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="300.5-Navigation-open---switch-profile" transform="translate(-1190.000000, -75.000000)">

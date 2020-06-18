@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CommonStyle = {
+export const CommonStyle = {
     fontFamily: 'Lato, arial, sans-serif',
     form: {
         minHeight: '300px'
@@ -31,5 +29,5 @@ exports.CommonStyle = {
         textAlign: 'center'
     }
 };
-exports.default = exports.CommonStyle;
+export default CommonStyle;
 //# sourceMappingURL=common-style.js.map

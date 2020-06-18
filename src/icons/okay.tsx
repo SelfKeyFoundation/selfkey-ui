@@ -1,22 +1,21 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import LinearGradient from './_linearGradient';
 
-const styles: StyleSheet = {
-	root: {
-		transition: 'all 0.2s ease-out',
-		'&:hover': {
-			fill: 'white',
-		},
-	}
-};
+const styles = createStyles({
+    root: {
+        transition: 'all 0.2s ease-out',
+        '&:hover': {
+            fill: 'white',
+        },
+    }
+});
 
 const linearGradientColor = 'url(#default-linear-gradient)';
 
-export const OkayIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+export const OkayIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon style={{ width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || "0 0 66 66"}>
         <LinearGradient />
         <g id="🛠-Wallet-Setup" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
@@ -27,11 +26,6 @@ export const OkayIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps &
             </g>
         </g>
     </SvgIcon>
-
 ));
 
 export default OkayIcon;
-
-
-
-

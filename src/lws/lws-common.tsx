@@ -1,12 +1,12 @@
 export type Website = {
-	name: string;
-	url: string;
-	termsUrl: string;
-	policyUrl: string;
+    name: string;
+    url: string;
+    termsUrl: string;
+    policyUrl: string;
 };
 
 export type Wallet = {
-	publicKey: string;
-	unlocked?: boolean;
-	profile: string;
+    publicKey: string;
+    unlocked?: boolean;
+    profile: string;
 };

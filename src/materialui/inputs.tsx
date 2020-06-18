@@ -13,15 +13,14 @@ import {
     ListItemText,
     Divider,
 } from '@material-ui/core';
-import { createStyles, withStyles } from '@material-ui/styles';
-import injectSheet, { StyleSheet } from 'react-jss';
-import { DeleteIcon } from '../icons/delete';
 import classNames from 'classnames';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
+import { DeleteIcon } from '../icons/delete';
 import { HardDriveIcon } from '../icons/hard-drive';
 import { FileDefaultIcon } from '../icons/file-default';
 import { primary, baseDark, base, error, white } from '../colors';
-import { ModalWrap } from './modalWithBackButton';
-import { ModalBody2 } from './modalElements';
+import { ModalWrap } from './modal-with-back-button';
+import { ModalBody2 } from './modal-elements';
 import { FileImageIcon } from '../icons/file-image';
 import { FilePdfIcon } from '../icons/file-pdf';
 import { FileAudioIcon } from '../icons/file-audio';
@@ -66,7 +65,7 @@ const multilineSelectStyles = (theme: Theme) =>
 
 export type MultilineSelectType = any;
 
-export const MultilineSelect = withStyles(multilineSelectStyles)((props: MultilineSelectType) => {
+export const MultilineSelect = withStyles(multilineSelectStyles)((props: MultilineSelectType & WithStyles<typeof multilineSelectStyles>) => {
     const { classes, multiselect, selected = [], items = [], onSelectUpdated, onAdd } = props;
     const isSelected = (item: any) => selected.includes(item.key);
     const handleItemClick = (item: any) => {
@@ -189,12 +188,15 @@ const fileViewStyles = (theme: Theme) =>
             whiteSpace: 'nowrap',
             maxWidth: '222px',
         },
+        fileViewContainerDragAndDrop: {
+            marginTop: '10px'
+        },
         fileViewContainer: {
             marginTop: '-42px'
         },
     });
 
-export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps) => (
+export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }: FileViewProps & WithStyles<typeof fileViewStyles>) => (
     <Grid item className={classNames(classes.fileItem, errors && errors.length && classes.fileItemError)}>
         <Grid container direction="row" justify="space-between" alignItems="center" wrap="nowrap">
             <Grid item>
@@ -408,7 +410,7 @@ export const FileLinkWithModal = withStyles(fileViewStyles)(FileLinkWithModalCom
 
 class FileViewWithModal extends React.Component<FileViewProps> {
     render() {
-        const { classes, file, onClearForm, errors = [] } = this.props;
+        const { classes, file, onClearForm, dragAndDrop = false, errors = [] } = this.props;
 
         const FileTypeIcon = (fileType: any) => {
             const type = fileType.fileType || fileType;
@@ -424,7 +426,7 @@ class FileViewWithModal extends React.Component<FileViewProps> {
         };
 
         return (
-            <Grid item className={classes.fileViewContainer}>
+            <Grid item className={dragAndDrop ? classes.fileViewContainerDragAndDrop : classes.fileViewContainer}>
                 <Grid
                     container
                     direction="row"
@@ -469,7 +471,7 @@ export const FileViewWithModalComponent = withStyles(fileViewStyles)(FileViewWit
 
 export type FileUploadWidgetProps = any;
 
-const fileUploadStyles: StyleSheet = {
+const fileUploadStyles = createStyles({
     form: {
         width: '100%',
         height: '46px',
@@ -492,10 +494,10 @@ const fileUploadStyles: StyleSheet = {
         backgroundColor: 'rgba(255, 46, 99, 0.09)',
         border: `1px solid ${error}`,
     },
-};
+});
 
-export const FileUploadWidget = injectSheet(fileUploadStyles)<FileUploadWidgetProps>(
-    ({ classes, id, file, isError, onClearForm, onChange, onBlur, onFocus, onPDFOpen, required, ...props }) => {
+export const FileUploadWidget = withStyles(fileUploadStyles)(
+    ({ classes, id, file, isError, onClearForm, onChange, onBlur, onFocus, onPDFOpen, required, ...props }: FileUploadWidgetProps & WithStyles<typeof fileUploadStyles>) => {
         const eventHandlers: any = {};
         if (onChange) {
             eventHandlers.onChange = (evt: any) => {
@@ -595,6 +597,7 @@ const fileUploadWidgetStyles = (theme: Theme) =>
             marginBottom: '10px',
         },
     });
+
 class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidgetProps> {
     state: any = { dragging: false };
     formRef: any = null;
@@ -750,6 +753,7 @@ class ArrayFileUploadWidgetComponent extends React.Component<ArrayFileUploadWidg
                         onClearForm={onClearForm}
                         errors={errorFiles && errorFiles[ind]}
                         onPDFOpen={onPDFOpen}
+                        dragAndDrop={true}
                     />
                 ))}
             </Grid>

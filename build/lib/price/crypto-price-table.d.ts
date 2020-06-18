@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { WithStyles, StyleSheet } from 'react-jss';
-export declare const styles: StyleSheet;
-export declare type Token = {
+import { WithStyles } from '@material-ui/core';
+export declare const styles: Record<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+declare type Token = {
     name: string;
     symbol: string;
     price: number;
@@ -20,11 +20,11 @@ export declare type CryptoPriceTableProps = {
     alwaysVisible?: Array<string>;
 };
 export declare type CryptoPriceTableState = {};
-export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoPriceTableProps;
+export declare type StyledProps = WithStyles<typeof styles> & CryptoPriceTableProps;
 export declare class CryptoPriceTableComponent extends React.Component<StyledProps, CryptoPriceTableState> {
     renderVisibilityButton(token: Token): JSX.Element | undefined;
     renderRow(token: Token, index: number): JSX.Element;
     render(): JSX.Element;
 }
-export declare const CryptoPriceTable: React.ComponentType<CryptoPriceTableProps & import("react-jss").StyledComponentProps<string>>;
+export declare const CryptoPriceTable: React.ComponentType<Pick<StyledProps, "locale" | "showCurrency" | "fiatCurrency" | "tokens" | "toggleAction" | "alwaysVisible"> & import("@material-ui/core").StyledComponentProps<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize">>;
 export default CryptoPriceTable;

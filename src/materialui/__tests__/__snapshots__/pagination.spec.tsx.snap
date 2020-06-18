@@ -61,7 +61,7 @@ exports[`Pagination should show Pagination 1`] = `
       >
         <button
           aria-label="First Page"
-          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-1"
           disabled={false}
           onBlur={[Function]}
           onDragLeave={[Function]}
@@ -98,7 +98,7 @@ exports[`Pagination should show Pagination 1`] = `
       >
         <button
           aria-label="Previous Page"
-          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-1"
           disabled={false}
           onBlur={[Function]}
           onDragLeave={[Function]}
@@ -135,7 +135,7 @@ exports[`Pagination should show Pagination 1`] = `
       >
         <button
           aria-label="Next Page"
-          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-1"
           disabled={false}
           onBlur={[Function]}
           onDragLeave={[Function]}
@@ -172,7 +172,7 @@ exports[`Pagination should show Pagination 1`] = `
       >
         <button
           aria-label="Last Page"
-          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-189"
+          className="MuiButtonBase-root MuiIconButton-root WithStyles(ForwardRef(IconButton))-root-1"
           disabled={false}
           onBlur={[Function]}
           onDragLeave={[Function]}

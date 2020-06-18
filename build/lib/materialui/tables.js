@@ -1,37 +1,35 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@material-ui/core");
-var styles_1 = require("@material-ui/styles");
-var colors_1 = require("../colors");
-exports.LargeTableHeadRow = styles_1.withStyles({
+import { TableRow, TableCell } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+import { warning } from '../colors';
+export const LargeTableHeadRow = withStyles({
     root: {
         height: '50px',
     },
-})(core_1.TableRow);
-exports.SmallTableHeadRow = styles_1.withStyles({
+})(TableRow);
+export const SmallTableHeadRow = withStyles({
     root: {
         height: '40px',
     },
-})(core_1.TableRow);
-exports.SmallTableRow = styles_1.withStyles({
+})(TableRow);
+export const SmallTableRow = withStyles({
     root: {
         height: '40px',
     },
-})(core_1.TableRow);
-exports.SmallTableCell = styles_1.withStyles({
+})(TableRow);
+export const SmallTableCell = withStyles({
     root: {
         height: '40px',
         padding: '15px',
     },
     footer: {
-        backgroundColor: colors_1.warning,
-        color: colors_1.warning,
+        backgroundColor: warning,
+        color: warning,
     },
-})(core_1.TableCell);
-exports.TagTableCell = styles_1.withStyles({
+})(TableCell);
+export const TagTableCell = withStyles({
     root: {
         verticalAlign: 'middle',
         maxWidth: '350px',
     },
-})(core_1.TableCell);
+})(TableCell);
 //# sourceMappingURL=tables.js.map

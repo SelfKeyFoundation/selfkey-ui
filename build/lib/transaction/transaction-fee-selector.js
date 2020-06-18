@@ -1,28 +1,12 @@
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-var react_jss_1 = require("react-jss");
-var core_1 = require("@material-ui/core");
-var common_style_1 = require("../common/common-style");
-var bignumber_js_1 = require("bignumber.js");
-var styles = {
+import * as React from 'react';
+import { Slider, withStyles, createStyles } from '@material-ui/core';
+import CommonStyle from '../common/common-style';
+import BN from 'bignumber.js';
+const styles = createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
-        fontFamily: common_style_1.default.fontFamily,
+        fontFamily: CommonStyle.fontFamily,
     },
     sliderRoot: {
         padding: '22px 0 12px 0',
@@ -63,54 +47,36 @@ var styles = {
     networkFeeValue: {
         color: '#ffffff',
     },
-};
-var WEI = new bignumber_js_1.default('1000000000000000000');
-var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
-    __extends(TransactionFeeSelectorComponent, _super);
-    function TransactionFeeSelectorComponent() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.state = { value: null };
-        _this.handleChange = function (event, value) {
-            _this.setState({ value: value });
-            _this.props.onChange(value);
+});
+const WEI = new BN('1000000000000000000');
+export class TransactionFeeSelectorComponent extends React.Component {
+    constructor() {
+        super(...arguments);
+        this.state = { value: null };
+        this.handleChange = (event, value) => {
+            this.setState({ value });
+            this.props.onChange(value);
         };
-        return _this;
     }
-    TransactionFeeSelectorComponent.prototype.componentDidMount = function () {
+    componentDidMount() {
         this.props.onChange(this.value);
-    };
-    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "avarageGasPrice", {
-        get: function () {
-            return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "value", {
-        get: function () {
-            return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "transactionFee", {
-        get: function () {
-            return new bignumber_js_1.default(this.value).times(this.props.gasLimit).dividedBy(WEI);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "fiatFee", {
-        get: function () {
-            return this.transactionFee.times(this.props.fiatRate);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    TransactionFeeSelectorComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, minGasPrice = _a.minGasPrice, maxGasPrice = _a.maxGasPrice, fiat = _a.fiat;
+    }
+    get avarageGasPrice() {
+        return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
+    }
+    get value() {
+        return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
+    }
+    get transactionFee() {
+        return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
+    }
+    get fiatFee() {
+        return this.transactionFee.times(this.props.fiatRate);
+    }
+    render() {
+        const { classes, minGasPrice, maxGasPrice, fiat } = this.props;
         return (React.createElement("div", { className: classes.root },
-            React.createElement("div", { className: classes.networkFee },
+            React.createElement("div", null,
                 React.createElement("span", null, "Network Transaction Fee:"),
                 ' ',
                 React.createElement("span", { className: classes.networkFeeValue },
@@ -119,7 +85,7 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
                     this.fiatFee.toFixed(2),
                     " ",
                     fiat)),
-            React.createElement(core_1.Slider, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
+            React.createElement(Slider, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
                     root: classes.sliderRoot,
                     // trackAfter: classes.trackAfter,
                     // trackBefore: classes.trackBefore,
@@ -129,10 +95,8 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
                 React.createElement("span", null, "Slow"),
                 React.createElement("span", null, "Medium"),
                 React.createElement("span", null, "Fast"))));
-    };
-    return TransactionFeeSelectorComponent;
-}(React.Component));
-exports.TransactionFeeSelectorComponent = TransactionFeeSelectorComponent;
-exports.TransactionFeeSelector = react_jss_1.default(styles)(TransactionFeeSelectorComponent);
-exports.default = exports.TransactionFeeSelector;
+    }
+}
+export const TransactionFeeSelector = withStyles(styles)(TransactionFeeSelectorComponent);
+export default TransactionFeeSelector;
 //# sourceMappingURL=transaction-fee-selector.js.map

@@ -1,12 +1,10 @@
 import * as React from 'react';
-// @ts-ignore
-import injectSheet, { WithStyles, StyleSheet, StyledComponentProps } from 'react-jss';
+import { Grid, WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
 import CommonStyle from '../../../common/common-style';
-import { Grid } from '@material-ui/core';
 import { Loop as LoopIcon } from '@material-ui/icons';
 
-export const styles: StyleSheet = {
+export const styles = createStyles({
     container: {
         fontFamily: CommonStyle.fontFamily
     },
@@ -115,7 +113,7 @@ export const styles: StyleSheet = {
             margin: 0
         }
     }
-};
+});
 
 export type EthGasStationInfo = {
     safeLow: string,
@@ -144,7 +142,7 @@ export type TransactionFeeBoxState = {
     gasPrice: number
 };
 
-export type StyledProps = WithStyles<keyof typeof styles> & TransactionFeeBoxProps;
+export type StyledProps = WithStyles<typeof styles> & TransactionFeeBoxProps;
 
 export class TransactionFeeBoxComponent extends React.Component<StyledProps, TransactionFeeBoxState> {
     timerToUpdateGasPrice = 0;
@@ -244,8 +242,8 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     }
 
     render() {
-        let { classes } = this.props;
-        let { showAdvanced } = this.state;
+        const { classes } = this.props;
+        const { showAdvanced } = this.state;
         return (
             <Grid container direction="row" justify="space-between" alignItems="center" className={classes.container}>
                 <Grid container wrap="nowrap">
@@ -272,6 +270,6 @@ export class TransactionFeeBoxComponent extends React.Component<StyledProps, Tra
     }
 }
 
-export const TransactionFeeBox = injectSheet(styles)(TransactionFeeBoxComponent);
+export const TransactionFeeBox = withStyles(styles)(TransactionFeeBoxComponent);
 
 export default TransactionFeeBox;

@@ -1,19 +1,18 @@
 import * as React from 'react';
-import { 
-    ExpansionPanel, 
-    ExpansionPanelSummary, 
-    Typography, 
+import {
+    ExpansionPanel,
+    ExpansionPanelSummary,
+    Typography,
     ExpansionPanelDetails,
     Divider,
     Grid
 } from '@material-ui/core';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import { 
+import {
     GreenTick,
-    DeniedTick, 
+    DeniedTick,
     HourGlassIcon,
 } from '../../../src/materialui/lists';
-
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -23,9 +22,9 @@ export default function AccordionStories () {
     return (
         <div>
             <Typography variant="h3" style={underlineStyle} gutterBottom>
-				Accordion
-			</Typography>
-            
+                Accordion
+            </Typography>
+
             <ExpansionPanel >
                 <ExpansionPanelSummary expandIcon={<ExpandLessIcon />}>
                     <Grid container direction='row' justify='flex-start' alignItems='baseline'>

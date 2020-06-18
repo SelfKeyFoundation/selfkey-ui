@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { 
-	Typography, 
-} from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import Pagination from './../../../src/materialui/pagination';
 
 const underlineStyle = {
@@ -15,7 +13,6 @@ export default function PaginationStories () {
                 Pagination
             </Typography>
             <Pagination />
-
         </div>
     )
 }

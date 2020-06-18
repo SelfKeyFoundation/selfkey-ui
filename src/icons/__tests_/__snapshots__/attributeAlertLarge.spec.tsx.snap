@@ -3,7 +3,7 @@
 exports[`Attribute Alert Large Icon should show Attribute Alert Large Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-0-3-1"
+  className="MuiSvgIcon-root Component-root-1"
   focusable="false"
   version="1.1"
   viewBox="0 0 38 44"

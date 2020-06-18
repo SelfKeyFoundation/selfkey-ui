@@ -1,40 +1,12 @@
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-// @ts-ignore
-var react_jss_1 = require("react-jss");
-var common_style_1 = require("../../common/common-style");
-var transaction_fee_box_1 = require("./fee/transaction-fee-box");
-var transaction_box_1 = require("../transaction-box");
-var core_1 = require("@material-ui/core");
-var number_format_1 = require("../../price/number-format");
-exports.styles = {
+import * as React from 'react';
+import { Grid, Divider, withStyles, createStyles } from '@material-ui/core';
+import CommonStyle from '../../common/common-style';
+import { TransactionFeeBox } from './fee/transaction-fee-box';
+import TransactionBox from '../transaction-box';
+import { NumberFormat } from '../../price/number-format';
+export const styles = createStyles({
     container: {
-        fontFamily: common_style_1.default.fontFamily
+        fontFamily: CommonStyle.fontFamily
     },
     button: {
         boxSizing: 'border-box',
@@ -154,33 +126,33 @@ exports.styles = {
         backgroundColor: '#1E262E',
         color: '#FFFFFF',
     }
-};
-var TransactionSendBoxComponent = /** @class */ (function (_super) {
-    __extends(TransactionSendBoxComponent, _super);
-    function TransactionSendBoxComponent(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = { amount: '', address: '', cryptoCurrency: props.cryptoCurrency };
-        return _this;
+});
+export class TransactionSendBoxComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.renderFeeBox = () => React.createElement(TransactionFeeBox, Object.assign({}, this.props));
+        this.state = {
+            amount: '',
+            address: '',
+            cryptoCurrency: props.cryptoCurrency
+        };
     }
-    TransactionSendBoxComponent.prototype.renderFeeBox = function () {
-        return (React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, this.props)));
-    };
-    TransactionSendBoxComponent.prototype.handleAllAmountClick = function () {
-        var value = String(this.props.balance);
-        this.setState(__assign(__assign({}, this.state), { amount: value }));
+    handleAllAmountClick() {
+        const value = String(this.props.balance);
+        this.setState({ ...this.state, amount: value });
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
-    };
-    TransactionSendBoxComponent.prototype.handleAddressChange = function (event) {
+    }
+    handleAddressChange(event) {
         if (!this.props.onAddressFieldChange) {
             return;
         }
-        this.setState(__assign(__assign({}, this.state), { address: event.target.value }));
+        this.setState({ ...this.state, address: event.target.value });
         this.props.onAddressFieldChange(event.target.value);
-    };
-    TransactionSendBoxComponent.prototype.handleAmountChange = function (event) {
-        var value = event.target.value;
+    }
+    handleAmountChange(event) {
+        let value = event.target.value;
         if (isNaN(Number(value))) {
             value = '';
         }
@@ -188,73 +160,68 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         if (Number(value) > this.props.balance) {
             value = String(this.props.balance);
         }
-        this.setState(__assign(__assign({}, this.state), { amount: value }));
+        this.setState({ ...this.state, amount: value });
         if (this.props.onAmountInputChange) {
             this.props.onAmountInputChange(value);
         }
-    };
-    TransactionSendBoxComponent.prototype.handleCryptoCurrencyChange = function (event) {
-        var value = event.target.value;
-        this.setState(__assign(__assign({}, this.state), { cryptoCurrency: value }));
+    }
+    handleCryptoCurrencyChange(event) {
+        const value = event.target.value;
+        this.setState({ ...this.state, cryptoCurrency: value });
         if (this.props.onCryptoCurrencyChange) {
             this.props.onCryptoCurrencyChange(value);
         }
-    };
-    TransactionSendBoxComponent.prototype.renderSelectTokenItems = function () {
-        var _a = this.props, tokens = _a.tokens, classes = _a.classes;
-        return tokens.map(function (token, index) {
-            return (React.createElement("option", { key: index, value: token.symbol, className: classes.selectItem }, token.name + " - " + token.balance + " " + token.symbol));
-        });
-    };
-    TransactionSendBoxComponent.prototype.renderButtons = function () {
-        var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction, addressError = _a.addressError;
-        var sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
+    }
+    renderSelectTokenItems() {
+        const { tokens, classes } = this.props;
+        return tokens.map((token, index) => (React.createElement("option", { key: index, value: token.symbol, className: classes.selectItem }, `${token.name} - ${token.balance} ${token.symbol}`)));
+    }
+    renderButtons() {
+        const { classes, onSendAction, sending, confirmAction, cancelAction, addressError } = this.props;
+        const sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
-            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 1 },
-                React.createElement(core_1.Grid, { item: true },
+            return (React.createElement(Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 1 },
+                React.createElement(Grid, { item: true },
                     React.createElement("button", { className: classes.button, onClick: confirmAction }, " CONFIRM ")),
-                React.createElement(core_1.Grid, { item: true },
+                React.createElement(Grid, { item: true },
                     React.createElement("button", { className: classes.button, onClick: cancelAction }, " CANCEL "))));
         }
         else {
-            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
-                React.createElement(core_1.Grid, { item: true },
+            return (React.createElement(Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
+                React.createElement(Grid, { item: true },
                     React.createElement("button", { id: 'sendAction', disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction }, " SEND "))));
         }
-    };
-    TransactionSendBoxComponent.prototype.render = function () {
-        var _this = this;
-        var _a = this.props, closeAction = _a.closeAction, isSendCustomToken = _a.isSendCustomToken, classes = _a.classes, addressError = _a.addressError, amountUsd = _a.amountUsd, locale = _a.locale, fiatCurrency = _a.fiatCurrency;
-        var cryptoCurrency = this.state.cryptoCurrency;
-        var sendAmountClass = classes.input + " " + classes.amountInput;
-        var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
-        var cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
-        return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrencyText, closeAction: closeAction },
-            React.createElement("input", { id: 'sendToAddress', type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
+    }
+    render() {
+        const { closeAction, isSendCustomToken, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
+        let { cryptoCurrency } = this.state;
+        let sendAmountClass = `${classes.input} ${classes.amountInput}`;
+        let addressInputClass = `${classes.input} ${addressError ? classes.addressErrorColor : ''}`;
+        let cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
+        return (React.createElement(TransactionBox, { cryptoCurrency: cryptoCurrencyText, closeAction: closeAction },
+            React.createElement("input", { id: 'sendToAddress', type: 'text', onChange: e => this.handleAddressChange(e), value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
-            React.createElement(core_1.Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
-                React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 4 },
-                        React.createElement(core_1.Grid, { item: true },
-                            React.createElement("button", { id: 'allAmountButton', onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
-                        React.createElement(core_1.Grid, { item: true },
-                            React.createElement("input", { id: 'amountInput', type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
-                React.createElement(core_1.Grid, { item: true }, isSendCustomToken &&
-                    React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect, id: 'customToken' },
+            React.createElement(Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
+                React.createElement(Grid, { item: true },
+                    React.createElement(Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 4 },
+                        React.createElement(Grid, { item: true },
+                            React.createElement("button", { id: 'allAmountButton', onClick: () => this.handleAllAmountClick(), className: classes.selectAllAmountBtn }, " ALL ")),
+                        React.createElement(Grid, { item: true },
+                            React.createElement("input", { id: 'amountInput', type: 'text', onChange: e => this.handleAmountChange(e), value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
+                React.createElement(Grid, { item: true }, isSendCustomToken &&
+                    React.createElement("select", { value: this.state.cryptoCurrency, onChange: e => this.handleCryptoCurrencyChange(e), name: "cryptoCurrency", className: classes.cryptoSelect, id: 'customToken' },
                         React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
                         this.renderSelectTokenItems()))),
-            React.createElement(core_1.Divider, { className: classes.divider }),
-            React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
+            React.createElement(Divider, { className: classes.divider }),
+            React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null,
-                    React.createElement(number_format_1.NumberFormat, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
+                    React.createElement(NumberFormat, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
                 React.createElement("span", null, " USD ")),
             this.renderFeeBox(),
             this.renderButtons()));
-    };
-    return TransactionSendBoxComponent;
-}(React.Component));
-exports.TransactionSendBoxComponent = TransactionSendBoxComponent;
-exports.TransactionSendBox = react_jss_1.default(exports.styles)(TransactionSendBoxComponent);
-exports.default = exports.TransactionSendBox;
+    }
+}
+export const TransactionSendBox = withStyles(styles)(TransactionSendBoxComponent);
+export default TransactionSendBox;
 //# sourceMappingURL=transaction-send-box.js.map

@@ -2,14 +2,14 @@
 
 exports[`Transaction Box should show Transaction Box with Custom text 1`] = `
 <div
-  className="Component-transactionBox-0-2-1"
+  className="Component-transactionBox-1"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-2-4"
+    className="Component-closeDialogIconWrapper-4"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-6 MuiSvgIcon-fontSizeLarge"
+      className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
       height="38px"
       viewBox="0 0 38 38"
@@ -51,10 +51,10 @@ exports[`Transaction Box should show Transaction Box with Custom text 1`] = `
     </svg>
   </div>
   <div
-    className="Component-iconWrapper-0-2-2"
+    className="Component-iconWrapper-2"
   >
     <div
-      className="Component-custom-0-2-5"
+      className="Component-custom-5"
     >
       IHT
     </div>
@@ -67,14 +67,14 @@ exports[`Transaction Box should show Transaction Box with Custom text 1`] = `
 
 exports[`Transaction Box should show Transaction Box with ETH Icon 1`] = `
 <div
-  className="Component-transactionBox-0-2-1"
+  className="Component-transactionBox-1"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-2-4"
+    className="Component-closeDialogIconWrapper-4"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-6 MuiSvgIcon-fontSizeLarge"
+      className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
       height="38px"
       viewBox="0 0 38 38"
@@ -116,11 +116,11 @@ exports[`Transaction Box should show Transaction Box with ETH Icon 1`] = `
     </svg>
   </div>
   <div
-    className="Component-iconWrapper-0-2-2"
+    className="Component-iconWrapper-2"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-7 Component-icon-0-2-3"
+      className="MuiSvgIcon-root Component-root-7 Component-icon-3"
       focusable="false"
       viewBox="0 0 44 44"
     >
@@ -150,14 +150,14 @@ exports[`Transaction Box should show Transaction Box with ETH Icon 1`] = `
 
 exports[`Transaction Box should show Transaction Box with KEY Icon 1`] = `
 <div
-  className="Component-transactionBox-0-2-1"
+  className="Component-transactionBox-1"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-2-4"
+    className="Component-closeDialogIconWrapper-4"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-6 MuiSvgIcon-fontSizeLarge"
+      className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
       height="38px"
       viewBox="0 0 38 38"
@@ -199,11 +199,11 @@ exports[`Transaction Box should show Transaction Box with KEY Icon 1`] = `
     </svg>
   </div>
   <div
-    className="Component-iconWrapper-0-2-2"
+    className="Component-iconWrapper-2"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-8 Component-icon-0-2-3"
+      className="MuiSvgIcon-root Component-root-8 Component-icon-3"
       focusable="false"
       viewBox="0 0 44 44"
     >
@@ -234,14 +234,14 @@ exports[`Transaction Box should show Transaction Box with KEY Icon 1`] = `
 
 exports[`Transaction Box should show Transaction Box with KI Icon 1`] = `
 <div
-  className="Component-transactionBox-0-2-1"
+  className="Component-transactionBox-1"
 >
   <div
-    className="Component-closeDialogIconWrapper-0-2-4"
+    className="Component-closeDialogIconWrapper-4"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-6 MuiSvgIcon-fontSizeLarge"
+      className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
       height="38px"
       viewBox="0 0 38 38"
@@ -283,11 +283,11 @@ exports[`Transaction Box should show Transaction Box with KI Icon 1`] = `
     </svg>
   </div>
   <div
-    className="Component-iconWrapper-0-2-2"
+    className="Component-iconWrapper-2"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-0-2-8 Component-icon-0-2-3"
+      className="MuiSvgIcon-root Component-root-8 Component-icon-3"
       focusable="false"
       viewBox="0 0 44 44"
     >

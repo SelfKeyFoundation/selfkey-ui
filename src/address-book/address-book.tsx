@@ -1,18 +1,17 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet } from 'react-jss';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
+import { ClassNameMap } from '@material-ui/styles/withStyles';
 import { Grid, Button, Table, TableHead, TableRow, TableCell, TableBody, IconButton, Typography } from '@material-ui/core';
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import AddressBookIcon from '../icons/address-book';
 import CopyIcon from '../icons/copy';
 import DeleteIcon from '../icons/delete';
 import EditTransparentIcon from '../icons/edit-transparent';
-import { ClassNameMap } from '@material-ui/styles/withStyles';
-import { CopyToClipboard } from "react-copy-to-clipboard";
 
-const styles: StyleSheet = {
+const styles = createStyles({
     addressBook: {
         width: '1140px',
     },
-
     button: {
         height: '44px',
         width: '180px',
@@ -26,14 +25,12 @@ const styles: StyleSheet = {
         lineHeight: '19px',
         textAlign: 'center'
     },
-
     descriptionText: {
         color: '#93B0C1',
         fontSize: '18px',
         lineHeight: '28px',
         textAlign: 'center'
     },
-
     table: {
         borderSpacing: '0px',
         minWidth: '900px',
@@ -41,7 +38,6 @@ const styles: StyleSheet = {
             background: '#262f39',
         },
     },
-
     headerTableRow: {
         height: '38px',
         '& th': {
@@ -57,7 +53,6 @@ const styles: StyleSheet = {
             paddingLeft: '24px !important',
         },
     },
-
     bodyTableRow: {
         height: '74px',
         cursor: 'pointer',
@@ -72,7 +67,7 @@ const styles: StyleSheet = {
             paddingLeft: '24px !important',
         },
     },
-};
+});
 
 export type AddressBook = {
     id: number,
@@ -115,11 +110,11 @@ const renderAddresses = (addresses:Array<AddressBook>, classes: Partial<ClassNam
                     </Grid>
                 </TableCell>
             </TableRow>
-        )
-    })
+        );
+    });
 }
 
-export const AddressBook = injectSheet(styles)<AddressBookProps>(({classes, addresses, onEdit, onDelete, onAdd}) => (
+export const AddressBook = withStyles(styles)(({ classes, addresses, onEdit, onDelete, onAdd }: AddressBookProps & WithStyles<typeof styles>) => (
     <Grid container direction='column' justify='center' alignItems='center' className={classes.addressBook} spacing={2}>
         <Grid item>
             <AddressBookIcon/>

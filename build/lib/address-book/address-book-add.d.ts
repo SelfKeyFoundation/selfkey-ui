@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, WithStyles } from 'react-jss';
-export declare const styles: StyleSheet;
+import { WithStyles } from '@material-ui/core';
+declare const styles: Record<"input" | "label" | "inputError" | "errorText" | "errorColor", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
 export declare type AddressBookAddState = {
     label: string;
     address: string;
@@ -13,13 +13,13 @@ export declare type AddressBookAddProps = {
     onLabelChange: (label: string) => void;
     onAddressChange: (address: string) => void;
 };
-export declare type StyledProps = WithStyles<keyof typeof styles> & AddressBookAddProps;
-export declare class AddressBookAddComponent extends React.Component<StyledProps, AddressBookAddState> {
-    constructor(props: StyledProps);
+export declare type AddressBookAddSyledProps = WithStyles<typeof styles> & AddressBookAddProps;
+export declare class AddressBookAddComponent extends React.Component<AddressBookAddSyledProps, AddressBookAddState> {
+    constructor(props: AddressBookAddSyledProps);
     handleLabelChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     handleAddressChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     handleSubmit: (event: any) => void;
     render(): JSX.Element;
 }
-export declare const AddressBookAdd: React.ComponentType<AddressBookAddProps & import("react-jss").StyledComponentProps<string>>;
+export declare const AddressBookAdd: React.ComponentType<Pick<AddressBookAddSyledProps, "addressError" | "onSave" | "labelError" | "onCancel" | "onLabelChange" | "onAddressChange"> & import("@material-ui/core").StyledComponentProps<"input" | "label" | "inputError" | "errorText" | "errorColor">>;
 export default AddressBookAdd;

@@ -1,9 +1,5 @@
 import * as React from 'react';
-import {
-    Grid,
-    Button,
-    Typography,
-} from '@material-ui/core';
+import { Grid, Button, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import HardDriveIcon from '../../../src/icons/hard-drive';
 import { base } from '../../../src/colors';

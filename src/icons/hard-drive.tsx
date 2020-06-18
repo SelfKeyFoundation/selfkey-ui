@@ -1,11 +1,10 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import { primary, white } from '../colors';
 
-const styles: StyleSheet = {
+const styles = createStyles({
     root: {
         fill: white,
         height: '44px !important',
@@ -13,10 +12,10 @@ const styles: StyleSheet = {
         '&:hover': {
             fill: primary,
         }
-    },
-};
+    }
+});
 
-export const HardDriveIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
+export const HardDriveIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon  {...props} viewBox="0 0 44 44" version="1.1">
         <g stroke="none" strokeWidth="1"  fillRule="evenodd">
             <g id="5.-Style-Guide---UI-Elements" transform="translate(-1026.000000, -785.000000)" fill="inherit" fillRule="nonzero">
@@ -30,9 +29,6 @@ export const HardDriveIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconPr
             </g>
         </g>
     </SvgIcon>
-
 ));
 
 export default HardDriveIcon;
-
-

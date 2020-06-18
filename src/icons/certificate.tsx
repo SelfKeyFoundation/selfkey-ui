@@ -1,18 +1,17 @@
 import * as React from 'react';
-import injectSheet, { StyleSheet, StyledComponentProps } from 'react-jss';
-
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles: StyleSheet = {
-	root: {
-		width: '16px !important',
-		height: '20px !important',
-	},
-};
+const styles = createStyles({
+    root: {
+        width: '16px !important',
+        height: '20px !important',
+    },
+});
 
-export const CertificateIcon = injectSheet(styles)<SvgIconProps>((props: SvgIconProps & StyledComponentProps) => (
-	<SvgIcon {...props} viewBox="0 0 16 20" version="1.1">
+export const CertificateIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
+    <SvgIcon {...props} viewBox="0 0 16 20" version="1.1">
         <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="701.1---Incorporation-Taxes-View" transform="translate(-925.000000, -277.000000)" fill="#FFFFFF" fillRule="nonzero">
                 <g id="Modal" transform="translate(240.000000, 146.000000)">
@@ -30,7 +29,7 @@ export const CertificateIcon = injectSheet(styles)<SvgIconProps>((props: SvgIcon
                 </g>
             </g>
         </g>
-	</SvgIcon>
+    </SvgIcon>
 ));
 
 export default CertificateIcon;

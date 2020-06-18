@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { 
+import {
     DefaultBullet,
     GreenTick,
     DeniedTick,
@@ -8,7 +8,7 @@ import {
     CheckedIcon,
     StepIcon,
     Line
-} from '../../theme/selfkey-dark-theme';
+} from '../../icons';
 
 describe('Line', () => {
   it('should show Line', () => {
@@ -79,7 +79,7 @@ describe('CheckedIcon verified', () => {
       expect(tree).toMatchSnapshot();
     });
   });
-  
+
 describe('CheckedIcon unverified', () => {
   it('should show CheckedIcon unverified', () => {
     const component = create(

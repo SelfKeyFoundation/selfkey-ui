@@ -2,7 +2,7 @@
 
 exports[`Transaction Fee should show Transaction Fee screen 1`] = `
 <div
-  className="MuiGrid-root Component-root-0-2-1 MuiGrid-container MuiGrid-spacing-xs-1"
+  className="MuiGrid-root Component-root-1 MuiGrid-container MuiGrid-spacing-xs-1"
 >
   <div
     className="MuiGrid-root MuiGrid-item"

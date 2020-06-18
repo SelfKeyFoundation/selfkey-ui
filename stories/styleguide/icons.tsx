@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Grid, Theme } from '@material-ui/core';
 import { createStyles, withStyles } from '@material-ui/styles';
-import { MuiAddIcon } from '../../src/icons/muiadd';
 import {
     AddressBookIcon,
     AddressBookMenuIcon,
@@ -25,6 +24,7 @@ import {
     CoinsIcon,
     CompanyIcon,
     CopyIcon,
+    CorporateIcon,
     CustomIcon,
     DashboardMenuIcon,
     DeleteIcon,
@@ -38,7 +38,8 @@ import {
     EditTransparentIcon,
     Erc20Icon,
     EthereumIcon,
-    ExchangeIcon,
+    ExchangeLargeIcon,
+    ExchangeSmallIcon,
     ExchangeRoundedIcon,
     ExistingAddressIcon,
     FailedIcon,
@@ -79,6 +80,7 @@ import {
     MoneyIcon,
     MuiDeleteIcon,
     MuiEditIcon,
+    MuiAddIcon,
     MuiVisibilityIcon,
     MyCryptoLargeIcon,
     NewAddressIcon,
@@ -139,8 +141,7 @@ import {
     WarningShieldIcon,
     NewRefreshIcon,
     IDIcon
-} from '../../src/theme/selfkey-dark-theme';
-import CorporateIcon from '../../src/icons/corporate';
+} from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
     createStyles({
@@ -420,9 +421,16 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
         <Grid item className={classes.gridItem}>
             <pre className={classes.pre}>
-                <code className={classes.code}>{`<ExchangeIcon />`}</code>
+                <code className={classes.code}>{`<ExchangeLargeIcon />`}</code>
             </pre>
-            <ExchangeIcon />
+            <ExchangeLargeIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<ExchangeSmallIcon />`}</code>
+            </pre>
+            <ExchangeSmallIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>

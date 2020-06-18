@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { StyleSheet, ClassNameMap, WithStyles, StyledComponentProps } from 'react-jss';
+import { WithStyles } from '@material-ui/core';
 import { ChartEvent } from 'react-google-charts';
-declare const styles: StyleSheet;
-export declare type Token = {
+declare const styles: Record<"active" | "header" | "horizontalDivider" | "cryptoBox" | "coloredBox" | "coloredBoxText" | "prices" | "texts" | "totalPrice" | "totalPriceText" | "chartCenterContainer" | "chart" | "gearButton" | "buttonViewMore" | "buttonViewMoreText" | "expandMore" | "headerText", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+declare type Token = {
     name: string;
     symbol: string;
     balance: number;
@@ -17,7 +17,7 @@ export declare type CryptoChartBoxProps = {
     viewAll: boolean;
     toggleViewAll?: Function;
 };
-export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
+declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
 export declare type Active = {
     active: boolean;
 };
@@ -52,7 +52,7 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     onMouseOverEvent: ChartEvent;
     onMouseOutEvent: ChartEvent;
     getChartEvents(): ChartEvent[];
-    getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string): JSX.Element[];
+    getTokensLegend(classes: any, tokens: Array<Token>, locale: string, fiatCurrency: string): JSX.Element[];
     hasBalance(): boolean;
     getChartData(tokens: Array<Token>): (string | number)[][];
     DEFAULT_COLLOR: string;
@@ -65,5 +65,5 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     getViewAllSection(): "" | JSX.Element;
     render(): JSX.Element;
 }
-export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & StyledComponentProps<string>>;
+export declare const CryptoChartBox: React.ComponentType<Pick<StyledProps, "locale" | "fiatCurrency" | "tokens" | "manageCryptoAction" | "topTokenListSize" | "viewAll" | "toggleViewAll"> & import("@material-ui/core").StyledComponentProps<"active" | "header" | "horizontalDivider" | "cryptoBox" | "coloredBox" | "coloredBoxText" | "prices" | "texts" | "totalPrice" | "totalPriceText" | "chartCenterContainer" | "chart" | "gearButton" | "buttonViewMore" | "buttonViewMoreText" | "expandMore" | "headerText">>;
 export default CryptoChartBox;

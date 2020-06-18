@@ -1,16 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var styles_1 = require("@material-ui/styles");
-var icons_1 = require("@material-ui/icons");
-var colors_1 = require("../colors");
-exports.MuiAddIcon = styles_1.withStyles({
+import { withStyles } from '@material-ui/styles';
+import { AddCircleOutlineOutlined } from '@material-ui/icons';
+import { grey, white } from '../colors';
+export const MuiAddIcon = withStyles({
     root: {
-        fill: colors_1.grey,
+        fill: grey,
         height: '20px',
         width: '20px',
         '&:hover': {
-            fill: colors_1.white,
+            fill: white,
         },
     },
-})(icons_1.AddCircleOutlineOutlined);
+})(AddCircleOutlineOutlined);
 //# sourceMappingURL=muiadd.js.map

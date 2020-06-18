@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import ModalWithBackButton from '../modalWithBackButton';
+import ModalWithBackButton from '../modal-with-back-button';
 
 describe('Modal With Back Button', () => {
   it('should close ModalWithBackButton with handleClose method', () => {
