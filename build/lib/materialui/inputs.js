@@ -76,7 +76,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props) => {
             onAdd && items.length > 0 ? React.createElement(Divider, null) : null,
             onAdd ? (React.createElement(ListItem, { className: classes.itemAdd, onClick: onAdd }, "+Add Option")) : null)));
 });
-export const FileUploadLabel = withStyles({
+export const FileUploadLabel = withStyles(createStyles({
     root: {
         alignItems: 'center',
         cursor: 'pointer',
@@ -90,17 +90,17 @@ export const FileUploadLabel = withStyles({
             color: primary,
         },
     },
-})(InputLabel);
-export const FileUploadInput = withStyles({
+}))(InputLabel);
+export const FileUploadInput = withStyles(createStyles({
     root: {
         display: 'none',
     },
-})(Input);
-export const DecimalInput = withStyles({
+}))(Input);
+export const DecimalInput = withStyles(createStyles({
     input: {
         textAlign: 'right'
     },
-})(Input);
+}))(Input);
 const fileViewStyles = (theme) => createStyles({
     fileItem: {
         padding: '5px 20px',
@@ -389,7 +389,7 @@ export const FileUploadWidget = withStyles(fileUploadStyles)(({ classes, id, fil
                             React.createElement("input", Object.assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
-export const FileUploadGrid = withStyles({
+export const FileUploadGrid = withStyles(createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
@@ -400,7 +400,7 @@ export const FileUploadGrid = withStyles({
         marginTop: '10px',
         marginBottom: '10px',
     },
-})(Grid);
+}))(Grid);
 const fileUploadWidgetStyles = (theme) => createStyles({
     fileInput: {
         display: 'none',

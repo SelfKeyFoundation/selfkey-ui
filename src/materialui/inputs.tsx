@@ -110,7 +110,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props: Multili
     );
 });
 
-export const FileUploadLabel = withStyles({
+export const FileUploadLabel = withStyles(createStyles({
     root: {
         alignItems: 'center',
         cursor: 'pointer',
@@ -124,19 +124,19 @@ export const FileUploadLabel = withStyles({
             color: primary,
         },
     },
-})(InputLabel);
+}))(InputLabel);
 
-export const FileUploadInput = withStyles({
+export const FileUploadInput = withStyles(createStyles({
     root: {
         display: 'none',
     },
-})(Input);
+}))(Input);
 
-export const DecimalInput = withStyles({
+export const DecimalInput = withStyles(createStyles({
     input: {
         textAlign: 'right'
     },
-})(Input);
+}))(Input);
 
 export type FileViewProps = any;
 
@@ -561,7 +561,7 @@ export const FileUploadWidget = withStyles(fileUploadStyles)(
     }
 );
 
-export const FileUploadGrid = withStyles({
+export const FileUploadGrid = withStyles(createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
@@ -572,7 +572,7 @@ export const FileUploadGrid = withStyles({
         marginTop: '10px',
         marginBottom: '10px',
     },
-})(Grid);
+}))(Grid);
 
 export type ArrayFileUploadWidgetProps = any;
 
