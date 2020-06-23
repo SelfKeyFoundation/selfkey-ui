@@ -54,6 +54,7 @@ import {
     GearIcon,
     GreenTickIcon,
     HardDriveIcon,
+    HealthIcon,
     HelpIcon,
     HourGlassIcon,
     HourGlassLargeIcon,
@@ -534,6 +535,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<HardDriveIcon />`}</code>
             </pre>
             <HardDriveIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<HealthIcon />`}</code>
+            </pre>
+            <HealthIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
