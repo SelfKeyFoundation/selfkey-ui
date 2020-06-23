@@ -22,6 +22,7 @@ export * from './buy-rounded';
 export * from './calculator';
 export * from './calendar';
 export * from './calendar-deposit';
+export * from './cards';
 export * from './certificate';
 export * from './chart';
 export * from './check-empty';
