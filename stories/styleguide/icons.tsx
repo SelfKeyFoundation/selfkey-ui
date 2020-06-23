@@ -63,6 +63,7 @@ import {
     InfoTooltip,
     KeyIcon,
     LedgerIcon,
+    LifebuoyIcon,
     ListIcon,
     LoanIcon,
     MailIcon,
@@ -529,6 +530,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<HelpIcon />`}</code>
             </pre>
             <HelpIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<LifebuoyIcon />`}</code>
+            </pre>
+            <LifebuoyIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>

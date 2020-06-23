@@ -63,6 +63,7 @@ export * from './gear';
 export * from './green-tick';
 export * from './hard-drive';
 export * from './help';
+export * from './lifebuoy';
 export * from './hourglass-large';
 export * from './hourglass-simple';
 export * from './hourglass-small';
