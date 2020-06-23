@@ -17,6 +17,7 @@ export * from './attribute-alert';
 export * from './attribute-alert-large';
 export * from './bank';
 export * from './bank-rounded';
+export * from './bank-small';
 export * from './book';
 export * from './buy-rounded';
 export * from './calculator';

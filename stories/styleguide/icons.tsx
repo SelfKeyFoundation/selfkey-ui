@@ -8,6 +8,7 @@ import {
     AttributeAlertIcon,
     BankIcon,
     BankRoundedIcon,
+    BankSmallIcon,
     BookIcon,
     BuyRoundedIcon,
     CalculatorIcon,
@@ -215,6 +216,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<BankRoundedIcon />`}</code>
             </pre>
             <BankRoundedIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<BankSmallIcon />`}</code>
+            </pre>
+            <BankSmallIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
