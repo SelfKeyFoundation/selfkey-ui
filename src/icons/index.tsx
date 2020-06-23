@@ -81,6 +81,7 @@ export * from './marketplace';
 export * from './marketplace-loan';
 export * from './marketplace-notaries';
 export * from './member';
+export * from './metals';
 export * from './menu-affiliate';
 export * from './menu-button';
 export * from './menu-help';

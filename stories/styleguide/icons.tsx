@@ -78,6 +78,7 @@ import {
     MenuExportIcon,
     MenuNewIcon,
     MergeIcon,
+    MetalsIcon,
     ModalCloseIcon,
     MoneyIcon,
     MuiDeleteIcon,
@@ -144,7 +145,7 @@ import {
     WalletSmallIcon,
     WarningShieldIcon,
     NewRefreshIcon,
-    IDIcon
+    IDIcon,
 } from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
@@ -701,6 +702,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<MergeIcon />`}</code>
             </pre>
             <MergeIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<MetalsIcon />`}</code>
+            </pre>
+            <MetalsIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
