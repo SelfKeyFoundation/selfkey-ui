@@ -97,6 +97,7 @@ export * from './new-address';
 export * from './notarize-document';
 export * from './observer';
 export * from './okay';
+export * from './passports';
 export * from './password-confirm';
 export * from './password';
 export * from './payment';

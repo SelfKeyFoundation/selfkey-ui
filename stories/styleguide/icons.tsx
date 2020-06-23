@@ -88,6 +88,7 @@ import {
     NotarizeDocumentIcon,
     ObserverIcon,
     OkayIcon,
+    PassportsIcon,
     PasswordConfirmIcon,
     PasswordIcon,
     PaymentIcon,
@@ -776,6 +777,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<OkayIcon />`}</code>
             </pre>
             <OkayIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<PassportsIcon />`}</code>
+            </pre>
+            <PassportsIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
