@@ -139,6 +139,7 @@ import {
     VisibilityOffIcon,
     VisibilityOnIcon,
     WalletIcon,
+    WalletSmallIcon,
     WarningShieldIcon,
     NewRefreshIcon,
     IDIcon
@@ -1139,6 +1140,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<WalletIcon />`}</code>
             </pre>
             <WalletIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<WalletSmallIcon />`}</code>
+            </pre>
+            <WalletSmallIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>

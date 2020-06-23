@@ -149,6 +149,7 @@ export * from './view';
 export * from './visibility-off';
 export * from './visibility-on';
 export * from './wallet';
+export * from './wallet-small';
 export * from './warning-shield';
 export * from './id';
 export * from './muiadd';
