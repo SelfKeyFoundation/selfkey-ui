@@ -62,6 +62,7 @@ import {
     IdCardIcon,
     IncorporationsIcon,
     IncorporationsRoundedIcon,
+    IncorporationsSmallIcon,
     InfoTooltip,
     KeyIcon,
     LedgerIcon,
@@ -599,6 +600,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<IncorporationsRoundedIcon />`}</code>
             </pre>
             <IncorporationsRoundedIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<IncorporationsSmallIcon />`}</code>
+            </pre>
+            <IncorporationsSmallIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>

@@ -71,6 +71,7 @@ export * from './hourglass-small';
 export * from './id-card';
 export * from './incorporations';
 export * from './incorporations-rounded';
+export * from './incorporations-small';
 export * from './info';
 export * from './key';
 export * from './ledger';
