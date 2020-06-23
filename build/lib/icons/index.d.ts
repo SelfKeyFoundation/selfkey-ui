@@ -76,6 +76,7 @@ export * from './key';
 export * from './ledger';
 export * from './lifebuoy';
 export * from './list';
+export * from './loans-small';
 export * from './mail';
 export * from './marketplace-menu';
 export * from './marketplace';
