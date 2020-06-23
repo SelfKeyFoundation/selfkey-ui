@@ -52,6 +52,7 @@ export * from './ethereum';
 export { ExchangeIcon as ExchangeLargeIcon } from './exchange-large';	
 export { ExchangeIcon as ExchangeSmallIcon } from './exchange';
 export * from './exchange-rounded';
+export * from './exchanges-small';
 export * from './existing-address';
 export * from './failed';
 export * from './file-audio';
