@@ -1,15 +1,4 @@
-export * from '../colors';
-export * from '../materialui/button';
-export * from '../materialui/color-presentation';
-export * from '../materialui/datepicker';
-export * from '../materialui/inputs';
-export * from '../materialui/lists';
-export * from '../materialui/modal-elements';
-export * from '../materialui/pagination';
-export * from '../materialui/statuses';
-export * from '../materialui/tables';
-export * from '../materialui/tooltip-arrow';
-export * from '../materialui/typography';
+export { DefaultBullet, GreenTick, DeniedTick, HourGlassIcon, CheckedIcon, StepIcon, Line } from '../materialui/lists';
 export * from './address-book-menu';
 export * from './address-book';
 export * from './animated-loading';

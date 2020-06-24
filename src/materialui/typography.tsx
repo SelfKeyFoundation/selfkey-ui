@@ -1,11 +1,8 @@
 import { Typography } from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
-import {
-    typography,
-    baseDark
-} from '../colors';
+import { withStyles, createStyles } from '@material-ui/core';
+import { typography, baseDark } from '../colors';
 
-export const Tag = withStyles({
+const styles = createStyles({
     root: {
         backgroundColor: baseDark,
         borderRadius: '10px',
@@ -18,4 +15,6 @@ export const Tag = withStyles({
         fontSize: '12px',
         color: typography,
     }
-})(Typography);
+})
+
+export const Tag = withStyles(styles)(Typography);

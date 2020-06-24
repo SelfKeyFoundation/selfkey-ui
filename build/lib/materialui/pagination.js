@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { TablePagination, IconButton, Grid } from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
+import { withStyles, createStyles } from '@material-ui/styles';
 import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
-export const KeyIconButton = withStyles({
+export const KeyIconButton = withStyles(createStyles({
     root: {
         border: '1px solid #313D49',
         borderRadius: 0,
@@ -16,7 +16,7 @@ export const KeyIconButton = withStyles({
             border: '1px solid #687C8A',
         },
     },
-})(IconButton);
+}))(IconButton);
 class TablePaginationActions extends React.Component {
     // handleFirstPageButtonClick = event => {
     //   this.props.onChangePage(event, 0);
