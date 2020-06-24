@@ -8,11 +8,13 @@ import {
     AttributeAlertIcon,
     BankIcon,
     BankRoundedIcon,
+    BankSmallIcon,
     BookIcon,
     BuyRoundedIcon,
     CalculatorIcon,
     CalendarIcon,
     CalendarDepositIcon,
+    CardsIcon,
     CertificateIcon,
     ChartIcon,
     CheckEmptyIcon,
@@ -40,6 +42,7 @@ import {
     EthereumIcon,
     ExchangeLargeIcon,
     ExchangeSmallIcon,
+    ExchangesSmallIcon,
     ExchangeRoundedIcon,
     ExistingAddressIcon,
     FailedIcon,
@@ -53,6 +56,7 @@ import {
     GearIcon,
     GreenTickIcon,
     HardDriveIcon,
+    HealthIcon,
     HelpIcon,
     HourGlassIcon,
     HourGlassLargeIcon,
@@ -60,11 +64,14 @@ import {
     IdCardIcon,
     IncorporationsIcon,
     IncorporationsRoundedIcon,
+    IncorporationsSmallIcon,
     InfoTooltip,
     KeyIcon,
     LedgerIcon,
+    LifebuoyIcon,
     ListIcon,
     LoanIcon,
+    LoansSmallIcon,
     MailIcon,
     MarketplaceIcon,
     MarketplaceMenuIcon,
@@ -76,6 +83,7 @@ import {
     MenuExportIcon,
     MenuNewIcon,
     MergeIcon,
+    MetalsIcon,
     ModalCloseIcon,
     MoneyIcon,
     MuiDeleteIcon,
@@ -87,6 +95,7 @@ import {
     NotarizeDocumentIcon,
     ObserverIcon,
     OkayIcon,
+    PassportsIcon,
     PasswordConfirmIcon,
     PasswordIcon,
     PaymentIcon,
@@ -138,9 +147,10 @@ import {
     VisibilityOffIcon,
     VisibilityOnIcon,
     WalletIcon,
+    WalletSmallIcon,
     WarningShieldIcon,
     NewRefreshIcon,
-    IDIcon
+    IDIcon,
 } from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
@@ -211,6 +221,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
         <Grid item className={classes.gridItem}>
             <pre className={classes.pre}>
+                <code className={classes.code}>{`<BankSmallIcon />`}</code>
+            </pre>
+            <BankSmallIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
                 <code className={classes.code}>{`<BookIcon />`}</code>
             </pre>
             <BookIcon />
@@ -242,6 +259,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<CalendarDepositIcon />`}</code>
             </pre>
             <CalendarDepositIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<CardsIcon />`}</code>
+            </pre>
+            <CardsIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
@@ -435,6 +459,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
         <Grid item className={classes.gridItem}>
             <pre className={classes.pre}>
+                <code className={classes.code}>{`<ExchangesSmallIcon />`}</code>
+            </pre>
+            <ExchangesSmallIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
                 <code className={classes.code}>{`<ExchangeRoundedIcon />`}</code>
             </pre>
             <ExchangeRoundedIcon />
@@ -526,9 +557,23 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
         <Grid item className={classes.gridItem}>
             <pre className={classes.pre}>
+                <code className={classes.code}>{`<HealthIcon />`}</code>
+            </pre>
+            <HealthIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
                 <code className={classes.code}>{`<HelpIcon />`}</code>
             </pre>
             <HelpIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<LifebuoyIcon />`}</code>
+            </pre>
+            <LifebuoyIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
@@ -575,6 +620,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
         <Grid item className={classes.gridItem}>
             <pre className={classes.pre}>
+                <code className={classes.code}>{`<IncorporationsSmallIcon />`}</code>
+            </pre>
+            <IncorporationsSmallIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
                 <code className={classes.code}>{`<InfoTooltip />`}</code>
             </pre>
             <InfoTooltip />
@@ -606,6 +658,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<LoanIcon />`}</code>
             </pre>
             <LoanIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<LoansSmallIcon />`}</code>
+            </pre>
+            <LoansSmallIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
@@ -683,6 +742,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<MergeIcon />`}</code>
             </pre>
             <MergeIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<MetalsIcon />`}</code>
+            </pre>
+            <MetalsIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
@@ -767,6 +833,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<OkayIcon />`}</code>
             </pre>
             <OkayIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<PassportsIcon />`}</code>
+            </pre>
+            <PassportsIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
@@ -1131,6 +1204,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<WalletIcon />`}</code>
             </pre>
             <WalletIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<WalletSmallIcon />`}</code>
+            </pre>
+            <WalletSmallIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
