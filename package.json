@@ -41,13 +41,16 @@
         "@material-ui/styles": "4.9.6",
         "@types/classnames": "^2.2.7",
         "@types/google.visualization": "0.0.46",
+        "@types/react-date-range": "^0.94.4",
         "@types/react-dom": "16.9.6",
         "bignumber.js": "8.0.1",
         "classnames": "^2.2.6",
+        "date-fns": "^2.14.0",
         "lodash": "4.17.13",
         "moment": "^2.23.0",
         "react": "16.13.1",
         "react-copy-to-clipboard": "5.0.1",
+        "react-date-range": "^1.0.3",
         "react-datetime": "^2.16.3",
         "react-dom": "16.13.1",
         "react-google-charts": "3.0.10",
@@ -96,7 +99,9 @@
             ".(ts|tsx)": "ts-jest"
         },
         "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-        "setupFilesAfterEnv": ["jest-enzyme"],
+        "setupFilesAfterEnv": [
+            "jest-enzyme"
+        ],
         "testEnvironment": "enzyme",
         "moduleFileExtensions": [
             "ts",
