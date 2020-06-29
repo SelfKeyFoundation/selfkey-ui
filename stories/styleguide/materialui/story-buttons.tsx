@@ -94,6 +94,31 @@ export default function ButtonStories () {
                     <br/><br/>
 
                     <Typography variant="overline" gutterBottom>
+                        Buttons - Full Tertiary
+                    </Typography>
+
+                    <Grid container spacing={8}>
+                        <Grid item>
+                            <Button variant='contained' color='secondary' size='large'>Large</Button>
+                        </Grid>
+
+                        <Grid item>
+                            <Button variant='contained' color='secondary' disabled size='large'>
+                                Disabled
+                            </Button>
+                        </Grid>
+
+                        <Grid item>
+                            <Button variant='contained' color='secondary'>Medium</Button>
+                        </Grid>
+
+                        <Grid item>
+                            <Button variant='contained' color='secondary' size='small'>Small</Button>
+                        </Grid>
+                    </Grid>
+                    <br/><br/>
+
+                    <Typography variant="overline" gutterBottom>
                         Button links & text links
                     </Typography>
 

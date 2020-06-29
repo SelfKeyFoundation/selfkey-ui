@@ -617,6 +617,21 @@ export const theme = createMuiTheme({
                     color: white,
                 },
             },
+            containedSecondary: {
+                background: 'linear-gradient(to bottom, #8269BE 0%, #6647B2 100%)',
+                border: '1px solid #7A66AD',
+                boxShadow: 'none',
+                color: white,
+                '&:hover': {
+                    background: 'linear-gradient(67deg, #5B47B2 5%, #7F69BE 37%)',
+                },
+                '&:focus': {
+                    background: 'linear-gradient(57deg, #7F69BE 0%, #9554BA 37%)',
+                },
+                '&$disabled': {
+                    color: white,
+                },
+            },
             outlined: {
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
