@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Typography } from '@material-ui/core';
 import KeyPicker from '../../../src/materialui/datepicker';
+import KeyRangePicker from '../../../src/materialui/daterangepicker';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -12,6 +13,11 @@ export default function DatePickerStories() {
             <Typography variant="h3" style={underlineStyle} gutterBottom>
                 Date Time Picker
             </Typography>
+
+            <KeyRangePicker />
+            <br />
+            <br />
+            <br />
 
             <KeyPicker
                 includeTime
