@@ -5,8 +5,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles = createStyles({
     root: {
-        width: '24px !important',
-        height: '24px !important',
         stroke: '#93B0C1',
         '&:hover': {
             stroke: 'white',
@@ -15,7 +13,7 @@ const styles = createStyles({
 });
 
 export const GearIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 24 24" version="1.1">
+    <SvgIcon style={{ width: props.width || '24px', height: props.height || '24px' }} {...props} viewBox={props.viewBox || '0 0 24 24'}>
         <defs></defs>
         <g id="🖥-Main-Dashboard" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
             <g id="301-Dashboard-+-Null-State" transform="translate(-1236.000000, -505.000000)">

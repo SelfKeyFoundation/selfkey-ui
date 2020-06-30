@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '18px !important',
-        height: '18px !important'
-    }
-});
+const styles = createStyles({});
 
 export const CheckEmptyIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 18 18'>
+    <SvgIcon style={{ width: props.width || '18px', height: props.height || '18px' }} {...props} viewBox={props.viewBox || '0 0 18 18'}>
         <defs></defs>
         <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="1.3.-Required-Information---missing-info" transform="translate(-490.000000, -340.000000)" fill="#202A33" stroke="#93B0C1" strokeWidth="2">

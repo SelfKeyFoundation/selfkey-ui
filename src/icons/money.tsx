@@ -6,7 +6,7 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 const styles = createStyles({});
 
 export const MoneyIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon style={{ width: props.width || '16px', height: props.height || '16px' }} {...props} viewBox="0 0 16 16">
+    <SvgIcon style={{ width: props.width || '16px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || '0 0 16 16'}>
         <g id="Marketplace-Money" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="721---Bank-Accounts-money" transform="translate(-931.000000, -279.000000)" fill="#FFFFFF" fillRule="nonzero">
                 <g id="Modal" transform="translate(240.000000, 146.000000)">

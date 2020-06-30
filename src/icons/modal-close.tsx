@@ -18,7 +18,7 @@ const styles = createStyles({
 });
 
 export const ModalCloseIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} width="38px" height="38px" viewBox="0 0 38 38" fontSize="large">
+    <SvgIcon style={{ width: props.width || '38px', height: props.height || '38px' }} {...props} viewBox={props.viewBox || '0 0 38 38'} fontSize="large">
         <g id="Symbols" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="Close-button" transform="translate(1.000000, 1.000000)">
                 <g id="icon-close-modal">

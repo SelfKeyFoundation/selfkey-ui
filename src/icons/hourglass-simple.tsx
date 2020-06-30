@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '27px !important',
-        height: '45px !important'
-      }
-});
+const styles = createStyles({});
 
 export const SimpleHourglassIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 27 45'>
+    <SvgIcon style={{ width: props.width || '27px', height: props.height || '45px' }} {...props} viewBox={props.viewBox || '0 0 27 45'}>
         <title>icon-simple-hourglass</title>
         <g id="💻-ID-Dashboard-simle-hourglass-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="410.1-Marketplace-Applications-Statuses-simple-hourglass-icon" transform="translate(-202.000000, -502.000000)" fill="#93B0C1">

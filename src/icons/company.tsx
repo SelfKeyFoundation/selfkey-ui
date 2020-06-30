@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '38px !important',
-        height: '35px !important'
-    }
-});
+const styles = createStyles({});
 
 export const CompanyIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 38 35'>
+    <SvgIcon style={{ width: props.width || '38px', height: props.height || '35px' }} {...props} viewBox={props.viewBox || '0 0 38 35'}>
         <g id="Corporate-Vault-company" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="802---Add-New-Member" transform="translate(-755.000000, -594.000000)" fill="#23E6FE" fillRule="nonzero">
                 <g id="Modal" transform="translate(240.000000, 142.000000)">

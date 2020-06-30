@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '29px !important',
-        height: '36px !important',
-    }
-});
+const styles = createStyles({});
 
 export const FileMultipleIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 31 39'>
+    <SvgIcon style={{ width: props.width || '31px', height: props.height || '39px' }} {...props} viewBox={props.viewBox || '0 0 31 39'}>
         <g id="💻-ID-Dashboard-multiple-files" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="multiple-files" transform="translate(-392.000000, -1692.000000)" stroke="#697C95" strokeWidth="1.71428571">
                 <g id="Group" transform="translate(394.000000, 1693.000000)">

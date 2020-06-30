@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-       width: '18px !important',
-       height: '20px !important',
-    },
-});
+const styles = createStyles({});
 
 export const AttributeAlertIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 18 20" version="1.1">
+    <SvgIcon style={{ width: props.width || '18px', height: props.height || '20px' }} {...props} viewBox={props.viewBox || '0 0 18 20'}>
         <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="703.1---Incorporation-+-Submit-+-Errors" transform="translate(-385.000000, -635.000000)" fill="#E98548">
                 <g id="Modal1" transform="translate(330.000000, 159.000000)">

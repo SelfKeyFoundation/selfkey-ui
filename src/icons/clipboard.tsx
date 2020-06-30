@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-       width: '30px !important',
-       height: '36px !important',
-    },
-});
+const styles = createStyles({});
 
 export const ClipboardIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon width="30px" height="36px" {...props} viewBox="0 0 30 36">
+    <SvgIcon style={{ width: props.width || '30px', height: props.height || '36px' }} {...props} viewBox={props.viewBox || '0 0 30 36'}>
         <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="351-Receive-KEY" transform="translate(-608.000000, -687.000000)" fillRule="nonzero">
                 <g id="Modal" transform="translate(341.000000, 235.000000)">

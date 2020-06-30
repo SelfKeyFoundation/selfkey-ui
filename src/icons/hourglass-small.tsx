@@ -6,12 +6,10 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 const styles = createStyles({});
 
 export const HourGlassSmallIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => {
-    let width = props.width || '20px';
-    let height = props.height || '26px';
     let fill = props.fill || '#697C95';
 
     return (
-        <SvgIcon {...props} style={{ width, height }} viewBox="0 0 20 26">
+        <SvgIcon style={{ width: props.width || '20px', height: props.height || '26px' }} {...props} viewBox={props.viewBox || '0 0 20 26'}>
             <defs />
             <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g

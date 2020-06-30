@@ -12,14 +12,12 @@ const styles = createStyles({
             stroke: '#23E6FE',
     },
         cursor: 'pointer',
-        height: '38px !important',
         transition: 'all 0.2s ease-out',
-        width: '38px !important',
     }
 });
 
 export const CloseButtonIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 38 38'>
+    <SvgIcon style={{ width: props.width || '38px', height: props.height || '38px' }} {...props} viewBox={props.viewBox || '0 0 38 38'}>
         <defs></defs>
         <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="Close-button" transform="translate(1.000000, 1.000000)">

@@ -14,7 +14,7 @@ const styles = createStyles({
 });
 
 export const NotarizeDocumentIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon style={{ width: props.width || '16px', height: props.height || '18px' }} {...props} viewBox='0 0 16 18'>
+    <SvgIcon style={{ width: props.width || '16px', height: props.height || '18px' }} {...props} viewBox={props.viewBox || '0 0 16 18'}>
         <g id="Notarize-document-icon" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="nt-d-i" transform="translate(-1011.000000, -396.000000)" fill="#FFFFFF">
                 <g id="nt-d-i-m" transform="translate(150.000000, 264.000000)">

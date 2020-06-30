@@ -4,15 +4,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '19px !important',
-        height: '24px !important'
-    }
-});
+const styles = createStyles({});
 
 export const DocumentIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 19 24'>
+    <SvgIcon style={{ width: props.width || '19px', height: props.height || '24px' }} {...props} viewBox={props.viewBox || '0 0 19 24'}>
         <defs></defs>
         <g id="Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="502-Exchange-Details-+-Coming-Soon" transform="translate(-823.000000, -1018.000000)" fill="#93B0C1">

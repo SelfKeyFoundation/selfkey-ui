@@ -8,8 +8,6 @@ import { grey, white } from '../colors';
 const styles = createStyles({
     root: {
         fill: grey,
-        height: '16px !important',
-        width: '16px !important',
         '&:hover': {
             fill: white,
         },
@@ -17,7 +15,7 @@ const styles = createStyles({
 });
 
 export const MuiDeleteIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 16 16" version="1.1">
+    <SvgIcon style={{ width: props.width || '16px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || '0 0 16 16'}>
         <defs></defs>
         <g id="-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="304-Manage-My-Tokens" transform="translate(-1244.000000, -597.000000)" fill="inherit">
