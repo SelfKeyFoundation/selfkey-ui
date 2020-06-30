@@ -1,4 +1,4 @@
-export { DefaultBullet, GreenTick, DeniedTick, HourGlassIcon, CheckedIcon, StepIcon, Line } from '../materialui/lists';
+export { DefaultBullet, GreenTick, DeniedTick, CheckedIcon, StepIcon, Line } from '../materialui/lists';
 export * from './address-book-menu';
 export * from './address-book';
 export * from './animated-loading';
@@ -56,6 +56,7 @@ export * from './green-tick';
 export * from './hard-drive';
 export * from './health';
 export * from './help';
+export * from './hourglass';
 export * from './hourglass-large';
 export * from './hourglass-simple';
 export * from './hourglass-small';

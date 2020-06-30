@@ -3,12 +3,11 @@
 exports[`HourGlass Icon should show HourGlass Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root"
+  className="MuiSvgIcon-root Component-root-1"
   focusable="false"
   style={
     Object {
       "height": "16px",
-      "marginRight": "13px",
       "width": "16px",
     }
   }
