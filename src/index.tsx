@@ -1,17 +1,4 @@
-export {
-    primary,
-    typography,
-    error,
-    primaryTint,
-    warning,
-    white,
-    grey,
-    base,
-    baseDark,
-    baseLight,
-    success
-} from './colors';
-
+export { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight, success } from './colors';
 export { CryptoPriceBox } from './price/crypto-price-box';
 export { NumberFormat } from './price/number-format';
 export { PriceSummary } from './price/price-summary';

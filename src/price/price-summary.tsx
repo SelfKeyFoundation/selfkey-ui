@@ -3,7 +3,6 @@ import { Grid, WithStyles, withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
 import { NumberFormat } from './number-format';
 
-
 const styles = createStyles({
     row: {
         marginTop: '4px',
