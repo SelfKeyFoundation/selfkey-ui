@@ -44,5 +44,6 @@ export { TooltipArrow, KeyTooltip } from './materialui/tooltip-arrow';
 export { LargeTableHeadRow, SmallTableHeadRow, SmallTableRow, SmallTableCell, TagTableCell } from './materialui/tables';
 export { PrimaryCard, PrimaryTintCard, TypographyCard, WhiteCard, GreyCard, BaseLightCard, BaseDarkCard, BaseCard, SuccessCard, WarningCard, ErrorCard } from './materialui/color-presentation';
 export * from './icons/index';
+export * from './materialui/index';
 export { SelfkeyDarkTheme } from './theme/selfkey-dark-theme';
 //# sourceMappingURL=index.js.map

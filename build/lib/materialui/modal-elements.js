@@ -1,7 +1,7 @@
 import { Paper, Button } from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { base } from '../colors';
-export const ModalWrap = withStyles({
+export const ModalWrap = withStyles(createStyles({
     root: {
         backgroundColor: base,
         boxSizing: 'border-box',
@@ -14,8 +14,8 @@ export const ModalWrap = withStyles({
         width: '780px',
         marginBottom: '50px',
     },
-})(Paper);
-export const ModalHeader = withStyles({
+}))(Paper);
+export const ModalHeader = withStyles(createStyles({
     root: {
         backgroundColor: '#2A3540',
         border: 'none',
@@ -27,8 +27,8 @@ export const ModalHeader = withStyles({
         padding: '18px 30px',
         width: '100%',
     },
-})(Paper);
-export const ModalBody = withStyles({
+}))(Paper);
+export const ModalBody = withStyles(createStyles({
     root: {
         backgroundColor: '#262F39',
         border: 'none',
@@ -39,8 +39,8 @@ export const ModalBody = withStyles({
         padding: '30px 45px 60px',
         width: '100%',
     },
-})(Paper);
-export const SmallModalBody = withStyles({
+}))(Paper);
+export const SmallModalBody = withStyles(createStyles({
     root: {
         backgroundColor: '#262F39',
         border: 'none',
@@ -51,8 +51,8 @@ export const SmallModalBody = withStyles({
         padding: '30px 30px 40px',
         width: '100%',
     },
-})(Paper);
-export const ModalBody2 = withStyles({
+}))(Paper);
+export const ModalBody2 = withStyles(createStyles({
     root: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -61,8 +61,8 @@ export const ModalBody2 = withStyles({
         margin: '0 auto',
         width: '780px',
     },
-})(Paper);
-export const ModalCloseButton = withStyles({
+}))(Paper);
+export const ModalCloseButton = withStyles(createStyles({
     root: {
         border: 0,
         borderRadius: '50%',
@@ -76,5 +76,5 @@ export const ModalCloseButton = withStyles({
         top: '-20px',
         width: '40px',
     }
-})(Button);
+}))(Button);
 //# sourceMappingURL=modal-elements.js.map

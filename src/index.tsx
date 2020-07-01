@@ -66,5 +66,6 @@ export {
 } from './materialui/color-presentation';
 
 export * from './icons/index';
+export * from './materialui/index';
 
 export { SelfkeyDarkTheme } from './theme/selfkey-dark-theme';

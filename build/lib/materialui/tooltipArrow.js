@@ -50,7 +50,7 @@ export const KeyTooltip = withStyles({
         },
     },
 })(Tooltip);
-export const SliderTooltip = withStyles({
+export const SliderTooltip = withStyles(createStyles({
     tooltip: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -60,5 +60,5 @@ export const SliderTooltip = withStyles({
         margin: '8px 0',
         padding: 0,
     },
-})(Tooltip);
+}))(Tooltip);
 //# sourceMappingURL=tooltipArrow.js.map

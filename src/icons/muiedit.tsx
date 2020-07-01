@@ -1,8 +1,8 @@
-import { withStyles } from '@material-ui/styles';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { EditOutlined } from '@material-ui/icons';
 import { grey, white } from '../colors';
 
-export const MuiEditIcon = withStyles({
+export const MuiEditIcon = withStyles(createStyles({
     root: {
         fill: grey,
         height: '20px',
@@ -11,4 +11,4 @@ export const MuiEditIcon = withStyles({
             fill: white,
         },
     },
-})(EditOutlined);
+}))(EditOutlined);

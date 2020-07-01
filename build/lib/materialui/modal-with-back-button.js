@@ -1,15 +1,14 @@
 import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
-import { Paper, Grid, Button } from "@material-ui/core";
-import { withStyles } from '@material-ui/styles';
+import { Paper, Grid, Button, Input, InputLabel, } from "@material-ui/core";
+import { withStyles, createStyles } from '@material-ui/styles';
 import { ModalBody2 } from "./modal-elements";
 import IncorporationsIcon from "../icons/incorporations";
-import { FileUploadLabel, FileUploadInput } from "./inputs";
 import HardDriveIcon from "../icons/hard-drive";
-import { base } from "../colors";
+import { primary, base } from "../colors";
 import { BackButton } from "./button";
-export const ModalWrap = withStyles({
+export const ModalWrap = withStyles(createStyles({
     root: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -23,8 +22,8 @@ export const ModalWrap = withStyles({
         top: 0,
         width: '100%',
     },
-})(Paper);
-export const FileUploadGrid = withStyles({
+}))(Paper);
+export const FileUploadGrid = withStyles(createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
@@ -32,14 +31,34 @@ export const FileUploadGrid = withStyles({
         height: '400px',
         width: '760px',
     },
-})(Grid);
-export const FileUploadHeaderGrid = withStyles({
+}))(Grid);
+export const FileUploadHeaderGrid = withStyles(createStyles({
     item: {
         marginLeft: '-210px',
         marginTop: '-150px',
         position: 'absolute',
     },
-})(Grid);
+}))(Grid);
+const FileUploadLabel = withStyles(createStyles({
+    root: {
+        alignItems: 'center',
+        cursor: 'pointer',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '120px',
+        justifyContent: 'space-between',
+        marginTop: '80px',
+        textAlign: 'center',
+        '&:hover': {
+            color: primary,
+        },
+    },
+}))(InputLabel);
+const FileUploadInput = withStyles(createStyles({
+    root: {
+        display: 'none',
+    },
+}))(Input);
 export class ModalWithBackButton extends React.Component {
     constructor() {
         super(...arguments);

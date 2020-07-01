@@ -1,7 +1,7 @@
-import { withStyles } from '@material-ui/styles';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { AddCircleOutlineOutlined } from '@material-ui/icons';
 import { grey, white } from '../colors';
-export const MuiAddIcon = withStyles({
+export const MuiAddIcon = withStyles(createStyles({
     root: {
         fill: grey,
         height: '20px',
@@ -10,5 +10,5 @@ export const MuiAddIcon = withStyles({
             fill: white,
         },
     },
-})(AddCircleOutlineOutlined);
+}))(AddCircleOutlineOutlined);
 //# sourceMappingURL=muiadd.js.map
