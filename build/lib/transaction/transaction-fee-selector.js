@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,15 +12,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from 'react';
-import { Slider, withStyles, createStyles } from '@material-ui/core';
-import CommonStyle from '../common/common-style';
-import BN from 'bignumber.js';
-var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionFeeSelector = exports.TransactionFeeSelectorComponent = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var common_style_1 = require("../common/common-style");
+var bignumber_js_1 = require("bignumber.js");
+var styles = core_1.createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
-        fontFamily: CommonStyle.fontFamily,
+        fontFamily: common_style_1.default.fontFamily,
     },
     sliderRoot: {
         padding: '22px 0 12px 0',
@@ -61,7 +64,7 @@ var styles = createStyles({
         color: '#ffffff',
     },
 });
-var WEI = new BN('1000000000000000000');
+var WEI = new bignumber_js_1.default('1000000000000000000');
 var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
     __extends(TransactionFeeSelectorComponent, _super);
     function TransactionFeeSelectorComponent() {
@@ -92,7 +95,7 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
     });
     Object.defineProperty(TransactionFeeSelectorComponent.prototype, "transactionFee", {
         get: function () {
-            return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
+            return new bignumber_js_1.default(this.value).times(this.props.gasLimit).dividedBy(WEI);
         },
         enumerable: false,
         configurable: true
@@ -116,7 +119,7 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
                     this.fiatFee.toFixed(2),
                     " ",
                     fiat)),
-            React.createElement(Slider, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
+            React.createElement(core_1.Slider, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
                     root: classes.sliderRoot,
                     // trackAfter: classes.trackAfter,
                     // trackBefore: classes.trackBefore,
@@ -129,7 +132,7 @@ var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
     };
     return TransactionFeeSelectorComponent;
 }(React.Component));
-export { TransactionFeeSelectorComponent };
-export var TransactionFeeSelector = withStyles(styles)(TransactionFeeSelectorComponent);
-export default TransactionFeeSelector;
+exports.TransactionFeeSelectorComponent = TransactionFeeSelectorComponent;
+exports.TransactionFeeSelector = core_1.withStyles(styles)(TransactionFeeSelectorComponent);
+exports.default = exports.TransactionFeeSelector;
 //# sourceMappingURL=transaction-fee-selector.js.map

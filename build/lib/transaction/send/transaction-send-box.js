@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as React from 'react';
-import { Grid, Divider, withStyles, createStyles } from '@material-ui/core';
-import CommonStyle from '../../common/common-style';
-import { TransactionFeeBox } from './fee/transaction-fee-box';
-import TransactionBox from '../transaction-box';
-import { NumberFormat } from '../../price/number-format';
-export var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionSendBox = exports.TransactionSendBoxComponent = exports.styles = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var common_style_1 = require("../../common/common-style");
+var transaction_fee_box_1 = require("./fee/transaction-fee-box");
+var transaction_box_1 = require("../transaction-box");
+var number_format_1 = require("../../price/number-format");
+exports.styles = core_1.createStyles({
     container: {
-        fontFamily: CommonStyle.fontFamily
+        fontFamily: common_style_1.default.fontFamily
     },
     button: {
         boxSizing: 'border-box',
@@ -155,7 +158,7 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
     __extends(TransactionSendBoxComponent, _super);
     function TransactionSendBoxComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.renderFeeBox = function () { return React.createElement(TransactionFeeBox, __assign({}, _this.props)); };
+        _this.renderFeeBox = function () { return React.createElement(transaction_fee_box_1.TransactionFeeBox, __assign({}, _this.props)); };
         _this.state = {
             amount: '',
             address: '',
@@ -206,15 +209,15 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         var _a = this.props, classes = _a.classes, onSendAction = _a.onSendAction, sending = _a.sending, confirmAction = _a.confirmAction, cancelAction = _a.cancelAction, addressError = _a.addressError;
         var sendBtnIsEnabled = this.state.address && +this.state.amount && !addressError;
         if (sending) {
-            return (React.createElement(Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 1 },
-                React.createElement(Grid, { item: true },
+            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 1 },
+                React.createElement(core_1.Grid, { item: true },
                     React.createElement("button", { className: classes.button, onClick: confirmAction }, " CONFIRM ")),
-                React.createElement(Grid, { item: true },
+                React.createElement(core_1.Grid, { item: true },
                     React.createElement("button", { className: classes.button, onClick: cancelAction }, " CANCEL "))));
         }
         else {
-            return (React.createElement(Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
-                React.createElement(Grid, { item: true },
+            return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
+                React.createElement(core_1.Grid, { item: true },
                     React.createElement("button", { id: 'sendAction', disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction }, " SEND "))));
         }
     };
@@ -225,32 +228,32 @@ var TransactionSendBoxComponent = /** @class */ (function (_super) {
         var sendAmountClass = classes.input + " " + classes.amountInput;
         var addressInputClass = classes.input + " " + (addressError ? classes.addressErrorColor : '');
         var cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
-        return (React.createElement(TransactionBox, { cryptoCurrency: cryptoCurrencyText, closeAction: closeAction },
+        return (React.createElement(transaction_box_1.default, { cryptoCurrency: cryptoCurrencyText, closeAction: closeAction },
             React.createElement("input", { id: 'sendToAddress', type: 'text', onChange: function (e) { return _this.handleAddressChange(e); }, value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
             addressError &&
                 React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
-            React.createElement(Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
-                React.createElement(Grid, { item: true },
-                    React.createElement(Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 4 },
-                        React.createElement(Grid, { item: true },
+            React.createElement(core_1.Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 4 },
+                        React.createElement(core_1.Grid, { item: true },
                             React.createElement("button", { id: 'allAmountButton', onClick: function () { return _this.handleAllAmountClick(); }, className: classes.selectAllAmountBtn }, " ALL ")),
-                        React.createElement(Grid, { item: true },
+                        React.createElement(core_1.Grid, { item: true },
                             React.createElement("input", { id: 'amountInput', type: 'text', onChange: function (e) { return _this.handleAmountChange(e); }, value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
-                React.createElement(Grid, { item: true }, isSendCustomToken &&
+                React.createElement(core_1.Grid, { item: true }, isSendCustomToken &&
                     React.createElement("select", { value: this.state.cryptoCurrency, onChange: function (e) { return _this.handleCryptoCurrencyChange(e); }, name: "cryptoCurrency", className: classes.cryptoSelect, id: 'customToken' },
                         React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
                         this.renderSelectTokenItems()))),
-            React.createElement(Divider, { className: classes.divider }),
-            React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
+            React.createElement(core_1.Divider, { className: classes.divider }),
+            React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null,
-                    React.createElement(NumberFormat, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
+                    React.createElement(number_format_1.NumberFormat, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
                 React.createElement("span", null, " USD ")),
             this.renderFeeBox(),
             this.renderButtons()));
     };
     return TransactionSendBoxComponent;
 }(React.Component));
-export { TransactionSendBoxComponent };
-export var TransactionSendBox = withStyles(styles)(TransactionSendBoxComponent);
-export default TransactionSendBox;
+exports.TransactionSendBoxComponent = TransactionSendBoxComponent;
+exports.TransactionSendBox = core_1.withStyles(exports.styles)(TransactionSendBoxComponent);
+exports.default = exports.TransactionSendBox;
 //# sourceMappingURL=transaction-send-box.js.map

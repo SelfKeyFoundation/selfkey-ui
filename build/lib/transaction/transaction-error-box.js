@@ -1,9 +1,12 @@
-import * as React from 'react';
-import { Grid, withStyles, createStyles } from '@material-ui/core';
-import WarningShieldIcon from '../icons/warning-shield';
-import Copy from '../common/copy';
-import ModalCloseIcon from '../icons/modal-close';
-var styles = createStyles({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionErrorBox = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var warning_shield_1 = require("../icons/warning-shield");
+var copy_1 = require("../common/copy");
+var modal_close_1 = require("../icons/modal-close");
+var styles = core_1.createStyles({
     boxWrapper: {
         position: 'relative',
         width: '781px',
@@ -68,26 +71,26 @@ var styles = createStyles({
         cursor: 'pointer'
     }
 });
-export var TransactionErrorBox = withStyles(styles)(function (_a) {
+exports.TransactionErrorBox = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, publicKey = _a.publicKey, closeAction = _a.closeAction;
     return (React.createElement("div", { className: classes.boxWrapper },
         React.createElement("div", { className: classes.header },
             React.createElement("span", { className: classes.headerTitle }, " Transaction Confirmation "),
             React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },
-                React.createElement(ModalCloseIcon, null))),
-        React.createElement(Grid, { container: true, className: classes.bodyContainer, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
-            React.createElement(Grid, { item: true, xs: 2 },
-                React.createElement(WarningShieldIcon, null)),
-            React.createElement(Grid, { item: true, xs: 10 },
-                React.createElement(Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
+                React.createElement(modal_close_1.default, null))),
+        React.createElement(core_1.Grid, { container: true, className: classes.bodyContainer, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
+            React.createElement(core_1.Grid, { item: true, xs: 2 },
+                React.createElement(warning_shield_1.default, null)),
+            React.createElement(core_1.Grid, { item: true, xs: 10 },
+                React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
                     React.createElement("div", { className: classes.txFailedText }, "Transaction Failed "),
                     children,
                     React.createElement("span", { className: classes.divider }, " "),
                     React.createElement("div", null,
                         React.createElement("span", { className: classes.yourAddressTitle }, " Your Address: "),
-                        React.createElement(Grid, { container: true },
+                        React.createElement(core_1.Grid, { container: true },
                             React.createElement("span", { className: classes.publicKey }, publicKey),
-                            React.createElement(Copy, { text: publicKey }))))))));
+                            React.createElement(copy_1.default, { text: publicKey }))))))));
 });
-export default TransactionErrorBox;
+exports.default = exports.TransactionErrorBox;
 //# sourceMappingURL=transaction-error-box.js.map

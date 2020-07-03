@@ -1,6 +1,9 @@
-import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-var styles = createStyles({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomTokenText = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var styles = core_1.createStyles({
     customTokenText: {
         fontFamily: 'Lato, arial, sans-serif',
         fontSize: '14px',
@@ -10,9 +13,9 @@ var styles = createStyles({
         textAlign: 'center'
     }
 });
-export var CustomTokenText = withStyles(styles)(function (_a) {
+exports.CustomTokenText = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children;
     return (React.createElement("div", { className: classes.customTokenText }, children));
 });
-export default CustomTokenText;
+exports.default = exports.CustomTokenText;
 //# sourceMappingURL=custom-token-text.js.map

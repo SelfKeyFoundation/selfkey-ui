@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,17 +12,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from 'react';
-import { Grid, withStyles, createStyles } from '@material-ui/core';
-import CommonStyle from '../common/common-style';
-import FailedIcon from '../icons/failed';
-import ReceiveIcon from '../icons/receive';
-import SentIcon from '../icons/sent';
-import CopyIcon from '../icons/copy';
-import ViewIcon from '../icons/view';
-import HourGlassSmallIcon from '../icons/hourglass-small';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionHistory = exports.TransactionHistoryComponent = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var common_style_1 = require("../common/common-style");
+var failed_1 = require("../icons/failed");
+var receive_1 = require("../icons/receive");
+var sent_1 = require("../icons/sent");
+var copy_1 = require("../icons/copy");
+var view_1 = require("../icons/view");
+var hourglass_small_1 = require("../icons/hourglass-small");
+var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
+var styles = core_1.createStyles({
     line: {
         height: '1px',
         transform: 'scaleY(-1)',
@@ -34,7 +37,7 @@ var styles = createStyles({
     row: {
         paddingTop: '32px',
         paddingBottom: '24px',
-        fontFamily: CommonStyle.fontFamily,
+        fontFamily: common_style_1.default.fontFamily,
     },
     date: {
         color: '#93B0C1',
@@ -107,13 +110,13 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
     TransactionHistoryComponent.prototype.renderIcon = function (statusIconName) {
         switch (statusIconName) {
             case 'failed':
-                return React.createElement(FailedIcon, null);
+                return React.createElement(failed_1.default, null);
             case 'receive':
-                return React.createElement(ReceiveIcon, null);
+                return React.createElement(receive_1.default, null);
             case 'hourglass':
-                return React.createElement(HourGlassSmallIcon, null);
+                return React.createElement(hourglass_small_1.default, null);
             case 'sent':
-                return React.createElement(SentIcon, null);
+                return React.createElement(sent_1.default, null);
             default:
                 return;
         }
@@ -138,7 +141,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
         var classes = this.props.classes;
         var currentCopyValues = this.state.currentCopyValues;
         return (React.createElement("div", { key: index },
-            React.createElement(Grid, { container: true, className: classes.row, direction: "row", justify: "space-between", alignItems: "center" },
+            React.createElement(core_1.Grid, { container: true, className: classes.row, direction: "row", justify: "space-between", alignItems: "center" },
                 React.createElement("div", { className: classes.flex },
                     React.createElement("span", { className: classes.icon }, this.renderIcon(item.statusIconName)),
                     React.createElement("span", { className: classes.date }, item.date),
@@ -149,9 +152,9 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
                         React.createElement("span", { className: classes.cryptoCurrency }, item.cryptoCurrency))),
                 React.createElement("div", { className: classes.flex },
                     React.createElement("span", { className: classes.value }, item.value),
-                    React.createElement(CopyToClipboard, { text: item.externalLink, onCopy: this.handleOnCopy(index) },
+                    React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: item.externalLink, onCopy: this.handleOnCopy(index) },
                         React.createElement("div", { className: classes.copyActionContainer },
-                            React.createElement(CopyIcon, null),
+                            React.createElement(copy_1.default, null),
                             React.createElement("span", { className: classes.actionTitle },
                                 ' ',
                                 currentCopyValues[index] || this.copyText,
@@ -159,7 +162,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
                     React.createElement("div", { onClick: function (event) {
                             _this.handleLinkClick.call(_this, event, item.externalLink);
                         }, className: classes.viewActionContainer },
-                        React.createElement(ViewIcon, null),
+                        React.createElement(view_1.default, null),
                         React.createElement("span", { className: classes.actionTitle }, " View ")))),
             React.createElement("div", { className: classes.line }, " ")));
     };
@@ -167,12 +170,12 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
         var _a = this.props, classes = _a.classes, list = _a.list;
         list = list || [];
         var txRows = list.map(this.renderRow.bind(this));
-        return (React.createElement(Grid, null,
+        return (React.createElement(core_1.Grid, null,
             list.length ? React.createElement("div", { className: classes.line }, " ") : '',
             txRows));
     };
     return TransactionHistoryComponent;
 }(React.Component));
-export { TransactionHistoryComponent };
-export var TransactionHistory = withStyles(styles)(TransactionHistoryComponent);
+exports.TransactionHistoryComponent = TransactionHistoryComponent;
+exports.TransactionHistory = core_1.withStyles(styles)(TransactionHistoryComponent);
 //# sourceMappingURL=transaction-history.js.map

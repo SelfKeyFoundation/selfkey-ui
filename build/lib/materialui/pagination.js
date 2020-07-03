@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,14 +12,16 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from 'react';
-import { TablePagination, IconButton, Grid } from '@material-ui/core';
-import { withStyles, createStyles } from '@material-ui/styles';
-import FirstPageIcon from '@material-ui/icons/FirstPage';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import LastPageIcon from '@material-ui/icons/LastPage';
-export var KeyIconButton = withStyles(createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyIconButton = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
+var FirstPage_1 = require("@material-ui/icons/FirstPage");
+var KeyboardArrowLeft_1 = require("@material-ui/icons/KeyboardArrowLeft");
+var KeyboardArrowRight_1 = require("@material-ui/icons/KeyboardArrowRight");
+var LastPage_1 = require("@material-ui/icons/LastPage");
+exports.KeyIconButton = styles_1.withStyles(styles_1.createStyles({
     root: {
         border: '1px solid #313D49',
         borderRadius: 0,
@@ -29,7 +32,7 @@ export var KeyIconButton = withStyles(createStyles({
             border: '1px solid #687C8A',
         },
     },
-}))(IconButton);
+}))(core_1.IconButton);
 var TablePaginationActions = /** @class */ (function (_super) {
     __extends(TablePaginationActions, _super);
     function TablePaginationActions() {
@@ -52,19 +55,19 @@ var TablePaginationActions = /** @class */ (function (_super) {
     // };
     TablePaginationActions.prototype.render = function () {
         //   const { classes, count, page, rowsPerPage, theme } = this.props;
-        return (React.createElement(Grid, { container: true, direction: 'row' },
-            React.createElement(Grid, { item: true },
-                React.createElement(KeyIconButton, { "aria-label": "First Page" },
-                    React.createElement(FirstPageIcon, null))),
-            React.createElement(Grid, { item: true },
-                React.createElement(KeyIconButton, { "aria-label": "Previous Page" },
-                    React.createElement(KeyboardArrowLeft, null))),
-            React.createElement(Grid, { item: true },
-                React.createElement(KeyIconButton, { "aria-label": "Next Page" },
-                    React.createElement(KeyboardArrowRight, null))),
-            React.createElement(Grid, { item: true },
-                React.createElement(KeyIconButton, { "aria-label": "Last Page" },
-                    React.createElement(LastPageIcon, null)))));
+        return (React.createElement(core_1.Grid, { container: true, direction: 'row' },
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "First Page" },
+                    React.createElement(FirstPage_1.default, null))),
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "Previous Page" },
+                    React.createElement(KeyboardArrowLeft_1.default, null))),
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "Next Page" },
+                    React.createElement(KeyboardArrowRight_1.default, null))),
+            React.createElement(core_1.Grid, { item: true },
+                React.createElement(exports.KeyIconButton, { "aria-label": "Last Page" },
+                    React.createElement(LastPage_1.default, null)))));
     };
     return TablePaginationActions;
 }(React.Component));
@@ -82,7 +85,7 @@ var Pagination = /** @class */ (function (_super) {
         return _this;
     }
     Pagination.prototype.render = function () {
-        return (React.createElement(TablePagination, { rowsPerPageOptions: [5, 10, 25], component: "div", count: 148, rowsPerPage: 5, page: 0, backIconButtonProps: {
+        return (React.createElement(core_1.TablePagination, { rowsPerPageOptions: [5, 10, 25], component: "div", count: 148, rowsPerPage: 5, page: 0, backIconButtonProps: {
                 'aria-label': 'Previous Page',
             }, nextIconButtonProps: {
                 'aria-label': 'Next Page',
@@ -90,5 +93,5 @@ var Pagination = /** @class */ (function (_super) {
     };
     return Pagination;
 }(React.Component));
-export default Pagination;
+exports.default = Pagination;
 //# sourceMappingURL=pagination.js.map

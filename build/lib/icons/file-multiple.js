@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,16 +10,18 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-import { SvgIcon } from '@material-ui/core';
-var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileMultipleIcon = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         width: '29px !important',
         height: '36px !important',
     }
 });
-export var FileMultipleIcon = withStyles(styles)(function (props) { return (React.createElement(SvgIcon, __assign({}, props, { viewBox: '0 0 31 39' }),
+exports.FileMultipleIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 31 39' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-multiple-files", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "multiple-files", transform: "translate(-392.000000, -1692.000000)", stroke: "#697C95", strokeWidth: "1.71428571" },
             React.createElement("g", { id: "Group", transform: "translate(394.000000, 1693.000000)" },
@@ -26,5 +29,5 @@ export var FileMultipleIcon = withStyles(styles)(function (props) { return (Reac
                 React.createElement("polyline", { id: "Path-3", points: "5.48849105 6.31304348 13.1649616 6.31304348 22.213555 15.7535156 22.213555 28.9714286" }),
                 React.createElement("path", { d: "M20.0737852,1.0658141e-13 L28.3473146,8.2301145", id: "Path-4" }),
                 React.createElement("polyline", { id: "Path-5", points: "13.1649616 6.31304348 13.1649616 15.1332722 21.3606138 15.1332722" })))))); });
-export default FileMultipleIcon;
+exports.default = exports.FileMultipleIcon;
 //# sourceMappingURL=file-multiple.js.map

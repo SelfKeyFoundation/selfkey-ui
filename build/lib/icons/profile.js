@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,11 +10,13 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-import { SvgIcon } from '@material-ui/core';
-var styles = createStyles({});
-export var ProfileIcon = withStyles(styles)(function (props) { return (React.createElement(SvgIcon, __assign({ style: { width: props.width || '42px', height: props.height || '37px' } }, props, { viewBox: "0 0 42 37" }),
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProfileIcon = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({});
+exports.ProfileIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '42px', height: props.height || '37px' } }, props, { viewBox: "0 0 42 37" }),
     React.createElement("defs", null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "1.-Select-Wallet-Modal", transform: "translate(-509.000000, -463.000000)", stroke: "#23E6FE", strokeWidth: "0.833333333" },
@@ -31,5 +34,5 @@ export var ProfileIcon = withStyles(styles)(function (props) { return (React.cre
                             React.createElement("path", { d: "M23.35,3.40876777 C23.35,1.56753555 21.85,0.0746445498 20,0.0746445498 C18.15,0.0746445498 16.65,1.56753555 16.65,3.40876777 L11.5,3.40876777 L11.5,8.79146919 L28.5,8.79146919 L28.5,3.40876777 L23.35,3.40876777 Z", id: "XMLID_46_" }),
                             React.createElement("path", { d: "M5.63333333,25.8436019 C5.63333333,22.8163507 8.1,20.3696682 11.1333333,20.3696682 C14.1666667,20.3696682 16.6333333,22.8246445 16.6333333,25.8436019", id: "XMLID_388_" }),
                             React.createElement("ellipse", { id: "XMLID_372_", cx: "11.1333333", cy: "17.1184834", rx: "3.25833333", ry: "3.242891" }))))))))); });
-export default ProfileIcon;
+exports.default = exports.ProfileIcon;
 //# sourceMappingURL=profile.js.map

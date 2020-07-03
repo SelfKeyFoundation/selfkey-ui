@@ -1,6 +1,9 @@
-import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-var styles = createStyles({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSButton = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         borderRadius: '3px',
         boxSizing: 'border-box',
@@ -15,9 +18,9 @@ var styles = createStyles({
         transition: 'background .5s ease',
     },
 });
-export var LWSButton = withStyles(styles)(function (_a) {
+exports.LWSButton = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, className = _a.className, onClick = _a.onClick;
     return (React.createElement("button", { className: classes.root + " " + className, onClick: onClick }, children));
 });
-export default LWSButton;
+exports.default = exports.LWSButton;
 //# sourceMappingURL=lws-button.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as React from 'react';
-import { Grid, withStyles, createStyles } from '@material-ui/core';
-import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
-import CommonStyle from '../../../common/common-style';
-import { Loop as LoopIcon } from '@material-ui/icons';
-export var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionFeeBox = exports.TransactionFeeBoxComponent = exports.styles = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var actual_transaction_fee_box_1 = require("./actual-transaction-fee-box");
+var common_style_1 = require("../../../common/common-style");
+var icons_1 = require("@material-ui/icons");
+exports.styles = core_1.createStyles({
     container: {
-        fontFamily: CommonStyle.fontFamily
+        fontFamily: common_style_1.default.fontFamily
     },
     networkTransactionFeeTitle: {
         color: '#93B0C1',
@@ -156,7 +159,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         }
     };
     TransactionFeeBoxComponent.prototype.renderActualTransactionFeeBox = function () {
-        return (React.createElement(ActualTransactionFeeBox, __assign({}, this.props)));
+        return (React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, __assign({}, this.props)));
     };
     TransactionFeeBoxComponent.prototype.toggleShowAdvanced = function () {
         var showAdvanced = this.state.showAdvanced;
@@ -190,7 +193,7 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         var _this = this;
         var _a = this.props, classes = _a.classes, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction, nonce = _a.nonce;
         return (React.createElement("div", { className: classes.fullWidth },
-            React.createElement(Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
+            React.createElement(core_1.Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Gas Price (Gwei)"),
                     React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: function (e) { return _this.setGasPrice(e); } })),
@@ -204,10 +207,10 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
                         " ",
                         nonce,
                         " "))),
-            React.createElement(Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
+            React.createElement(core_1.Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement("div", { className: classes.currNetworkStatusContainer },
                     React.createElement("span", { className: classes.currNetworkStatusTitle }, "Current Network Status: "),
-                    React.createElement(LoopIcon, { onClick: reloadEthGasStationInfoAction, classes: {
+                    React.createElement(icons_1.Loop, { onClick: reloadEthGasStationInfoAction, classes: {
                             root: classes.reloadNetworkIcon
                         } }, " ")),
                 React.createElement("div", { className: classes.gasPriceValuesContainer },
@@ -228,20 +231,20 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         var _this = this;
         var classes = this.props.classes;
         var showAdvanced = this.state.showAdvanced;
-        return (React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.container },
-            React.createElement(Grid, { container: true, wrap: "nowrap" },
-                React.createElement(Grid, { container: true, direction: "row" },
-                    React.createElement(Grid, { item: true },
+        return (React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.container },
+            React.createElement(core_1.Grid, { container: true, wrap: "nowrap" },
+                React.createElement(core_1.Grid, { container: true, direction: "row" },
+                    React.createElement(core_1.Grid, { item: true },
                         React.createElement("span", { className: classes.networkTransactionFeeTitle + " feeTitle" }, " Network Transaction Fee: ")),
-                    React.createElement(Grid, { item: true }, this.renderActualTransactionFeeBox())),
-                React.createElement(Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
+                    React.createElement(core_1.Grid, { item: true }, this.renderActualTransactionFeeBox())),
+                React.createElement(core_1.Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
                     React.createElement("span", null, " Advanced "),
                     !showAdvanced ? (React.createElement("i", { className: classes.icon + "  " + classes.rightIcon }, " ")) : (React.createElement("i", { className: classes.icon + "  " + classes.downIcon }, " ")))),
             showAdvanced && this.renderAdvancedContent()));
     };
     return TransactionFeeBoxComponent;
 }(React.Component));
-export { TransactionFeeBoxComponent };
-export var TransactionFeeBox = withStyles(styles)(TransactionFeeBoxComponent);
-export default TransactionFeeBox;
+exports.TransactionFeeBoxComponent = TransactionFeeBoxComponent;
+exports.TransactionFeeBox = core_1.withStyles(exports.styles)(TransactionFeeBoxComponent);
+exports.default = exports.TransactionFeeBox;
 //# sourceMappingURL=transaction-fee-box.js.map

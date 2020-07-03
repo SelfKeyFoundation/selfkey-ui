@@ -1,11 +1,14 @@
-import * as React from 'react';
-import { Grid, Typography, withStyles, createStyles } from '@material-ui/core';
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { TransactionBox } from '../transaction-box';
-import { HourGlassLargeIcon } from '../../icons/hourglass-large';
-import { OkayIcon } from '../../icons/okay';
-import { NumberFormat } from '../../price/number-format';
-var styles = createStyles({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionSendProgressBox = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
+var transaction_box_1 = require("../transaction-box");
+var hourglass_large_1 = require("../../icons/hourglass-large");
+var okay_1 = require("../../icons/okay");
+var number_format_1 = require("../../price/number-format");
+var styles = core_1.createStyles({
     button: {
         boxSizing: 'border-box',
         height: '45px',
@@ -71,43 +74,43 @@ var handleViewTransaction = function (event, openLink, transactionHash) {
 };
 var renderIcon = function (status) {
     if (status === 'Pending') {
-        return React.createElement(HourGlassLargeIcon, null);
+        return React.createElement(hourglass_large_1.HourGlassLargeIcon, null);
     }
     else if (status === 'Sent!') {
-        return React.createElement(OkayIcon, null);
+        return React.createElement(okay_1.OkayIcon, null);
     }
     return null;
 };
-export var TransactionSendProgressBox = withStyles(styles)(function (_a) {
+exports.TransactionSendProgressBox = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction, amount = _a.amount, address = _a.address, openLink = _a.openLink, locale = _a.locale, status = _a.status, transactionHash = _a.transactionHash;
-    return (React.createElement(TransactionBox, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
-        React.createElement(Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
-            React.createElement(Grid, { item: true, xs: 2 }, renderIcon(status)),
-            React.createElement(Grid, { item: true, xs: 10 },
-                React.createElement(Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
-                    React.createElement(Grid, { item: true, id: 'header' },
-                        React.createElement(Typography, { variant: "h2" }, status)),
-                    React.createElement(Grid, { item: true, id: "body" },
-                        React.createElement(Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start', spacing: 4 },
-                            React.createElement(Grid, { item: true },
-                                React.createElement(Typography, { variant: 'h1', className: classes.amountContainer },
-                                    React.createElement(Grid, { container: true },
-                                        React.createElement(Grid, { className: classes.amount, item: true },
-                                            React.createElement(NumberFormat, { locale: locale, priceStyle: 'decimal', currency: cryptoCurrency, value: amount, fractionDigits: 15 })),
-                                        React.createElement(Grid, { item: true }, cryptoCurrency)))),
-                            React.createElement(Grid, { item: true },
-                                React.createElement(Typography, { variant: "body2", className: classes.sentTo }, "Destination address")),
-                            React.createElement(Grid, { item: true },
-                                React.createElement(Typography, { variant: "body1", className: classes.address }, address))))),
+    return (React.createElement(transaction_box_1.TransactionBox, { cryptoCurrency: cryptoCurrency, closeAction: closeAction },
+        React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'flex-start' },
+            React.createElement(core_1.Grid, { item: true, xs: 2 }, renderIcon(status)),
+            React.createElement(core_1.Grid, { item: true, xs: 10 },
+                React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
+                    React.createElement(core_1.Grid, { item: true, id: 'header' },
+                        React.createElement(core_1.Typography, { variant: "h2" }, status)),
+                    React.createElement(core_1.Grid, { item: true, id: "body" },
+                        React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'flex-start', alignItems: 'flex-start', spacing: 4 },
+                            React.createElement(core_1.Grid, { item: true },
+                                React.createElement(core_1.Typography, { variant: 'h1', className: classes.amountContainer },
+                                    React.createElement(core_1.Grid, { container: true },
+                                        React.createElement(core_1.Grid, { className: classes.amount, item: true },
+                                            React.createElement(number_format_1.NumberFormat, { locale: locale, priceStyle: 'decimal', currency: cryptoCurrency, value: amount, fractionDigits: 15 })),
+                                        React.createElement(core_1.Grid, { item: true }, cryptoCurrency)))),
+                            React.createElement(core_1.Grid, { item: true },
+                                React.createElement(core_1.Typography, { variant: "body2", className: classes.sentTo }, "Destination address")),
+                            React.createElement(core_1.Grid, { item: true },
+                                React.createElement(core_1.Typography, { variant: "body1", className: classes.address }, address))))),
                 transactionHash &&
-                    React.createElement(Grid, { item: true },
-                        React.createElement(Grid, { container: true },
-                            React.createElement(Grid, { container: true, direction: "row", justify: "flex-start", alignItems: "flex-start", className: classes.actionButtonsContainer, spacing: 1 },
-                                React.createElement(Grid, { item: true },
+                    React.createElement(core_1.Grid, { item: true },
+                        React.createElement(core_1.Grid, { container: true },
+                            React.createElement(core_1.Grid, { container: true, direction: "row", justify: "flex-start", alignItems: "flex-start", className: classes.actionButtonsContainer, spacing: 1 },
+                                React.createElement(core_1.Grid, { item: true },
                                     React.createElement("button", { id: 'viewTransactionButton', className: classes.button, onClick: function (e) { return handleViewTransaction(e, openLink, transactionHash); } }, " VIEW TRANSACTION ")),
-                                React.createElement(Grid, { item: true },
-                                    React.createElement(CopyToClipboard, { text: transactionHash },
+                                React.createElement(core_1.Grid, { item: true },
+                                    React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: transactionHash },
                                         React.createElement("button", { className: classes.button2 }, " COPY TRANSACTION ID "))))))))));
 });
-export default TransactionSendProgressBox;
+exports.default = exports.TransactionSendProgressBox;
 //# sourceMappingURL=transaction-send-progress-box.js.map

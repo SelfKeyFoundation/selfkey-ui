@@ -1,6 +1,9 @@
-import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-var styles = createStyles({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSModalBody = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         '& a': {
             color: '#23E6FE',
@@ -12,9 +15,9 @@ var styles = createStyles({
         padding: '60px 70px 80px',
     },
 });
-export var LWSModalBody = withStyles(styles)(function (_a) {
+exports.LWSModalBody = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children;
     return (React.createElement("div", { className: classes.root }, children));
 });
-export default LWSModalBody;
+exports.default = exports.LWSModalBody;
 //# sourceMappingURL=lws-modal-body.js.map

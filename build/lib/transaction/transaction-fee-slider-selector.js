@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,15 +12,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from 'react';
-import { Slider, Typography, withStyles, createStyles } from '@material-ui/core';
-import CommonStyle from '../common/common-style';
-import BN from 'bignumber.js';
-var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionFeeSliderSelector = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var common_style_1 = require("../common/common-style");
+var bignumber_js_1 = require("bignumber.js");
+var styles = core_1.createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
-        fontFamily: CommonStyle.fontFamily,
+        fontFamily: common_style_1.default.fontFamily,
     },
     sliderRoot: {
         padding: '22px 0 12px 0',
@@ -69,7 +72,7 @@ var styles = createStyles({
         textAlign: 'right'
     },
 });
-var WEI = new BN('1000000000000000000');
+var WEI = new bignumber_js_1.default('1000000000000000000');
 var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
     __extends(TransactionFeeSliderSelectorComponent, _super);
     function TransactionFeeSliderSelectorComponent() {
@@ -82,14 +85,14 @@ var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
             _this.props.onChange(value);
         };
         _this.getTransactionPrice = function (price, fiat) {
-            var transactionPrice = new BN(price).times(_this.props.gasLimit).dividedBy(WEI);
+            var transactionPrice = new bignumber_js_1.default(price).times(_this.props.gasLimit).dividedBy(WEI);
             var priceInETH = transactionPrice.toString();
             var priceInFiat = transactionPrice.times(_this.props.fiatRate);
             return (React.createElement(React.Fragment, null,
-                React.createElement(Typography, { variant: "subtitle2", color: "secondary" },
+                React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" },
                     priceInETH,
                     " ETH/"),
-                React.createElement(Typography, { variant: "subtitle2", color: "secondary" },
+                React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" },
                     "$ ",
                     priceInFiat.toFixed(2),
                     " ",
@@ -116,7 +119,7 @@ var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
     });
     Object.defineProperty(TransactionFeeSliderSelectorComponent.prototype, "transactionFee", {
         get: function () {
-            return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
+            return new bignumber_js_1.default(this.value).times(this.props.gasLimit).dividedBy(WEI);
         },
         enumerable: false,
         configurable: true
@@ -140,7 +143,7 @@ var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
                     this.fiatFee.toFixed(2),
                     " ",
                     fiat)),
-            React.createElement(Slider, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
+            React.createElement(core_1.Slider, { min: minGasPrice, max: maxGasPrice, onChange: this.handleChange, value: this.value, classes: {
                     // active: classes.activated,
                     root: classes.sliderRoot,
                     // trackBefore: classes.trackBefore,
@@ -149,20 +152,20 @@ var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
                 } }),
             React.createElement("div", { className: classes.sliderLabels },
                 React.createElement("div", null,
-                    React.createElement(Typography, { variant: "body1" }, "Slow"),
+                    React.createElement(core_1.Typography, { variant: "body1" }, "Slow"),
                     this.getTransactionPrice(slowPrice, fiat),
-                    React.createElement(Typography, { variant: "subtitle2", color: "secondary" }, "5 - 30 min")),
+                    React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "5 - 30 min")),
                 React.createElement("div", null,
-                    React.createElement(Typography, { variant: "body1" }, "Medium"),
+                    React.createElement(core_1.Typography, { variant: "body1" }, "Medium"),
                     this.getTransactionPrice(mediumPrice, fiat),
-                    React.createElement(Typography, { variant: "subtitle2", color: "secondary" }, "2 - 5 min")),
+                    React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "2 - 5 min")),
                 React.createElement("div", { className: classes.rightAligned },
-                    React.createElement(Typography, { variant: "body1" }, "Fast"),
+                    React.createElement(core_1.Typography, { variant: "body1" }, "Fast"),
                     this.getTransactionPrice(fastPrice, fiat),
-                    React.createElement(Typography, { variant: "subtitle2", color: "secondary" }, "< 2 min")))));
+                    React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, "< 2 min")))));
     };
     return TransactionFeeSliderSelectorComponent;
 }(React.Component));
-export var TransactionFeeSliderSelector = withStyles(styles)(TransactionFeeSliderSelectorComponent);
-export default TransactionFeeSliderSelector;
+exports.TransactionFeeSliderSelector = core_1.withStyles(styles)(TransactionFeeSliderSelectorComponent);
+exports.default = exports.TransactionFeeSliderSelector;
 //# sourceMappingURL=transaction-fee-slider-selector.js.map

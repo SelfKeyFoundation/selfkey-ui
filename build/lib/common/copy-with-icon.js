@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,12 +12,14 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { withStyles, createStyles } from '@material-ui/core';
-import ClipboardIcon from "../icons/clipboard";
-import { Grid, Typography } from "@material-ui/core";
-var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CopyWithIcon = void 0;
+var React = require("react");
+var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
+var core_1 = require("@material-ui/core");
+var clipboard_1 = require("../icons/clipboard");
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     clipboard: {
         '&:hover & svg': {
             fill: '#FFFFFF'
@@ -54,13 +57,13 @@ var CopyComponent = /** @class */ (function (_super) {
     };
     CopyComponent.prototype.render = function () {
         var _a = this.props, text = _a.text, classes = _a.classes;
-        return (React.createElement(CopyToClipboard, { text: text, onCopy: this.handleOnCopy() },
-            React.createElement(Grid, { container: true, alignItems: "center", direction: "column", className: classes.clipboard },
-                React.createElement(ClipboardIcon, { className: classes.icon }),
-                React.createElement(Typography, { variant: "subtitle2", color: "secondary", className: classes.copyText }, this.state.copyTextPlaceholder))));
+        return (React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: text, onCopy: this.handleOnCopy() },
+            React.createElement(core_2.Grid, { container: true, alignItems: "center", direction: "column", className: classes.clipboard },
+                React.createElement(clipboard_1.default, { className: classes.icon }),
+                React.createElement(core_2.Typography, { variant: "subtitle2", color: "secondary", className: classes.copyText }, this.state.copyTextPlaceholder))));
     };
     return CopyComponent;
 }(React.Component));
-export var CopyWithIcon = withStyles(styles)(CopyComponent);
-export default CopyWithIcon;
+exports.CopyWithIcon = core_1.withStyles(styles)(CopyComponent);
+exports.default = exports.CopyWithIcon;
 //# sourceMappingURL=copy-with-icon.js.map

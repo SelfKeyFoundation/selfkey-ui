@@ -1,6 +1,9 @@
-import * as React from 'react';
-import { Tooltip } from '@material-ui/core';
-import { withStyles, createStyles } from '@material-ui/styles';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SliderTooltip = exports.KeyTooltip = exports.TooltipArrow = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var style = {
     fontSize: 7,
     height: '3em',
@@ -14,8 +17,8 @@ var style = {
         width: 0,
     },
 };
-export var TooltipArrow = (function () { return (React.createElement("span", { className: "arrowClass", style: style })); });
-export var KeyTooltip = withStyles(createStyles({
+exports.TooltipArrow = (function () { return (React.createElement("span", { className: "arrowClass", style: style })); });
+exports.KeyTooltip = styles_1.withStyles(styles_1.createStyles({
     popper: {
         backgroundColor: 'transparent',
         opacity: 1,
@@ -49,8 +52,8 @@ export var KeyTooltip = withStyles(createStyles({
             zIndex: 1
         },
     },
-}))(Tooltip);
-export var SliderTooltip = withStyles(createStyles({
+}))(core_1.Tooltip);
+exports.SliderTooltip = styles_1.withStyles(styles_1.createStyles({
     tooltip: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -60,5 +63,5 @@ export var SliderTooltip = withStyles(createStyles({
         margin: '8px 0',
         padding: 0,
     },
-}))(Tooltip);
+}))(core_1.Tooltip);
 //# sourceMappingURL=tooltip-arrow.js.map

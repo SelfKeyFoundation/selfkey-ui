@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,19 +10,21 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as React from 'react';
-import { find } from 'lodash';
-import { withStyles, createStyles } from '@material-ui/core';
-import CommonStyle from '../common/common-style';
-import { CheckIcon } from '../icons/check';
-import { CheckEmptyIcon } from '../icons/check-empty';
-import { AttributeAlertIcon } from '../icons/attribute-alert';
-import { LWSButton } from './lws-button';
-import { EditTransparentIcon } from '../icons/edit-transparent';
-var styles = createStyles({
-    form: CommonStyle.form,
-    buttonPrimary: __assign(__assign({}, CommonStyle.buttonPrimary), { fontWeight: 700 }),
-    buttonSecondary: __assign(__assign({}, CommonStyle.buttonSecondary), { fontWeight: 700 }),
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSRequiredInfo = void 0;
+var React = require("react");
+var lodash_1 = require("lodash");
+var core_1 = require("@material-ui/core");
+var common_style_1 = require("../common/common-style");
+var check_1 = require("../icons/check");
+var check_empty_1 = require("../icons/check-empty");
+var attribute_alert_1 = require("../icons/attribute-alert");
+var lws_button_1 = require("./lws-button");
+var edit_transparent_1 = require("../icons/edit-transparent");
+var styles = core_1.createStyles({
+    form: common_style_1.default.form,
+    buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
+    buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
     requiredInfo: {
         '& a': {
             color: '#23E6FE',
@@ -116,7 +119,7 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
         if (typeof attr !== 'object') {
             attr = { attribute: attr };
         }
-        var found = find(attributes, { url: attr.id || attr.attribute }) || {};
+        var found = lodash_1.find(attributes, { url: attr.id || attr.attribute }) || {};
         var merged = __assign(__assign({}, attr), found);
         if (!merged.label && merged.schema && merged.schema.title) {
             merged.label = merged.schema.title;
@@ -129,7 +132,7 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
         if (attributeValue) {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
-                    React.createElement("span", { className: classes.clickable, onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(CheckEmptyIcon, null) : React.createElement(CheckIcon, null)),
+                    React.createElement("span", { className: classes.clickable, onClick: function () { return disallowAttributeAction(attribute, !notAllowed); } }, notAllowed ? React.createElement(check_empty_1.CheckEmptyIcon, null) : React.createElement(check_1.CheckIcon, null)),
                     React.createElement("dl", null,
                         React.createElement("dt", null, attribute.label || attribute.schema.title),
                         React.createElement("dd", null, attributeValue)))));
@@ -137,17 +140,17 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
         else {
             return (React.createElement("div", { key: index },
                 React.createElement("div", { className: classes.attribute },
-                    React.createElement(AttributeAlertIcon, null),
+                    React.createElement(attribute_alert_1.AttributeAlertIcon, null),
                     React.createElement("dl", null,
                         React.createElement("dt", null, attribute.label),
                         editAction ? (React.createElement("dd", null,
                             React.createElement("button", { onClick: editAction, className: classes.edit },
-                                React.createElement(EditTransparentIcon, null)))) : null)),
+                                React.createElement(edit_transparent_1.EditTransparentIcon, null)))) : null)),
                 React.createElement("div", { className: classes.waringMessage }, "Please update your missing details.")));
         }
     });
 };
-export var LWSRequiredInfo = withStyles(styles)(function (_a) {
+exports.LWSRequiredInfo = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, allowAction = _a.allowAction, requested = _a.requested, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, _b = _a.notAllowedAttributes, notAllowedAttributes = _b === void 0 ? [] : _b, website = _a.website, _c = _a.disallowAttributeAction, disallowAttributeAction = _c === void 0 ? function (attribute, disallow) { } : _c;
     return (React.createElement("div", { className: classes.requiredInfo },
         React.createElement("div", { className: classes.areaTitle },
@@ -172,8 +175,8 @@ export var LWSRequiredInfo = withStyles(styles)(function (_a) {
                 React.createElement("a", { href: website.policyUrl, target: "_blank", rel: "noopener noreferrer" }, "Privacy Policy"),
                 "."),
             React.createElement("div", { className: classes.formSubmitColumn },
-                React.createElement(LWSButton, { className: classes.buttonSecondary, onClick: cancelAction }, "Cancel"),
-                React.createElement(LWSButton, { className: classes.buttonPrimary, onClick: allowAction }, "Allow")))));
+                React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary, onClick: cancelAction }, "Cancel"),
+                React.createElement(lws_button_1.LWSButton, { className: classes.buttonPrimary, onClick: allowAction }, "Allow")))));
 });
-export default LWSRequiredInfo;
+exports.default = exports.LWSRequiredInfo;
 //# sourceMappingURL=lws-required-info.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,19 +10,21 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-import { LWSButton } from './lws-button';
-import CommonStyle from '../common/common-style';
-import { ShieldIcon } from '../icons/shield';
-import { LWSError } from './lws-error';
-var styles = createStyles({
-    buttonPrimary: __assign(__assign({}, CommonStyle.buttonPrimary), { fontWeight: 700 }),
-    buttonSecondary: __assign(__assign({}, CommonStyle.buttonSecondary), { fontWeight: 700 }),
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSAuthError = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var lws_button_1 = require("./lws-button");
+var common_style_1 = require("../common/common-style");
+var shield_1 = require("../icons/shield");
+var lws_error_1 = require("./lws-error");
+var styles = core_1.createStyles({
+    buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
+    buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
 });
-export var LWSAuthError = withStyles(styles)(function (_a) {
+exports.LWSAuthError = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, website = _a.website, retryAction = _a.retryAction;
-    return (React.createElement(LWSError, { actionIcon: React.createElement(ShieldIcon, null), actionName: "Authentication Error", errorName: "We can't connect you with " + website.name, supportText: "There\u2019s seems to be a problem with the authentication process at the moment. Please try again!", actionButton: React.createElement(LWSButton, { className: classes.buttonSecondary, onClick: retryAction }, "Retry") }));
+    return (React.createElement(lws_error_1.LWSError, { actionIcon: React.createElement(shield_1.ShieldIcon, null), actionName: "Authentication Error", errorName: "We can't connect you with " + website.name, supportText: "There\u2019s seems to be a problem with the authentication process at the moment. Please try again!", actionButton: React.createElement(lws_button_1.LWSButton, { className: classes.buttonSecondary, onClick: retryAction }, "Retry") }));
 });
-export default LWSAuthError;
+exports.default = exports.LWSAuthError;
 //# sourceMappingURL=lws-auth-error.js.map

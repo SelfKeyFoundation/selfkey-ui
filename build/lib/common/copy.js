@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,10 +12,12 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { withStyles, createStyles } from '@material-ui/core';
-export var styles = createStyles({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Copy = exports.CopyComponent = exports.styles = void 0;
+var React = require("react");
+var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
+var core_1 = require("@material-ui/core");
+exports.styles = core_1.createStyles({
     copyButton: {
         backgroundColor: 'transparent',
         border: '1px solid #3B4A5A',
@@ -60,13 +63,13 @@ var CopyComponent = /** @class */ (function (_super) {
     };
     CopyComponent.prototype.render = function () {
         var _a = this.props, text = _a.text, classes = _a.classes;
-        return (React.createElement(CopyToClipboard, { text: text, onCopy: this.handleOnCopy() },
+        return (React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: text, onCopy: this.handleOnCopy() },
             React.createElement("button", { className: classes.copyButton },
                 React.createElement("span", { className: classes.copyButtonSpan }, this.state.copyTextPlaceholder))));
     };
     return CopyComponent;
 }(React.Component));
-export { CopyComponent };
-export var Copy = withStyles(styles)(CopyComponent);
-export default Copy;
+exports.CopyComponent = CopyComponent;
+exports.Copy = core_1.withStyles(exports.styles)(CopyComponent);
+exports.default = exports.Copy;
 //# sourceMappingURL=copy.js.map
