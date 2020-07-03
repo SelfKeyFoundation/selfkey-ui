@@ -3,7 +3,7 @@ import { withStyles, createStyles } from '@material-ui/core';
 import EthereumIcon from '../icons/ethereum';
 import SelfkeyIcon from '../icons/selfkey';
 import { ModalCloseIcon } from '../icons/modal-close';
-const styles = createStyles({
+var styles = createStyles({
     transactionBox: {
         padding: '90px 30px 40px 30px',
         position: 'relative',
@@ -39,7 +39,7 @@ const styles = createStyles({
         fontFamily: 'Lato, arial, sans-serif'
     }
 });
-const renderIcon = (shortName, classes) => {
+var renderIcon = function (shortName, classes) {
     switch (shortName) {
         case 'KEY':
             return (React.createElement(SelfkeyIcon, { className: classes.icon }));
@@ -51,10 +51,13 @@ const renderIcon = (shortName, classes) => {
             return (React.createElement("div", { className: classes.custom }, shortName));
     }
 };
-export const TransactionBox = withStyles(styles)(({ classes, children, cryptoCurrency, closeAction }) => (React.createElement("div", { className: classes.transactionBox },
-    React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },
-        React.createElement(ModalCloseIcon, null)),
-    React.createElement("div", { className: classes.iconWrapper }, renderIcon(cryptoCurrency, classes)),
-    React.createElement("div", null, children))));
+export var TransactionBox = withStyles(styles)(function (_a) {
+    var classes = _a.classes, children = _a.children, cryptoCurrency = _a.cryptoCurrency, closeAction = _a.closeAction;
+    return (React.createElement("div", { className: classes.transactionBox },
+        React.createElement("div", { className: classes.closeDialogIconWrapper, onClick: closeAction },
+            React.createElement(ModalCloseIcon, null)),
+        React.createElement("div", { className: classes.iconWrapper }, renderIcon(cryptoCurrency, classes)),
+        React.createElement("div", null, children)));
+});
 export default TransactionBox;
 //# sourceMappingURL=transaction-box.js.map

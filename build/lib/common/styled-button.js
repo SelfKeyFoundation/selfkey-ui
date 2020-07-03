@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { Button } from '@material-ui/core';
-const styles = createStyles({
+var styles = createStyles({
     root: {
         fontFamily: 'Lato, arial, sans-serif',
         fontWeight: 'bold',
@@ -33,6 +33,9 @@ const styles = createStyles({
         boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 0 2px 2px 0 #07C1DC, 2px 0 2px 0 rgba(0,0,0,0.2)',
     },
 });
-export const StyledButton = withStyles(styles)(({ classes, children, variant = 'contained', size, color = 'primary', type = 'button', onClick, disabled = false, id }) => (React.createElement(Button, { id: id, variant: variant, size: size, classes: classes, color: color, type: type, onClick: onClick, disabled: disabled }, children)));
+export var StyledButton = withStyles(styles)(function (_a) {
+    var classes = _a.classes, children = _a.children, _b = _a.variant, variant = _b === void 0 ? 'contained' : _b, size = _a.size, _c = _a.color, color = _c === void 0 ? 'primary' : _c, _d = _a.type, type = _d === void 0 ? 'button' : _d, onClick = _a.onClick, _e = _a.disabled, disabled = _e === void 0 ? false : _e, id = _a.id;
+    return (React.createElement(Button, { id: id, variant: variant, size: size, classes: classes, color: color, type: type, onClick: onClick, disabled: disabled }, children));
+});
 export default StyledButton;
 //# sourceMappingURL=styled-button.js.map

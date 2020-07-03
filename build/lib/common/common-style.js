@@ -1,4 +1,4 @@
-export const CommonStyle = {
+export var CommonStyle = {
     fontFamily: 'Lato, arial, sans-serif',
     form: {
         minHeight: '300px'

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 import { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight } from '../colors';
-export const theme = createMuiTheme({
+export var theme = createMuiTheme({
     // Reset and Globals
     '@global': {
         'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video': {
@@ -243,13 +243,13 @@ export const theme = createMuiTheme({
                 '&$selected': {
                     backgroundColor: grey,
                     '& .choose': {
-                        color: `${baseDark} !important`
+                        color: baseDark + " !important"
                     },
                     '&:hover': {
                         backgroundColor: grey,
                     },
                     '&$disabled': {
-                        backgroundColor: `${baseLight} !important`
+                        backgroundColor: baseLight + " !important"
                     }
                 },
             },
@@ -283,14 +283,14 @@ export const theme = createMuiTheme({
                 paddingLeft: '16px',
                 '&$error': {
                     backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                    border: `1px solid ${error}`,
+                    border: "1px solid " + error,
                     color: error,
                     marginBottom: '6px',
                 },
                 '&$focused': {
                     '&$focused:not($error):not($disabled)': {
-                        border: `1px solid ${primary}`,
-                        boxShadow: `0 0 3px 1px ${primary}`,
+                        border: "1px solid " + primary,
+                        boxShadow: "0 0 3px 1px " + primary,
                     },
                 },
                 '&$disabled': {
@@ -378,19 +378,19 @@ export const theme = createMuiTheme({
                     },
                 },
                 '&$checked:not($disabled):not($colorPrimary)': {
-                    backgroundColor: `${primary} !important`,
-                    border: `1px solid ${primary} !important`,
-                    color: `${baseDark} !important`,
+                    backgroundColor: primary + " !important",
+                    border: "1px solid " + primary + " !important",
+                    color: baseDark + " !important",
                 },
                 '&$checked:not($disabled)': {
-                    backgroundColor: `${error} !important`,
-                    border: `1px solid ${error} !important`,
-                    color: `#392E3C !important`,
+                    backgroundColor: error + " !important",
+                    border: "1px solid " + error + " !important",
+                    color: "#392E3C !important",
                 },
                 '&$checked': {
-                    backgroundColor: `#384656 !important`,
-                    border: `1px solid #2F3B48 !important`,
-                    color: `${baseDark} !important`,
+                    backgroundColor: "#384656 !important",
+                    border: "1px solid #2F3B48 !important",
+                    color: baseDark + " !important",
                 },
                 '&$disabled:not($checked)': {
                     color: 'transparent !important',
@@ -410,7 +410,7 @@ export const theme = createMuiTheme({
             },
             colorSecondary: {
                 backgroundColor: baseDark,
-                border: `1px solid ${grey}`,
+                border: "1px solid " + grey,
                 borderRadius: '3px',
                 color: 'transparent',
                 height: '18px',
@@ -419,7 +419,7 @@ export const theme = createMuiTheme({
             },
             colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: `1px solid ${error}`,
+                border: "1px solid " + error,
                 borderRadius: '3px',
                 color: 'transparent',
                 height: '18px',
@@ -446,19 +446,19 @@ export const theme = createMuiTheme({
                     },
                 },
                 '&$checked:not($disabled):not($colorPrimary)': {
-                    backgroundColor: `#1e262d !important`,
-                    border: `1px solid ${primary} !important`,
-                    color: `${primary} !important`,
+                    backgroundColor: "#1e262d !important",
+                    border: "1px solid " + primary + " !important",
+                    color: primary + " !important",
                 },
                 '&$checked:not($disabled)': {
-                    backgroundColor: `#392E3C !important`,
-                    border: `1px solid ${error} !important`,
-                    color: `${error} !important`,
+                    backgroundColor: "#392E3C !important",
+                    border: "1px solid " + error + " !important",
+                    color: error + " !important",
                 },
                 '&$checked': {
-                    backgroundColor: `${baseDark} !important`,
-                    border: `1px solid ${baseDark} !important`,
-                    color: `#35424e !important`,
+                    backgroundColor: baseDark + " !important",
+                    border: "1px solid " + baseDark + " !important",
+                    color: "#35424e !important",
                 },
                 '&$disabled:not($checked)': {
                     color: 'transparent !important',
@@ -478,7 +478,7 @@ export const theme = createMuiTheme({
             },
             colorSecondary: {
                 backgroundColor: baseDark,
-                border: `1px solid ${grey}`,
+                border: "1px solid " + grey,
                 borderRadius: '50%',
                 color: 'transparent',
                 height: '18px',
@@ -487,7 +487,7 @@ export const theme = createMuiTheme({
             },
             colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: `1px solid ${error}`,
+                border: "1px solid " + error,
                 borderRadius: '50%',
                 color: 'transparent',
                 height: '18px',
@@ -503,9 +503,9 @@ export const theme = createMuiTheme({
                 borderRadius: '4px',
                 lineHeight: 'initial',
                 '& option': {
-                    backgroundColor: `${baseDark} !important`,
-                    border: `1px solid ${baseDark} !important`,
-                    color: `#FFFFFF !important`,
+                    backgroundColor: baseDark + " !important",
+                    border: "1px solid " + baseDark + " !important",
+                    color: "#FFFFFF !important",
                 },
             },
             icon: {
@@ -525,8 +525,8 @@ export const theme = createMuiTheme({
         },
         MuiMenu: {
             paper: {
-                border: `1px solid ${primary}`,
-                boxShadow: `0 0 3px 1px ${primary}`,
+                border: "1px solid " + primary,
+                boxShadow: "0 0 3px 1px " + primary,
                 marginLeft: '-17px',
                 marginTop: '-6px',
                 maxHeight: '300px',
@@ -633,17 +633,17 @@ export const theme = createMuiTheme({
             },
             outlinedSecondary: {
                 background: 'transparent',
-                border: `1px solid ${typography}`,
+                border: "1px solid " + typography,
                 color: typography,
                 '&:hover': {
                     backgroundColor: '#313D49',
-                    border: `1px solid ${typography}`,
+                    border: "1px solid " + typography,
                 },
                 '&:focus': {
                     background: baseDark,
                 },
                 '&$disabled': {
-                    border: `1px solid ${typography}`,
+                    border: "1px solid " + typography,
                     color: typography,
                 },
             },
@@ -723,7 +723,7 @@ export const theme = createMuiTheme({
         },
         MuiTabs: {
             root: {
-                borderBottom: `1px solid ${grey}`,
+                borderBottom: "1px solid " + grey,
             },
             indicator: {
                 backgroundColor: primary,
@@ -737,11 +737,11 @@ export const theme = createMuiTheme({
             // 	lineHeight: '19px',
             // },
             root: {
-                borderBottom: `4px solid transparent`,
+                borderBottom: "4px solid transparent",
                 textTransform: 'initial',
                 minWidth: '0 !important',
                 '&:hover': {
-                    borderBottom: `4px solid ${grey}`,
+                    borderBottom: "4px solid " + grey,
                     boxSizing: 'border-box',
                     color: white,
                 },
@@ -866,13 +866,13 @@ export const theme = createMuiTheme({
                 textTransform: 'initial',
                 '&:hover': {
                     backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                    border: `1px solid ${primaryTint} !important`,
+                    border: "1px solid " + primaryTint + " !important",
                 },
                 '&$selected': {
                     background: '#313D49',
                     fill: primary,
                     color: primary,
-                    border: `1px solid ${primaryTint} !important`,
+                    border: "1px solid " + primaryTint + " !important",
                 },
                 '&$disabled': {
                     opacity: 0.5,
@@ -918,7 +918,8 @@ export const theme = createMuiTheme({
         },
     },
 });
-export const SelfkeyDarkTheme = ({ children }) => {
+export var SelfkeyDarkTheme = function (_a) {
+    var children = _a.children;
     return React.createElement(MuiThemeProvider, { theme: theme },
         React.createElement(CssBaseline, null),
         children);

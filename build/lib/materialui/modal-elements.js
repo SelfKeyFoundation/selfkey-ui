@@ -1,7 +1,7 @@
 import { Paper, Button } from '@material-ui/core';
 import { withStyles, createStyles } from '@material-ui/styles';
 import { base } from '../colors';
-export const ModalWrap = withStyles(createStyles({
+export var ModalWrap = withStyles(createStyles({
     root: {
         backgroundColor: base,
         boxSizing: 'border-box',
@@ -15,7 +15,7 @@ export const ModalWrap = withStyles(createStyles({
         marginBottom: '50px',
     },
 }))(Paper);
-export const ModalHeader = withStyles(createStyles({
+export var ModalHeader = withStyles(createStyles({
     root: {
         backgroundColor: '#2A3540',
         border: 'none',
@@ -28,7 +28,7 @@ export const ModalHeader = withStyles(createStyles({
         width: '100%',
     },
 }))(Paper);
-export const ModalBody = withStyles(createStyles({
+export var ModalBody = withStyles(createStyles({
     root: {
         backgroundColor: '#262F39',
         border: 'none',
@@ -40,7 +40,7 @@ export const ModalBody = withStyles(createStyles({
         width: '100%',
     },
 }))(Paper);
-export const SmallModalBody = withStyles(createStyles({
+export var SmallModalBody = withStyles(createStyles({
     root: {
         backgroundColor: '#262F39',
         border: 'none',
@@ -52,7 +52,7 @@ export const SmallModalBody = withStyles(createStyles({
         width: '100%',
     },
 }))(Paper);
-export const ModalBody2 = withStyles(createStyles({
+export var ModalBody2 = withStyles(createStyles({
     root: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -62,7 +62,7 @@ export const ModalBody2 = withStyles(createStyles({
         width: '780px',
     },
 }))(Paper);
-export const ModalCloseButton = withStyles(createStyles({
+export var ModalCloseButton = withStyles(createStyles({
     root: {
         border: 0,
         borderRadius: '50%',

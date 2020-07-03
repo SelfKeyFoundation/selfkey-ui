@@ -6,7 +6,7 @@ import AddressBookIcon from '../icons/address-book';
 import CopyIcon from '../icons/copy';
 import DeleteIcon from '../icons/delete';
 import EditTransparentIcon from '../icons/edit-transparent';
-const styles = createStyles({
+var styles = createStyles({
     addressBook: {
         width: '1140px',
     },
@@ -66,8 +66,8 @@ const styles = createStyles({
         },
     },
 });
-const renderAddresses = (addresses, classes, onEdit, onDelete) => {
-    return addresses.map((address, index) => {
+var renderAddresses = function (addresses, classes, onEdit, onDelete) {
+    return addresses.map(function (address, index) {
         return (React.createElement(TableRow, { key: index, className: classes.bodyTableRow },
             React.createElement(TableCell, { id: address.label }, address.label),
             React.createElement(TableCell, null, address.address),
@@ -78,29 +78,32 @@ const renderAddresses = (addresses, classes, onEdit, onDelete) => {
                             React.createElement(CopyToClipboard, { text: address.address },
                                 React.createElement(CopyIcon, null)))),
                     React.createElement(Grid, { item: true },
-                        React.createElement(IconButton, { id: 'editButton', onClick: () => onEdit(address.id) },
+                        React.createElement(IconButton, { id: 'editButton', onClick: function () { return onEdit(address.id); } },
                             React.createElement(EditTransparentIcon, null))),
                     React.createElement(Grid, { item: true },
-                        React.createElement(IconButton, { id: 'deleteButton', onClick: () => onDelete(address.id) },
+                        React.createElement(IconButton, { id: 'deleteButton', onClick: function () { return onDelete(address.id); } },
                             React.createElement(DeleteIcon, null)))))));
     });
 };
-export const AddressBook = withStyles(styles)(({ classes, addresses, onEdit, onDelete, onAdd }) => (React.createElement(Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center', className: classes.addressBook, spacing: 2 },
-    React.createElement(Grid, { item: true },
-        React.createElement(AddressBookIcon, null)),
-    React.createElement(Grid, { item: true },
-        React.createElement(Typography, { variant: "h1" }, "Address Book")),
-    React.createElement(Grid, { item: true },
-        React.createElement(Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
-    React.createElement(Grid, { item: true },
-        React.createElement(Button, { id: 'addAddressButton', className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
-    React.createElement(Grid, { item: true },
-        React.createElement(Table, { className: classes.table },
-            React.createElement(TableHead, null,
-                React.createElement(TableRow, { className: classes.headerTableRow },
-                    React.createElement(TableCell, null, "LABEL"),
-                    React.createElement(TableCell, null, "ETH ADDRESS"),
-                    React.createElement(TableCell, { align: "right" }, "ACTIONS"))),
-            React.createElement(TableBody, null, renderAddresses(addresses, classes, onEdit, onDelete)))))));
+export var AddressBook = withStyles(styles)(function (_a) {
+    var classes = _a.classes, addresses = _a.addresses, onEdit = _a.onEdit, onDelete = _a.onDelete, onAdd = _a.onAdd;
+    return (React.createElement(Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center', className: classes.addressBook, spacing: 2 },
+        React.createElement(Grid, { item: true },
+            React.createElement(AddressBookIcon, null)),
+        React.createElement(Grid, { item: true },
+            React.createElement(Typography, { variant: "h1" }, "Address Book")),
+        React.createElement(Grid, { item: true },
+            React.createElement(Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
+        React.createElement(Grid, { item: true },
+            React.createElement(Button, { id: 'addAddressButton', className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
+        React.createElement(Grid, { item: true },
+            React.createElement(Table, { className: classes.table },
+                React.createElement(TableHead, null,
+                    React.createElement(TableRow, { className: classes.headerTableRow },
+                        React.createElement(TableCell, null, "LABEL"),
+                        React.createElement(TableCell, null, "ETH ADDRESS"),
+                        React.createElement(TableCell, { align: "right" }, "ACTIONS"))),
+                React.createElement(TableBody, null, renderAddresses(addresses, classes, onEdit, onDelete))))));
+});
 export default AddressBook;
 //# sourceMappingURL=address-book.js.map

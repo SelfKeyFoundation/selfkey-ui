@@ -1,6 +1,7 @@
 import * as React from 'react';
-export const LinearGradient = (({ color }) => {
-    let color1, color2, id;
+export var LinearGradient = (function (_a) {
+    var color = _a.color;
+    var color1, color2, id;
     switch (color) {
         case 'orange':
             color1 = '#B44000';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
-const styles = createStyles({
+var styles = createStyles({
     form: CommonStyle.form,
     lwsError: {
         fontFamily: 'Lato, arial, sans-serif'
@@ -40,13 +40,16 @@ const styles = createStyles({
         },
     },
 });
-export const LWSError = withStyles(styles)(({ classes, actionButton, actionName, errorName, actionIcon, supportText }) => (React.createElement("div", { className: classes.lwsError },
-    React.createElement("div", { className: classes.areaTitle },
-        actionIcon,
-        React.createElement("h2", null, actionName),
-        React.createElement("h3", null, errorName)),
-    React.createElement("div", { className: classes.form },
-        React.createElement("p", { className: classes.supportText }, supportText),
-        actionButton ? React.createElement("div", { className: classes.formSubmitRow }, actionButton) : null))));
+export var LWSError = withStyles(styles)(function (_a) {
+    var classes = _a.classes, actionButton = _a.actionButton, actionName = _a.actionName, errorName = _a.errorName, actionIcon = _a.actionIcon, supportText = _a.supportText;
+    return (React.createElement("div", { className: classes.lwsError },
+        React.createElement("div", { className: classes.areaTitle },
+            actionIcon,
+            React.createElement("h2", null, actionName),
+            React.createElement("h3", null, errorName)),
+        React.createElement("div", { className: classes.form },
+            React.createElement("p", { className: classes.supportText }, supportText),
+            actionButton ? React.createElement("div", { className: classes.formSubmitRow }, actionButton) : null)));
+});
 export default LWSError;
 //# sourceMappingURL=lws-error.js.map

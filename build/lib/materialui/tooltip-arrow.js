@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Tooltip } from '@material-ui/core';
 import { withStyles, createStyles } from '@material-ui/styles';
-const style = {
+var style = {
     fontSize: 7,
     height: '3em',
     width: '3em',
@@ -14,8 +14,8 @@ const style = {
         width: 0,
     },
 };
-export const TooltipArrow = (() => (React.createElement("span", { className: "arrowClass", style: style })));
-export const KeyTooltip = withStyles(createStyles({
+export var TooltipArrow = (function () { return (React.createElement("span", { className: "arrowClass", style: style })); });
+export var KeyTooltip = withStyles(createStyles({
     popper: {
         backgroundColor: 'transparent',
         opacity: 1,
@@ -50,7 +50,7 @@ export const KeyTooltip = withStyles(createStyles({
         },
     },
 }))(Tooltip);
-export const SliderTooltip = withStyles(createStyles({
+export var SliderTooltip = withStyles(createStyles({
     tooltip: {
         backgroundColor: 'transparent',
         border: 'none',

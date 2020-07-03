@@ -1,3 +1,27 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 import * as React from 'react';
 import * as _ from 'lodash';
 import { withStyles, createStyles } from '@material-ui/core';
@@ -7,7 +31,7 @@ import { StickIcon } from '../icons/stick';
 import { LWSButton } from './lws-button';
 import CommonStyle from '../common/common-style';
 import { Typography } from '@material-ui/core';
-export const styles = createStyles({
+export var styles = createStyles({
     areaTitle: {
         textAlign: 'center',
     },
@@ -86,10 +110,10 @@ export const styles = createStyles({
         height: '50px',
         fontWeight: 700
     },
-    buttonPrimary: { ...CommonStyle.buttonPrimary, fontWeight: 700 },
-    buttonSecondary: { ...CommonStyle.buttonSecondary, fontWeight: 700 },
+    buttonPrimary: __assign(__assign({}, CommonStyle.buttonPrimary), { fontWeight: 700 }),
+    buttonSecondary: __assign(__assign({}, CommonStyle.buttonSecondary), { fontWeight: 700 }),
     selected: {
-        border: `2px solid #1CA9BA`,
+        border: "2px solid #1CA9BA",
     },
     supportText: {
         textAlign: 'center',
@@ -113,46 +137,48 @@ export const styles = createStyles({
         },
     },
 });
-export class LWSSelectWalletComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+var LWSSelectWalletComponent = /** @class */ (function (_super) {
+    __extends(LWSSelectWalletComponent, _super);
+    function LWSSelectWalletComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
             isHardwareWallet: false,
             wallet: null,
             password: '',
         };
+        return _this;
     }
-    componentDidMount() {
+    LWSSelectWalletComponent.prototype.componentDidMount = function () {
         if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
             this.selectWallet();
         }
-    }
-    componentDidUpdate() {
+    };
+    LWSSelectWalletComponent.prototype.componentDidUpdate = function () {
         if (this.props.wallets && this.props.wallets.length && !this.state.wallet) {
             this.selectWallet();
         }
-    }
-    toggleIsHardwallet(isHardwareWallet) {
-        return this.setState({ isHardwareWallet });
-    }
-    selectWallet(publicKey) {
-        const { wallets } = this.props;
+    };
+    LWSSelectWalletComponent.prototype.toggleIsHardwallet = function (isHardwareWallet) {
+        return this.setState({ isHardwareWallet: isHardwareWallet });
+    };
+    LWSSelectWalletComponent.prototype.selectWallet = function (publicKey) {
+        var wallets = this.props.wallets;
         if (!publicKey) {
             publicKey = wallets[0].publicKey;
         }
-        let wallet = _.find(wallets, { publicKey }) || null;
-        this.setState({ wallet, password: '' });
+        var wallet = _.find(wallets, { publicKey: publicKey }) || null;
+        this.setState({ wallet: wallet, password: '' });
         return wallet;
-    }
-    setWallet(event) {
+    };
+    LWSSelectWalletComponent.prototype.setWallet = function (event) {
         this.selectWallet(event.target.value);
-    }
-    setPassword(event) {
-        this.setState({ ...this.state, password: event.target.value });
-    }
-    login() {
-        const { loginAction } = this.props;
-        let { wallet, password } = this.state;
+    };
+    LWSSelectWalletComponent.prototype.setPassword = function (event) {
+        this.setState(__assign(__assign({}, this.state), { password: event.target.value }));
+    };
+    LWSSelectWalletComponent.prototype.login = function () {
+        var loginAction = this.props.loginAction;
+        var _a = this.state, wallet = _a.wallet, password = _a.password;
         if (!wallet || !wallet.publicKey) {
             wallet = this.selectWallet();
         }
@@ -163,9 +189,9 @@ export class LWSSelectWalletComponent extends React.Component {
             return;
         }
         return loginAction(wallet, password);
-    }
-    renderHardwareWallet() {
-        const { classes } = this.props;
+    };
+    LWSSelectWalletComponent.prototype.renderHardwareWallet = function () {
+        var classes = this.props.classes;
         return (React.createElement("div", null,
             React.createElement("p", { className: classes.supportText }, "Ledger and Trezor support is coming soon")));
         // return (
@@ -182,11 +208,12 @@ export class LWSSelectWalletComponent extends React.Component {
         // 		</div>
         // 	</div>
         // );
-    }
-    renderSelection() {
-        const { classes, passwordError, wallets } = this.props;
-        const { wallet, password, isHardwareWallet } = this.state;
-        const publicKey = wallet ? wallet.publicKey : '';
+    };
+    LWSSelectWalletComponent.prototype.renderSelection = function () {
+        var _this = this;
+        var _a = this.props, classes = _a.classes, passwordError = _a.passwordError, wallets = _a.wallets;
+        var _b = this.state, wallet = _b.wallet, password = _b.password, isHardwareWallet = _b.isHardwareWallet;
+        var publicKey = wallet ? wallet.publicKey : '';
         if (isHardwareWallet) {
             return this.renderHardwareWallet();
         }
@@ -194,39 +221,42 @@ export class LWSSelectWalletComponent extends React.Component {
             return (React.createElement("div", null,
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Choose an existing ETH Address"),
-                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: evt => this.setWallet(evt), value: publicKey }, wallets.filter(w => w.profile === 'local').map((wallet, index) => {
+                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: function (evt) { return _this.setWallet(evt); }, value: publicKey }, wallets.filter(function (w) { return w.profile === 'local'; }).map(function (wallet, index) {
                         return (React.createElement("option", { key: index, value: wallet.publicKey },
                             "0x",
                             wallet.publicKey.replace('0x', '')));
                     }))),
                 wallet && wallet.unlocked ? null : (React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Password"),
-                    React.createElement("input", { type: "password", ref: "password", id: "password", className: `${classes.formControl} ${passwordError ? classes.validationError : ''}`, onChange: evt => this.setPassword(evt), placeholder: "Enter your password", value: password }),
+                    React.createElement("input", { type: "password", ref: "password", id: "password", className: classes.formControl + " " + (passwordError ? classes.validationError : ''), onChange: function (evt) { return _this.setPassword(evt); }, placeholder: "Enter your password", value: password }),
                     passwordError && (React.createElement("div", { className: classes.validationMsg }, "Incorrect Password. Please try again.")))),
                 React.createElement("div", { className: classes.formSubmitRow },
-                    React.createElement(LWSButton, { className: classes.buttonPrimary, onClick: () => this.login() }, "Log in"))));
+                    React.createElement(LWSButton, { className: classes.buttonPrimary, onClick: function () { return _this.login(); } }, "Log in"))));
         }
-    }
-    render() {
-        const { classes } = this.props;
-        const { isHardwareWallet } = this.state;
+    };
+    LWSSelectWalletComponent.prototype.render = function () {
+        var _this = this;
+        var classes = this.props.classes;
+        var isHardwareWallet = this.state.isHardwareWallet;
         return (React.createElement("div", null,
             React.createElement("div", { className: classes.areaTitle },
                 React.createElement(IDIcon, null),
                 React.createElement(Typography, { variant: "h2", className: classes.title }, "Verify Ownership Of Your SelfKey ID")),
             React.createElement("div", { className: classes.form },
-                React.createElement("div", { className: `${classes.formGroup} ${classes.radioReplace}` },
-                    React.createElement("button", { className: `${classes.buttonTertiary} ${!isHardwareWallet ? classes.selected : ''}`, onClick: () => this.toggleIsHardwallet(false) },
+                React.createElement("div", { className: classes.formGroup + " " + classes.radioReplace },
+                    React.createElement("button", { className: classes.buttonTertiary + " " + (!isHardwareWallet ? classes.selected : ''), onClick: function () { return _this.toggleIsHardwallet(false); } },
                         React.createElement(ProfileIcon, null),
                         " ",
                         React.createElement("span", null, "ETH Address")),
-                    React.createElement("button", { className: `${classes.buttonTertiary} ${isHardwareWallet ? classes.selected : ''}`, onClick: () => this.toggleIsHardwallet(true) },
+                    React.createElement("button", { className: classes.buttonTertiary + " " + (isHardwareWallet ? classes.selected : ''), onClick: function () { return _this.toggleIsHardwallet(true); } },
                         React.createElement(StickIcon, null),
                         " ",
                         React.createElement("span", null, "Trezor/Ledger"))),
                 this.renderSelection())));
-    }
-}
-export const LWSSelectWallet = withStyles(styles)(LWSSelectWalletComponent);
+    };
+    return LWSSelectWalletComponent;
+}(React.Component));
+export { LWSSelectWalletComponent };
+export var LWSSelectWallet = withStyles(styles)(LWSSelectWalletComponent);
 export default LWSSelectWallet;
 //# sourceMappingURL=lws-select-wallet.js.map

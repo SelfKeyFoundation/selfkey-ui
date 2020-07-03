@@ -1,3 +1,16 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 import * as React from "react";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
@@ -8,7 +21,7 @@ import IncorporationsIcon from "../icons/incorporations";
 import HardDriveIcon from "../icons/hard-drive";
 import { primary, base } from "../colors";
 import { BackButton } from "./button";
-export const ModalWrap = withStyles(createStyles({
+export var ModalWrap = withStyles(createStyles({
     root: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -23,7 +36,7 @@ export const ModalWrap = withStyles(createStyles({
         width: '100%',
     },
 }))(Paper);
-export const FileUploadGrid = withStyles(createStyles({
+export var FileUploadGrid = withStyles(createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
@@ -32,14 +45,14 @@ export const FileUploadGrid = withStyles(createStyles({
         width: '760px',
     },
 }))(Grid);
-export const FileUploadHeaderGrid = withStyles(createStyles({
+export var FileUploadHeaderGrid = withStyles(createStyles({
     item: {
         marginLeft: '-210px',
         marginTop: '-150px',
         position: 'absolute',
     },
 }))(Grid);
-const FileUploadLabel = withStyles(createStyles({
+var FileUploadLabel = withStyles(createStyles({
     root: {
         alignItems: 'center',
         cursor: 'pointer',
@@ -54,30 +67,32 @@ const FileUploadLabel = withStyles(createStyles({
         },
     },
 }))(InputLabel);
-const FileUploadInput = withStyles(createStyles({
+var FileUploadInput = withStyles(createStyles({
     root: {
         display: 'none',
     },
 }))(Input);
-export class ModalWithBackButton extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.state = {
+var ModalWithBackButton = /** @class */ (function (_super) {
+    __extends(ModalWithBackButton, _super);
+    function ModalWithBackButton() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
             open: false
         };
-        this.handleOpen = () => {
-            this.setState({ open: true });
+        _this.handleOpen = function () {
+            _this.setState({ open: true });
         };
-        this.handleClose = () => {
-            this.setState({ open: false });
+        _this.handleClose = function () {
+            _this.setState({ open: false });
         };
-        this.handleState = () => {
-            if (this.state.open === true) {
-                this.setState({ open: false });
+        _this.handleState = function () {
+            if (_this.state.open === true) {
+                _this.setState({ open: false });
             }
         };
+        return _this;
     }
-    render() {
+    ModalWithBackButton.prototype.render = function () {
         return (React.createElement("div", null,
             React.createElement(Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center' },
                 React.createElement(IncorporationsIcon, null),
@@ -107,7 +122,9 @@ export class ModalWithBackButton extends React.Component {
                                         React.createElement(Typography, { variant: "subtitle2", color: "secondary", gutterBottom: true }, "This is stored locally on your machine."))),
                                 React.createElement(FileUploadInput, { id: "key-upload", type: "file" }))),
                         React.createElement("br", null))))));
-    }
-}
+    };
+    return ModalWithBackButton;
+}(React.Component));
+export { ModalWithBackButton };
 export default ModalWithBackButton;
 //# sourceMappingURL=modal-with-back-button.js.map

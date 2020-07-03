@@ -1,9 +1,33 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 import * as React from 'react';
 import { Grid, withStyles, createStyles } from '@material-ui/core';
 import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
 import CommonStyle from '../../../common/common-style';
 import { Loop as LoopIcon } from '@material-ui/icons';
-export const styles = createStyles({
+export var styles = createStyles({
     container: {
         fontFamily: CommonStyle.fontFamily
     },
@@ -112,63 +136,68 @@ export const styles = createStyles({
         }
     }
 });
-export class TransactionFeeBoxComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.timerToUpdateGasPrice = 0;
-        this.timerToUpdateGasLimit = 0;
-        this.TIME_FOR_INPUT_CHANGE = 1000;
-        this.state = {
+var TransactionFeeBoxComponent = /** @class */ (function (_super) {
+    __extends(TransactionFeeBoxComponent, _super);
+    function TransactionFeeBoxComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.timerToUpdateGasPrice = 0;
+        _this.timerToUpdateGasLimit = 0;
+        _this.TIME_FOR_INPUT_CHANGE = 1000;
+        _this.state = {
             showAdvanced: props.showAdvanced || false,
             gasLimit: props.gasLimit,
             gasPrice: props.gasPrice
         };
+        return _this;
     }
-    componentDidUpdate(prevProps) {
+    TransactionFeeBoxComponent.prototype.componentDidUpdate = function (prevProps) {
         if (prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
-            this.setState({ ...this.state, gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice });
+            this.setState(__assign(__assign({}, this.state), { gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice }));
         }
-    }
-    renderActualTransactionFeeBox() {
-        return (React.createElement(ActualTransactionFeeBox, Object.assign({}, this.props)));
-    }
-    toggleShowAdvanced() {
-        const { showAdvanced } = this.state;
-        this.setState({ ...this.state, showAdvanced: !showAdvanced });
-    }
-    setGasLimit(event) {
-        const value = event.target.value;
+    };
+    TransactionFeeBoxComponent.prototype.renderActualTransactionFeeBox = function () {
+        return (React.createElement(ActualTransactionFeeBox, __assign({}, this.props)));
+    };
+    TransactionFeeBoxComponent.prototype.toggleShowAdvanced = function () {
+        var showAdvanced = this.state.showAdvanced;
+        this.setState(__assign(__assign({}, this.state), { showAdvanced: !showAdvanced }));
+    };
+    TransactionFeeBoxComponent.prototype.setGasLimit = function (event) {
+        var _this = this;
+        var value = event.target.value;
         if (this.timerToUpdateGasLimit)
             clearTimeout(this.timerToUpdateGasLimit);
-        this.setState({ ...this.state, gasLimit: Number(value) });
-        this.timerToUpdateGasLimit = window.setTimeout(() => {
-            if (this.props.changeGasLimitAction) {
-                this.props.changeGasLimitAction(value);
+        this.setState(__assign(__assign({}, this.state), { gasLimit: Number(value) }));
+        this.timerToUpdateGasLimit = window.setTimeout(function () {
+            if (_this.props.changeGasLimitAction) {
+                _this.props.changeGasLimitAction(value);
             }
         }, this.TIME_FOR_INPUT_CHANGE);
-    }
-    setGasPrice(event) {
-        const value = event.target.value;
+    };
+    TransactionFeeBoxComponent.prototype.setGasPrice = function (event) {
+        var _this = this;
+        var value = event.target.value;
         if (this.timerToUpdateGasPrice)
             clearTimeout(this.timerToUpdateGasPrice);
-        this.setState({ ...this.state, gasPrice: Number(value) });
-        this.timerToUpdateGasPrice = window.setTimeout(() => {
-            if (this.props.changeGasPriceAction) {
-                this.props.changeGasPriceAction(value);
+        this.setState(__assign(__assign({}, this.state), { gasPrice: Number(value) }));
+        this.timerToUpdateGasPrice = window.setTimeout(function () {
+            if (_this.props.changeGasPriceAction) {
+                _this.props.changeGasPriceAction(value);
             }
         }, this.TIME_FOR_INPUT_CHANGE);
-    }
-    renderAdvancedContent() {
-        const { classes, ethGasStationInfo, reloadEthGasStationInfoAction, nonce } = this.props;
+    };
+    TransactionFeeBoxComponent.prototype.renderAdvancedContent = function () {
+        var _this = this;
+        var _a = this.props, classes = _a.classes, ethGasStationInfo = _a.ethGasStationInfo, reloadEthGasStationInfoAction = _a.reloadEthGasStationInfoAction, nonce = _a.nonce;
         return (React.createElement("div", { className: classes.fullWidth },
             React.createElement(Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Gas Price (Gwei)"),
-                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: (e) => this.setGasPrice(e) })),
+                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: function (e) { return _this.setGasPrice(e); } })),
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
-                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: (e) => this.setGasLimit(e), className: classes.formControl }))),
+                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: function (e) { return _this.setGasLimit(e); }, className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
                     React.createElement("span", { className: classes.nonceValue },
@@ -194,22 +223,25 @@ export class TransactionFeeBoxComponent extends React.Component {
                         " Under 2 Mins: ",
                         ethGasStationInfo.fast,
                         " Gwei ")))));
-    }
-    render() {
-        const { classes } = this.props;
-        const { showAdvanced } = this.state;
+    };
+    TransactionFeeBoxComponent.prototype.render = function () {
+        var _this = this;
+        var classes = this.props.classes;
+        var showAdvanced = this.state.showAdvanced;
         return (React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.container },
             React.createElement(Grid, { container: true, wrap: "nowrap" },
                 React.createElement(Grid, { container: true, direction: "row" },
                     React.createElement(Grid, { item: true },
-                        React.createElement("span", { className: `${classes.networkTransactionFeeTitle} feeTitle` }, " Network Transaction Fee: ")),
+                        React.createElement("span", { className: classes.networkTransactionFeeTitle + " feeTitle" }, " Network Transaction Fee: ")),
                     React.createElement(Grid, { item: true }, this.renderActualTransactionFeeBox())),
-                React.createElement(Grid, { item: true, className: classes.showAdvancedContainer, onClick: () => this.toggleShowAdvanced() },
+                React.createElement(Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
                     React.createElement("span", null, " Advanced "),
-                    !showAdvanced ? (React.createElement("i", { className: `${classes.icon}  ${classes.rightIcon}` }, " ")) : (React.createElement("i", { className: `${classes.icon}  ${classes.downIcon}` }, " ")))),
+                    !showAdvanced ? (React.createElement("i", { className: classes.icon + "  " + classes.rightIcon }, " ")) : (React.createElement("i", { className: classes.icon + "  " + classes.downIcon }, " ")))),
             showAdvanced && this.renderAdvancedContent()));
-    }
-}
-export const TransactionFeeBox = withStyles(styles)(TransactionFeeBoxComponent);
+    };
+    return TransactionFeeBoxComponent;
+}(React.Component));
+export { TransactionFeeBoxComponent };
+export var TransactionFeeBox = withStyles(styles)(TransactionFeeBoxComponent);
 export default TransactionFeeBox;
 //# sourceMappingURL=transaction-fee-box.js.map

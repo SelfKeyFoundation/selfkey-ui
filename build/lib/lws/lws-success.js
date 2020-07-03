@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SuccessIcon } from '../icons/success';
-const styles = createStyles({
+var styles = createStyles({
     lwsSuccess: {
         fontFamily: 'Lato, arial, sans-serif',
     },
@@ -24,10 +24,13 @@ const styles = createStyles({
         },
     },
 });
-export const LWSSuccess = withStyles(styles)(({ classes }) => (React.createElement("div", { className: classes.lwsSuccess },
-    React.createElement("div", { className: classes.areaTitle },
-        React.createElement(SuccessIcon, null),
-        React.createElement("h2", null, "Success"),
-        React.createElement("h3", null, "You are now logged in through your SelfKey ID.")))));
+export var LWSSuccess = withStyles(styles)(function (_a) {
+    var classes = _a.classes;
+    return (React.createElement("div", { className: classes.lwsSuccess },
+        React.createElement("div", { className: classes.areaTitle },
+            React.createElement(SuccessIcon, null),
+            React.createElement("h2", null, "Success"),
+            React.createElement("h3", null, "You are now logged in through your SelfKey ID."))));
+});
 export default LWSSuccess;
 //# sourceMappingURL=lws-success.js.map

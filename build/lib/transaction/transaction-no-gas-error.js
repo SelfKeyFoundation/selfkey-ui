@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Typography, withStyles, createStyles } from '@material-ui/core';
 import TransactionErrorBox from './transaction-error-box';
-const styles = createStyles({
+var styles = createStyles({
     bodyText: {
         paddingRight: '40px',
         textAlign: 'justify',
@@ -17,9 +17,10 @@ const styles = createStyles({
         textDecoration: 'none',
     }
 });
-export const TransactionNoGasError = withStyles(styles)(({ classes, publicKey, openLink, closeAction }) => {
-    const gasExplanationUrl = 'https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed';
-    const handleLinkClick = (event) => {
+export var TransactionNoGasError = withStyles(styles)(function (_a) {
+    var classes = _a.classes, publicKey = _a.publicKey, openLink = _a.openLink, closeAction = _a.closeAction;
+    var gasExplanationUrl = 'https://help.selfkey.org/article/87-how-does-gas-impact-transaction-speed';
+    var handleLinkClick = function (event) {
         event.preventDefault();
         if (!openLink) {
             return;
@@ -32,7 +33,7 @@ export const TransactionNoGasError = withStyles(styles)(({ classes, publicKey, o
             React.createElement("div", { className: classes.learnMoreText },
                 "To learn more about transaction fees, click ",
                 ' ',
-                React.createElement("a", { className: `${classes.learnMoreText}  ${classes.learnMoreLink}`, href: gasExplanationUrl, onClick: handleLinkClick }, "here.")))));
+                React.createElement("a", { className: classes.learnMoreText + "  " + classes.learnMoreLink, href: gasExplanationUrl, onClick: handleLinkClick }, "here.")))));
 });
 export default TransactionNoGasError;
 //# sourceMappingURL=transaction-no-gas-error.js.map

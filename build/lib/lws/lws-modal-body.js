@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
-const styles = createStyles({
+var styles = createStyles({
     root: {
         '& a': {
             color: '#23E6FE',
@@ -12,6 +12,9 @@ const styles = createStyles({
         padding: '60px 70px 80px',
     },
 });
-export const LWSModalBody = withStyles(styles)(({ classes, children }) => (React.createElement("div", { className: classes.root }, children)));
+export var LWSModalBody = withStyles(styles)(function (_a) {
+    var classes = _a.classes, children = _a.children;
+    return (React.createElement("div", { className: classes.root }, children));
+});
 export default LWSModalBody;
 //# sourceMappingURL=lws-modal-body.js.map

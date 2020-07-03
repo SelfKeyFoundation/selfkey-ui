@@ -1,3 +1,16 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 import * as React from 'react';
 import { Grid, withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
@@ -8,7 +21,7 @@ import CopyIcon from '../icons/copy';
 import ViewIcon from '../icons/view';
 import HourGlassSmallIcon from '../icons/hourglass-small';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-const styles = createStyles({
+var styles = createStyles({
     line: {
         height: '1px',
         transform: 'scaleY(-1)',
@@ -72,24 +85,26 @@ const styles = createStyles({
         display: 'flex',
     },
 });
-export class TransactionHistoryComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.copyText = 'Copy';
-        this.copiedText = 'Copied';
-        this.state = {
+var TransactionHistoryComponent = /** @class */ (function (_super) {
+    __extends(TransactionHistoryComponent, _super);
+    function TransactionHistoryComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.copyText = 'Copy';
+        _this.copiedText = 'Copied';
+        _this.state = {
             currentCopyValues: [],
         };
+        return _this;
     }
-    handleLinkClick(event, externalLink) {
-        const { openLink } = this.props;
+    TransactionHistoryComponent.prototype.handleLinkClick = function (event, externalLink) {
+        var openLink = this.props.openLink;
         event.preventDefault();
         if (!openLink) {
             return;
         }
         openLink(externalLink);
-    }
-    renderIcon(statusIconName) {
+    };
+    TransactionHistoryComponent.prototype.renderIcon = function (statusIconName) {
         switch (statusIconName) {
             case 'failed':
                 return React.createElement(FailedIcon, null);
@@ -102,24 +117,26 @@ export class TransactionHistoryComponent extends React.Component {
             default:
                 return;
         }
-    }
-    updateCopyText(index, text) {
-        const currentCopyValuesClone = this.state.currentCopyValues.slice();
+    };
+    TransactionHistoryComponent.prototype.updateCopyText = function (index, text) {
+        var currentCopyValuesClone = this.state.currentCopyValues.slice();
         currentCopyValuesClone[index] = text;
         this.setState({ currentCopyValues: currentCopyValuesClone });
-    }
-    handleOnCopy(itemIndex) {
-        return () => {
-            this.updateCopyText(itemIndex, this.copiedText);
-            const bounceTime = setTimeout(() => {
-                this.updateCopyText(itemIndex, this.copyText);
+    };
+    TransactionHistoryComponent.prototype.handleOnCopy = function (itemIndex) {
+        var _this = this;
+        return function () {
+            _this.updateCopyText(itemIndex, _this.copiedText);
+            var bounceTime = setTimeout(function () {
+                _this.updateCopyText(itemIndex, _this.copyText);
                 clearTimeout(bounceTime);
             }, 1000);
         };
-    }
-    renderRow(item, index) {
-        let { classes } = this.props;
-        let { currentCopyValues } = this.state;
+    };
+    TransactionHistoryComponent.prototype.renderRow = function (item, index) {
+        var _this = this;
+        var classes = this.props.classes;
+        var currentCopyValues = this.state.currentCopyValues;
         return (React.createElement("div", { key: index },
             React.createElement(Grid, { container: true, className: classes.row, direction: "row", justify: "space-between", alignItems: "center" },
                 React.createElement("div", { className: classes.flex },
@@ -139,21 +156,23 @@ export class TransactionHistoryComponent extends React.Component {
                                 ' ',
                                 currentCopyValues[index] || this.copyText,
                                 ' '))),
-                    React.createElement("div", { onClick: event => {
-                            this.handleLinkClick.call(this, event, item.externalLink);
+                    React.createElement("div", { onClick: function (event) {
+                            _this.handleLinkClick.call(_this, event, item.externalLink);
                         }, className: classes.viewActionContainer },
                         React.createElement(ViewIcon, null),
                         React.createElement("span", { className: classes.actionTitle }, " View ")))),
             React.createElement("div", { className: classes.line }, " ")));
-    }
-    render() {
-        let { classes, list } = this.props;
+    };
+    TransactionHistoryComponent.prototype.render = function () {
+        var _a = this.props, classes = _a.classes, list = _a.list;
         list = list || [];
-        let txRows = list.map(this.renderRow.bind(this));
+        var txRows = list.map(this.renderRow.bind(this));
         return (React.createElement(Grid, null,
             list.length ? React.createElement("div", { className: classes.line }, " ") : '',
             txRows));
-    }
-}
-export const TransactionHistory = withStyles(styles)(TransactionHistoryComponent);
+    };
+    return TransactionHistoryComponent;
+}(React.Component));
+export { TransactionHistoryComponent };
+export var TransactionHistory = withStyles(styles)(TransactionHistoryComponent);
 //# sourceMappingURL=transaction-history.js.map

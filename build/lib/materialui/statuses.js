@@ -4,47 +4,50 @@ import { Typography, Grid, Button, withStyles, createStyles } from '@material-ui
 import { AttributeAlertLargeIcon, SimpleCheckIcon, SimpleDeniedIcon, SimpleHourglassIcon, NewRefreshIcon } from '../icons';
 import { error, success, typography, warning } from '../colors';
 import { KeyTooltip, TooltipArrow } from './tooltip-arrow';
-const styles = (theme) => createStyles({
-    defaultStatus: {
-        border: `1px solid ${success}`,
-        borderRadius: '4px',
-        boxSizing: 'border-box',
-        padding: '25px 30px',
-    },
-    grow: {
-        flexGrow: 1
-    },
-    statusIcon: {
-        marginRight: '25px'
-    },
-    iconContainer: {
-        marginRight: '25px',
-        textAlign: 'center',
-        width: '38px'
-    },
-    attribute: {
-        height: '45px',
-        width: '38px'
-    },
-    statusWrap: {
-        width: '100%',
-        '& .required': {
-            border: `1px solid ${warning}`,
+var styles = function (theme) {
+    return createStyles({
+        defaultStatus: {
+            border: "1px solid " + success,
+            borderRadius: '4px',
+            boxSizing: 'border-box',
+            padding: '25px 30px',
         },
-        '& .submitted': {
-            border: `1px solid ${typography}`
+        grow: {
+            flexGrow: 1
         },
-        '& .denied': {
-            border: `1px solid ${error}`
+        statusIcon: {
+            marginRight: '25px'
+        },
+        iconContainer: {
+            marginRight: '25px',
+            textAlign: 'center',
+            width: '38px'
+        },
+        attribute: {
+            height: '45px',
+            width: '38px'
+        },
+        statusWrap: {
+            width: '100%',
+            '& .required': {
+                border: "1px solid " + warning,
+            },
+            '& .submitted': {
+                border: "1px solid " + typography
+            },
+            '& .denied': {
+                border: "1px solid " + error
+            }
+        },
+        refresh: {
+            cursor: 'pointer',
+            marginLeft: '30px'
         }
-    },
-    refresh: {
-        cursor: 'pointer',
-        marginLeft: '30px'
-    }
-});
-export const StatusInfo = withStyles(styles)(({ classes, status, onClick, handleRefresh, tooltip }) => {
-    let icon, message, statusStyle, button = null;
+    });
+};
+export var StatusInfo = withStyles(styles)(function (_a) {
+    var classes = _a.classes, status = _a.status, onClick = _a.onClick, handleRefresh = _a.handleRefresh, tooltip = _a.tooltip;
+    var icon, message, statusStyle, button = null;
     switch (status) {
         case 'Documents Required':
             icon = React.createElement(AttributeAlertLargeIcon, { className: classes.statusIcon });

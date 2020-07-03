@@ -1,8 +1,21 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 import * as React from 'react';
 import { Slider, Typography, withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
 import BN from 'bignumber.js';
-const styles = createStyles({
+var styles = createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
@@ -56,21 +69,22 @@ const styles = createStyles({
         textAlign: 'right'
     },
 });
-const WEI = new BN('1000000000000000000');
-class TransactionFeeSliderSelectorComponent extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.state = {
+var WEI = new BN('1000000000000000000');
+var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
+    __extends(TransactionFeeSliderSelectorComponent, _super);
+    function TransactionFeeSliderSelectorComponent() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
             value: null
         };
-        this.handleChange = (event, value) => {
-            this.setState({ value });
-            this.props.onChange(value);
+        _this.handleChange = function (event, value) {
+            _this.setState({ value: value });
+            _this.props.onChange(value);
         };
-        this.getTransactionPrice = (price, fiat) => {
-            const transactionPrice = new BN(price).times(this.props.gasLimit).dividedBy(WEI);
-            const priceInETH = transactionPrice.toString();
-            const priceInFiat = transactionPrice.times(this.props.fiatRate);
+        _this.getTransactionPrice = function (price, fiat) {
+            var transactionPrice = new BN(price).times(_this.props.gasLimit).dividedBy(WEI);
+            var priceInETH = transactionPrice.toString();
+            var priceInFiat = transactionPrice.times(_this.props.fiatRate);
             return (React.createElement(React.Fragment, null,
                 React.createElement(Typography, { variant: "subtitle2", color: "secondary" },
                     priceInETH,
@@ -81,24 +95,41 @@ class TransactionFeeSliderSelectorComponent extends React.Component {
                     " ",
                     fiat)));
         };
+        return _this;
     }
-    componentDidMount() {
+    TransactionFeeSliderSelectorComponent.prototype.componentDidMount = function () {
         this.props.onChange(this.value);
-    }
-    get avarageGasPrice() {
-        return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
-    }
-    get value() {
-        return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
-    }
-    get transactionFee() {
-        return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
-    }
-    get fiatFee() {
-        return this.transactionFee.times(this.props.fiatRate);
-    }
-    render() {
-        const { classes, minGasPrice, maxGasPrice, slowPrice, mediumPrice, fastPrice, fiat } = this.props;
+    };
+    Object.defineProperty(TransactionFeeSliderSelectorComponent.prototype, "avarageGasPrice", {
+        get: function () {
+            return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TransactionFeeSliderSelectorComponent.prototype, "value", {
+        get: function () {
+            return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TransactionFeeSliderSelectorComponent.prototype, "transactionFee", {
+        get: function () {
+            return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TransactionFeeSliderSelectorComponent.prototype, "fiatFee", {
+        get: function () {
+            return this.transactionFee.times(this.props.fiatRate);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    TransactionFeeSliderSelectorComponent.prototype.render = function () {
+        var _a = this.props, classes = _a.classes, minGasPrice = _a.minGasPrice, maxGasPrice = _a.maxGasPrice, slowPrice = _a.slowPrice, mediumPrice = _a.mediumPrice, fastPrice = _a.fastPrice, fiat = _a.fiat;
         return (React.createElement("div", { className: classes.root },
             React.createElement("div", null,
                 React.createElement("span", null, "Network Transaction Fee:"),
@@ -128,9 +159,10 @@ class TransactionFeeSliderSelectorComponent extends React.Component {
                 React.createElement("div", { className: classes.rightAligned },
                     React.createElement(Typography, { variant: "body1" }, "Fast"),
                     this.getTransactionPrice(fastPrice, fiat),
-                    React.createElement(Typography, { variant: "subtitle2", color: "secondary" }, `< 2 min`)))));
-    }
-}
-export const TransactionFeeSliderSelector = withStyles(styles)(TransactionFeeSliderSelectorComponent);
+                    React.createElement(Typography, { variant: "subtitle2", color: "secondary" }, "< 2 min")))));
+    };
+    return TransactionFeeSliderSelectorComponent;
+}(React.Component));
+export var TransactionFeeSliderSelector = withStyles(styles)(TransactionFeeSliderSelectorComponent);
 export default TransactionFeeSliderSelector;
 //# sourceMappingURL=transaction-fee-slider-selector.js.map

@@ -1,22 +1,22 @@
 import { TableRow, TableCell } from '@material-ui/core';
 import { withStyles, createStyles } from '@material-ui/styles';
 import { warning } from '../colors';
-export const LargeTableHeadRow = withStyles(createStyles({
+export var LargeTableHeadRow = withStyles(createStyles({
     root: {
         height: '50px',
     },
 }))(TableRow);
-export const SmallTableHeadRow = withStyles(createStyles({
+export var SmallTableHeadRow = withStyles(createStyles({
     root: {
         height: '40px',
     },
 }))(TableRow);
-export const SmallTableRow = withStyles(createStyles({
+export var SmallTableRow = withStyles(createStyles({
     root: {
         height: '40px',
     },
 }))(TableRow);
-export const SmallTableCell = withStyles(createStyles({
+export var SmallTableCell = withStyles(createStyles({
     root: {
         height: '40px',
         padding: '15px',
@@ -26,7 +26,7 @@ export const SmallTableCell = withStyles(createStyles({
         color: warning,
     },
 }))(TableCell);
-export const TagTableCell = withStyles(createStyles({
+export var TagTableCell = withStyles(createStyles({
     root: {
         verticalAlign: 'middle',
         maxWidth: '350px',

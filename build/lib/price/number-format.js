@@ -1,10 +1,11 @@
 import * as React from "react";
-const formatters = {};
-export const NumberFormat = ({ locale, priceStyle, currency, value, fractionDigits, showCurrency, }) => {
+var formatters = {};
+export var NumberFormat = function (_a) {
+    var locale = _a.locale, priceStyle = _a.priceStyle, currency = _a.currency, value = _a.value, fractionDigits = _a.fractionDigits, showCurrency = _a.showCurrency;
     fractionDigits = (fractionDigits) ? fractionDigits : (Number(value) >= 1) ? 2 : 10;
-    const formatString = `${locale}:${priceStyle}:${currency}:${fractionDigits || "default"}`;
+    var formatString = locale + ":" + priceStyle + ":" + currency + ":" + (fractionDigits || "default");
     if (locale && !formatters[formatString]) {
-        const options = {
+        var options = {
             style: priceStyle,
             maximumFractionDigits: fractionDigits
         };

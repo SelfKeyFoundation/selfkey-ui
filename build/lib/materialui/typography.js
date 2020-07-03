@@ -1,7 +1,7 @@
 import { Typography } from '@material-ui/core';
 import { withStyles, createStyles } from '@material-ui/core';
 import { typography, baseDark } from '../colors';
-const styles = createStyles({
+var styles = createStyles({
     root: {
         backgroundColor: baseDark,
         borderRadius: '10px',
@@ -15,5 +15,5 @@ const styles = createStyles({
         color: typography,
     }
 });
-export const Tag = withStyles(styles)(Typography);
+export var Tag = withStyles(styles)(Typography);
 //# sourceMappingURL=typography.js.map

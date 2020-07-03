@@ -3,7 +3,7 @@ import { withStyles, createStyles } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import { TransferIcon } from '../icons/transfer';
 import { Copy } from '../common/copy';
-const styles = createStyles({
+var styles = createStyles({
     tokenBox: {
         minWidth: '320px',
         position: 'relative',
@@ -61,23 +61,26 @@ const styles = createStyles({
         color: '#ffffff'
     }
 });
-export const TokenBox = withStyles(styles)(({ classes, children, cryptoCurrencyShort, cryptoCurrencyName, CryptoCurrencyIconComponent, publicKey, transferAction }) => (React.createElement("div", { className: classes.tokenBox },
-    React.createElement(Grid, { container: true },
-        React.createElement(Grid, { item: true, sm: 2 },
-            React.createElement(CryptoCurrencyIconComponent, null)),
-        React.createElement(Grid, { item: true, sm: 8 },
-            React.createElement("div", { className: classes.cryptoCurrencyName }, cryptoCurrencyName),
-            React.createElement("div", { className: classes.cryptoCurrencyShort }, cryptoCurrencyShort)),
-        React.createElement(Grid, { item: true, sm: 2 },
-            React.createElement("button", { className: classes.transferButton, onClick: transferAction },
-                React.createElement(TransferIcon, null)))),
-    React.createElement(Grid, { className: classes.tokenBoxBody }, children),
-    React.createElement(Grid, { className: classes.tokenBoxFooter },
-        React.createElement("div", { className: classes.horizontalDivider })),
-    React.createElement(Grid, { container: true, className: classes.addressBox },
-        React.createElement(Grid, { item: true, xs: 10 },
-            React.createElement("span", { className: classes.publicKey }, publicKey)),
-        React.createElement(Grid, { item: true, xs: 2 },
-            React.createElement(Copy, { text: publicKey }))))));
+export var TokenBox = withStyles(styles)(function (_a) {
+    var classes = _a.classes, children = _a.children, cryptoCurrencyShort = _a.cryptoCurrencyShort, cryptoCurrencyName = _a.cryptoCurrencyName, CryptoCurrencyIconComponent = _a.CryptoCurrencyIconComponent, publicKey = _a.publicKey, transferAction = _a.transferAction;
+    return (React.createElement("div", { className: classes.tokenBox },
+        React.createElement(Grid, { container: true },
+            React.createElement(Grid, { item: true, sm: 2 },
+                React.createElement(CryptoCurrencyIconComponent, null)),
+            React.createElement(Grid, { item: true, sm: 8 },
+                React.createElement("div", { className: classes.cryptoCurrencyName }, cryptoCurrencyName),
+                React.createElement("div", { className: classes.cryptoCurrencyShort }, cryptoCurrencyShort)),
+            React.createElement(Grid, { item: true, sm: 2 },
+                React.createElement("button", { className: classes.transferButton, onClick: transferAction },
+                    React.createElement(TransferIcon, null)))),
+        React.createElement(Grid, { className: classes.tokenBoxBody }, children),
+        React.createElement(Grid, { className: classes.tokenBoxFooter },
+            React.createElement("div", { className: classes.horizontalDivider })),
+        React.createElement(Grid, { container: true, className: classes.addressBox },
+            React.createElement(Grid, { item: true, xs: 10 },
+                React.createElement("span", { className: classes.publicKey }, publicKey)),
+            React.createElement(Grid, { item: true, xs: 2 },
+                React.createElement(Copy, { text: publicKey })))));
+});
 export default TokenBox;
 //# sourceMappingURL=token-box.js.map

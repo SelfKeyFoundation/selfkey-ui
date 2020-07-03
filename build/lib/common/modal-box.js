@@ -2,7 +2,7 @@ import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { Grid, Typography } from '@material-ui/core';
 import { CloseButtonIcon } from '../icons/close-button';
-const styles = createStyles({
+var styles = createStyles({
     root: {
         boxSizing: 'border-box',
         minHeight: '300px',
@@ -44,11 +44,11 @@ const styles = createStyles({
         right: '-18px',
     }
 });
-export const ModalBox = withStyles(styles)((props) => (React.createElement(Grid, { container: true, className: props.classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
+export var ModalBox = withStyles(styles)(function (props) { return (React.createElement(Grid, { container: true, className: props.classes.root, direction: 'column', justify: 'flex-start', alignItems: 'flex-start' },
     React.createElement(Grid, { item: true, id: 'header', className: props.classes.header },
         React.createElement(Typography, { variant: "h2" }, props.headerText),
         React.createElement("button", { className: props.classes.closeButton, onClick: props.closeAction },
             React.createElement(CloseButtonIcon, null))),
-    React.createElement(Grid, { item: true, id: 'body', className: props.classes.body }, props.children))));
+    React.createElement(Grid, { item: true, id: 'body', className: props.classes.body }, props.children))); });
 export default ModalBox;
 //# sourceMappingURL=modal-box.js.map

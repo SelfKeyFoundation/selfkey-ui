@@ -1,7 +1,31 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 import * as React from 'react';
 import { Grid, withStyles, createStyles } from '@material-ui/core';
 import StyledButton from '../common/styled-button';
-const styles = createStyles({
+var styles = createStyles({
     errorText: {
         height: '19px',
         width: '242px',
@@ -41,28 +65,30 @@ const styles = createStyles({
         lineHeight: '15px'
     }
 });
-export class AddressBookEditComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleLabelChange = (event) => {
+var AddressBookEditComponent = /** @class */ (function (_super) {
+    __extends(AddressBookEditComponent, _super);
+    function AddressBookEditComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.handleLabelChange = function (event) {
             event.preventDefault();
-            const label = event.target.value;
-            this.setState({ ...this.state, label });
-            this.props.onLabelChange(label);
+            var label = event.target.value;
+            _this.setState(__assign(__assign({}, _this.state), { label: label }));
+            _this.props.onLabelChange(label);
         };
-        this.handleSubmit = (event) => {
+        _this.handleSubmit = function (event) {
             event.preventDefault();
-            return this.props.onSave(this.state.label);
+            return _this.props.onSave(_this.state.label);
         };
-        this.state = { label: props.label };
+        _this.state = { label: props.label };
+        return _this;
     }
-    componentDidUpdate() {
+    AddressBookEditComponent.prototype.componentDidUpdate = function () {
         // this.state = {label: this.props.label};
-    }
-    render() {
-        const { classes, labelError, onCancel } = this.props;
-        const hasLabelError = (labelError !== '' && labelError !== undefined);
-        const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
+    };
+    AddressBookEditComponent.prototype.render = function () {
+        var _a = this.props, classes = _a.classes, labelError = _a.labelError, onCancel = _a.onCancel;
+        var hasLabelError = (labelError !== '' && labelError !== undefined);
+        var labelInputClass = classes.input + " " + (hasLabelError ? classes.errorColor : '');
         return (React.createElement("form", { id: "formwrap", noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
             React.createElement(Grid, { container: true, direction: 'column', spacing: 10 },
                 React.createElement(Grid, { item: true },
@@ -78,8 +104,10 @@ export class AddressBookEditComponent extends React.Component {
                             React.createElement(StyledButton, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || hasLabelError) }, "Save")),
                         React.createElement(Grid, { item: true },
                             React.createElement(StyledButton, { id: 'cancelButton', variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
-    }
-}
-export const AddressBookEdit = withStyles(styles)(AddressBookEditComponent);
+    };
+    return AddressBookEditComponent;
+}(React.Component));
+export { AddressBookEditComponent };
+export var AddressBookEdit = withStyles(styles)(AddressBookEditComponent);
 export default AddressBookEdit;
 //# sourceMappingURL=address-book-edit.js.map

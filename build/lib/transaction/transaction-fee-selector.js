@@ -1,8 +1,21 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 import * as React from 'react';
 import { Slider, withStyles, createStyles } from '@material-ui/core';
 import CommonStyle from '../common/common-style';
 import BN from 'bignumber.js';
-const styles = createStyles({
+var styles = createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
@@ -48,33 +61,51 @@ const styles = createStyles({
         color: '#ffffff',
     },
 });
-const WEI = new BN('1000000000000000000');
-export class TransactionFeeSelectorComponent extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.state = { value: null };
-        this.handleChange = (event, value) => {
-            this.setState({ value });
-            this.props.onChange(value);
+var WEI = new BN('1000000000000000000');
+var TransactionFeeSelectorComponent = /** @class */ (function (_super) {
+    __extends(TransactionFeeSelectorComponent, _super);
+    function TransactionFeeSelectorComponent() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = { value: null };
+        _this.handleChange = function (event, value) {
+            _this.setState({ value: value });
+            _this.props.onChange(value);
         };
+        return _this;
     }
-    componentDidMount() {
+    TransactionFeeSelectorComponent.prototype.componentDidMount = function () {
         this.props.onChange(this.value);
-    }
-    get avarageGasPrice() {
-        return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
-    }
-    get value() {
-        return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
-    }
-    get transactionFee() {
-        return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
-    }
-    get fiatFee() {
-        return this.transactionFee.times(this.props.fiatRate);
-    }
-    render() {
-        const { classes, minGasPrice, maxGasPrice, fiat } = this.props;
+    };
+    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "avarageGasPrice", {
+        get: function () {
+            return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "value", {
+        get: function () {
+            return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "transactionFee", {
+        get: function () {
+            return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TransactionFeeSelectorComponent.prototype, "fiatFee", {
+        get: function () {
+            return this.transactionFee.times(this.props.fiatRate);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    TransactionFeeSelectorComponent.prototype.render = function () {
+        var _a = this.props, classes = _a.classes, minGasPrice = _a.minGasPrice, maxGasPrice = _a.maxGasPrice, fiat = _a.fiat;
         return (React.createElement("div", { className: classes.root },
             React.createElement("div", null,
                 React.createElement("span", null, "Network Transaction Fee:"),
@@ -95,8 +126,10 @@ export class TransactionFeeSelectorComponent extends React.Component {
                 React.createElement("span", null, "Slow"),
                 React.createElement("span", null, "Medium"),
                 React.createElement("span", null, "Fast"))));
-    }
-}
-export const TransactionFeeSelector = withStyles(styles)(TransactionFeeSelectorComponent);
+    };
+    return TransactionFeeSelectorComponent;
+}(React.Component));
+export { TransactionFeeSelectorComponent };
+export var TransactionFeeSelector = withStyles(styles)(TransactionFeeSelectorComponent);
 export default TransactionFeeSelector;
 //# sourceMappingURL=transaction-fee-selector.js.map

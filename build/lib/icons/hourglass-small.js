@@ -1,12 +1,23 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({});
-export const HourGlassSmallIcon = withStyles(styles)((props) => {
-    let width = props.width || '20px';
-    let height = props.height || '26px';
-    let fill = props.fill || '#697C95';
-    return (React.createElement(SvgIcon, Object.assign({}, props, { style: { width, height }, viewBox: "0 0 20 26" }),
+var styles = createStyles({});
+export var HourGlassSmallIcon = withStyles(styles)(function (props) {
+    var width = props.width || '20px';
+    var height = props.height || '26px';
+    var fill = props.fill || '#697C95';
+    return (React.createElement(SvgIcon, __assign({}, props, { style: { width: width, height: height }, viewBox: "0 0 20 26" }),
         React.createElement("defs", null),
         React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
             React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-186.000000, -1871.000000)", fill: fill, fillRule: "nonzero" },
