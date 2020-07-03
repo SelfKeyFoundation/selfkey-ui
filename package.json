@@ -12,14 +12,16 @@
     },
     "scripts": {
         "start": "start-storybook -p 6006",
-        "build": "yarn lint && yarn build-lib",
+        "build": "yarn lint && yarn build-lib && yarn build-esnext-lib",
         "build-lib": "tsc && yarn copy-assets-to-lib",
+        "build-esnext-lib": "tsc --build tsconfig.esnext.json && yarn copy-assets-to-esnext-lib",
         "test": "jest --maxWorkers 2",
         "test:coverage": "npm test -- --coverage",
         "test:update": "jest --updateSnapshot",
         "build-storybook": "build-storybook",
         "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
         "copy-assets-to-lib": "cpx \"./src/assets/**/*.*\" ./build/lib/assets/",
+        "copy-assets-to-esnext-lib": "cpx \"./src/assets/**/*.*\" ./build-esnext/lib/assets/",
         "deploy-storybook": "storybook-to-ghpages",
         "snyk-protect": "snyk protect",
         "prepublish": "npm run snyk-protect"
