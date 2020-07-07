@@ -42,7 +42,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ArrayFileUploadWidget = exports.FileUploadGrid = exports.FileUploadWidget = exports.FileViewWithModalComponent = exports.FileLinkWithModal = exports.FilePreviewModalView = exports.FileView = exports.DecimalInput = exports.FileUploadInput = exports.FileUploadLabel = exports.MultilineSelect = void 0;
+exports.ArrayFileUploadWidget = exports.FileUploadWidget = exports.FileViewWithModalComponent = exports.FileLinkWithModal = exports.FilePreviewModalView = exports.FileView = exports.DecimalInput = exports.FileUploadInput = exports.FileUploadLabel = exports.MultilineSelect = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var classnames_1 = require("classnames");
@@ -454,7 +454,7 @@ exports.FileUploadWidget = core_2.withStyles(fileUploadStyles)(function (_a) {
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
-exports.FileUploadGrid = core_2.withStyles(core_2.createStyles({
+var FileUploadGrid = core_2.withStyles(core_2.createStyles({
     container: {
         backgroundColor: colors_1.base,
         border: '1px solid #303C49',
@@ -576,7 +576,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
         }
         var formClassNames = classnames_1.default(classes.dropArea, additionalClass);
         return (React.createElement(core_1.Grid, { container: true, direction: "column" },
-            React.createElement(exports.FileUploadGrid, { container: true, direction: "column", alignItems: "center", justify: "center" },
+            React.createElement(FileUploadGrid, { container: true, direction: "column", alignItems: "center", justify: "center" },
                 React.createElement("div", { id: "dragging", ref: this.setFormRef, className: formClassNames },
                     React.createElement(core_1.Grid, { container: true, justify: "center", alignItems: "center", direction: "column" },
                         React.createElement(exports.FileUploadLabel, { htmlFor: "key-upload" },

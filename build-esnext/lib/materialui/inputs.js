@@ -389,7 +389,7 @@ export const FileUploadWidget = withStyles(fileUploadStyles)(({ classes, id, fil
                             React.createElement("input", Object.assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
-export const FileUploadGrid = withStyles(createStyles({
+const FileUploadGrid = withStyles(createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
