@@ -9,8 +9,4 @@ export * from './statuses';
 export * from './tables';
 export * from './tooltip-arrow';
 export * from './typography';
-export {
-    FileUploadGrid,
-    FileUploadHeaderGrid,
-    ModalWithBackButton
-} from './modal-with-back-button';
+export { FileUploadGrid, FileUploadHeaderGrid, ModalWithBackButton } from './modal-with-back-button';
