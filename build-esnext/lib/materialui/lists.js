@@ -54,8 +54,8 @@ const InsideTick = ((color) => (React.createElement("path", { d: "M14.1607102,15
 const checkedStyle = {
     height: '44px',
     marginRight: '13px',
-    marginTop: '-10px',
-    paddingTop: '17px',
+    marginTop: '-3px',
+    paddingTop: '2px',
     width: '30px',
 };
 export const CheckedIcon = ((item) => (React.createElement(SvgIcon, { width: "30px", height: "44px", viewBox: "0 0 30 44", style: checkedStyle },
