@@ -561,7 +561,7 @@ export const FileUploadWidget = withStyles(fileUploadStyles)(
     }
 );
 
-export const FileUploadGrid = withStyles(createStyles({
+const FileUploadGrid = withStyles(createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',

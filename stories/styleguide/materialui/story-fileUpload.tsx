@@ -9,8 +9,7 @@ const underlineStyle = {
     textDecoration: 'underline',
 }
 
-
-export const FileUploadGrid = withStyles(createStyles({
+const FileUploadGrid = withStyles(createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
@@ -20,7 +19,7 @@ export const FileUploadGrid = withStyles(createStyles({
     }
 }))(Grid);
 
-export const FileUploadHeaderGrid = withStyles(createStyles({
+const FileUploadHeaderGrid = withStyles(createStyles({
     item: {
         marginLeft: '-210px',
         marginTop: '-150px',

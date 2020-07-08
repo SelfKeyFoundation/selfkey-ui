@@ -1,7 +1,10 @@
-import * as React from 'react';
-import { MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
-import { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight } from '../colors';
-export const theme = createMuiTheme({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelfkeyDarkTheme = exports.theme = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var colors_1 = require("../colors");
+exports.theme = core_1.createMuiTheme({
     // Reset and Globals
     '@global': {
         'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video': {
@@ -68,19 +71,19 @@ export const theme = createMuiTheme({
     // Theme
     palette: {
         primary: {
-            main: primary,
-            light: primaryTint,
+            main: colors_1.primary,
+            light: colors_1.primaryTint,
         },
         secondary: {
-            main: typography,
+            main: colors_1.typography,
         },
         error: {
-            main: error,
+            main: colors_1.error,
         },
         text: {
-            primary: white,
-            secondary: grey,
-            disabled: grey,
+            primary: colors_1.white,
+            secondary: colors_1.grey,
+            disabled: colors_1.grey,
             hint: 'rgba(0, 0, 0, 0.38)',
         },
     },
@@ -131,20 +134,20 @@ export const theme = createMuiTheme({
         },
         MuiCard: {
             root: {
-                backgroundColor: base,
+                backgroundColor: colors_1.base,
                 boxShadow: 'none',
                 height: '100%',
             },
         },
         MuiCardHeader: {
             title: {
-                color: white,
+                color: colors_1.white,
                 fontSize: '18px',
                 fontWeight: 400,
                 lineHeight: '22px',
             },
             subheader: {
-                color: white,
+                color: colors_1.white,
                 fontSize: '16px',
                 fontWeight: 600,
             },
@@ -169,7 +172,7 @@ export const theme = createMuiTheme({
                 lineHeight: '26px',
             },
             h3: {
-                color: typography,
+                color: colors_1.typography,
                 fontSize: '16px',
                 lineHeight: '24px',
             },
@@ -205,13 +208,13 @@ export const theme = createMuiTheme({
                 lineHeight: '19px',
             },
             caption: {
-                color: warning,
+                color: colors_1.warning,
                 display: 'block',
                 fontSize: '16px',
                 lineHeight: '24px',
             },
             overline: {
-                color: typography,
+                color: colors_1.typography,
                 display: 'block',
                 fontSize: '12px',
                 fontWeight: 600,
@@ -241,15 +244,15 @@ export const theme = createMuiTheme({
                 paddingBottom: '0',
                 paddingTop: '0',
                 '&$selected': {
-                    backgroundColor: grey,
+                    backgroundColor: colors_1.grey,
                     '& .choose': {
-                        color: `${baseDark} !important`
+                        color: colors_1.baseDark + " !important"
                     },
                     '&:hover': {
-                        backgroundColor: grey,
+                        backgroundColor: colors_1.grey,
                     },
                     '&$disabled': {
-                        backgroundColor: `${baseLight} !important`
+                        backgroundColor: colors_1.baseLight + " !important"
                     }
                 },
             },
@@ -272,25 +275,25 @@ export const theme = createMuiTheme({
         },
         MuiInput: {
             root: {
-                backgroundColor: baseDark,
+                backgroundColor: colors_1.baseDark,
                 borderRadius: '4px',
                 border: '1px solid #384656',
                 boxSizing: 'border-box',
-                color: white,
+                color: colors_1.white,
                 fontSize: '14px',
                 height: '44px',
                 lineHeight: '21px',
                 paddingLeft: '16px',
                 '&$error': {
                     backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                    border: `1px solid ${error}`,
-                    color: error,
+                    border: "1px solid " + colors_1.error,
+                    color: colors_1.error,
                     marginBottom: '6px',
                 },
                 '&$focused': {
                     '&$focused:not($error):not($disabled)': {
-                        border: `1px solid ${primary}`,
-                        boxShadow: `0 0 3px 1px ${primary}`,
+                        border: "1px solid " + colors_1.primary,
+                        boxShadow: "0 0 3px 1px " + colors_1.primary,
                     },
                 },
                 '&$disabled': {
@@ -325,7 +328,7 @@ export const theme = createMuiTheme({
         MuiInputBase: {
             input: {
                 '&::placeholder': {
-                    color: grey,
+                    color: colors_1.grey,
                     opacity: 1,
                 },
             },
@@ -350,13 +353,13 @@ export const theme = createMuiTheme({
                 fontSize: '1.5rem',
                 transition: 'all 0.2s ease-out',
                 '&:hover': {
-                    color: white,
+                    color: colors_1.white,
                 },
                 '&:focus': {
-                    color: primary,
+                    color: colors_1.primary,
                 },
                 '&:checked': {
-                    color: primary,
+                    color: colors_1.primary,
                 },
             },
             fontSizeSmall: {
@@ -366,7 +369,7 @@ export const theme = createMuiTheme({
         MuiCheckbox: {
             root: {
                 borderRadius: '3px',
-                color: grey,
+                color: colors_1.grey,
                 height: '18px',
                 marginRight: '10px',
                 padding: 0,
@@ -378,19 +381,19 @@ export const theme = createMuiTheme({
                     },
                 },
                 '&$checked:not($disabled):not($colorPrimary)': {
-                    backgroundColor: `${primary} !important`,
-                    border: `1px solid ${primary} !important`,
-                    color: `${baseDark} !important`,
+                    backgroundColor: colors_1.primary + " !important",
+                    border: "1px solid " + colors_1.primary + " !important",
+                    color: colors_1.baseDark + " !important",
                 },
                 '&$checked:not($disabled)': {
-                    backgroundColor: `${error} !important`,
-                    border: `1px solid ${error} !important`,
-                    color: `#392E3C !important`,
+                    backgroundColor: colors_1.error + " !important",
+                    border: "1px solid " + colors_1.error + " !important",
+                    color: "#392E3C !important",
                 },
                 '&$checked': {
-                    backgroundColor: `#384656 !important`,
-                    border: `1px solid #2F3B48 !important`,
-                    color: `${baseDark} !important`,
+                    backgroundColor: "#384656 !important",
+                    border: "1px solid #2F3B48 !important",
+                    color: colors_1.baseDark + " !important",
                 },
                 '&$disabled:not($checked)': {
                     color: 'transparent !important',
@@ -409,8 +412,8 @@ export const theme = createMuiTheme({
                 },
             },
             colorSecondary: {
-                backgroundColor: baseDark,
-                border: `1px solid ${grey}`,
+                backgroundColor: colors_1.baseDark,
+                border: "1px solid " + colors_1.grey,
                 borderRadius: '3px',
                 color: 'transparent',
                 height: '18px',
@@ -419,7 +422,7 @@ export const theme = createMuiTheme({
             },
             colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: `1px solid ${error}`,
+                border: "1px solid " + colors_1.error,
                 borderRadius: '3px',
                 color: 'transparent',
                 height: '18px',
@@ -434,7 +437,7 @@ export const theme = createMuiTheme({
             root: {
                 borderRadius: '50%',
                 boxSizing: 'border-box',
-                color: grey,
+                color: colors_1.grey,
                 height: '18px',
                 marginRight: '10px',
                 padding: 0,
@@ -446,19 +449,19 @@ export const theme = createMuiTheme({
                     },
                 },
                 '&$checked:not($disabled):not($colorPrimary)': {
-                    backgroundColor: `#1e262d !important`,
-                    border: `1px solid ${primary} !important`,
-                    color: `${primary} !important`,
+                    backgroundColor: "#1e262d !important",
+                    border: "1px solid " + colors_1.primary + " !important",
+                    color: colors_1.primary + " !important",
                 },
                 '&$checked:not($disabled)': {
-                    backgroundColor: `#392E3C !important`,
-                    border: `1px solid ${error} !important`,
-                    color: `${error} !important`,
+                    backgroundColor: "#392E3C !important",
+                    border: "1px solid " + colors_1.error + " !important",
+                    color: colors_1.error + " !important",
                 },
                 '&$checked': {
-                    backgroundColor: `${baseDark} !important`,
-                    border: `1px solid ${baseDark} !important`,
-                    color: `#35424e !important`,
+                    backgroundColor: colors_1.baseDark + " !important",
+                    border: "1px solid " + colors_1.baseDark + " !important",
+                    color: "#35424e !important",
                 },
                 '&$disabled:not($checked)': {
                     color: 'transparent !important',
@@ -477,8 +480,8 @@ export const theme = createMuiTheme({
                 },
             },
             colorSecondary: {
-                backgroundColor: baseDark,
-                border: `1px solid ${grey}`,
+                backgroundColor: colors_1.baseDark,
+                border: "1px solid " + colors_1.grey,
                 borderRadius: '50%',
                 color: 'transparent',
                 height: '18px',
@@ -487,7 +490,7 @@ export const theme = createMuiTheme({
             },
             colorPrimary: {
                 backgroundColor: 'rgba(255, 46, 99, 0.09)',
-                border: `1px solid ${error}`,
+                border: "1px solid " + colors_1.error,
                 borderRadius: '50%',
                 color: 'transparent',
                 height: '18px',
@@ -503,16 +506,16 @@ export const theme = createMuiTheme({
                 borderRadius: '4px',
                 lineHeight: 'initial',
                 '& option': {
-                    backgroundColor: `${baseDark} !important`,
-                    border: `1px solid ${baseDark} !important`,
-                    color: `#FFFFFF !important`,
+                    backgroundColor: colors_1.baseDark + " !important",
+                    border: "1px solid " + colors_1.baseDark + " !important",
+                    color: "#FFFFFF !important",
                 },
             },
             icon: {
                 color: 'rgba(147, 176, 193, 0.5)',
             },
             selectMenu: {
-                color: white,
+                color: colors_1.white,
                 fontSize: '14px',
                 lineHeight: '21px',
             },
@@ -525,8 +528,8 @@ export const theme = createMuiTheme({
         },
         MuiMenu: {
             paper: {
-                border: `1px solid ${primary}`,
-                boxShadow: `0 0 3px 1px ${primary}`,
+                border: "1px solid " + colors_1.primary,
+                boxShadow: "0 0 3px 1px " + colors_1.primary,
                 marginLeft: '-17px',
                 marginTop: '-6px',
                 maxHeight: '300px',
@@ -535,11 +538,11 @@ export const theme = createMuiTheme({
         },
         MuiPaper: {
             root: {
-                backgroundColor: baseDark,
+                backgroundColor: colors_1.baseDark,
                 border: '1px solid #384656',
                 boxShadow: 'none',
                 boxSizing: 'border-box',
-                color: white,
+                color: colors_1.white,
                 minWidth: '200px',
                 top: '535px',
                 left: '31px',
@@ -554,7 +557,7 @@ export const theme = createMuiTheme({
         },
         MuiFormGroup: {
             root: {
-                backgroundColor: base,
+                backgroundColor: colors_1.base,
                 marginBottom: '15px',
             },
         },
@@ -569,7 +572,7 @@ export const theme = createMuiTheme({
                 marginLeft: 0,
             },
             label: {
-                color: typography,
+                color: colors_1.typography,
                 fontSize: '16px',
                 lineHeight: '24px'
             },
@@ -588,7 +591,7 @@ export const theme = createMuiTheme({
             root: {
                 borderRadius: '4px',
                 boxSizing: 'border-box',
-                color: white,
+                color: colors_1.white,
                 fontSize: '13px',
                 fontWeight: 600,
                 height: '36px',
@@ -596,7 +599,7 @@ export const theme = createMuiTheme({
                 lineHeight: '16px',
                 minWidth: '120px',
                 '&$disabled': {
-                    color: white,
+                    color: colors_1.white,
                     opacity: 0.5,
                 },
             },
@@ -604,7 +607,7 @@ export const theme = createMuiTheme({
                 background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
                 border: '1px solid #0FB8D0',
                 boxShadow: 'none',
-                color: white,
+                color: colors_1.white,
                 '&:hover': {
                     background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
                 },
@@ -612,13 +615,13 @@ export const theme = createMuiTheme({
                     background: 'linear-gradient(to top right, #0A99D0 10%, #097CBA 70%);',
                 },
                 '&$disabled': {
-                    color: white,
+                    color: colors_1.white,
                 },
             },
             outlined: {
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
-                color: primary,
+                color: colors_1.primary,
                 '&:hover': {
                     background: '#313D49',
                     borderColor: '#23E6FE',
@@ -627,24 +630,24 @@ export const theme = createMuiTheme({
                     background: '#1E262E',
                 },
                 '&$disabled': {
-                    color: primary,
+                    color: colors_1.primary,
                     border: '2px solid #1CA9BA',
                 },
             },
             outlinedSecondary: {
                 background: 'transparent',
-                border: `1px solid ${typography}`,
-                color: typography,
+                border: "1px solid " + colors_1.typography,
+                color: colors_1.typography,
                 '&:hover': {
                     backgroundColor: '#313D49',
-                    border: `1px solid ${typography}`,
+                    border: "1px solid " + colors_1.typography,
                 },
                 '&:focus': {
-                    background: baseDark,
+                    background: colors_1.baseDark,
                 },
                 '&$disabled': {
-                    border: `1px solid ${typography}`,
-                    color: typography,
+                    border: "1px solid " + colors_1.typography,
+                    color: colors_1.typography,
                 },
             },
             sizeLarge: {
@@ -662,7 +665,7 @@ export const theme = createMuiTheme({
                 padding: '0 10px',
             },
             text: {
-                color: primary,
+                color: colors_1.primary,
                 fontSize: '14px',
                 fontWeight: 400,
                 letterSpacing: 'initial',
@@ -670,20 +673,20 @@ export const theme = createMuiTheme({
                 textTransform: 'initial',
                 '&:hover': {
                     backgroundColor: 'transparent',
-                    color: primaryTint,
+                    color: colors_1.primaryTint,
                     textDecoration: 'underline'
                 },
             }
         },
         MuiIconButton: {
             root: {
-                color: grey,
+                color: colors_1.grey,
                 padding: '7px 5px',
                 '&:hover': {
                     backgroundColor: 'transparent',
                 },
                 '&$disabled': {
-                    color: grey,
+                    color: colors_1.grey,
                 },
             },
         },
@@ -703,7 +706,7 @@ export const theme = createMuiTheme({
                 textOverflow: 'ellipsis',
             },
             head: {
-                backgroundColor: baseDark,
+                backgroundColor: colors_1.baseDark,
                 borderBottom: 0,
             },
             body: {
@@ -711,7 +714,7 @@ export const theme = createMuiTheme({
                 minHeight: '74px',
             },
             footer: {
-                color: warning,
+                color: colors_1.warning,
             },
         },
         MuiTooltip: {
@@ -723,10 +726,10 @@ export const theme = createMuiTheme({
         },
         MuiTabs: {
             root: {
-                borderBottom: `1px solid ${grey}`,
+                borderBottom: "1px solid " + colors_1.grey,
             },
             indicator: {
-                backgroundColor: primary,
+                backgroundColor: colors_1.primary,
                 height: '4px',
                 marginLeft: '-1px',
             },
@@ -737,20 +740,20 @@ export const theme = createMuiTheme({
             // 	lineHeight: '19px',
             // },
             root: {
-                borderBottom: `4px solid transparent`,
+                borderBottom: "4px solid transparent",
                 textTransform: 'initial',
                 minWidth: '0 !important',
                 '&:hover': {
-                    borderBottom: `4px solid ${grey}`,
+                    borderBottom: "4px solid " + colors_1.grey,
                     boxSizing: 'border-box',
-                    color: white,
+                    color: colors_1.white,
                 },
                 '&$selected': {
-                    color: white,
+                    color: colors_1.white,
                 },
             },
             textColorInherit: {
-                color: typography,
+                color: colors_1.typography,
             },
             wrapper: {
                 width: 'initial',
@@ -758,7 +761,7 @@ export const theme = createMuiTheme({
         },
         MuiExpansionPanel: {
             root: {
-                backgroundColor: base,
+                backgroundColor: colors_1.base,
                 borderRadius: '4px',
                 boxShadow: 'none',
                 position: 'initial',
@@ -772,7 +775,7 @@ export const theme = createMuiTheme({
                 paddingLeft: '30px',
             },
             expandIcon: {
-                color: typography,
+                color: colors_1.typography,
                 left: '18px',
                 padding: '0',
                 position: 'absolute',
@@ -808,7 +811,7 @@ export const theme = createMuiTheme({
         MuiTablePagination: {
             actions: {},
             select: {
-                backgroundColor: base,
+                backgroundColor: colors_1.base,
                 border: '1px solid #313D49',
                 borderRadius: 0,
                 paddingLeft: '12px',
@@ -816,7 +819,7 @@ export const theme = createMuiTheme({
                 textAlignLast: 'left',
             },
             selectIcon: {
-                color: primary,
+                color: colors_1.primary,
                 right: '5px',
                 top: '6px',
             },
@@ -860,19 +863,19 @@ export const theme = createMuiTheme({
                 border: '1px solid #1D505F',
                 borderRadius: '4px',
                 boxSizing: 'border-box',
-                fill: typography,
+                fill: colors_1.typography,
                 height: '44px',
                 minWidth: '48px',
                 textTransform: 'initial',
                 '&:hover': {
                     backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                    border: `1px solid ${primaryTint} !important`,
+                    border: "1px solid " + colors_1.primaryTint + " !important",
                 },
                 '&$selected': {
                     background: '#313D49',
-                    fill: primary,
-                    color: primary,
-                    border: `1px solid ${primaryTint} !important`,
+                    fill: colors_1.primary,
+                    color: colors_1.primary,
+                    border: "1px solid " + colors_1.primaryTint + " !important",
                 },
                 '&$disabled': {
                     opacity: 0.5,
@@ -913,15 +916,16 @@ export const theme = createMuiTheme({
                 width: '26px',
             },
             colorDefault: {
-                backgroundColor: baseLight,
+                backgroundColor: colors_1.baseLight,
             },
         },
     },
 });
-export const SelfkeyDarkTheme = ({ children }) => {
-    return React.createElement(MuiThemeProvider, { theme: theme },
-        React.createElement(CssBaseline, null),
+exports.SelfkeyDarkTheme = function (_a) {
+    var children = _a.children;
+    return React.createElement(core_1.MuiThemeProvider, { theme: exports.theme },
+        React.createElement(core_1.CssBaseline, null),
         children);
 };
-export default SelfkeyDarkTheme;
+exports.default = exports.SelfkeyDarkTheme;
 //# sourceMappingURL=selfkey-dark-theme.js.map

@@ -11,8 +11,8 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import {
     GreenTick,
     DeniedTick,
-    HourGlassIcon,
 } from '../../../src/materialui/lists';
+import { HourGlassIcon } from '../../../src';
 
 const underlineStyle = {
     textDecoration: 'underline',

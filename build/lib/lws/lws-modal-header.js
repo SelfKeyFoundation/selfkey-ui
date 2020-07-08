@@ -1,9 +1,12 @@
-import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
-import { CloseButtonIcon } from '../icons/close-button';
-import { SelfkeyLogo } from '../icons/selfkeyLogo';
-import { Typography } from '@material-ui/core';
-const styles = createStyles({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LWSModalHeader = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var close_button_1 = require("../icons/close-button");
+var selfkeyLogo_1 = require("../icons/selfkeyLogo");
+var core_2 = require("@material-ui/core");
+var styles = core_1.createStyles({
     root: {
         position: 'relative',
         background: '#1F2830',
@@ -29,10 +32,13 @@ const styles = createStyles({
         padding: '0 0 0 25px'
     }
 });
-export const LWSModalHeader = withStyles(styles)(({ classes, closeAction }) => (React.createElement("div", { className: classes.root },
-    React.createElement(SelfkeyLogo, { style: { width: '50px', height: '43px' } }),
-    React.createElement(Typography, { variant: "h1", className: classes.title }, "Login with SelfKey"),
-    React.createElement("button", { className: classes.closeButton, onClick: closeAction },
-        React.createElement(CloseButtonIcon, null)))));
-export default LWSModalHeader;
+exports.LWSModalHeader = core_1.withStyles(styles)(function (_a) {
+    var classes = _a.classes, closeAction = _a.closeAction;
+    return (React.createElement("div", { className: classes.root },
+        React.createElement(selfkeyLogo_1.SelfkeyLogo, { style: { width: '50px', height: '43px' } }),
+        React.createElement(core_2.Typography, { variant: "h1", className: classes.title }, "Login with SelfKey"),
+        React.createElement("button", { className: classes.closeButton, onClick: closeAction },
+            React.createElement(close_button_1.CloseButtonIcon, null))));
+});
+exports.default = exports.LWSModalHeader;
 //# sourceMappingURL=lws-modal-header.js.map

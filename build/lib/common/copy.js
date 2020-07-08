@@ -1,7 +1,23 @@
-import * as React from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { withStyles, createStyles } from '@material-ui/core';
-export const styles = createStyles({
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Copy = exports.CopyComponent = exports.styles = void 0;
+var React = require("react");
+var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
+var core_1 = require("@material-ui/core");
+exports.styles = core_1.createStyles({
     copyButton: {
         backgroundColor: 'transparent',
         border: '1px solid #3B4A5A',
@@ -24,31 +40,36 @@ export const styles = createStyles({
         letterSpacing: 'normal',
     }
 });
-export class CopyComponent extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.copyText = 'COPY';
-        this.copiedText = 'COPIED';
-        this.state = {
-            copyTextPlaceholder: this.copyText
+var CopyComponent = /** @class */ (function (_super) {
+    __extends(CopyComponent, _super);
+    function CopyComponent() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.copyText = 'COPY';
+        _this.copiedText = 'COPIED';
+        _this.state = {
+            copyTextPlaceholder: _this.copyText
         };
+        return _this;
     }
-    handleOnCopy() {
-        return () => {
-            this.setState({ copyTextPlaceholder: this.copiedText });
-            const bounceTime = setTimeout(() => {
-                this.setState({ copyTextPlaceholder: this.copyText });
+    CopyComponent.prototype.handleOnCopy = function () {
+        var _this = this;
+        return function () {
+            _this.setState({ copyTextPlaceholder: _this.copiedText });
+            var bounceTime = setTimeout(function () {
+                _this.setState({ copyTextPlaceholder: _this.copyText });
                 clearTimeout(bounceTime);
             }, 1000);
         };
-    }
-    render() {
-        const { text, classes } = this.props;
-        return (React.createElement(CopyToClipboard, { text: text, onCopy: this.handleOnCopy() },
+    };
+    CopyComponent.prototype.render = function () {
+        var _a = this.props, text = _a.text, classes = _a.classes;
+        return (React.createElement(react_copy_to_clipboard_1.CopyToClipboard, { text: text, onCopy: this.handleOnCopy() },
             React.createElement("button", { className: classes.copyButton },
                 React.createElement("span", { className: classes.copyButtonSpan }, this.state.copyTextPlaceholder))));
-    }
-}
-export const Copy = withStyles(styles)(CopyComponent);
-export default Copy;
+    };
+    return CopyComponent;
+}(React.Component));
+exports.CopyComponent = CopyComponent;
+exports.Copy = core_1.withStyles(exports.styles)(CopyComponent);
+exports.default = exports.Copy;
 //# sourceMappingURL=copy.js.map

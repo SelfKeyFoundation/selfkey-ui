@@ -129,6 +129,7 @@ import {
     SignatureIcon,
     SimpleCheckIcon,
     SimpleDeniedIcon,
+    SimpleHourglassIcon,
     SKIDIcon,
     SKUploadIcon,
     SmallRoundCompany,
@@ -1093,6 +1094,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<SimpleDeniedIcon />`}</code>
             </pre>
             <SimpleDeniedIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<SimpleHourglassIcon />`}</code>
+            </pre>
+            <SimpleHourglassIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>

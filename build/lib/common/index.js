@@ -1,6 +1,18 @@
-export * from './common-style';
-export * from './modal-box';
-export * from './copy';
-export * from './styled-button';
-export * from './copy-with-icon';
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./common-style"), exports);
+__exportStar(require("./modal-box"), exports);
+__exportStar(require("./copy"), exports);
+__exportStar(require("./styled-button"), exports);
+__exportStar(require("./copy-with-icon"), exports);
 //# sourceMappingURL=index.js.map

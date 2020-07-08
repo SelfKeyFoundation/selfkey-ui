@@ -1,7 +1,34 @@
-import * as React from 'react';
-import { Grid, withStyles, createStyles } from '@material-ui/core';
-import StyledButton from '../common/styled-button';
-const styles = createStyles({
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddressBookEdit = exports.AddressBookEditComponent = void 0;
+var React = require("react");
+var core_1 = require("@material-ui/core");
+var styled_button_1 = require("../common/styled-button");
+var styles = core_1.createStyles({
     errorText: {
         height: '19px',
         width: '242px',
@@ -41,45 +68,49 @@ const styles = createStyles({
         lineHeight: '15px'
     }
 });
-export class AddressBookEditComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleLabelChange = (event) => {
+var AddressBookEditComponent = /** @class */ (function (_super) {
+    __extends(AddressBookEditComponent, _super);
+    function AddressBookEditComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.handleLabelChange = function (event) {
             event.preventDefault();
-            const label = event.target.value;
-            this.setState({ ...this.state, label });
-            this.props.onLabelChange(label);
+            var label = event.target.value;
+            _this.setState(__assign(__assign({}, _this.state), { label: label }));
+            _this.props.onLabelChange(label);
         };
-        this.handleSubmit = (event) => {
+        _this.handleSubmit = function (event) {
             event.preventDefault();
-            return this.props.onSave(this.state.label);
+            return _this.props.onSave(_this.state.label);
         };
-        this.state = { label: props.label };
+        _this.state = { label: props.label };
+        return _this;
     }
-    componentDidUpdate() {
+    AddressBookEditComponent.prototype.componentDidUpdate = function () {
         // this.state = {label: this.props.label};
-    }
-    render() {
-        const { classes, labelError, onCancel } = this.props;
-        const hasLabelError = (labelError !== '' && labelError !== undefined);
-        const labelInputClass = `${classes.input} ${hasLabelError ? classes.errorColor : ''}`;
+    };
+    AddressBookEditComponent.prototype.render = function () {
+        var _a = this.props, classes = _a.classes, labelError = _a.labelError, onCancel = _a.onCancel;
+        var hasLabelError = (labelError !== '' && labelError !== undefined);
+        var labelInputClass = classes.input + " " + (hasLabelError ? classes.errorColor : '');
         return (React.createElement("form", { id: "formwrap", noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
-            React.createElement(Grid, { container: true, direction: 'column', spacing: 10 },
-                React.createElement(Grid, { item: true },
-                    React.createElement(Grid, { container: true, direction: 'column', spacing: 1 },
-                        React.createElement(Grid, { item: true },
+            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 10 },
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 1 },
+                        React.createElement(core_1.Grid, { item: true },
                             React.createElement("label", { className: classes.label }, "LABEL")),
-                        React.createElement(Grid, { item: true },
+                        React.createElement(core_1.Grid, { item: true },
                             React.createElement("input", { type: 'text', id: 'labelInput', onChange: this.handleLabelChange, value: this.state.label, className: labelInputClass, placeholder: "Address label" }),
                             hasLabelError && React.createElement("span", { id: 'labelError', className: classes.errorText }, labelError)))),
-                React.createElement(Grid, { item: true },
-                    React.createElement(Grid, { container: true, direction: 'row', spacing: 8 },
-                        React.createElement(Grid, { item: true },
-                            React.createElement(StyledButton, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || hasLabelError) }, "Save")),
-                        React.createElement(Grid, { item: true },
-                            React.createElement(StyledButton, { id: 'cancelButton', variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
-    }
-}
-export const AddressBookEdit = withStyles(styles)(AddressBookEditComponent);
-export default AddressBookEdit;
+                React.createElement(core_1.Grid, { item: true },
+                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 8 },
+                        React.createElement(core_1.Grid, { item: true },
+                            React.createElement(styled_button_1.default, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || hasLabelError) }, "Save")),
+                        React.createElement(core_1.Grid, { item: true },
+                            React.createElement(styled_button_1.default, { id: 'cancelButton', variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
+    };
+    return AddressBookEditComponent;
+}(React.Component));
+exports.AddressBookEditComponent = AddressBookEditComponent;
+exports.AddressBookEdit = core_1.withStyles(styles)(AddressBookEditComponent);
+exports.default = exports.AddressBookEdit;
 //# sourceMappingURL=address-book-edit.js.map

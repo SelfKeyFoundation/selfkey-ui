@@ -1,9 +1,12 @@
-import { Typography } from '@material-ui/core';
-import { withStyles, createStyles } from '@material-ui/core';
-import { typography, baseDark } from '../colors';
-const styles = createStyles({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tag = void 0;
+var core_1 = require("@material-ui/core");
+var core_2 = require("@material-ui/core");
+var colors_1 = require("../colors");
+var styles = core_2.createStyles({
     root: {
-        backgroundColor: baseDark,
+        backgroundColor: colors_1.baseDark,
         borderRadius: '10px',
         display: 'inline',
         lineHeight: '13px',
@@ -12,8 +15,8 @@ const styles = createStyles({
     },
     body1: {
         fontSize: '12px',
-        color: typography,
+        color: colors_1.typography,
     }
 });
-export const Tag = withStyles(styles)(Typography);
+exports.Tag = core_2.withStyles(styles)(core_1.Typography);
 //# sourceMappingURL=typography.js.map
