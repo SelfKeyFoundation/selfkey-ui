@@ -10,8 +10,6 @@ exports[`CheckedIcon should show CheckedIcon 1`] = `
     Object {
       "height": "44px",
       "marginRight": "13px",
-      "marginTop": "-10px",
-      "paddingTop": "17px",
       "width": "30px",
     }
   }
@@ -73,8 +71,6 @@ exports[`CheckedIcon unverified should show CheckedIcon unverified 1`] = `
     Object {
       "height": "44px",
       "marginRight": "13px",
-      "marginTop": "-10px",
-      "paddingTop": "17px",
       "width": "30px",
     }
   }
@@ -136,8 +132,6 @@ exports[`CheckedIcon verified should show CheckedIcon verified 1`] = `
     Object {
       "height": "44px",
       "marginRight": "13px",
-      "marginTop": "-10px",
-      "paddingTop": "17px",
       "width": "30px",
     }
   }
@@ -490,8 +484,6 @@ exports[`StepIcon should show StepIcon icon 1`] = `
     Object {
       "height": "44px",
       "marginRight": "13px",
-      "marginTop": "-10px",
-      "paddingTop": "17px",
       "width": "30px",
     }
   }
