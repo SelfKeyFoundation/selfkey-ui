@@ -57,8 +57,6 @@ var InsideTick = (function (color) { return (React.createElement("path", { d: "M
 var checkedStyle = {
     height: '44px',
     marginRight: '13px',
-    marginTop: '-3px',
-    paddingTop: '2px',
     width: '30px',
 };
 exports.CheckedIcon = (function (item) { return (React.createElement(core_1.SvgIcon, { width: "30px", height: "44px", viewBox: "0 0 30 44", style: checkedStyle },
