@@ -14,6 +14,7 @@ __exportStar(require("./button"), exports);
 __exportStar(require("./color-presentation"), exports);
 __exportStar(require("./datepicker"), exports);
 __exportStar(require("./inputs"), exports);
+__exportStar(require("./integrations"), exports);
 __exportStar(require("./lists"), exports);
 __exportStar(require("./modal-elements"), exports);
 __exportStar(require("./pagination"), exports);

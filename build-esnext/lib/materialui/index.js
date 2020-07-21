@@ -2,6 +2,7 @@ export * from './button';
 export * from './color-presentation';
 export * from './datepicker';
 export * from './inputs';
+export * from './integrations';
 export * from './lists';
 export * from './modal-elements';
 export * from './pagination';

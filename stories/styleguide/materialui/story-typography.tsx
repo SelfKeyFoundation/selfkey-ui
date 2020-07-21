@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Typography } from '@material-ui/core';
-import { Tag } from '../../../src';
+import { Tag, IntegrationComp, LightIntegrationIcon } from '../../../src';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -90,6 +90,20 @@ export default function TypographyStories () {
             <Typography variant="caption" gutterBottom>
                 Warning Message 16/24px
             </Typography><br/>
+
+            <Typography variant="h3" style={underlineStyle} gutterBottom>
+                Marketplace Badge System
+            </Typography>
+            <IntegrationComp status="deep" />
+            <br />
+            <IntegrationComp status="light" />
+            <br />
+            <IntegrationComp status="affiliate" />
+            <br />
+            <IntegrationComp message="test status" />
+            <br />
+            <IntegrationComp icon={<LightIntegrationIcon />} message="Icon & Message" />
+            <br />
         </div>
     )
 }
