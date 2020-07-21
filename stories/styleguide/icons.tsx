@@ -4,6 +4,7 @@ import { createStyles, withStyles } from '@material-ui/styles';
 import {
     AddressBookIcon,
     AddressBookMenuIcon,
+    AffiliateIntegrationIcon,
     AnimatedLoadingIcon,
     AttributeAlertIcon,
     BankIcon,
@@ -29,6 +30,7 @@ import {
     CorporateIcon,
     CustomIcon,
     DashboardMenuIcon,
+    DeepIntegrationIcon,
     DeleteIcon,
     DeniedIcon,
     DIDIcon,
@@ -69,6 +71,7 @@ import {
     KeyIcon,
     LedgerIcon,
     LifebuoyIcon,
+    LightIntegrationIcon,
     ListIcon,
     LoanIcon,
     LoansSmallIcon,
@@ -190,6 +193,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<AddressBookIcon />`}</code>
             </pre>
             <AddressBookIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<AffiliateIntegrationIcon />`}</code>
+            </pre>
+            <AffiliateIntegrationIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
@@ -365,6 +375,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<DashboardMenuIcon />`}</code>
             </pre>
             <DashboardMenuIcon width='16px' height='16px' viewBox='0 0 16 16' />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<DeepIntegrationIcon />`}</code>
+            </pre>
+            <DeepIntegrationIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
@@ -645,6 +662,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<LedgerIcon />`}</code>
             </pre>
             <LedgerIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<LightIntegrationIcon />`}</code>
+            </pre>
+            <LightIntegrationIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
