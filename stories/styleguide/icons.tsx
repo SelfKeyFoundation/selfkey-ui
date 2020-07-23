@@ -73,6 +73,9 @@ import {
     LifebuoyIcon,
     LightIntegrationIcon,
     ListIcon,
+    ListingLWSIcon,
+    ListingRecommendedIcon,
+    ListingTopChoiceIcon,
     LoanIcon,
     LoansSmallIcon,
     MailIcon,
@@ -676,6 +679,27 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<ListIcon />`}</code>
             </pre>
             <ListIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<ListingLWSIcon />`}</code>
+            </pre>
+            <ListingLWSIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<ListingRecommendedIcon />`}</code>
+            </pre>
+            <ListingRecommendedIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<ListingTopChoiceIcon />`}</code>
+            </pre>
+            <ListingTopChoiceIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
