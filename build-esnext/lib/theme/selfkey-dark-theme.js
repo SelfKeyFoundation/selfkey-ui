@@ -373,6 +373,8 @@ export const theme = createMuiTheme({
                 width: '18px',
                 '& svg': {
                     color: 'inherit',
+                    height: '22px',
+                    width: '22px',
                     '&:hover': {
                         color: 'inherit',
                     },
