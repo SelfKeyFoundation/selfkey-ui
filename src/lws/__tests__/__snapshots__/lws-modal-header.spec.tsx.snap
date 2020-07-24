@@ -8,7 +8,6 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
     aria-hidden="true"
     className="MuiSvgIcon-root"
     focusable="false"
-    height="20px"
     style={
       Object {
         "height": "43px",
@@ -16,7 +15,6 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
       }
     }
     viewBox="0 0 18 20"
-    width="18px"
   >
     <defs>
       <linearGradient
@@ -112,6 +110,12 @@ exports[`LWS Modal Header should show LWS Modal Header 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-4"
       focusable="false"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
     >
       <defs />

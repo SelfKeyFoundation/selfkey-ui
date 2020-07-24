@@ -5,9 +5,13 @@ exports[`Print Icon should show Print Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="71px"
+  style={
+    Object {
+      "height": "71px",
+      "width": "66px",
+    }
+  }
   viewBox="0 0 66 71"
-  width="66px"
 >
   <defs>
     <linearGradient

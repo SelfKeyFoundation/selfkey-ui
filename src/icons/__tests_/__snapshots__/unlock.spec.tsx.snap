@@ -3,8 +3,14 @@
 exports[`Unlock Icon should show Unlock Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "18px",
+      "width": "14px",
+    }
+  }
   viewBox="0 0 14 18"
 >
   <g

@@ -5,9 +5,13 @@ exports[`Clear Icon should show Clear Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="20px"
+  style={
+    Object {
+      "height": "20px",
+      "width": "34px",
+    }
+  }
   viewBox="0 0 34 20"
-  width="34px"
 >
   <defs />
   <g

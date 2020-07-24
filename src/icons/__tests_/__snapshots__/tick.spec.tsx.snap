@@ -3,8 +3,14 @@
 exports[`Tick Icon should show Tick Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "9px",
+      "width": "11px",
+    }
+  }
   viewBox="0 0 11 9"
 >
   <path

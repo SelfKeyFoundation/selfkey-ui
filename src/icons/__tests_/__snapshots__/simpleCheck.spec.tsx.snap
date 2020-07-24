@@ -3,11 +3,15 @@
 exports[`Simple Check should show Simple Check 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  height="45px"
+  style={
+    Object {
+      "height": "45px",
+      "width": "39px",
+    }
+  }
   viewBox="0 0 39 45"
-  width="39px"
 >
   <title>
     icon-simple-check

@@ -7,11 +7,15 @@ exports[`Copy With Icon should Copy With Icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root Component-root-4 CopyComponent-icon-2"
+    className="MuiSvgIcon-root CopyComponent-icon-2"
     focusable="false"
-    height="36px"
+    style={
+      Object {
+        "height": "36px",
+        "width": "30px",
+      }
+    }
     viewBox="0 0 30 36"
-    width="30px"
   >
     <g
       fillRule="evenodd"

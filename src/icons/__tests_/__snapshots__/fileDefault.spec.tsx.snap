@@ -3,8 +3,14 @@
 exports[`Filed Default Icon should show Filed Default Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "36px",
+      "width": "29px",
+    }
+  }
   viewBox="0 0 29 36"
 >
   <g

@@ -3,8 +3,14 @@
 exports[`Director Icon should show Director Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "29px",
+      "width": "30px",
+    }
+  }
   viewBox="0 0 30 29"
 >
   <g

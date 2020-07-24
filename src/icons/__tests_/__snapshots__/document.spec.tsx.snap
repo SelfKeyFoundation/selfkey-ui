@@ -3,8 +3,14 @@
 exports[`Document Icon should show Document Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "24px",
+      "width": "19px",
+    }
+  }
   viewBox="0 0 19 24"
 >
   <defs />

@@ -3,9 +3,14 @@
 exports[`Refresh Icon should show Refresh Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  version="1.1"
+  style={
+    Object {
+      "height": "23px",
+      "width": "22px",
+    }
+  }
   viewBox="0 0 22 23"
 >
   <title>

@@ -5,6 +5,12 @@ exports[`Info Tooltip Icon should show Info Tooltip Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-1"
   focusable="false"
+  style={
+    Object {
+      "height": "16px",
+      "width": "16px",
+    }
+  }
   viewBox="0 0 16 16"
 >
   <g

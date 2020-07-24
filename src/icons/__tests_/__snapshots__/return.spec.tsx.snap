@@ -3,8 +3,14 @@
 exports[`Return  Icon should show Return Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "18px",
+      "width": "15px",
+    }
+  }
   viewBox="0 0 15 18"
 >
   <g

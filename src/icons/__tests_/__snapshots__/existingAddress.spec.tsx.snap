@@ -5,9 +5,13 @@ exports[`Existing Address Icon should show Existing Address Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="25px"
+  style={
+    Object {
+      "height": "25px",
+      "width": "28px",
+    }
+  }
   viewBox="0 0 28 25"
-  width="28px"
 >
   <defs />
   <g

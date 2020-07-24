@@ -5,9 +5,13 @@ exports[`Unlock Large Icon should show Unlock Large Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="66px"
+  style={
+    Object {
+      "height": "66px",
+      "width": "66px",
+    }
+  }
   viewBox="0 0 66 66"
-  width="66px"
 >
   <defs>
     <linearGradient

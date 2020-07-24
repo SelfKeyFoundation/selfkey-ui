@@ -3,8 +3,14 @@
 exports[`Failed Icon should show Failed Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "26px",
+      "width": "26px",
+    }
+  }
   viewBox="0 0 26 26"
 >
   <defs />

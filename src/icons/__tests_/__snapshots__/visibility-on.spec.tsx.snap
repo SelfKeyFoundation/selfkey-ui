@@ -3,8 +3,14 @@
 exports[`Visibility on Icon should show Visibility on Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
+  style={
+    Object {
+      "height": "24px",
+      "width": "24px",
+    }
+  }
   viewBox="0 0 24 24"
 >
   <g>

@@ -5,9 +5,13 @@ exports[`Menu Button Icon should show Menu Button Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-1"
   focusable="false"
-  height="512px"
+  style={
+    Object {
+      "height": "24px",
+      "width": "24px",
+    }
+  }
   viewBox="0 0 459 459"
-  width="512px"
 >
   <g>
     <g
