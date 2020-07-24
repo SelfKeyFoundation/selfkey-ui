@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '15px !important',
-        height: '18px !important',
-    },
-});
+const styles = createStyles({});
 
 export const ReturnIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 15 18">
+    <SvgIcon style={{ width: props.width || '15px', height: props.height || '18px' }} {...props} viewBox={props.viewBox || '0 0 15 18'}>
         <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g
                 id="506.1---Exchange-Details-+-Active-Stake-+-Reclaim-KEY"

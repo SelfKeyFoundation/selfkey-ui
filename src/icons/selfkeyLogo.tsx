@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const SelfkeyLogo = ((props: SvgIconProps) => (
-    <SvgIcon width="18px" height="20px" {...props} viewBox="0 0 18 20">
+    <SvgIcon style={{ width: props.width || '18px', height: props.height || '20px' }} {...props} viewBox={props.viewBox || '0 0 18 20'}>
         <defs>
             <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="selfkey-logo-linearGradient-1">
                 <stop stopColor="#08BCCD" offset="0%"></stop>

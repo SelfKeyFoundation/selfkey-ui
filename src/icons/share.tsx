@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const ShareIcon = ((props: SvgIconProps) => (
-    <SvgIcon width="36px" height="36px" {...props} viewBox="0 0 36 36">
+    <SvgIcon style={{ width: props.width || '36px', height: props.height || '36px' }} {...props} viewBox={props.viewBox || '0 0 36 36'}>
         <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="351-Receive-KEY" transform="translate(-797.000000, -687.000000)" fillRule="nonzero">
                 <g id="Modal" transform="translate(341.000000, 235.000000)">

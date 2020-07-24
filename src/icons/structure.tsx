@@ -1,7 +1,12 @@
 import * as React from 'react';
+import { WithStyles, withStyles, createStyles } from '@material-ui/core';
+import { SvgIcon } from '@material-ui/core';
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-export const StructureIcon = () => (
-    <svg width="27px" height="24px" viewBox="0 0 27 24" version="1.1">
+const styles = createStyles({});
+
+export const StructureIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
+    <SvgIcon style={{ width: props.width || '27px', height: props.height || '24px' }} {...props} viewBox={props.viewBox || '0 0 27 24'}>
         <g id="🌈-UI-Guidelines" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="3.-Style-Guide---Forms" transform="translate(-1042.000000, -859.000000)" fill="inherit">
                 <g id="Line-3-Buttons" transform="translate(39.000000, 559.000000)">
@@ -15,7 +20,7 @@ export const StructureIcon = () => (
                 </g>
             </g>
         </g>
-    </svg>
-);
+    </SvgIcon>
+));
 
 export default StructureIcon;

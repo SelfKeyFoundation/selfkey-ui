@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '44px !important',
-        height: '36px !important'
-    }
-});
+const styles = createStyles({});
 
 export const SKIDIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 36 44'>
+    <SvgIcon style={{ width: props.width || '44px', height: props.height || '36px' }} {...props} viewBox={props.viewBox || '0 0 44 36'}>
         <defs>
             <linearGradient x1="11.0842631%" y1="62.5905801%" x2="36.0705554%" y2="15.6734694%" id="sk-id-linearGradient-1">
                 <stop stopColor="#09A8BA" offset="0%"></stop>

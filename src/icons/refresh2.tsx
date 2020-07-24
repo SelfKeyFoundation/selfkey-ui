@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '22px !important',
-        height: '23px !important',
-    },
-});
+const styles = createStyles({});
 
 export const NewRefreshIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 22 23" version="1.1">
+    <SvgIcon style={{ width: props.width || '22px', height: props.height || '23px' }} {...props} viewBox={props.viewBox || '0 0 22 23'}>
         <title>icon-refresh-statuses</title>
         <g id="👩🏼‍🚀-ID-Dashboard-refresh-icon-for-statuses" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="410.1-Marketplace-Applications-Statuses" transform="translate(-1223.000000, -389.000000)">

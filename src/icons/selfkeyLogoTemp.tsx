@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '177px !important',
-        height: '119px !important'
-    }
-});
+const styles = createStyles({});
 
 export const SelfkeyLogoTemp = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 177 119'>
+    <SvgIcon style={{ width: props.width || '177px', height: props.height || '119px' }} {...props} viewBox={props.viewBox || '0 0 177 119'}>
         <defs>
             <linearGradient x1="50%" y1="97.784%" x2="50%" y2="1.559%" id="selfkey-logo-temp-linearGradient-1">
                 <stop stopColor="#08BCCD" offset="0%"></stop>
