@@ -19,14 +19,12 @@ var colors_1 = require("../colors");
 var styles = core_1.createStyles({
     root: {
         fill: colors_1.grey,
-        height: '16px !important',
-        width: '16px !important',
         '&:hover': {
             fill: colors_1.white,
         },
     }
 });
-exports.MuiDeleteIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 16 16", version: "1.1" }),
+exports.MuiDeleteIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "304-Manage-My-Tokens", transform: "translate(-1244.000000, -597.000000)", fill: "inherit" },

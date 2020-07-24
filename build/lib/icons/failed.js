@@ -15,13 +15,8 @@ exports.FailedIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '26px !important',
-        height: '26px !important'
-    }
-});
-exports.FailedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 26 26" }),
+var styles = core_1.createStyles({});
+exports.FailedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '26px', height: props.height || '26px' } }, props, { viewBox: props.viewBox || '0 0 26 26' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-183.000000, -2021.000000)", fillRule: "nonzero" },

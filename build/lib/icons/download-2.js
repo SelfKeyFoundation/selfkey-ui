@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DownloadIcon2 = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.DownloadIcon2 = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "66px", height: "71px" }, props, { viewBox: "0 0 66 71" }),
+exports.DownloadIcon2 = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '71px' } }, props, { viewBox: props.viewBox || '0 0 66 71' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "11.0842631%", y1: "68.33943%", x2: "36.0705554%", y2: "0%", id: "download-2-linearGradient-1" },
             React.createElement("stop", { stopColor: "#09A8BA", offset: "0%" }),

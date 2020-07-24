@@ -15,13 +15,8 @@ exports.AttributeAlertIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '18px !important',
-        height: '20px !important',
-    },
-});
-exports.AttributeAlertIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 18 20", version: "1.1" }),
+var styles = core_1.createStyles({});
+exports.AttributeAlertIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '18px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 18 20' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "703.1---Incorporation-+-Submit-+-Errors", transform: "translate(-385.000000, -635.000000)", fill: "#E98548" },
             React.createElement("g", { id: "Modal1", transform: "translate(330.000000, 159.000000)" },

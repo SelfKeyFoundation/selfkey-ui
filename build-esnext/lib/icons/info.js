@@ -3,15 +3,13 @@ import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({
     root: {
-        width: '16px !important',
-        height: '16px !important',
         fill: '#C5D0DE',
         '&:hover': {
             fill: 'white',
         }
     }
 });
-export const InfoTooltip = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 16 16' }),
+export const InfoTooltip = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("g", { stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "3.-Style-Guide---Forms", transform: "translate(-1539.000000, -931.000000)", fillRule: "nonzero" },
             React.createElement("g", { id: "Tooltips", transform: "translate(1523.000000, 801.000000)" },

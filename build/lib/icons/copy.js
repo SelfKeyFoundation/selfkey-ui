@@ -15,13 +15,8 @@ exports.CopyIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '16px !important',
-        height: '16px !important',
-    }
-});
-exports.CopyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 14 16", version: "1.1" }),
+var styles = core_1.createStyles({});
+exports.CopyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '14px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 14 16' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", fillRule: "evenodd" },
         React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-1125.000000, -2025.000000)" },
             React.createElement("g", { id: "Transactions", transform: "translate(150.000000, 1616.000000)" },

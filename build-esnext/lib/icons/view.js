@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '22px !important',
-        height: '16px !important'
-    }
-});
-export const ViewIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 22 16", version: "1.1" }),
+const styles = createStyles({});
+export const ViewIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '22px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 22 16' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-1199.000000, -2026.000000)" },

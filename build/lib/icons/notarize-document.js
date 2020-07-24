@@ -23,7 +23,7 @@ var styles = core_1.createStyles({
         }
     }
 });
-exports.NotarizeDocumentIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '18px' } }, props, { viewBox: '0 0 16 18' }),
+exports.NotarizeDocumentIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '18px' } }, props, { viewBox: props.viewBox || '0 0 16 18' }),
     React.createElement("g", { id: "Notarize-document-icon", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "nt-d-i", transform: "translate(-1011.000000, -396.000000)", fill: "#FFFFFF" },
             React.createElement("g", { id: "nt-d-i-m", transform: "translate(150.000000, 264.000000)" },

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({});
-export const MoneyIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: "0 0 16 16" }),
+export const MoneyIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("g", { id: "Marketplace-Money", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "721---Bank-Accounts-money", transform: "translate(-931.000000, -279.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },

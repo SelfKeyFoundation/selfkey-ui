@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MailIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.MailIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "35px", height: "27px" }, props, { viewBox: "0 0 35 27" }),
+exports.MailIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '35px', height: props.height || '27px' } }, props, { viewBox: props.viewBox || '0 0 35 27' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-668.000000, -691.000000)", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(341.000000, 235.000000)" },

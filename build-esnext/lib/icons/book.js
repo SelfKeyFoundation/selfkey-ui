@@ -11,7 +11,7 @@ const styles = createStyles({
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const BookIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 68 55' }),
+export const BookIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || '0 0 68 55' }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-240.000000, -958.000000)", fill: "inherit", fillRule: "nonzero" },

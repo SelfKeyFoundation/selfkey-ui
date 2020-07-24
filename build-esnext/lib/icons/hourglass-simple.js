@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '27px !important',
-        height: '45px !important'
-    }
-});
-export const SimpleHourglassIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 27 45' }),
+const styles = createStyles({});
+export const SimpleHourglassIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '27px', height: props.height || '45px' } }, props, { viewBox: props.viewBox || '0 0 27 45' }),
     React.createElement("title", null, "icon-simple-hourglass"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-simle-hourglass-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses-simple-hourglass-icon", transform: "translate(-202.000000, -502.000000)", fill: "#93B0C1" },

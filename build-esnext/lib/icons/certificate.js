@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-        height: '20px !important',
-    },
-});
-export const CertificateIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 16 20", version: "1.1" }),
+const styles = createStyles({});
+export const CertificateIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 16 20' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "701.1---Incorporation-Taxes-View", transform: "translate(-925.000000, -277.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },

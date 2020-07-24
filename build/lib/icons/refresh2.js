@@ -15,13 +15,8 @@ exports.NewRefreshIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '22px !important',
-        height: '23px !important',
-    },
-});
-exports.NewRefreshIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 22 23", version: "1.1" }),
+var styles = core_1.createStyles({});
+exports.NewRefreshIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '22px', height: props.height || '23px' } }, props, { viewBox: props.viewBox || '0 0 22 23' }),
     React.createElement("title", null, "icon-refresh-statuses"),
     React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-refresh-icon-for-statuses", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-1223.000000, -389.000000)" },

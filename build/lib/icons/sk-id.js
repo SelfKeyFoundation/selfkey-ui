@@ -15,13 +15,8 @@ exports.SKIDIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '44px !important',
-        height: '36px !important'
-    }
-});
-exports.SKIDIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 36 44' }),
+var styles = core_1.createStyles({});
+exports.SKIDIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '44px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 44 36' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "11.0842631%", y1: "62.5905801%", x2: "36.0705554%", y2: "15.6734694%", id: "sk-id-linearGradient-1" },
             React.createElement("stop", { stopColor: "#09A8BA", offset: "0%" }),

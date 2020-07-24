@@ -15,13 +15,8 @@ exports.CertificateIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '16px !important',
-        height: '20px !important',
-    },
-});
-exports.CertificateIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 16 20", version: "1.1" }),
+var styles = core_1.createStyles({});
+exports.CertificateIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 16 20' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "701.1---Incorporation-Taxes-View", transform: "translate(-925.000000, -277.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },

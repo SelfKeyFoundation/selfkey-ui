@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-        height: '16px !important',
-    },
-});
-export const DeniedIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 16 16" }),
+const styles = createStyles({});
+export const DeniedIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("title", null, "icon-denied"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-icon-denied-ma", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410-Marketplace-Applications", transform: "translate(-1188.000000, -940.000000)", fill: "#FE4B61" },

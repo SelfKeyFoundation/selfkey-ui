@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {}
-});
+const styles = createStyles({});
 export const CustomIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '44px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || "0 0 24 24" }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.3-Navigation-Open---Default-State", transform: "translate(-1063.000000, -337.000000)", fill: "#00C0D9", fillRule: "nonzero" },

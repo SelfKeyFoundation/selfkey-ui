@@ -23,7 +23,7 @@ var styles = core_1.createStyles({
         }
     }
 });
-exports.ReplyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '22px', height: props.height || '19px' } }, props, { viewBox: '0 0 22 19' }),
+exports.ReplyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '22px', height: props.height || '19px' } }, props, { viewBox: props.viewBox || '0 0 22 19' }),
     React.createElement("g", { id: "Certifiers-Dashboard-info-icon", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "Certifier's-Messages-info-icon", transform: "translate(-1241.000000, -428.000000)" },
             React.createElement("g", { id: "Recent-Commisions-info-icon", transform: "translate(150.000000, 264.000000)" },

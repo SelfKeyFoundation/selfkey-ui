@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '18px !important',
-        height: '20px !important',
-    },
-});
-export const AttributeAlertIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 18 20", version: "1.1" }),
+const styles = createStyles({});
+export const AttributeAlertIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '18px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 18 20' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "703.1---Incorporation-+-Submit-+-Errors", transform: "translate(-385.000000, -635.000000)", fill: "#E98548" },
             React.createElement("g", { id: "Modal1", transform: "translate(330.000000, 159.000000)" },

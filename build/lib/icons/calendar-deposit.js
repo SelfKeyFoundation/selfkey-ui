@@ -15,13 +15,8 @@ exports.CalendarDepositIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '16px !important',
-        height: '16px !important'
-    }
-});
-exports.CalendarDepositIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 16 16' }),
+var styles = core_1.createStyles({});
+exports.CalendarDepositIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("title", null, "icon-calendar-deposit"),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-calendar-deposit", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "501.2-Exchange-Marketplace---Active-Stake", transform: "translate(-1054.000000, -161.000000)", fill: "#1CA9BA" },

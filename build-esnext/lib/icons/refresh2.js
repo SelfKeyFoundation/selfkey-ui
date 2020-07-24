@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '22px !important',
-        height: '23px !important',
-    },
-});
-export const NewRefreshIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 22 23", version: "1.1" }),
+const styles = createStyles({});
+export const NewRefreshIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '22px', height: props.height || '23px' } }, props, { viewBox: props.viewBox || '0 0 22 23' }),
     React.createElement("title", null, "icon-refresh-statuses"),
     React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-refresh-icon-for-statuses", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-1223.000000, -389.000000)" },

@@ -14,7 +14,7 @@ const styles = createStyles({
         transition: 'all 0.2s ease-out',
     }
 });
-export const ModalCloseIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { width: "38px", height: "38px", viewBox: "0 0 38 38", fontSize: "large" }),
+export const ModalCloseIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '38px', height: props.height || '38px' } }, props, { viewBox: props.viewBox || '0 0 38 38', fontSize: "large" }),
     React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "Close-button", transform: "translate(1.000000, 1.000000)" },
             React.createElement("g", { id: "icon-close-modal" },

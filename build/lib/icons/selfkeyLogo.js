@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SelfkeyLogo = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.SelfkeyLogo = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "18px", height: "20px" }, props, { viewBox: "0 0 18 20" }),
+exports.SelfkeyLogo = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '18px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 18 20' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "50%", y1: "97.784%", x2: "50%", y2: "1.559%", id: "selfkey-logo-linearGradient-1" },
             React.createElement("stop", { stopColor: "#08BCCD", offset: "0%" }),

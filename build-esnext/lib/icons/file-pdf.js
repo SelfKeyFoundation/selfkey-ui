@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '29px !important',
-        height: '36px !important'
-    }
-});
-export const FilePdfIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 29 36' }),
+const styles = createStyles({});
+export const FilePdfIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '29px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 29 36' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-Pdf-Icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "File-Pdf-Icon", transform: "translate(-392.000000, -1401.000000)", fill: "#697C95", fillRule: "nonzero" },
             React.createElement("g", { id: "Area-box-3", transform: "translate(150.000000, 1262.000000)" },
