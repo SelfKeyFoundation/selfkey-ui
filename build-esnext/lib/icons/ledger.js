@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SvgIcon } from '@material-ui/core';
-export const LedgerIcon = (props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '25px', height: props.height || '25px' } }, props, { viewBox: "0 0 25 25" }),
+export const LedgerIcon = (props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '25px', height: props.height || '25px' } }, props, { viewBox: props.viewBox || '0 0 25 25' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDEE0-Wallet-Setup", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "111---Import-Keystore-File-(UTC)", transform: "translate(-888.000000, -399.000000)", fill: "#23E6FE", fillRule: "nonzero" },

@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '44px !important',
-        height: '36px !important'
-    }
-});
-export const SKIDIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 36 44' }),
+const styles = createStyles({});
+export const SKIDIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '44px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 44 36' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "11.0842631%", y1: "62.5905801%", x2: "36.0705554%", y2: "15.6734694%", id: "sk-id-linearGradient-1" },
             React.createElement("stop", { stopColor: "#09A8BA", offset: "0%" }),

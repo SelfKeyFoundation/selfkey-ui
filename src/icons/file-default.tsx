@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-       width: '29px !important',
-       height: '36px !important',
-    }
-});
+const styles = createStyles({});
 
 export const FileDefaultIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 29 36">
+    <SvgIcon style={{ width: props.width || '29px', height: props.height || '36px' }} {...props} viewBox={props.viewBox || '0 0 29 36'}>
         <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g
                 id="406---Delete-Attribute"

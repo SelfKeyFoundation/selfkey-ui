@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const ClearIcon = ((props: SvgIconProps) => (
-    <SvgIcon width="34px" height="20px" {...props} viewBox="0 0 34 20">
+    <SvgIcon style={{ width: props.width || '34px', height: props.height || '20px' }} {...props} viewBox={props.viewBox || '0 0 34 20'}>
         <defs></defs>
         <g id="🛠-Wallet-Setup" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="118---Trezor---Enter-PIN" transform="translate(-810.000000, -640.000000)">

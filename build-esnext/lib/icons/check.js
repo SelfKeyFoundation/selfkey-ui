@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '18px !important',
-        height: '18px !important'
-    }
-});
-export const CheckIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 18 18' }),
+const styles = createStyles({});
+export const CheckIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '18px', height: props.height || '18px' } }, props, { viewBox: props.viewBox || '0 0 18 18' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "1.3.-Required-Information---missing-info", transform: "translate(-490.000000, -340.000000)", fill: "#1CBA7D" },

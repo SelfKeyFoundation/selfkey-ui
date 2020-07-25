@@ -3,11 +3,15 @@
 exports[`Clipboard Icon should show Clipboard Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  height="36px"
+  style={
+    Object {
+      "height": "36px",
+      "width": "30px",
+    }
+  }
   viewBox="0 0 30 36"
-  width="30px"
 >
   <g
     fillRule="evenodd"

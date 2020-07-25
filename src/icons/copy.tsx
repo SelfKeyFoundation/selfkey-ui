@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-        height: '16px !important',
-    }
-});
+const styles = createStyles({});
 
 export const CopyIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 14 16" version="1.1">
+    <SvgIcon style={{ width: props.width || '14px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || '0 0 14 16'}>
         <g id="🖥-Main-Dashboard" fillRule="evenodd">
             <g id="302-Dashboard-Full-State-Expanded" transform="translate(-1125.000000, -2025.000000)">
                 <g id="Transactions" transform="translate(150.000000, 1616.000000)">

@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '20px !important',
-        height: '20px !important'
-    }
-});
-export const UserPlusIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 20 20' }),
+const styles = createStyles({});
+export const UserPlusIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 20 20' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-user-plus", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "502-Exchange-Details-+-Not-Unlocked", transform: "translate(-929.000000, -275.000000)", fill: "#FFFFFF" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },

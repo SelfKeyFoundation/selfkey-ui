@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { SvgIcon, withStyles, createStyles } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '39px !important',
-        height: '45px !important'
-    }
-});
-export const SimpleDeniedIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ width: "39px", height: "45px" }, props, { viewBox: "0 0 39 45" }),
+const styles = createStyles({});
+export const SimpleDeniedIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '39px', height: props.height || '45px' } }, props, { viewBox: props.viewBox || '0 0 39 45' }),
     React.createElement("title", null, "icon-simple-denied"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-simple-denied", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "Statuses-denied", transform: "translate(-195.000000, -748.000000)", fill: "#FE4B61" },

@@ -3,9 +3,15 @@
 exports[`SKUpload Icon should show SKUpload Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  viewBox="0 0 36 32"
+  style={
+    Object {
+      "height": "36px",
+      "width": "32px",
+    }
+  }
+  viewBox="0 0 32 36"
 >
   <defs>
     <linearGradient

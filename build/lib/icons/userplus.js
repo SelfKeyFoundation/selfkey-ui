@@ -15,13 +15,8 @@ exports.UserPlusIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '20px !important',
-        height: '20px !important'
-    }
-});
-exports.UserPlusIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 20 20' }),
+var styles = core_1.createStyles({});
+exports.UserPlusIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '20px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 20 20' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-user-plus", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "502-Exchange-Details-+-Not-Unlocked", transform: "translate(-929.000000, -275.000000)", fill: "#FFFFFF" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },

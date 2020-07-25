@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '20px !important',
-        height: '20px !important',
-    },
-});
-export const CalendarIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 20 20", version: "1.1" }),
+const styles = createStyles({});
+export const CalendarIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 20 20' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "405.1---Edit-Attribute-+-Date-of-Birth", transform: "translate(-1035.000000, -347.000000)", fill: "#23E6FE" },
             React.createElement("g", { id: "Modal", transform: "translate(330.000000, 200.000000)" },

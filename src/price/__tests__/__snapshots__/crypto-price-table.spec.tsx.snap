@@ -293,8 +293,14 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-9 CryptoPriceTableComponent-iconSize-5"
+              className="MuiSvgIcon-root CryptoPriceTableComponent-iconSize-5"
               focusable="false"
+              style={
+                Object {
+                  "height": "24px",
+                  "width": "24px",
+                }
+              }
               viewBox="0 0 24 24"
             >
               <g>
@@ -391,8 +397,14 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-10 CryptoPriceTableComponent-iconSize-5"
+              className="MuiSvgIcon-root CryptoPriceTableComponent-iconSize-5"
               focusable="false"
+              style={
+                Object {
+                  "height": "24px",
+                  "width": "24px",
+                }
+              }
               viewBox="0 0 24 24"
             >
               <g>
@@ -489,8 +501,14 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-9 CryptoPriceTableComponent-iconSize-5"
+              className="MuiSvgIcon-root CryptoPriceTableComponent-iconSize-5"
               focusable="false"
+              style={
+                Object {
+                  "height": "24px",
+                  "width": "24px",
+                }
+              }
               viewBox="0 0 24 24"
             >
               <g>

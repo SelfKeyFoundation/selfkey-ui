@@ -7,8 +7,6 @@ import { primary, white } from '../colors';
 const styles = createStyles({
     root: {
         fill: white,
-        height: '44px !important',
-        width: '44px !important',
         '&:hover': {
             fill: primary,
         }
@@ -16,7 +14,7 @@ const styles = createStyles({
 });
 
 export const HardDriveIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon  {...props} viewBox="0 0 44 44" version="1.1">
+    <SvgIcon style={{ width: props.width || '44px', height: props.height || '44px' }} {...props} viewBox={props.viewBox || '0 0 44 44'}>
         <g stroke="none" strokeWidth="1"  fillRule="evenodd">
             <g id="5.-Style-Guide---UI-Elements" transform="translate(-1026.000000, -785.000000)" fill="inherit" fillRule="nonzero">
                 <g id="File-upload" transform="translate(930.000000, 124.000000)">

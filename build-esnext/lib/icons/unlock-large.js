@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SvgIcon } from '@material-ui/core';
-export const UnlockLargeIcon = ((props) => (React.createElement(SvgIcon, Object.assign({ width: "66px", height: "66px" }, props, { viewBox: "0 0 66 66" }),
+export const UnlockLargeIcon = ((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '66px', height: props.height || '66px' } }, props, { viewBox: props.viewBox || '0 0 66 66' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "11.0842631%", y1: "68.33943%", x2: "36.0705554%", y2: "0%", id: "unlock-large-linearGradient-1" },
             React.createElement("stop", { stopColor: "#09A8BA", offset: "0%" }),

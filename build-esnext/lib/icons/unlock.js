@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '14px !important',
-        height: '18px !important'
-    }
-});
-export const UnlockIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 14 18' }),
+const styles = createStyles({});
+export const UnlockIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '14px', height: props.height || '18px' } }, props, { viewBox: props.viewBox || '0 0 14 18' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-unlock-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "501-Exchange-Marketplace", transform: "translate(-1051.000000, -159.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 147.000000)" },

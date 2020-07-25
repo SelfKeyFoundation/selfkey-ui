@@ -15,11 +15,15 @@ exports[`Status Completed should show Status Completed 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-8 Component-statusIcon-3"
+          className="MuiSvgIcon-root Component-statusIcon-3"
           focusable="false"
-          height="45px"
+          style={
+            Object {
+              "height": "45px",
+              "width": "39px",
+            }
+          }
           viewBox="0 0 39 45"
-          width="39px"
         >
           <title>
             icon-simple-check
@@ -98,9 +102,14 @@ exports[`Status Completed should show Status Completed 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-9"
+            className="MuiSvgIcon-root"
             focusable="false"
-            version="1.1"
+            style={
+              Object {
+                "height": "23px",
+                "width": "22px",
+              }
+            }
             viewBox="0 0 22 23"
           >
             <title>
@@ -159,11 +168,15 @@ exports[`Status Completed should show Status Denied 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-10 Component-statusIcon-3"
+          className="MuiSvgIcon-root Component-statusIcon-3"
           focusable="false"
-          height="45px"
+          style={
+            Object {
+              "height": "45px",
+              "width": "39px",
+            }
+          }
           viewBox="0 0 39 45"
-          width="39px"
         >
           <title>
             icon-simple-denied
@@ -242,9 +255,14 @@ exports[`Status Completed should show Status Denied 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-9"
+            className="MuiSvgIcon-root"
             focusable="false"
-            version="1.1"
+            style={
+              Object {
+                "height": "23px",
+                "width": "22px",
+              }
+            }
             viewBox="0 0 22 23"
           >
             <title>
@@ -303,9 +321,14 @@ exports[`Status Completed should show Status Missing 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-11 Component-statusIcon-3"
+          className="MuiSvgIcon-root Component-statusIcon-3"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "height": "44px",
+              "width": "38px",
+            }
+          }
           viewBox="0 0 38 44"
         >
           <g
@@ -407,9 +430,14 @@ exports[`Status Completed should show Status Missing 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-9"
+            className="MuiSvgIcon-root"
             focusable="false"
-            version="1.1"
+            style={
+              Object {
+                "height": "23px",
+                "width": "22px",
+              }
+            }
             viewBox="0 0 22 23"
           >
             <title>
@@ -468,8 +496,14 @@ exports[`Status Completed should show Status Pending 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-12 Component-statusIcon-3"
+          className="MuiSvgIcon-root Component-statusIcon-3"
           focusable="false"
+          style={
+            Object {
+              "height": "45px",
+              "width": "27px",
+            }
+          }
           viewBox="0 0 27 45"
         >
           <title>
@@ -549,9 +583,14 @@ exports[`Status Completed should show Status Pending 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root Component-root-9"
+            className="MuiSvgIcon-root"
             focusable="false"
-            version="1.1"
+            style={
+              Object {
+                "height": "23px",
+                "width": "22px",
+              }
+            }
             viewBox="0 0 22 23"
           >
             <title>

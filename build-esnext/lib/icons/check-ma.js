@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-        height: '11px !important',
-    },
-});
-export const CheckMaIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 16 11" }),
+const styles = createStyles({});
+export const CheckMaIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '11px' } }, props, { viewBox: props.viewBox || '0 0 16 11' }),
     React.createElement("title", null, "icon-check-manage-applications"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-check-icon-ma", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410-Marketplace-Applications", transform: "translate(-1176.000000, -852.000000)", fill: "#1CBA7D" },

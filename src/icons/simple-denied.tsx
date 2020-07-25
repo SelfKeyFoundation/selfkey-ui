@@ -2,15 +2,10 @@ import * as React from 'react';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import { SvgIcon, WithStyles, withStyles, createStyles } from '@material-ui/core';
 
-const styles = createStyles({
-    root: {
-      width: '39px !important',
-      height: '45px !important'
-    }
-});
+const styles = createStyles({});
 
 export const SimpleDeniedIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon width="39px" height="45px" {...props} viewBox="0 0 39 45">
+    <SvgIcon style={{ width: props.width || '39px', height: props.height || '45px' }} {...props} viewBox={props.viewBox || '0 0 39 45'}>
         <title>icon-simple-denied</title>
         <g id="💻-ID-Dashboard-simple-denied" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="Statuses-denied" transform="translate(-195.000000, -748.000000)" fill="#FE4B61">

@@ -16,7 +16,7 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({});
-exports.MoneyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: "0 0 16 16" }),
+exports.MoneyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("g", { id: "Marketplace-Money", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "721---Bank-Accounts-money", transform: "translate(-931.000000, -279.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 146.000000)" },

@@ -5,9 +5,13 @@ exports[`Selfkey Logo Icon should show Selfkey Logo Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="20px"
+  style={
+    Object {
+      "height": "20px",
+      "width": "18px",
+    }
+  }
   viewBox="0 0 18 20"
-  width="18px"
 >
   <defs>
     <linearGradient

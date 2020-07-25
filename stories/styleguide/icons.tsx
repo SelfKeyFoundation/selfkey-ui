@@ -6,6 +6,7 @@ import {
     AddressBookMenuIcon,
     AnimatedLoadingIcon,
     AttributeAlertIcon,
+    AttributeAlertLargeIcon,
     BankIcon,
     BankRoundedIcon,
     BankSmallIcon,
@@ -204,6 +205,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<AttributeAlertIcon />`}</code>
             </pre>
             <AttributeAlertIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<AttributeAlertLargeIcon />`}</code>
+            </pre>
+            <AttributeAlertLargeIcon />
         </Grid>
 
         <Grid item className={classes.gridItem}>

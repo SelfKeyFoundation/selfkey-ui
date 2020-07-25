@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SvgIcon } from '@material-ui/core';
-export const IncorporationsIcon = ((props) => (React.createElement(SvgIcon, Object.assign({ width: "36px", height: "36px" }, props, { viewBox: "0 0 36 36", version: "1.1" }),
+export const IncorporationsIcon = ((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '36px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 36 36' }),
     React.createElement("g", { stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "700---Incorporations-Marketplace", transform: "translate(-150.000000, -153.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 153.000000)" },

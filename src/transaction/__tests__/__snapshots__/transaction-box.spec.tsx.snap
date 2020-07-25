@@ -11,9 +11,13 @@ exports[`Transaction Box should show Transaction Box with Custom text 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -76,9 +80,13 @@ exports[`Transaction Box should show Transaction Box with ETH Icon 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -120,8 +128,14 @@ exports[`Transaction Box should show Transaction Box with ETH Icon 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-7 Component-icon-3"
+      className="MuiSvgIcon-root Component-icon-3"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -159,9 +173,13 @@ exports[`Transaction Box should show Transaction Box with KEY Icon 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -203,8 +221,14 @@ exports[`Transaction Box should show Transaction Box with KEY Icon 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-8 Component-icon-3"
+      className="MuiSvgIcon-root Component-icon-3"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -243,9 +267,13 @@ exports[`Transaction Box should show Transaction Box with KI Icon 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -287,8 +315,14 @@ exports[`Transaction Box should show Transaction Box with KI Icon 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-8 Component-icon-3"
+      className="MuiSvgIcon-root Component-icon-3"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g

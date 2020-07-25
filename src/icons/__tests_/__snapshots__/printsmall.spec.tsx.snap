@@ -5,9 +5,13 @@ exports[`Print Small Icon should show Print Small Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="36px"
+  style={
+    Object {
+      "height": "36px",
+      "width": "34px",
+    }
+  }
   viewBox="0 0 34 36"
-  width="34px"
 >
   <g
     fillRule="evenodd"

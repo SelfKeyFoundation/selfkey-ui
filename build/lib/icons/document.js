@@ -15,13 +15,8 @@ exports.DocumentIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '19px !important',
-        height: '24px !important'
-    }
-});
-exports.DocumentIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 19 24' }),
+var styles = core_1.createStyles({});
+exports.DocumentIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '19px', height: props.height || '24px' } }, props, { viewBox: props.viewBox || '0 0 19 24' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "502-Exchange-Details-+-Coming-Soon", transform: "translate(-823.000000, -1018.000000)", fill: "#93B0C1" },

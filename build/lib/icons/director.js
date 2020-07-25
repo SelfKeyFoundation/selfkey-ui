@@ -15,13 +15,8 @@ exports.DirectorIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '30px !important',
-        height: '29px !important'
-    }
-});
-exports.DirectorIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 30 29' }),
+var styles = core_1.createStyles({});
+exports.DirectorIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '30px', height: props.height || '29px' } }, props, { viewBox: props.viewBox || '0 0 30 29' }),
     React.createElement("g", { id: "Corporate-Vault-icon-director", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-450.000000, -346.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 142.000000)" },

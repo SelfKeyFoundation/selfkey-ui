@@ -3,9 +3,14 @@
 exports[`Sent Icon should show Sent Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  version="1.1"
+  style={
+    Object {
+      "height": "26px",
+      "width": "26px",
+    }
+  }
   viewBox="0 0 26 26"
 >
   <defs />

@@ -5,7 +5,12 @@ exports[`Mui Delete Icon should show Mui Delete Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root Component-root-1"
   focusable="false"
-  version="1.1"
+  style={
+    Object {
+      "height": "16px",
+      "width": "16px",
+    }
+  }
   viewBox="0 0 16 16"
 >
   <defs />

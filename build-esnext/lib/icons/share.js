@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SvgIcon } from '@material-ui/core';
-export const ShareIcon = ((props) => (React.createElement(SvgIcon, Object.assign({ width: "36px", height: "36px" }, props, { viewBox: "0 0 36 36" }),
+export const ShareIcon = ((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '36px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 36 36' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-797.000000, -687.000000)", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(341.000000, 235.000000)" },

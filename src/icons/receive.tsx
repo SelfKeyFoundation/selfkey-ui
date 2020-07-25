@@ -4,15 +4,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '32px !important',
-        height: '26px !important'
-    }
-});
+const styles = createStyles({});
 
 export const ReceiveIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon { ...props } viewBox="0 0 32 26" version="1.1">
+    <SvgIcon style={{ width: props.width || '32px', height: props.height || '26px' }} {...props} viewBox={props.viewBox || '0 0 32 26'}>
         <defs></defs>
         <g id="🖥-Main-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="302-Dashboard-Full-State-Expanded" transform="translate(-180.000000, -1796.000000)" fill="#1CBA7D" fillRule="nonzero">

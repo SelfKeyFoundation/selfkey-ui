@@ -5,9 +5,13 @@ exports[`Mail Icon should show Mail Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="27px"
+  style={
+    Object {
+      "height": "27px",
+      "width": "35px",
+    }
+  }
   viewBox="0 0 35 27"
-  width="35px"
 >
   <g
     fillRule="evenodd"

@@ -15,13 +15,8 @@ exports.FileMultipleIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '29px !important',
-        height: '36px !important',
-    }
-});
-exports.FileMultipleIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 31 39' }),
+var styles = core_1.createStyles({});
+exports.FileMultipleIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '31px', height: props.height || '39px' } }, props, { viewBox: props.viewBox || '0 0 31 39' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-multiple-files", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "multiple-files", transform: "translate(-392.000000, -1692.000000)", stroke: "#697C95", strokeWidth: "1.71428571" },
             React.createElement("g", { id: "Group", transform: "translate(394.000000, 1693.000000)" },

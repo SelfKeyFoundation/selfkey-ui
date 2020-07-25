@@ -30,9 +30,14 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-12"
+          className="MuiSvgIcon-root"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "height": "20px",
+              "width": "18px",
+            }
+          }
           viewBox="0 0 18 20"
         >
           <g
@@ -87,9 +92,14 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-12"
+          className="MuiSvgIcon-root"
           focusable="false"
-          version="1.1"
+          style={
+            Object {
+              "height": "20px",
+              "width": "18px",
+            }
+          }
           viewBox="0 0 18 20"
         >
           <g
@@ -176,12 +186,12 @@ exports[`LWS Required Info should show LWS Required Info 1`] = `
       className="Component-formSubmitColumn-9"
     >
       <button
-        className="Component-root-13 Component-buttonSecondary-3"
+        className="Component-root-12 Component-buttonSecondary-3"
       >
         Cancel
       </button>
       <button
-        className="Component-root-13 Component-buttonPrimary-2"
+        className="Component-root-12 Component-buttonPrimary-2"
       >
         Allow
       </button>

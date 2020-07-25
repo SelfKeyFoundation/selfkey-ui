@@ -5,14 +5,12 @@ import { primary, white } from '../colors';
 const styles = createStyles({
     root: {
         fill: white,
-        height: '44px !important',
-        width: '44px !important',
         '&:hover': {
             fill: primary,
         }
     }
 });
-export const HardDriveIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 44 44", version: "1.1" }),
+export const HardDriveIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '44px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || '0 0 44 44' }),
     React.createElement("g", { stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "5.-Style-Guide---UI-Elements", transform: "translate(-1026.000000, -785.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "File-upload", transform: "translate(930.000000, 124.000000)" },

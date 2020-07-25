@@ -19,9 +19,13 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
         aria-hidden="true"
         className="MuiSvgIcon-root Component-root-11 MuiSvgIcon-fontSizeLarge"
         focusable="false"
-        height="38px"
+        style={
+          Object {
+            "height": "38px",
+            "width": "38px",
+          }
+        }
         viewBox="0 0 38 38"
-        width="38px"
       >
         <g
           fillRule="evenodd"

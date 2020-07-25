@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const PrintIcon = ((props: SvgIconProps) => (
-    <SvgIcon width="66px" height="71px" {...props} viewBox="0 0 66 71">
+    <SvgIcon style={{ width: props.width || '66px', height: props.height || '71px' }} {...props} viewBox={props.viewBox || '0 0 66 71'}>
         <defs>
             <linearGradient x1="11.0842631%" y1="68.33943%" x2="36.0705554%" y2="0%" id="print-linearGradient-1">
                 <stop stopColor="#09A8BA" offset="0%"></stop>

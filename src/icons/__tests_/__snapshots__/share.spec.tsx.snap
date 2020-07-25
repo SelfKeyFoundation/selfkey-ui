@@ -5,9 +5,13 @@ exports[`Share Icon should show Share Icon 1`] = `
   aria-hidden="true"
   className="MuiSvgIcon-root"
   focusable="false"
-  height="36px"
+  style={
+    Object {
+      "height": "36px",
+      "width": "36px",
+    }
+  }
   viewBox="0 0 36 36"
-  width="36px"
 >
   <g
     fillRule="evenodd"

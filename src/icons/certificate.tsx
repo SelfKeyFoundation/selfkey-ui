@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-        height: '20px !important',
-    },
-});
+const styles = createStyles({});
 
 export const CertificateIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 16 20" version="1.1">
+    <SvgIcon style={{ width: props.width || '16px', height: props.height || '20px' }} {...props} viewBox={props.viewBox || '0 0 16 20'}>
         <g id="💹-Marketplace" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="701.1---Incorporation-Taxes-View" transform="translate(-925.000000, -277.000000)" fill="#FFFFFF" fillRule="nonzero">
                 <g id="Modal" transform="translate(240.000000, 146.000000)">

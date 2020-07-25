@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '42px !important',
-        height: '39px !important'
-    }
-});
+const styles = createStyles({});
 
 export const StickIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 42 39'>
+    <SvgIcon style={{ width: props.width || '42px', height: props.height || '39px' }} {...props} viewBox={props.viewBox || '0 0 42 39'}>
         <defs></defs>
         <g id="Modal---Dark" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
             <g id="1.-Select-Wallet-Modal" transform="translate(-754.000000, -461.000000)" stroke="#23E6FE" strokeWidth="0.833333333">

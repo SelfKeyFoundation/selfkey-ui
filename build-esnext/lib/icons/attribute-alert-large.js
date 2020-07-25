@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { SvgIcon, withStyles, createStyles } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '38px !important',
-        height: '44px !important',
-    },
-});
-export const AttributeAlertLargeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 38 44", version: "1.1" }),
+const styles = createStyles({});
+export const AttributeAlertLargeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '38px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || '0 0 38 44' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-attribute-large-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-195.000000, -379.000000)", fill: "#E98548" },
             React.createElement("g", { id: "Content", transform: "translate(150.000000, 264.000000)" },

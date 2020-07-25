@@ -15,13 +15,8 @@ exports.DeniedIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '16px !important',
-        height: '16px !important',
-    },
-});
-exports.DeniedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 16 16" }),
+var styles = core_1.createStyles({});
+exports.DeniedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("title", null, "icon-denied"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-icon-denied-ma", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410-Marketplace-Applications", transform: "translate(-1188.000000, -940.000000)", fill: "#FE4B61" },

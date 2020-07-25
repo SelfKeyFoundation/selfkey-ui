@@ -14,13 +14,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AttributeAlertLargeIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '38px !important',
-        height: '44px !important',
-    },
-});
-exports.AttributeAlertLargeIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({}, props, { viewBox: "0 0 38 44", version: "1.1" }),
+var styles = core_1.createStyles({});
+exports.AttributeAlertLargeIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '38px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || '0 0 38 44' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-attribute-large-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "410.1-Marketplace-Applications-Statuses", transform: "translate(-195.000000, -379.000000)", fill: "#E98548" },
             React.createElement("g", { id: "Content", transform: "translate(150.000000, 264.000000)" },

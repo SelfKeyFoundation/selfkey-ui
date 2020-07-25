@@ -3,9 +3,7 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {}
-});
+const styles = createStyles({});
 
 export const CustomIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
     <SvgIcon style={{ width: props.width || '44px', height: props.height || '44px' }} {...props} viewBox={props.viewBox || "0 0 24 24"}>

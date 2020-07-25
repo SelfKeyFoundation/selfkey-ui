@@ -14,8 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RefreshIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.RefreshIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "24px", height: "26px" }, props, { viewBox: "0 0 24 26" }),
-    React.createElement("defs", null),
+exports.RefreshIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '24px', height: props.height || '26px' } }, props, { viewBox: props.viewBox || '0 0 24 26' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "301-Dashboard-+-Null-State", transform: "translate(-1231.000000, -985.000000)" },
             React.createElement("g", { id: "Transactions", transform: "translate(150.000000, 960.000000)" },

@@ -1,7 +1,9 @@
 import * as React from 'react';
+import { SvgIcon } from '@material-ui/core';
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-export const ListIcon = () => (
-    <svg width="32px" height="16px" viewBox="0 0 32 16" version="1.1">
+export const ListIcon = (props: SvgIconProps) => (
+    <SvgIcon style={{ width: props.width || '32px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || '0 0 32 16'}>
         <g id="🌈-UI-Guidelines" stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="3.-Style-Guide---Forms" transform="translate(-1098.000000, -863.000000)" fill="inherit">
                 <g id="Line-3-Buttons" transform="translate(39.000000, 559.000000)">
@@ -15,7 +17,7 @@ export const ListIcon = () => (
                 </g>
             </g>
         </g>
-    </svg>
+    </SvgIcon>
 );
 
 export default ListIcon;

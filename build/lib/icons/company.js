@@ -15,13 +15,8 @@ exports.CompanyIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '38px !important',
-        height: '35px !important'
-    }
-});
-exports.CompanyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 38 35' }),
+var styles = core_1.createStyles({});
+exports.CompanyIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '38px', height: props.height || '35px' } }, props, { viewBox: props.viewBox || '0 0 38 35' }),
     React.createElement("g", { id: "Corporate-Vault-company", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-755.000000, -594.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 142.000000)" },

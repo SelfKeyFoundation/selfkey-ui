@@ -15,13 +15,8 @@ exports.UnlockIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '14px !important',
-        height: '18px !important'
-    }
-});
-exports.UnlockIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 14 18' }),
+var styles = core_1.createStyles({});
+exports.UnlockIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '14px', height: props.height || '18px' } }, props, { viewBox: props.viewBox || '0 0 14 18' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-unlock-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "501-Exchange-Marketplace", transform: "translate(-1051.000000, -159.000000)", fill: "#FFFFFF", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 147.000000)" },

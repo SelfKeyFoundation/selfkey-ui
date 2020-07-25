@@ -11,9 +11,13 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -55,8 +59,14 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-14 Component-icon-10"
+      className="MuiSvgIcon-root Component-icon-10"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -87,7 +97,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-16"
+          className="MuiSvgIcon-root Component-root-15"
           focusable="false"
           style={
             Object {
@@ -261,9 +271,13 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -305,8 +319,14 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-14 Component-icon-10"
+      className="MuiSvgIcon-root Component-icon-10"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -337,7 +357,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-16"
+          className="MuiSvgIcon-root Component-root-15"
           focusable="false"
           style={
             Object {
@@ -511,9 +531,13 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -555,8 +579,14 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-14 Component-icon-10"
+      className="MuiSvgIcon-root Component-icon-10"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -587,7 +617,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-16"
+          className="MuiSvgIcon-root Component-root-15"
           focusable="false"
           style={
             Object {
@@ -761,9 +791,13 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -805,8 +839,14 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-14 Component-icon-10"
+      className="MuiSvgIcon-root Component-icon-10"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -837,7 +877,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-16"
+          className="MuiSvgIcon-root Component-root-15"
           focusable="false"
           style={
             Object {
@@ -1011,9 +1051,13 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -1055,8 +1099,14 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-14 Component-icon-10"
+      className="MuiSvgIcon-root Component-icon-10"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -1087,7 +1137,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-15"
+          className="MuiSvgIcon-root Component-root-14"
           focusable="false"
           style={
             Object {
@@ -1261,9 +1311,13 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -1305,8 +1359,14 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-14 Component-icon-10"
+      className="MuiSvgIcon-root Component-icon-10"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g
@@ -1337,7 +1397,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-16"
+          className="MuiSvgIcon-root Component-root-15"
           focusable="false"
           style={
             Object {
@@ -1511,9 +1571,13 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
       aria-hidden="true"
       className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
       focusable="false"
-      height="38px"
+      style={
+        Object {
+          "height": "38px",
+          "width": "38px",
+        }
+      }
       viewBox="0 0 38 38"
-      width="38px"
     >
       <g
         fillRule="evenodd"
@@ -1555,8 +1619,14 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-14 Component-icon-10"
+      className="MuiSvgIcon-root Component-icon-10"
       focusable="false"
+      style={
+        Object {
+          "height": "44px",
+          "width": "44px",
+        }
+      }
       viewBox="0 0 44 44"
     >
       <g

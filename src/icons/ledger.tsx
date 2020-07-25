@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const LedgerIcon = (props: SvgIconProps) => (
-    <SvgIcon style={{ width: props.width || '25px', height: props.height || '25px' }} {...props} viewBox="0 0 25 25">
+    <SvgIcon style={{ width: props.width || '25px', height: props.height || '25px' }} {...props} viewBox={props.viewBox || '0 0 25 25'}>
         <defs />
         <g id="🛠-Wallet-Setup" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g

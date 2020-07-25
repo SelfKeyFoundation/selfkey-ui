@@ -17,15 +17,13 @@ var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({
     root: {
-        width: '24px !important',
-        height: '24px !important',
         stroke: '#93B0C1',
         '&:hover': {
             stroke: 'white',
         }
     }
 });
-exports.GearIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 24 24", version: "1.1" }),
+exports.GearIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '24px', height: props.height || '24px' } }, props, { viewBox: props.viewBox || '0 0 24 24' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "301-Dashboard-+-Null-State", transform: "translate(-1236.000000, -505.000000)" },

@@ -3,7 +3,7 @@ import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 export const IncorporationsIcon = ((props: SvgIconProps) => (
-    <SvgIcon width="36px" height="36px" {...props} viewBox="0 0 36 36" version="1.1">
+    <SvgIcon style={{ width: props.width || '36px', height: props.height || '36px' }} {...props} viewBox={props.viewBox || '0 0 36 36'}>
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="700---Incorporations-Marketplace" transform="translate(-150.000000, -153.000000)" fill="#00C0D9" fillRule="nonzero">
                 <g id="Title" transform="translate(150.000000, 153.000000)">

@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-       width: '16px !important',
-       height: '11px !important',
-    },
-});
+const styles = createStyles({});
 
 export const CheckMaIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 16 11">
+    <SvgIcon style={{ width: props.width || '16px', height: props.height || '11px' }} {...props} viewBox={props.viewBox || '0 0 16 11'}>
         <title>icon-check-manage-applications</title>
         <g id="💻-ID-Dashboard-check-icon-ma" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="410-Marketplace-Applications" transform="translate(-1176.000000, -852.000000)" fill="#1CBA7D">

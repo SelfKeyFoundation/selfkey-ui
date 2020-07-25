@@ -15,13 +15,8 @@ exports.FileImageIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
-var styles = core_1.createStyles({
-    root: {
-        width: '29px !important',
-        height: '36px !important',
-    }
-});
-exports.FileImageIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: '0 0 29 36' }),
+var styles = core_1.createStyles({});
+exports.FileImageIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '29px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 29 36' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-Image-Icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "File-Image-Icon", transform: "translate(-392.000000, -1475.000000)", fill: "#697C95", fillRule: "nonzero" },
             React.createElement("g", { id: "Area-box-3", transform: "translate(150.000000, 1262.000000)" },

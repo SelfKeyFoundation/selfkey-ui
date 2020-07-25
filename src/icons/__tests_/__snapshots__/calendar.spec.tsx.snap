@@ -3,9 +3,14 @@
 exports[`Calendar  Icon should show Calendar Icon 1`] = `
 <svg
   aria-hidden="true"
-  className="MuiSvgIcon-root Component-root-1"
+  className="MuiSvgIcon-root"
   focusable="false"
-  version="1.1"
+  style={
+    Object {
+      "height": "20px",
+      "width": "20px",
+    }
+  }
   viewBox="0 0 20 20"
 >
   <g

@@ -194,8 +194,14 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root Component-root-17"
+          className="MuiSvgIcon-root"
           focusable="false"
+          style={
+            Object {
+              "height": "39px",
+              "width": "42px",
+            }
+          }
           viewBox="0 0 42 39"
         >
           <defs />
@@ -310,7 +316,7 @@ exports[`LWS Select Wallet should show LWS Select Wallet 1`] = `
         className="LWSSelectWalletComponent-formSubmitRow-8"
       >
         <button
-          className="Component-root-18 LWSSelectWalletComponent-buttonPrimary-10"
+          className="Component-root-17 LWSSelectWalletComponent-buttonPrimary-10"
           onClick={[Function]}
         >
           Log in

@@ -16,7 +16,7 @@ const styles = createStyles({
 const linearGradientColor = 'url(#default-linear-gradient)';
 
 export const BookIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon style={{ width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor }} {...props} viewBox='0 0 68 55'>
+    <SvgIcon style={{ width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor }} {...props} viewBox={props.viewBox || '0 0 68 55'}>
         <LinearGradient />
         <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="inherit" fillRule="evenodd">
             <g id="403---Identity-Summary" transform="translate(-240.000000, -958.000000)" fill="inherit" fillRule="nonzero">

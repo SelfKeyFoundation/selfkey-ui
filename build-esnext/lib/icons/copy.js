@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-        height: '16px !important',
-    }
-});
-export const CopyIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 14 16", version: "1.1" }),
+const styles = createStyles({});
+export const CopyIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '14px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 14 16' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", fillRule: "evenodd" },
         React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-1125.000000, -2025.000000)" },
             React.createElement("g", { id: "Transactions", transform: "translate(150.000000, 1616.000000)" },

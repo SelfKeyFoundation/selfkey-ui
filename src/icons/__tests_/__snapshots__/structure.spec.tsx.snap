@@ -2,10 +2,16 @@
 
 exports[`Structure Icon should show Structure Icon 1`] = `
 <svg
-  height="24px"
-  version="1.1"
+  aria-hidden="true"
+  className="MuiSvgIcon-root"
+  focusable="false"
+  style={
+    Object {
+      "height": "24px",
+      "width": "27px",
+    }
+  }
   viewBox="0 0 27 24"
-  width="27px"
 >
   <g
     fillRule="evenodd"

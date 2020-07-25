@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-        height: '16px !important'
-    }
-});
-export const CalendarDepositIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 16 16' }),
+const styles = createStyles({});
+export const CalendarDepositIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("title", null, "icon-calendar-deposit"),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace-calendar-deposit", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "501.2-Exchange-Marketplace---Active-Stake", transform: "translate(-1054.000000, -161.000000)", fill: "#1CA9BA" },

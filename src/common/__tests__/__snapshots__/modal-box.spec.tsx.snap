@@ -20,6 +20,12 @@ exports[`Modal Box should show Modal Box 1`] = `
         aria-hidden="true"
         className="MuiSvgIcon-root Component-root-5"
         focusable="false"
+        style={
+          Object {
+            "height": "38px",
+            "width": "38px",
+          }
+        }
         viewBox="0 0 38 38"
       >
         <defs />

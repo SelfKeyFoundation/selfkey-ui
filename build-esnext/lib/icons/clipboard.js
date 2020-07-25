@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '30px !important',
-        height: '36px !important',
-    },
-});
-export const ClipboardIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ width: "30px", height: "36px" }, props, { viewBox: "0 0 30 36" }),
+const styles = createStyles({});
+export const ClipboardIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '30px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 30 36' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "351-Receive-KEY", transform: "translate(-608.000000, -687.000000)", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(341.000000, 235.000000)" },

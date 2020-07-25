@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '30px !important',
-        height: '29px !important'
-    }
-});
-export const DirectorIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 30 29' }),
+const styles = createStyles({});
+export const DirectorIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '30px', height: props.height || '29px' } }, props, { viewBox: props.viewBox || '0 0 30 29' }),
     React.createElement("g", { id: "Corporate-Vault-icon-director", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "802---Add-New-Member", transform: "translate(-450.000000, -346.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "Modal", transform: "translate(240.000000, 142.000000)" },

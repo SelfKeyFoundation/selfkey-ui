@@ -5,8 +5,6 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
 const styles = createStyles({
     root: {
-        width: '16px !important',
-        height: '16px !important',
         fill: '#C5D0DE',
         '&:hover': {
             fill: 'white',
@@ -15,7 +13,7 @@ const styles = createStyles({
 });
 
 export const InfoTooltip = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox='0 0 16 16'>
+    <SvgIcon style={{ width: props.width || '16px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || '0 0 16 16'}>
         <g stroke="none" strokeWidth="1" fillRule="evenodd">
             <g id="3.-Style-Guide---Forms" transform="translate(-1539.000000, -931.000000)" fillRule="nonzero">
                 <g id="Tooltips" transform="translate(1523.000000, 801.000000)">

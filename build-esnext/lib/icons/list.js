@@ -1,5 +1,6 @@
 import * as React from 'react';
-export const ListIcon = () => (React.createElement("svg", { width: "32px", height: "16px", viewBox: "0 0 32 16", version: "1.1" },
+import { SvgIcon } from '@material-ui/core';
+export const ListIcon = (props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '32px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 32 16' }),
     React.createElement("g", { id: "\uD83C\uDF08-UI-Guidelines", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "3.-Style-Guide---Forms", transform: "translate(-1098.000000, -863.000000)", fill: "inherit" },
             React.createElement("g", { id: "Line-3-Buttons", transform: "translate(39.000000, 559.000000)" },

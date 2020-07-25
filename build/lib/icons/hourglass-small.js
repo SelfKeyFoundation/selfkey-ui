@@ -17,10 +17,8 @@ var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({});
 exports.HourGlassSmallIcon = core_1.withStyles(styles)(function (props) {
-    var width = props.width || '20px';
-    var height = props.height || '26px';
     var fill = props.fill || '#697C95';
-    return (React.createElement(core_2.SvgIcon, __assign({}, props, { style: { width: width, height: height }, viewBox: "0 0 20 26" }),
+    return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '20px', height: props.height || '26px' } }, props, { viewBox: props.viewBox || '0 0 20 26' }),
         React.createElement("defs", null),
         React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
             React.createElement("g", { id: "302-Dashboard-Full-State-Expanded", transform: "translate(-186.000000, -1871.000000)", fill: fill, fillRule: "nonzero" },

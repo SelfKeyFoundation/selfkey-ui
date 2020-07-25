@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-       width: '20px !important',
-       height: '20px !important',
-    },
-});
+const styles = createStyles({});
 
 export const CalendarIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 20 20" version="1.1">
+    <SvgIcon style={{ width: props.width || '20px', height: props.height || '20px' }} {...props} viewBox={props.viewBox || '0 0 20 20'}>
         <g id="💻-ID-Dashboard" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g
                 id="405.1---Edit-Attribute-+-Date-of-Birth"

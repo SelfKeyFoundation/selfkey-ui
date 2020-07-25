@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClearIcon = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-exports.ClearIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ width: "34px", height: "20px" }, props, { viewBox: "0 0 34 20" }),
+exports.ClearIcon = (function (props) { return (React.createElement(core_1.SvgIcon, __assign({ style: { width: props.width || '34px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 34 20' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDEE0-Wallet-Setup", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "118---Trezor---Enter-PIN", transform: "translate(-810.000000, -640.000000)" },

@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '32px !important',
-        height: '36px !important'
-    }
-});
-export const SKUploadIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 36 32' }),
+const styles = createStyles({});
+export const SKUploadIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '32px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 32 36' }),
     React.createElement("defs", null,
         React.createElement("linearGradient", { x1: "17.1575805%", y1: "68.33943%", x2: "38.2444302%", y2: "0%", id: "upload-linearGradient-1" },
             React.createElement("stop", { stopColor: "#09A8BA", offset: "0%" }),

@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { SvgIcon } from '@material-ui/core';
 import { withStyles, createStyles } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '39px !important',
-        height: '45px !important'
-    }
-});
-export const SimpleCheckIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ width: "39px", height: "45px" }, props, { viewBox: "0 0 39 45" }),
+const styles = createStyles({});
+export const SimpleCheckIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '39px', height: props.height || '45px' } }, props, { viewBox: props.viewBox || '0 0 39 45' }),
     React.createElement("title", null, "icon-simple-check"),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard-simple-check", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "Statuses-simple-check", transform: "translate(-195.000000, -625.000000)", fill: "#1CBA7D" },

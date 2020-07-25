@@ -10,8 +10,14 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root Component-root-3"
+        className="MuiSvgIcon-root"
         focusable="false"
+        style={
+          Object {
+            "height": "44px",
+            "width": "44px",
+          }
+        }
         viewBox="0 0 44 44"
       >
         <g
@@ -53,10 +59,10 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
   >
     <div>
       <div
-        className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        className="MuiGrid-root Component-row-5 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
       >
         <div
-          className="MuiGrid-root Component-cryptoCurrencyValue-4 MuiGrid-item"
+          className="MuiGrid-root Component-cryptoCurrencyValue-3 MuiGrid-item"
         >
           <div>
             4
@@ -65,10 +71,10 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        className="MuiGrid-root Component-row-5 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
       >
         <div
-          className="MuiGrid-root Component-currency-5 MuiGrid-item"
+          className="MuiGrid-root Component-currency-4 MuiGrid-item"
         >
           <div>
             $0.0174857
@@ -76,7 +82,7 @@ exports[`Transfer Price should show Transfer Price for key 1`] = `
           </div>
         </div>
         <div
-          className="MuiGrid-root Component-currency-5 MuiGrid-item"
+          className="MuiGrid-root Component-currency-4 MuiGrid-item"
         >
           USD
         </div>

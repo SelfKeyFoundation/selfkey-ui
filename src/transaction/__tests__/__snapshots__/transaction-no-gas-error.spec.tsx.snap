@@ -19,9 +19,13 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
         aria-hidden="true"
         className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
-        height="38px"
+        style={
+          Object {
+            "height": "38px",
+            "width": "38px",
+          }
+        }
         viewBox="0 0 38 38"
-        width="38px"
       >
         <g
           fillRule="evenodd"
@@ -211,9 +215,13 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
         aria-hidden="true"
         className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
-        height="38px"
+        style={
+          Object {
+            "height": "38px",
+            "width": "38px",
+          }
+        }
         viewBox="0 0 38 38"
-        width="38px"
       >
         <g
           fillRule="evenodd"
@@ -403,9 +411,13 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
         aria-hidden="true"
         className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
-        height="38px"
+        style={
+          Object {
+            "height": "38px",
+            "width": "38px",
+          }
+        }
         viewBox="0 0 38 38"
-        width="38px"
       >
         <g
           fillRule="evenodd"
@@ -595,9 +607,13 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
         aria-hidden="true"
         className="MuiSvgIcon-root Component-root-13 MuiSvgIcon-fontSizeLarge"
         focusable="false"
-        height="38px"
+        style={
+          Object {
+            "height": "38px",
+            "width": "38px",
+          }
+        }
         viewBox="0 0 38 38"
-        width="38px"
       >
         <g
           fillRule="evenodd"

@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
-const styles = createStyles({
-    root: {
-        width: '42px !important',
-        height: '39px !important'
-    }
-});
-export const StickIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: '0 0 42 39' }),
+const styles = createStyles({});
+export const StickIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '42px', height: props.height || '39px' } }, props, { viewBox: props.viewBox || '0 0 42 39' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
         React.createElement("g", { id: "1.-Select-Wallet-Modal", transform: "translate(-754.000000, -461.000000)", stroke: "#23E6FE", strokeWidth: "0.833333333" },

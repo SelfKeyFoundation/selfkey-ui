@@ -3,15 +3,10 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const styles = createStyles({
-    root: {
-        width: '16px !important',
-       height: '16px !important',
-    },
-});
+const styles = createStyles({});
 
 export const DeniedIcon = withStyles(styles)((props: SvgIconProps & WithStyles<typeof styles>) => (
-    <SvgIcon {...props} viewBox="0 0 16 16">
+    <SvgIcon style={{ width: props.width || '16px', height: props.height || '16px' }} {...props} viewBox={props.viewBox || '0 0 16 16'}>
         <title>icon-denied</title>
         <g id="💻-ID-Dashboard-icon-denied-ma" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="410-Marketplace-Applications" transform="translate(-1188.000000, -940.000000)" fill="#FE4B61">
