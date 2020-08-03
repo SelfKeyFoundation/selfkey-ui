@@ -19,11 +19,16 @@ var styles = core_2.createStyles({
     bold: {
         fontWeight: 600
     },
+    button: {
+        height: '36px',
+        minWidth: '80px',
+        width: '80px'
+    }
 });
 exports.BackButton = core_2.withStyles(styles)(function (_a) {
-    var classes = _a.classes, onclick = _a.onclick, leftPosition = _a.leftPosition, position = _a.position, props = __rest(_a, ["classes", "onclick", "leftPosition", "position"]);
+    var classes = _a.classes, id = _a.id, size = _a.size, onclick = _a.onclick, leftPosition = _a.leftPosition, position = _a.position, props = __rest(_a, ["classes", "id", "size", "onclick", "leftPosition", "position"]);
     return (React.createElement("div", { style: { left: leftPosition || 'initial', position: position || 'initial' } },
-        React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: "small", onClick: onclick },
+        React.createElement(core_1.Button, { variant: "outlined", color: "secondary", size: size ? size : 'null', onClick: onclick, id: id, className: classes.button },
             React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary", className: classes.bold }, "\u2039 Back"))));
 });
 //# sourceMappingURL=button.js.map
