@@ -56,6 +56,7 @@ import {
     FilterIcon,
     GearIcon,
     GreenTickIcon,
+    GridIcon,
     HardDriveIcon,
     HealthIcon,
     HelpIcon,
@@ -71,6 +72,7 @@ import {
     LedgerIcon,
     LifebuoyIcon,
     ListIcon,
+    List2Icon,
     LoanIcon,
     LoansSmallIcon,
     MailIcon,
@@ -559,6 +561,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 
         <Grid item className={classes.gridItem}>
             <pre className={classes.pre}>
+                <code className={classes.code}>{`<GridIcon />`}</code>
+            </pre>
+            <GridIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
                 <code className={classes.code}>{`<HardDriveIcon />`}</code>
             </pre>
             <HardDriveIcon />
@@ -660,6 +669,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
                 <code className={classes.code}>{`<ListIcon />`}</code>
             </pre>
             <ListIcon />
+        </Grid>
+
+        <Grid item className={classes.gridItem}>
+            <pre className={classes.pre}>
+                <code className={classes.code}>{`<List2Icon />`}</code>
+            </pre>
+            <List2Icon />
         </Grid>
 
         <Grid item className={classes.gridItem}>
