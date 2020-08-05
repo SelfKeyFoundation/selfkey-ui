@@ -782,7 +782,7 @@ exports.theme = core_1.createMuiTheme({
                 padding: '0',
                 position: 'absolute',
                 right: 'initial',
-                top: '47%',
+                top: '50%',
                 transform: 'translateY(-50%) rotate(-90deg)',
                 transformOrigin: '50%',
                 '&$expanded': {
