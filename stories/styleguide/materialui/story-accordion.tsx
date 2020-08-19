@@ -7,12 +7,11 @@ import {
     Divider,
     Grid
 } from '@material-ui/core';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import {
     GreenTick,
     DeniedTick,
 } from '../../../src/materialui/lists';
-import { HourGlassIcon } from '../../../src';
+import { HourGlassIcon, DropdownIcon } from '../../../src';
 
 const underlineStyle = {
     textDecoration: 'underline',
@@ -26,7 +25,7 @@ export default function AccordionStories () {
             </Typography>
 
             <ExpansionPanel >
-                <ExpansionPanelSummary expandIcon={<ExpandLessIcon />}>
+                <ExpansionPanelSummary expandIcon={<DropdownIcon />}>
                     <Grid container direction='row' justify='flex-start' alignItems='baseline'>
                         <Typography variant="h2">Location </Typography>
                         <Typography variant="subtitle2" color="secondary" gutterBottom>- Explanatory</Typography>
@@ -49,7 +48,7 @@ export default function AccordionStories () {
             <br/>
 
             <ExpansionPanel >
-                <ExpansionPanelSummary expandIcon={<ExpandLessIcon />}>
+                <ExpansionPanelSummary expandIcon={<DropdownIcon />}>
                     <Grid container direction='row' justify='flex-start' alignItems='baseline'>
                         <Typography variant="h2">Location</Typography>
                         <Typography variant="subtitle2" color="secondary" gutterBottom>- Explanatory</Typography>
@@ -72,7 +71,7 @@ export default function AccordionStories () {
             <br/>
 
             <ExpansionPanel>
-                <ExpansionPanelSummary expandIcon={<ExpandLessIcon />}>
+                <ExpansionPanelSummary expandIcon={<DropdownIcon />}>
                     <Grid container direction='row' justify='flex-start' alignItems='baseline'>
                         <Typography variant="h2">Location</Typography>
                         <Typography variant="subtitle2" color="secondary" gutterBottom>- Explanatory</Typography>

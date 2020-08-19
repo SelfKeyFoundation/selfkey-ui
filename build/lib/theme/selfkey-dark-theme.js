@@ -783,8 +783,11 @@ exports.theme = core_1.createMuiTheme({
                 position: 'absolute',
                 right: 'initial',
                 top: '50%',
-                transform: 'translateY(-50%) rotate(90deg)',
+                transform: 'translateY(-50%) rotate(-90deg)',
                 transformOrigin: '50%',
+                '&$expanded': {
+                    transform: 'translateY(-50%) rotate(0deg)',
+                },
             },
         },
         MuiDivider: {
