@@ -19,7 +19,7 @@ export const BackButton = withStyles(styles)(
     ({ classes, id, size, onclick, leftPosition, position, ...props }: BackButtonProps & WithStyles<typeof styles>) => {
         return (
             <div style={{ left: leftPosition || 'initial', position: position || 'initial' }}>
-                <Button variant="outlined" color="secondary" size={size ? size : 'null'} onClick={onclick} id={id} className={classes.button}>
+                <Button variant="outlined" color="secondary" size={size ? size : 'medium'} onClick={onclick} id={id} className={classes.button}>
                     <Typography variant="subtitle2" color="secondary" className={classes.bold}>
                         ‹ Back
                     </Typography>
