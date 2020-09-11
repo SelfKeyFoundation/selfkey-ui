@@ -683,7 +683,7 @@ exports.theme = core_1.createMuiTheme({
         MuiIconButton: {
             root: {
                 color: colors_1.grey,
-                padding: '7px 5px',
+                padding: '8px',
                 '&:hover': {
                     backgroundColor: 'transparent',
                 },

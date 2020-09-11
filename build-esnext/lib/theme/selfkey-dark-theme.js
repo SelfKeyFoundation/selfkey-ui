@@ -680,7 +680,7 @@ export const theme = createMuiTheme({
         MuiIconButton: {
             root: {
                 color: grey,
-                padding: '7px 5px',
+                padding: '8px',
                 '&:hover': {
                     backgroundColor: 'transparent',
                 },
