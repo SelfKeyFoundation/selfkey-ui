@@ -15,7 +15,7 @@ exports.ModalWrap = styles_1.withStyles(styles_1.createStyles({
         position: 'absolute',
         top: '150px',
         width: '780px',
-        marginBottom: '50px',
+        marginBottom: '48px',
     },
 }))(core_1.Paper);
 exports.ModalHeader = styles_1.withStyles(styles_1.createStyles({
@@ -27,7 +27,7 @@ exports.ModalHeader = styles_1.withStyles(styles_1.createStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         height: '65px',
-        padding: '18px 30px',
+        padding: '16px 32px',
         width: '100%',
     },
 }))(core_1.Paper);
@@ -39,7 +39,7 @@ exports.ModalBody = styles_1.withStyles(styles_1.createStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '30px 45px 60px',
+        padding: '32px 48px 56px',
         width: '100%',
     },
 }))(core_1.Paper);
@@ -51,7 +51,7 @@ exports.SmallModalBody = styles_1.withStyles(styles_1.createStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '30px 30px 40px',
+        padding: '32px 32px 40px',
         width: '100%',
     },
 }))(core_1.Paper);
