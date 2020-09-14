@@ -23,7 +23,7 @@ export const SmallTableRow = withStyles(createStyles({
 export const SmallTableCell = withStyles(createStyles({
     root: {
         height: '40px',
-        padding: '15px',
+        padding: '16px',
     },
     footer: {
         backgroundColor: warning,

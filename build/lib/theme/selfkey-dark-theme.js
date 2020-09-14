@@ -711,7 +711,7 @@ exports.theme = core_1.createMuiTheme({
         MuiTableCell: {
             root: {
                 borderBottom: 0,
-                padding: '15px 30px',
+                padding: '16px 24px',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
