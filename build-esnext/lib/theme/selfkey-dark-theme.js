@@ -608,6 +608,7 @@ export const theme = createMuiTheme({
                 border: '1px solid #0FB8D0',
                 boxShadow: 'none',
                 color: white,
+                padding: '8px 16px',
                 '&:hover': {
                     background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
                 },
@@ -625,6 +626,7 @@ export const theme = createMuiTheme({
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
                 color: primary,
+                padding: '8px 16px',
                 '&:hover': {
                     background: '#313D49',
                     borderColor: '#23E6FE',
