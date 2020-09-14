@@ -619,6 +619,9 @@ export const theme = createMuiTheme({
                     color: white,
                 },
             },
+            containedSizeLarge: {
+                padding: '8px 24px'
+            },
             outlined: {
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
@@ -634,6 +637,9 @@ export const theme = createMuiTheme({
                     color: primary,
                     border: '2px solid #1CA9BA',
                 },
+            },
+            outlinedSizeLarge: {
+                padding: '8px 24px'
             },
             outlinedSecondary: {
                 background: 'transparent',

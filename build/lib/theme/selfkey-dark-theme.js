@@ -620,6 +620,9 @@ exports.theme = core_1.createMuiTheme({
                     color: colors_1.white,
                 },
             },
+            containedSizeLarge: {
+                padding: '8px 24px'
+            },
             outlined: {
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
@@ -635,6 +638,9 @@ exports.theme = core_1.createMuiTheme({
                     color: colors_1.primary,
                     border: '2px solid #1CA9BA',
                 },
+            },
+            outlinedSizeLarge: {
+                padding: '8px 24px'
             },
             outlinedSecondary: {
                 background: 'transparent',
