@@ -597,6 +597,7 @@ export const theme = createMuiTheme({
                 letterSpacing: '0.6px',
                 lineHeight: '16px',
                 minWidth: '120px',
+                padding: '8px 16px',
                 '&$disabled': {
                     color: white,
                     opacity: 0.5,

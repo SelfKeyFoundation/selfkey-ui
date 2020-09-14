@@ -600,6 +600,7 @@ exports.theme = core_1.createMuiTheme({
                 letterSpacing: '0.6px',
                 lineHeight: '16px',
                 minWidth: '120px',
+                padding: '8px 16px',
                 '&$disabled': {
                     color: colors_1.white,
                     opacity: 0.5,
