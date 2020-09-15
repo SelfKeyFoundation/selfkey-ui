@@ -776,10 +776,10 @@ exports.theme = core_1.createMuiTheme({
                 borderRadius: '4px',
                 boxShadow: 'none',
                 position: 'initial',
+                '&$expanded': {
+                    margin: '0 0 16px'
+                }
             },
-            expanded: {
-                margin: '0 0 16px'
-            }
         },
         MuiExpansionPanelSummary: {
             content: {
