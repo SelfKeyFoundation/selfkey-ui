@@ -231,10 +231,7 @@ export const theme = createMuiTheme({
             },
             padding: {
                 boxSizing: 'border-box',
-                paddingBottom: '4px',
-                paddingLeft: '8px',
-                paddingRight: '8px',
-                paddingTop: '5px',
+                padding: '8px'
             },
         },
         MuiListItem: {
@@ -741,7 +738,7 @@ export const theme = createMuiTheme({
             indicator: {
                 backgroundColor: primary,
                 height: '4px',
-                marginLeft: '-1px',
+                marginLeft: 0,
             },
         },
         MuiTab: {
@@ -753,6 +750,7 @@ export const theme = createMuiTheme({
                 borderBottom: `4px solid transparent`,
                 textTransform: 'initial',
                 minWidth: '0 !important',
+                padding: '8px 16px',
                 '&:hover': {
                     borderBottom: `4px solid ${grey}`,
                     boxSizing: 'border-box',

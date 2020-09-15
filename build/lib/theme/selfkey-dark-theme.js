@@ -232,10 +232,7 @@ exports.theme = core_1.createMuiTheme({
             },
             padding: {
                 boxSizing: 'border-box',
-                paddingBottom: '4px',
-                paddingLeft: '8px',
-                paddingRight: '8px',
-                paddingTop: '5px',
+                padding: '8px'
             },
         },
         MuiListItem: {
@@ -742,7 +739,7 @@ exports.theme = core_1.createMuiTheme({
             indicator: {
                 backgroundColor: colors_1.primary,
                 height: '4px',
-                marginLeft: '-1px',
+                marginLeft: 0,
             },
         },
         MuiTab: {
@@ -754,6 +751,7 @@ exports.theme = core_1.createMuiTheme({
                 borderBottom: "4px solid transparent",
                 textTransform: 'initial',
                 minWidth: '0 !important',
+                padding: '8px 16px',
                 '&:hover': {
                     borderBottom: "4px solid " + colors_1.grey,
                     boxSizing: 'border-box',
