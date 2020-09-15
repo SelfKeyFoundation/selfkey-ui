@@ -237,7 +237,7 @@ exports.theme = core_1.createMuiTheme({
         },
         MuiListItem: {
             root: {
-                marginBottom: '10px',
+                marginBottom: '8px',
                 paddingBottom: '0',
                 paddingTop: '0',
                 '&$selected': {

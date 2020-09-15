@@ -234,7 +234,7 @@ export const theme = createMuiTheme({
         },
         MuiListItem: {
             root: {
-                marginBottom: '10px',
+                marginBottom: '8px',
                 paddingBottom: '0',
                 paddingTop: '0',
                 '&$selected': {
