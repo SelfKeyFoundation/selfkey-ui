@@ -774,6 +774,9 @@ export const theme = createMuiTheme({
                 boxShadow: 'none',
                 position: 'initial',
             },
+            expanded: {
+                margin: '0 0 16px'
+            }
         },
         MuiExpansionPanelSummary: {
             content: {

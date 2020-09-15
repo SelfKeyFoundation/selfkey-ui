@@ -777,6 +777,9 @@ exports.theme = core_1.createMuiTheme({
                 boxShadow: 'none',
                 position: 'initial',
             },
+            expanded: {
+                margin: '0 0 16px'
+            }
         },
         MuiExpansionPanelSummary: {
             content: {
