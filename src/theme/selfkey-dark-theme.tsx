@@ -788,7 +788,7 @@ export const theme = createMuiTheme({
                 alignItems: 'baseline',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                paddingLeft: '30px',
+                paddingLeft: '32px',
             },
             expandIcon: {
                 color: typography,

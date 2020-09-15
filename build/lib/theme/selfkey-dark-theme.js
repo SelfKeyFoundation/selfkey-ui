@@ -786,7 +786,7 @@ exports.theme = core_1.createMuiTheme({
                 alignItems: 'baseline',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                paddingLeft: '30px',
+                paddingLeft: '32px',
             },
             expandIcon: {
                 color: colors_1.typography,
