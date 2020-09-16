@@ -556,7 +556,7 @@ export const theme = createMuiTheme({
         MuiFormGroup: {
             root: {
                 backgroundColor: base,
-                marginBottom: '15px',
+                marginBottom: '16px',
             },
         },
         MuiFormControl: {

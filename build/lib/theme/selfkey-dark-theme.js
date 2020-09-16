@@ -557,7 +557,7 @@ exports.theme = core_1.createMuiTheme({
         MuiFormGroup: {
             root: {
                 backgroundColor: colors_1.base,
-                marginBottom: '15px',
+                marginBottom: '16px',
             },
         },
         MuiFormControl: {
