@@ -639,7 +639,7 @@ export const theme = createMuiTheme({
                 },
             },
             outlinedSizeLarge: {
-                padding: '8px 16px'
+                padding: '8px 24px'
             },
             outlinedSecondary: {
                 background: 'transparent',

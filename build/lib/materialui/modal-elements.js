@@ -39,7 +39,7 @@ exports.ModalBody = styles_1.withStyles(styles_1.createStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         minHeight: '200px',
-        padding: '32px 48px 56px',
+        padding: '32px 40px 56px',
         width: '100%',
     },
 }))(core_1.Paper);
