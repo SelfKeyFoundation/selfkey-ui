@@ -640,7 +640,7 @@ exports.theme = core_1.createMuiTheme({
                 },
             },
             outlinedSizeLarge: {
-                padding: '8px 24px'
+                padding: '8px 16px'
             },
             outlinedSecondary: {
                 background: 'transparent',
