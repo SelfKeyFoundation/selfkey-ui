@@ -171,9 +171,11 @@ export class CryptoChartBoxComponent extends React.Component {
         if (!tokens) {
             return;
         }
+        const activations = [...this.state.activations];
         tokens.forEach((token, index) => {
-            this.state.activations[index] = { active: false };
+            activations[index] = { active: false };
         });
+        this.setState({ activations });
     }
     initSelection() {
         this.selection = [];
