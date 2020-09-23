@@ -9,6 +9,8 @@ import { CryptoPriceList } from './crypto-price-list';
 import { TokenList } from './token-list';
 import { CryptoChartBox } from '../../src/price/crypto-chart-box';
 import { CryptoPriceTable } from '../../src/price/crypto-price-table';
+import { PriceSummary } from '../../src/price/price-summary';
+import { NumberFormat } from '../../src/price/number-format';
 import { TransferPriceWrapper } from './transfer-price';
 import { TransactionNoGasError } from '../../src/transaction/transaction-no-gas-error';
 import { TransactionFeeSelector } from '../../src/transaction/transaction-fee-selector';
@@ -51,6 +53,7 @@ import DatePickerStories from './materialui/story-datepickers';
 import SliderStory from './materialui/story-sliders';
 import { IconsStory } from './icons';
 import StatusStories from './materialui/story-statuses';
+
 
 // setup();
 
@@ -95,6 +98,22 @@ priceStory.addWithJSX('CryptoChartBox', () => (
         ]}
         topTokenListSize={5}
         viewAll={true}
+    />
+));
+priceStory.addWithJSX('NumberFormat', () => (
+    <SelfkeyDarkTheme><NumberFormat locale={'en'} fractionDigits={3} value={10.23123123123123} priceStyle="decimal" showCurrency currency="KEY"/></SelfkeyDarkTheme>
+));
+priceStory.addWithJSX('NumberFormat fiat', () => (
+    <SelfkeyDarkTheme><NumberFormat locale={'en'} value={10.23123123123123} priceStyle="currency"  currency="USD"/></SelfkeyDarkTheme>
+));
+priceStory.addWithJSX('PriceSummary', () => (
+    <PriceSummary
+        locale={'en'}
+        priceStyle="decimal"
+        currency='KEY'
+        fractionDigits={3}
+        value={30.1231231}
+        appendCurrency
     />
 ));
 

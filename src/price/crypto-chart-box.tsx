@@ -181,11 +181,13 @@ export class CryptoChartBoxComponent extends React.Component<StyledProps, Crypto
 
     initActivations(tokens: Array<Token>) {
         if (!tokens) {
-        return;
+            return;
         }
+        const activations = [...this.state.activations];
         tokens.forEach((token, index) => {
-        this.state.activations[index] = {active: false};
+            activations[index] = {active: false};
         });
+        this.setState({activations});
     }
 
     initSelection() {

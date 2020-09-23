@@ -12,6 +12,13 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CryptoChartBox = exports.CryptoChartBoxComponent = void 0;
 var React = require("react");
@@ -186,13 +193,14 @@ var CryptoChartBoxComponent = /** @class */ (function (_super) {
         return _this;
     }
     CryptoChartBoxComponent.prototype.initActivations = function (tokens) {
-        var _this = this;
         if (!tokens) {
             return;
         }
+        var activations = __spreadArrays(this.state.activations);
         tokens.forEach(function (token, index) {
-            _this.state.activations[index] = { active: false };
+            activations[index] = { active: false };
         });
+        this.setState({ activations: activations });
     };
     CryptoChartBoxComponent.prototype.initSelection = function () {
         this.selection = [];
