@@ -95,7 +95,7 @@ const InsideTick = ((color: any) => (
 
 const checkedStyle = {
     height: '44px',
-    marginRight: '13px',
+    marginRight: '16px',
     width: '30px',
 };
 

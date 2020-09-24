@@ -9,7 +9,7 @@ exports[`CheckedIcon should show CheckedIcon 1`] = `
   style={
     Object {
       "height": "44px",
-      "marginRight": "13px",
+      "marginRight": "16px",
       "width": "30px",
     }
   }
@@ -70,7 +70,7 @@ exports[`CheckedIcon unverified should show CheckedIcon unverified 1`] = `
   style={
     Object {
       "height": "44px",
-      "marginRight": "13px",
+      "marginRight": "16px",
       "width": "30px",
     }
   }
@@ -131,7 +131,7 @@ exports[`CheckedIcon verified should show CheckedIcon verified 1`] = `
   style={
     Object {
       "height": "44px",
-      "marginRight": "13px",
+      "marginRight": "16px",
       "width": "30px",
     }
   }
@@ -483,7 +483,7 @@ exports[`StepIcon should show StepIcon icon 1`] = `
   style={
     Object {
       "height": "44px",
-      "marginRight": "13px",
+      "marginRight": "16px",
       "width": "30px",
     }
   }
