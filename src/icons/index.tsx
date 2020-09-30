@@ -1,4 +1,11 @@
-export { DefaultBullet, GreenTick, DeniedTick, CheckedIcon, StepIcon, Line } from '../materialui/lists';
+export {
+	DefaultBullet,
+	GreenTick,
+	DeniedTick,
+	CheckedIcon,
+	StepIcon,
+	Line
+} from '../materialui/lists';
 export * from './address-book-menu';
 export * from './address-book';
 export * from './animated-loading';
@@ -80,6 +87,7 @@ export * from './marketplace-notaries';
 export * from './member';
 export * from './metals';
 export * from './menu-affiliate';
+export * from './menu-staking';
 export * from './menu-button';
 export * from './menu-help';
 export * from './menu-export';
@@ -123,6 +131,7 @@ export * from './select-dropdown';
 export * from './selfkey-id-menu';
 export * from './selfkey';
 export * from './selfkeyLogo';
+export * from './lock-logo';
 export * from './selfkeyLogoTemp';
 export * from './sent-blue';
 export * from './sent';
