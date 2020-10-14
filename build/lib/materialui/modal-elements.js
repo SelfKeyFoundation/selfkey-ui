@@ -20,13 +20,16 @@ exports.ModalWrap = styles_1.withStyles(styles_1.createStyles({
 }))(core_1.Paper);
 exports.ModalHeader = styles_1.withStyles(styles_1.createStyles({
     root: {
+        alignItems: 'center',
         backgroundColor: '#2A3540',
         border: 'none',
         borderBottom: '1px solid #303C49',
         borderRadius: '3px 3px 0 0',
         boxShadow: 'none',
         boxSizing: 'border-box',
+        display: 'flex',
         height: '65px',
+        justifyContent: 'space-between',
         padding: '16px 32px',
         width: '100%',
     },
