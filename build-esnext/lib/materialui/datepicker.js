@@ -157,6 +157,9 @@ const styles = createStyles({
         '& .rdtOld': {
             color: '#404B55',
         },
+        '& .rdtDisabled': {
+            color: '#404B55',
+        },
         '& .rdtMonth': {
             cursor: 'pointer',
             fontWeight: 600,
