@@ -285,7 +285,7 @@ exports.theme = core_1.createMuiTheme({
                     backgroundColor: 'rgba(255, 46, 99, 0.09)',
                     border: "1px solid " + colors_1.error,
                     color: colors_1.error,
-                    marginBottom: '6px',
+                    marginBottom: '8px',
                 },
                 '&$focused': {
                     '&$focused:not($error):not($disabled)': {

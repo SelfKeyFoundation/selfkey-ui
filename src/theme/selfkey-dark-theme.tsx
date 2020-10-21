@@ -284,7 +284,7 @@ export const theme = createMuiTheme({
                     backgroundColor: 'rgba(255, 46, 99, 0.09)',
                     border: `1px solid ${error}`,
                     color: error,
-                    marginBottom: '6px',
+                    marginBottom: '8px',
                 },
                 '&$focused': {
                     '&$focused:not($error):not($disabled)': {
