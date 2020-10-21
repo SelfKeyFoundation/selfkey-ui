@@ -27,11 +27,10 @@ exports.styles = core_1.createStyles({
         display: 'flex',
         height: '24px',
         justifyContent: 'center',
-        margin: 0,
-        marginLeft: '7px',
+        margin: '0 0 0 8px',
         minWidth: '63px',
         outline: 'none',
-        padding: '5px 12px 6px'
+        padding: '8px 16px'
     },
     copyButtonSpan: {
         color: '#93b0c1',
