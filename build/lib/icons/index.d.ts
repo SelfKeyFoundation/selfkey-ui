@@ -27,6 +27,7 @@ export * from './copy';
 export * from './corporate';
 export * from './custom';
 export * from './dashboard-menu';
+export * from './defi';
 export * from './delete';
 export * from './denied';
 export * from './did';

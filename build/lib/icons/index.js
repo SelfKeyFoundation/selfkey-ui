@@ -45,6 +45,7 @@ __exportStar(require("./copy"), exports);
 __exportStar(require("./corporate"), exports);
 __exportStar(require("./custom"), exports);
 __exportStar(require("./dashboard-menu"), exports);
+__exportStar(require("./defi"), exports);
 __exportStar(require("./delete"), exports);
 __exportStar(require("./denied"), exports);
 __exportStar(require("./did"), exports);
