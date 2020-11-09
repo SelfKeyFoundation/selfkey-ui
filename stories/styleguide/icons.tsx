@@ -30,6 +30,7 @@ import {
 	CorporateIcon,
 	CustomIcon,
 	DashboardMenuIcon,
+	DefiIcon,
 	DeleteIcon,
 	DeniedIcon,
 	DIDIcon,
@@ -377,6 +378,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<DashboardMenuIcon />`}</code>
 			</pre>
 			<DashboardMenuIcon width="16px" height="16px" viewBox="0 0 16 16" />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<DefiIcon />`}</code>
+			</pre>
+			<DefiIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
