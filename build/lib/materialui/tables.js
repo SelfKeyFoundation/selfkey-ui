@@ -22,7 +22,7 @@ exports.SmallTableRow = styles_1.withStyles(styles_1.createStyles({
 exports.SmallTableCell = styles_1.withStyles(styles_1.createStyles({
     root: {
         height: '40px',
-        padding: '15px',
+        padding: '16px',
     },
     footer: {
         backgroundColor: colors_1.warning,

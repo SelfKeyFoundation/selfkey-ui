@@ -89,7 +89,7 @@ var multilineSelectStyles = function (theme) {
             color: colors_1.primary,
             cursor: 'pointer',
             lineHeight: '21px',
-            padding: '10px 16px',
+            padding: theme.spacing(1, 2),
             marginBottom: 0,
         },
     });
@@ -123,7 +123,7 @@ exports.MultilineSelect = core_2.withStyles(multilineSelectStyles)(function (pro
             onAdd && items.length > 0 ? React.createElement(core_1.Divider, null) : null,
             onAdd ? (React.createElement(core_1.ListItem, { className: classes.itemAdd, onClick: onAdd }, "+Add Option")) : null)));
 });
-exports.FileUploadLabel = core_2.withStyles(core_2.createStyles({
+exports.FileUploadLabel = core_2.withStyles(function (theme) { return core_2.createStyles({
     root: {
         alignItems: 'center',
         cursor: 'pointer',
@@ -131,13 +131,13 @@ exports.FileUploadLabel = core_2.withStyles(core_2.createStyles({
         flexDirection: 'column',
         height: '120px',
         justifyContent: 'space-between',
-        marginTop: '80px',
+        marginTop: theme.spacing(10),
         textAlign: 'center',
         '&:hover': {
             color: colors_1.primary,
         },
     },
-}))(core_1.InputLabel);
+}); })(core_1.InputLabel);
 exports.FileUploadInput = core_2.withStyles(core_2.createStyles({
     root: {
         display: 'none',
@@ -151,8 +151,8 @@ exports.DecimalInput = core_2.withStyles(core_2.createStyles({
 var fileViewStyles = function (theme) {
     return core_2.createStyles({
         fileItem: {
-            padding: '5px 20px',
             boxSizing: 'border-box',
+            padding: theme.spacing(1, 3),
         },
         fileItemError: {},
         noDecoration: {
@@ -182,10 +182,10 @@ var fileViewStyles = function (theme) {
             marginTop: '20px',
         },
         padding: {
-            padding: '0 15px',
+            padding: theme.spacing(0, 2),
         },
         bottomSpace: {
-            marginBottom: '20px',
+            marginBottom: theme.spacing(3),
         },
         back: {
             zIndex: 1000,
@@ -197,10 +197,10 @@ var fileViewStyles = function (theme) {
             maxWidth: '222px',
         },
         fileViewContainerDragAndDrop: {
-            marginTop: '10px'
+            marginTop: theme.spacing(1),
         },
         fileViewContainer: {
-            marginTop: '-42px'
+            marginTop: theme.spacing(5),
         },
     });
 };
@@ -391,30 +391,32 @@ var FileViewWithModal = /** @class */ (function (_super) {
     return FileViewWithModal;
 }(React.Component));
 exports.FileViewWithModalComponent = core_2.withStyles(fileViewStyles)(FileViewWithModal);
-var fileUploadStyles = core_2.createStyles({
-    form: {
-        width: '100%',
-        height: '46px',
-        backgroundColor: colors_1.baseDark,
-        border: '1px solid #384656',
-        borderRadius: '4px',
-        paddingLeft: '15px',
-        boxSizing: 'border-box',
-    },
-    button: {
-        borderRadius: '0 3px 3px 0',
-        boxShadow: 'none',
-        width: '129px',
-        minWidth: '129px',
-    },
-    fileInput: {
-        display: 'none',
-    },
-    formError: {
-        backgroundColor: 'rgba(255, 46, 99, 0.09)',
-        border: "1px solid " + colors_1.error,
-    },
-});
+var fileUploadStyles = function (theme) {
+    return core_2.createStyles({
+        form: {
+            width: '100%',
+            height: '46px',
+            backgroundColor: colors_1.baseDark,
+            border: '1px solid #384656',
+            borderRadius: '4px',
+            paddingLeft: theme.spacing(2),
+            boxSizing: 'border-box',
+        },
+        button: {
+            borderRadius: '0 3px 3px 0',
+            boxShadow: 'none',
+            width: '129px',
+            minWidth: '129px',
+        },
+        fileInput: {
+            display: 'none',
+        },
+        formError: {
+            backgroundColor: 'rgba(255, 46, 99, 0.09)',
+            border: "1px solid " + colors_1.error,
+        },
+    });
+};
 exports.FileUploadWidget = core_2.withStyles(fileUploadStyles)(function (_a) {
     var classes = _a.classes, id = _a.id, file = _a.file, isError = _a.isError, onClearForm = _a.onClearForm, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, onPDFOpen = _a.onPDFOpen, required = _a.required, props = __rest(_a, ["classes", "id", "file", "isError", "onClearForm", "onChange", "onBlur", "onFocus", "onPDFOpen", "required"]);
     var eventHandlers = {};
@@ -454,7 +456,7 @@ exports.FileUploadWidget = core_2.withStyles(fileUploadStyles)(function (_a) {
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
-var FileUploadGrid = core_2.withStyles(core_2.createStyles({
+var FileUploadGrid = core_2.withStyles(function (theme) { return core_2.createStyles({
     container: {
         backgroundColor: colors_1.base,
         border: '1px solid #303C49',
@@ -462,10 +464,10 @@ var FileUploadGrid = core_2.withStyles(core_2.createStyles({
         height: '400px',
         minWidth: '500px',
         width: '100%',
-        marginTop: '10px',
-        marginBottom: '10px',
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
     },
-}))(core_1.Grid);
+}); })(core_1.Grid);
 var fileUploadWidgetStyles = function (theme) {
     return core_2.createStyles({
         fileInput: {
@@ -484,7 +486,7 @@ var fileUploadWidgetStyles = function (theme) {
             border: "1px solid " + colors_1.error,
         },
         bottomSpace: {
-            marginBottom: '10px',
+            marginBottom: theme.spacing(1),
         },
     });
 };

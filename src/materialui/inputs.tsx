@@ -58,7 +58,7 @@ const multilineSelectStyles = (theme: Theme) =>
             color: primary,
             cursor: 'pointer',
             lineHeight: '21px',
-            padding: '10px 16px',
+            padding: theme.spacing(1, 2),
             marginBottom: 0,
         },
     });
@@ -110,7 +110,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props: Multili
     );
 });
 
-export const FileUploadLabel = withStyles(createStyles({
+export const FileUploadLabel = withStyles((theme: Theme) => createStyles({
     root: {
         alignItems: 'center',
         cursor: 'pointer',
@@ -118,7 +118,7 @@ export const FileUploadLabel = withStyles(createStyles({
         flexDirection: 'column',
         height: '120px',
         justifyContent: 'space-between',
-        marginTop: '80px',
+        marginTop: theme.spacing(10),
         textAlign: 'center',
         '&:hover': {
             color: primary,
@@ -143,8 +143,8 @@ export type FileViewProps = any;
 const fileViewStyles = (theme: Theme) =>
     createStyles({
         fileItem: {
-            padding: '5px 20px',
             boxSizing: 'border-box',
+            padding: theme.spacing(1, 3),
         },
         fileItemError: {},
         noDecoration: {
@@ -174,10 +174,10 @@ const fileViewStyles = (theme: Theme) =>
             marginTop: '20px',
         },
         padding: {
-            padding: '0 15px',
+            padding: theme.spacing(0, 2),
         },
         bottomSpace: {
-            marginBottom: '20px',
+            marginBottom: theme.spacing(3),
         },
         back: {
             zIndex: 1000,
@@ -189,10 +189,10 @@ const fileViewStyles = (theme: Theme) =>
             maxWidth: '222px',
         },
         fileViewContainerDragAndDrop: {
-            marginTop: '10px'
+            marginTop: theme.spacing(1),
         },
         fileViewContainer: {
-            marginTop: '-42px'
+            marginTop: theme.spacing(5),
         },
     });
 
@@ -471,30 +471,32 @@ export const FileViewWithModalComponent = withStyles(fileViewStyles)(FileViewWit
 
 export type FileUploadWidgetProps = any;
 
-const fileUploadStyles = createStyles({
-    form: {
-        width: '100%',
-        height: '46px',
-        backgroundColor: baseDark,
-        border: '1px solid #384656',
-        borderRadius: '4px',
-        paddingLeft: '15px',
-        boxSizing: 'border-box',
-    },
-    button: {
-        borderRadius: '0 3px 3px 0',
-        boxShadow: 'none',
-        width: '129px',
-        minWidth: '129px',
-    },
-    fileInput: {
-        display: 'none',
-    },
-    formError: {
-        backgroundColor: 'rgba(255, 46, 99, 0.09)',
-        border: `1px solid ${error}`,
-    },
-});
+const fileUploadStyles = (theme: Theme) =>  
+    createStyles({
+        form: {
+            width: '100%',
+            height: '46px',
+            backgroundColor: baseDark,
+            border: '1px solid #384656',
+            borderRadius: '4px',
+            paddingLeft: theme.spacing(2),
+            boxSizing: 'border-box',
+        },
+        button: {
+            borderRadius: '0 3px 3px 0',
+            boxShadow: 'none',
+            width: '129px',
+            minWidth: '129px',
+        },
+        fileInput: {
+            display: 'none',
+        },
+        formError: {
+            backgroundColor: 'rgba(255, 46, 99, 0.09)',
+            border: `1px solid ${error}`,
+        },
+    }
+);
 
 export const FileUploadWidget = withStyles(fileUploadStyles)(
     ({ classes, id, file, isError, onClearForm, onChange, onBlur, onFocus, onPDFOpen, required, ...props }: FileUploadWidgetProps & WithStyles<typeof fileUploadStyles>) => {
@@ -561,7 +563,7 @@ export const FileUploadWidget = withStyles(fileUploadStyles)(
     }
 );
 
-const FileUploadGrid = withStyles(createStyles({
+const FileUploadGrid = withStyles((theme: Theme) => createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
@@ -569,8 +571,8 @@ const FileUploadGrid = withStyles(createStyles({
         height: '400px',
         minWidth: '500px',
         width: '100%',
-        marginTop: '10px',
-        marginBottom: '10px',
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
     },
 }))(Grid);
 
@@ -594,7 +596,7 @@ const fileUploadWidgetStyles = (theme: Theme) =>
             border: `1px solid ${error}`,
         },
         bottomSpace: {
-            marginBottom: '10px',
+            marginBottom: theme.spacing(1),
         },
     });
 

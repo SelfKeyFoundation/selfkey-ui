@@ -43,7 +43,7 @@ const multilineSelectStyles = (theme) => createStyles({
         color: primary,
         cursor: 'pointer',
         lineHeight: '21px',
-        padding: '10px 16px',
+        padding: theme.spacing(1, 2),
         marginBottom: 0,
     },
 });
@@ -76,7 +76,7 @@ export const MultilineSelect = withStyles(multilineSelectStyles)((props) => {
             onAdd && items.length > 0 ? React.createElement(Divider, null) : null,
             onAdd ? (React.createElement(ListItem, { className: classes.itemAdd, onClick: onAdd }, "+Add Option")) : null)));
 });
-export const FileUploadLabel = withStyles(createStyles({
+export const FileUploadLabel = withStyles((theme) => createStyles({
     root: {
         alignItems: 'center',
         cursor: 'pointer',
@@ -84,7 +84,7 @@ export const FileUploadLabel = withStyles(createStyles({
         flexDirection: 'column',
         height: '120px',
         justifyContent: 'space-between',
-        marginTop: '80px',
+        marginTop: theme.spacing(10),
         textAlign: 'center',
         '&:hover': {
             color: primary,
@@ -103,8 +103,8 @@ export const DecimalInput = withStyles(createStyles({
 }))(Input);
 const fileViewStyles = (theme) => createStyles({
     fileItem: {
-        padding: '5px 20px',
         boxSizing: 'border-box',
+        padding: theme.spacing(1, 3),
     },
     fileItemError: {},
     noDecoration: {
@@ -134,10 +134,10 @@ const fileViewStyles = (theme) => createStyles({
         marginTop: '20px',
     },
     padding: {
-        padding: '0 15px',
+        padding: theme.spacing(0, 2),
     },
     bottomSpace: {
-        marginBottom: '20px',
+        marginBottom: theme.spacing(3),
     },
     back: {
         zIndex: 1000,
@@ -149,10 +149,10 @@ const fileViewStyles = (theme) => createStyles({
         maxWidth: '222px',
     },
     fileViewContainerDragAndDrop: {
-        marginTop: '10px'
+        marginTop: theme.spacing(1),
     },
     fileViewContainer: {
-        marginTop: '-42px'
+        marginTop: theme.spacing(5),
     },
 });
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }) => (React.createElement(Grid, { item: true, className: classNames(classes.fileItem, errors && errors.length && classes.fileItemError) },
@@ -327,14 +327,14 @@ class FileViewWithModal extends React.Component {
     }
 }
 export const FileViewWithModalComponent = withStyles(fileViewStyles)(FileViewWithModal);
-const fileUploadStyles = createStyles({
+const fileUploadStyles = (theme) => createStyles({
     form: {
         width: '100%',
         height: '46px',
         backgroundColor: baseDark,
         border: '1px solid #384656',
         borderRadius: '4px',
-        paddingLeft: '15px',
+        paddingLeft: theme.spacing(2),
         boxSizing: 'border-box',
     },
     button: {
@@ -389,7 +389,7 @@ export const FileUploadWidget = withStyles(fileUploadStyles)(({ classes, id, fil
                             React.createElement("input", Object.assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
-const FileUploadGrid = withStyles(createStyles({
+const FileUploadGrid = withStyles((theme) => createStyles({
     container: {
         backgroundColor: base,
         border: '1px solid #303C49',
@@ -397,8 +397,8 @@ const FileUploadGrid = withStyles(createStyles({
         height: '400px',
         minWidth: '500px',
         width: '100%',
-        marginTop: '10px',
-        marginBottom: '10px',
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
     },
 }))(Grid);
 const fileUploadWidgetStyles = (theme) => createStyles({
@@ -418,7 +418,7 @@ const fileUploadWidgetStyles = (theme) => createStyles({
         border: `1px solid ${error}`,
     },
     bottomSpace: {
-        marginBottom: '10px',
+        marginBottom: theme.spacing(1),
     },
 });
 class ArrayFileUploadWidgetComponent extends React.Component {
