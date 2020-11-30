@@ -23,6 +23,7 @@ __exportStar(require("./animated-loading"), exports);
 __exportStar(require("./attribute-alert"), exports);
 __exportStar(require("./attribute-alert-large"), exports);
 __exportStar(require("./bank"), exports);
+__exportStar(require("./safe"), exports);
 __exportStar(require("./bank-rounded"), exports);
 __exportStar(require("./bank-small"), exports);
 __exportStar(require("./book"), exports);
