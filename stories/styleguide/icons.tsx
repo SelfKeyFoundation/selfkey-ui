@@ -157,7 +157,8 @@ import {
 	WalletSmallIcon,
 	WarningShieldIcon,
 	NewRefreshIcon,
-	IDIcon
+	IDIcon,
+	SafeIcon
 } from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
@@ -1022,6 +1023,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<RoundPerson />`}</code>
 			</pre>
 			<RoundPerson />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SafeIcon />`}</code>
+			</pre>
+			<SafeIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>
