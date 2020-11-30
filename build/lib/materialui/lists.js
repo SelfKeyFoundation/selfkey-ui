@@ -56,7 +56,7 @@ exports.DeniedTick = (function () { return (React.createElement(core_1.SvgIcon, 
 var InsideTick = (function (color) { return (React.createElement("path", { d: "M14.1607102,15.6128249 L18.7094828,11.0640523 C19.0983027,10.6752324 19.7273633,10.6738915 20.1206102,11.0671384 C20.5111345,11.4576627 20.5170209,12.0849413 20.1236963,12.4782659 L14.713208,17.8887542 C14.3243881,18.2775741 13.6953275,18.2789151 13.3020806,17.8856681 C13.2083814,17.7919689 13.1368248,17.6846405 13.087612,17.5701843 L11.1048627,15.5874349 C10.7144135,15.1969858 10.7192331,14.5591232 11.1022757,14.1760806 L11.2087372,14.0696191 C11.5977575,13.6805988 12.2268759,13.6789905 12.6200915,14.0722061 L14.1607102,15.6128249 Z", id: "InsideTick", fill: color.color })); });
 var checkedStyle = {
     height: '44px',
-    marginRight: '13px',
+    marginRight: '16px',
     width: '30px',
 };
 exports.CheckedIcon = (function (item) { return (React.createElement(core_1.SvgIcon, { width: "30px", height: "44px", viewBox: "0 0 30 44", style: checkedStyle },

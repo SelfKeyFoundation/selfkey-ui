@@ -232,15 +232,12 @@ exports.theme = core_1.createMuiTheme({
             },
             padding: {
                 boxSizing: 'border-box',
-                paddingBottom: '4px',
-                paddingLeft: '8px',
-                paddingRight: '8px',
-                paddingTop: '5px',
+                padding: '8px'
             },
         },
         MuiListItem: {
             root: {
-                marginBottom: '10px',
+                marginBottom: '8px',
                 paddingBottom: '0',
                 paddingTop: '0',
                 '&$selected': {
@@ -288,7 +285,7 @@ exports.theme = core_1.createMuiTheme({
                     backgroundColor: 'rgba(255, 46, 99, 0.09)',
                     border: "1px solid " + colors_1.error,
                     color: colors_1.error,
-                    marginBottom: '6px',
+                    marginBottom: '8px',
                 },
                 '&$focused': {
                     '&$focused:not($error):not($disabled)': {
@@ -560,7 +557,7 @@ exports.theme = core_1.createMuiTheme({
         MuiFormGroup: {
             root: {
                 backgroundColor: colors_1.base,
-                marginBottom: '15px',
+                marginBottom: '16px',
             },
         },
         MuiFormControl: {
@@ -600,6 +597,7 @@ exports.theme = core_1.createMuiTheme({
                 letterSpacing: '0.6px',
                 lineHeight: '16px',
                 minWidth: '120px',
+                padding: '8px 16px',
                 '&$disabled': {
                     color: colors_1.white,
                     opacity: 0.5,
@@ -610,6 +608,7 @@ exports.theme = core_1.createMuiTheme({
                 border: '1px solid #0FB8D0',
                 boxShadow: 'none',
                 color: colors_1.white,
+                padding: '8px 16px',
                 '&:hover': {
                     background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)',
                 },
@@ -620,10 +619,14 @@ exports.theme = core_1.createMuiTheme({
                     color: colors_1.white,
                 },
             },
+            containedSizeLarge: {
+                padding: '8px 24px'
+            },
             outlined: {
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
                 color: colors_1.primary,
+                padding: '8px 16px',
                 '&:hover': {
                     background: '#313D49',
                     borderColor: '#23E6FE',
@@ -635,6 +638,9 @@ exports.theme = core_1.createMuiTheme({
                     color: colors_1.primary,
                     border: '2px solid #1CA9BA',
                 },
+            },
+            outlinedSizeLarge: {
+                padding: '8px 24px'
             },
             outlinedSecondary: {
                 background: 'transparent',
@@ -683,7 +689,7 @@ exports.theme = core_1.createMuiTheme({
         MuiIconButton: {
             root: {
                 color: colors_1.grey,
-                padding: '7px 5px',
+                padding: '8px',
                 '&:hover': {
                     backgroundColor: 'transparent',
                 },
@@ -702,7 +708,7 @@ exports.theme = core_1.createMuiTheme({
         MuiTableCell: {
             root: {
                 borderBottom: 0,
-                padding: '15px 30px',
+                padding: '16px 24px',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
@@ -733,7 +739,7 @@ exports.theme = core_1.createMuiTheme({
             indicator: {
                 backgroundColor: colors_1.primary,
                 height: '4px',
-                marginLeft: '-1px',
+                marginLeft: 0,
             },
         },
         MuiTab: {
@@ -745,6 +751,7 @@ exports.theme = core_1.createMuiTheme({
                 borderBottom: "4px solid transparent",
                 textTransform: 'initial',
                 minWidth: '0 !important',
+                padding: '8px 16px',
                 '&:hover': {
                     borderBottom: "4px solid " + colors_1.grey,
                     boxSizing: 'border-box',
@@ -767,6 +774,9 @@ exports.theme = core_1.createMuiTheme({
                 borderRadius: '4px',
                 boxShadow: 'none',
                 position: 'initial',
+                '&$expanded': {
+                    margin: '0 0 16px'
+                }
             },
         },
         MuiExpansionPanelSummary: {
@@ -774,7 +784,10 @@ exports.theme = core_1.createMuiTheme({
                 alignItems: 'baseline',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                paddingLeft: '30px',
+                paddingLeft: '32px',
+                '&$expanded': {
+                    margin: '24px 0'
+                }
             },
             expandIcon: {
                 color: colors_1.typography,

@@ -6,14 +6,14 @@ var core_1 = require("@material-ui/core");
 var price_summary_1 = require("./price-summary");
 var styles = core_1.createStyles({
     cryptoPriceBox: {
-        height: 'calc(100% - 36px)',
-        padding: '18px 0 18px 0',
+        alignItems: 'flex-start',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
+        height: 'calc(100% - 36px)',
         justifyContent: 'flex-start',
-        marginRight: '10px',
         marginLeft: '40px',
+        marginRight: '8px',
+        padding: '16px 0',
     },
     smallText: {
         color: '#fff',
