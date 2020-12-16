@@ -13,6 +13,7 @@ export * from './attribute-alert';
 export * from './attribute-alert-large';
 export * from './bank';
 export * from './safe';
+export * from './code';
 export * from './bank-rounded';
 export * from './bank-small';
 export * from './book';
