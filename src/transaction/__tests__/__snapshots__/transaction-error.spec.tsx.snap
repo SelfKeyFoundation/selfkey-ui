@@ -162,11 +162,11 @@ exports[`Transaction Error should show Transaction error screen 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-13"
+              className="CopyComponent-copyButton-1"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-14"
+                className="CopyComponent-copyButtonSpan-2"
               >
                 COPY
               </span>

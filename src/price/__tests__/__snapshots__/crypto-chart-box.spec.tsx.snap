@@ -26,7 +26,7 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -329,7 +329,7 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -632,7 +632,7 @@ exports[`Crypto Chart Box should call select functiond when onMouseEnter and onM
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -935,7 +935,7 @@ exports[`Crypto Chart Box should call toggle function with false 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -1609,7 +1609,7 @@ exports[`Crypto Chart Box should call toggle function with false 2`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -2283,7 +2283,7 @@ exports[`Crypto Chart Box should call toggle function with true 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -2957,7 +2957,7 @@ exports[`Crypto Chart Box should call toggle function with true 2`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -3631,7 +3631,7 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -4305,7 +4305,7 @@ exports[`Crypto Chart Box should not call toggle function when there is no funct
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -4979,7 +4979,7 @@ exports[`Crypto Chart Box should show Chart with all 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -5653,7 +5653,7 @@ exports[`Crypto Chart Box should show Chart with less than 5 items 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {
@@ -5956,7 +5956,7 @@ exports[`Crypto Chart Box should show chart with Others 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root Component-root-18"
+              className="MuiSvgIcon-root Component-root-1"
               focusable="false"
               style={
                 Object {

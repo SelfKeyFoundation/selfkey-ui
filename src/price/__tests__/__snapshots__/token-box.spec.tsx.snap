@@ -111,11 +111,11 @@ exports[`Token Box should show Token Box for key 1`] = `
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
     >
       <button
-        className="CopyComponent-copyButton-10"
+        className="CopyComponent-copyButton-1"
         onClick={[Function]}
       >
         <span
-          className="CopyComponent-copyButtonSpan-11"
+          className="CopyComponent-copyButtonSpan-2"
         >
           COPY
         </span>

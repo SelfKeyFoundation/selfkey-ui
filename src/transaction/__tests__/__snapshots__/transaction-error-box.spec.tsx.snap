@@ -157,11 +157,11 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-12"
+              className="CopyComponent-copyButton-1"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-13"
+                className="CopyComponent-copyButtonSpan-2"
               >
                 COPY
               </span>
@@ -334,11 +334,11 @@ exports[`Transaction Error Box should show transaction error generic screen with
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-12"
+              className="CopyComponent-copyButton-1"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-13"
+                className="CopyComponent-copyButtonSpan-2"
               >
                 COPY
               </span>

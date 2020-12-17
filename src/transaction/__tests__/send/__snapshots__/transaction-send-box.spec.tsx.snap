@@ -2,14 +2,14 @@
 
 exports[`Transaction Send should show Transaction send screen 1`] = `
 <div
-  className="Component-transactionBox-16"
+  className="Component-transactionBox-1"
 >
   <div
-    className="Component-closeDialogIconWrapper-19"
+    className="Component-closeDialogIconWrapper-4"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-root-21 MuiSvgIcon-fontSizeLarge"
+      className="MuiSvgIcon-root Component-root-6 MuiSvgIcon-fontSizeLarge"
       focusable="false"
       style={
         Object {
@@ -55,11 +55,11 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
     </svg>
   </div>
   <div
-    className="Component-iconWrapper-17"
+    className="Component-iconWrapper-2"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root Component-icon-18"
+      className="MuiSvgIcon-root Component-icon-3"
       focusable="false"
       style={
         Object {
@@ -204,7 +204,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
       </span>
     </div>
     <div
-      className="MuiGrid-root TransactionFeeBoxComponent-container-22 TransactionSendBoxComponent-container-1 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      className="MuiGrid-root TransactionFeeBoxComponent-container-16 TransactionSendBoxComponent-container-1 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
     >
       <div
         className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap"
@@ -216,7 +216,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-root MuiGrid-item"
           >
             <span
-              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-23 feeTitle"
+              className="TransactionFeeBoxComponent-networkTransactionFeeTitle-17 feeTitle"
             >
                
               Network Transaction Fee:
@@ -227,7 +227,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             className="MuiGrid-root MuiGrid-item"
           >
             <div
-              className="MuiGrid-root Component-root-41 MuiGrid-container MuiGrid-spacing-xs-1"
+              className="MuiGrid-root Component-root-35 MuiGrid-container MuiGrid-spacing-xs-1"
             >
               <div
                 className="MuiGrid-root MuiGrid-item"
@@ -280,14 +280,14 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
           </div>
         </div>
         <div
-          className="MuiGrid-root TransactionFeeBoxComponent-showAdvancedContainer-24 MuiGrid-item"
+          className="MuiGrid-root TransactionFeeBoxComponent-showAdvancedContainer-18 MuiGrid-item"
           onClick={[Function]}
         >
           <span>
              Advanced 
           </span>
           <i
-            className="TransactionFeeBoxComponent-icon-25  TransactionFeeBoxComponent-rightIcon-26"
+            className="TransactionFeeBoxComponent-icon-19  TransactionFeeBoxComponent-rightIcon-20"
           >
              
           </i>

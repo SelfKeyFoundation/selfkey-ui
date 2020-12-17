@@ -179,11 +179,11 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-15"
+              className="CopyComponent-copyButton-1"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-16"
+                className="CopyComponent-copyButtonSpan-2"
               >
                 COPY
               </span>
@@ -375,11 +375,11 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-15"
+              className="CopyComponent-copyButton-1"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-16"
+                className="CopyComponent-copyButtonSpan-2"
               >
                 COPY
               </span>
@@ -571,11 +571,11 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-15"
+              className="CopyComponent-copyButton-1"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-16"
+                className="CopyComponent-copyButtonSpan-2"
               >
                 COPY
               </span>
@@ -767,11 +767,11 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
               0x4184288c556524df9cb9e58b73265ee66dca4efe
             </span>
             <button
-              className="CopyComponent-copyButton-15"
+              className="CopyComponent-copyButton-1"
               onClick={[Function]}
             >
               <span
-                className="CopyComponent-copyButtonSpan-16"
+                className="CopyComponent-copyButtonSpan-2"
               >
                 COPY
               </span>

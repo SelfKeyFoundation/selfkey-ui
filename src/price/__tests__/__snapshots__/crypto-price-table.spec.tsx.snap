@@ -6,12 +6,15 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
 >
   <table
     className="MuiTable-root CryptoPriceTableComponent-table-2"
+    role={null}
   >
     <thead
       className="MuiTableHead-root"
+      role={null}
     >
       <tr
         className="MuiTableRow-root CryptoPriceTableComponent-headerTableRow-3 MuiTableRow-head"
+        role={null}
       >
         <th
           aria-sort={null}
@@ -59,9 +62,11 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
     </thead>
     <tbody
       className="MuiTableBody-root"
+      role={null}
     >
       <tr
         className="MuiTableRow-root CryptoPriceTableComponent-bodyTableRow-4"
+        role={null}
       >
         <td
           aria-sort={null}
@@ -80,10 +85,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 30
@@ -97,10 +102,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $0.01
@@ -114,10 +119,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $0.42432
@@ -139,6 +144,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
       </tr>
       <tr
         className="MuiTableRow-root CryptoPriceTableComponent-bodyTableRow-4"
+        role={null}
       >
         <td
           aria-sort={null}
@@ -157,10 +163,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 0.00548
@@ -174,10 +180,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $400.00
@@ -191,10 +197,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $20.52
@@ -214,6 +220,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
       </tr>
       <tr
         className="MuiTableRow-root CryptoPriceTableComponent-bodyTableRow-4"
+        role={null}
       >
         <td
           aria-sort={null}
@@ -232,10 +239,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 0.00548
@@ -249,10 +256,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $500.00
@@ -266,10 +273,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $20.52
@@ -318,6 +325,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
       </tr>
       <tr
         className="MuiTableRow-root CryptoPriceTableComponent-bodyTableRow-4"
+        role={null}
       >
         <td
           aria-sort={null}
@@ -336,10 +344,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 0.00548
@@ -353,10 +361,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $400.00
@@ -370,10 +378,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $20.52
@@ -422,6 +430,7 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
       </tr>
       <tr
         className="MuiTableRow-root CryptoPriceTableComponent-bodyTableRow-4"
+        role={null}
       >
         <td
           aria-sort={null}
@@ -440,10 +449,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 0.00548
@@ -457,10 +466,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $400.00
@@ -474,10 +483,10 @@ exports[`Crypto Price Table should show Crypto Price Table 1`] = `
           className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
         >
           <div
-            className="MuiGrid-root Component-row-6 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+            className="MuiGrid-root Component-row-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
           >
             <div
-              className="MuiGrid-root Component-value-8 MuiGrid-item"
+              className="MuiGrid-root Component-value-3 MuiGrid-item"
             >
               <div>
                 $20.52
