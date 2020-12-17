@@ -24,7 +24,7 @@ var styles = core_1.createStyles({
         padding: 0,
         position: 'absolute',
         top: '-18px',
-        right: '-18px',
+        right: '-18px'
     },
     title: {
         color: '#C5DCE9',

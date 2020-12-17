@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const CoinsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '62px', height: props.height || '64px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 62 64" }),
+export const CoinsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '62px',
+        height: props.height || '64px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 62 64' }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { id: "Page-1-coins", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "coins-icon", fill: "inherit", fillRule: "nonzero" },

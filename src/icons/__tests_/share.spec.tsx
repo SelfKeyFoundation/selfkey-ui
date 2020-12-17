@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import ShareIcon from '../share';
 
 describe('Share Icon', () => {
-  it('should show Share Icon', () => {
-    const component = create(
-      <ShareIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Share Icon', () => {
+		const component = create(<ShareIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

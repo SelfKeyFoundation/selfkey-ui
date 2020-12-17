@@ -7,13 +7,13 @@ var styles = core_1.createStyles({
     root: {
         '& a': {
             color: '#23E6FE',
-            textDecoration: 'none',
+            textDecoration: 'none'
         },
         '& a &:hover': {
             textDecoration: 'underline'
         },
-        padding: '60px 70px 80px',
-    },
+        padding: '60px 70px 80px'
+    }
 });
 exports.LWSModalBody = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children;

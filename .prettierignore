@@ -1,2 +1,10 @@
 # *.json
 README.md
+node_modules
+.vscode
+build
+build-esnext
+coverage
+storybook-static
+.circleci
+.history

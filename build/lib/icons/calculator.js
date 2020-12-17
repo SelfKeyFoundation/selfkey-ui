@@ -19,11 +19,11 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.CalculatorIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '66px' } }, props, { viewBox: props.viewBox || "0 0 68 66" }),
+exports.CalculatorIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '66px' } }, props, { viewBox: props.viewBox || '0 0 68 66' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "760---Loans-Marketplace---Lending-icon", transform: "translate(-195.000000, -297.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "Calculator-box", transform: "translate(150.000000, 264.000000)" },

@@ -1,3 +1,4 @@
 /// <reference types="react" />
-export declare const ListIcon: () => JSX.Element;
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
+export declare const ListIcon: (props: SvgIconProps) => JSX.Element;
 export default ListIcon;

@@ -148,7 +148,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
           <div
             className="Component-learnMoreText-2"
           >
-            To learn more about transaction fees, click 
+            To learn more about transaction fees, click
              
             <a
               className="Component-learnMoreText-2  Component-learnMoreLink-3"
@@ -344,7 +344,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
           <div
             className="Component-learnMoreText-2"
           >
-            To learn more about transaction fees, click 
+            To learn more about transaction fees, click
              
             <a
               className="Component-learnMoreText-2  Component-learnMoreLink-3"
@@ -540,7 +540,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
           <div
             className="Component-learnMoreText-2"
           >
-            To learn more about transaction fees, click 
+            To learn more about transaction fees, click
              
             <a
               className="Component-learnMoreText-2  Component-learnMoreLink-3"
@@ -736,7 +736,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
           <div
             className="Component-learnMoreText-2"
           >
-            To learn more about transaction fees, click 
+            To learn more about transaction fees, click
              
             <a
               className="Component-learnMoreText-2  Component-learnMoreLink-3"

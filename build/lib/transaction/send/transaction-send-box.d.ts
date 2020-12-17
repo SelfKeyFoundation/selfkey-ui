@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
-export declare const styles: Record<"button" | "input" | "divider" | "container" | "selectAllAmountBtn" | "actionButtonsContainer" | "inputError" | "amountContainer" | "cryptoCurrencyText" | "usdAmoutContainer" | "amountInput" | "addressErrorText" | "addressErrorColor" | "cryptoSelect" | "selectItem", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+import { WithStyles } from '@material-ui/styles';
+export declare const styles: Record<"button" | "input" | "divider" | "container" | "selectAllAmountBtn" | "actionButtonsContainer" | "inputError" | "amountContainer" | "cryptoCurrencyText" | "usdAmoutContainer" | "amountInput" | "addressErrorText" | "addressErrorColor" | "cryptoSelect" | "selectItem", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type EthGasStationInfo = {
     safeLow: string;
     average: string;
@@ -30,20 +30,20 @@ export declare type TransactionSendBoxProps = {
     usdFee: number;
     balance: number;
     ethGasStationInfo: EthGasStationInfo;
-    reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
+    reloadEthGasStationInfoAction?: (event: React.MouseEvent<SVGSVGElement>) => void;
     cryptoCurrency?: string;
     isSendCustomToken?: boolean;
-    closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
-    onSendAction: ((event: React.MouseEvent<HTMLButtonElement>) => void);
+    closeAction?: (event: React.MouseEvent<HTMLElement>) => void;
+    onSendAction: (event: React.MouseEvent<HTMLButtonElement>) => void;
     onAddressFieldChange?: Function;
     onAmountInputChange?: Function;
     onCryptoCurrencyChange?: Function;
     changeGasLimitAction?: Function;
     changeGasPriceAction?: Function;
     sending: boolean;
-    confirmAction?: ((event: React.MouseEvent<HTMLElement>) => void);
-    cancelAction?: ((event: React.MouseEvent<HTMLElement>) => void);
-    tokens: Array<Token>;
+    confirmAction?: (event: React.MouseEvent<HTMLElement>) => void;
+    cancelAction?: (event: React.MouseEvent<HTMLElement>) => void;
+    tokens: Token[];
 };
 export declare type TransactionSendBoxState = {
     amount: string;
@@ -62,5 +62,5 @@ export declare class TransactionSendBoxComponent extends React.Component<StyledP
     renderButtons(): JSX.Element;
     render(): JSX.Element;
 }
-export declare const TransactionSendBox: React.ComponentType<Pick<StyledProps, "address" | "balance" | "locale" | "nonce" | "cryptoCurrency" | "fiatCurrency" | "tokens" | "closeAction" | "cancelAction" | "ethFee" | "usdFee" | "gasLimit" | "gasPrice" | "ethGasStationInfo" | "reloadEthGasStationInfoAction" | "changeGasLimitAction" | "changeGasPriceAction" | "amount" | "amountUsd" | "addressError" | "isSendCustomToken" | "onSendAction" | "onAddressFieldChange" | "onAmountInputChange" | "onCryptoCurrencyChange" | "sending" | "confirmAction"> & import("@material-ui/core").StyledComponentProps<"button" | "input" | "divider" | "container" | "selectAllAmountBtn" | "actionButtonsContainer" | "inputError" | "amountContainer" | "cryptoCurrencyText" | "usdAmoutContainer" | "amountInput" | "addressErrorText" | "addressErrorColor" | "cryptoSelect" | "selectItem">>;
+export declare const TransactionSendBox: React.ComponentType<Pick<StyledProps, "address" | "balance" | "locale" | "nonce" | "cryptoCurrency" | "fiatCurrency" | "tokens" | "closeAction" | "cancelAction" | "ethFee" | "usdFee" | "gasLimit" | "gasPrice" | "ethGasStationInfo" | "reloadEthGasStationInfoAction" | "changeGasLimitAction" | "changeGasPriceAction" | "amount" | "amountUsd" | "addressError" | "isSendCustomToken" | "onSendAction" | "onAddressFieldChange" | "onAmountInputChange" | "onCryptoCurrencyChange" | "sending" | "confirmAction"> & import("@material-ui/styles").StyledComponentProps<"button" | "input" | "divider" | "container" | "selectAllAmountBtn" | "actionButtonsContainer" | "inputError" | "amountContainer" | "cryptoCurrencyText" | "usdAmoutContainer" | "amountInput" | "addressErrorText" | "addressErrorColor" | "cryptoSelect" | "selectItem">>;
 export default TransactionSendBox;

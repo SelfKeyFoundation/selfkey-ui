@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
-export declare const styles: Record<"checkbox" | "icon" | "fullWidth" | "container" | "formControl" | "formGroup" | "networkTransactionFeeTitle" | "showAdvancedContainer" | "rightIcon" | "downIcon" | "inputsContainer" | "checkboxRoot" | "checkboxChecked" | "checkboxLabel" | "nonceValue" | "currNetworkStatusContainer" | "currNetworkStatusTitle" | "reloadNetworkIcon" | "gasPriceValuesContainer", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+import { WithStyles } from '@material-ui/styles';
+export declare const styles: Record<"checkbox" | "icon" | "fullWidth" | "container" | "formControl" | "formGroup" | "networkTransactionFeeTitle" | "showAdvancedContainer" | "rightIcon" | "downIcon" | "inputsContainer" | "checkboxRoot" | "checkboxChecked" | "checkboxLabel" | "nonceValue" | "currNetworkStatusContainer" | "currNetworkStatusTitle" | "reloadNetworkIcon" | "gasPriceValuesContainer", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type EthGasStationInfo = {
     safeLow: string;
     average: string;
@@ -16,7 +16,7 @@ export declare type TransactionFeeBoxProps = {
     nonce: number;
     showAdvanced?: boolean;
     ethGasStationInfo: EthGasStationInfo;
-    reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void);
+    reloadEthGasStationInfoAction?: (event: React.MouseEvent<SVGSVGElement>) => void;
     changeGasLimitAction?: Function;
     changeGasPriceAction?: Function;
 };
@@ -39,5 +39,5 @@ export declare class TransactionFeeBoxComponent extends React.Component<StyledPr
     renderAdvancedContent(): JSX.Element;
     render(): JSX.Element;
 }
-export declare const TransactionFeeBox: React.ComponentType<Pick<StyledProps, "locale" | "nonce" | "fiatCurrency" | "ethFee" | "usdFee" | "gasLimit" | "gasPrice" | "showAdvanced" | "ethGasStationInfo" | "reloadEthGasStationInfoAction" | "changeGasLimitAction" | "changeGasPriceAction"> & import("@material-ui/core").StyledComponentProps<"checkbox" | "icon" | "fullWidth" | "container" | "formControl" | "formGroup" | "networkTransactionFeeTitle" | "showAdvancedContainer" | "rightIcon" | "downIcon" | "inputsContainer" | "checkboxRoot" | "checkboxChecked" | "checkboxLabel" | "nonceValue" | "currNetworkStatusContainer" | "currNetworkStatusTitle" | "reloadNetworkIcon" | "gasPriceValuesContainer">>;
+export declare const TransactionFeeBox: React.ComponentType<Pick<StyledProps, "locale" | "nonce" | "fiatCurrency" | "ethFee" | "usdFee" | "gasLimit" | "gasPrice" | "showAdvanced" | "ethGasStationInfo" | "reloadEthGasStationInfoAction" | "changeGasLimitAction" | "changeGasPriceAction"> & import("@material-ui/styles").StyledComponentProps<"checkbox" | "icon" | "fullWidth" | "container" | "formControl" | "formGroup" | "networkTransactionFeeTitle" | "showAdvancedContainer" | "rightIcon" | "downIcon" | "inputsContainer" | "checkboxRoot" | "checkboxChecked" | "checkboxLabel" | "nonceValue" | "currNetworkStatusContainer" | "currNetworkStatusTitle" | "reloadNetworkIcon" | "gasPriceValuesContainer">>;
 export default TransactionFeeBox;

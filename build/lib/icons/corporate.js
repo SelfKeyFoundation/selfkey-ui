@@ -20,11 +20,11 @@ var styles = core_1.createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.CorporateIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '46px', height: props.height || '46px' } }, props, { viewBox: props.viewBox || "0 0 46 46" }),
+exports.CorporateIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '46px', height: props.height || '46px' } }, props, { viewBox: props.viewBox || '0 0 46 46' }),
     React.createElement("g", { stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "v-mk-corporate-icon", transform: "translate(-1217.000000, -323.000000)" },
             React.createElement("g", { id: "Multi-Line-Table", transform: "translate(1193.000000, 124.000000)" },

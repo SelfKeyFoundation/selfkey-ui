@@ -39,7 +39,7 @@ const styles = createStyles({
             margin: 0,
             color: '#93B0C1'
         }
-    },
+    }
 });
 export const LWSExtensionError = withStyles(styles)(({ classes, children, installExtensionAction }) => (React.createElement("div", null,
     React.createElement("div", { className: classes.areaTitle },

@@ -3,7 +3,7 @@ import { Typography, withStyles, createStyles } from '@material-ui/core';
 import TransactionErrorBox from './transaction-error-box';
 const styles = createStyles({
     bodyText: {
-        textAlign: 'justify',
+        textAlign: 'justify'
     }
 });
 export const TransactionError = withStyles(styles)(({ classes, message, publicKey, closeAction }) => (React.createElement(TransactionErrorBox, { publicKey: publicKey, closeAction: closeAction },

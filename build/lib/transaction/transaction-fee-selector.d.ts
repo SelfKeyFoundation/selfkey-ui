@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
+import { WithStyles } from '@material-ui/styles';
 import BN from 'bignumber.js';
-declare const styles: Record<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+declare const styles: Record<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type TransactionFeeSelectorProps = {
     minGasPrice: number;
     maxGasPrice: number;
@@ -28,5 +28,5 @@ export declare class TransactionFeeSelectorComponent extends React.Component<Sty
     get fiatFee(): BN;
     render(): JSX.Element;
 }
-export declare const TransactionFeeSelector: React.ComponentType<Pick<StyledProps, "defaultValue" | "onChange" | "value" | "gasLimit" | "minGasPrice" | "maxGasPrice" | "fiat" | "fiatRate"> & import("@material-ui/core").StyledComponentProps<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue">>;
+export declare const TransactionFeeSelector: React.ComponentType<Pick<StyledProps, "defaultValue" | "onChange" | "value" | "gasLimit" | "minGasPrice" | "maxGasPrice" | "fiat" | "fiatRate"> & import("@material-ui/styles").StyledComponentProps<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue">>;
 export default TransactionFeeSelector;

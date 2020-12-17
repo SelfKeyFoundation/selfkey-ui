@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -27,8 +27,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AddressBookEdit = exports.AddressBookEditComponent = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var styled_button_1 = require("../common/styled-button");
-var styles = core_1.createStyles({
+var styles = styles_1.createStyles({
     errorText: {
         height: '19px',
         width: '242px',
@@ -55,7 +56,7 @@ var styles = core_1.createStyles({
         paddingLeft: '10px',
         '&::-webkit-input-placeholder': {
             fontSize: '14px',
-            color: '#93B0C1',
+            color: '#93B0C1'
         }
     },
     inputError: {
@@ -90,27 +91,27 @@ var AddressBookEditComponent = /** @class */ (function (_super) {
     };
     AddressBookEditComponent.prototype.render = function () {
         var _a = this.props, classes = _a.classes, labelError = _a.labelError, onCancel = _a.onCancel;
-        var hasLabelError = (labelError !== '' && labelError !== undefined);
+        var hasLabelError = labelError !== '' && labelError !== undefined;
         var labelInputClass = classes.input + " " + (hasLabelError ? classes.errorColor : '');
         return (React.createElement("form", { id: "formwrap", noValidate: true, autoComplete: "off", onSubmit: this.handleSubmit },
-            React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 10 },
+            React.createElement(core_1.Grid, { container: true, direction: "column", spacing: 10 },
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'column', spacing: 1 },
+                    React.createElement(core_1.Grid, { container: true, direction: "column", spacing: 1 },
                         React.createElement(core_1.Grid, { item: true },
                             React.createElement("label", { className: classes.label }, "LABEL")),
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement("input", { type: 'text', id: 'labelInput', onChange: this.handleLabelChange, value: this.state.label, className: labelInputClass, placeholder: "Address label" }),
-                            hasLabelError && React.createElement("span", { id: 'labelError', className: classes.errorText }, labelError)))),
+                            React.createElement("input", { type: "text", id: "labelInput", onChange: this.handleLabelChange, value: this.state.label, className: labelInputClass, placeholder: "Address label" }),
+                            hasLabelError && (React.createElement("span", { id: "labelError", className: classes.errorText }, labelError))))),
                 React.createElement(core_1.Grid, { item: true },
-                    React.createElement(core_1.Grid, { container: true, direction: 'row', spacing: 8 },
+                    React.createElement(core_1.Grid, { container: true, direction: "row", spacing: 8 },
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement(styled_button_1.default, { id: 'saveButton', variant: "contained", size: "medium", type: "submit", disabled: (!this.state.label || hasLabelError) }, "Save")),
+                            React.createElement(styled_button_1.default, { id: "saveButton", variant: "contained", size: "medium", type: "submit", disabled: !this.state.label || hasLabelError }, "Save")),
                         React.createElement(core_1.Grid, { item: true },
-                            React.createElement(styled_button_1.default, { id: 'cancelButton', variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
+                            React.createElement(styled_button_1.default, { id: "cancelButton", variant: "outlined", size: "medium", onClick: onCancel }, "Cancel")))))));
     };
     return AddressBookEditComponent;
 }(React.Component));
 exports.AddressBookEditComponent = AddressBookEditComponent;
-exports.AddressBookEdit = core_1.withStyles(styles)(AddressBookEditComponent);
+exports.AddressBookEdit = styles_1.withStyles(styles)(AddressBookEditComponent);
 exports.default = exports.AddressBookEdit;
 //# sourceMappingURL=address-book-edit.js.map

@@ -6,11 +6,11 @@ const styles = createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-export const SwitchAccountsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || "0 0 16 16" }),
+export const SwitchAccountsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard-sai", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "300.4-Navigation-collapsed-sai", transform: "translate(-20.000000, -1314.000000)" },
             React.createElement("g", { id: "Menu" },

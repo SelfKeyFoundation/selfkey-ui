@@ -5,7 +5,7 @@ const styles = createStyles({
     root: {
         fill: '#C5D0DE',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });

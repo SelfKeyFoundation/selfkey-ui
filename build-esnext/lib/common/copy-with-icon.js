@@ -1,14 +1,14 @@
-import * as React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { withStyles, createStyles } from '@material-ui/core';
-import ClipboardIcon from "../icons/clipboard";
-import { Grid, Typography } from "@material-ui/core";
+import * as React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { withStyles, createStyles } from '@material-ui/styles';
+import ClipboardIcon from '../icons/clipboard';
+import { Grid, Typography } from '@material-ui/core';
 const styles = createStyles({
     clipboard: {
         '&:hover & svg': {
             fill: '#FFFFFF'
         },
-        cursor: 'pointer',
+        cursor: 'pointer'
     },
     icon: {
         marginBottom: '10px'
@@ -21,8 +21,8 @@ const styles = createStyles({
 class CopyComponent extends React.Component {
     constructor() {
         super(...arguments);
-        this.copyText = "Copy";
-        this.copiedText = "Copied";
+        this.copyText = 'Copy';
+        this.copiedText = 'Copied';
         this.state = {
             copyTextPlaceholder: this.copyText
         };

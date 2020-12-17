@@ -5,7 +5,7 @@ export declare type TokenBoxProps = {
     cryptoCurrencyName: string;
     CryptoCurrencyIconComponent: React.ComponentType<SvgIconProps>;
     publicKey: string;
-    transferAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    transferAction?: (event: React.MouseEvent<HTMLElement>) => void;
     children?: any;
 };
 export declare const TokenBox: React.ComponentType<Pick<TokenBoxProps & {

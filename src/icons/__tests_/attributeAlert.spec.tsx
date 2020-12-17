@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import AttributeAlertIcon from '../attribute-alert';
 
 describe('Attribute Alert Icon', () => {
-  it('should show Attribute Alert Icon', () => {
-    const component = create(
-      <AttributeAlertIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Attribute Alert Icon', () => {
+		const component = create(<AttributeAlertIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

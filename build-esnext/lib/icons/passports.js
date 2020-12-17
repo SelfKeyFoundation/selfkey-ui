@@ -4,12 +4,12 @@ import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({
     root: {
         fill: '#00C0D9',
-        transition: 'all 0.2s ease-out',
+        transition: 'all 0.2s ease-out'
     }
 });
-export const PassportsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '36px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || "0 0 36 44" }),
+export const PassportsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '36px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || '0 0 36 44' }),
     React.createElement("g", { id: "\uD83C\uDF10-Web-Marketplace-passports", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
-        React.createElement("g", { id: "5000---Web-Marketplace", transform: "translate(-1041.000000, -443.000000)", fill: "inherit", "fill-rule": "nonzero" },
+        React.createElement("g", { id: "5000---Web-Marketplace", transform: "translate(-1041.000000, -443.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Makretplaces-Boxes", transform: "translate(230.000000, 426.000000)" },
                 React.createElement("g", { id: "Exchange-Box-3", transform: "translate(781.000000, 0.000000)" },
                     React.createElement("g", { id: "icon-marketplace-passports", transform: "translate(30.000000, 17.000000)" },

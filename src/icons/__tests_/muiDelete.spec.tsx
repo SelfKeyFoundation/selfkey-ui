@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import MuiDeleteIcon from '../muidelete';
 
 describe('Mui Delete Icon', () => {
-  it('should show Mui Delete Icon', () => {
-    const component = create(
-      <MuiDeleteIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Mui Delete Icon', () => {
+		const component = create(<MuiDeleteIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

@@ -10,8 +10,8 @@ exports.MuiVisibilityIcon = styles_1.withStyles(styles_1.createStyles({
         height: '20px',
         width: '20px',
         '&:hover': {
-            fill: colors_1.white,
-        },
-    },
+            fill: colors_1.white
+        }
+    }
 }))(icons_1.VisibilityOutlined);
 //# sourceMappingURL=muivisibility.js.map

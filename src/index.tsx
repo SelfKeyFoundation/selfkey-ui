@@ -1,4 +1,16 @@
-export { primary, typography, error, primaryTint, warning, white, grey, base, baseDark, baseLight, success } from './colors';
+export {
+	primary,
+	typography,
+	error,
+	primaryTint,
+	warning,
+	white,
+	grey,
+	base,
+	baseDark,
+	baseLight,
+	success
+} from './colors';
 export { CryptoPriceBox } from './price/crypto-price-box';
 export { NumberFormat } from './price/number-format';
 export { PriceSummary } from './price/price-summary';
@@ -44,25 +56,25 @@ export { BackButton } from './materialui/button';
 export { TooltipArrow, KeyTooltip } from './materialui/tooltip-arrow';
 
 export {
-    LargeTableHeadRow,
-    SmallTableHeadRow,
-    SmallTableRow,
-    SmallTableCell,
-    TagTableCell
+	LargeTableHeadRow,
+	SmallTableHeadRow,
+	SmallTableRow,
+	SmallTableCell,
+	TagTableCell
 } from './materialui/tables';
 
 export {
-    PrimaryCard,
-    PrimaryTintCard,
-    TypographyCard,
-    WhiteCard,
-    GreyCard,
-    BaseLightCard,
-    BaseDarkCard,
-    BaseCard,
-    SuccessCard,
-    WarningCard,
-    ErrorCard
+	PrimaryCard,
+	PrimaryTintCard,
+	TypographyCard,
+	WhiteCard,
+	GreyCard,
+	BaseLightCard,
+	BaseDarkCard,
+	BaseCard,
+	SuccessCard,
+	WarningCard,
+	ErrorCard
 } from './materialui/color-presentation';
 
 export * from './icons/index';

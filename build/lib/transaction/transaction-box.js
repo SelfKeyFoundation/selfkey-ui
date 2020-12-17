@@ -13,7 +13,7 @@ var styles = core_1.createStyles({
         borderRadius: '4px',
         backgroundColor: '#262f39',
         border: 'solid 1px #303c49',
-        boxShadow: '0 0 16px 1px #15222e',
+        boxShadow: '0 0 16px 1px #15222e'
     },
     iconWrapper: {
         position: 'absolute',
@@ -45,13 +45,13 @@ var styles = core_1.createStyles({
 var renderIcon = function (shortName, classes) {
     switch (shortName) {
         case 'KEY':
-            return (React.createElement(selfkey_1.default, { className: classes.icon }));
+            return React.createElement(selfkey_1.default, { className: classes.icon });
         case 'KI':
-            return (React.createElement(selfkey_1.default, { className: classes.icon }));
+            return React.createElement(selfkey_1.default, { className: classes.icon });
         case 'ETH':
-            return (React.createElement(ethereum_1.default, { className: classes.icon }));
+            return React.createElement(ethereum_1.default, { className: classes.icon });
         default:
-            return (React.createElement("div", { className: classes.custom }, shortName));
+            return React.createElement("div", { className: classes.custom }, shortName);
     }
 };
 exports.TransactionBox = core_1.withStyles(styles)(function (_a) {

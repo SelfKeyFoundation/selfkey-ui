@@ -7,11 +7,11 @@ const styles = createStyles({
         fill: '#C5DCE9',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: '#00C0D9',
+            fill: '#00C0D9'
         }
     }
 });
-export const ExchangesSmallIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '22px' } }, props, { viewBox: props.viewBox || "0 0 20 22" }),
+export const ExchangesSmallIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '22px' } }, props, { viewBox: props.viewBox || '0 0 20 22' }),
     React.createElement("g", { id: "\uD83C\uDF10-Web-Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "6000.1---Mobile-Web-Marketplace---Menu-open", transform: "translate(-64.000000, -126.000000)", fill: "inherit" },
             React.createElement("g", { id: "menu-items", transform: "translate(40.000000, 66.000000)" },

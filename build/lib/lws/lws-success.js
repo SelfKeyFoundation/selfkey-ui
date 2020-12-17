@@ -6,7 +6,7 @@ var core_1 = require("@material-ui/core");
 var success_1 = require("../icons/success");
 var styles = core_1.createStyles({
     lwsSuccess: {
-        fontFamily: 'Lato, arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif'
     },
     areaTitle: {
         textAlign: 'center',
@@ -16,16 +16,16 @@ var styles = core_1.createStyles({
             fontSize: '16px',
             padding: '25px 0',
             margin: 0,
-            color: '#23E6FE',
+            color: '#23E6FE'
         },
         '& h3': {
             fontWeight: 'normal',
             fontSize: '21px',
             padding: '0 0 45px',
             margin: 0,
-            color: '#93B0C1',
-        },
-    },
+            color: '#93B0C1'
+        }
+    }
 });
 exports.LWSSuccess = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes;

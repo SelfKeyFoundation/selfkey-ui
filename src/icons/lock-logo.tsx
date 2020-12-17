@@ -16,15 +16,15 @@ export const LockLogo = (props: SvgIconProps) => (
 				y2="-16.397%"
 				id="linearGradient-1"
 			>
-				<stop stop-color="#08BCCD" offset="0%"></stop>
-				<stop stop-color="#2DA1F8" offset="100%"></stop>
+				<stop stopColor="#08BCCD" offset="0%"></stop>
+				<stop stopColor="#2DA1F8" offset="100%"></stop>
 			</linearGradient>
 			<polygon
 				id="path-2"
 				points="0 0 9.87096774 0 9.87096774 16.5483871 0 16.5483871"
 			></polygon>
 		</defs>
-		<g id="🏅-Staking-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="🏅-Staking-Dashboard" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
 			<g id="412---Staking-Dashboard" transform="translate(-246.000000, -139.000000)">
 				<g id="Staking-Cards" transform="translate(-536.000000, 123.000000)">
 					<g id="Card-Copy-7" transform="translate(573.000000, 0.000000)">
@@ -33,7 +33,7 @@ export const LockLogo = (props: SvgIconProps) => (
 								<polygon
 									id="Shape"
 									fill="url(#linearGradient-1)"
-									fill-rule="nonzero"
+									fillRule="nonzero"
 									points="28.9307467 8.2630273 14.4653733 0 0 8.2630273 0 24.7890819 14.4653733 33.0521092 28.9307467 24.7890819"
 								></polygon>
 								<g id="Symbol-Copy-3" transform="translate(9.580645, 8.419355)">

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Grid, withStyles, createStyles } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
 import CommonStyle from '../../../common/common-style';
 import { Loop as LoopIcon } from '@material-ui/icons';
@@ -24,7 +25,7 @@ export const styles = createStyles({
         borderWidth: '0 2px 2px 0',
         display: 'inline-block',
         padding: '4px',
-        marginLeft: '5px',
+        marginLeft: '5px'
     },
     rightIcon: {
         transform: 'rotate(-45deg)'
@@ -47,10 +48,12 @@ export const styles = createStyles({
         }
     },
     fullWidth: {
-        width: '100%',
+        width: '100%'
     },
     checkbox: {
-        color: '#FFFFFF', fontSize: '14px', lineHeight: '14px'
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px'
     },
     checkboxRoot: {
         color: '#00C0D9',
@@ -59,7 +62,7 @@ export const styles = createStyles({
         }
     },
     checkboxChecked: {
-        color: '#00C0D9 !important',
+        color: '#00C0D9 !important'
     },
     checkboxLabel: {
         color: '#FFFFFF',
@@ -80,7 +83,9 @@ export const styles = createStyles({
         borderRadius: '4px',
         backgroundColor: '#1E262E',
         boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)',
-        color: '#FFFFFF', fontSize: '14px', lineHeight: '14px',
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px',
         '&:focus': {
             outline: 'none',
             boxShadow: '0 0 5px rgba(81, 203, 238, 1)'
@@ -125,12 +130,17 @@ export class TransactionFeeBoxComponent extends React.Component {
         };
     }
     componentDidUpdate(prevProps) {
-        if (prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
-            this.setState({ ...this.state, gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice });
+        if (prevProps.gasLimit !== this.props.gasLimit ||
+            prevProps.gasPrice !== this.props.gasPrice) {
+            this.setState({
+                ...this.state,
+                gasLimit: this.props.gasLimit,
+                gasPrice: this.props.gasPrice
+            });
         }
     }
     renderActualTransactionFeeBox() {
-        return (React.createElement(ActualTransactionFeeBox, Object.assign({}, this.props)));
+        return React.createElement(ActualTransactionFeeBox, Object.assign({}, this.props));
     }
     toggleShowAdvanced() {
         const { showAdvanced } = this.state;
@@ -164,11 +174,11 @@ export class TransactionFeeBoxComponent extends React.Component {
             React.createElement(Grid, { container: true, className: classes.inputsContainer, direction: "row", justify: "space-between", alignItems: "flex-start" },
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Gas Price (Gwei)"),
-                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: (e) => this.setGasPrice(e) })),
+                    React.createElement("input", { type: "text", className: classes.formControl, value: this.state.gasPrice, onChange: e => this.setGasPrice(e) })),
                 React.createElement("div", null,
                     React.createElement("div", { className: classes.formGroup },
                         React.createElement("label", null, "Gas Limit"),
-                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: (e) => this.setGasLimit(e), className: classes.formControl }))),
+                        React.createElement("input", { type: "text", value: this.state.gasLimit, onChange: e => this.setGasLimit(e), className: classes.formControl }))),
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Nonce"),
                     React.createElement("span", { className: classes.nonceValue },
@@ -177,10 +187,12 @@ export class TransactionFeeBoxComponent extends React.Component {
                         " "))),
             React.createElement(Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement("div", { className: classes.currNetworkStatusContainer },
-                    React.createElement("span", { className: classes.currNetworkStatusTitle }, "Current Network Status: "),
+                    React.createElement("span", { className: classes.currNetworkStatusTitle },
+                        "Current Network Status:",
+                        ' '),
                     React.createElement(LoopIcon, { onClick: reloadEthGasStationInfoAction, classes: {
                             root: classes.reloadNetworkIcon
-                        } }, " ")),
+                        } }, ' ')),
                 React.createElement("div", { className: classes.gasPriceValuesContainer },
                     React.createElement("p", null,
                         " Under 30 Mins: ",
@@ -202,7 +214,10 @@ export class TransactionFeeBoxComponent extends React.Component {
             React.createElement(Grid, { container: true, wrap: "nowrap" },
                 React.createElement(Grid, { container: true, direction: "row" },
                     React.createElement(Grid, { item: true },
-                        React.createElement("span", { className: `${classes.networkTransactionFeeTitle} feeTitle` }, " Network Transaction Fee: ")),
+                        React.createElement("span", { className: `${classes.networkTransactionFeeTitle} feeTitle` },
+                            ' ',
+                            "Network Transaction Fee:",
+                            ' ')),
                     React.createElement(Grid, { item: true }, this.renderActualTransactionFeeBox())),
                 React.createElement(Grid, { item: true, className: classes.showAdvancedContainer, onClick: () => this.toggleShowAdvanced() },
                     React.createElement("span", null, " Advanced "),

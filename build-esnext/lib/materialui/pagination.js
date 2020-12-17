@@ -13,9 +13,9 @@ export const KeyIconButton = withStyles(createStyles({
         padding: '5px',
         '&:hover': {
             backgroundColor: '#2D3742',
-            border: '1px solid #687C8A',
-        },
-    },
+            border: '1px solid #687C8A'
+        }
+    }
 }))(IconButton);
 class TablePaginationActions extends React.Component {
     // handleFirstPageButtonClick = event => {
@@ -35,7 +35,7 @@ class TablePaginationActions extends React.Component {
     // };
     render() {
         //   const { classes, count, page, rowsPerPage, theme } = this.props;
-        return (React.createElement(Grid, { container: true, direction: 'row' },
+        return (React.createElement(Grid, { container: true, direction: "row" },
             React.createElement(Grid, { item: true },
                 React.createElement(KeyIconButton, { "aria-label": "First Page" },
                     React.createElement(FirstPageIcon, null))),
@@ -63,9 +63,9 @@ class Pagination extends React.Component {
     }
     render() {
         return (React.createElement(TablePagination, { rowsPerPageOptions: [5, 10, 25], component: "div", count: 148, rowsPerPage: 5, page: 0, backIconButtonProps: {
-                'aria-label': 'Previous Page',
+                'aria-label': 'Previous Page'
             }, nextIconButtonProps: {
-                'aria-label': 'Next Page',
+                'aria-label': 'Next Page'
             }, onChangePage: this.handleChangePage, ActionsComponent: TablePaginationActions }));
     }
 }

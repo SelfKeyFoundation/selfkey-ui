@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
+import { WithStyles } from '@material-ui/styles';
 import { Wallet } from './lws-common';
-export declare const styles: Record<"button" | "form" | "title" | "selected" | "formControl" | "areaTitle" | "formGroup" | "radioReplace" | "buttonTertiary" | "formSubmitRow" | "buttonPrimary" | "buttonSecondary" | "supportText" | "validationMsg" | "validationError", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+export declare const styles: Record<"button" | "form" | "title" | "selected" | "formControl" | "areaTitle" | "formGroup" | "radioReplace" | "buttonTertiary" | "formSubmitRow" | "buttonPrimary" | "buttonSecondary" | "supportText" | "validationMsg" | "validationError", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type LWSSelectWalletProps = {
     loginAction?: (wallet: Wallet, password: string) => void;
-    connectToHardwareWalletAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    connectToHardwareWalletAction?: (event: React.MouseEvent<HTMLElement>) => void;
     passwordError?: boolean;
-    wallets: Array<Wallet>;
+    wallets: Wallet[];
 };
 export declare type LWSSelectWalletState = {
     isHardwareWallet: boolean;
@@ -27,5 +27,5 @@ export declare class LWSSelectWalletComponent extends React.Component<StyledProp
     renderSelection(): JSX.Element;
     render(): JSX.Element;
 }
-export declare const LWSSelectWallet: React.ComponentType<Pick<StyledProps, "loginAction" | "connectToHardwareWalletAction" | "passwordError" | "wallets"> & import("@material-ui/core").StyledComponentProps<"button" | "form" | "title" | "selected" | "formControl" | "areaTitle" | "formGroup" | "radioReplace" | "buttonTertiary" | "formSubmitRow" | "buttonPrimary" | "buttonSecondary" | "supportText" | "validationMsg" | "validationError">>;
+export declare const LWSSelectWallet: React.ComponentType<Pick<StyledProps, "loginAction" | "connectToHardwareWalletAction" | "passwordError" | "wallets"> & import("@material-ui/styles").StyledComponentProps<"button" | "form" | "title" | "selected" | "formControl" | "areaTitle" | "formGroup" | "radioReplace" | "buttonTertiary" | "formSubmitRow" | "buttonPrimary" | "buttonSecondary" | "supportText" | "validationMsg" | "validationError">>;
 export default LWSSelectWallet;

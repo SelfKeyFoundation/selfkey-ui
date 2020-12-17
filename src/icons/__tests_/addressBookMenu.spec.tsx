@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import AddressBookMenuIcon from '../address-book-menu';
 
 describe('AddressBookMenu Icon', () => {
-  it('should show AddressBookMenu Icon', () => {
-    const component = create(
-      <AddressBookMenuIcon/>
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show AddressBookMenu Icon', () => {
+		const component = create(<AddressBookMenuIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

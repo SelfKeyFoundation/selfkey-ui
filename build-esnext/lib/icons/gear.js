@@ -5,7 +5,7 @@ const styles = createStyles({
     root: {
         stroke: '#93B0C1',
         '&:hover': {
-            stroke: 'white',
+            stroke: 'white'
         }
     }
 });

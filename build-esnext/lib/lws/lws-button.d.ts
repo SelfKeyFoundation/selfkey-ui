@@ -1,6 +1,6 @@
 import * as React from 'react';
 export declare type ButtonProps = {
-    onClick?: ((event: React.MouseEvent<HTMLElement>) => void);
+    onClick?: (event: React.MouseEvent<HTMLElement>) => void;
     className?: string;
     children: any;
 };

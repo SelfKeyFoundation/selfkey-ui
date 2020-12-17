@@ -21,11 +21,11 @@ var styles = core_1.createStyles({
         fill: '#C5DCE9',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: '#00C0D9',
+            fill: '#00C0D9'
         }
     }
 });
-exports.IncorporationsSmallIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '20px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || "0 0 20 20" }),
+exports.IncorporationsSmallIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '20px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 20 20' }),
     React.createElement("g", { id: "\uD83C\uDF10-Web-Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "6000.1---Mobile-Web-Marketplace---Menu-open", transform: "translate(-64.000000, -240.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "menu-items", transform: "translate(40.000000, 66.000000)" },

@@ -1,251 +1,251 @@
 .rdt {
-    font-family: 'Lato', arial, sans-serif;
+	font-family: 'Lato', arial, sans-serif;
 }
 
 .rdtOpen {
-    display: table; 
-    position: relative;
+	display: table;
+	position: relative;
 }
 
 .rdtPicker {
-    display: none;
+	display: none;
 }
 
 .rdtOpen .rdtPicker {
-    display: block;
-    position: absolute;
-    z-index: 100;
+	display: block;
+	position: absolute;
+	z-index: 100;
 }
 
 .rdt .form-control {
-    background-color: #1E262E;
-    border-radius: 4px;
-    border: 1px solid #384656;
-    color: #93B0C1;
-    font-size: 14px;
-    height: 44px;
-    line-height: 21px;
-    outline: none;
-    padding-left: 16px;
-    padding-right: 16px;
+	background-color: #1e262e;
+	border-radius: 4px;
+	border: 1px solid #384656;
+	color: #93b0c1;
+	font-size: 14px;
+	height: 44px;
+	line-height: 21px;
+	outline: none;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 .rdt .form-control:focus {
-    border: 1px solid #00C0D9;
-    box-shadow: 0 0 3px 1px #00C0D9;
+	border: 1px solid #00c0d9;
+	box-shadow: 0 0 3px 1px #00c0d9;
 }
 
 .rdt .form-control::placeholder {
-    color: #404B55;
+	color: #404b55;
 }
 
 .rdtSwitch,
 .dow {
-    color: #93B0C1;
+	color: #93b0c1;
 }
 
 .rdtSwitch:hover,
 .rdtTimeToggle:hover {
-    color: white;
+	color: white;
 }
 
 .rdtNext,
 .rdtPrev {
-    color: #697C95;
-    width: 40px;
+	color: #697c95;
+	width: 40px;
 }
 
 .rdtNext span,
 .rdtPrev span {
-    font-size: 2.2em;
-    vertical-align: sub;
+	font-size: 2.2em;
+	vertical-align: sub;
 }
 
 .rdtNext:hover,
 .rdtPrev:hover {
-    color: white;
+	color: white;
 }
 
 .dow {
-    font-weight: 600;
-    padding-bottom: 10px;
-    padding-top: 25px;
+	font-weight: 600;
+	padding-bottom: 10px;
+	padding-top: 25px;
 }
 
 .rdt tbody {
-    font-size: 14px;
-    font-weight: 600;
+	font-size: 14px;
+	font-weight: 600;
 }
 
 .rdt thead tr:first-child::after {
-    border-bottom: 1px solid #313D49;
-    content: '';
-    left: 0;
-    position: absolute;
-    top: 60px;
-    width: 100%;
+	border-bottom: 1px solid #313d49;
+	content: '';
+	left: 0;
+	position: absolute;
+	top: 60px;
+	width: 100%;
 }
 
 .rdt thead tr:first-child th {
-    cursor: pointer;
-    padding-bottom: 10px;
-    padding-top: 0;
+	cursor: pointer;
+	padding-bottom: 10px;
+	padding-top: 0;
 }
 
 .rdt thead tr:nth-child(2) {
-    font-size: 14px;
-    text-transform: uppercase;
+	font-size: 14px;
+	text-transform: uppercase;
 }
 
 .rdt tfoot td {
-    color: #93B0C1;
-    cursor: pointer;
-    font-size: 12px;
-    padding-top: 26px;
-    text-align: center;
+	color: #93b0c1;
+	cursor: pointer;
+	font-size: 12px;
+	padding-top: 26px;
+	text-align: center;
 }
 
 .rdt tfoot::before {
-    border-top: 1px solid #313D49;
-    content: '';
-    left: 0;
-    margin-top: 10px;
-    position: absolute;
-    width: 100%;
+	border-top: 1px solid #313d49;
+	content: '';
+	left: 0;
+	margin-top: 10px;
+	position: absolute;
+	width: 100%;
 }
 
 .rdtDay,
 .rdtMonth,
 .rdtYear,
 .rdtTime {
-    cursor: pointer;
-    font-weight: 600;
-    padding: 8px 10px;
-    text-align: center;
+	cursor: pointer;
+	font-weight: 600;
+	padding: 8px 10px;
+	text-align: center;
 }
 
 .rdtDay:hover,
 .rdtMonth:hover,
 .rdtYear:hover {
-    background-color: #00C0D9;
-    border-radius: 3px;
+	background-color: #00c0d9;
+	border-radius: 3px;
 }
 
 .rdtNew,
 .rdtOld {
-    color: #404B55;
+	color: #404b55;
 }
 
 .rdtDays,
 .rdtMonths,
 .rdtYears,
 .rdtTime {
-    background-color: #1E262E;
-    border-radius: 3px;
-    border: 1px solid #313D49;
-    min-height: 326px;
-    min-width: 273px;
-    padding: 5px 25px 15px 25px;
+	background-color: #1e262e;
+	border-radius: 3px;
+	border: 1px solid #313d49;
+	min-height: 326px;
+	min-width: 273px;
+	padding: 5px 25px 15px 25px;
 }
 
 .rdtMonths table:first-child,
 .rdtYears table:first-child,
 .rdtTime table {
-    width: 100%;
+	width: 100%;
 }
 
 .rdtYears table:nth-child(2),
 .rdtMonths table:nth-child(2) {
-    display: flex;
-    width: 100%;
+	display: flex;
+	width: 100%;
 }
 
 .rdtYears table:nth-child(2) tbody,
 .rdtMonths table:nth-child(2) tbody {
-    margin-top: 65px;
-    text-align: center;
-    width: inherit;
+	margin-top: 65px;
+	text-align: center;
+	width: inherit;
 }
 
 .rdtTime table tbody {
-    display: inherit;
-    margin-top: 85px;
-    text-align: center;
-    width: inherit;
+	display: inherit;
+	margin-top: 85px;
+	text-align: center;
+	width: inherit;
 }
 
 .rdtTime .rdtSwitch {
-    font-weight: 400;
-    padding-bottom: 18px !important;
-    padding-top: 14px !important;
+	font-weight: 400;
+	padding-bottom: 18px !important;
+	padding-top: 14px !important;
 }
 
 .rdtYears table:nth-child(2) tbody tr,
 .rdtMonths table:nth-child(2) tbody tr {
-    display: flex;
-    justify-content: space-around;
-    margin: 10px 0;
+	display: flex;
+	justify-content: space-around;
+	margin: 10px 0;
 }
 
 .rdtPicker {
-    min-height: 325px;
-    padding: 4px 0;
+	min-height: 325px;
+	padding: 4px 0;
 }
 
 .rdtCount {
-    border: 1px solid #384656;
-    border-radius: 4px;
-    color: #93B0C1;
-    font-weight: normal;
-    margin: 15px 0;
-    padding: 15px 17px;
-    width: 25px;
+	border: 1px solid #384656;
+	border-radius: 4px;
+	color: #93b0c1;
+	font-weight: normal;
+	margin: 15px 0;
+	padding: 15px 17px;
+	width: 25px;
 }
 
 .rdtCounter:first-child::before {
-    color: #93B0C1;
-    content: 'Hours';
-    margin-left: -14px;
-    margin-top: -35px;
-    position: absolute;
+	color: #93b0c1;
+	content: 'Hours';
+	margin-left: -14px;
+	margin-top: -35px;
+	position: absolute;
 }
 
 .rdtCounter:nth-child(3):before {
-    color: #93B0C1;
-    content: 'Minutes';
-    margin-left: -21px;
-    margin-top: -35px;
-    position: absolute;
+	color: #93b0c1;
+	content: 'Minutes';
+	margin-left: -21px;
+	margin-top: -35px;
+	position: absolute;
 }
 
 .rdtCounters {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .rdtBtn,
 .rdtNext,
 .rdtPrev,
 .rdtSwitch {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .rdtBtn {
-    color: #697C95;
+	color: #697c95;
 }
 
 .rdtBtn:hover {
-    color: white;
+	color: white;
 }
 
 .rdtCounterSeparator {
-    display: none;
+	display: none;
 }
 
 .rdtActive {
-    background-color: #00C0D9;
-    border-radius: 3px;
+	background-color: #00c0d9;
+	border-radius: 3px;
 }

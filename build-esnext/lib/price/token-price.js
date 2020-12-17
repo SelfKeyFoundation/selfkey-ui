@@ -15,7 +15,7 @@ const styles = createStyles({
     }
 });
 export const TokenPrice = withStyles(styles)(({ classes, locale, cryptoCurrency, cryptoValue, toCurrency, toValue }) => (React.createElement("div", null,
-    React.createElement(PriceSummary, { locale: locale, priceStyle: 'decimal', currency: cryptoCurrency, value: cryptoValue, valueClass: classes.cryptoCurrencyValue }),
-    React.createElement(PriceSummary, { locale: locale, priceStyle: 'currency', currency: toCurrency, currencyClass: classes.currency, value: toValue, valueClass: classes.currency, prependCurrency: true }))));
+    React.createElement(PriceSummary, { locale: locale, priceStyle: "decimal", currency: cryptoCurrency, value: cryptoValue, valueClass: classes.cryptoCurrencyValue }),
+    React.createElement(PriceSummary, { locale: locale, priceStyle: "currency", currency: toCurrency, currencyClass: classes.currency, value: toValue, valueClass: classes.currency, prependCurrency: true }))));
 export default TokenPrice;
 //# sourceMappingURL=token-price.js.map

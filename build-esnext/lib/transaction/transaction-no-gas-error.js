@@ -4,7 +4,7 @@ import TransactionErrorBox from './transaction-error-box';
 const styles = createStyles({
     bodyText: {
         paddingRight: '40px',
-        textAlign: 'justify',
+        textAlign: 'justify'
     },
     learnMoreText: {
         paddingTop: '15px',
@@ -14,7 +14,7 @@ const styles = createStyles({
         lineHeight: '19px'
     },
     learnMoreLink: {
-        textDecoration: 'none',
+        textDecoration: 'none'
     }
 });
 export const TransactionNoGasError = withStyles(styles)(({ classes, publicKey, openLink, closeAction }) => {
@@ -30,7 +30,7 @@ export const TransactionNoGasError = withStyles(styles)(({ classes, publicKey, o
         React.createElement("div", { className: classes.bodyText },
             React.createElement(Typography, { variant: "body1" }, "You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below."),
             React.createElement("div", { className: classes.learnMoreText },
-                "To learn more about transaction fees, click ",
+                "To learn more about transaction fees, click",
                 ' ',
                 React.createElement("a", { className: `${classes.learnMoreText}  ${classes.learnMoreLink}`, href: gasExplanationUrl, onClick: handleLinkClick }, "here.")))));
 });

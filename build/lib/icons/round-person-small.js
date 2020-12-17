@@ -16,7 +16,7 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({});
-exports.SmallRoundPerson = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '28px', height: props.height || '28px' } }, props, { viewBox: props.viewBox || "0 0 28 28" }),
+exports.SmallRoundPerson = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '28px', height: props.height || '28px' } }, props, { viewBox: props.viewBox || '0 0 28 28' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard-srp", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.5-Navigation-open---switch-profile", transform: "translate(-1196.000000, -111.000000)" },
             React.createElement("g", { id: "Top-Nav-Dropdown", transform: "translate(1182.000000, 64.000000)" },

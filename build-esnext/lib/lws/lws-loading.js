@@ -7,8 +7,8 @@ const styles = createStyles({
         textAlign: 'center',
         lineHeight: '300px',
         '& svg circle': {
-            fill: '#1CA9BA',
-        },
+            fill: '#1CA9BA'
+        }
     }
 });
 export const LWSLoading = withStyles(styles)(({ classes }) => (React.createElement("div", { className: classes.loading },

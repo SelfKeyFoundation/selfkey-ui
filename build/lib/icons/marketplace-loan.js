@@ -19,11 +19,11 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.LoanIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || "0 0 36 34" }),
+exports.LoanIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || '0 0 36 34' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "760---Loans-Marketplace---Lending", transform: "translate(-151.000000, -153.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(151.000000, 153.000000)" },

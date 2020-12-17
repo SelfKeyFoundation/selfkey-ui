@@ -11,14 +11,14 @@ const style = {
         display: 'block',
         height: 0,
         margin: 'auto',
-        width: 0,
-    },
+        width: 0
+    }
 };
-export const TooltipArrow = (() => (React.createElement("span", { className: "arrowClass", style: style })));
+export const TooltipArrow = () => React.createElement("span", { className: "arrowClass", style: style });
 export const KeyTooltip = withStyles(createStyles({
     popper: {
         backgroundColor: 'transparent',
-        opacity: 1,
+        opacity: 1
     },
     tooltip: {
         color: '#93B0C1',
@@ -47,8 +47,8 @@ export const KeyTooltip = withStyles(createStyles({
             display: 'block',
             width: 0,
             zIndex: 1
-        },
-    },
+        }
+    }
 }))(Tooltip);
 export const SliderTooltip = withStyles(createStyles({
     tooltip: {
@@ -58,7 +58,7 @@ export const SliderTooltip = withStyles(createStyles({
         fontSize: '12px',
         fontWeight: 600,
         margin: '8px 0',
-        padding: 0,
-    },
+        padding: 0
+    }
 }))(Tooltip);
 //# sourceMappingURL=tooltip-arrow.js.map

@@ -20,12 +20,16 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.BookIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '55px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || '0 0 68 55' }),
+exports.BookIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: {
+        width: props.width || '68px',
+        height: props.height || '55px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 68 55' }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-240.000000, -958.000000)", fill: "inherit", fillRule: "nonzero" },

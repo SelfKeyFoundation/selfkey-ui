@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import PasswordIcon from '../password';
 
 describe('Password Icon', () => {
-  it('should show Password Icon', () => {
-    const component = create(
-      <PasswordIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Password Icon', () => {
+		const component = create(<PasswordIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

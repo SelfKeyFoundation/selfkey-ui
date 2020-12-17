@@ -15,8 +15,8 @@ exports.ModalWrap = styles_1.withStyles(styles_1.createStyles({
         position: 'absolute',
         top: '150px',
         width: '780px',
-        marginBottom: '48px',
-    },
+        marginBottom: '48px'
+    }
 }))(core_1.Paper);
 exports.ModalHeader = styles_1.withStyles(styles_1.createStyles({
     root: {
@@ -31,8 +31,8 @@ exports.ModalHeader = styles_1.withStyles(styles_1.createStyles({
         height: '65px',
         justifyContent: 'space-between',
         padding: '16px 32px',
-        width: '100%',
-    },
+        width: '100%'
+    }
 }))(core_1.Paper);
 exports.ModalBody = styles_1.withStyles(styles_1.createStyles({
     root: {
@@ -43,8 +43,8 @@ exports.ModalBody = styles_1.withStyles(styles_1.createStyles({
         boxSizing: 'border-box',
         minHeight: '200px',
         padding: '32px 40px 56px',
-        width: '100%',
-    },
+        width: '100%'
+    }
 }))(core_1.Paper);
 exports.SmallModalBody = styles_1.withStyles(styles_1.createStyles({
     root: {
@@ -55,8 +55,8 @@ exports.SmallModalBody = styles_1.withStyles(styles_1.createStyles({
         boxSizing: 'border-box',
         minHeight: '200px',
         padding: '32px 32px 40px',
-        width: '100%',
-    },
+        width: '100%'
+    }
 }))(core_1.Paper);
 exports.ModalBody2 = styles_1.withStyles(styles_1.createStyles({
     root: {
@@ -65,8 +65,8 @@ exports.ModalBody2 = styles_1.withStyles(styles_1.createStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         margin: '0 auto',
-        width: '780px',
-    },
+        width: '780px'
+    }
 }))(core_1.Paper);
 exports.ModalCloseButton = styles_1.withStyles(styles_1.createStyles({
     root: {
@@ -80,7 +80,7 @@ exports.ModalCloseButton = styles_1.withStyles(styles_1.createStyles({
         position: 'absolute',
         right: '-20px',
         top: '-20px',
-        width: '40px',
+        width: '40px'
     }
 }))(core_1.Button);
 //# sourceMappingURL=modal-elements.js.map

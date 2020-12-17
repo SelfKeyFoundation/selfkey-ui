@@ -4,12 +4,12 @@ import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({
     root: {
         fill: '#00C0D9',
-        transition: 'all 0.2s ease-out',
+        transition: 'all 0.2s ease-out'
     }
 });
-export const MetalsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '44px', height: props.height || '24px' } }, props, { viewBox: props.viewBox || "0 0 44 24" }),
+export const MetalsIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '44px', height: props.height || '24px' } }, props, { viewBox: props.viewBox || '0 0 44 24' }),
     React.createElement("g", { id: "\uD83C\uDF10-Web-Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
-        React.createElement("g", { id: "5000---Web-Marketplace", transform: "translate(-650.000000, -1165.000000)", fill: "inherit", "fill-rule": "nonzero" },
+        React.createElement("g", { id: "5000---Web-Marketplace", transform: "translate(-650.000000, -1165.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Makretplaces-Boxes", transform: "translate(230.000000, 426.000000)" },
                 React.createElement("g", { id: "Exchange-Box-5", transform: "translate(390.000000, 712.000000)" },
                     React.createElement("g", { id: "icon-marketplace-metals", transform: "translate(30.000000, 27.000000)" },

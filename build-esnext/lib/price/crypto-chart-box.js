@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { Grid } from '@material-ui/core';
 import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Chart } from 'react-google-charts';
@@ -14,7 +14,7 @@ const styles = createStyles({
         border: 'solid 1px #303c49',
         color: '#ffffff',
         fontFamily: 'Lato, arial, sans-serif',
-        padding: '20px',
+        padding: '20px'
     },
     horizontalDivider: {
         height: '1px',
@@ -24,7 +24,7 @@ const styles = createStyles({
         width: '44px !important',
         height: '44px !important',
         borderRadius: '8px !important',
-        position: 'relative',
+        position: 'relative'
     },
     coloredBoxText: {
         position: 'absolute',
@@ -35,10 +35,10 @@ const styles = createStyles({
         transform: 'translate(-50%, -50%)'
     },
     prices: {
-        paddingTop: '0px',
+        paddingTop: '0px'
     },
     texts: {
-        fontSize: '18px',
+        fontSize: '18px'
     },
     active: {
         borderRadius: '4px',
@@ -128,13 +128,13 @@ export class CryptoChartBoxComponent extends React.Component {
                     }
                 });
                 this.setState({ activations: newTokens });
-            },
+            }
         };
         this.onMouseOverEvent = {
             eventName: 'onmouseover',
             callback: (Chart, chartItem) => {
                 const selection = Chart.chart.getSelection();
-                let newTokens = this.state.activations.slice(0);
+                const newTokens = this.state.activations.slice(0);
                 if (newTokens[chartItem.row] && newTokens[chartItem.row].active) {
                     return;
                 }
@@ -149,7 +149,7 @@ export class CryptoChartBoxComponent extends React.Component {
                 }
                 newTokens[chartItem.row] = { active: true };
                 this.setState({ activations: newTokens });
-            },
+            }
         };
         this.onMouseOutEvent = {
             eventName: 'onmouseout',
@@ -161,7 +161,7 @@ export class CryptoChartBoxComponent extends React.Component {
                 const newTokens = this.state.activations.slice(0);
                 newTokens[chartItem.row] = { active: false };
                 this.setState({ activations: newTokens });
-            },
+            }
         };
         this.DEFAULT_COLLOR = '#2A3540';
         this.initActivations(props.tokens);
@@ -179,42 +179,47 @@ export class CryptoChartBoxComponent extends React.Component {
     }
     initSelection() {
         this.selection = [];
-        this.chart = { setSelection: () => { return; } };
+        this.chart = {
+            setSelection: () => {
+                return;
+            }
+        };
     }
     componentDidUpdate(prevProps) {
         this.chart.setSelection(this.selection);
     }
     getChartEvents() {
-        return this.hasBalance() ? [
-            this.selectEvent,
-            this.onMouseOutEvent,
-            this.onMouseOverEvent
-        ] : [];
+        return this.hasBalance()
+            ? [this.selectEvent, this.onMouseOutEvent, this.onMouseOverEvent]
+            : [];
     }
     getTokensLegend(classes, tokens, locale, fiatCurrency) {
         return tokens.map((token, index) => {
-            return (React.createElement(Grid, { item: true, xs: 6, key: index, className: this.state.activations[index] && this.state.activations[index].active ? classes.active : '', onMouseEnter: () => this.onItemHoverEnter(index), onMouseLeave: () => this.onItemHoverLeave() },
-                React.createElement(Grid, { container: true, alignItems: 'flex-start' },
+            return (React.createElement(Grid, { item: true, xs: 6, key: index, className: this.state.activations[index] && this.state.activations[index].active
+                    ? classes.active
+                    : '', onMouseEnter: () => this.onItemHoverEnter(index), onMouseLeave: () => this.onItemHoverLeave() },
+                React.createElement(Grid, { container: true, alignItems: "flex-start" },
                     React.createElement(Grid, { item: true, xs: 2 },
-                        React.createElement("div", { className: classes.coloredBox, style: { backgroundColor: (index <= 4) ? this.getColors()[index] : this.OTHERS_COLOR } },
+                        React.createElement("div", { className: classes.coloredBox, style: {
+                                backgroundColor: index <= 4 ? this.getColors()[index] : this.OTHERS_COLOR
+                            } },
                             React.createElement("div", { className: classes.coloredBoxText }, token.name.charAt(0)))),
                     React.createElement(Grid, { item: true, xs: 4 },
-                        React.createElement(Grid, { container: true, alignItems: 'flex-start', className: classes.texts },
+                        React.createElement(Grid, { container: true, alignItems: "flex-start", className: classes.texts },
                             React.createElement(Grid, { item: true, xs: 12 }, token.name),
                             React.createElement(Grid, { item: true, xs: 12 }, token.symbol))),
                     React.createElement(Grid, { item: true, xs: 4 },
-                        React.createElement(Grid, { container: true, alignItems: 'flex-start' },
+                        React.createElement(Grid, { container: true, alignItems: "flex-start" },
                             React.createElement(Grid, { item: true, xs: 12 },
-                                React.createElement(PriceSummary, { locale: locale, priceStyle: 'decimal', currency: token.symbol, className: classes.prices, valueClass: classes.texts, value: token.balance, justify: 'flex-end' })),
+                                React.createElement(PriceSummary, { locale: locale, priceStyle: "decimal", currency: token.symbol, className: classes.prices, valueClass: classes.texts, value: token.balance, justify: "flex-end" })),
                             React.createElement(Grid, { item: true, xs: 12 },
-                                React.createElement(PriceSummary, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, className: classes.prices, valueClass: classes.texts, value: token.balanceInFiat, justify: 'flex-end' })))))));
+                                React.createElement(PriceSummary, { locale: locale, priceStyle: "currency", currency: fiatCurrency, className: classes.prices, valueClass: classes.texts, value: token.balanceInFiat, justify: "flex-end" })))))));
         });
     }
-    ;
     hasBalance() {
         let { tokens } = this.props;
         tokens = tokens || [];
-        let check = tokens.find(token => {
+        const check = tokens.find(token => {
             return token.balanceInFiat > 0;
         });
         return !!check;
@@ -237,7 +242,7 @@ export class CryptoChartBoxComponent extends React.Component {
     }
     getTotalBalanceInFiat(tokens) {
         return tokens.reduce((a, b) => {
-            return a + b['balanceInFiat'];
+            return a + b.balanceInFiat;
         }, 0);
     }
     getChart() {
@@ -270,24 +275,26 @@ export class CryptoChartBoxComponent extends React.Component {
     }
     getViewAllSection() {
         const { classes, tokens, topTokenListSize, viewAll } = this.props;
-        return (tokens.length > topTokenListSize) ? (React.createElement(Grid, { item: true, xs: 12 },
-            React.createElement(Grid, { container: true, justify: 'center' },
+        return tokens.length > topTokenListSize ? (React.createElement(Grid, { item: true, xs: 12 },
+            React.createElement(Grid, { container: true, justify: "center" },
                 React.createElement(Grid, { item: true, className: classes.buttonViewMore, onClick: () => this.toggleViewAll() },
                     !viewAll ? (React.createElement(ExpandMore, { className: classes.expandMore })) : (React.createElement(ExpandLess, { className: classes.expandMore })),
-                    React.createElement("span", { className: classes.buttonViewMoreText }, !viewAll ? 'View All' : 'Collapse'))))) : '';
+                    React.createElement("span", { className: classes.buttonViewMoreText }, !viewAll ? 'View All' : 'Collapse'))))) : ('');
     }
     render() {
         const { classes, locale, fiatCurrency, tokens, manageCryptoAction } = this.props;
-        let hasBalance = this.hasBalance();
-        let colors = hasBalance ? this.getColors() : [this.DEFAULT_COLLOR];
-        let tooltip = hasBalance ? {
-            trigger: 'focus',
-            isHtml: true
-        } : { trigger: 'none' };
+        const hasBalance = this.hasBalance();
+        const colors = hasBalance ? this.getColors() : [this.DEFAULT_COLLOR];
+        const tooltip = hasBalance
+            ? {
+                trigger: 'focus',
+                isHtml: true
+            }
+            : { trigger: 'none' };
         return (React.createElement("div", { className: classes.cryptoBox },
-            React.createElement(Grid, { container: true, alignItems: 'center', spacing: 4 },
+            React.createElement(Grid, { container: true, alignItems: "center", spacing: 4 },
                 React.createElement(Grid, { item: true, xs: 12 },
-                    React.createElement(Grid, { container: true, justify: 'space-between', alignItems: 'flex-end', className: classes.header },
+                    React.createElement(Grid, { container: true, justify: "space-between", alignItems: "flex-end", className: classes.header },
                         React.createElement(Grid, { item: true, xs: 11, className: classes.headerText }, "My Crypto"),
                         React.createElement(Grid, { item: true, xs: 1 },
                             React.createElement("button", { className: classes.gearButton, onClick: manageCryptoAction },
@@ -295,7 +302,7 @@ export class CryptoChartBoxComponent extends React.Component {
                 React.createElement(Grid, { item: true, xs: 12 },
                     React.createElement("div", { className: classes.horizontalDivider })),
                 React.createElement(Grid, { item: true, xs: 12 },
-                    React.createElement(Grid, { container: true, alignItems: 'flex-start', spacing: 0 },
+                    React.createElement(Grid, { container: true, alignItems: "flex-start", spacing: 0 },
                         React.createElement(Grid, { item: true, xs: 4, className: classes.chart },
                             React.createElement(Chart, { chartType: "PieChart", data: this.getChartData(tokens), options: {
                                     backgroundColor: 'transparent',
@@ -303,19 +310,19 @@ export class CryptoChartBoxComponent extends React.Component {
                                     chartArea: { left: 15, top: 15, bottom: 15, right: 15 },
                                     pieHole: 0.7,
                                     pieSliceBorderColor: 'none',
-                                    colors: colors,
+                                    colors,
                                     legend: {
                                         position: 'none'
                                     },
                                     pieSliceText: 'none',
-                                    tooltip: tooltip,
+                                    tooltip,
                                     animation: {
                                         startup: true
                                     }
-                                }, graph_id: "PieChart", width: "100%", height: "300px", legend_toggle: true, chartEvents: this.getChartEvents(), ref: 'pieChart' }),
+                                }, graph_id: "PieChart", width: "100%", height: "300px", legend_toggle: true, chartEvents: this.getChartEvents(), ref: "pieChart" }),
                             React.createElement("div", { className: classes.chartCenterContainer },
                                 React.createElement("div", { className: classes.totalPrice },
-                                    React.createElement(NumberFormat, { locale: locale, currency: fiatCurrency, priceStyle: 'currency', value: this.getTotalBalanceInFiat(tokens) })),
+                                    React.createElement(NumberFormat, { locale: locale, currency: fiatCurrency, priceStyle: "currency", value: this.getTotalBalanceInFiat(tokens) })),
                                 React.createElement("div", { className: classes.totalPriceText },
                                     "Total Value ",
                                     fiatCurrency))),

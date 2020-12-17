@@ -20,11 +20,11 @@ var styles = core_1.createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.SentRoundedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || "0 0 34 34" }),
+exports.SentRoundedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || '0 0 34 34' }),
     React.createElement("g", { id: "Main-Dashboard-sent-rounded-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.7-dashboard-alternate1--sent-rounded-icon", transform: "translate(-1048.000000, -536.000000)" },
             React.createElement("g", { id: "Transactions", transform: "translate(1020.000000, 447.000000)" },

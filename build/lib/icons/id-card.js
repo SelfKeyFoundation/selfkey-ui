@@ -20,12 +20,16 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.IdCardIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '41px', height: props.height || '60px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 41 60" }),
+exports.IdCardIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: {
+        width: props.width || '41px',
+        height: props.height || '60px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 41 60' }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", className: "shapeColor", fill: "inherit", transform: "translate(-253.000000, -581.000000)", fillRule: "nonzero" },

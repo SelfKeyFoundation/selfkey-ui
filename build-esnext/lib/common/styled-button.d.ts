@@ -2,7 +2,7 @@ import * as React from 'react';
 export declare type Variant = 'text' | 'outlined' | 'contained';
 export declare type Color = 'primary' | 'secondary';
 export declare type ButtonProps = {
-    onClick?: ((event: React.MouseEvent<HTMLElement>) => void);
+    onClick?: (event: React.MouseEvent<HTMLElement>) => void;
     size?: 'large' | 'medium' | 'small';
     variant?: Variant;
     color?: Color;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { withStyles, createStyles } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 export const styles = createStyles({
     copyButton: {
         backgroundColor: 'transparent',
@@ -21,7 +21,7 @@ export const styles = createStyles({
         color: '#93b0c1',
         fontFamily: 'Lato, arial, sans-serif',
         fontSize: '10px',
-        letterSpacing: 'normal',
+        letterSpacing: 'normal'
     }
 });
 export class CopyComponent extends React.Component {

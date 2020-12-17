@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 declare class SimpleModalStory extends React.Component {
     state: {
         open: boolean;

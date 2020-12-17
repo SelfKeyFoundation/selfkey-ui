@@ -18,13 +18,13 @@ var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({
     root: {
         '& circle': {
-            stroke: '#1D505F',
+            stroke: '#1D505F'
         },
         '& circle &:hover & circle': {
-            stroke: '#23E6FE',
+            stroke: '#23E6FE'
         },
         cursor: 'pointer',
-        transition: 'all 0.2s ease-out',
+        transition: 'all 0.2s ease-out'
     }
 });
 exports.CloseButtonIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '38px', height: props.height || '38px' } }, props, { viewBox: props.viewBox || '0 0 38 38' }),

@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const MergeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
+export const MergeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '66px',
+        height: props.height || '66px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 66 66' }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { id: "\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBB-ID-Registration-merge", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "214-Register-Existing-DID", transform: "translate(-375.000000, -273.000000)", fill: "inherit", fillRule: "nonzero" },

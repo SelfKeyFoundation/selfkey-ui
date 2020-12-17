@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import DocumentIcon from '../document';
 
 describe('Document Icon', () => {
-  it('should show Document Icon', () => {
-    const component = create(
-      <DocumentIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Document Icon', () => {
+		const component = create(<DocumentIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

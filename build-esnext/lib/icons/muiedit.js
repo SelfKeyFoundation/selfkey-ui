@@ -7,8 +7,8 @@ export const MuiEditIcon = withStyles(createStyles({
         height: '20px',
         width: '20px',
         '&:hover': {
-            fill: white,
-        },
-    },
+            fill: white
+        }
+    }
 }))(EditOutlined);
 //# sourceMappingURL=muiedit.js.map

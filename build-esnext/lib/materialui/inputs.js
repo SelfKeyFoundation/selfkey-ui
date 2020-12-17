@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Input, InputLabel, Typography, Grid, Button, IconButton, Modal, List, ListItem, ListItemText, Divider, } from '@material-ui/core';
+import { Input, InputLabel, Typography, Grid, Button, IconButton, Modal, List, ListItem, ListItemText, Divider } from '@material-ui/core';
 import classNames from 'classnames';
 import { withStyles, createStyles } from '@material-ui/core';
 import { DeleteIcon } from '../icons/delete';
@@ -25,18 +25,18 @@ const multilineSelectStyles = (theme) => createStyles({
         '&$focused': {
             '&$focused:not($error):not($disabled)': {
                 border: `1px solid ${primary}`,
-                boxShadow: `0 0 3px 1px ${primary}`,
-            },
-        },
+                boxShadow: `0 0 3px 1px ${primary}`
+            }
+        }
     },
     item: {
         borderRadius: '4px',
         fontSize: '14px',
         lineHeight: '21px',
-        cursor: 'pointer',
+        cursor: 'pointer'
     },
     itemText: {
-        '& span': { fontSize: '14px', lineHeight: '17px', padding: '5px 0' },
+        '& span': { fontSize: '14px', lineHeight: '17px', padding: '5px 0' }
     },
     itemAdd: {
         background: 'none',
@@ -44,8 +44,8 @@ const multilineSelectStyles = (theme) => createStyles({
         cursor: 'pointer',
         lineHeight: '21px',
         padding: theme.spacing(1, 2),
-        marginBottom: 0,
-    },
+        marginBottom: 0
+    }
 });
 export const MultilineSelect = withStyles(multilineSelectStyles)((props) => {
     const { classes, multiselect, selected = [], items = [], onSelectUpdated, onAdd } = props;
@@ -87,73 +87,73 @@ export const FileUploadLabel = withStyles((theme) => createStyles({
         marginTop: theme.spacing(10),
         textAlign: 'center',
         '&:hover': {
-            color: primary,
-        },
-    },
+            color: primary
+        }
+    }
 }))(InputLabel);
 export const FileUploadInput = withStyles(createStyles({
     root: {
-        display: 'none',
-    },
+        display: 'none'
+    }
 }))(Input);
 export const DecimalInput = withStyles(createStyles({
     input: {
         textAlign: 'right'
-    },
+    }
 }))(Input);
 const fileViewStyles = (theme) => createStyles({
     fileItem: {
         boxSizing: 'border-box',
-        padding: theme.spacing(1, 3),
+        padding: theme.spacing(1, 3)
     },
     fileItemError: {},
     noDecoration: {
-        textDecoration: 'none',
+        textDecoration: 'none'
     },
     link: {
-        cursor: 'pointer',
+        cursor: 'pointer'
     },
     fileName: {
         '&:hover': {
-            color: primary,
-        },
+            color: primary
+        }
     },
     breakAll: {
-        wordBreak: 'break-all',
+        wordBreak: 'break-all'
     },
     fileErrorContainer: {
-        marginLeft: '45px',
+        marginLeft: '45px'
     },
     fullWidth: {
-        width: '100%',
+        width: '100%'
     },
     imageWidth: {
-        maxWidth: '100%',
+        maxWidth: '100%'
     },
     topSpacing: {
-        marginTop: '20px',
+        marginTop: '20px'
     },
     padding: {
-        padding: theme.spacing(0, 2),
+        padding: theme.spacing(0, 2)
     },
     bottomSpace: {
-        marginBottom: theme.spacing(3),
+        marginBottom: theme.spacing(3)
     },
     back: {
-        zIndex: 1000,
+        zIndex: 1000
     },
     ellipsis: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
-        maxWidth: '222px',
+        maxWidth: '222px'
     },
     fileViewContainerDragAndDrop: {
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(1)
     },
     fileViewContainer: {
-        marginTop: theme.spacing(5),
-    },
+        marginTop: theme.spacing(5)
+    }
 });
 export const FileView = withStyles(fileViewStyles)(({ classes, file, onClearForm, errors = [] }) => (React.createElement(Grid, { item: true, className: classNames(classes.fileItem, errors && errors.length && classes.fileItemError) },
     React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
@@ -223,16 +223,21 @@ class FileLinkWithModalComponent extends React.Component {
             this.setState({ open: false });
         };
         this.handleOpen = (evt) => {
-            let { url, mime, file } = this.state;
+            let { url } = this.state;
+            const { mime, file } = this.state;
             if (!url && this.isSupportedFile(mime)) {
                 url = this.createFileUrl(file, mime);
             }
             if (isImageType(mime) || isAudioType(mime)) {
-                evt && evt.preventDefault();
+                if (evt) {
+                    evt.preventDefault();
+                }
                 return this.setState({ open: true });
             }
             if (isPDFType(mime) && this.props.onPDFOpen) {
-                evt && evt.preventDefault();
+                if (evt) {
+                    evt.preventDefault();
+                }
                 return this.props.onPDFOpen({ ...file, url });
             }
         };
@@ -254,7 +259,8 @@ class FileLinkWithModalComponent extends React.Component {
         }
     }
     componentDidUpdate(prevProps, prevState) {
-        if (this.props.file.name !== prevProps.file.name || this.props.file.contents !== prevProps.file.contents) {
+        if (this.props.file.name !== prevProps.file.name ||
+            this.props.file.contents !== prevProps.file.contents) {
             const { file } = this.props;
             const mime = file.mimeType.fileType || file.mimeType;
             const state = { file, url: file.url, urlCreated: false, mime };
@@ -279,7 +285,7 @@ class FileLinkWithModalComponent extends React.Component {
         const { open, file, url, mime } = this.state;
         const textProps = {
             variant: 'subtitle1',
-            className: classes.fileName,
+            className: classes.fileName
         };
         if (small) {
             textProps.color = 'secondary';
@@ -335,21 +341,21 @@ const fileUploadStyles = (theme) => createStyles({
         border: '1px solid #384656',
         borderRadius: '4px',
         paddingLeft: theme.spacing(2),
-        boxSizing: 'border-box',
+        boxSizing: 'border-box'
     },
     button: {
         borderRadius: '0 3px 3px 0',
         boxShadow: 'none',
         width: '129px',
-        minWidth: '129px',
+        minWidth: '129px'
     },
     fileInput: {
-        display: 'none',
+        display: 'none'
     },
     formError: {
         backgroundColor: 'rgba(255, 46, 99, 0.09)',
-        border: `1px solid ${error}`,
-    },
+        border: `1px solid ${error}`
+    }
 });
 export const FileUploadWidget = withStyles(fileUploadStyles)(({ classes, id, file, isError, onClearForm, onChange, onBlur, onFocus, onPDFOpen, required, ...props }) => {
     const eventHandlers = {};
@@ -369,6 +375,7 @@ export const FileUploadWidget = withStyles(fileUploadStyles)(({ classes, id, fil
         };
     }
     if (!onClearForm) {
+        // tslint:disable-next-line:no-empty
         onClearForm = () => { };
     }
     let additionalClass = null;
@@ -398,28 +405,28 @@ const FileUploadGrid = withStyles((theme) => createStyles({
         minWidth: '500px',
         width: '100%',
         marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1),
-    },
+        marginBottom: theme.spacing(1)
+    }
 }))(Grid);
 const fileUploadWidgetStyles = (theme) => createStyles({
     fileInput: {
-        display: 'none',
+        display: 'none'
     },
     dropArea: {
         width: '100%',
         height: '100%',
         border: '1px dashed #303C49',
-        backgroundColor: '#1E262E',
+        backgroundColor: '#1E262E'
     },
     highlite: {
-        border: `1px solid ${primary}`,
+        border: `1px solid ${primary}`
     },
     formError: {
-        border: `1px solid ${error}`,
+        border: `1px solid ${error}`
     },
     bottomSpace: {
-        marginBottom: theme.spacing(1),
-    },
+        marginBottom: theme.spacing(1)
+    }
 });
 class ArrayFileUploadWidgetComponent extends React.Component {
     constructor() {
@@ -434,7 +441,8 @@ class ArrayFileUploadWidgetComponent extends React.Component {
             event.stopPropagation();
         };
         this.handleFormFileChange = (evt) => {
-            this.props.onChange && this.props.onChange(Array.from(evt.target.files), true);
+            if (this.props.onChange)
+                this.props.onChange(Array.from(evt.target.files), true);
         };
         this.handleDragStart = (event) => {
             this.setState({ dragging: true });
@@ -443,8 +451,9 @@ class ArrayFileUploadWidgetComponent extends React.Component {
             this.setState({ dragging: false });
         };
         this.handleDrop = (event) => {
-            console.log(Array.from(event.dataTransfer.files));
-            this.props.onChange && this.props.onChange(Array.from(event.dataTransfer.files), true);
+            if (this.props.onChange) {
+                this.props.onChange(Array.from(event.dataTransfer.files), true);
+            }
         };
     }
     componentDidMount() {
@@ -478,7 +487,8 @@ class ArrayFileUploadWidgetComponent extends React.Component {
         this.formRef.removeEventListener('drop', this.handleDrop);
     }
     render() {
-        let { classes, id, files, onClearForm, onBlur, onFocus, isError, required, mimeTypes, errorFiles, uploadError, onPDFOpen, ...props } = this.props;
+        const { classes, files, onBlur, onFocus, isError, required, mimeTypes, errorFiles, uploadError, onPDFOpen, ...props } = this.props;
+        let { id, onClearForm } = this.props;
         const eventHandlers = {};
         const accept = (mimeTypes || []).join(',');
         eventHandlers.onChange = this.handleFormFileChange;
@@ -493,6 +503,7 @@ class ArrayFileUploadWidgetComponent extends React.Component {
             };
         }
         if (!onClearForm) {
+            // tslint:disable-next-line:no-empty
             onClearForm = () => { };
         }
         id = id || 'key-upload';

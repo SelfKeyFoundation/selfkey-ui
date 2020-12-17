@@ -12,8 +12,8 @@ export const ModalWrap = withStyles(createStyles({
         position: 'absolute',
         top: '150px',
         width: '780px',
-        marginBottom: '48px',
-    },
+        marginBottom: '48px'
+    }
 }))(Paper);
 export const ModalHeader = withStyles(createStyles({
     root: {
@@ -28,8 +28,8 @@ export const ModalHeader = withStyles(createStyles({
         height: '65px',
         justifyContent: 'space-between',
         padding: '16px 32px',
-        width: '100%',
-    },
+        width: '100%'
+    }
 }))(Paper);
 export const ModalBody = withStyles(createStyles({
     root: {
@@ -40,8 +40,8 @@ export const ModalBody = withStyles(createStyles({
         boxSizing: 'border-box',
         minHeight: '200px',
         padding: '32px 40px 56px',
-        width: '100%',
-    },
+        width: '100%'
+    }
 }))(Paper);
 export const SmallModalBody = withStyles(createStyles({
     root: {
@@ -52,8 +52,8 @@ export const SmallModalBody = withStyles(createStyles({
         boxSizing: 'border-box',
         minHeight: '200px',
         padding: '32px 32px 40px',
-        width: '100%',
-    },
+        width: '100%'
+    }
 }))(Paper);
 export const ModalBody2 = withStyles(createStyles({
     root: {
@@ -62,8 +62,8 @@ export const ModalBody2 = withStyles(createStyles({
         boxShadow: 'none',
         boxSizing: 'border-box',
         margin: '0 auto',
-        width: '780px',
-    },
+        width: '780px'
+    }
 }))(Paper);
 export const ModalCloseButton = withStyles(createStyles({
     root: {
@@ -77,7 +77,7 @@ export const ModalCloseButton = withStyles(createStyles({
         position: 'absolute',
         right: '-20px',
         top: '-20px',
-        width: '40px',
+        width: '40px'
     }
 }))(Button);
 //# sourceMappingURL=modal-elements.js.map

@@ -20,12 +20,16 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.DownloadIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '74px', height: props.height || '74px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 74 74" }),
+exports.DownloadIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: {
+        width: props.width || '74px',
+        height: props.height || '74px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 74 74' }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "2.3-Error---No-Plugin", transform: "translate(-683.000000, -277.000000)", fill: "inherit", fillRule: "nonzero" },

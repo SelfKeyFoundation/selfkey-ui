@@ -1,27 +1,28 @@
 import * as React from 'react';
-import { Slider, Typography, withStyles, createStyles } from '@material-ui/core';
+import { Slider, Typography } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import CommonStyle from '../common/common-style';
 import BN from 'bignumber.js';
 const styles = createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
-        fontFamily: CommonStyle.fontFamily,
+        fontFamily: CommonStyle.fontFamily
     },
     sliderRoot: {
-        padding: '22px 0 12px 0',
+        padding: '22px 0 12px 0'
     },
     trackAfter: {
         borderRadius: '6px;',
         height: '10px',
         opacity: 1,
-        backgroundColor: '#313D49',
+        backgroundColor: '#313D49'
     },
     trackBefore: {
         borderRadius: '6px;',
         height: '10px',
         opacity: 1,
-        backgroundColor: '#00C0D9',
+        backgroundColor: '#00C0D9'
     },
     thumb: {
         height: '18px',
@@ -29,8 +30,8 @@ const styles = createStyles({
         backgroundColor: '#23E6FE',
         '&$activated': {
             height: '22px',
-            width: '22px',
-        },
+            width: '22px'
+        }
     },
     activated: {},
     sliderLabels: {
@@ -40,7 +41,7 @@ const styles = createStyles({
         lineHeight: '19px',
         width: '100%',
         '&>span': {
-            fontSize: '16px',
+            fontSize: '16px'
         },
         '& p': {
             marginBottom: '5px'
@@ -50,11 +51,11 @@ const styles = createStyles({
         }
     },
     networkFeeValue: {
-        color: '#ffffff',
+        color: '#ffffff'
     },
     rightAligned: {
         textAlign: 'right'
-    },
+    }
 });
 const WEI = new BN('1000000000000000000');
 class TransactionFeeSliderSelectorComponent extends React.Component {
@@ -89,7 +90,7 @@ class TransactionFeeSliderSelectorComponent extends React.Component {
         return (this.props.minGasPrice + this.props.maxGasPrice) / 2;
     }
     get value() {
-        return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
+        return (this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice);
     }
     get transactionFee() {
         return new BN(this.value).times(this.props.gasLimit).dividedBy(WEI);
@@ -114,7 +115,8 @@ class TransactionFeeSliderSelectorComponent extends React.Component {
                     root: classes.sliderRoot,
                     // trackBefore: classes.trackBefore,
                     // trackAfter: classes.trackAfter,
-                    thumb: classes.thumb,
+                    thumb: classes.thumb
+                    // activated: classes.activated,
                 } }),
             React.createElement("div", { className: classes.sliderLabels },
                 React.createElement("div", null,

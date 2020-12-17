@@ -10,11 +10,11 @@ describe('LWS Auth Error Screen', () => {
 					name: 'PaveziCoin',
 					url: 'http://www.pavezicoin.org',
 					termsUrl: 'http://www.pavezicoin.org/terms',
-					policyUrl: 'http://www.pavezicoin.org/privacy',
+					policyUrl: 'http://www.pavezicoin.org/privacy'
 				}}
 			/>
 		);
-		let tree = component.toJSON();
+		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });

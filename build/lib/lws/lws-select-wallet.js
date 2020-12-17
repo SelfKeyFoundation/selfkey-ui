@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -27,16 +27,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LWSSelectWallet = exports.LWSSelectWalletComponent = exports.styles = void 0;
 var React = require("react");
 var _ = require("lodash");
-var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var id_1 = require("../icons/id");
 var profile_1 = require("../icons/profile");
 var stick_1 = require("../icons/stick");
 var lws_button_1 = require("./lws-button");
 var common_style_1 = require("../common/common-style");
-var core_2 = require("@material-ui/core");
-exports.styles = core_1.createStyles({
+var core_1 = require("@material-ui/core");
+exports.styles = styles_1.createStyles({
     areaTitle: {
-        textAlign: 'center',
+        textAlign: 'center'
     },
     title: {
         textTransform: 'uppercase',
@@ -44,7 +44,7 @@ exports.styles = core_1.createStyles({
         fontSize: '16px',
         padding: '25px 0px',
         margin: '0px',
-        color: '#23E6FE',
+        color: '#23E6FE'
     },
     form: common_style_1.default.form,
     formGroup: {
@@ -56,13 +56,13 @@ exports.styles = core_1.createStyles({
             color: '#93B0C1',
             textTransform: 'uppercase',
             padding: '0px 0px 5px 0px',
-            fontFamily: 'Lato, arial, sans-serif',
-        },
+            fontFamily: 'Lato, arial, sans-serif'
+        }
     },
     radioReplace: {
         padding: '20px 0px 45px',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
     },
     buttonTertiary: {
         height: '80px',
@@ -77,15 +77,15 @@ exports.styles = core_1.createStyles({
         alignItems: 'center',
         '&:hover': {
             cursor: 'pointer',
-            background: '#374a5a',
+            background: '#374a5a'
         },
         '& svg': {
-            padding: '0px 15px 0px 0px',
+            padding: '0px 15px 0px 0px'
         },
         fontFamily: 'Lato, arial, sans-serif',
         fontWeight: 700,
         maxWidth: 'calc(50% - 15px)',
-        width: '100%',
+        width: '100%'
     },
     formControl: {
         width: '100%',
@@ -100,11 +100,11 @@ exports.styles = core_1.createStyles({
         fontFamily: 'Lato, arial, sans-serif',
         '&:focus': {
             outline: 'none',
-            boxShadow: '0 0 5px rgba(81, 203, 238, 1)',
-        },
+            boxShadow: '0 0 5px rgba(81, 203, 238, 1)'
+        }
     },
     formSubmitRow: {
-        marginTop: '15px',
+        marginTop: '15px'
     },
     button: {
         fontSize: '14px',
@@ -116,7 +116,7 @@ exports.styles = core_1.createStyles({
     buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
     buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
     selected: {
-        border: "2px solid #1CA9BA",
+        border: "2px solid #1CA9BA"
     },
     supportText: {
         textAlign: 'center',
@@ -130,15 +130,15 @@ exports.styles = core_1.createStyles({
         display: 'block',
         fontSize: '13px',
         color: '#FE4B61',
-        padding: '5px 0 0',
+        padding: '5px 0 0'
     },
     validationError: {
         border: '1px solid #D0021B',
         color: '#FE4B61',
         '&:focus': {
-            boxShadow: '0 0 5px rgba(254, 75, 97, 1)',
-        },
-    },
+            boxShadow: '0 0 5px rgba(254, 75, 97, 1)'
+        }
+    }
 });
 var LWSSelectWalletComponent = /** @class */ (function (_super) {
     __extends(LWSSelectWalletComponent, _super);
@@ -147,7 +147,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         _this.state = {
             isHardwareWallet: false,
             wallet: null,
-            password: '',
+            password: ''
         };
         return _this;
     }
@@ -181,7 +181,8 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
     };
     LWSSelectWalletComponent.prototype.login = function () {
         var loginAction = this.props.loginAction;
-        var _a = this.state, wallet = _a.wallet, password = _a.password;
+        var wallet = this.state.wallet;
+        var password = this.state.password;
         if (!wallet || !wallet.publicKey) {
             wallet = this.selectWallet();
         }
@@ -224,10 +225,12 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
             return (React.createElement("div", null,
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Choose an existing ETH Address"),
-                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: function (evt) { return _this.setWallet(evt); }, value: publicKey }, wallets.filter(function (w) { return w.profile === 'local'; }).map(function (wallet, index) {
-                        return (React.createElement("option", { key: index, value: wallet.publicKey },
+                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: function (evt) { return _this.setWallet(evt); }, value: publicKey }, wallets
+                        .filter(function (w) { return w.profile === 'local'; })
+                        .map(function (w, index) {
+                        return (React.createElement("option", { key: index, value: w.publicKey },
                             "0x",
-                            wallet.publicKey.replace('0x', '')));
+                            w.publicKey.replace('0x', '')));
                     }))),
                 wallet && wallet.unlocked ? null : (React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Password"),
@@ -244,7 +247,7 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
         return (React.createElement("div", null,
             React.createElement("div", { className: classes.areaTitle },
                 React.createElement(id_1.IDIcon, null),
-                React.createElement(core_2.Typography, { variant: "h2", className: classes.title }, "Verify Ownership Of Your SelfKey ID")),
+                React.createElement(core_1.Typography, { variant: "h2", className: classes.title }, "Verify Ownership Of Your SelfKey ID")),
             React.createElement("div", { className: classes.form },
                 React.createElement("div", { className: classes.formGroup + " " + classes.radioReplace },
                     React.createElement("button", { className: classes.buttonTertiary + " " + (!isHardwareWallet ? classes.selected : ''), onClick: function () { return _this.toggleIsHardwallet(false); } },
@@ -260,6 +263,6 @@ var LWSSelectWalletComponent = /** @class */ (function (_super) {
     return LWSSelectWalletComponent;
 }(React.Component));
 exports.LWSSelectWalletComponent = LWSSelectWalletComponent;
-exports.LWSSelectWallet = core_1.withStyles(exports.styles)(LWSSelectWalletComponent);
+exports.LWSSelectWallet = styles_1.withStyles(exports.styles)(LWSSelectWalletComponent);
 exports.default = exports.LWSSelectWallet;
 //# sourceMappingURL=lws-select-wallet.js.map

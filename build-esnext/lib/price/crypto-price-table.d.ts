@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
-export declare const styles: Record<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+import { WithStyles } from '@material-ui/styles';
+export declare const styles: Record<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 declare type Token = {
     name: string;
     symbol: string;
@@ -15,9 +15,9 @@ export declare type CryptoPriceTableProps = {
     locale: string;
     fiatCurrency: string;
     showCurrency?: boolean;
-    tokens: Array<Token>;
-    toggleAction?: ((event: React.MouseEvent<HTMLElement>, token: Token) => void);
-    alwaysVisible?: Array<string>;
+    tokens: Token[];
+    toggleAction?: (event: React.MouseEvent<HTMLElement>, token: Token) => void;
+    alwaysVisible?: string[];
 };
 export declare type CryptoPriceTableState = {};
 export declare type StyledProps = WithStyles<typeof styles> & CryptoPriceTableProps;
@@ -26,5 +26,5 @@ export declare class CryptoPriceTableComponent extends React.Component<StyledPro
     renderRow(token: Token, index: number): JSX.Element;
     render(): JSX.Element;
 }
-export declare const CryptoPriceTable: React.ComponentType<Pick<StyledProps, "locale" | "showCurrency" | "fiatCurrency" | "tokens" | "toggleAction" | "alwaysVisible"> & import("@material-ui/core").StyledComponentProps<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize">>;
+export declare const CryptoPriceTable: React.ComponentType<Pick<StyledProps, "locale" | "showCurrency" | "fiatCurrency" | "tokens" | "toggleAction" | "alwaysVisible"> & import("@material-ui/styles").StyledComponentProps<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize">>;
 export default CryptoPriceTable;

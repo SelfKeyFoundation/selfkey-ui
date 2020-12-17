@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import ExistingAddressIcon from '../existing-address';
 
 describe('Existing Address Icon', () => {
-  it('should show Existing Address Icon', () => {
-    const component = create(
-      <ExistingAddressIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Existing Address Icon', () => {
+		const component = create(<ExistingAddressIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

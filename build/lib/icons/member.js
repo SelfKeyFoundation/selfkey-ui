@@ -20,11 +20,11 @@ var styles = core_1.createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.MemberIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '30px', height: props.height || '27px' } }, props, { viewBox: props.viewBox || "0 0 30 27" }),
+exports.MemberIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '30px', height: props.height || '27px' } }, props, { viewBox: props.viewBox || '0 0 30 27' }),
     React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-member", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "member-icon-gg", transform: "translate(-357.000000, -163.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "LLC-member", transform: "translate(102.000000, 82.000000)" },

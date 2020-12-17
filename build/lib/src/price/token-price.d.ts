@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { StyledComponentProps } from 'react-jss';
 export declare type TokenPriceProps = {
     locale: string;
     cryptoCurrency: string;
@@ -7,5 +6,7 @@ export declare type TokenPriceProps = {
     toCurrency: string;
     toValue: number;
 };
-export declare const TokenPrice: React.ComponentType<TokenPriceProps & StyledComponentProps<string>>;
+export declare const TokenPrice: React.ComponentType<Pick<TokenPriceProps & {
+    classes: Record<"cryptoCurrencyValue" | "currency", string>;
+}, "locale" | "cryptoCurrency" | "cryptoValue" | "toCurrency" | "toValue"> & import("@material-ui/core").StyledComponentProps<"cryptoCurrencyValue" | "currency">>;
 export default TokenPrice;

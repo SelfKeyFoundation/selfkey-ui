@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const DIDIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '60px', height: props.height || '60px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 60 60" }),
+export const DIDIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '60px',
+        height: props.height || '60px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 60 60' }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-DID-icon", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403.1---Identity-Summary---No-DID", transform: "translate(-242.000000, -548.000000)", fill: "inherit", fillRule: "nonzero" },

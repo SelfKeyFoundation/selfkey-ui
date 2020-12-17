@@ -6,7 +6,11 @@ const styles = createStyles({
         transition: 'all 0.2s ease-out'
     }
 });
-export const List2Icon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '24px', height: props.height || '24px', fill: props.fill || '93B0C1' } }, props, { viewBox: props.viewBox || "0 0 24 24" }),
+export const List2Icon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '24px',
+        height: props.height || '24px',
+        fill: props.fill || '93B0C1'
+    } }, props, { viewBox: props.viewBox || '0 0 24 24' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "504-Exchange-Marketplace-New", transform: "translate(-1249.000000, -159.000000)", fill: "inherit" },
             React.createElement("g", { id: "Button-group", transform: "translate(1172.000000, 149.000000)" },

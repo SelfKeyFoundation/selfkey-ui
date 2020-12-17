@@ -10,7 +10,7 @@ const styles = createStyles({
         justifyContent: 'flex-start',
         marginLeft: '40px',
         marginRight: '8px',
-        padding: '16px 0',
+        padding: '16px 0'
     },
     smallText: {
         color: '#fff',

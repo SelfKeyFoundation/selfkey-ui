@@ -10,8 +10,8 @@ var styles = core_1.createStyles({
         textAlign: 'center',
         lineHeight: '300px',
         '& svg circle': {
-            fill: '#1CA9BA',
-        },
+            fill: '#1CA9BA'
+        }
     }
 });
 exports.LWSLoading = core_1.withStyles(styles)(function (_a) {

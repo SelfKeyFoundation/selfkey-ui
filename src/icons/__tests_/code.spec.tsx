@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { CodeIcon } from '../code';
+import { InsertCCIcon } from '../insert-cc';
 
-describe('Code Icon', () => {
-	it('should show Code Icon', () => {
-		const component = create(<CodeIcon />);
-		let tree = component.toJSON();
+describe('InsertCC Icon', () => {
+	it('should show InsertCC Icon', () => {
+		const component = create(<InsertCCIcon />);
+		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });

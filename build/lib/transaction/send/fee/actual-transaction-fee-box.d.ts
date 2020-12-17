@@ -1,12 +1,10 @@
 import * as React from 'react';
-export declare const styles: Record<"root", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+export declare const styles: Record<"root", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type ActualTransactionFeeBoxProps = {
     locale: string;
     ethFee: number;
     usdFee: number;
     fiatCurrency: string;
 };
-export declare const ActualTransactionFeeBox: React.ComponentType<Pick<ActualTransactionFeeBoxProps & {
-    classes: Record<"root", string>;
-}, "locale" | "fiatCurrency" | "ethFee" | "usdFee"> & import("@material-ui/core").StyledComponentProps<"root">>;
+export declare const ActualTransactionFeeBox: React.ComponentType<Pick<any, string | number | symbol> & import("@material-ui/styles").StyledComponentProps<"root">>;
 export default ActualTransactionFeeBox;

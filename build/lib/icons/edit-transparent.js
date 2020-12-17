@@ -21,11 +21,11 @@ var styles = core_1.createStyles({
         transition: 'all 0.2s ease-out',
         '&:hover': {
             cursor: 'pointer',
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.EditTransparentIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || "0 0 16 16" }),
+exports.EditTransparentIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", transform: "translate(-835.000000, -645.000000)" },
             React.createElement("g", { id: "Area-box-2", transform: "translate(150.000000, 513.000000)" },

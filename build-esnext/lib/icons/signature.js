@@ -6,11 +6,11 @@ const styles = createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-export const SignatureIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '30px', height: props.height || '27px' } }, props, { viewBox: props.viewBox || "0 0 30 27" }),
+export const SignatureIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '30px', height: props.height || '27px' } }, props, { viewBox: props.viewBox || '0 0 30 27' }),
     React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-signature", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "802.1---All-Member-Types-signature", transform: "translate(-357.000000, -358.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "LLC-signature", transform: "translate(102.000000, 82.000000)" },

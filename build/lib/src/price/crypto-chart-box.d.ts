@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { StyleSheet, ClassNameMap, WithStyles, StyledComponentProps } from 'react-jss';
+import { WithStyles } from '@material-ui/styles';
 import { ChartEvent } from 'react-google-charts';
-declare const styles: StyleSheet;
-export declare type Token = {
+declare const styles: Record<"active" | "header" | "headerText" | "cryptoBox" | "horizontalDivider" | "coloredBox" | "coloredBoxText" | "prices" | "texts" | "totalPrice" | "totalPriceText" | "chartCenterContainer" | "chart" | "gearButton" | "buttonViewMore" | "buttonViewMoreText" | "expandMore", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
+declare type Token = {
     name: string;
     symbol: string;
     balance: number;
@@ -11,18 +11,18 @@ export declare type Token = {
 export declare type CryptoChartBoxProps = {
     locale: string;
     fiatCurrency: string;
-    tokens: Array<Token>;
-    manageCryptoAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    tokens: Token[];
+    manageCryptoAction?: (event: React.MouseEvent<HTMLElement>) => void;
     topTokenListSize: number;
     viewAll: boolean;
     toggleViewAll?: Function;
 };
-export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
+declare type StyledProps = WithStyles<keyof typeof styles> & CryptoChartBoxProps;
 export declare type Active = {
     active: boolean;
 };
 export declare type CryptoChartBoxState = {
-    activations: Array<Active>;
+    activations: Active[];
 };
 export declare type ChartType = {
     setSelection: Function;
@@ -35,7 +35,7 @@ export declare type ChartWrapperType = {
 };
 export declare class CryptoChartBoxComponent extends React.Component<StyledProps, CryptoChartBoxState> {
     OTHERS_COLOR: string;
-    activations: Array<Active>;
+    activations: Active[];
     state: {
         activations: Active[];
     };
@@ -45,19 +45,19 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
         pieChart: HTMLElement & ChartElementType;
     };
     constructor(props: StyledProps);
-    initActivations(tokens: Array<Token>): void;
+    initActivations(tokens: Token[]): void;
     initSelection(): void;
     componentDidUpdate(prevProps: StyledProps): void;
     selectEvent: ChartEvent;
     onMouseOverEvent: ChartEvent;
     onMouseOutEvent: ChartEvent;
     getChartEvents(): ChartEvent[];
-    getTokensLegend(classes: Partial<ClassNameMap<string>>, tokens: Array<Token>, locale: string, fiatCurrency: string): JSX.Element[];
+    getTokensLegend(classes: any, tokens: Token[], locale: string, fiatCurrency: string): JSX.Element[];
     hasBalance(): boolean;
-    getChartData(tokens: Array<Token>): React.ReactText[][];
+    getChartData(tokens: Token[]): (string | number)[][];
     DEFAULT_COLLOR: string;
     getColors(): string[];
-    getTotalBalanceInFiat(tokens: Array<Token>): number;
+    getTotalBalanceInFiat(tokens: Token[]): number;
     getChart(): any;
     onItemHoverEnter(index: number): void;
     onItemHoverLeave(): void;
@@ -65,5 +65,5 @@ export declare class CryptoChartBoxComponent extends React.Component<StyledProps
     getViewAllSection(): JSX.Element | "";
     render(): JSX.Element;
 }
-export declare const CryptoChartBox: React.ComponentType<CryptoChartBoxProps & StyledComponentProps<string>>;
+export declare const CryptoChartBox: React.ComponentType<Pick<StyledProps, "locale" | "fiatCurrency" | "tokens" | "manageCryptoAction" | "topTokenListSize" | "viewAll" | "toggleViewAll"> & import("@material-ui/styles").StyledComponentProps<"active" | "header" | "headerText" | "cryptoBox" | "horizontalDivider" | "coloredBox" | "coloredBoxText" | "prices" | "texts" | "totalPrice" | "totalPriceText" | "chartCenterContainer" | "chart" | "gearButton" | "buttonViewMore" | "buttonViewMoreText" | "expandMore">>;
 export default CryptoChartBox;

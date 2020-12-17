@@ -2,7 +2,7 @@ import * as React from 'react';
 import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({});
-export const SmallRoundCompany = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '28px', height: props.height || '28px' } }, props, { viewBox: props.viewBox || "0 0 28 28" }),
+export const SmallRoundCompany = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '28px', height: props.height || '28px' } }, props, { viewBox: props.viewBox || '0 0 28 28' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.5-Navigation-open---switch-profile", transform: "translate(-1196.000000, -143.000000)" },
             React.createElement("g", { id: "Top-Nav-Dropdown", transform: "translate(1182.000000, 64.000000)" },

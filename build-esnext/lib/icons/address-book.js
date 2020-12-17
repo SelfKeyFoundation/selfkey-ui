@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const AddressBookIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '54px', height: props.height || '62px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 54 62' }),
+export const AddressBookIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '54px',
+        height: props.height || '62px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: "0 0 54 62" }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { id: "-Address-Book", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "3000---Address-Book-Full-State", transform: "translate(-693.000000, -146.000000)", fill: "inherit", fillRule: "nonzero" },

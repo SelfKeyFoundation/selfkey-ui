@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -16,6 +16,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TransactionHistory = exports.TransactionHistoryComponent = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var common_style_1 = require("../common/common-style");
 var failed_1 = require("../icons/failed");
 var receive_1 = require("../icons/receive");
@@ -24,20 +25,20 @@ var copy_1 = require("../icons/copy");
 var view_1 = require("../icons/view");
 var hourglass_small_1 = require("../icons/hourglass-small");
 var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
-var styles = core_1.createStyles({
+var styles = styles_1.createStyles({
     line: {
         height: '1px',
         transform: 'scaleY(-1)',
-        backgroundColor: '#475768',
+        backgroundColor: '#475768'
     },
     flex: {
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     row: {
         paddingTop: '32px',
         paddingBottom: '24px',
-        fontFamily: common_style_1.default.fontFamily,
+        fontFamily: common_style_1.default.fontFamily
     },
     date: {
         color: '#93B0C1',
@@ -46,7 +47,7 @@ var styles = core_1.createStyles({
         paddingLeft: '17px',
         paddingRight: '40px',
         boxSizing: 'border-box',
-        minWidth: '220px',
+        minWidth: '220px'
     },
     icon: {
         minWidth: '32px',
@@ -56,37 +57,37 @@ var styles = core_1.createStyles({
     status: {
         color: '#FFFFFF',
         fontSize: '15px',
-        lineHeight: '18px',
+        lineHeight: '18px'
     },
     cryptoCurrency: {
         color: '#FFFFFF',
         fontSize: '15px',
         fontWeight: 600,
-        lineHeight: '18px',
+        lineHeight: '18px'
     },
     value: {
         color: '#FFFFFF',
         fontSize: '15px',
         lineHeight: '18px',
-        textAlign: 'right',
+        textAlign: 'right'
     },
     actionTitle: {
         color: '#93B0C1',
         fontSize: '14px',
         lineHeight: '17px',
-        paddingLeft: '14px',
+        paddingLeft: '14px'
     },
     viewActionContainer: {
         paddingLeft: '20px',
         cursor: 'pointer',
-        display: 'flex',
+        display: 'flex'
     },
     copyActionContainer: {
         width: '65px',
         paddingLeft: '99px',
         cursor: 'pointer',
-        display: 'flex',
-    },
+        display: 'flex'
+    }
 });
 var TransactionHistoryComponent = /** @class */ (function (_super) {
     __extends(TransactionHistoryComponent, _super);
@@ -95,7 +96,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
         _this.copyText = 'Copy';
         _this.copiedText = 'Copied';
         _this.state = {
-            currentCopyValues: [],
+            currentCopyValues: []
         };
         return _this;
     }
@@ -167,8 +168,7 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
             React.createElement("div", { className: classes.line }, " ")));
     };
     TransactionHistoryComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, list = _a.list;
-        list = list || [];
+        var _a = this.props, classes = _a.classes, _b = _a.list, list = _b === void 0 ? [] : _b;
         var txRows = list.map(this.renderRow.bind(this));
         return (React.createElement(core_1.Grid, null,
             list.length ? React.createElement("div", { className: classes.line }, " ") : '',
@@ -177,5 +177,5 @@ var TransactionHistoryComponent = /** @class */ (function (_super) {
     return TransactionHistoryComponent;
 }(React.Component));
 exports.TransactionHistoryComponent = TransactionHistoryComponent;
-exports.TransactionHistory = core_1.withStyles(styles)(TransactionHistoryComponent);
+exports.TransactionHistory = styles_1.withStyles(styles)(TransactionHistoryComponent);
 //# sourceMappingURL=transaction-history.js.map

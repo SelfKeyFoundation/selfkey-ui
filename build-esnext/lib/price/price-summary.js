@@ -4,7 +4,7 @@ import CommonStyle from '../common/common-style';
 import { NumberFormat } from './number-format';
 const styles = createStyles({
     row: {
-        marginTop: '4px',
+        marginTop: '4px'
     },
     currency: {
         opacity: 0.7,
@@ -21,12 +21,10 @@ const styles = createStyles({
         color: '#ffffff'
     }
 });
-export const PriceSummary = withStyles(styles)(({ classes, className, justify, currencyClass, valueClass, locale, fractionDigits, priceStyle, currency, value, appendCurrency, prependCurrency }) => (React.createElement(Grid, { container: true, className: className ? className : classes.row, justify: justify, alignItems: 'center', spacing: 1 },
-    appendCurrency &&
-        React.createElement(Grid, { item: true, className: currencyClass ? currencyClass : classes.currency }, currency),
+export const PriceSummary = withStyles(styles)(({ classes, className, justify, currencyClass, valueClass, locale, fractionDigits, priceStyle, currency, value, appendCurrency, prependCurrency }) => (React.createElement(Grid, { container: true, className: className ? className : classes.row, justify: justify, alignItems: "center", spacing: 1 },
+    appendCurrency && (React.createElement(Grid, { item: true, className: currencyClass ? currencyClass : classes.currency }, currency)),
     React.createElement(Grid, { item: true, className: valueClass ? valueClass : classes.value },
         React.createElement(NumberFormat, { locale: locale, priceStyle: priceStyle, currency: currency, value: value, fractionDigits: fractionDigits })),
-    prependCurrency &&
-        React.createElement(Grid, { item: true, className: currencyClass ? currencyClass : classes.currency }, currency))));
+    prependCurrency && (React.createElement(Grid, { item: true, className: currencyClass ? currencyClass : classes.currency }, currency)))));
 export default PriceSummary;
 //# sourceMappingURL=price-summary.js.map

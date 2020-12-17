@@ -32,26 +32,26 @@ var styles = core_1.createStyles({
     datepickerWrap: {
         fontFamily: 'Lato, arial, sans-serif',
         '& .rdt': {
-            width: '100%',
+            width: '100%'
         },
         '& .rdt input': {
             boxSizing: 'border-box',
             color: 'white',
             width: '100%',
             background: "url(" + calendarIcon + ") #1E262E no-repeat right 10px center",
-            paddingRight: '35px',
+            paddingRight: '35px'
         },
         '& .rdt input::placeholder': {
-            color: 'rgba(147, 176, 193, 0.42)',
+            color: 'rgba(147, 176, 193, 0.42)'
         },
         '& .rdtOpen': {
             display: 'table',
-            position: 'relative',
+            position: 'relative'
         },
         '& .rdtOpen .rdtPicker': {
             display: 'block',
             position: 'absolute',
-            zIndex: 100,
+            zIndex: 100
         },
         '& .rdtPicker': {
             backgroundColor: '#1E262E',
@@ -64,10 +64,10 @@ var styles = core_1.createStyles({
             minHeight: '293px',
             minWidth: '263px',
             padding: '5px 25px 15px 25px',
-            textAlign: 'center',
+            textAlign: 'center'
         },
         '& .rdtPicker th ': {
-            borderBottom: 'none',
+            borderBottom: 'none'
         },
         '& .form-control': {
             backgroundColor: '#1E262E',
@@ -79,59 +79,59 @@ var styles = core_1.createStyles({
             lineHeight: '21px',
             outline: 'none',
             paddingLeft: '16px',
-            paddingRight: '16px',
+            paddingRight: '16px'
         },
         '& .form-control:focus': {
             border: '1px solid #00C0D9',
-            boxShadow: '0 0 3px 1px #00C0D9',
+            boxShadow: '0 0 3px 1px #00C0D9'
         },
         '& .form-control::placeholder': {
-            color: '#404B55',
+            color: '#404B55'
         },
         '& .rdtSwitch': {
-            color: '#93B0C1',
+            color: '#93B0C1'
         },
         '& .rdtSwitch:hover': {
-            color: 'white',
+            color: 'white'
         },
         '& .dow': {
             color: '#93B0C1',
             fontWeight: 600,
             paddingBottom: '10px',
-            paddingTop: '25px',
+            paddingTop: '25px'
         },
         '& .rdtTimeToggle:hover': {
-            color: 'white',
+            color: 'white'
         },
         '& .rdtNext': {
             color: '#697C95',
             verticalAlign: 'sub',
             userSelect: 'none',
-            width: '40px',
+            width: '40px'
         },
         '& .rdtNext:hover': {
-            color: 'white',
+            color: 'white'
         },
         '& .rdtNext span': {
             fontSize: '2.2em',
-            verticalAlign: 'sub',
+            verticalAlign: 'sub'
         },
         '& .rdtPrev': {
             color: '#697C95',
             verticalAlign: 'sub',
             userSelect: 'none',
-            width: '40px',
+            width: '40px'
         },
         '& .rdtPrev:hover': {
-            color: 'white',
+            color: 'white'
         },
         '& .rdtPrev span': {
             fontSize: '2.2em',
-            verticalAlign: 'sub',
+            verticalAlign: 'sub'
         },
         '& tbody': {
             fontSize: '14px',
-            fontWeight: 600,
+            fontWeight: 600
         },
         '& thead tr:first-child:after': {
             borderBottom: '1px solid #313D49',
@@ -139,23 +139,23 @@ var styles = core_1.createStyles({
             left: 0,
             position: 'absolute',
             top: '60px',
-            width: '100%',
+            width: '100%'
         },
         '& thead tr:first-child th': {
             cursor: 'pointer',
             paddingBottom: '10px',
-            paddingTop: 0,
+            paddingTop: 0
         },
         '& thead tr:nth-child(2)': {
             fontSize: '14px',
-            textTransform: 'uppercase',
+            textTransform: 'uppercase'
         },
         '& tfoot td': {
             color: '#93B0C1',
             cursor: 'pointer',
             fontSize: '12px',
             paddingTop: '30px',
-            textAlign: 'center',
+            textAlign: 'center'
         },
         '& tfoot:before': {
             borderTop: '1px solid #313D49',
@@ -163,119 +163,119 @@ var styles = core_1.createStyles({
             left: 0,
             marginTop: '10px',
             position: 'absolute',
-            width: '100%',
+            width: '100%'
         },
         '& .rdtDay': {
             color: 'white',
             cursor: 'pointer',
             fontWeight: 600,
             padding: '8px 10px',
-            textAlign: 'center',
+            textAlign: 'center'
         },
         '& .rdtDay:hover': {
             backgroundColor: '#00C0D9 !important',
-            borderRadius: '3px',
+            borderRadius: '3px'
         },
         '& .rdtNew': {
-            color: '#404B55',
+            color: '#404B55'
         },
         '& .rdtOld': {
-            color: '#404B55',
+            color: '#404B55'
         },
         '& .rdtDisabled': {
-            color: '#404B55',
+            color: '#404B55'
         },
         '& .rdtMonth': {
             cursor: 'pointer',
             fontWeight: 600,
             padding: '8px 10px',
             textAlign: 'center',
-            width: '35px',
+            width: '45px'
         },
         '& .rdtMonth:hover': {
             backgroundColor: '#00C0D9',
-            borderRadius: '3px',
+            borderRadius: '3px'
         },
         '& .rdtMonths table': {
-            width: '100%',
+            width: '100%'
         },
         '& .rdtMonths table:nth-child(2)': {
-            display: 'flex',
+            display: 'flex'
         },
         '& .rdtMonths table:nth-child(2) tbody': {
             marginTop: '65px',
             textAlign: 'center',
-            width: 'inherit',
+            width: 'inherit'
         },
         '& .rdtMonths table:nth-child(2) tbody tr': {
             display: 'flex',
             justifyContent: 'space-around',
-            margin: '10px 0',
+            margin: '10px 0'
         },
         '& .rdtYear': {
             cursor: 'pointer',
             fontWeight: 600,
             padding: '8px 10px',
-            textAlign: 'center',
+            textAlign: 'center'
         },
         '& .rdtYear:hover': {
             backgroundColor: '#00C0D9',
-            borderRadius: '3px',
+            borderRadius: '3px'
         },
         '& .rdtYears table:nth-child(2)': {
-            display: 'flex',
+            display: 'flex'
         },
         '& .rdtYears table:nth-child(2) tbody': {
             marginTop: '65px',
             textAlign: 'center',
-            width: 'inherit',
+            width: 'inherit'
         },
         '& .rdtYears table:nth-child(2) tbody tr': {
             display: 'flex',
             justifyContent: 'space-around',
-            margin: '10px 0',
+            margin: '10px 0'
         },
         '& .rdtYears table': {
-            width: '100%',
+            width: '100%'
         },
         '& .rdtTime table': {
-            width: '100%',
+            width: '100%'
         },
         '& .rdtTime table tbody': {
             display: 'inherit',
             marginTop: '85px',
             textAlign: 'center',
-            width: 'inherit',
+            width: 'inherit'
         },
         '& .rdtTime .rdtSwitch': {
             fontWeight: 400,
             paddingBottom: '18px',
-            paddingTop: '14px',
+            paddingTop: '14px'
         },
         '& .rdtPicker td.rdtActive': {
             backgroundColor: '#00C0D9',
-            borderRadius: '3px',
+            borderRadius: '3px'
         },
         '& .rdtPicker td.rdtToday:before': {
-            display: 'none',
+            display: 'none'
         },
         '& .rdtCounters': {
             display: 'flex',
-            justifyContent: 'space-around',
+            justifyContent: 'space-around'
         },
         '& .rdtCounter:first-child:before': {
             color: '#93B0C1',
             content: '"Hours"',
             marginLeft: '-14px',
             marginTop: '-35px',
-            position: 'absolute',
+            position: 'absolute'
         },
         '& .rdtCounter:nth-child(3):before': {
             color: '#93B0C1',
             content: '"Minutes"',
             marginLeft: '-21px',
             marginTop: '-35px',
-            position: 'absolute',
+            position: 'absolute'
         },
         '& .rdtCount': {
             border: '1px solid #384656',
@@ -284,28 +284,28 @@ var styles = core_1.createStyles({
             fontWeight: 'normal',
             margin: '15px 0',
             padding: '15px 17px',
-            width: '25px',
+            width: '25px'
         },
         '& .rdtBtn': {
             color: '#697C95',
-            userSelect: 'none',
+            userSelect: 'none'
         },
         '& .rdtBtn:hover': {
-            color: 'white',
+            color: 'white'
         },
         '& .rdtCounterSeparator': {
-            display: 'none',
-        },
+            display: 'none'
+        }
     },
     formError: {
         '& input': {
             backgroundColor: 'rgba(255, 46, 99, 0.09) !important',
             border: "1px solid #FE4B61 !important"
-        },
-    },
+        }
+    }
 });
 exports.KeyPicker = core_1.withStyles(styles)(function (_a) {
-    var classes = _a.classes, includeTime = _a.includeTime, isError = _a.isError, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "includeTime", "isError", "onChange", "onBlur", "onFocus"]);
+    var classes = _a.classes, _b = _a.includeTime, includeTime = _b === void 0 ? false : _b, _c = _a.format, format = _c === void 0 ? null : _c, isError = _a.isError, onChange = _a.onChange, onBlur = _a.onBlur, onFocus = _a.onFocus, props = __rest(_a, ["classes", "includeTime", "format", "isError", "onChange", "onBlur", "onFocus"]);
     var eventHandlers = {};
     if (onChange) {
         eventHandlers.onChange = function (date) {
@@ -313,10 +313,12 @@ exports.KeyPicker = core_1.withStyles(styles)(function (_a) {
                 target: {
                     value: date
                         ? date.format
-                            ? date.format("YYYY-MM-DD" + (includeTime ? ' h:mm:ss a' : ''))
+                            ? format
+                                ? date.format(format)
+                                : date.format("YYYY-MM-DD" + (includeTime ? ' h:mm:ss a' : ''))
                             : date
-                        : null,
-                },
+                        : null
+                }
             });
         };
     }
@@ -334,9 +336,9 @@ exports.KeyPicker = core_1.withStyles(styles)(function (_a) {
     if (isError) {
         additionalClass = classes.formError;
     }
-    var placeholder = includeTime ? 'YYYY-MM-DD h:mm:ss a' : 'YYYY-MM-DD';
+    var placeholder = format ? format : includeTime ? 'YYYY-MM-DD h:mm:ss a' : 'YYYY-MM-DD';
     return (React.createElement("div", { className: classes.datepickerWrap + " lofasz" },
-        React.createElement(Datetime, __assign({ dateFormat: "YYYY-MM-DD", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers, { className: additionalClass }))));
+        React.createElement(Datetime, __assign({ dateFormat: format ? format : "YYYY-MM-DD", timeFormat: !!includeTime, inputProps: { placeholder: placeholder }, closeOnSelect: true }, props, eventHandlers, { className: additionalClass }))));
 });
 exports.default = exports.KeyPicker;
 //# sourceMappingURL=datepicker.js.map

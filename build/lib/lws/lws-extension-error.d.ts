@@ -1,6 +1,6 @@
 import * as React from 'react';
 export declare type LWSExtensionErrorProps = {
-    installExtensionAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    installExtensionAction?: (event: React.MouseEvent<HTMLElement>) => void;
     children?: any;
 };
 export declare const LWSExtensionError: React.ComponentType<Pick<LWSExtensionErrorProps & {

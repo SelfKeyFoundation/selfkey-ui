@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#orange-linear-gradient)';
-export const WarningShieldIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '68px', height: props.height || '74px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 68 74' }),
+export const WarningShieldIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '68px',
+        height: props.height || '74px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: "0 0 68 74" }),
     React.createElement(LinearGradient, { color: "orange" }),
     React.createElement("g", { id: "Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "504.3---Exchange-Details-+-Send-Stake-+-Transaction-Error", transform: "translate(-375.000000, -273.000000)", fill: "inherit", fillRule: "nonzero" },

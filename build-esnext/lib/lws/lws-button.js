@@ -12,8 +12,8 @@ const styles = createStyles({
         letterSpacing: '0.6px',
         padding: '16px',
         textTransform: 'uppercase',
-        transition: 'background .5s ease',
-    },
+        transition: 'background .5s ease'
+    }
 });
 export const LWSButton = withStyles(styles)(({ classes, children, className, onClick }) => (React.createElement("button", { className: `${classes.root} ${className}`, onClick: onClick }, children)));
 export default LWSButton;

@@ -3,7 +3,7 @@ import { withStyles, createStyles } from '@material-ui/core';
 import { SuccessIcon } from '../icons/success';
 const styles = createStyles({
     lwsSuccess: {
-        fontFamily: 'Lato, arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif'
     },
     areaTitle: {
         textAlign: 'center',
@@ -13,16 +13,16 @@ const styles = createStyles({
             fontSize: '16px',
             padding: '25px 0',
             margin: 0,
-            color: '#23E6FE',
+            color: '#23E6FE'
         },
         '& h3': {
             fontWeight: 'normal',
             fontSize: '21px',
             padding: '0 0 45px',
             margin: 0,
-            color: '#93B0C1',
-        },
-    },
+            color: '#93B0C1'
+        }
+    }
 });
 export const LWSSuccess = withStyles(styles)(({ classes }) => (React.createElement("div", { className: classes.lwsSuccess },
     React.createElement("div", { className: classes.areaTitle },

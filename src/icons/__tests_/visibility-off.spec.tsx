@@ -3,16 +3,9 @@ import { create } from 'react-test-renderer';
 import { VisibilityOffIcon } from '../visibility-off';
 
 describe('Visibility off Icon', () => {
-  it('should show Visibility off Icon', () => {
-    const component = create(
-      <VisibilityOffIcon/>
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Visibility off Icon', () => {
+		const component = create(<VisibilityOffIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });
-
-
-
-
-

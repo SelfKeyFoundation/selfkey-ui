@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
-declare const styles: Record<"input" | "label" | "inputError" | "errorText" | "errorColor", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+import { WithStyles } from '@material-ui/styles';
+declare const styles: Record<"input" | "label" | "inputError" | "errorText" | "errorColor", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type AddressBookAddState = {
     label: string;
     address: string;
@@ -21,5 +21,5 @@ export declare class AddressBookAddComponent extends React.Component<AddressBook
     handleSubmit: (event: any) => void;
     render(): JSX.Element;
 }
-export declare const AddressBookAdd: React.ComponentType<Pick<AddressBookAddSyledProps, "addressError" | "onSave" | "labelError" | "onCancel" | "onLabelChange" | "onAddressChange"> & import("@material-ui/core").StyledComponentProps<"input" | "label" | "inputError" | "errorText" | "errorColor">>;
+export declare const AddressBookAdd: React.ComponentType<Pick<AddressBookAddSyledProps, "addressError" | "onSave" | "labelError" | "onCancel" | "onLabelChange" | "onAddressChange"> & import("@material-ui/styles").StyledComponentProps<"input" | "label" | "inputError" | "errorText" | "errorColor">>;
 export default AddressBookAdd;

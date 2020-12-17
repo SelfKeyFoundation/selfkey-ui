@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import { MuiVisibilityIcon } from '../muivisibility';
 
 describe('Mui Visibility Icon', () => {
-  it('should show Mui Visibility Icon', () => {
-    const component = create(
-      <MuiVisibilityIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Mui Visibility Icon', () => {
+		const component = create(<MuiVisibilityIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

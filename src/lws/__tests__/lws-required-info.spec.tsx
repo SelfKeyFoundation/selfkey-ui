@@ -11,16 +11,16 @@ describe('LWS Required Info', () => {
 					name: 'PaveziCoin',
 					url: 'http://www.pavezicoin.org',
 					termsUrl: 'http://www.pavezicoin.org/terms',
-					policyUrl: 'http://www.pavezicoin.org/privacy',
+					policyUrl: 'http://www.pavezicoin.org/privacy'
 				}}
 				requested={[
 					{ key: 'name', label: 'Name', data: { value: 'Rodrigo Pavezi' } },
-					{ key: 'country', label: 'Country' },
+					{ key: 'country', label: 'Country' }
 				]}
 				notAllowedAttributes={[{ key: 'country', label: 'Country' }]}
 			/>
 		);
-		let tree = component.toJSON();
+		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });

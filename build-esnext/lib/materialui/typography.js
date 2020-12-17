@@ -8,11 +8,11 @@ const styles = createStyles({
         display: 'inline',
         lineHeight: '13px',
         margin: '2px 4px 2px 0',
-        padding: '2px 10px',
+        padding: '2px 10px'
     },
     body1: {
         fontSize: '12px',
-        color: typography,
+        color: typography
     }
 });
 export const Tag = withStyles(styles)(Typography);

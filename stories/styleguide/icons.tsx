@@ -159,7 +159,8 @@ import {
 	NewRefreshIcon,
 	IDIcon,
 	SafeIcon,
-	CodeIcon
+	CodeIcon,
+	InsertCCIcon
 } from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
@@ -667,6 +668,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<InfoTooltip />`}</code>
 			</pre>
 			<InfoTooltip />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<InsertCCIcon />`}</code>
+			</pre>
+			<InsertCCIcon />
 		</Grid>
 
 		<Grid item className={classes.gridItem}>

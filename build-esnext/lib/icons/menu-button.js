@@ -6,7 +6,7 @@ const styles = createStyles({
         fill: '#00c0d9',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: '#23E6FE',
+            fill: '#23E6FE'
         }
     }
 });

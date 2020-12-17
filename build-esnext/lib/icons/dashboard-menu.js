@@ -3,13 +3,13 @@ import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({
     root: {
-        stroke: "#93A4AF",
+        stroke: '#93A4AF',
         '&:hover': {
-            stroke: 'white',
+            stroke: 'white'
         }
     }
 });
-export const DashboardMenuIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '24px', height: props.height || '24px' } }, props, { viewBox: props.viewBox || "0 0 24 24" }),
+export const DashboardMenuIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '24px', height: props.height || '24px' } }, props, { viewBox: props.viewBox || '0 0 24 24' }),
     React.createElement("defs", null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300-Navigation", transform: "translate(-1171.000000, -171.000000)" },

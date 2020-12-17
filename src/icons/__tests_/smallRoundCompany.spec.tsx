@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import SmallRoundCompany from '../round-company-small';
 
 describe('Small Round Company Icon', () => {
-  it('should show Small Round Company Icon', () => {
-    const component = create(
-      <SmallRoundCompany />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Small Round Company Icon', () => {
+		const component = create(<SmallRoundCompany />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

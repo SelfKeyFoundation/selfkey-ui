@@ -5,11 +5,11 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-export const BuyRoundedIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || "0 0 34 34" }),
+export const BuyRoundedIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || '0 0 34 34' }),
     React.createElement("g", { id: "buy-rounded-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.9-transactions-list-buy-rounded-icon", transform: "translate(-327.000000, -652.000000)" },
             React.createElement("g", { id: "Modal-buy-rounded-icon", transform: "translate(268.000000, 153.000000)" },

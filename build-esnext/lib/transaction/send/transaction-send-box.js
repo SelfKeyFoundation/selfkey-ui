@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Grid, Divider, withStyles, createStyles } from '@material-ui/core';
+import { Grid, Divider } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import CommonStyle from '../../common/common-style';
 import { TransactionFeeBox } from './fee/transaction-fee-box';
 import TransactionBox from '../transaction-box';
@@ -77,14 +78,14 @@ export const styles = createStyles({
     usdAmoutContainer: {
         '& span &:first-of-type': {
             fontSize: '40px',
-            fontWeight: 300,
+            fontWeight: 300
         },
         '& span &:last-of-type': {
             fontSize: '20px',
-            fontWeight: 600,
+            fontWeight: 600
         },
         color: '#ffffff',
-        paddingBottom: '65px',
+        paddingBottom: '65px'
     },
     amountInput: {
         width: 'calc(100% - 45px)',
@@ -102,7 +103,7 @@ export const styles = createStyles({
     },
     addressErrorColor: {
         color: '#FE4B61',
-        borderBottom: '2px solid #FE4B61',
+        borderBottom: '2px solid #FE4B61'
     },
     divider: {
         borderBottom: '2px solid #93b0c1',
@@ -119,12 +120,12 @@ export const styles = createStyles({
         border: '1px solid #384656',
         borderRadius: '30px',
         paddingLeft: '10px',
-        paddingBottom: '10px',
+        paddingBottom: '10px'
     },
     selectItem: {
         border: 0,
         backgroundColor: '#1E262E',
-        color: '#FFFFFF',
+        color: '#FFFFFF'
     }
 });
 export class TransactionSendBoxComponent extends React.Component {
@@ -182,41 +183,51 @@ export class TransactionSendBoxComponent extends React.Component {
         if (sending) {
             return (React.createElement(Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer, spacing: 1 },
                 React.createElement(Grid, { item: true },
-                    React.createElement("button", { className: classes.button, onClick: confirmAction }, " CONFIRM ")),
+                    React.createElement("button", { className: classes.button, onClick: confirmAction },
+                        ' ',
+                        "CONFIRM",
+                        ' ')),
                 React.createElement(Grid, { item: true },
-                    React.createElement("button", { className: classes.button, onClick: cancelAction }, " CANCEL "))));
+                    React.createElement("button", { className: classes.button, onClick: cancelAction },
+                        ' ',
+                        "CANCEL",
+                        ' '))));
         }
         else {
             return (React.createElement(Grid, { container: true, direction: "row", justify: "center", alignItems: "center", className: classes.actionButtonsContainer },
                 React.createElement(Grid, { item: true },
-                    React.createElement("button", { id: 'sendAction', disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction }, " SEND "))));
+                    React.createElement("button", { id: "sendAction", disabled: !sendBtnIsEnabled, className: classes.button, onClick: onSendAction },
+                        ' ',
+                        "SEND",
+                        ' '))));
         }
     }
     render() {
         const { closeAction, isSendCustomToken, classes, addressError, amountUsd, locale, fiatCurrency } = this.props;
-        let { cryptoCurrency } = this.state;
-        let sendAmountClass = `${classes.input} ${classes.amountInput}`;
-        let addressInputClass = `${classes.input} ${addressError ? classes.addressErrorColor : ''}`;
-        let cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
+        const { cryptoCurrency } = this.state;
+        const sendAmountClass = `${classes.input} ${classes.amountInput}`;
+        const addressInputClass = `${classes.input} ${addressError ? classes.addressErrorColor : ''}`;
+        const cryptoCurrencyText = cryptoCurrency || 'Send Custom Tokens';
         return (React.createElement(TransactionBox, { cryptoCurrency: cryptoCurrencyText, closeAction: closeAction },
-            React.createElement("input", { id: 'sendToAddress', type: 'text', onChange: e => this.handleAddressChange(e), value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
-            addressError &&
-                React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again."),
-            React.createElement(Grid, { container: true, direction: 'row', className: classes.amountContainer, alignItems: 'center', justify: 'space-between' },
+            React.createElement("input", { id: "sendToAddress", type: "text", onChange: e => this.handleAddressChange(e), value: this.state.address, className: addressInputClass, placeholder: "Send to Address" }),
+            addressError && (React.createElement("span", { className: classes.addressErrorText }, "Invalid address. Please check and try again.")),
+            React.createElement(Grid, { container: true, direction: "row", className: classes.amountContainer, alignItems: "center", justify: "space-between" },
                 React.createElement(Grid, { item: true },
-                    React.createElement(Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: "center", spacing: 4 },
+                    React.createElement(Grid, { container: true, direction: "row", justify: "flex-start", alignItems: "center", spacing: 4 },
                         React.createElement(Grid, { item: true },
-                            React.createElement("button", { id: 'allAmountButton', onClick: () => this.handleAllAmountClick(), className: classes.selectAllAmountBtn }, " ALL ")),
+                            React.createElement("button", { id: "allAmountButton", onClick: () => this.handleAllAmountClick(), className: classes.selectAllAmountBtn },
+                                ' ',
+                                "ALL",
+                                ' ')),
                         React.createElement(Grid, { item: true },
-                            React.createElement("input", { id: 'amountInput', type: 'text', onChange: e => this.handleAmountChange(e), value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
-                React.createElement(Grid, { item: true }, isSendCustomToken &&
-                    React.createElement("select", { value: this.state.cryptoCurrency, onChange: e => this.handleCryptoCurrencyChange(e), name: "cryptoCurrency", className: classes.cryptoSelect, id: 'customToken' },
-                        React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
-                        this.renderSelectTokenItems()))),
+                            React.createElement("input", { id: "amountInput", type: "text", onChange: e => this.handleAmountChange(e), value: this.state.amount, className: sendAmountClass, placeholder: "0.00" })))),
+                React.createElement(Grid, { item: true }, isSendCustomToken && (React.createElement("select", { value: this.state.cryptoCurrency, onChange: e => this.handleCryptoCurrencyChange(e), name: "cryptoCurrency", className: classes.cryptoSelect, id: "customToken" },
+                    React.createElement("option", { value: "", disabled: true, className: classes.selectItem }, "Custom Token"),
+                    this.renderSelectTokenItems())))),
             React.createElement(Divider, { className: classes.divider }),
             React.createElement(Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", className: classes.usdAmoutContainer },
                 React.createElement("span", null,
-                    React.createElement(NumberFormat, { locale: locale, priceStyle: 'currency', currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
+                    React.createElement(NumberFormat, { locale: locale, priceStyle: "currency", currency: fiatCurrency, value: amountUsd, fractionDigits: 15 })),
                 React.createElement("span", null, " USD ")),
             this.renderFeeBox(),
             this.renderButtons()));

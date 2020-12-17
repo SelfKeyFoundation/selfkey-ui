@@ -20,12 +20,16 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 var linearGradientColor = 'url(#orange-linear-gradient)';
-exports.WarningShieldIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '68px', height: props.height || '74px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 68 74' }),
+exports.WarningShieldIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: {
+        width: props.width || '68px',
+        height: props.height || '74px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: "0 0 68 74" }),
     React.createElement(_linearGradient_1.default, { color: "orange" }),
     React.createElement("g", { id: "Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "504.3---Exchange-Details-+-Send-Stake-+-Transaction-Error", transform: "translate(-375.000000, -273.000000)", fill: "inherit", fillRule: "nonzero" },

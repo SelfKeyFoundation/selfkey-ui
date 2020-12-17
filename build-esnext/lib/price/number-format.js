@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 const formatters = {};
-export const NumberFormat = ({ locale, priceStyle, currency, value, fractionDigits, showCurrency, }) => {
-    fractionDigits = (fractionDigits) ? fractionDigits : (Number(value) >= 1) ? 2 : 10;
-    const formatString = `${locale}:${priceStyle}:${currency}:${fractionDigits || "default"}`;
+export const NumberFormat = ({ locale, priceStyle, currency, value, fractionDigits, showCurrency }) => {
+    fractionDigits = fractionDigits ? fractionDigits : Number(value) >= 1 ? 2 : 10;
+    const formatString = `${locale}:${priceStyle}:${currency}:${fractionDigits || 'default'}`;
     if (locale && !formatters[formatString]) {
         const options = {
             style: priceStyle,

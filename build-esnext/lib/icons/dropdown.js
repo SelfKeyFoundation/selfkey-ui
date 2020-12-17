@@ -6,11 +6,11 @@ const styles = createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-export const DropdownIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '18px', height: props.height || '10px' } }, props, { viewBox: props.viewBox || "0 0 18 10" }),
+export const DropdownIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '18px', height: props.height || '10px' } }, props, { viewBox: props.viewBox || '0 0 18 10' }),
     React.createElement("g", { id: "dropdown-icon", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "Top-Header-Personal-dropdown-icon", transform: "translate(-1372.000000, -33.000000)" },
             React.createElement("g", { id: "Top-Header-dropdown-icon" },

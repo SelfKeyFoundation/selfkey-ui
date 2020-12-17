@@ -19,8 +19,8 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 exports.BankIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 36 36' }),

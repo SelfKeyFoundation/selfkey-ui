@@ -20,7 +20,7 @@ var wallet_1 = require("../icons/wallet");
 var lws_error_1 = require("./lws-error");
 var styles = core_1.createStyles({
     buttonPrimary: __assign(__assign({}, common_style_1.default.buttonPrimary), { fontWeight: 700 }),
-    buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 }),
+    buttonSecondary: __assign(__assign({}, common_style_1.default.buttonSecondary), { fontWeight: 700 })
 });
 exports.LWSWalletConnectionError = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, downloadWalletAction = _a.downloadWalletAction, retryAction = _a.retryAction;
