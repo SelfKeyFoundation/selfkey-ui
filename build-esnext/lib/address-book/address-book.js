@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { withStyles, createStyles } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { Grid, Button, Table, TableHead, TableRow, TableCell, TableBody, IconButton, Typography } from '@material-ui/core';
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import AddressBookIcon from '../icons/address-book';
 import CopyIcon from '../icons/copy';
 import DeleteIcon from '../icons/delete';
 import EditTransparentIcon from '../icons/edit-transparent';
 const styles = createStyles({
     addressBook: {
-        width: '1140px',
+        width: '1140px'
     },
     button: {
         height: '44px',
@@ -33,8 +33,8 @@ const styles = createStyles({
         borderSpacing: '0px',
         minWidth: '900px',
         '& tbody tr:nth-child(odd)': {
-            background: '#262f39',
-        },
+            background: '#262f39'
+        }
     },
     headerTableRow: {
         height: '38px',
@@ -45,11 +45,11 @@ const styles = createStyles({
             color: '#7f8fa4',
             textTransform: 'uppercase',
             borderBottom: '0px',
-            paddingLeft: '0px',
+            paddingLeft: '0px'
         },
         '& th:first-child': {
-            paddingLeft: '24px !important',
-        },
+            paddingLeft: '24px !important'
+        }
     },
     bodyTableRow: {
         height: '74px',
@@ -59,12 +59,12 @@ const styles = createStyles({
             fontSize: '15px',
             textAlign: 'left',
             color: '#ffffff',
-            borderBottom: '0px',
+            borderBottom: '0px'
         },
         '& td:first-child': {
-            paddingLeft: '24px !important',
-        },
-    },
+            paddingLeft: '24px !important'
+        }
+    }
 });
 const renderAddresses = (addresses, classes, onEdit, onDelete) => {
     return addresses.map((address, index) => {
@@ -72,28 +72,28 @@ const renderAddresses = (addresses, classes, onEdit, onDelete) => {
             React.createElement(TableCell, { id: address.label }, address.label),
             React.createElement(TableCell, null, address.address),
             React.createElement(TableCell, null,
-                React.createElement(Grid, { container: true, direction: 'row', justify: 'flex-start', alignItems: 'center' },
+                React.createElement(Grid, { container: true, direction: "row", justify: "flex-start", alignItems: "center" },
                     React.createElement(Grid, { item: true },
                         React.createElement(IconButton, null,
                             React.createElement(CopyToClipboard, { text: address.address },
                                 React.createElement(CopyIcon, null)))),
                     React.createElement(Grid, { item: true },
-                        React.createElement(IconButton, { id: 'editButton', onClick: () => onEdit(address.id) },
+                        React.createElement(IconButton, { id: "editButton", onClick: () => onEdit(address.id) },
                             React.createElement(EditTransparentIcon, null))),
                     React.createElement(Grid, { item: true },
-                        React.createElement(IconButton, { id: 'deleteButton', onClick: () => onDelete(address.id) },
+                        React.createElement(IconButton, { id: "deleteButton", onClick: () => onDelete(address.id) },
                             React.createElement(DeleteIcon, null)))))));
     });
 };
-export const AddressBook = withStyles(styles)(({ classes, addresses, onEdit, onDelete, onAdd }) => (React.createElement(Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center', className: classes.addressBook, spacing: 2 },
+export const AddressBook = withStyles(styles)(({ classes, addresses, onEdit, onDelete, onAdd }) => (React.createElement(Grid, { container: true, direction: "column", justify: "center", alignItems: "center", className: classes.addressBook, spacing: 2 },
     React.createElement(Grid, { item: true },
         React.createElement(AddressBookIcon, null)),
     React.createElement(Grid, { item: true },
         React.createElement(Typography, { variant: "h1" }, "Address Book")),
     React.createElement(Grid, { item: true },
-        React.createElement(Typography, { variant: 'body1', className: classes.descriptionText }, "Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
+        React.createElement(Typography, { variant: "body1", className: classes.descriptionText }, "Create and assign labels to save commonly used Ethereum addresses when sending assets from the SelfKey Identity Wallet.")),
     React.createElement(Grid, { item: true },
-        React.createElement(Button, { id: 'addAddressButton', className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
+        React.createElement(Button, { id: "addAddressButton", className: classes.button, onClick: onAdd }, "ADD ADDRESS")),
     React.createElement(Grid, { item: true },
         React.createElement(Table, { className: classes.table },
             React.createElement(TableHead, null,

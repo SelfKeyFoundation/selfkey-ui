@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { StyledComponentProps } from 'react-jss';
 export declare type CryptoPriceBoxProps = {
     locale: string;
     cryptoCurrency: string;
@@ -7,5 +6,7 @@ export declare type CryptoPriceBoxProps = {
     toCurrency: string;
     toValue: number;
 };
-export declare const CryptoPriceBox: React.ComponentType<CryptoPriceBoxProps & StyledComponentProps<string>>;
+export declare const CryptoPriceBox: React.ComponentType<Pick<CryptoPriceBoxProps & {
+    classes: Record<"test" | "cryptoPriceBox" | "smallText", string>;
+}, "locale" | "cryptoCurrency" | "cryptoValue" | "toCurrency" | "toValue"> & import("@material-ui/core").StyledComponentProps<"test" | "cryptoPriceBox" | "smallText">>;
 export default CryptoPriceBox;

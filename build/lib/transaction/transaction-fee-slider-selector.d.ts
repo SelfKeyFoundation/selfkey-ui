@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
-declare const styles: Record<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue" | "rightAligned", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+import { WithStyles } from '@material-ui/styles';
+declare const styles: Record<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue" | "rightAligned", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type TransactionFeeSliderSelectorProps = {
     minGasPrice: number;
     maxGasPrice: number;
@@ -16,5 +16,5 @@ export declare type TransactionFeeSliderSelectorProps = {
     onChange: (value: number) => void;
 };
 declare type StyledProps = WithStyles<typeof styles> & TransactionFeeSliderSelectorProps;
-export declare const TransactionFeeSliderSelector: React.ComponentType<Pick<StyledProps, "defaultValue" | "onChange" | "value" | "gasLimit" | "minGasPrice" | "maxGasPrice" | "fiat" | "fiatRate" | "slowPrice" | "mediumPrice" | "fastPrice" | "transactionPrices"> & import("@material-ui/core").StyledComponentProps<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue" | "rightAligned">>;
+export declare const TransactionFeeSliderSelector: React.ComponentType<Pick<StyledProps, "defaultValue" | "onChange" | "value" | "gasLimit" | "minGasPrice" | "maxGasPrice" | "fiat" | "fiatRate" | "slowPrice" | "mediumPrice" | "fastPrice" | "transactionPrices"> & import("@material-ui/styles").StyledComponentProps<"activated" | "root" | "thumb" | "sliderRoot" | "trackAfter" | "trackBefore" | "sliderLabels" | "networkFeeValue" | "rightAligned">>;
 export default TransactionFeeSliderSelector;

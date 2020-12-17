@@ -15,8 +15,8 @@ var styles = core_1.createStyles({
         letterSpacing: '0.6px',
         padding: '16px',
         textTransform: 'uppercase',
-        transition: 'background .5s ease',
-    },
+        transition: 'background .5s ease'
+    }
 });
 exports.LWSButton = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, className = _a.className, onClick = _a.onClick;

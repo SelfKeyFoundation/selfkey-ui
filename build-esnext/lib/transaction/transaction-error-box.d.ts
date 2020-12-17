@@ -1,7 +1,7 @@
 import * as React from 'react';
 export declare type TransactionErrorBoxProps = {
     publicKey: string;
-    closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    closeAction?: (event: React.MouseEvent<HTMLElement>) => void;
     children?: any;
 };
 export declare const TransactionErrorBox: React.ComponentType<Pick<TransactionErrorBoxProps & {

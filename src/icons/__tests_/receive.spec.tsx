@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import ReceiveIcon from '../receive';
 
 describe('Receive Icon', () => {
-  it('should show Receive Icon', () => {
-    const component = create(
-      <ReceiveIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Receive Icon', () => {
+		const component = create(<ReceiveIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

@@ -3,16 +3,9 @@ import { create } from 'react-test-renderer';
 import { BankIcon } from '../bank';
 
 describe('Bank Icon', () => {
-  it('should show Bank Icon', () => {
-    const component = create(
-      <BankIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Bank Icon', () => {
+		const component = create(<BankIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });
-
-
-
-
-

@@ -19,11 +19,15 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
-exports.MarketplaceIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '36px', height: props.height || '30px', fill: props.fill || '#00C0D9' } }, props, { viewBox: props.viewBox || "0 0 36 30" }),
+exports.MarketplaceIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: {
+        width: props.width || '36px',
+        height: props.height || '30px',
+        fill: props.fill || '#00C0D9'
+    } }, props, { viewBox: props.viewBox || '0 0 36 30' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "500---SelfKey-Marketplace", transform: "translate(-150.000000, -156.000000)", fill: "inherit", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(150.000000, 156.000000)" },

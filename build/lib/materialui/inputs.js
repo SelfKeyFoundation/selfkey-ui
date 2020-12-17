@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -71,18 +71,18 @@ var multilineSelectStyles = function (theme) {
             '&$focused': {
                 '&$focused:not($error):not($disabled)': {
                     border: "1px solid " + colors_1.primary,
-                    boxShadow: "0 0 3px 1px " + colors_1.primary,
-                },
-            },
+                    boxShadow: "0 0 3px 1px " + colors_1.primary
+                }
+            }
         },
         item: {
             borderRadius: '4px',
             fontSize: '14px',
             lineHeight: '21px',
-            cursor: 'pointer',
+            cursor: 'pointer'
         },
         itemText: {
-            '& span': { fontSize: '14px', lineHeight: '17px', padding: '5px 0' },
+            '& span': { fontSize: '14px', lineHeight: '17px', padding: '5px 0' }
         },
         itemAdd: {
             background: 'none',
@@ -90,8 +90,8 @@ var multilineSelectStyles = function (theme) {
             cursor: 'pointer',
             lineHeight: '21px',
             padding: theme.spacing(1, 2),
-            marginBottom: 0,
-        },
+            marginBottom: 0
+        }
     });
 };
 exports.MultilineSelect = core_2.withStyles(multilineSelectStyles)(function (props) {
@@ -123,85 +123,87 @@ exports.MultilineSelect = core_2.withStyles(multilineSelectStyles)(function (pro
             onAdd && items.length > 0 ? React.createElement(core_1.Divider, null) : null,
             onAdd ? (React.createElement(core_1.ListItem, { className: classes.itemAdd, onClick: onAdd }, "+Add Option")) : null)));
 });
-exports.FileUploadLabel = core_2.withStyles(function (theme) { return core_2.createStyles({
-    root: {
-        alignItems: 'center',
-        cursor: 'pointer',
-        display: 'flex',
-        flexDirection: 'column',
-        height: '120px',
-        justifyContent: 'space-between',
-        marginTop: theme.spacing(10),
-        textAlign: 'center',
-        '&:hover': {
-            color: colors_1.primary,
-        },
-    },
-}); })(core_1.InputLabel);
+exports.FileUploadLabel = core_2.withStyles(function (theme) {
+    return core_2.createStyles({
+        root: {
+            alignItems: 'center',
+            cursor: 'pointer',
+            display: 'flex',
+            flexDirection: 'column',
+            height: '120px',
+            justifyContent: 'space-between',
+            marginTop: theme.spacing(10),
+            textAlign: 'center',
+            '&:hover': {
+                color: colors_1.primary
+            }
+        }
+    });
+})(core_1.InputLabel);
 exports.FileUploadInput = core_2.withStyles(core_2.createStyles({
     root: {
-        display: 'none',
-    },
+        display: 'none'
+    }
 }))(core_1.Input);
 exports.DecimalInput = core_2.withStyles(core_2.createStyles({
     input: {
         textAlign: 'right'
-    },
+    }
 }))(core_1.Input);
 var fileViewStyles = function (theme) {
     return core_2.createStyles({
         fileItem: {
             boxSizing: 'border-box',
-            padding: theme.spacing(1, 3),
+            padding: theme.spacing(1, 3)
         },
         fileItemError: {},
         noDecoration: {
-            textDecoration: 'none',
+            textDecoration: 'none'
         },
         link: {
-            cursor: 'pointer',
+            cursor: 'pointer'
         },
         fileName: {
             '&:hover': {
-                color: colors_1.primary,
-            },
+                color: colors_1.primary
+            }
         },
         breakAll: {
-            wordBreak: 'break-all',
+            wordBreak: 'break-all'
         },
         fileErrorContainer: {
-            marginLeft: '45px',
+            marginLeft: '45px'
         },
         fullWidth: {
-            width: '100%',
+            width: '100%'
         },
         imageWidth: {
-            maxWidth: '100%',
+            maxWidth: '100%'
         },
         topSpacing: {
-            marginTop: '20px',
+            marginTop: '20px'
         },
         padding: {
-            padding: theme.spacing(0, 2),
+            padding: theme.spacing(0, 2)
         },
         bottomSpace: {
-            marginBottom: theme.spacing(3),
+            marginBottom: theme.spacing(3)
         },
         back: {
-            zIndex: 1000,
+            zIndex: 1000
         },
         ellipsis: {
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
-            maxWidth: '222px',
+            maxWidth: '222px'
         },
         fileViewContainerDragAndDrop: {
-            marginTop: theme.spacing(1),
+            marginTop: theme.spacing(1)
         },
         fileViewContainer: {
-            marginTop: theme.spacing(5),
-        },
+            marginTop: theme.spacing(5)
+        }
     });
 };
 exports.FileView = core_2.withStyles(fileViewStyles)(function (_a) {
@@ -222,7 +224,9 @@ exports.FileView = core_2.withStyles(fileViewStyles)(function (_a) {
             React.createElement(core_1.Typography, { variant: "body1", color: "error" }, err))); }))) : null));
 });
 var isImageType = function (mime) { return ['image/png', 'image/jpeg'].includes(mime); };
-var isAudioType = function (mime) { return ['audio/ogg', 'audio/mp3', 'audio/m4a', 'audio/x-wav'].includes(mime); };
+var isAudioType = function (mime) {
+    return ['audio/ogg', 'audio/mp3', 'audio/m4a', 'audio/x-wav'].includes(mime);
+};
 var isPDFType = function (mime) { return ['application/pdf'].includes(mime); };
 var dataURItoBlob = function (dataURI) {
     // Split metadata from data
@@ -280,16 +284,21 @@ var FileLinkWithModalComponent = /** @class */ (function (_super) {
             _this.setState({ open: false });
         };
         _this.handleOpen = function (evt) {
-            var _a = _this.state, url = _a.url, mime = _a.mime, file = _a.file;
+            var url = _this.state.url;
+            var _a = _this.state, mime = _a.mime, file = _a.file;
             if (!url && _this.isSupportedFile(mime)) {
                 url = _this.createFileUrl(file, mime);
             }
             if (isImageType(mime) || isAudioType(mime)) {
-                evt && evt.preventDefault();
+                if (evt) {
+                    evt.preventDefault();
+                }
                 return _this.setState({ open: true });
             }
             if (isPDFType(mime) && _this.props.onPDFOpen) {
-                evt && evt.preventDefault();
+                if (evt) {
+                    evt.preventDefault();
+                }
                 return _this.props.onPDFOpen(__assign(__assign({}, file), { url: url }));
             }
         };
@@ -312,7 +321,8 @@ var FileLinkWithModalComponent = /** @class */ (function (_super) {
         }
     };
     FileLinkWithModalComponent.prototype.componentDidUpdate = function (prevProps, prevState) {
-        if (this.props.file.name !== prevProps.file.name || this.props.file.contents !== prevProps.file.contents) {
+        if (this.props.file.name !== prevProps.file.name ||
+            this.props.file.contents !== prevProps.file.contents) {
             var file = this.props.file;
             var mime = file.mimeType.fileType || file.mimeType;
             var state = { file: file, url: file.url, urlCreated: false, mime: mime };
@@ -337,7 +347,7 @@ var FileLinkWithModalComponent = /** @class */ (function (_super) {
         var _d = this.state, open = _d.open, file = _d.file, url = _d.url, mime = _d.mime;
         var textProps = {
             variant: 'subtitle1',
-            className: classes.fileName,
+            className: classes.fileName
         };
         if (small) {
             textProps.color = 'secondary';
@@ -400,21 +410,21 @@ var fileUploadStyles = function (theme) {
             border: '1px solid #384656',
             borderRadius: '4px',
             paddingLeft: theme.spacing(2),
-            boxSizing: 'border-box',
+            boxSizing: 'border-box'
         },
         button: {
             borderRadius: '0 3px 3px 0',
             boxShadow: 'none',
             width: '129px',
-            minWidth: '129px',
+            minWidth: '129px'
         },
         fileInput: {
-            display: 'none',
+            display: 'none'
         },
         formError: {
             backgroundColor: 'rgba(255, 46, 99, 0.09)',
-            border: "1px solid " + colors_1.error,
-        },
+            border: "1px solid " + colors_1.error
+        }
     });
 };
 exports.FileUploadWidget = core_2.withStyles(fileUploadStyles)(function (_a) {
@@ -436,6 +446,7 @@ exports.FileUploadWidget = core_2.withStyles(fileUploadStyles)(function (_a) {
         };
     }
     if (!onClearForm) {
+        // tslint:disable-next-line:no-empty
         onClearForm = function () { };
     }
     var additionalClass = null;
@@ -456,38 +467,40 @@ exports.FileUploadWidget = core_2.withStyles(fileUploadStyles)(function (_a) {
                             React.createElement("input", __assign({ id: id, type: "file" }, props, eventHandlers, { className: classes.fileInput }))))))),
         file ? (React.createElement(exports.FileViewWithModalComponent, { file: file, onClearForm: onClearForm, onPDFOpen: onPDFOpen })) : null));
 });
-var FileUploadGrid = core_2.withStyles(function (theme) { return core_2.createStyles({
-    container: {
-        backgroundColor: colors_1.base,
-        border: '1px solid #303C49',
-        borderRadius: '4px',
-        height: '400px',
-        minWidth: '500px',
-        width: '100%',
-        marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1),
-    },
-}); })(core_1.Grid);
+var FileUploadGrid = core_2.withStyles(function (theme) {
+    return core_2.createStyles({
+        container: {
+            backgroundColor: colors_1.base,
+            border: '1px solid #303C49',
+            borderRadius: '4px',
+            height: '400px',
+            minWidth: '500px',
+            width: '100%',
+            marginTop: theme.spacing(1),
+            marginBottom: theme.spacing(1)
+        }
+    });
+})(core_1.Grid);
 var fileUploadWidgetStyles = function (theme) {
     return core_2.createStyles({
         fileInput: {
-            display: 'none',
+            display: 'none'
         },
         dropArea: {
             width: '100%',
             height: '100%',
             border: '1px dashed #303C49',
-            backgroundColor: '#1E262E',
+            backgroundColor: '#1E262E'
         },
         highlite: {
-            border: "1px solid " + colors_1.primary,
+            border: "1px solid " + colors_1.primary
         },
         formError: {
-            border: "1px solid " + colors_1.error,
+            border: "1px solid " + colors_1.error
         },
         bottomSpace: {
-            marginBottom: theme.spacing(1),
-        },
+            marginBottom: theme.spacing(1)
+        }
     });
 };
 var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
@@ -504,7 +517,8 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
             event.stopPropagation();
         };
         _this.handleFormFileChange = function (evt) {
-            _this.props.onChange && _this.props.onChange(Array.from(evt.target.files), true);
+            if (_this.props.onChange)
+                _this.props.onChange(Array.from(evt.target.files), true);
         };
         _this.handleDragStart = function (event) {
             _this.setState({ dragging: true });
@@ -513,8 +527,9 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
             _this.setState({ dragging: false });
         };
         _this.handleDrop = function (event) {
-            console.log(Array.from(event.dataTransfer.files));
-            _this.props.onChange && _this.props.onChange(Array.from(event.dataTransfer.files), true);
+            if (_this.props.onChange) {
+                _this.props.onChange(Array.from(event.dataTransfer.files), true);
+            }
         };
         return _this;
     }
@@ -551,7 +566,8 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
         this.formRef.removeEventListener('drop', this.handleDrop);
     };
     ArrayFileUploadWidgetComponent.prototype.render = function () {
-        var _a = this.props, classes = _a.classes, id = _a.id, files = _a.files, onClearForm = _a.onClearForm, onBlur = _a.onBlur, onFocus = _a.onFocus, isError = _a.isError, required = _a.required, mimeTypes = _a.mimeTypes, errorFiles = _a.errorFiles, uploadError = _a.uploadError, onPDFOpen = _a.onPDFOpen, props = __rest(_a, ["classes", "id", "files", "onClearForm", "onBlur", "onFocus", "isError", "required", "mimeTypes", "errorFiles", "uploadError", "onPDFOpen"]);
+        var _a = this.props, classes = _a.classes, files = _a.files, onBlur = _a.onBlur, onFocus = _a.onFocus, isError = _a.isError, required = _a.required, mimeTypes = _a.mimeTypes, errorFiles = _a.errorFiles, uploadError = _a.uploadError, onPDFOpen = _a.onPDFOpen, props = __rest(_a, ["classes", "files", "onBlur", "onFocus", "isError", "required", "mimeTypes", "errorFiles", "uploadError", "onPDFOpen"]);
+        var _b = this.props, id = _b.id, onClearForm = _b.onClearForm;
         var eventHandlers = {};
         var accept = (mimeTypes || []).join(',');
         eventHandlers.onChange = this.handleFormFileChange;
@@ -566,6 +582,7 @@ var ArrayFileUploadWidgetComponent = /** @class */ (function (_super) {
             };
         }
         if (!onClearForm) {
+            // tslint:disable-next-line:no-empty
             onClearForm = function () { };
         }
         id = id || 'key-upload';

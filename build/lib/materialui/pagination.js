@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -29,9 +29,9 @@ exports.KeyIconButton = styles_1.withStyles(styles_1.createStyles({
         padding: '5px',
         '&:hover': {
             backgroundColor: '#2D3742',
-            border: '1px solid #687C8A',
-        },
-    },
+            border: '1px solid #687C8A'
+        }
+    }
 }))(core_1.IconButton);
 var TablePaginationActions = /** @class */ (function (_super) {
     __extends(TablePaginationActions, _super);
@@ -55,7 +55,7 @@ var TablePaginationActions = /** @class */ (function (_super) {
     // };
     TablePaginationActions.prototype.render = function () {
         //   const { classes, count, page, rowsPerPage, theme } = this.props;
-        return (React.createElement(core_1.Grid, { container: true, direction: 'row' },
+        return (React.createElement(core_1.Grid, { container: true, direction: "row" },
             React.createElement(core_1.Grid, { item: true },
                 React.createElement(exports.KeyIconButton, { "aria-label": "First Page" },
                     React.createElement(FirstPage_1.default, null))),
@@ -86,9 +86,9 @@ var Pagination = /** @class */ (function (_super) {
     }
     Pagination.prototype.render = function () {
         return (React.createElement(core_1.TablePagination, { rowsPerPageOptions: [5, 10, 25], component: "div", count: 148, rowsPerPage: 5, page: 0, backIconButtonProps: {
-                'aria-label': 'Previous Page',
+                'aria-label': 'Previous Page'
             }, nextIconButtonProps: {
-                'aria-label': 'Next Page',
+                'aria-label': 'Next Page'
             }, onChangePage: this.handleChangePage, ActionsComponent: TablePaginationActions }));
     };
     return Pagination;

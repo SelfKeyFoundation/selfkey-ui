@@ -20,11 +20,11 @@ var styles = core_1.createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.MenuExportIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '17px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || "0 0 17 20" }),
+exports.MenuExportIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '17px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 17 20' }),
     React.createElement("g", { id: "Main-Dashboard-export", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "300.3-Navigation-open-default-state-export", transform: "translate(-20.000000, -1266.000000)" },
             React.createElement("g", { id: "Menu-export" },

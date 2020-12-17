@@ -20,7 +20,11 @@ var styles = core_1.createStyles({
         transition: 'all 0.2s ease-out'
     }
 });
-exports.GridIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '24px', height: props.height || '24px', fill: props.fill || '93B0C1' } }, props, { viewBox: props.viewBox || "0 0 24 24" }),
+exports.GridIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: {
+        width: props.width || '24px',
+        height: props.height || '24px',
+        fill: props.fill || '93B0C1'
+    } }, props, { viewBox: props.viewBox || '0 0 24 24' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
         React.createElement("g", { id: "504-Exchange-Marketplace-New", transform: "translate(-1189.000000, -159.000000)", fill: "inherit" },
             React.createElement("g", { id: "Button-group", transform: "translate(1172.000000, 149.000000)" },

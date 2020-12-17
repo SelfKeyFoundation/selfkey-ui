@@ -1,8 +1,7 @@
-/// <reference path="../../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { WithStyles, StyleSheet } from 'react-jss';
-export declare const styles: StyleSheet;
-export declare type Token = {
+import { WithStyles } from '@material-ui/styles';
+export declare const styles: Record<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
+declare type Token = {
     name: string;
     symbol: string;
     price: number;
@@ -15,17 +14,17 @@ export declare type Token = {
 export declare type CryptoPriceTableProps = {
     locale: string;
     fiatCurrency: string;
-    tokens: Array<Token>;
-    toggleAction?: ((event: React.MouseEvent<HTMLElement>, token: Token) => void);
-    alwaysVisible?: Array<string>;
+    showCurrency?: boolean;
+    tokens: Token[];
+    toggleAction?: (event: React.MouseEvent<HTMLElement>, token: Token) => void;
+    alwaysVisible?: string[];
 };
 export declare type CryptoPriceTableState = {};
-export declare type StyledProps = WithStyles<keyof typeof styles> & CryptoPriceTableProps;
+export declare type StyledProps = WithStyles<typeof styles> & CryptoPriceTableProps;
 export declare class CryptoPriceTableComponent extends React.Component<StyledProps, CryptoPriceTableState> {
-    constructor(props: StyledProps);
     renderVisibilityButton(token: Token): JSX.Element | undefined;
     renderRow(token: Token, index: number): JSX.Element;
     render(): JSX.Element;
 }
-export declare const CryptoPriceTable: React.ComponentType<CryptoPriceTableProps & import("react-jss").StyledComponentProps<string>>;
+export declare const CryptoPriceTable: React.ComponentType<Pick<StyledProps, "locale" | "fiatCurrency" | "tokens" | "showCurrency" | "toggleAction" | "alwaysVisible"> & import("@material-ui/styles").StyledComponentProps<"table" | "cryptoPriceTable" | "headerTableRow" | "bodyTableRow" | "iconSize">>;
 export default CryptoPriceTable;

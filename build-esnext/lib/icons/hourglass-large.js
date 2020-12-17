@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#grey-linear-gradient)';
-export const HourGlassLargeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor } }, props, { viewBox: '0 0 66 66' }),
+export const HourGlassLargeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '66px',
+        height: props.height || '66px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: "0 0 66 66" }),
     React.createElement(LinearGradient, { color: "grey" }),
     React.createElement("g", { id: "-Wallet-Setup", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "116.1---Nano---Connecting-+-Messages", transform: "translate(-375.000000, -214.000000)", fill: "inherit", fillRule: "nonzero" },

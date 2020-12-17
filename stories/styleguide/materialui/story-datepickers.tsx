@@ -8,7 +8,8 @@ const underlineStyle = {
 };
 
 export default function DatePickerStories() {
-	const today = moment(Date.now()).add(1, 'month');
+	const startOfMonth = moment(Date.now()).startOf('month');
+	const nextMonth = moment(Date.now()).add(1, 'month');
 	return (
 		<div>
 			<Typography variant="h3" style={underlineStyle} gutterBottom>
@@ -32,9 +33,20 @@ export default function DatePickerStories() {
 			</Typography>
 			<KeyPicker
 				isValidDate={(current: any): boolean => {
-					return current.isSameOrAfter(today, 'day');
+					return current.isSameOrAfter(nextMonth, 'day');
 				}}
-				viewDate={today}
+				viewDate={nextMonth}
+			/>
+
+			<Typography variant="h3" style={underlineStyle} gutterBottom>
+				Month Picker: any future month
+			</Typography>
+			<KeyPicker
+				viewDate={startOfMonth}
+				format="M/YYYY"
+				isValidDate={(current: any): boolean => {
+					return current.isSameOrAfter(startOfMonth, 'month');
+				}}
 			/>
 			<p style={{ marginBottom: '400px' }}>&nbsp;</p>
 		</div>

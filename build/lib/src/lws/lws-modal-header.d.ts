@@ -1,7 +1,8 @@
-/// <reference path="../../../../src/react-jss.d.ts" />
 import * as React from 'react';
 export declare type LWSModalHeaderProps = {
-    closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    closeAction?: (event: React.MouseEvent<HTMLElement>) => void;
 };
-export declare const LWSModalHeader: React.ComponentType<LWSModalHeaderProps & import("react-jss").StyledComponentProps<string>>;
+export declare const LWSModalHeader: React.ComponentType<Pick<LWSModalHeaderProps & {
+    classes: Record<"title" | "root" | "closeButton", string>;
+}, "closeAction"> & import("@material-ui/core").StyledComponentProps<"title" | "root" | "closeButton">>;
 export default LWSModalHeader;

@@ -20,12 +20,16 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 var linearGradientColor = 'url(#default-linear-gradient)';
-exports.MyCryptoLargeIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '66px', height: props.height || '64px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 64" }),
+exports.MyCryptoLargeIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: {
+        width: props.width || '66px',
+        height: props.height || '64px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 66 64' }),
     React.createElement(_linearGradient_1.default, null),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "MMTokens", transform: "translate(-687.000000, -146.000000)", fill: "inherit", fillRule: "nonzero" },

@@ -19,13 +19,13 @@ var styles = core_1.createStyles({
     root: {
         '& circle': {
             stroke: '#1D505F',
-            transition: 'all 0.2s ease-out',
+            transition: 'all 0.2s ease-out'
         },
         '&:hover circle': {
             fill: '#2E3742',
-            stroke: '#23E6FE',
+            stroke: '#23E6FE'
         },
-        transition: 'all 0.2s ease-out',
+        transition: 'all 0.2s ease-out'
     }
 });
 exports.ModalCloseIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '38px', height: props.height || '38px' } }, props, { viewBox: props.viewBox || '0 0 38 38', fontSize: "large" }),

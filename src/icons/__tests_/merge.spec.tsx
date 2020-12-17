@@ -3,16 +3,9 @@ import { create } from 'react-test-renderer';
 import { MergeIcon } from '../merge';
 
 describe('Merge Icon', () => {
-  it('should show Merge Icon', () => {
-    const component = create(
-      <MergeIcon/>
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Merge Icon', () => {
+		const component = create(<MergeIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });
-
-
-
-
-

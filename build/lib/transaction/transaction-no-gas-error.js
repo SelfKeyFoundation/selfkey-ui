@@ -7,7 +7,7 @@ var transaction_error_box_1 = require("./transaction-error-box");
 var styles = core_1.createStyles({
     bodyText: {
         paddingRight: '40px',
-        textAlign: 'justify',
+        textAlign: 'justify'
     },
     learnMoreText: {
         paddingTop: '15px',
@@ -17,7 +17,7 @@ var styles = core_1.createStyles({
         lineHeight: '19px'
     },
     learnMoreLink: {
-        textDecoration: 'none',
+        textDecoration: 'none'
     }
 });
 exports.TransactionNoGasError = core_1.withStyles(styles)(function (_a) {
@@ -34,7 +34,7 @@ exports.TransactionNoGasError = core_1.withStyles(styles)(function (_a) {
         React.createElement("div", { className: classes.bodyText },
             React.createElement(core_1.Typography, { variant: "body1" }, "You don't have enough Ethereum (ETH) to pay for the network transaction fee. Please transfer some ETH to this address and try again. Your ETH address of this wallet is listed below."),
             React.createElement("div", { className: classes.learnMoreText },
-                "To learn more about transaction fees, click ",
+                "To learn more about transaction fees, click",
                 ' ',
                 React.createElement("a", { className: classes.learnMoreText + "  " + classes.learnMoreLink, href: gasExplanationUrl, onClick: handleLinkClick }, "here.")))));
 });

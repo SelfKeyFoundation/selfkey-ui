@@ -7,8 +7,8 @@ export const MuiVisibilityIcon = withStyles(createStyles({
         height: '20px',
         width: '20px',
         '&:hover': {
-            fill: white,
-        },
-    },
+            fill: white
+        }
+    }
 }))(VisibilityOutlined);
 //# sourceMappingURL=muivisibility.js.map

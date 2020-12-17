@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as _ from 'lodash';
-import { withStyles, createStyles } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { IDIcon } from '../icons/id';
 import { ProfileIcon } from '../icons/profile';
 import { StickIcon } from '../icons/stick';
@@ -9,7 +9,7 @@ import CommonStyle from '../common/common-style';
 import { Typography } from '@material-ui/core';
 export const styles = createStyles({
     areaTitle: {
-        textAlign: 'center',
+        textAlign: 'center'
     },
     title: {
         textTransform: 'uppercase',
@@ -17,7 +17,7 @@ export const styles = createStyles({
         fontSize: '16px',
         padding: '25px 0px',
         margin: '0px',
-        color: '#23E6FE',
+        color: '#23E6FE'
     },
     form: CommonStyle.form,
     formGroup: {
@@ -29,13 +29,13 @@ export const styles = createStyles({
             color: '#93B0C1',
             textTransform: 'uppercase',
             padding: '0px 0px 5px 0px',
-            fontFamily: 'Lato, arial, sans-serif',
-        },
+            fontFamily: 'Lato, arial, sans-serif'
+        }
     },
     radioReplace: {
         padding: '20px 0px 45px',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
     },
     buttonTertiary: {
         height: '80px',
@@ -50,15 +50,15 @@ export const styles = createStyles({
         alignItems: 'center',
         '&:hover': {
             cursor: 'pointer',
-            background: '#374a5a',
+            background: '#374a5a'
         },
         '& svg': {
-            padding: '0px 15px 0px 0px',
+            padding: '0px 15px 0px 0px'
         },
         fontFamily: 'Lato, arial, sans-serif',
         fontWeight: 700,
         maxWidth: 'calc(50% - 15px)',
-        width: '100%',
+        width: '100%'
     },
     formControl: {
         width: '100%',
@@ -73,11 +73,11 @@ export const styles = createStyles({
         fontFamily: 'Lato, arial, sans-serif',
         '&:focus': {
             outline: 'none',
-            boxShadow: '0 0 5px rgba(81, 203, 238, 1)',
-        },
+            boxShadow: '0 0 5px rgba(81, 203, 238, 1)'
+        }
     },
     formSubmitRow: {
-        marginTop: '15px',
+        marginTop: '15px'
     },
     button: {
         fontSize: '14px',
@@ -89,7 +89,7 @@ export const styles = createStyles({
     buttonPrimary: { ...CommonStyle.buttonPrimary, fontWeight: 700 },
     buttonSecondary: { ...CommonStyle.buttonSecondary, fontWeight: 700 },
     selected: {
-        border: `2px solid #1CA9BA`,
+        border: `2px solid #1CA9BA`
     },
     supportText: {
         textAlign: 'center',
@@ -103,15 +103,15 @@ export const styles = createStyles({
         display: 'block',
         fontSize: '13px',
         color: '#FE4B61',
-        padding: '5px 0 0',
+        padding: '5px 0 0'
     },
     validationError: {
         border: '1px solid #D0021B',
         color: '#FE4B61',
         '&:focus': {
-            boxShadow: '0 0 5px rgba(254, 75, 97, 1)',
-        },
-    },
+            boxShadow: '0 0 5px rgba(254, 75, 97, 1)'
+        }
+    }
 });
 export class LWSSelectWalletComponent extends React.Component {
     constructor(props) {
@@ -119,7 +119,7 @@ export class LWSSelectWalletComponent extends React.Component {
         this.state = {
             isHardwareWallet: false,
             wallet: null,
-            password: '',
+            password: ''
         };
     }
     componentDidMount() {
@@ -140,7 +140,7 @@ export class LWSSelectWalletComponent extends React.Component {
         if (!publicKey) {
             publicKey = wallets[0].publicKey;
         }
-        let wallet = _.find(wallets, { publicKey }) || null;
+        const wallet = _.find(wallets, { publicKey }) || null;
         this.setState({ wallet, password: '' });
         return wallet;
     }
@@ -152,7 +152,8 @@ export class LWSSelectWalletComponent extends React.Component {
     }
     login() {
         const { loginAction } = this.props;
-        let { wallet, password } = this.state;
+        let { wallet } = this.state;
+        const { password } = this.state;
         if (!wallet || !wallet.publicKey) {
             wallet = this.selectWallet();
         }
@@ -194,10 +195,12 @@ export class LWSSelectWalletComponent extends React.Component {
             return (React.createElement("div", null,
                 React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Choose an existing ETH Address"),
-                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: evt => this.setWallet(evt), value: publicKey }, wallets.filter(w => w.profile === 'local').map((wallet, index) => {
-                        return (React.createElement("option", { key: index, value: wallet.publicKey },
+                    React.createElement("select", { id: "eth-address", className: classes.formControl, onChange: evt => this.setWallet(evt), value: publicKey }, wallets
+                        .filter(w => w.profile === 'local')
+                        .map((w, index) => {
+                        return (React.createElement("option", { key: index, value: w.publicKey },
                             "0x",
-                            wallet.publicKey.replace('0x', '')));
+                            w.publicKey.replace('0x', '')));
                     }))),
                 wallet && wallet.unlocked ? null : (React.createElement("div", { className: classes.formGroup },
                     React.createElement("label", null, "Password"),

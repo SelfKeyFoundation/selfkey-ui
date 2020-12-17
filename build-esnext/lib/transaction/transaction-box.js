@@ -10,7 +10,7 @@ const styles = createStyles({
         borderRadius: '4px',
         backgroundColor: '#262f39',
         border: 'solid 1px #303c49',
-        boxShadow: '0 0 16px 1px #15222e',
+        boxShadow: '0 0 16px 1px #15222e'
     },
     iconWrapper: {
         position: 'absolute',
@@ -42,13 +42,13 @@ const styles = createStyles({
 const renderIcon = (shortName, classes) => {
     switch (shortName) {
         case 'KEY':
-            return (React.createElement(SelfkeyIcon, { className: classes.icon }));
+            return React.createElement(SelfkeyIcon, { className: classes.icon });
         case 'KI':
-            return (React.createElement(SelfkeyIcon, { className: classes.icon }));
+            return React.createElement(SelfkeyIcon, { className: classes.icon });
         case 'ETH':
-            return (React.createElement(EthereumIcon, { className: classes.icon }));
+            return React.createElement(EthereumIcon, { className: classes.icon });
         default:
-            return (React.createElement("div", { className: classes.custom }, shortName));
+            return React.createElement("div", { className: classes.custom }, shortName);
     }
 };
 export const TransactionBox = withStyles(styles)(({ classes, children, cryptoCurrency, closeAction }) => (React.createElement("div", { className: classes.transactionBox },

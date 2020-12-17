@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -27,10 +27,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TransactionFeeBox = exports.TransactionFeeBoxComponent = exports.styles = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var actual_transaction_fee_box_1 = require("./actual-transaction-fee-box");
 var common_style_1 = require("../../../common/common-style");
 var icons_1 = require("@material-ui/icons");
-exports.styles = core_1.createStyles({
+exports.styles = styles_1.createStyles({
     container: {
         fontFamily: common_style_1.default.fontFamily
     },
@@ -51,7 +52,7 @@ exports.styles = core_1.createStyles({
         borderWidth: '0 2px 2px 0',
         display: 'inline-block',
         padding: '4px',
-        marginLeft: '5px',
+        marginLeft: '5px'
     },
     rightIcon: {
         transform: 'rotate(-45deg)'
@@ -74,10 +75,12 @@ exports.styles = core_1.createStyles({
         }
     },
     fullWidth: {
-        width: '100%',
+        width: '100%'
     },
     checkbox: {
-        color: '#FFFFFF', fontSize: '14px', lineHeight: '14px'
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px'
     },
     checkboxRoot: {
         color: '#00C0D9',
@@ -86,7 +89,7 @@ exports.styles = core_1.createStyles({
         }
     },
     checkboxChecked: {
-        color: '#00C0D9 !important',
+        color: '#00C0D9 !important'
     },
     checkboxLabel: {
         color: '#FFFFFF',
@@ -107,7 +110,9 @@ exports.styles = core_1.createStyles({
         borderRadius: '4px',
         backgroundColor: '#1E262E',
         boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)',
-        color: '#FFFFFF', fontSize: '14px', lineHeight: '14px',
+        color: '#FFFFFF',
+        fontSize: '14px',
+        lineHeight: '14px',
         '&:focus': {
             outline: 'none',
             boxShadow: '0 0 5px rgba(81, 203, 238, 1)'
@@ -154,12 +159,13 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
         return _this;
     }
     TransactionFeeBoxComponent.prototype.componentDidUpdate = function (prevProps) {
-        if (prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
+        if (prevProps.gasLimit !== this.props.gasLimit ||
+            prevProps.gasPrice !== this.props.gasPrice) {
             this.setState(__assign(__assign({}, this.state), { gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice }));
         }
     };
     TransactionFeeBoxComponent.prototype.renderActualTransactionFeeBox = function () {
-        return (React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, __assign({}, this.props)));
+        return React.createElement(actual_transaction_fee_box_1.ActualTransactionFeeBox, __assign({}, this.props));
     };
     TransactionFeeBoxComponent.prototype.toggleShowAdvanced = function () {
         var showAdvanced = this.state.showAdvanced;
@@ -209,10 +215,12 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
                         " "))),
             React.createElement(core_1.Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement("div", { className: classes.currNetworkStatusContainer },
-                    React.createElement("span", { className: classes.currNetworkStatusTitle }, "Current Network Status: "),
+                    React.createElement("span", { className: classes.currNetworkStatusTitle },
+                        "Current Network Status:",
+                        ' '),
                     React.createElement(icons_1.Loop, { onClick: reloadEthGasStationInfoAction, classes: {
                             root: classes.reloadNetworkIcon
-                        } }, " ")),
+                        } }, ' ')),
                 React.createElement("div", { className: classes.gasPriceValuesContainer },
                     React.createElement("p", null,
                         " Under 30 Mins: ",
@@ -235,7 +243,10 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
             React.createElement(core_1.Grid, { container: true, wrap: "nowrap" },
                 React.createElement(core_1.Grid, { container: true, direction: "row" },
                     React.createElement(core_1.Grid, { item: true },
-                        React.createElement("span", { className: classes.networkTransactionFeeTitle + " feeTitle" }, " Network Transaction Fee: ")),
+                        React.createElement("span", { className: classes.networkTransactionFeeTitle + " feeTitle" },
+                            ' ',
+                            "Network Transaction Fee:",
+                            ' ')),
                     React.createElement(core_1.Grid, { item: true }, this.renderActualTransactionFeeBox())),
                 React.createElement(core_1.Grid, { item: true, className: classes.showAdvancedContainer, onClick: function () { return _this.toggleShowAdvanced(); } },
                     React.createElement("span", null, " Advanced "),
@@ -245,6 +256,6 @@ var TransactionFeeBoxComponent = /** @class */ (function (_super) {
     return TransactionFeeBoxComponent;
 }(React.Component));
 exports.TransactionFeeBoxComponent = TransactionFeeBoxComponent;
-exports.TransactionFeeBox = core_1.withStyles(exports.styles)(TransactionFeeBoxComponent);
+exports.TransactionFeeBox = styles_1.withStyles(exports.styles)(TransactionFeeBoxComponent);
 exports.default = exports.TransactionFeeBox;
 //# sourceMappingURL=transaction-fee-box.js.map

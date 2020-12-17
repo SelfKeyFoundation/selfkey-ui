@@ -19,11 +19,11 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
-exports.Erc20Icon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '44px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || "0 0 44 44" }),
+exports.Erc20Icon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '44px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || '0 0 44 44' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "307-Send-ERC20-Tokens", transform: "translate(-371.000000, -149.000000)" },
             React.createElement("g", { id: "Modal", transform: "translate(341.000000, 122.000000)" },

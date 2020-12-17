@@ -5,8 +5,8 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 export const BankIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '36px', height: props.height || '36px' } }, props, { viewBox: props.viewBox || '0 0 36 36' }),

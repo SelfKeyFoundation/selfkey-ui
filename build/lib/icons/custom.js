@@ -16,7 +16,7 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({});
-exports.CustomIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '44px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || "0 0 24 24" }),
+exports.CustomIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '44px', height: props.height || '44px' } }, props, { viewBox: props.viewBox || '0 0 24 24' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.3-Navigation-Open---Default-State", transform: "translate(-1063.000000, -337.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "Trade", transform: "translate(1020.000000, 196.000000)" },

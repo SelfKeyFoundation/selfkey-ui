@@ -10,8 +10,8 @@ exports.MuiAddIcon = styles_1.withStyles(styles_1.createStyles({
         height: '20px',
         width: '20px',
         '&:hover': {
-            fill: colors_1.white,
-        },
-    },
+            fill: colors_1.white
+        }
+    }
 }))(icons_1.AddCircleOutlineOutlined);
 //# sourceMappingURL=muiadd.js.map

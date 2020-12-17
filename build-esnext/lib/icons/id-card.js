@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const IdCardIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '41px', height: props.height || '60px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 41 60" }),
+export const IdCardIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '41px',
+        height: props.height || '60px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 41 60' }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { id: "\uD83D\uDCBB-ID-Dashboard", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "403---Identity-Summary", className: "shapeColor", fill: "inherit", transform: "translate(-253.000000, -581.000000)", fillRule: "nonzero" },

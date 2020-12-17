@@ -4,13 +4,13 @@ import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({
     root: {
         '& circle': {
-            stroke: '#1D505F',
+            stroke: '#1D505F'
         },
         '& circle &:hover & circle': {
-            stroke: '#23E6FE',
+            stroke: '#23E6FE'
         },
         cursor: 'pointer',
-        transition: 'all 0.2s ease-out',
+        transition: 'all 0.2s ease-out'
     }
 });
 export const CloseButtonIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '38px', height: props.height || '38px' } }, props, { viewBox: props.viewBox || '0 0 38 38' }),

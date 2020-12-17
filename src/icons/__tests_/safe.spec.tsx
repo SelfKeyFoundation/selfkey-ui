@@ -5,7 +5,7 @@ import { SafeIcon } from '../safe';
 describe('Safe Icon', () => {
 	it('should show Safe Icon', () => {
 		const component = create(<SafeIcon />);
-		let tree = component.toJSON();
+		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });

@@ -19,11 +19,11 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.IncorporationsRoundedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || "0 0 34 34" }),
+exports.IncorporationsRoundedIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '34px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || '0 0 34 34' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard-incorporations-rounded-icon", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.3-Navigation-Open---Default-State-incorporations-rounded-icon", transform: "translate(-280.000000, -1160.000000)" },
             React.createElement("g", { id: "Col-Left---Marketplace-incorporations-rounded-icon", transform: "translate(250.000000, 925.000000)" },

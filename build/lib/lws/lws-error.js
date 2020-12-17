@@ -14,7 +14,7 @@ var styles = core_1.createStyles({
         '& button': {
             marginTop: '30px',
             fontWeight: 700
-        },
+        }
     },
     supportText: {
         textAlign: 'center',
@@ -32,16 +32,16 @@ var styles = core_1.createStyles({
             fontSize: '16px',
             padding: '25px 0',
             margin: 0,
-            color: '#D97300',
+            color: '#D97300'
         },
         '& h3': {
             fontWeight: 'normal',
             fontSize: '21px',
             padding: '0 0 45px',
             margin: 0,
-            color: '#93B0C1',
-        },
-    },
+            color: '#93B0C1'
+        }
+    }
 });
 exports.LWSError = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, actionButton = _a.actionButton, actionName = _a.actionName, errorName = _a.errorName, actionIcon = _a.actionIcon, supportText = _a.supportText;

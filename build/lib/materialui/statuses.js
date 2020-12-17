@@ -13,7 +13,7 @@ var styles = function (theme) {
             border: "1px solid " + colors_1.success,
             borderRadius: '4px',
             boxSizing: 'border-box',
-            padding: '25px 30px',
+            padding: '25px 30px'
         },
         grow: {
             flexGrow: 1
@@ -33,7 +33,7 @@ var styles = function (theme) {
         statusWrap: {
             width: '100%',
             '& .required': {
-                border: "1px solid " + colors_1.warning,
+                border: "1px solid " + colors_1.warning
             },
             '& .submitted': {
                 border: "1px solid " + colors_1.typography
@@ -50,12 +50,15 @@ var styles = function (theme) {
 };
 exports.StatusInfo = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, status = _a.status, onClick = _a.onClick, handleRefresh = _a.handleRefresh, tooltip = _a.tooltip;
-    var icon, message, statusStyle, button = null;
+    var icon;
+    var message;
+    var statusStyle;
+    var button = null;
     switch (status) {
         case 'Documents Required':
             icon = React.createElement(icons_1.AttributeAlertLargeIcon, { className: classes.statusIcon });
             message = 'Application started. Missing required documents.';
-            button = React.createElement(core_1.Button, { variant: 'contained', size: 'large', onClick: onClick }, "Add Documents");
+            button = (React.createElement(core_1.Button, { variant: "contained", size: "large", onClick: onClick }, "Add Documents"));
             statusStyle = 'required';
             break;
         case 'Documents Submitted':
@@ -76,11 +79,11 @@ exports.StatusInfo = core_1.withStyles(styles)(function (_a) {
     }
     return (React.createElement("div", { className: classes.statusWrap },
         React.createElement(core_1.Grid, { item: true, className: classnames_1.default(classes.defaultStatus, status, statusStyle) },
-            React.createElement(core_1.Grid, { container: true, direction: 'row', justify: 'space-between', alignItems: 'center', wrap: 'nowrap' },
+            React.createElement(core_1.Grid, { container: true, direction: "row", justify: "space-between", alignItems: "center", wrap: "nowrap" },
                 React.createElement(core_1.Grid, { item: true, className: classes.iconContainer }, icon),
                 React.createElement(core_1.Grid, { item: true, className: classes.grow },
-                    React.createElement(core_1.Typography, { variant: 'h2' }, "Status"),
-                    React.createElement(core_1.Typography, { variant: 'subtitle2', color: 'secondary' }, message)),
+                    React.createElement(core_1.Typography, { variant: "h2" }, "Status"),
+                    React.createElement(core_1.Typography, { variant: "subtitle2", color: "secondary" }, message)),
                 React.createElement(core_1.Grid, { item: true }, button ? button : React.createElement("span", null)),
                 React.createElement(core_1.Grid, { item: true, style: { height: '23px' } },
                     React.createElement(tooltip_arrow_1.KeyTooltip, { interactive: true, placement: "top-start", title: React.createElement(React.Fragment, null,

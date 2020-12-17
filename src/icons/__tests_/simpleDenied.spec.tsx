@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import { SimpleDeniedIcon } from '../../icons/simple-denied';
 
 describe('Simple Denied', () => {
-  it('should show Simple Denied', () => {
-    const component = create(
-      <SimpleDeniedIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Simple Denied', () => {
+		const component = create(<SimpleDeniedIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

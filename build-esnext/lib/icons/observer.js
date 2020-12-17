@@ -6,11 +6,11 @@ const styles = createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-export const ObserverIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '30px', height: props.height || '30px' } }, props, { viewBox: props.viewBox || "0 0 30 30" }),
+export const ObserverIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '30px', height: props.height || '30px' } }, props, { viewBox: props.viewBox || '0 0 30 30' }),
     React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-observer", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "802.1---observer", transform: "translate(-128.000000, -358.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "LLC-observer", transform: "translate(102.000000, 82.000000)" },

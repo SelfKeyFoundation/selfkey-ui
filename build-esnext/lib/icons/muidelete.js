@@ -6,8 +6,8 @@ const styles = createStyles({
     root: {
         fill: grey,
         '&:hover': {
-            fill: white,
-        },
+            fill: white
+        }
     }
 });
 export const MuiDeleteIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),

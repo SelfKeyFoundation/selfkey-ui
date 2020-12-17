@@ -28,12 +28,12 @@ var styles = core_1.createStyles({
     requiredInfo: {
         '& a': {
             color: '#23E6FE',
-            textDecoration: 'none',
+            textDecoration: 'none'
         },
         '& a &:hover': {
-            textDecoration: 'underline',
+            textDecoration: 'underline'
         },
-        fontFamily: 'Lato, arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif'
     },
     areaTitle: {
         textAlign: 'center',
@@ -44,8 +44,8 @@ var styles = core_1.createStyles({
             margin: '0',
             lineHeight: '22px',
             textAlign: 'left',
-            color: '#FFF',
-        },
+            color: '#FFF'
+        }
     },
     attribute: {
         display: 'flex',
@@ -53,28 +53,28 @@ var styles = core_1.createStyles({
         padding: '0 0 30px',
         color: '#FFF',
         '& svg': {
-            flex: '20px',
+            flex: '20px'
         },
         '& dl': {
             display: 'flex',
             justifyContent: 'space-between',
             width: '100%',
-            margin: '0 0 0 15px',
+            margin: '0 0 0 15px'
         },
         '& dl & dd': {
             color: '#93B0C1',
             textAlign: 'right',
-            wordBreak: 'break-word',
-        },
+            wordBreak: 'break-word'
+        }
     },
     clickable: {
-        cursor: 'pointer',
+        cursor: 'pointer'
     },
     waringMessage: {
         color: '#FFA700',
         fontSize: '13px',
         marginTop: '-20px',
-        padding: '0 0 20px 35px',
+        padding: '0 0 20px 35px'
     },
     formSubmitColumn: {
         flexDirection: 'row',
@@ -83,8 +83,8 @@ var styles = core_1.createStyles({
         '& button': {
             maxWidth: '215px',
             marginTop: '0px',
-            fontWeight: 700,
-        },
+            fontWeight: 700
+        }
     },
     tocMessage: {
         background: '#293743',
@@ -94,7 +94,7 @@ var styles = core_1.createStyles({
         fontStyle: 'italic',
         fontFamily: 'Lato, arial, sans-serif',
         margin: '30px 0 45px',
-        color: '#FFF',
+        color: '#FFF'
     },
     edit: {
         background: 'none',
@@ -102,8 +102,8 @@ var styles = core_1.createStyles({
         cursor: 'pointer',
         margin: 0,
         outline: 'none',
-        padding: 0,
-    },
+        padding: 0
+    }
 });
 var getAttributeValue = function (attribute) {
     if (!attribute.value) {
@@ -151,7 +151,11 @@ var renderAttributes = function (requested, attributes, notAllowedAttributes, cl
     });
 };
 exports.LWSRequiredInfo = core_1.withStyles(styles)(function (_a) {
-    var classes = _a.classes, allowAction = _a.allowAction, requested = _a.requested, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, _b = _a.notAllowedAttributes, notAllowedAttributes = _b === void 0 ? [] : _b, website = _a.website, _c = _a.disallowAttributeAction, disallowAttributeAction = _c === void 0 ? function (attribute, disallow) { } : _c;
+    var classes = _a.classes, allowAction = _a.allowAction, requested = _a.requested, cancelAction = _a.cancelAction, editAction = _a.editAction, attributes = _a.attributes, _b = _a.notAllowedAttributes, notAllowedAttributes = _b === void 0 ? [] : _b, website = _a.website, 
+    // tslint:disable-next-line:no-empty
+    _c = _a.disallowAttributeAction, 
+    // tslint:disable-next-line:no-empty
+    disallowAttributeAction = _c === void 0 ? function (attribute, disallow) { } : _c;
     return (React.createElement("div", { className: classes.requiredInfo },
         React.createElement("div", { className: classes.areaTitle },
             React.createElement("h4", null,

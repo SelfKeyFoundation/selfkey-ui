@@ -16,7 +16,9 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
         <span
           className="TransactionFeeBoxComponent-networkTransactionFeeTitle-2 feeTitle"
         >
-           Network Transaction Fee: 
+           
+          Network Transaction Fee:
+           
         </span>
       </div>
       <div
@@ -147,7 +149,8 @@ exports[`Transaction Fee Box should show Transaction Advanced Fee Box screen 1`]
         <span
           className="TransactionFeeBoxComponent-currNetworkStatusTitle-17"
         >
-          Current Network Status: 
+          Current Network Status:
+           
         </span>
         <svg
           aria-hidden="true"
@@ -200,7 +203,9 @@ exports[`Transaction Fee Box should show Transaction Fee Box screen 1`] = `
         <span
           className="TransactionFeeBoxComponent-networkTransactionFeeTitle-2 feeTitle"
         >
-           Network Transaction Fee: 
+           
+          Network Transaction Fee:
+           
         </span>
       </div>
       <div

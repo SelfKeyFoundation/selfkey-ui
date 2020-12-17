@@ -7,11 +7,15 @@ describe('LWS Select Wallet', () => {
 		const component = create(
 			<LWSSelectWallet
 				wallets={[
-					{ publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe', unlocked: false, profile: 'local' },
+					{
+						publicKey: '0x4184288c556524df9cb9e58b73265ee66dca4efe',
+						unlocked: false,
+						profile: 'local'
+					}
 				]}
 			/>
 		);
-		let tree = component.toJSON();
+		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });

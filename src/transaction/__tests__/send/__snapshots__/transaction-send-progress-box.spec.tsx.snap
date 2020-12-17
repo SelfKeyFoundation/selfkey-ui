@@ -238,7 +238,9 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
-                   VIEW TRANSACTION 
+                   
+                  VIEW TRANSACTION
+                   
                 </button>
               </div>
               <div
@@ -248,7 +250,9 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
                   className="Component-button2-2"
                   onClick={[Function]}
                 >
-                   COPY TRANSACTION ID 
+                   
+                  COPY TRANSACTION ID
+                   
                 </button>
               </div>
             </div>
@@ -498,7 +502,9 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
-                   VIEW TRANSACTION 
+                   
+                  VIEW TRANSACTION
+                   
                 </button>
               </div>
               <div
@@ -508,7 +514,9 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
                   className="Component-button2-2"
                   onClick={[Function]}
                 >
-                   COPY TRANSACTION ID 
+                   
+                  COPY TRANSACTION ID
+                   
                 </button>
               </div>
             </div>
@@ -758,7 +766,9 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
-                   VIEW TRANSACTION 
+                   
+                  VIEW TRANSACTION
+                   
                 </button>
               </div>
               <div
@@ -768,7 +778,9 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
                   className="Component-button2-2"
                   onClick={[Function]}
                 >
-                   COPY TRANSACTION ID 
+                   
+                  COPY TRANSACTION ID
+                   
                 </button>
               </div>
             </div>
@@ -1018,7 +1030,9 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
-                   VIEW TRANSACTION 
+                   
+                  VIEW TRANSACTION
+                   
                 </button>
               </div>
               <div
@@ -1028,7 +1042,9 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
                   className="Component-button2-2"
                   onClick={[Function]}
                 >
-                   COPY TRANSACTION ID 
+                   
+                  COPY TRANSACTION ID
+                   
                 </button>
               </div>
             </div>
@@ -1278,7 +1294,9 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
-                   VIEW TRANSACTION 
+                   
+                  VIEW TRANSACTION
+                   
                 </button>
               </div>
               <div
@@ -1288,7 +1306,9 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
                   className="Component-button2-2"
                   onClick={[Function]}
                 >
-                   COPY TRANSACTION ID 
+                   
+                  COPY TRANSACTION ID
+                   
                 </button>
               </div>
             </div>
@@ -1538,7 +1558,9 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
-                   VIEW TRANSACTION 
+                   
+                  VIEW TRANSACTION
+                   
                 </button>
               </div>
               <div
@@ -1548,7 +1570,9 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
                   className="Component-button2-2"
                   onClick={[Function]}
                 >
-                   COPY TRANSACTION ID 
+                   
+                  COPY TRANSACTION ID
+                   
                 </button>
               </div>
             </div>
@@ -1741,7 +1765,9 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                   id="viewTransactionButton"
                   onClick={[Function]}
                 >
-                   VIEW TRANSACTION 
+                   
+                  VIEW TRANSACTION
+                   
                 </button>
               </div>
               <div
@@ -1751,7 +1777,9 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
                   className="Component-button2-2"
                   onClick={[Function]}
                 >
-                   COPY TRANSACTION ID 
+                   
+                  COPY TRANSACTION ID
+                   
                 </button>
               </div>
             </div>

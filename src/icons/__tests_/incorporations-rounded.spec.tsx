@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import IncorporationsRoundedIcon from '../incorporations-rounded';
 
 describe('Incorporations Rounded Icon', () => {
-  it('should show Incorporations Rounded Icon', () => {
-    const component = create(
-      <IncorporationsRoundedIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Incorporations Rounded Icon', () => {
+		const component = create(<IncorporationsRoundedIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

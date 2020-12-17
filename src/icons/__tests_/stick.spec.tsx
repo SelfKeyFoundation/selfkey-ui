@@ -3,16 +3,9 @@ import { create } from 'react-test-renderer';
 import { StickIcon } from '../stick';
 
 describe('Stick  Icon', () => {
-  it('should show Stick Icon', () => {
-    const component = create(
-      <StickIcon/>
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Stick Icon', () => {
+		const component = create(<StickIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });
-
-
-
-
-

@@ -1,4 +1,4 @@
-import { SFC } from "react";
+import { SFC } from 'react';
 export declare type NumberFormatProps = {
     locale: string;
     priceStyle: string;

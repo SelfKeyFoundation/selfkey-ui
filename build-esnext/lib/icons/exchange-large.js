@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const ExchangeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '66px', height: props.height || '66px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 66 66" }),
+export const ExchangeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '66px',
+        height: props.height || '66px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 66 66' }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { transform: "translate(-375 -273)", fill: "inherit", fillRule: "nonzero" },

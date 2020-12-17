@@ -4,8 +4,8 @@ import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({
     root: {
         width: '120px !important',
-        height: '30px !important',
-    },
+        height: '30px !important'
+    }
 });
 export const AnimatedLoadingIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({}, props, { viewBox: "0 0 120 30" }),
     React.createElement("circle", { cx: "15", cy: "15", r: "15" },

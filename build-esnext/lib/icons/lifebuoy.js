@@ -7,11 +7,11 @@ const styles = createStyles({
         fill: '#C5DCE9',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: '#00C0D9',
-        },
+            fill: '#00C0D9'
+        }
     }
 });
-export const LifebuoyIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || "0 0 20 20" }),
+export const LifebuoyIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '20px' } }, props, { viewBox: props.viewBox || '0 0 20 20' }),
     React.createElement("g", { id: "Symbols-web-help", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "Web-Nav", transform: "translate(-1433.000000, -12.000000)", fill: "inherit" },
             React.createElement("g", { id: "menu-items" },

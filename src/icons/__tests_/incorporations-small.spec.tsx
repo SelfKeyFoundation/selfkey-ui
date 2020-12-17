@@ -3,16 +3,9 @@ import { create } from 'react-test-renderer';
 import { IncorporationsSmallIcon } from '../incorporations-small';
 
 describe('Incorporations Small Icon', () => {
-  it('should show Incorporations Small Icon', () => {
-    const component = create(
-      <IncorporationsSmallIcon/>
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Incorporations Small Icon', () => {
+		const component = create(<IncorporationsSmallIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });
-
-
-
-
-

@@ -3,16 +3,9 @@ import { create } from 'react-test-renderer';
 import { MoneyIcon } from '../money';
 
 describe('Money Icon', () => {
-  it('should show Money Icon', () => {
-    const component = create(
-      <MoneyIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Money Icon', () => {
+		const component = create(<MoneyIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });
-
-
-
-
-

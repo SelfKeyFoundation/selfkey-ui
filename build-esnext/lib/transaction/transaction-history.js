@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Grid, withStyles, createStyles } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import CommonStyle from '../common/common-style';
 import FailedIcon from '../icons/failed';
 import ReceiveIcon from '../icons/receive';
@@ -12,16 +13,16 @@ const styles = createStyles({
     line: {
         height: '1px',
         transform: 'scaleY(-1)',
-        backgroundColor: '#475768',
+        backgroundColor: '#475768'
     },
     flex: {
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     row: {
         paddingTop: '32px',
         paddingBottom: '24px',
-        fontFamily: CommonStyle.fontFamily,
+        fontFamily: CommonStyle.fontFamily
     },
     date: {
         color: '#93B0C1',
@@ -30,7 +31,7 @@ const styles = createStyles({
         paddingLeft: '17px',
         paddingRight: '40px',
         boxSizing: 'border-box',
-        minWidth: '220px',
+        minWidth: '220px'
     },
     icon: {
         minWidth: '32px',
@@ -40,37 +41,37 @@ const styles = createStyles({
     status: {
         color: '#FFFFFF',
         fontSize: '15px',
-        lineHeight: '18px',
+        lineHeight: '18px'
     },
     cryptoCurrency: {
         color: '#FFFFFF',
         fontSize: '15px',
         fontWeight: 600,
-        lineHeight: '18px',
+        lineHeight: '18px'
     },
     value: {
         color: '#FFFFFF',
         fontSize: '15px',
         lineHeight: '18px',
-        textAlign: 'right',
+        textAlign: 'right'
     },
     actionTitle: {
         color: '#93B0C1',
         fontSize: '14px',
         lineHeight: '17px',
-        paddingLeft: '14px',
+        paddingLeft: '14px'
     },
     viewActionContainer: {
         paddingLeft: '20px',
         cursor: 'pointer',
-        display: 'flex',
+        display: 'flex'
     },
     copyActionContainer: {
         width: '65px',
         paddingLeft: '99px',
         cursor: 'pointer',
-        display: 'flex',
-    },
+        display: 'flex'
+    }
 });
 export class TransactionHistoryComponent extends React.Component {
     constructor(props) {
@@ -78,7 +79,7 @@ export class TransactionHistoryComponent extends React.Component {
         this.copyText = 'Copy';
         this.copiedText = 'Copied';
         this.state = {
-            currentCopyValues: [],
+            currentCopyValues: []
         };
     }
     handleLinkClick(event, externalLink) {
@@ -118,8 +119,8 @@ export class TransactionHistoryComponent extends React.Component {
         };
     }
     renderRow(item, index) {
-        let { classes } = this.props;
-        let { currentCopyValues } = this.state;
+        const { classes } = this.props;
+        const { currentCopyValues } = this.state;
         return (React.createElement("div", { key: index },
             React.createElement(Grid, { container: true, className: classes.row, direction: "row", justify: "space-between", alignItems: "center" },
                 React.createElement("div", { className: classes.flex },
@@ -147,9 +148,8 @@ export class TransactionHistoryComponent extends React.Component {
             React.createElement("div", { className: classes.line }, " ")));
     }
     render() {
-        let { classes, list } = this.props;
-        list = list || [];
-        let txRows = list.map(this.renderRow.bind(this));
+        const { classes, list = [] } = this.props;
+        const txRows = list.map(this.renderRow.bind(this));
         return (React.createElement(Grid, null,
             list.length ? React.createElement("div", { className: classes.line }, " ") : '',
             txRows));

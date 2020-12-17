@@ -5,11 +5,11 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-export const LoanIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '36px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || "0 0 36 34" }),
+export const LoanIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '36px', height: props.height || '34px' } }, props, { viewBox: props.viewBox || '0 0 36 34' }),
     React.createElement("g", { id: "\uD83D\uDCB9-Marketplace", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "760---Loans-Marketplace---Lending", transform: "translate(-151.000000, -153.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "Title", transform: "translate(151.000000, 153.000000)" },

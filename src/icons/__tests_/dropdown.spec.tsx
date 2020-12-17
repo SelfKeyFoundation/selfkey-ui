@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import DropdownIcon from '../dropdown';
 
 describe('Dropdown Icon', () => {
-  it('should show Dropdown Icon', () => {
-    const component = create(
-      <DropdownIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Dropdown Icon', () => {
+		const component = create(<DropdownIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

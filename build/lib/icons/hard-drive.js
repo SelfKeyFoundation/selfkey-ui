@@ -20,7 +20,7 @@ var styles = core_1.createStyles({
     root: {
         fill: colors_1.white,
         '&:hover': {
-            fill: colors_1.primary,
+            fill: colors_1.primary
         }
     }
 });

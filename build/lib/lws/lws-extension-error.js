@@ -42,7 +42,7 @@ var styles = core_1.createStyles({
             margin: 0,
             color: '#93B0C1'
         }
-    },
+    }
 });
 exports.LWSExtensionError = core_1.withStyles(styles)(function (_a) {
     var classes = _a.classes, children = _a.children, installExtensionAction = _a.installExtensionAction;

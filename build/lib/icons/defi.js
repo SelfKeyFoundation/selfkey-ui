@@ -19,11 +19,11 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.DefiIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '32px', height: props.height || '40px' } }, props, { viewBox: props.viewBox || "0 0 32 40" }),
+exports.DefiIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '32px', height: props.height || '40px' } }, props, { viewBox: props.viewBox || '0 0 32 40' }),
     React.createElement("g", { id: "\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80-ID-Dashboard-with-Credentials", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "500.4---SelfKey-Marketplace-Credentials", transform: "translate(-156.000000, -149.000000)", fill: "#00C0D9", fillRule: "nonzero" },
             React.createElement("g", { id: "Agreement-595b40b65ba036ed117d0761", transform: "translate(156.000000, 149.000000)" },

@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import HourGlassSmallIcon from '../hourglass-small';
 
 describe('HourGlass Small Icon', () => {
-  it('should show HourGlass Small Icon', () => {
-    const component = create(
-      <HourGlassSmallIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show HourGlass Small Icon', () => {
+		const component = create(<HourGlassSmallIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

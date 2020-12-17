@@ -22,7 +22,7 @@ exports[`Metals Icon should show Metals Icon 1`] = `
   >
     <g
       fill="inherit"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="5000---Web-Marketplace"
       transform="translate(-650.000000, -1165.000000)"
     >

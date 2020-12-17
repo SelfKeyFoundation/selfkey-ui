@@ -5,7 +5,7 @@ import { CheckEmptyIcon } from '../check-empty';
 describe('Check Empty Icon', () => {
 	it('should show CheckEmpty Icon', () => {
 		const component = create(<CheckEmptyIcon />);
-		let tree = component.toJSON();
+		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });

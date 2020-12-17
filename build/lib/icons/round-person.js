@@ -16,7 +16,7 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({});
-exports.RoundPerson = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '40px', height: props.height || '40px' } }, props, { viewBox: props.viewBox || "0 0 40 40" }),
+exports.RoundPerson = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '40px', height: props.height || '40px' } }, props, { viewBox: props.viewBox || '0 0 40 40' }),
     React.createElement("g", { id: "Symbols-round-person", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.5-Navigation-open--switch-profile", transform: "translate(-1190.000000, -75.000000)" },
             React.createElement("g", { id: "Top-Nav-Dropdown-rp", transform: "translate(1182.000000, 64.000000)" },

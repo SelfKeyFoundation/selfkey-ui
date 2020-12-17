@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import MyCryptoLargeIcon from '../my-crypto-large';
 
 describe('My Crypto Large Icon', () => {
-  it('should show My Crypto Large Icon', () => {
-    const component = create(
-      <MyCryptoLargeIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show My Crypto Large Icon', () => {
+		const component = create(<MyCryptoLargeIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

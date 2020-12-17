@@ -19,11 +19,11 @@ var styles = core_1.createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-exports.FilterIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '26px', height: props.height || '26px' } }, props, { viewBox: props.viewBox || "0 0 26 26" }),
+exports.FilterIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({ style: { width: props.width || '26px', height: props.height || '26px' } }, props, { viewBox: props.viewBox || '0 0 26 26' }),
     React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "300.7-dashboard-alternate1---full-state", transform: "translate(-1295.000000, -472.000000)", fill: "#93B0C1" },
             React.createElement("g", { id: "Transactions", transform: "translate(1020.000000, 447.000000)" },

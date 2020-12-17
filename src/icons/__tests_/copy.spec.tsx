@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import CopyIcon from '../copy';
 
 describe('Copy Icon', () => {
-  it('should show Copy Icon', () => {
-    const component = create(
-      <CopyIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Copy Icon', () => {
+		const component = create(<CopyIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

@@ -1,24 +1,23 @@
-/// <reference path="../../../../src/react-jss.d.ts" />
 import * as React from 'react';
-import { StyleSheet, WithStyles } from 'react-jss';
-declare const styles: StyleSheet;
+import { WithStyles } from '@material-ui/styles';
+declare const styles: Record<"flex" | "row" | "icon" | "line" | "date" | "cryptoCurrency" | "value" | "status" | "actionTitle" | "viewActionContainer" | "copyActionContainer", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type TransactionHistoryProps = {
-    list: Array<TxHistoryItem>;
-    openLink?: ((link: string) => void);
+    list: TxHistoryItem[];
+    openLink?: (link: string) => void;
 };
 export declare type StatusIconName = 'failed' | 'receive' | 'hourglass' | 'sent';
 export declare type TxHistoryItem = {
     statusText: string;
-    date: String;
+    date: string;
     cryptoCurrency: string;
-    value: String;
-    externalLink: String;
+    value: string;
+    externalLink: string;
     statusIconName: StatusIconName;
 };
-export declare type TransactionHistoryState = {
-    currentCopyValues: Array<string>;
+declare type TransactionHistoryState = {
+    currentCopyValues: string[];
 };
-export declare type StyledProps = WithStyles<keyof typeof styles> & TransactionHistoryProps;
+declare type StyledProps = WithStyles<typeof styles> & TransactionHistoryProps;
 export declare class TransactionHistoryComponent extends React.Component<StyledProps, TransactionHistoryState> {
     copyText: string;
     copiedText: string;
@@ -30,5 +29,5 @@ export declare class TransactionHistoryComponent extends React.Component<StyledP
     renderRow(item: TxHistoryItem, index: number): JSX.Element;
     render(): JSX.Element;
 }
-export declare const TransactionHistory: React.ComponentType<TransactionHistoryProps & import("react-jss").StyledComponentProps<string>>;
+export declare const TransactionHistory: React.ComponentType<Pick<StyledProps, "list" | "openLink"> & import("@material-ui/styles").StyledComponentProps<"flex" | "row" | "icon" | "line" | "date" | "cryptoCurrency" | "value" | "status" | "actionTitle" | "viewActionContainer" | "copyActionContainer">>;
 export {};

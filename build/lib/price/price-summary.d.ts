@@ -1,7 +1,7 @@
 import * as React from 'react';
 export declare type PriceSummaryProps = {
     className?: string;
-    justify?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | undefined;
+    justify?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | undefined;
     currencyClass?: string;
     valueClass?: string;
     locale: string;

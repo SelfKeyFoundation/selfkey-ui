@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import PendingRoundedIcon from '../pending-rounded';
 
 describe('Pending Rounded Icon', () => {
-  it('should show Pending Rounded Icon', () => {
-    const component = create(
-      <PendingRoundedIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Pending Rounded Icon', () => {
+		const component = create(<PendingRoundedIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

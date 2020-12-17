@@ -3,7 +3,7 @@ import { withStyles, createStyles } from '@material-ui/core';
 import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({});
 export const HourGlassSmallIcon = withStyles(styles)((props) => {
-    let fill = props.fill || '#697C95';
+    const fill = props.fill || '#697C95';
     return (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '26px' } }, props, { viewBox: props.viewBox || '0 0 20 26' }),
         React.createElement("defs", null),
         React.createElement("g", { id: "\uD83D\uDDA5-Main-Dashboard", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },

@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -16,28 +16,29 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TransactionFeeSliderSelector = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var common_style_1 = require("../common/common-style");
 var bignumber_js_1 = require("bignumber.js");
-var styles = core_1.createStyles({
+var styles = styles_1.createStyles({
     root: {
         width: '100%',
         color: '#93B0C1',
-        fontFamily: common_style_1.default.fontFamily,
+        fontFamily: common_style_1.default.fontFamily
     },
     sliderRoot: {
-        padding: '22px 0 12px 0',
+        padding: '22px 0 12px 0'
     },
     trackAfter: {
         borderRadius: '6px;',
         height: '10px',
         opacity: 1,
-        backgroundColor: '#313D49',
+        backgroundColor: '#313D49'
     },
     trackBefore: {
         borderRadius: '6px;',
         height: '10px',
         opacity: 1,
-        backgroundColor: '#00C0D9',
+        backgroundColor: '#00C0D9'
     },
     thumb: {
         height: '18px',
@@ -45,8 +46,8 @@ var styles = core_1.createStyles({
         backgroundColor: '#23E6FE',
         '&$activated': {
             height: '22px',
-            width: '22px',
-        },
+            width: '22px'
+        }
     },
     activated: {},
     sliderLabels: {
@@ -56,7 +57,7 @@ var styles = core_1.createStyles({
         lineHeight: '19px',
         width: '100%',
         '&>span': {
-            fontSize: '16px',
+            fontSize: '16px'
         },
         '& p': {
             marginBottom: '5px'
@@ -66,11 +67,11 @@ var styles = core_1.createStyles({
         }
     },
     networkFeeValue: {
-        color: '#ffffff',
+        color: '#ffffff'
     },
     rightAligned: {
         textAlign: 'right'
-    },
+    }
 });
 var WEI = new bignumber_js_1.default('1000000000000000000');
 var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
@@ -112,7 +113,7 @@ var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
     });
     Object.defineProperty(TransactionFeeSliderSelectorComponent.prototype, "value", {
         get: function () {
-            return this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice;
+            return (this.props.value || this.state.value || this.props.defaultValue || this.avarageGasPrice);
         },
         enumerable: false,
         configurable: true
@@ -148,7 +149,8 @@ var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
                     root: classes.sliderRoot,
                     // trackBefore: classes.trackBefore,
                     // trackAfter: classes.trackAfter,
-                    thumb: classes.thumb,
+                    thumb: classes.thumb
+                    // activated: classes.activated,
                 } }),
             React.createElement("div", { className: classes.sliderLabels },
                 React.createElement("div", null,
@@ -166,6 +168,6 @@ var TransactionFeeSliderSelectorComponent = /** @class */ (function (_super) {
     };
     return TransactionFeeSliderSelectorComponent;
 }(React.Component));
-exports.TransactionFeeSliderSelector = core_1.withStyles(styles)(TransactionFeeSliderSelectorComponent);
+exports.TransactionFeeSliderSelector = styles_1.withStyles(styles)(TransactionFeeSliderSelectorComponent);
 exports.default = exports.TransactionFeeSliderSelector;
 //# sourceMappingURL=transaction-fee-slider-selector.js.map

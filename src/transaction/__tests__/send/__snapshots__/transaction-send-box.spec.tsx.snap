@@ -118,7 +118,9 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
               id="allAmountButton"
               onClick={[Function]}
             >
-               ALL 
+               
+              ALL
+               
             </button>
           </div>
           <div
@@ -216,7 +218,9 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             <span
               className="TransactionFeeBoxComponent-networkTransactionFeeTitle-23 feeTitle"
             >
-               Network Transaction Fee: 
+               
+              Network Transaction Fee:
+               
             </span>
           </div>
           <div
@@ -299,7 +303,9 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
         <button
           className="TransactionSendBoxComponent-button-2"
         >
-           CONFIRM 
+           
+          CONFIRM
+           
         </button>
       </div>
       <div
@@ -308,7 +314,9 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
         <button
           className="TransactionSendBoxComponent-button-2"
         >
-           CANCEL 
+           
+          CANCEL
+           
         </button>
       </div>
     </div>

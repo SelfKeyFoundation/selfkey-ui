@@ -1,273 +1,320 @@
 import * as React from 'react';
-import { Grid, WithStyles, withStyles, createStyles } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { WithStyles, withStyles, createStyles } from '@material-ui/styles';
 import { ActualTransactionFeeBox } from './actual-transaction-fee-box';
 import CommonStyle from '../../../common/common-style';
 import { Loop as LoopIcon } from '@material-ui/icons';
 
 export const styles = createStyles({
-    container: {
-        fontFamily: CommonStyle.fontFamily
-    },
-    networkTransactionFeeTitle: {
-        color: '#93B0C1',
-        fontSize: '16px',
-        paddingRight: '5px'
-    },
-    showAdvancedContainer: {
-        color: '#00C0D9',
-        cursor: 'pointer',
-        fontSize: '14px',
-        minWidth: '85px',
-        textAlign: 'right'
-    },
-    icon: {
-        border: 'solid #00C0D9',
-        borderWidth: '0 2px 2px 0',
-        display: 'inline-block',
-        padding: '4px',
-        marginLeft: '5px',
-    },
-    rightIcon: {
-        transform: 'rotate(-45deg)'
-    },
-    downIcon: {
-        transform: 'rotate(45deg)'
-    },
-    inputsContainer: {
-        paddingTop: '52px'
-    },
-    formGroup: {
-        display: 'flex',
-        flexDirection: 'column',
-        '&& label': {
-            fontSize: '12px',
-            fontWeight: 600,
-            marginBottom: '10px',
-            lineHeight: '15px',
-            color: '#93A4AF'
-        }
-    },
-    fullWidth: {
-        width: '100%',
-    },
-    checkbox: {
-        color: '#FFFFFF', fontSize: '14px', lineHeight: '14px'
-    },
-    checkboxRoot: {
-        color: '#00C0D9',
-        '&$checked': {
-            color: '#00C0D9 !important'
-        }
-    },
-    checkboxChecked: {
-        color: '#00C0D9 !important',
-    },
+	container: {
+		fontFamily: CommonStyle.fontFamily
+	},
+	networkTransactionFeeTitle: {
+		color: '#93B0C1',
+		fontSize: '16px',
+		paddingRight: '5px'
+	},
+	showAdvancedContainer: {
+		color: '#00C0D9',
+		cursor: 'pointer',
+		fontSize: '14px',
+		minWidth: '85px',
+		textAlign: 'right'
+	},
+	icon: {
+		border: 'solid #00C0D9',
+		borderWidth: '0 2px 2px 0',
+		display: 'inline-block',
+		padding: '4px',
+		marginLeft: '5px'
+	},
+	rightIcon: {
+		transform: 'rotate(-45deg)'
+	},
+	downIcon: {
+		transform: 'rotate(45deg)'
+	},
+	inputsContainer: {
+		paddingTop: '52px'
+	},
+	formGroup: {
+		display: 'flex',
+		flexDirection: 'column',
+		'&& label': {
+			fontSize: '12px',
+			fontWeight: 600,
+			marginBottom: '10px',
+			lineHeight: '15px',
+			color: '#93A4AF'
+		}
+	},
+	fullWidth: {
+		width: '100%'
+	},
+	checkbox: {
+		color: '#FFFFFF',
+		fontSize: '14px',
+		lineHeight: '14px'
+	},
+	checkboxRoot: {
+		color: '#00C0D9',
+		'&$checked': {
+			color: '#00C0D9 !important'
+		}
+	},
+	checkboxChecked: {
+		color: '#00C0D9 !important'
+	},
 
-    checkboxLabel: {
-        color: '#FFFFFF',
-        fontSize: '14px',
-        lineHeight: '14px'
-    },
-    nonceValue: {
-        color: '#FFFFFF',
-        fontSize: '14px',
-        lineHeight: '14px'
-    },
-    formControl: {
-        paddingLeft: '12px',
-        boxSizing: 'border-box',
-        height: '46px',
-        width: '178px',
-        border: '1px solid #384656',
-        borderRadius: '4px',
-        backgroundColor: '#1E262E',
-        boxShadow: 'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)',
-        color: '#FFFFFF', fontSize: '14px', lineHeight: '14px',
-        '&:focus': {
-            outline: 'none',
-            boxShadow: '0 0 5px rgba(81, 203, 238, 1)'
-        }
-    },
-    currNetworkStatusContainer: {
-        display: 'flex',
-        paddingTop: '9px'
-    },
-    currNetworkStatusTitle: {
-        color: '#93B0C1',
-        fontSize: '13px',
-        lineHeight: '19px',
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column'
-    },
-    reloadNetworkIcon: {
-        color: '#93B0C1',
-        cursor: 'pointer'
-    },
-    gasPriceValuesContainer: {
-        paddingTop: '15px;',
-        '&& p': {
-            color: '#FFFFFF',
-            fontSize: '14px',
-            lineHeight: '26px',
-            margin: 0
-        }
-    }
+	checkboxLabel: {
+		color: '#FFFFFF',
+		fontSize: '14px',
+		lineHeight: '14px'
+	},
+	nonceValue: {
+		color: '#FFFFFF',
+		fontSize: '14px',
+		lineHeight: '14px'
+	},
+	formControl: {
+		paddingLeft: '12px',
+		boxSizing: 'border-box',
+		height: '46px',
+		width: '178px',
+		border: '1px solid #384656',
+		borderRadius: '4px',
+		backgroundColor: '#1E262E',
+		boxShadow:
+			'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)',
+		color: '#FFFFFF',
+		fontSize: '14px',
+		lineHeight: '14px',
+		'&:focus': {
+			outline: 'none',
+			boxShadow: '0 0 5px rgba(81, 203, 238, 1)'
+		}
+	},
+	currNetworkStatusContainer: {
+		display: 'flex',
+		paddingTop: '9px'
+	},
+	currNetworkStatusTitle: {
+		color: '#93B0C1',
+		fontSize: '13px',
+		lineHeight: '19px',
+		display: 'flex',
+		justifyContent: 'center',
+		flexDirection: 'column'
+	},
+	reloadNetworkIcon: {
+		color: '#93B0C1',
+		cursor: 'pointer'
+	},
+	gasPriceValuesContainer: {
+		paddingTop: '15px;',
+		'&& p': {
+			color: '#FFFFFF',
+			fontSize: '14px',
+			lineHeight: '26px',
+			margin: 0
+		}
+	}
 });
 
 export type EthGasStationInfo = {
-    safeLow: string,
-    average: string,
-    fast: string
+	safeLow: string;
+	average: string;
+	fast: string;
 };
 
 export type TransactionFeeBoxProps = {
-    locale: string,
-    fiatCurrency: string,
-    ethFee: number,
-    usdFee: number,
-    gasLimit: number,
-    gasPrice: number
-    nonce: number,
-    showAdvanced?: boolean,
-    ethGasStationInfo: EthGasStationInfo,
-    reloadEthGasStationInfoAction?: ((event: React.MouseEvent<SVGSVGElement>) => void)
-    changeGasLimitAction?: Function,
-    changeGasPriceAction?: Function
-}
+	locale: string;
+	fiatCurrency: string;
+	ethFee: number;
+	usdFee: number;
+	gasLimit: number;
+	gasPrice: number;
+	nonce: number;
+	showAdvanced?: boolean;
+	ethGasStationInfo: EthGasStationInfo;
+	reloadEthGasStationInfoAction?: (event: React.MouseEvent<SVGSVGElement>) => void;
+	changeGasLimitAction?: Function;
+	changeGasPriceAction?: Function;
+};
 
 export type TransactionFeeBoxState = {
-    showAdvanced: boolean
-    gasLimit: number,
-    gasPrice: number
+	showAdvanced: boolean;
+	gasLimit: number;
+	gasPrice: number;
 };
 
 export type StyledProps = WithStyles<typeof styles> & TransactionFeeBoxProps;
 
-export class TransactionFeeBoxComponent extends React.Component<StyledProps, TransactionFeeBoxState> {
-    timerToUpdateGasPrice = 0;
-    timerToUpdateGasLimit = 0;
+export class TransactionFeeBoxComponent extends React.Component<
+	StyledProps,
+	TransactionFeeBoxState
+> {
+	timerToUpdateGasPrice = 0;
+	timerToUpdateGasLimit = 0;
 
-    TIME_FOR_INPUT_CHANGE = 1000;
+	TIME_FOR_INPUT_CHANGE = 1000;
 
-    constructor(props: StyledProps) {
-        super(props);
+	constructor(props: StyledProps) {
+		super(props);
 
-        this.state = {
-            showAdvanced: props.showAdvanced || false,
-            gasLimit: props.gasLimit,
-            gasPrice: props.gasPrice
-        }
-    }
+		this.state = {
+			showAdvanced: props.showAdvanced || false,
+			gasLimit: props.gasLimit,
+			gasPrice: props.gasPrice
+		};
+	}
 
-    componentDidUpdate(prevProps: StyledProps) {
-        if(prevProps.gasLimit !== this.props.gasLimit || prevProps.gasPrice !== this.props.gasPrice) {
-            this.setState({ ...this.state, gasLimit: this.props.gasLimit, gasPrice: this.props.gasPrice });
-        }
-    }
+	componentDidUpdate(prevProps: StyledProps) {
+		if (
+			prevProps.gasLimit !== this.props.gasLimit ||
+			prevProps.gasPrice !== this.props.gasPrice
+		) {
+			this.setState({
+				...this.state,
+				gasLimit: this.props.gasLimit,
+				gasPrice: this.props.gasPrice
+			});
+		}
+	}
 
-    renderActualTransactionFeeBox() {
-        return (
-            <ActualTransactionFeeBox {...this.props}/>
-        );
-    }
+	renderActualTransactionFeeBox() {
+		return <ActualTransactionFeeBox {...this.props} />;
+	}
 
-    toggleShowAdvanced() {
-        const { showAdvanced } = this.state;
-        this.setState({ ...this.state, showAdvanced: !showAdvanced });
-    }
+	toggleShowAdvanced() {
+		const { showAdvanced } = this.state;
+		this.setState({ ...this.state, showAdvanced: !showAdvanced });
+	}
 
-    setGasLimit(event: React.ChangeEvent<HTMLInputElement>) {
-        const value = event.target.value;
-        if(this.timerToUpdateGasLimit) clearTimeout(this.timerToUpdateGasLimit);
-        this.setState({ ...this.state, gasLimit: Number(value) });
+	setGasLimit(event: React.ChangeEvent<HTMLInputElement>) {
+		const value = event.target.value;
+		if (this.timerToUpdateGasLimit) clearTimeout(this.timerToUpdateGasLimit);
+		this.setState({ ...this.state, gasLimit: Number(value) });
 
-        this.timerToUpdateGasLimit = window.setTimeout(()=>{
-            if(this.props.changeGasLimitAction) {
-                this.props.changeGasLimitAction(value);
-            }
-        }, this.TIME_FOR_INPUT_CHANGE);
+		this.timerToUpdateGasLimit = window.setTimeout(() => {
+			if (this.props.changeGasLimitAction) {
+				this.props.changeGasLimitAction(value);
+			}
+		}, this.TIME_FOR_INPUT_CHANGE);
+	}
 
-    }
+	setGasPrice(event: React.ChangeEvent<HTMLInputElement>) {
+		const value = event.target.value;
+		if (this.timerToUpdateGasPrice) clearTimeout(this.timerToUpdateGasPrice);
+		this.setState({ ...this.state, gasPrice: Number(value) });
 
-    setGasPrice(event: React.ChangeEvent<HTMLInputElement>) {
-        const value = event.target.value;
-        if(this.timerToUpdateGasPrice) clearTimeout(this.timerToUpdateGasPrice);
-        this.setState({ ...this.state, gasPrice: Number(value) });
+		this.timerToUpdateGasPrice = window.setTimeout(() => {
+			if (this.props.changeGasPriceAction) {
+				this.props.changeGasPriceAction(value);
+			}
+		}, this.TIME_FOR_INPUT_CHANGE);
+	}
 
-        this.timerToUpdateGasPrice = window.setTimeout(()=>{
-            if(this.props.changeGasPriceAction) {
-                this.props.changeGasPriceAction(value);
-            }
-        }, this.TIME_FOR_INPUT_CHANGE);
-    }
+	renderAdvancedContent() {
+		const { classes, ethGasStationInfo, reloadEthGasStationInfoAction, nonce } = this.props;
+		return (
+			<div className={classes.fullWidth}>
+				<Grid
+					container
+					className={classes.inputsContainer}
+					direction="row"
+					justify="space-between"
+					alignItems="flex-start"
+				>
+					<div className={classes.formGroup}>
+						<label>Gas Price (Gwei)</label>
+						<input
+							type="text"
+							className={classes.formControl}
+							value={this.state.gasPrice}
+							onChange={e => this.setGasPrice(e)}
+						/>
+					</div>
 
-    renderAdvancedContent() {
-        const { classes, ethGasStationInfo, reloadEthGasStationInfoAction, nonce } = this.props;
-        return (
-            <div className={classes.fullWidth}>
-                <Grid container className={classes.inputsContainer} direction="row" justify="space-between" alignItems="flex-start">
-                    <div className={classes.formGroup}>
-                        <label>Gas Price (Gwei)</label>
-                        <input type="text" className={classes.formControl} value={this.state.gasPrice} onChange={(e) => this.setGasPrice(e)} />
-                    </div>
+					<div>
+						<div className={classes.formGroup}>
+							<label>Gas Limit</label>
+							<input
+								type="text"
+								value={this.state.gasLimit}
+								onChange={e => this.setGasLimit(e)}
+								className={classes.formControl}
+							/>
+						</div>
+					</div>
+					<div className={classes.formGroup}>
+						<label>Nonce</label>
+						<span className={classes.nonceValue}> {nonce} </span>
+					</div>
+				</Grid>
 
-                    <div>
-                        <div className={classes.formGroup}>
-                            <label>Gas Limit</label>
-                            <input type="text" value={this.state.gasLimit} onChange={(e) => this.setGasLimit(e)} className={classes.formControl} />
-                        </div>
-                    </div>
-                    <div className={classes.formGroup}>
-                        <label>Nonce</label>
-                        <span className={classes.nonceValue}> {nonce} </span>
-                    </div>
-                </Grid>
+				<Grid container direction="column" justify="center" alignItems="center">
+					<div className={classes.currNetworkStatusContainer}>
+						<span className={classes.currNetworkStatusTitle}>
+							Current Network Status:{' '}
+						</span>
+						<LoopIcon
+							onClick={reloadEthGasStationInfoAction}
+							classes={{
+								root: classes.reloadNetworkIcon
+							}}
+						>
+							{' '}
+						</LoopIcon>
+					</div>
+					<div className={classes.gasPriceValuesContainer}>
+						<p> Under 30 Mins: {ethGasStationInfo.safeLow} Gwei </p>
+						<p> Under 5 Mins: {ethGasStationInfo.average} Gwei </p>
+						<p> Under 2 Mins: {ethGasStationInfo.fast} Gwei </p>
+					</div>
+				</Grid>
+			</div>
+		);
+	}
 
-                <Grid container direction="column" justify="center" alignItems="center">
-                    <div className={classes.currNetworkStatusContainer}>
-                        <span className={classes.currNetworkStatusTitle}>Current Network Status: </span>
-                        <LoopIcon onClick={reloadEthGasStationInfoAction} classes={{
-                            root: classes.reloadNetworkIcon
-                        }}> </LoopIcon>
-                    </div>
-                    <div className={classes.gasPriceValuesContainer}>
-                        <p> Under 30 Mins: {ethGasStationInfo.safeLow} Gwei </p>
-                        <p> Under 5 Mins: {ethGasStationInfo.average} Gwei </p>
-                        <p> Under 2 Mins: {ethGasStationInfo.fast} Gwei </p>
-                    </div>
-                </Grid>
-            </div>
-        );
-    }
-
-    render() {
-        const { classes } = this.props;
-        const { showAdvanced } = this.state;
-        return (
-            <Grid container direction="row" justify="space-between" alignItems="center" className={classes.container}>
-                <Grid container wrap="nowrap">
-                    <Grid container direction="row">
-                        <Grid item>
-                            <span className={`${classes.networkTransactionFeeTitle} feeTitle`}> Network Transaction Fee: </span>
-                        </Grid>
-                        <Grid item>
-                            {this.renderActualTransactionFeeBox()}
-                        </Grid>
-                    </Grid>
-                    <Grid item className={classes.showAdvancedContainer} onClick={() => this.toggleShowAdvanced()}>
-                        <span> Advanced </span>
-                        {!showAdvanced ? (
-                            <i className={`${classes.icon}  ${classes.rightIcon}`}> </i>
-                        ) : (
-                                <i className={`${classes.icon}  ${classes.downIcon}`}> </i>
-                            )}
-                    </Grid>
-                </Grid>
-                {showAdvanced && this.renderAdvancedContent()}
-            </Grid>
-        );
-    }
+	render() {
+		const { classes } = this.props;
+		const { showAdvanced } = this.state;
+		return (
+			<Grid
+				container
+				direction="row"
+				justify="space-between"
+				alignItems="center"
+				className={classes.container}
+			>
+				<Grid container wrap="nowrap">
+					<Grid container direction="row">
+						<Grid item>
+							<span className={`${classes.networkTransactionFeeTitle} feeTitle`}>
+								{' '}
+								Network Transaction Fee:{' '}
+							</span>
+						</Grid>
+						<Grid item>{this.renderActualTransactionFeeBox()}</Grid>
+					</Grid>
+					<Grid
+						item
+						className={classes.showAdvancedContainer}
+						onClick={() => this.toggleShowAdvanced()}
+					>
+						<span> Advanced </span>
+						{!showAdvanced ? (
+							<i className={`${classes.icon}  ${classes.rightIcon}`}> </i>
+						) : (
+							<i className={`${classes.icon}  ${classes.downIcon}`}> </i>
+						)}
+					</Grid>
+				</Grid>
+				{showAdvanced && this.renderAdvancedContent()}
+			</Grid>
+		);
+	}
 }
 
 export const TransactionFeeBox = withStyles(styles)(TransactionFeeBoxComponent);

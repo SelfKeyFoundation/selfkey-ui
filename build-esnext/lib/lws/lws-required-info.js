@@ -14,12 +14,12 @@ const styles = createStyles({
     requiredInfo: {
         '& a': {
             color: '#23E6FE',
-            textDecoration: 'none',
+            textDecoration: 'none'
         },
         '& a &:hover': {
-            textDecoration: 'underline',
+            textDecoration: 'underline'
         },
-        fontFamily: 'Lato, arial, sans-serif',
+        fontFamily: 'Lato, arial, sans-serif'
     },
     areaTitle: {
         textAlign: 'center',
@@ -30,8 +30,8 @@ const styles = createStyles({
             margin: '0',
             lineHeight: '22px',
             textAlign: 'left',
-            color: '#FFF',
-        },
+            color: '#FFF'
+        }
     },
     attribute: {
         display: 'flex',
@@ -39,28 +39,28 @@ const styles = createStyles({
         padding: '0 0 30px',
         color: '#FFF',
         '& svg': {
-            flex: '20px',
+            flex: '20px'
         },
         '& dl': {
             display: 'flex',
             justifyContent: 'space-between',
             width: '100%',
-            margin: '0 0 0 15px',
+            margin: '0 0 0 15px'
         },
         '& dl & dd': {
             color: '#93B0C1',
             textAlign: 'right',
-            wordBreak: 'break-word',
-        },
+            wordBreak: 'break-word'
+        }
     },
     clickable: {
-        cursor: 'pointer',
+        cursor: 'pointer'
     },
     waringMessage: {
         color: '#FFA700',
         fontSize: '13px',
         marginTop: '-20px',
-        padding: '0 0 20px 35px',
+        padding: '0 0 20px 35px'
     },
     formSubmitColumn: {
         flexDirection: 'row',
@@ -69,8 +69,8 @@ const styles = createStyles({
         '& button': {
             maxWidth: '215px',
             marginTop: '0px',
-            fontWeight: 700,
-        },
+            fontWeight: 700
+        }
     },
     tocMessage: {
         background: '#293743',
@@ -80,7 +80,7 @@ const styles = createStyles({
         fontStyle: 'italic',
         fontFamily: 'Lato, arial, sans-serif',
         margin: '30px 0 45px',
-        color: '#FFF',
+        color: '#FFF'
     },
     edit: {
         background: 'none',
@@ -88,8 +88,8 @@ const styles = createStyles({
         cursor: 'pointer',
         margin: 0,
         outline: 'none',
-        padding: 0,
-    },
+        padding: 0
+    }
 });
 const getAttributeValue = (attribute) => {
     if (!attribute.value) {
@@ -101,12 +101,12 @@ const getAttributeValue = (attribute) => {
     return attribute.name || attribute.schema.title || attribute.url;
 };
 const renderAttributes = (requested, attributes, notAllowedAttributes, classes, disallowAttributeAction, editAction) => {
-    let attrs = requested.map(attr => {
+    const attrs = requested.map(attr => {
         if (typeof attr !== 'object') {
             attr = { attribute: attr };
         }
-        let found = find(attributes, { url: attr.id || attr.attribute }) || {};
-        let merged = { ...attr, ...found };
+        const found = find(attributes, { url: attr.id || attr.attribute }) || {};
+        const merged = { ...attr, ...found };
         if (!merged.label && merged.schema && merged.schema.title) {
             merged.label = merged.schema.title;
         }
@@ -136,7 +136,9 @@ const renderAttributes = (requested, attributes, notAllowedAttributes, classes, 
         }
     });
 };
-export const LWSRequiredInfo = withStyles(styles)(({ classes, allowAction, requested, cancelAction, editAction, attributes, notAllowedAttributes = [], website, disallowAttributeAction = (attribute, disallow) => { }, }) => (React.createElement("div", { className: classes.requiredInfo },
+export const LWSRequiredInfo = withStyles(styles)(({ classes, allowAction, requested, cancelAction, editAction, attributes, notAllowedAttributes = [], website, 
+// tslint:disable-next-line:no-empty
+disallowAttributeAction = (attribute, disallow) => { } }) => (React.createElement("div", { className: classes.requiredInfo },
     React.createElement("div", { className: classes.areaTitle },
         React.createElement("h4", null,
             React.createElement("a", { href: website.url, target: "_blank", rel: "noopener noreferrer" },

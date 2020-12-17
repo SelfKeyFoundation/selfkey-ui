@@ -15,7 +15,7 @@ exports[`Wallet Small Icon should show Wallet Small Icon 1`] = `
 >
   <g
     fill="inherit"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     id="Symbols"
     stroke="none"
     strokeWidth="1"

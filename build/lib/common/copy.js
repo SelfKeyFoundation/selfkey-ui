@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -16,8 +16,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Copy = exports.CopyComponent = exports.styles = void 0;
 var React = require("react");
 var react_copy_to_clipboard_1 = require("react-copy-to-clipboard");
-var core_1 = require("@material-ui/core");
-exports.styles = core_1.createStyles({
+var styles_1 = require("@material-ui/styles");
+exports.styles = styles_1.createStyles({
     copyButton: {
         backgroundColor: 'transparent',
         border: '1px solid #3B4A5A',
@@ -37,7 +37,7 @@ exports.styles = core_1.createStyles({
         color: '#93b0c1',
         fontFamily: 'Lato, arial, sans-serif',
         fontSize: '10px',
-        letterSpacing: 'normal',
+        letterSpacing: 'normal'
     }
 });
 var CopyComponent = /** @class */ (function (_super) {
@@ -70,6 +70,6 @@ var CopyComponent = /** @class */ (function (_super) {
     return CopyComponent;
 }(React.Component));
 exports.CopyComponent = CopyComponent;
-exports.Copy = core_1.withStyles(exports.styles)(CopyComponent);
+exports.Copy = styles_1.withStyles(exports.styles)(CopyComponent);
 exports.default = exports.Copy;
 //# sourceMappingURL=copy.js.map

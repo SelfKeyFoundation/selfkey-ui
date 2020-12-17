@@ -13,7 +13,7 @@ describe('LWS Error Screen', () => {
 				actionIcon={<span>icon</span>}
 			/>
 		);
-		let tree = component.toJSON();
+		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });

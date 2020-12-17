@@ -14,14 +14,15 @@ var style = {
         display: 'block',
         height: 0,
         margin: 'auto',
-        width: 0,
-    },
+        width: 0
+    }
 };
-exports.TooltipArrow = (function () { return (React.createElement("span", { className: "arrowClass", style: style })); });
+var TooltipArrow = function () { return React.createElement("span", { className: "arrowClass", style: style }); };
+exports.TooltipArrow = TooltipArrow;
 exports.KeyTooltip = styles_1.withStyles(styles_1.createStyles({
     popper: {
         backgroundColor: 'transparent',
-        opacity: 1,
+        opacity: 1
     },
     tooltip: {
         color: '#93B0C1',
@@ -50,8 +51,8 @@ exports.KeyTooltip = styles_1.withStyles(styles_1.createStyles({
             display: 'block',
             width: 0,
             zIndex: 1
-        },
-    },
+        }
+    }
 }))(core_1.Tooltip);
 exports.SliderTooltip = styles_1.withStyles(styles_1.createStyles({
     tooltip: {
@@ -61,7 +62,7 @@ exports.SliderTooltip = styles_1.withStyles(styles_1.createStyles({
         fontSize: '12px',
         fontWeight: 600,
         margin: '8px 0',
-        padding: 0,
-    },
+        padding: 0
+    }
 }))(core_1.Tooltip);
 //# sourceMappingURL=tooltip-arrow.js.map

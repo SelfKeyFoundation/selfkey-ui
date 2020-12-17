@@ -6,12 +6,16 @@ const styles = createStyles({
     root: {
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
 const linearGradientColor = 'url(#default-linear-gradient)';
-export const SuccessIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '68px', height: props.height || '74px', fill: props.fill || linearGradientColor } }, props, { viewBox: props.viewBox || "0 0 68 74" }),
+export const SuccessIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: {
+        width: props.width || '68px',
+        height: props.height || '74px',
+        fill: props.fill || linearGradientColor
+    } }, props, { viewBox: props.viewBox || '0 0 68 74' }),
     React.createElement(LinearGradient, null),
     React.createElement("g", { id: "Modal---Dark", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "1.6.-Success", transform: "translate(-686.000000, -277.000000)", fill: "inherit", fillRule: "nonzero" },

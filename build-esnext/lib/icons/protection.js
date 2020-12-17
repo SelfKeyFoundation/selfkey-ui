@@ -6,11 +6,11 @@ const styles = createStyles({
         fill: '#93A4AF',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: 'white',
+            fill: 'white'
         }
     }
 });
-export const ProtectionIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '26px', height: props.height || '29px' } }, props, { viewBox: props.viewBox || "0 0 26 29" }),
+export const ProtectionIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '26px', height: props.height || '29px' } }, props, { viewBox: props.viewBox || '0 0 26 29' }),
     React.createElement("g", { id: "\uD83C\uDFE6-Corporate-Wallet-protection", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "802.1---All-Member-Types-protection", transform: "translate(-590.000000, -821.000000)", fill: "#23E6FE", fillRule: "nonzero" },
             React.createElement("g", { id: "TST-protection", transform: "translate(102.000000, 546.000000)" },

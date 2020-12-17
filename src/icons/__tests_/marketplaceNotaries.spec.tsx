@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import MarketplaceNotariesIcon from '../marketplace-notaries';
 
 describe('Marketplace Notaries Icon', () => {
-  it('should show Marketplace Notaries Icon', () => {
-    const component = create(
-      <MarketplaceNotariesIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Marketplace Notaries Icon', () => {
+		const component = create(<MarketplaceNotariesIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

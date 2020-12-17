@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import PersonIcon from '../person';
 
 describe('Person Icon', () => {
-  it('should show Person Icon', () => {
-    const component = create(
-      <PersonIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Person Icon', () => {
+		const component = create(<PersonIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

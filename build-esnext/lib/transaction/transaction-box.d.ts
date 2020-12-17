@@ -1,7 +1,7 @@
 import * as React from 'react';
 export declare type TransactionBoxProps = {
     cryptoCurrency: string;
-    closeAction?: ((event: React.MouseEvent<HTMLElement>) => void);
+    closeAction?: (event: React.MouseEvent<HTMLElement>) => void;
     children: any;
 };
 export declare const TransactionBox: React.ComponentType<Pick<TransactionBoxProps & {

@@ -18,8 +18,8 @@ var core_2 = require("@material-ui/core");
 var styles = core_1.createStyles({
     root: {
         width: '120px !important',
-        height: '30px !important',
-    },
+        height: '30px !important'
+    }
 });
 exports.AnimatedLoadingIcon = core_1.withStyles(styles)(function (props) { return (React.createElement(core_2.SvgIcon, __assign({}, props, { viewBox: "0 0 120 30" }),
     React.createElement("circle", { cx: "15", cy: "15", r: "15" },

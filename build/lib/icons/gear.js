@@ -19,7 +19,7 @@ var styles = core_1.createStyles({
     root: {
         stroke: '#93B0C1',
         '&:hover': {
-            stroke: 'white',
+            stroke: 'white'
         }
     }
 });

@@ -3,16 +3,9 @@ import { create } from 'react-test-renderer';
 import { DIDIcon } from '../did';
 
 describe('DID Icon', () => {
-  it('should show DID Icon', () => {
-    const component = create(
-      <DIDIcon/>
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show DID Icon', () => {
+		const component = create(<DIDIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });
-
-
-
-
-

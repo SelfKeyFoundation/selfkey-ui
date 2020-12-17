@@ -7,12 +7,12 @@ const styles = createStyles({
         fill: '#C5DCE9',
         transition: 'all 0.2s ease-out',
         '&:hover': {
-            fill: '#00C0D9',
-        },
+            fill: '#00C0D9'
+        }
     }
 });
-export const WalletSmallIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '18px' } }, props, { viewBox: props.viewBox || "0 0 20 18" }),
-    React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fill: "inherit", "fill-rule": "evenodd" },
+export const WalletSmallIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || '18px' } }, props, { viewBox: props.viewBox || '0 0 20 18' }),
+    React.createElement("g", { id: "Symbols", stroke: "none", strokeWidth: "1", fill: "inherit", fillRule: "evenodd" },
         React.createElement("g", { id: "Web-Nav", transform: "translate(-1242.000000, -14.000000)", fill: "inherit" },
             React.createElement("g", { id: "menu-items" },
                 React.createElement("g", { transform: "translate(1032.000000, 7.000000)" },

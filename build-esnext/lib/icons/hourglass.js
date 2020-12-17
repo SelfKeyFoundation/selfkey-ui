@@ -4,11 +4,11 @@ import { SvgIcon } from '@material-ui/core';
 const styles = createStyles({
     root: {
         '&:hover': {
-            fill: 'white',
-        },
+            fill: 'white'
+        }
     }
 });
-export const HourGlassIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: '0 0 16 16' }),
+export const HourGlassIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '16px', height: props.height || '16px' } }, props, { viewBox: "0 0 16 16" }),
     React.createElement("g", { stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd" },
         React.createElement("g", { id: "5.-Style-Guide---UI-Elements", transform: "translate(-643.000000, -394.000000)", fill: "#697C95", fillRule: "nonzero" },
             React.createElement("g", { id: "Accordion", transform: "translate(39.000000, 322.000000)" },

@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "npm run check-deps-precommit && pretty-quick --staged && lint-staged && yarn build && git add build/** && git add build-esnext/**",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  }
+}

@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import PowerIcon from '../power';
 
 describe('Power Icon', () => {
-  it('should show Power Icon', () => {
-    const component = create(
-      <PowerIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show Power Icon', () => {
+		const component = create(<PowerIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
-import { withStyles, createStyles } from '@material-ui/core';
+import { withStyles, createStyles } from '@material-ui/styles';
 import { PriceSummary } from './price-summary';
 import { VisibilityOnIcon } from '../icons/visibility-on';
 import { VisibilityOffIcon } from '../icons/visibility-off';
@@ -16,8 +16,8 @@ export const styles = createStyles({
         borderSpacing: '0px',
         width: '100%',
         '& tbody tr:nth-child(odd)': {
-            background: '#262f39',
-        },
+            background: '#262f39'
+        }
     },
     headerTableRow: {
         height: '38px',
@@ -28,11 +28,11 @@ export const styles = createStyles({
             color: '#7f8fa4',
             textTransform: 'uppercase',
             borderBottom: '0px',
-            paddingLeft: '0px',
+            paddingLeft: '0px'
         },
         '& th:first-child': {
-            paddingLeft: '24px !important',
-        },
+            paddingLeft: '24px !important'
+        }
     },
     bodyTableRow: {
         '& td': {
@@ -40,21 +40,21 @@ export const styles = createStyles({
             fontSize: '15px',
             textAlign: 'left',
             color: '#ffffff',
-            borderBottom: '0px',
+            borderBottom: '0px'
         },
         '& td & svg g': {
-            fill: '#ffffff',
+            fill: '#ffffff'
         },
         '& td:first-child': {
-            paddingLeft: '24px !important',
+            paddingLeft: '24px !important'
         },
         cursor: 'pointer',
-        height: '74px',
+        height: '74px'
     },
     iconSize: {
         width: '19.6px !important',
-        height: '23.1px !important',
-    },
+        height: '23.1px !important'
+    }
 });
 export class CryptoPriceTableComponent extends React.Component {
     renderVisibilityButton(token) {

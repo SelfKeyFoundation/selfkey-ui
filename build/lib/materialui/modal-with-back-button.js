@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -36,8 +36,8 @@ exports.ModalWrap = styles_1.withStyles(styles_1.createStyles({
         padding: '0 20px',
         position: 'absolute',
         top: 0,
-        width: '100%',
-    },
+        width: '100%'
+    }
 }))(core_1.Paper);
 exports.FileUploadGrid = styles_1.withStyles(styles_1.createStyles({
     container: {
@@ -45,15 +45,15 @@ exports.FileUploadGrid = styles_1.withStyles(styles_1.createStyles({
         border: '1px solid #303C49',
         borderRadius: '4px',
         height: '400px',
-        width: '760px',
-    },
+        width: '760px'
+    }
 }))(core_1.Grid);
 exports.FileUploadHeaderGrid = styles_1.withStyles(styles_1.createStyles({
     item: {
         marginLeft: '-210px',
         marginTop: '-150px',
-        position: 'absolute',
-    },
+        position: 'absolute'
+    }
 }))(core_1.Grid);
 var FileUploadLabel = styles_1.withStyles(styles_1.createStyles({
     root: {
@@ -66,14 +66,14 @@ var FileUploadLabel = styles_1.withStyles(styles_1.createStyles({
         marginTop: '80px',
         textAlign: 'center',
         '&:hover': {
-            color: colors_1.primary,
-        },
-    },
+            color: colors_1.primary
+        }
+    }
 }))(core_1.InputLabel);
 var FileUploadInput = styles_1.withStyles(styles_1.createStyles({
     root: {
-        display: 'none',
-    },
+        display: 'none'
+    }
 }))(core_1.Input);
 var ModalWithBackButton = /** @class */ (function (_super) {
     __extends(ModalWithBackButton, _super);
@@ -97,14 +97,14 @@ var ModalWithBackButton = /** @class */ (function (_super) {
     }
     ModalWithBackButton.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(core_1.Grid, { container: true, direction: 'column', justify: 'center', alignItems: 'center' },
+            React.createElement(core_1.Grid, { container: true, direction: "column", justify: "center", alignItems: "center" },
                 React.createElement(incorporations_1.default, null),
                 React.createElement("br", null),
                 React.createElement(Typography_1.default, { variant: "h1", gutterBottom: true }, "Manage My Crypto"),
                 React.createElement("br", null),
                 React.createElement(Typography_1.default, { variant: "body1", color: "textSecondary", gutterBottom: true }, "Manage your ERC20 tokens displayed in the SelfKey Identity Wallet dashboard."),
                 React.createElement("br", null),
-                React.createElement(core_1.Button, { id: "handleOpen", variant: 'outlined', size: "large", onClick: this.handleOpen }, "Add Token")),
+                React.createElement(core_1.Button, { id: "handleOpen", variant: "outlined", size: "large", onClick: this.handleOpen }, "Add Token")),
             React.createElement("br", null),
             React.createElement(Modal_1.default, { open: this.state.open, onClick: this.handleClose, id: "handleClose" },
                 React.createElement(exports.ModalWrap, null,
@@ -113,11 +113,11 @@ var ModalWithBackButton = /** @class */ (function (_super) {
                         React.createElement(Typography_1.default, { variant: "h2" }, "Add Attribute"),
                         React.createElement(Typography_1.default, { variant: "body1", color: "textSecondary", gutterBottom: true }, "Select the type of attribute you would like to add to your identity wallet."),
                         React.createElement(Typography_1.default, { variant: "body1", color: "textSecondary", gutterBottom: true }, "Add Identity Wallet Attribute"),
-                        React.createElement(exports.FileUploadGrid, { container: true, direction: 'column', alignItems: 'center', justify: 'center' },
+                        React.createElement(exports.FileUploadGrid, { container: true, direction: "column", alignItems: "center", justify: "center" },
                             React.createElement(exports.FileUploadHeaderGrid, { item: true },
-                                React.createElement(Typography_1.default, { variant: 'h2' }, "Upload Your National ID Document")),
+                                React.createElement(Typography_1.default, { variant: "h2" }, "Upload Your National ID Document")),
                             React.createElement("br", null),
-                            React.createElement(core_1.Grid, { container: true, justify: 'center', alignItems: 'center', direction: 'column' },
+                            React.createElement(core_1.Grid, { container: true, justify: "center", alignItems: "center", direction: "column" },
                                 React.createElement(FileUploadLabel, { htmlFor: "key-upload" },
                                     React.createElement(hard_drive_1.default, null),
                                     React.createElement("div", null,

@@ -3,11 +3,9 @@ import { create } from 'react-test-renderer';
 import ViewIcon from '../view';
 
 describe('View Icon', () => {
-  it('should show View Icon', () => {
-    const component = create(
-      <ViewIcon />
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+	it('should show View Icon', () => {
+		const component = create(<ViewIcon />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 });

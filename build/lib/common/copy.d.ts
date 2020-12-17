@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { WithStyles } from '@material-ui/core';
-export declare const styles: Record<"copyButton" | "copyButtonSpan", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
+import { WithStyles } from '@material-ui/styles';
+export declare const styles: Record<"copyButton" | "copyButtonSpan", import("@material-ui/styles").CSSProperties | import("@material-ui/styles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/styles").CreateCSSProperties<{}>)>;
 export declare type CopyProps = {
     text: string;
 };
@@ -17,5 +17,5 @@ export declare class CopyComponent extends React.Component<StyledProps, CopyStat
     handleOnCopy(): () => void;
     render(): JSX.Element;
 }
-export declare const Copy: React.ComponentType<Pick<StyledProps, "text"> & import("@material-ui/core").StyledComponentProps<"copyButton" | "copyButtonSpan">>;
+export declare const Copy: React.ComponentType<Pick<StyledProps, "text"> & import("@material-ui/styles").StyledComponentProps<"copyButton" | "copyButtonSpan">>;
 export default Copy;

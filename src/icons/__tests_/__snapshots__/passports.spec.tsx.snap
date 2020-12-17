@@ -22,7 +22,7 @@ exports[`Passports Icon should show Passports Icon 1`] = `
   >
     <g
       fill="inherit"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       id="5000---Web-Marketplace"
       transform="translate(-1041.000000, -443.000000)"
     >

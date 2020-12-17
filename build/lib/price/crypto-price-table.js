@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -16,11 +16,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CryptoPriceTable = exports.CryptoPriceTableComponent = exports.styles = void 0;
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var core_2 = require("@material-ui/core");
+var styles_1 = require("@material-ui/styles");
 var price_summary_1 = require("./price-summary");
 var visibility_on_1 = require("../icons/visibility-on");
 var visibility_off_1 = require("../icons/visibility-off");
-exports.styles = core_2.createStyles({
+exports.styles = styles_1.createStyles({
     cryptoPriceTable: {
         fontFamily: 'Lato, arial, sans-serif',
         width: '1140px',
@@ -32,8 +32,8 @@ exports.styles = core_2.createStyles({
         borderSpacing: '0px',
         width: '100%',
         '& tbody tr:nth-child(odd)': {
-            background: '#262f39',
-        },
+            background: '#262f39'
+        }
     },
     headerTableRow: {
         height: '38px',
@@ -44,11 +44,11 @@ exports.styles = core_2.createStyles({
             color: '#7f8fa4',
             textTransform: 'uppercase',
             borderBottom: '0px',
-            paddingLeft: '0px',
+            paddingLeft: '0px'
         },
         '& th:first-child': {
-            paddingLeft: '24px !important',
-        },
+            paddingLeft: '24px !important'
+        }
     },
     bodyTableRow: {
         '& td': {
@@ -56,21 +56,21 @@ exports.styles = core_2.createStyles({
             fontSize: '15px',
             textAlign: 'left',
             color: '#ffffff',
-            borderBottom: '0px',
+            borderBottom: '0px'
         },
         '& td & svg g': {
-            fill: '#ffffff',
+            fill: '#ffffff'
         },
         '& td:first-child': {
-            paddingLeft: '24px !important',
+            paddingLeft: '24px !important'
         },
         cursor: 'pointer',
-        height: '74px',
+        height: '74px'
     },
     iconSize: {
         width: '19.6px !important',
-        height: '23.1px !important',
-    },
+        height: '23.1px !important'
+    }
 });
 var CryptoPriceTableComponent = /** @class */ (function (_super) {
     __extends(CryptoPriceTableComponent, _super);
@@ -127,6 +127,6 @@ var CryptoPriceTableComponent = /** @class */ (function (_super) {
     return CryptoPriceTableComponent;
 }(React.Component));
 exports.CryptoPriceTableComponent = CryptoPriceTableComponent;
-exports.CryptoPriceTable = core_2.withStyles(exports.styles)(CryptoPriceTableComponent);
+exports.CryptoPriceTable = styles_1.withStyles(exports.styles)(CryptoPriceTableComponent);
 exports.default = exports.CryptoPriceTable;
 //# sourceMappingURL=crypto-price-table.js.map
