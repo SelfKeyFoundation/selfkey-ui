@@ -160,7 +160,9 @@ import {
 	IDIcon,
 	SafeIcon,
 	CodeIcon,
-	InsertCCIcon
+	InsertCCIcon,
+	WalletConnectIcon,
+	QRCodeIcon
 } from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
@@ -1299,11 +1301,26 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 			</pre>
 			<WarningShieldIcon />
 		</Grid>
+
 		<Grid item className={classes.gridItem}>
 			<pre className={classes.pre}>
 				<code className={classes.code}>{`<IDIcon />`}</code>
 			</pre>
 			<IDIcon />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<WalletConnectIcon />`}</code>
+			</pre>
+			<WalletConnectIcon width="50" />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<QRCodeIcon />`}</code>
+			</pre>
+			<QRCodeIcon width="50" height="50" />
 		</Grid>
 	</Grid>
 ));
