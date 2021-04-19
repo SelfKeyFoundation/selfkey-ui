@@ -165,6 +165,7 @@ __exportStar(require("./stick"), exports);
 __exportStar(require("./structure"), exports);
 __exportStar(require("./success"), exports);
 __exportStar(require("./switch-accounts"), exports);
+__exportStar(require("./square-target"), exports);
 __exportStar(require("./tick"), exports);
 __exportStar(require("./transfer"), exports);
 __exportStar(require("./trezor-bridge"), exports);

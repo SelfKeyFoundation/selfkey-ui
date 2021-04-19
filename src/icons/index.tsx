@@ -151,6 +151,7 @@ export * from './stick';
 export * from './structure';
 export * from './success';
 export * from './switch-accounts';
+export * from './square-target';
 export * from './tick';
 export * from './transfer';
 export * from './trezor-bridge';
