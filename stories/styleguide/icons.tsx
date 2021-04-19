@@ -162,7 +162,8 @@ import {
 	CodeIcon,
 	InsertCCIcon,
 	WalletConnectIcon,
-	QRCodeIcon
+	QRCodeIcon,
+	SquareTargetIcon
 } from '../../src/icons';
 
 const iconStoryStyles = (theme: Theme) =>
@@ -1321,6 +1322,13 @@ export const IconsStory = withStyles(iconStoryStyles)(({ classes }: any) => (
 				<code className={classes.code}>{`<QRCodeIcon />`}</code>
 			</pre>
 			<QRCodeIcon width="50" height="50" />
+		</Grid>
+
+		<Grid item className={classes.gridItem}>
+			<pre className={classes.pre}>
+				<code className={classes.code}>{`<SquareTargetIcon />`}</code>
+			</pre>
+			<SquareTargetIcon width="50" height="50" />
 		</Grid>
 	</Grid>
 ));
