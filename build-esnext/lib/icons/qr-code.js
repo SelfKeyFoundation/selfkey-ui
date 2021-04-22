@@ -12,7 +12,7 @@ const styles = createStyles({
     }
 });
 export const QRCodeIcon = withStyles(styles)((props) => (React.createElement(SvgIcon, Object.assign({ style: { width: props.width || '20px', height: props.height || 'auto' } }, props, { viewBox: props.viewBox || '0 0 16 16' }),
-    React.createElement("g", { transform: "scale(.5,.5)", fill: "none", stroke: "#FFF", "stroke-width": "2", "stroke-linecap": "butt" },
+    React.createElement("g", { transform: "scale(.5,.5)", fill: "none", stroke: "#FFF", strokeWidth: "2", strokeLinecap: "butt" },
         React.createElement("path", { id: "A", d: "M3,3 h8 v8 h-8 v-8 z M6,7 h2" }),
         React.createElement("use", { xlinkHref: "#A", x: "18", y: "0" }),
         React.createElement("use", { xlinkHref: "#A", x: "0", y: "18" }),
