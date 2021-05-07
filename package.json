@@ -47,7 +47,7 @@
 		"@types/react-dom": "16.9.6",
 		"bignumber.js": "8.0.1",
 		"classnames": "2.2.6",
-		"lodash": "4.17.19",
+		"lodash": "4.17.21",
 		"moment": "2.23.0",
 		"react": "16.13.1",
 		"react-copy-to-clipboard": "5.0.1",
