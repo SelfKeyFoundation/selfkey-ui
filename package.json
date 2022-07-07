@@ -48,7 +48,7 @@
 		"bignumber.js": "8.0.1",
 		"classnames": "2.2.6",
 		"lodash": "4.17.21",
-		"moment": "2.23.0",
+		"moment": "2.29.4",
 		"react": "16.13.1",
 		"react-copy-to-clipboard": "5.0.1",
 		"react-datetime": "2.16.3",
