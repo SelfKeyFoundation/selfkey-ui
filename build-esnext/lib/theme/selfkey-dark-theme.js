@@ -602,10 +602,11 @@ export const theme = createMuiTheme({
                 }
             },
             contained: {
-                background: 'linear-gradient(to bottom, #0abbd0 0%, #09a8ba 100%)',
+                background: 'linear-gradient(to bottom, #2DA1F8 0%, #00E0FF 100%)',
                 border: '1px solid #0FB8D0',
                 boxShadow: 'none',
-                color: white,
+                borderRadius: '50px',
+                color: '#111111',
                 padding: '8px 16px',
                 '&:hover': {
                     background: 'linear-gradient(to bottom, #0AA9D0 0%, #099BBA 100%)'
@@ -623,7 +624,9 @@ export const theme = createMuiTheme({
             outlined: {
                 background: 'transparent',
                 border: '2px solid #1CA9BA',
-                color: primary,
+                borderColor: 'linear-gradient(to bottom, #2DA1F8 0%, #00E0FF 100%)',
+                color: '#fff',
+                borderRadius: '50px',
                 padding: '8px 16px',
                 '&:hover': {
                     background: '#313D49',
