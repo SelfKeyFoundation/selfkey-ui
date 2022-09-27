@@ -271,7 +271,7 @@ export const theme = createMuiTheme({
         MuiInput: {
             root: {
                 backgroundColor: baseDark,
-                borderRadius: '4px',
+                borderRadius: '50px',
                 border: '1px solid #384656',
                 boxSizing: 'border-box',
                 color: white,

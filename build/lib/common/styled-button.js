@@ -15,8 +15,8 @@ var styles = core_1.createStyles({
         }
     },
     containedPrimary: {
-        background: 'linear-gradient(0deg, #09A8BA 0%, #0ABBD0 100%)',
-        color: '#FFFFFF',
+        background: 'linear-gradient(0deg, #00E0FF 0%, #2DA1F8 100%)',
+        color: '#111111',
         border: '1px solid #0FB8D0',
         '&:hover': {
             backgroundColor: '#3c4956'

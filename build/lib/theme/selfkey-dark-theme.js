@@ -274,7 +274,7 @@ exports.theme = core_1.createMuiTheme({
         MuiInput: {
             root: {
                 backgroundColor: colors_1.baseDark,
-                borderRadius: '4px',
+                borderRadius: '50px',
                 border: '1px solid #384656',
                 boxSizing: 'border-box',
                 color: colors_1.white,
