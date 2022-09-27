@@ -18,7 +18,7 @@ export const ModalWrap = withStyles(createStyles({
 export const ModalHeader = withStyles(createStyles({
     root: {
         alignItems: 'center',
-        backgroundColor: '#2A3540',
+        backgroundColor: '#161A1F',
         border: 'none',
         borderBottom: '1px solid #303C49',
         borderRadius: '3px 3px 0 0',
@@ -33,7 +33,7 @@ export const ModalHeader = withStyles(createStyles({
 }))(Paper);
 export const ModalBody = withStyles(createStyles({
     root: {
-        backgroundColor: '#262F39',
+        backgroundColor: '#121B21',
         border: 'none',
         borderRadius: '0 0 3px 3px',
         boxShadow: 'none',

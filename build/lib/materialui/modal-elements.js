@@ -21,7 +21,7 @@ exports.ModalWrap = styles_1.withStyles(styles_1.createStyles({
 exports.ModalHeader = styles_1.withStyles(styles_1.createStyles({
     root: {
         alignItems: 'center',
-        backgroundColor: '#2A3540',
+        backgroundColor: '#161A1F',
         border: 'none',
         borderBottom: '1px solid #303C49',
         borderRadius: '3px 3px 0 0',
@@ -36,7 +36,7 @@ exports.ModalHeader = styles_1.withStyles(styles_1.createStyles({
 }))(core_1.Paper);
 exports.ModalBody = styles_1.withStyles(styles_1.createStyles({
     root: {
-        backgroundColor: '#262F39',
+        backgroundColor: '#121B21',
         border: 'none',
         borderRadius: '0 0 3px 3px',
         boxShadow: 'none',
