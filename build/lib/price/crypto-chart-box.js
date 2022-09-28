@@ -33,7 +33,7 @@ var styles = styles_1.createStyles({
     cryptoBox: {
         position: 'relative',
         borderRadius: '4px',
-        backgroundColor: '#262f39',
+        backgroundColor: '#161A1F',
         border: 'solid 1px #303c49',
         color: '#ffffff',
         fontFamily: 'Lato, arial, sans-serif',

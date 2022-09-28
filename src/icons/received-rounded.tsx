@@ -34,7 +34,7 @@ export const ReceivedRoundedIcon = withStyles(styles)(
 									<rect
 										id="Rectangle"
 										stroke="#1CBA7D"
-										fill="#262F39"
+										fill="#161A1F"
 										x="0"
 										y="0"
 										width="32"

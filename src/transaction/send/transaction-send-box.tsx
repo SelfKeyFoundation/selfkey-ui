@@ -52,7 +52,7 @@ export const styles = createStyles({
 	},
 	input: {
 		outlineWidth: 0,
-		backgroundColor: '#262f39',
+		backgroundColor: '#161A1F',
 		paddingBottom: '20px',
 		marginBottom: '20px',
 		width: '100%',

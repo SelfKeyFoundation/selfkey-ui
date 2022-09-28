@@ -44,7 +44,7 @@ exports[`Exchange Rounded Icon should show Exchange Rounded Icon 1`] = `
                 transform="translate(0.000000, 148.000000)"
               >
                 <rect
-                  fill="#262F39"
+                  fill="#161A1F"
                   height="32"
                   id="Rectangle"
                   rx="4"

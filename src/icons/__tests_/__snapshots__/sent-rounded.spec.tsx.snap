@@ -40,7 +40,7 @@ exports[`Sent Rounded Icon should show Sent Rounded Icon 1`] = `
               id="icon-sent-rounded"
             >
               <rect
-                fill="#262F39"
+                fill="#161A1F"
                 height="32"
                 id="Rectangle"
                 rx="4"

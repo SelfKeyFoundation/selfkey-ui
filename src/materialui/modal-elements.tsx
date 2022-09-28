@@ -56,7 +56,7 @@ export const ModalBody = withStyles(
 export const SmallModalBody = withStyles(
 	createStyles({
 		root: {
-			backgroundColor: '#262F39',
+			backgroundColor: '#161A1F',
 			border: 'none',
 			borderRadius: '0 0 3px 3px',
 			boxShadow: 'none',

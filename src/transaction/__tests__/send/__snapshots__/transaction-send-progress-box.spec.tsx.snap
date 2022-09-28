@@ -35,7 +35,7 @@ exports[`Transaction Send Progress Box should not open transaction 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -299,7 +299,7 @@ exports[`Transaction Send Progress Box should not open transaction 2`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -563,7 +563,7 @@ exports[`Transaction Send Progress Box should open transaction 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -827,7 +827,7 @@ exports[`Transaction Send Progress Box should open transaction 2`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -1091,7 +1091,7 @@ exports[`Transaction Send Progress Box should show Transaction peding 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -1355,7 +1355,7 @@ exports[`Transaction Send Progress Box should show Transaction sent 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -1619,7 +1619,7 @@ exports[`Transaction Send Progress Box should show Transaction sstatus othing el
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />

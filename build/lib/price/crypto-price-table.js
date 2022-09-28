@@ -32,7 +32,7 @@ exports.styles = styles_1.createStyles({
         borderSpacing: '0px',
         width: '100%',
         '& tbody tr:nth-child(odd)': {
-            background: '#262f39'
+            background: '#161A1F'
         }
     },
     headerTableRow: {

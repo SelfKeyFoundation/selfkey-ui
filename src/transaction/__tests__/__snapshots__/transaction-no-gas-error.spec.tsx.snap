@@ -43,7 +43,7 @@ exports[`Transaction no Gas Error shoul not call open external link 1`] = `
               <circle
                 cx="18"
                 cy="18"
-                fill="#262F39"
+                fill="#161A1F"
                 id="Oval-2"
                 r="18"
               />
@@ -239,7 +239,7 @@ exports[`Transaction no Gas Error shoul not call open external link 2`] = `
               <circle
                 cx="18"
                 cy="18"
-                fill="#262F39"
+                fill="#161A1F"
                 id="Oval-2"
                 r="18"
               />
@@ -435,7 +435,7 @@ exports[`Transaction no Gas Error shoul open external link 1`] = `
               <circle
                 cx="18"
                 cy="18"
-                fill="#262F39"
+                fill="#161A1F"
                 id="Oval-2"
                 r="18"
               />
@@ -631,7 +631,7 @@ exports[`Transaction no Gas Error shoul open external link 2`] = `
               <circle
                 cx="18"
                 cy="18"
-                fill="#262F39"
+                fill="#161A1F"
                 id="Oval-2"
                 r="18"
               />

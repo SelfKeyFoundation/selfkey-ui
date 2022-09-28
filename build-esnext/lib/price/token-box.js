@@ -9,7 +9,7 @@ const styles = createStyles({
         position: 'relative',
         padding: '20px 20px 8px 20px',
         borderRadius: '4px',
-        backgroundColor: '#262f39',
+        backgroundColor: '#161A1F',
         border: 'solid 1px #303c49',
         height: '186px'
     },

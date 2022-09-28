@@ -35,7 +35,7 @@ exports[`Transaction Box should show Transaction Box with Custom text 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -104,7 +104,7 @@ exports[`Transaction Box should show Transaction Box with ETH Icon 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -197,7 +197,7 @@ exports[`Transaction Box should show Transaction Box with KEY Icon 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />
@@ -291,7 +291,7 @@ exports[`Transaction Box should show Transaction Box with KI Icon 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />

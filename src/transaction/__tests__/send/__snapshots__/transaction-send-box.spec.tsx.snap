@@ -35,7 +35,7 @@ exports[`Transaction Send should show Transaction send screen 1`] = `
             <circle
               cx="18"
               cy="18"
-              fill="#262F39"
+              fill="#161A1F"
               id="Oval-2"
               r="18"
             />

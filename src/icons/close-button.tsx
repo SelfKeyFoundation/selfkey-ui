@@ -27,7 +27,7 @@ export const CloseButtonIcon = withStyles(styles)(
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="Close-button" transform="translate(1.000000, 1.000000)">
 					<g id="Close">
-						<circle id="Oval-2" fill="#262F39" cx="18" cy="18" r="18"></circle>
+						<circle id="Oval-2" fill="#161A1F" cx="18" cy="18" r="18"></circle>
 						<g
 							id="icons8-delete_sign"
 							transform="translate(9.000000, 9.000000)"

@@ -41,7 +41,7 @@ exports[`Pending Rounded Icon should show Pending Rounded Icon 1`] = `
               transform="translate(1.000000, 145.000000)"
             >
               <rect
-                fill="#262F39"
+                fill="#161A1F"
                 height="32"
                 id="Rectangle"
                 rx="4"

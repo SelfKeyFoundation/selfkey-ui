@@ -43,7 +43,7 @@ exports[`Transaction Error Box should show transaction error generic screen 1`] 
               <circle
                 cx="18"
                 cy="18"
-                fill="#262F39"
+                fill="#161A1F"
                 id="Oval-2"
                 r="18"
               />
@@ -217,7 +217,7 @@ exports[`Transaction Error Box should show transaction error generic screen with
               <circle
                 cx="18"
                 cy="18"
-                fill="#262F39"
+                fill="#161A1F"
                 id="Oval-2"
                 r="18"
               />

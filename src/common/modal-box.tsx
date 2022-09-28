@@ -10,7 +10,7 @@ const styles = createStyles({
 		width: '781px',
 		border: '1px solid #303C49',
 		borderRadius: '4px',
-		backgroundColor: '#262F39',
+		backgroundColor: '#161A1F',
 		boxShadow:
 			'inset -1px 0 0 0 rgba(0,0,0,0.24), 1px 0 0 0 rgba(118,128,147,0.2), 2px 0 2px 0 rgba(0,0,0,0.2)'
 	},

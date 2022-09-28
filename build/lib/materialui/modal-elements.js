@@ -48,7 +48,7 @@ exports.ModalBody = styles_1.withStyles(styles_1.createStyles({
 }))(core_1.Paper);
 exports.SmallModalBody = styles_1.withStyles(styles_1.createStyles({
     root: {
-        backgroundColor: '#262F39',
+        backgroundColor: '#161A1F',
         border: 'none',
         borderRadius: '0 0 3px 3px',
         boxShadow: 'none',

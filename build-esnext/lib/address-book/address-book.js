@@ -33,7 +33,7 @@ const styles = createStyles({
         borderSpacing: '0px',
         minWidth: '900px',
         '& tbody tr:nth-child(odd)': {
-            background: '#262f39'
+            background: '#161A1F'
         }
     },
     headerTableRow: {

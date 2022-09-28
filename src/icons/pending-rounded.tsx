@@ -34,7 +34,7 @@ export const PendingRoundedIcon = withStyles(styles)(
 									<rect
 										id="Rectangle"
 										stroke="#475768"
-										fill="#262F39"
+										fill="#161A1F"
 										x="0"
 										y="0"
 										width="32"

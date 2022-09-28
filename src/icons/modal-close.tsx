@@ -28,7 +28,7 @@ export const ModalCloseIcon = withStyles(styles)(
 			<g id="Symbols" stroke="none" strokeWidth="1" fillRule="evenodd">
 				<g id="Close-button" transform="translate(1.000000, 1.000000)">
 					<g id="icon-close-modal">
-						<circle id="Oval-2" fill="#262F39" cx="18" cy="18" r="18"></circle>
+						<circle id="Oval-2" fill="#161A1F" cx="18" cy="18" r="18"></circle>
 						<g
 							transform="translate(9.000000, 9.000000)"
 							fill="#23E6FE"

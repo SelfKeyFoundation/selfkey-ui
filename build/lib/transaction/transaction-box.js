@@ -11,7 +11,7 @@ var styles = core_1.createStyles({
         padding: '90px 30px 40px 30px',
         position: 'relative',
         borderRadius: '4px',
-        backgroundColor: '#262f39',
+        backgroundColor: '#161A1F',
         border: 'solid 1px #303c49',
         boxShadow: '0 0 16px 1px #15222e'
     },
