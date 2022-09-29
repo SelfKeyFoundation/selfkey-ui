@@ -30,7 +30,7 @@ export const theme = createMuiTheme({
         },
         body: {
             lineHeight: 1,
-            background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
+            background: '#111111',
             fontFamily: 'Lato, arial, sans-serif',
             fontSmoothing: 'antialiased',
             osxFontSmoothing: 'grayscale',
@@ -94,7 +94,7 @@ export const theme = createMuiTheme({
             '@global': {
                 body: {
                     lineHeight: 1,
-                    background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
+                    background: '#111111',
                     fontFamily: 'Lato, arial, sans-serif',
                     fontSmoothing: 'antialiased',
                     osxFontSmoothing: 'grayscale',
@@ -848,7 +848,7 @@ export const theme = createMuiTheme({
         },
         MuiBackdrop: {
             root: {
-                background: 'linear-gradient(135deg, rgba(43,53,64,1) 0%, rgba(30,38,46,1) 100%)',
+                background: '#111111',
                 opacity: '0.9 !important'
             },
             invisible: {
@@ -925,7 +925,7 @@ export const theme = createMuiTheme({
         },
         MuiDrawer: {
             paperAnchorRight: {
-                backgroundColor: '#222B34',
+                backgroundColor: '#131F2A',
                 borderLeft: '1px solid #29333D',
                 boxShadow: 'none'
             }
