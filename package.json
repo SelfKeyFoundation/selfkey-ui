@@ -55,7 +55,7 @@
 		"react-dom": "16.13.1",
 		"react-google-charts": "3.0.10",
 		"react-truncate": "2.4.0",
-		"snyk": "1.193.2"
+		"snyk": "1.1064.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "7.2.1",
